@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Semente_Uso_Propio_en_Categ_S2</fullName>
+    <active>true</active>
+    <description>No se permite cantidad de semente uso propio &gt; 0 en categoria S2.</description>
+    <errorConditionFormula>AND(Semente_uso_propio__c &gt; 0, Categoria__r.Name = &quot;S2&quot;)</errorConditionFormula>
+    <errorMessage>La cantidad de semente uso propio en la categoria S2 debe ser 0.</errorMessage>
+</ValidationRule>

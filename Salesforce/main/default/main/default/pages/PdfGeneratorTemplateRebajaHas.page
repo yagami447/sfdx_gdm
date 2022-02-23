@@ -1,0 +1,58 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+<table width="100%" Align="center" columns="1">
+    <tr>
+         <td >
+             <IMG SRC="{!RutaLogo}" style="width: 50%; height: 50%"></img>              
+         </td> 
+
+    </tr>
+</table>
+ <br/><br/>
+  
+<table width="83%" Align="center">
+   <tr>
+     <td >
+   <p style="font-size:20px" align="left"><b>AUTORIZAÇÃO PARA REBAIXAMENTO DE SEMENTE DE SOJA</b></p>
+ 
+  <p style="font-size:20px"><b>AUT REB N° {!nombre}/{!Anio}</b></p>
+   
+  <p align="justify"> A <b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, detentora dos direitos de exploração da marca <b>{!MarcaImp}</b>,
+   inscrita no CNPJ n° 07.007.165/0001-34, e Inscrição Estadual n° 90519331-73, abaixo assinada por seu representante legal, obtentora dos diretos legais sobre
+   as cultivares relacionadas no quadro abaixo, vem por meio desta <b>AUTORIZAR</b> a empresa {!Opportunity.Account.Name}
+  inscrita(o) no CNPJ/CPF sob n° {!cnpj}, a <b>REBAIXAR</b> a(s) categoria(s) da semente de Soja do(s) seguinte(s) lote(s) relacionado(s) abaixo:</p><br/>
+ 
+  <apex:pageBlock >
+  <apex:pageblockSection columns="5">
+     
+     <apex:pageBlockTable value="{!ItemAnexo}" var="item" border="1">
+        <apex:column width="150px" ><apex:facet name="header">Cultivar</apex:facet>{!item.PriceBookEntry.Product2.Variedade__r.Nombre_de_Registro__c}</apex:column>
+        
+        <apex:column width="80px"><apex:facet name="header">Categoria Origem</apex:facet>{!item.Categoria_a_Rebaixar__r.Name}</apex:column>
+        <apex:column width="80px"><apex:facet name="header">Categoria</apex:facet>{!item.Categoria__r.Name}</apex:column>
+        <apex:column width="80px"><apex:facet name="header">Ha. Autorizados (Ha)</apex:facet>{!item.Area__c}</apex:column>
+        </apex:pageBlockTable> 
+  </apex:pageBlockSection>
+  </apex:pageBlock>    
+  <p>Estamos autorizando o rebaixamento para a(s) categoria(s) inferior(es) conforme mencionado acima a fim de viabilizar a comercialização das mesmas.</p>
+  
+  <p>Esta autorização é válida somente para a semente produzida na <b>SAFRA {!safra}</b>.</p>
+  <br/>
+  
+  Cambé-PR, {!FechaCierre}.
+  
+  
+  <br/><br/><br/><br/><br/>
+  
+     ___________________________________ <br/><br/>
+     
+     GDM Genética do Brasil S.A.<br/>
+
+ </td> 
+</tr>
+</table>
+
+  
+    
+  
+  
+</apex:page>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZC67 - A Vista na data do Pedido</fullName>
+        <default>false</default>
+        <label>ZC67 - A Vista na data do Pedido</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - 60 dias Data Ordem</fullName>
+        <default>false</default>
+        <label>ZC67 - 60 dias Data Ordem</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - A Vista</fullName>
+        <default>false</default>
+        <label>ZC67 - A Vista</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - 15 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - 15 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - 30 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - 30 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - 45 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - 45 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - 60 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - 60 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - Antecipado</fullName>
+        <default>false</default>
+        <label>ZC67 - Antecipado</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - A vista - 15 de Dezembro</fullName>
+        <default>true</default>
+        <label>ZC67 - A vista - 15 de Dezembro</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - A vista Faturamento Royalties</fullName>
+        <default>false</default>
+        <label>ZC67 - A vista Faturamento Royalties</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - A vista - 20 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - A vista - 20 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - Parcelado: 30,60 e 90 dias data fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - Parcelado: 30,60 e 90 dias data fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - Parcelado: 30,60,90 e 120 dias data fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - Parcelado: 30,60,90 e 120 dias data fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC67 - Parcelado: 30 e 60 dias data fatura</fullName>
+        <default>false</default>
+        <label>ZC67 - Parcelado: 30 e 60 dias data fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC01 - A Vista na data do Pedido</fullName>
+        <default>false</default>
+        <label>ZC01 - A Vista na data do Pedido</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC02 - 60 dias Data Ordem</fullName>
+        <default>false</default>
+        <label>ZC02 - 60 dias Data Ordem</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC39 - A Vista</fullName>
+        <default>false</default>
+        <label>ZC39 - A Vista</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC41 - 15 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC41 - 15 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC42 - 30 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC42 - 30 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC43 - 45 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC43 - 45 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC44 - 60 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC44 - 60 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC68 - A vista - 15 de Dezembro</fullName>
+        <default>false</default>
+        <label>ZC68 - A vista - 15 de Dezembro</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC68 - A vista Faturamento Royalties</fullName>
+        <default>false</default>
+        <label>ZC68 - A vista Faturamento Royalties</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC69 - A vista - 20 dias Data Fatura</fullName>
+        <default>false</default>
+        <label>ZC69 - A vista - 20 dias Data Fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC71 - Parcelado: 30,60 e 90 dias data fatura</fullName>
+        <default>false</default>
+        <label>ZC71 - Parcelado: 30,60 e 90 dias data fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC72 - Parcelado: 30,60,90 e 120 dias data fatura</fullName>
+        <default>false</default>
+        <label>ZC72 - Parcelado: 30,60,90 e 120 dias data fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC78 - Parcelado: 30 e 60 dias data fatura</fullName>
+        <default>false</default>
+        <label>ZC78 - Parcelado: 30 e 60 dias data fatura</label>
+    </customValue>
+    <customValue>
+        <fullName>Cond 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cond 1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC68 - Anticipado</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ZC68 - Anticipado</label>
+    </customValue>
+    <masterLabel>Condiciones de Pago</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

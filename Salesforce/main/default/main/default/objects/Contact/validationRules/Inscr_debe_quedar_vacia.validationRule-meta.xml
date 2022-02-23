@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inscr_debe_quedar_vacia</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Persona_Fisica__c = TRUE, Inscripcion_Estadual__c &lt;&gt; &apos;&apos;, RecordType.Name = &apos;Destinatario Desbloqueado&apos;)</errorConditionFormula>
+    <errorDisplayField>Inscripcion_Estadual__c</errorDisplayField>
+    <errorMessage>Se o contato é uma pessoa fisica, não tem que preencher o campo &quot;Inscrição Estadual&quot;</errorMessage>
+</ValidationRule>

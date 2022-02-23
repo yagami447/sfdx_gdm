@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Evento Offline</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRM Eventos Offline</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Evento Offline Dia de Campo</layout>
+        <sections>
+            <label><!-- Cultivar 1 --></label>
+            <section>Cultivar 1</section>
+        </sections>
+        <sections>
+            <label><!-- Cultivar 2 --></label>
+            <section>Cultivar 2</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Evento Offline LxL</layout>
+        <sections>
+            <label><!-- Cultivar 1 --></label>
+            <section>Cultivar 1</section>
+        </sections>
+        <sections>
+            <label><!-- Cultivar 2 --></label>
+            <section>Cultivar 2</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Día de Campo --></label>
+        <name>Dia_de_Campo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lado a Lado --></label>
+        <name>Lado_a_Lado</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Treinamento --></label>
+        <name>Treinamento</name>
+    </recordTypes>
+</CustomObjectTranslation>

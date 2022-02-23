@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Safra_marca_y_regiao__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Safra__c) + &apos;-&apos; + TEXT(Marca__c) + &apos;-&apos; + TEXT(Regiao_comercial__c)+ &apos;-&apos; + TEXT(Tipo__c)</formula>
+    <label>Safra marca regiao y tipo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

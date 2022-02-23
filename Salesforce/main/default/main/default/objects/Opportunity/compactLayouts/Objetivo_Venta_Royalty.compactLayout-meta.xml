@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objetivo_Venta_Royalty</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>Marca__c</fields>
+    <fields>Mes__c</fields>
+    <fields>OwnerId</fields>
+    <label>Objetivo Venta Royalty</label>
+</CompactLayout>

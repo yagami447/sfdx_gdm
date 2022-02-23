@@ -1,0 +1,147 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="Apenddix2Page" showHeader="false" standardStylesheets="false"
+    cache="false" title="{!titulo}" controller="aSiteEventosController" action="{!validate}">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+    .selected {
+        background: rgba(38, 185, 154, .16);
+        border-color: rgba(221, 221, 221, 0.780392);
+    }
+</style>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1">
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1">
+                <apex:panelGroup >
+                <apex:form id="profileForm">
+                <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                    <apex:facet name="start" >
+                        <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                            &nbsp;
+                        </div>
+                        <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                            <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                        </div>
+                    </apex:facet>
+                </apex:actionStatus>
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <div class="">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>{!titulo}</h3>
+                                </div>
+                                <div class="title_right">
+                                    <div class="form-group pull-right top_search">
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <apex:outputPanel rendered="{!creationIsAllowed}">
+                                                <button href="javascript:;" onclick="goNew()" type="button" class="btn btn-round btn-success">{!$Label.New}</button>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Eventos</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li>
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont" rendered="{!Eventos.size>0}">
+                                                <apex:pageblockTable value="{!Eventos}" var="s" styleClass="data table table-striped no-margin">
+                                                    <apex:repeat value="{!FieldsCab}" var="f">
+                                                        <apex:column headerValue="{!f.label}" styleClass="{!IF(s.Id==recId,'selected','')}">
+                                                            <apex:outputField value="{!s[f]}" />
+                                                        </apex:column>
+                                                    </apex:repeat>
+                                                    <apex:column headerClass="column-title" headerValue="{!$Label.action}" styleClass="{!IF(s.Id==recId,'selected','')}" style="vertical-align: middle;">
+                                                        <apex:commandLink value="{!if(tipoEvento == 'Treinamento Tecnico', 'Ver Obtentores', $Label.View_Products)}" action="{!setActiveEvento}"
+                                                            rerender="cont,it">
+                                                            <apex:param value="{!s.Id}" assignTo="{!recId}" name="toSelect" />
+                                                        </apex:commandLink>
+                                                        <apex:commandLink value=" | {!$Label.Edit}" action="{!gotoEdit}" rendered="{!s.Fase__c == 'Edição' || s.Fase__c == 'Reprovado' || s.Fase__c == 'Aguardando resultado de colheita' || s.Fase__c == 'Edição de dados de plantio' || s.Fase__c == 'Edição de dados de colheita'}">
+                                                            <apex:param value="{!s.Id}" assignTo="{!editId}" name="toEdit" />
+                                                        </apex:commandLink>
+                                                        <apex:commandLink value=" | Enviar para Aprovação" rendered="{!s.Fase__c == 'Edição' || s.Fase__c == 'Reprovado' || s.Fase__c == 'Aguardando resultado de colheita' || s.Fase__c == 'Edição de dados de plantio' || s.Fase__c == 'Edição de dados de colheita'}"
+                                                            action="{!enviarAprobacion}" reRender="profileForm" status="displayImg" oncomplete="mostrarMsj()">
+                                                            <apex:param value="{!s.Id}" assignTo="{!enviarAprobacion}" name="toEdit" />
+                                                        </apex:commandLink>
+                                                    </apex:column>
+                                                </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <apex:pageBlock id="panel-t" rendered="{!eventos.size>0}">
+                                    <div class="x_panel">
+                                        <div class="x_title">
+                                            <h2>{!if(tipoEvento == 'Treinamento Tecnico', 'Obtentores', $ObjectType.Product2.LabelPlural)}</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li>
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                                <apex:pageBlock id="it" rendered="{!eventos.size>0}">
+                                                    <apex:pageBlockTable value="{!relatedEventoItems}" var="i" styleClass="data table table-striped no-margin">
+                                                        <apex:repeat value="{!Fields}" var="f">
+                                                            <apex:column headerValue="{!f.label}">
+                                                                <apex:outputField value="{!i[f]}" />
+                                                            </apex:column>
+                                                        </apex:repeat>
+                                                    </apex:pageBlockTable>
+                                                </apex:pageBlock>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </apex:pageBlock>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <apex:actionFunction action="{!gotoNew}" name="goNew" />
+                <script type="text/javascript">
+                    function mostrarMsj() {
+                        if ("{!mensaje}") {
+                            alert("{!SUBSTITUTE(mensaje, '|', '\n')}");
+                        }
+                    }
+                </script>
+                </apex:form>
+                </apex:panelGroup>
+            </apex:panelGrid>
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+</body>
+</apex:define>
+</apex:composition>
+</apex:page>

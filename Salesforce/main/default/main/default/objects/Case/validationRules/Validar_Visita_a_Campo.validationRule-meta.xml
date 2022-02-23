@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_Visita_a_Campo</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND( $RecordType.Name = &apos;RECLAMO VISITA CAMPO CONF&apos;, ISNULL( Fecha_Visita_Campo__c) )</errorConditionFormula>
+    <errorMessage>Deve completar la Fecha Visita Campo.</errorMessage>
+</ValidationRule>

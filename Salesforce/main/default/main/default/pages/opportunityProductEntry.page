@@ -1,0 +1,456 @@
+<apex:page standardController="Opportunity" extensions="opportunityProductEntryExtension" action="{!priceBookCheck}" docType="html-5.0">
+  
+      <apex:sectionHeader Title="Agregar {!$ObjectType.Product2.LabelPlural} a" subtitle="{!opportunity.Name}"/>
+      <apex:messages rendered="{!theOpp.RecordType.Name == 'CVB Pendiente'}" style="color:red"/>
+  
+      <style>
+          .search{
+              font-size:14pt;
+              margin-right: 20px;    
+          }
+          .fyi{
+              color:red;
+              font-style:italic;
+          }
+          .label{
+              margin-right:10px;
+              font-weight:bold;
+          }
+      </style>
+      
+      <script type='text/javascript'>
+      
+          // Esta variable indica el tiempo (segs) que se toma en ejecutar la busqueda, para cambiarla, cambiar este valor            
+          var waitTime = 1; 
+      
+          var countDown = waitTime+1;
+          var started = false;
+          
+          function resetTimer(){        
+              countDown=waitTime+1;            
+              if(started==false){
+                  started=true;
+                  runCountDown();
+              }
+          }        
+          function runCountDown(){        
+              countDown--;            
+              if(countDown<=0){
+                  fetchResults();
+                  started=false;
+              }
+              else{
+                  window.setTimeout(runCountDown,1000);
+              }
+          }
+      
+      </script>
+         
+         <apex:actionstatus id="displayImg" starttext="loading..." stoptext="">
+              <apex:facet name="start">
+                  <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.85; z-index: 1000; background-color: rgba(0, 0, 0, 0.70);">
+                      &nbsp;
+                  </div>
+                      <div style="position: fixed; left: 0; top: 0px; z-index: 1001; width: 100%;
+                              height: 100%; margin: 20% 50% ">
+                      <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                  </div>
+                  
+              </apex:facet>
+          </apex:actionstatus> 
+      <apex:form >    
+          <apex:outputPanel id="mainBody">
+          
+              <apex:outputLabel styleClass="label">desde la lista de precios: </apex:outputLabel>
+              <apex:outputText value="{!theBook.Name}"/>&nbsp;
+              <!--<apex:commandLink action="{!changePricebook}" value="cambiar" immediate="true"/>-->
+              <br/>
+              <br/>            
+              
+              <apex:outputPanel styleClass="fyi" rendered="{!theOpp.RecordType.Name == 'Pendiente' && theOpp.Valor_antecipado__c != null}">
+                  <br/>
+                  Anticipo: {!theOpp.Valor_antecipado__c} - Anticipo en Items: {!anticipoItems}
+                  <br/>
+              </apex:outputPanel>
+              
+              <apex:pageBlock title="{!$ObjectType.Product2.LabelPlural} Selecionados" id="selected" rendered="{!theOpp.RecordType.Name != 'CVB Pendiente'}">
+                         
+              
+                  <apex:pageblockTable value="{!shoppingCart}" var="s">                    
+                      <apex:column >
+                          <apex:commandLink value="Excluir" action="{!removeFromShoppingCart}" reRender="selected,searchResults" rendered="{!theOpp.RecordType.Name != 'VB - Pasada SAP'}" immediate="false">
+                              <apex:param value="{!s.ZZPOSSF__c}" assignTo="{!toUnselect}" name="toUnselect"/>
+                          </apex:commandLink>
+                      </apex:column>                    
+                      
+                      <apex:column headerValue="Cultivar" value="{!s.PriceBookEntry.Product2.Variedade__r.Name}" />
+                      <apex:column headerValue="Registro Cultivar" value="{!s.PriceBookEntry.Product2.Variedade__r.Nombre_de_Registro__c}" rendered="{!theOpp.RecordType.Name == 'Estimativa de venda' || theOpp.RecordType.Name == 'Objetivo Ventas Royalties' || theOpp.RecordType.Name == 'Objetivo Contrato Royalties'}"/>
+                      <apex:column headerValue="Categoria2" value="{!s.PriceBookEntry.Product2.Categ__r.Name}" rendered="{!theOpp.RecordType.Name == 'Disponibilidade da Basica' || theOpp.RecordType.Name == 'PB-Produccion' || theOpp.RecordType.Name == 'PB-Comercial' || theOpp.RecordType.Name == 'CVB Pendiente' || theOpp.RecordType.Name == 'CVB Rechazada' || theOpp.RecordType.Name == 'PB-Desarrollo'}"/>
+                      <!-- Origem-->
+                      <apex:column headerValue="{!IF(theOpp.RecordType.Name == 'Anexo II Rebaixamento Sacas' ,'Categoria Origem',$ObjectType.OpportunityLineItem.Fields.Categoria_a_Rebaixar__c.Label)}" rendered="{!theOpp.RecordType.Name == 'Anexo I Rebaixamento Ha' || theOpp.RecordType.Name == 'Anexo II Rebaixamento Sacas'}">
+                        <apex:inputField value="{!s.Categoria_a_Rebaixar__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                    </apex:column>
+                    
+                      <!-- Rebaixada-->
+                      <apex:column headerValue="{!IF( theOpp.RecordType.Name == 'Anexo II Rebaixamento Sacas','Categoria Rebaixada',$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label)}" rendered="{!theOpp.RecordType.Name == 'Anexo I' || theOpp.RecordType.Name == 'Anexo II' || theOpp.RecordType.Name == 'Anexo III' || theOpp.RecordType.Name == 'Anexo IV' || theOpp.RecordType.Name == 'Anexo V' || theOpp.RecordType.Name == 'Anexo I Rebaixamento Ha' || theOpp.RecordType.Name == 'Anexo II Rebaixamento Sacas' || theOpp.RecordType.Name == 'Exportacion' || theOpp.RecordType.Name == 'Reembalaje' || theOpp.RecordType.Name == 'Aquisição Sementes Terceiros'}">
+                
+                      <apex:inputField value="{!s.Categoria__c}" style="width:70px" required="{!theOpp.RecordType.Name != 'Anexo V'}" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                         
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label}" rendered="{!theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'VB - Autorizada'}">
+                          <apex:selectList value="{!s.Categoria__c}" size="1" style="width:70px" required="true" onkeyup="refreshTotals()"><apex:selectOptions value="{!OptionCategoria}"/></apex:selectList>
+                      </apex:column>
+
+                      <apex:column headerValue="Unidade3" value="{!s.PricebookEntry.Product2.UNIDADE__c}" rendered="{!theOpp.RecordType.Name == 'Previsao' || theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'VB - Autorizada' || theOpp.RecordType.Name == 'VB - Pasada SAP' || theOpp.RecordType.Name == 'CVB Autorizada' || theOpp.RecordType.Name == 'CVB Pendiente' || theOpp.RecordType.Name == 'CVB Rechazada'}"/>                    
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Grupo_de_materiales_2__c.Label}" value="{!s.Grupo_de_materiales_2__c}" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP'}"/>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Grupo_de_materiales_2__c.Label}4" rendered="{!theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'CVB Pendiente' || theOpp.RecordType.Name == 'CVB Rechazada'}">
+                          <apex:inputField value="{!s.Grupo_de_materiales_2__c}" style="width:70px" required="false" onkeyup="refreshTotals()"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Tratamiento_de_Semilla__c.Label}" value="{!s.Tratamiento_de_Semilla__c}" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP'}"/>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Tratamiento_de_Semilla__c.Label}" rendered="{!theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'VB - Autorizada'}">
+                          <apex:inputField value="{!s.Tratamiento_de_Semilla__c}" style="width:70px" required="false" onkeyup="refreshTotals()"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Area_Plantada__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo II'}">
+                          <apex:inputField value="{!s.Area_Plantada__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_bruta__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo II' || theOpp.RecordType.Name == 'Anexo III'}">
+                          <apex:inputField value="{!s.Semente_bruta__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>                   
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_beneficiada__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo III'}">
+                          <apex:inputField value="{!s.Semente_beneficiada__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_aprovada__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo III' || theOpp.RecordType.Name == 'Stock Multiplicadores'}">
+                          <apex:inputField value="{!s.Semente_aprovada__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_uso_propio__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo III' || theOpp.RecordType.Name == 'Anexo IV'}">
+                          <apex:inputField value="{!s.Semente_uso_propio__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_comercializada__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo III' || theOpp.RecordType.Name == 'Anexo IV' || theOpp.RecordType.Name == 'Anexo V' || theOpp.RecordType.Name == 'Stock Multiplicadores'}">
+                          <apex:inputField value="{!s.Semente_comercializada__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                       <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Descarte__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo II' || theOpp.RecordType.Name == 'Anexo IV'}">
+                          <apex:inputField value="{!s.Descarte__c}" style="width:70px" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+
+
+                 
+
+
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Area__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo I' || theOpp.RecordType.Name == 'Anexo I Rebaixamento Ha'}">
+                          <apex:inputField value="{!s.Area__c}" required="{!theOpp.RecordType.Name == 'Anexo I Rebaixamento Ha'}" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Sem_Rebajada__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo II Rebaixamento Sacas'}">
+                          <apex:inputField value="{!s.Sem_Rebajada__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+  
+                      <apex:column headerValue="Qtde Scs (40kg)" rendered="{!theOpp.RecordType.Name == 'Reembalaje'}">
+                          <apex:inputField value="{!s.Qtde_Scs_40kg__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+  
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Lote_Rebajado__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo I Rebaixamento Ha' || theOpp.RecordType.Name == 'Reembalaje' || theOpp.RecordType.Name == 'Anexo II Rebaixamento Sacas'}">
+                          <apex:inputField value="{!s.Lote_Rebajado__c}" style="width:70px" required="false" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Volume__c.Label}" rendered="{!theOpp.RecordType.Name == 'Exportacion'}">
+                          <apex:inputField value="{!s.Volume__c}" required="{!theOpp.RecordType.Name == 'Exportacion'}" onkeyup="refreshTotals();"/>
+                      </apex:column>
+  
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Expec_Prod_Bruta__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo I'}">
+                          <apex:inputField value="{!s.Expec_Prod_Bruta__c}" required="false" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Estado_de_Comercializacion__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo V'}">
+                          <apex:inputField value="{!s.Estado_de_Comercializacion__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Local_de_Entrega__c.Label}" rendered="{!theOpp.RecordType.Name == 'PB-Comercial' || theOpp.RecordType.Name == 'PB-Produccion' || theOpp.RecordType.Name == 'PB-Desarrollo'}">
+                          <apex:inputField value="{!s.Local_de_Entrega__c}" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="Fecha de necesidad" rendered="{!theOpp.RecordType.Name == 'PB-Desarrollo' || theOpp.RecordType.Name == 'PB-Comercial'}">
+                          <apex:inputField value="{!s.Data__c}" required="{!theOpp.RecordType.Name == 'PB-Desarrollo'}" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="Tipo de Necessidade" rendered="{!theOpp.Setor__c == 'Desarrollo' || theOpp.Setor__c == 'Comercial' || theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'VB - Autorizada' || theOpp.RecordType.Name == 'Objetivo Ventas Semilla'}">
+                          <apex:selectList value="{!s.Tipo_de_Necesidad__c}" required="true" size="1">
+                              <apex:selectOptions value="{!TipoNecesidad}"/>
+                          </apex:selectList>
+                      </apex:column>
+                      
+                      <apex:column headerValue="Data do Evento" rendered="{!theOpp.RecordType.Name == 'PB-Produccion'}">
+                          <apex:inputField value="{!s.Data__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="Fecha de Entrega" rendered="{!theOpp.RecordType.Name == 'PB-Produccion'}">
+                          <apex:inputField value="{!s.Fecha_de_entrega__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Estado_de_Produccion__c.Label}" rendered="{!theOpp.RecordType.Name == 'Anexo I'}">
+                          <apex:inputField value="{!s.Estado_de_Produccion__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Quantity.Label} 7" rendered="{!theOpp.RecordType.Name == 'Pendiente' || theOpp.RecordType.Name == 'NC - Pendiente' || theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'Disponibilidade da Basica' || theOpp.RecordType.Name == 'CVB Pendiente' || theOpp.RecordType.Name == 'CVB Rechazada'}">
+                          <apex:inputField value="{!s.Quantity}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="Quantidade" rendered="{!theOpp.RecordType.Name == 'PB-Produccion' || theOpp.RecordType.Name == 'PB-Comercial' || theOpp.RecordType.Name == 'PB-Desarrollo' || theOpp.RecordType.Name == 'Objetivo Ventas Semilla' || theOpp.RecordType.Name == 'Aquisição Sementes Terceiros'}">
+                        XXXX  <apex:inputField value="{!s.Quantidade__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Meta__c.Label}" rendered="{!theOpp.RecordType.Name == 'Objetivo Ventas Royalties' || theOpp.RecordType.Name == 'Objetivo Contrato Royalties'}">
+                          <apex:inputField value="{!s.Meta__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column> 
+  
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Estimativa__c.Label}" rendered="{!theOpp.RecordType.Name == 'Estimativa de venda'}">
+                          <apex:inputField value="{!s.Estimativa__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column> 
+                      
+                      <apex:column headerValue="Quant. Confirmada" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP'}">
+                          <apex:outputField value="{!s.Quant_Confirmada__c}"/>
+                      </apex:column> 
+                      
+                      <apex:column headerValue="Quant. Rechazada" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP'}">
+                          <apex:outputField value="{!s.Quant_Rechazada__c}"/>
+                      </apex:column> 
+                      
+                      <apex:column headerValue="Quant. Pendiente" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP'}">
+                          <apex:outputField value="{!s.Quant_Pendiente__c}"/>
+                      </apex:column> 
+                                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UnitPrice.Label}" value="{!s.UnitPrice}" rendered="{!theOpp.RecordType.Name == 'NC - Pendiente'}"/>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UnitPrice.Label}" rendered="{!theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'Pendiente'}">
+                          <apex:inputField value="{!s.UnitPrice}" required="true" onkeyup="refreshTotals();"/>    
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Tipo_de_Cotizacion__c.Label}" rendered="{!theOpp.RecordType.Name == 'Pendiente'}">
+                          <apex:selectList value="{!s.Tipo_de_Cotizacion__c}" required="true" size="1">
+                              <apex:selectOptions value="{!TipoCot}"/>
+                          </apex:selectList>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Cot_Soja__c.Label}" rendered="{!theOpp.RecordType.Name == 'Pendiente'}">
+                          <apex:selectList value="{!s.Cot_Soja__c}" required="true" size="1">
+                              <apex:selectOptions value="{!CotSoja}"/>
+                          </apex:selectList>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Valor_antecipado__c.Label}" rendered="{!theOpp.RecordType.Name == 'Pendiente'}">
+                          <apex:inputField value="{!s.Valor_antecipado__c}"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Posicion_SAP_Relacionada__c.Label}" rendered="{!theOpp.RecordType.Name == 'NC - Pendiente'}">
+                          <apex:inputField value="{!s.Posicion_SAP_Relacionada__c}" required="true" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Previsao__c.Label}" rendered="{!theOpp.RecordType.Name == 'Previsao'}">
+                          <apex:inputField value="{!s.Previsao__c}" required="false" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Motivo_de_Rechazo__c.Label}" value="{!s.Motivo_de_Rechazo__c}" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP' && s.Rechazado__c == true}"/>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Motivo_de_Rechazo__c.Label}" rendered="{!theOpp.RecordType.Name == 'VB - Pasada SAP' && s.Rechazado__c == false}">
+                          <apex:inputField value="{!s.Motivo_de_Rechazo__c}" required="false" onkeyup="refreshTotals();"/>
+                      </apex:column>
+                      
+                  </apex:pageblockTable>
+              
+                  <apex:pageBlockButtons location="top" >
+                      <apex:commandButton action="{!onSave}" value="Salvar"/>
+                      <apex:commandButton action="{!onCancel}" value="Cancelar"/>
+                      <apex:commandButton action="{!calcularAnticipoItems}" value="Calcular Anticipo" rendered="{!theOpp.RecordType.Name == 'Pendiente' && theOpp.Valor_antecipado__c != null}"/>
+                      <apex:commandButton action="{!verificarAnticipoItems}" value="Verificar Anticipo" rendered="{!theOpp.RecordType.Name == 'Pendiente' && theOpp.Valor_antecipado__c != null}"/>
+                  </apex:pageBlockButtons>
+              
+              </apex:pageBlock>
+              <!---->
+  
+              <!-- /////////////////////////////////////////////////////CVB Pendiente///////////////////////////////////////////////////////// -->
+              <apex:pageBlock id="selected2" rendered="{!theOpp.RecordType.Name == 'CVB Pendiente'}">
+                  <apex:pageMessages />
+                  <apex:pageblockTable value="{!shoppingCartWrappers}" var="wrp">
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedad_de_Produto__c.Label}" style="">
+                          <apex:selectList value="{!wrp.idVariedad}" size="1" style="width:100%">
+                              <apex:selectOptions value="{!wrp.opcionesVariedad}"/>
+                              <apex:actionsupport event="onchange"
+                                                  action="{!cantidadDisponible}"
+                                                  rerender="selected2" 
+                                                  status="displayImg">
+                              </apex:actionsupport>
+                          </apex:selectList>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria_Prod__c.Label}" style="">
+                          <apex:selectList value="{!wrp.idCategoria}" size="1" style="width:100%">
+                              <apex:selectOptions value="{!wrp.opcionesCategoria}"/>
+                          </apex:selectList>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UNIDADE__c.Label}" style="">
+                          <apex:selectList value="{!wrp.idUnidad}" size="1" style="width:100%">
+                              <apex:selectOptions value="{!wrp.opcionesUnidad}"/>
+                              <apex:actionsupport event="onchange"
+                                                  action="{!cargarCatidadSubUnidad}"
+                                                  rerender="selected2" 
+                                                  status="displayImg">
+                              </apex:actionsupport>
+                          </apex:selectList>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Tipo_de_Necessidade__c.Label}" style="">
+                          <apex:selectList value="{!wrp.Tipo_de_Necesidad}" size="1" style="width:100%">
+                              <apex:selectOption itemValue="---Ninguno---" itemLabel="---Ninguno---"/>
+                              <apex:selectOption itemValue="Multiplicação" itemLabel="Multiplicação"/>
+                              <apex:selectOption itemValue="Difusão" itemLabel="Difusão"/>
+                          </apex:selectList>
+                      </apex:column>
+                      <apex:column headerValue="Quantidade kg Disponível" style="">
+                          <apex:outputText value="{!wrp.cantidadKgDisponible}"></apex:outputText>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Quantity.Label}"
+                                   style="width:10%">
+                          <apex:input value="{!wrp.quantity}">
+                              <apex:actionsupport event="onchange"
+                                                  action="{!dummy}"
+                                                  rerender="selected2"
+                                                  status="displayImg">
+                              </apex:actionsupport>
+                          </apex:input>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Kg_de_produto__c.Label}" style="">
+                          <apex:outputText value="{!wrp.quantity * wrp.cantSubUnidad}"></apex:outputText>
+                      </apex:column>
+                      <apex:column style="width:10%; text-align: center;">
+                          <apex:commandLink value="Adicionar" action="{!addShoppingCartWrappersUpsert}"
+                                            reRender="selected3,selected2" status="displayImg">
+                              <apex:param value="agregando" assignTo="{!accion}" name="accion"/>
+                          </apex:commandLink>
+                      </apex:column>
+                  </apex:pageblockTable>
+                  <apex:pageBlockButtons location="top">
+                      <apex:commandButton action="{!onCancelCVBPendiente}" value="Cancelar"
+                                          reRender="selected3,selected2" status="displayImg"/>
+                      <apex:commandButton action="{!onSaveCVBPendiente}" value="Salvar" disabled="{!Disabled}"
+                                          reRender="selected3,selected2" status="displayImg"/>
+                  </apex:pageBlockButtons>
+              </apex:pageBlock>
+              <!---->
+              <apex:pageBlock title="{!$ObjectType.OpportunityLineItem.LabelPlural}" id="selected3" rendered="{!theOpp.RecordType.Name == 'CVB Pendiente'}">
+                  <apex:pageblockTable value="{!shoppingCartWrappersUpsert}" var="wrp">
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}" style="">
+                          <apex:outputText value="{!wrp.Variedad}"></apex:outputText>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedad_de_Produto__c.Label}" style="">
+                          <apex:outputText value="{!wrp.Nombre_de_Registro}"></apex:outputText>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria_Prod__c.Label}" style="">
+                          <apex:selectList value="{!wrp.idCategoria}" size="1" style="width:100%" rendered="{!!wrp.readOnly}">
+                              <apex:selectOptions value="{!wrp.opcionesCategoria}"/>
+                          </apex:selectList>
+                          <apex:outputText value="{!wrp.Categoria}" rendered="{!wrp.readOnly}"></apex:outputText>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UNIDADE__c.Label}" style="">
+                          <apex:selectList value="{!wrp.idUnidad}" size="1" style="width:100%" rendered="{!!wrp.readOnly}">
+                              <apex:selectOptions value="{!wrp.opcionesUnidad}"/>
+                              <apex:actionsupport event="onchange"
+                                                  action="{!editarCatidadSubUnidad}"
+                                                  rerender="selected3" 
+                                                  status="displayImg">
+                              </apex:actionsupport>
+                          </apex:selectList>
+                          <apex:outputText value="{!wrp.idUnidad}" rendered="{!wrp.readOnly}"></apex:outputText>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Tipo_de_Necessidade__c.Label}" style="">
+                          <apex:outputText value="{!wrp.Tipo_de_Necesidad}"></apex:outputText>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Quantity.Label}" style="width:10%">
+                          <apex:outputText value="{!wrp.quantity}" rendered="{!wrp.readOnly}"></apex:outputText>
+                          <apex:input value="{!wrp.quantity}" rendered="{!!wrp.readOnly}">
+                              <apex:actionsupport event="onchange" 
+                                                  action="{!dummy}" 
+                                                  rerender="selected3" 
+                                                  status="displayImg">
+                              </apex:actionsupport>
+                          </apex:input>
+                      </apex:column>
+                      <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Kg_de_produto__c.Label}" style="">
+                          <apex:outputText value="{!wrp.quantity * wrp.cantSubUnidad}"></apex:outputText>
+                      </apex:column>
+                      <apex:column style="width:10%; text-align: center;">
+                          <apex:outputPanel rendered="{!wrp.readOnly}">
+                              <apex:commandLink value="Editar" action="{!editProduct}" reRender="selected3,selected2"
+                                                rendered="{!wrp.readOnly}">
+                                  <apex:param value="{!wrp.Id}" assignTo="{!toEdit}" name="toEdit"/>
+                                  <apex:param value="{!wrp.quantity}" assignTo="{!quantityTemp}" name="quantityTemp"/>
+                              </apex:commandLink>&nbsp;
+                              |
+                              &nbsp;
+                              <apex:commandLink value="Excluir" action="{!removeShoppingCartWrappersUpsert}" reRender="selected3"
+                                                rendered="{!wrp.readOnly}" status="displayImg">
+                                  <apex:param value="{!wrp.Id}" assignTo="{!toUnselect}" name="toUnselect"/>
+                              </apex:commandLink>
+                          </apex:outputPanel>
+                          <!---->
+                          <apex:outputPanel rendered="{!!wrp.readOnly}">
+                              <apex:commandLink value="Cancelar" action="{!editProduct}" reRender="selected3,selected2"
+                                                rendered="{!!wrp.readOnly}">
+                                  <apex:param value="{!wrp.Id}" assignTo="{!toEdit}" name="toEdit"/>
+                                  <apex:param value="{!quantityTemp}" assignTo="{!wrp.quantity}" name="quantityTemp"/>
+                              </apex:commandLink>&nbsp;
+                              |
+                              &nbsp;
+                              <apex:commandLink value="Salvar" action="{!addShoppingCartWrappersUpsert}" reRender="selected3,selected2"
+                                                rendered="{!!wrp.readOnly}" status="displayImg">
+                                  <apex:param value="{!wrp.Id}" assignTo="{!toEdit}" name="toEdit"/>
+                                  <apex:param value="editando" assignTo="{!accion}" name="accion"/>
+                              </apex:commandLink>
+                          </apex:outputPanel>
+                      </apex:column>
+                  </apex:pageblockTable>
+              </apex:pageBlock>
+              <!-- /////////////////////////////////////////////////////FIN CVB Pendiente///////////////////////////////////////////////////// -->
+              
+              <apex:pageBlock rendered="{!theOpp.RecordType.Name != 'VB - Pasada SAP' && theOpp.RecordType.Name != 'CVB Autorizada' && theOpp.RecordType.Name != 'CVB Pendiente' && theOpp.RecordType.Name != 'CVB Rechazada'}"> <!-- theOpp.RecordType.Name != 'VB - Pendiente' && && theOpp.RecordType.Name != 'VB - Rechazada' -->
+              
+              <!-- <apex:pageBlock rendered="{!theOpp.RecordType.Name != 'VB - Autorizada' && theOpp.RecordType.Name != 'VB - Pasada SAP' && theOpp.RecordType.Name != 'CVB Autorizada' && theOpp.RecordType.Name != 'CVB Pendiente' && theOpp.RecordType.Name != 'CVB Rechazada'}"> -->
+              
+                  <apex:outputPanel styleClass="search" > <!--  rendered="{!theOpp.RecordType.Name != 'VB - Autorizada'}"   theOpp.RecordType.Name != 'VB - Pendiente' ||   || theOpp.RecordType.Name != 'VB - Rechazada'-->
+                      Procurar {!$ObjectType.Product2.LabelPlural}:
+                  </apex:outputPanel>
+                  <apex:actionRegion renderRegionOnly="false" immediate="true">
+                  
+                      <apex:actionFunction name="fetchResults" action="{!updateAvailableList}" reRender="searchResults" status="searchStatus"/>
+                      
+                      <!-- aqui se llama al metodo para que no haya necesidad de un boton de "buscar" -->
+                      <apex:inputText value="{!searchString}" onkeydown="if(event.keyCode==13){this.blur();}else{resetTimer();}" style="width:300px"/>
+                      &nbsp;&nbsp;
+                      <i>
+                          <!-- actionStatus es para indicar al usuario que se esta haciendo la busqueda -->
+                          <apex:actionStatus id="searchStatus" startText="buscando..." stopText=" "/>
+                      </i>
+                  </apex:actionRegion>
+                  <br/>
+                  <br/>
+                  <apex:outputPanel id="searchResults">
+                      <apex:pageBlockTable value="{!AvailableProducts}" var="a">
+                          <apex:column >
+                              <apex:commandButton value="Seleccionar" action="{!addToShoppingCart}" reRender="selected,searchResults"> <!-- immediate="true" -->
+                                  <!-- asignamos el id del PricebookEntry a apex:param para identificar la fila seleccionada -->
+                                  <apex:param value="{!a.Id}" assignTo="{!toSelect}" name="toSelect"/>
+                              </apex:commandButton>
+                          </apex:column>
+                          <!-- <apex:column value="{!a.Product2.Name}" rendered="{!theOpp.RecordType.Name != 'Previsao' && theOpp.RecordType.Name != 'VB - Pendiente' && theOpp.RecordType.Name != 'VB - Rechazada' &&  theOpp.RecordType.Name != 'Disponibilidade da Basica' && theOpp.RecordType.Name != 'Stock Multiplicadores'  && theOpp.RecordType.Name != 'PB-Produccion' && theOpp.RecordType.Name != 'PB-Comercial'}"/>
+                          <apex:column value="{!a.Product2.Variedade__r.Name}" rendered="{!theOpp.RecordType.Name == 'Previsao' || theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'Disponibilidade da Basica' || theOpp.RecordType.Name == 'Stock Multiplicadores' || theOpp.RecordType.Name == 'PB-Produccion' || theOpp.RecordType.Name == 'PB-Comercial'}"/> -->
+                          <apex:column value="{!a.Product2.Variedade__r.Name}"/>
+                          <apex:column value="{!a.Product2.Categ__r.Name}" rendered="{!theOpp.RecordType.Name != 'Previsao' && theOpp.RecordType.Name != 'VB - Pendiente' && theOpp.RecordType.Name != 'VB - Rechazada'  && theOpp.RecordType.Name != 'Stock Multiplicadores'}"/>
+                          <apex:column value="{!a.Product2.UNIDADE__c}" rendered="{!theOpp.RecordType.Name == 'Previsao' || theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'VB - Autorizada' || theOpp.RecordType.Name == 'VB - Pasada SAP' || theOpp.RecordType.Name == 'CVB Autorizada' || theOpp.RecordType.Name == 'CVB Pendiente' || theOpp.RecordType.Name == 'CVB Rechazada'}"/>
+                          <apex:column value="{!a.Product2.Semilla_Tratada__c}" rendered="{!theOpp.RecordType.Name == 'Previsao' || theOpp.RecordType.Name == 'VB - Pendiente' || theOpp.RecordType.Name == 'VB - Rechazada' || theOpp.RecordType.Name == 'VB - Autorizada' || theOpp.RecordType.Name == 'Disponibilidade da Basica'}"/>
+                          <apex:column headervalue="Registro Cultivar" value="{!a.Product2.Variedade__r.Nombre_de_Registro__c}" rendered="{!theOpp.RecordType.Name == 'Estimativa de venda' || theOpp.RecordType.Name == 'Objetivo Ventas Royalties' || theOpp.RecordType.Name == 'Objetivo Contrato Royalties'}"/>
+                          <apex:column value="{!a.Product2.Codigo_Material_SAP__c}" rendered="{!theOpp.RecordType.Name != 'PB-Produccion' && theOpp.RecordType.Name != 'PB-Comercial'}"/>
+                      </apex:pageBlockTable>
+                      <!-- mostramos el mensaje si los resultados son mas de 30  -->
+                      <apex:outputPanel styleClass="fyi" rendered="{!overLimit}">
+                          <br/>
+                          La consulta retornÃ³ mÃ¡s de 30 resultados, vuelva a escribir un criterio de bÃºsqueda mÃ¡s especÃ­fico.
+                          <br/>
+                      </apex:outputPanel>                    
+                  </apex:outputPanel>            
+              </apex:pageBlock>            
+          </apex:outputPanel>
+  
+      </apex:form>
+  
+  </apex:page>

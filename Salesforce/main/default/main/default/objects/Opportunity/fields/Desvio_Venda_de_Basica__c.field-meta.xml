@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desvio_Venda_de_Basica__c</fullName>
+    <description>Calcula el descuento aplicado sobre el precio del producto en realcion con el precio de entrada de lista.</description>
+    <externalId>false</externalId>
+    <formula>(Total__c / Preco_Total_Sugerido_Com_Juros__c) - 1</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Desvio Venda de Basica</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

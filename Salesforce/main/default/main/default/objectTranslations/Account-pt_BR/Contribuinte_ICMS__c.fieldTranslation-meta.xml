@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contribuinte ICMS --></label>
+    <name>Contribuinte_ICMS__c</name>
+    <picklistValues>
+        <masterLabel>1 - Contribuinte de ICMS</masterLabel>
+        <translation><!-- 1 - Contribuinte de ICMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 - Contribuinte de ICMS - Isento</masterLabel>
+        <translation><!-- 2 - Contribuinte de ICMS - Isento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9 - Não Contribuinte de ICMS</masterLabel>
+        <translation><!-- 9 - Não Contribuinte de ICMS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

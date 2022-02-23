@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Encuesta de uso de Salesforce CRM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Correo electrónico de búsqueda de conexiones (MUESTRA)</name>
+    <style>none</style>
+    <subject>¿Utiliza Salesforce CRM?</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

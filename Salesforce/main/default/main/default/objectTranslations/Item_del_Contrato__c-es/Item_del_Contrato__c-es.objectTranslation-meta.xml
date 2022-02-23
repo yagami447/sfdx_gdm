@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Item del Contrato</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Items del Contrato</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Item - Metas</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Item - Metas x Cultivar</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Item - Metas x Estado</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Item - Volumen y Precio</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Metas --></label>
+        <name>Metas</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Metas x Cultivar --></label>
+        <name>Metas_cultivar</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Metas x Estado --></label>
+        <name>Metas_x_estado</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Volumen --></label>
+        <name>Volumen</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- O produto selecionado é outra empresa.El producto seleccionado corresponde a otra Sociedad. --></errorMessage>
+        <name>Igual_Sociedad_que_la_cabecera</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A cultivar selecionada não tem a mesma tipo de cotização de que o contrato --></errorMessage>
+        <name>Igual_Tipo_de_Cotizacion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- La categoria del producto seleccionado debe ser Basica. Seleccione otro producto cuya categoría sea Basica.
+A categoria de produto selecionado deve ser básica. Escolha outro produto cuja categoria é básica. --></errorMessage>
+        <name>La_categoria_debe_ser_Basica</name>
+    </validationRules>
+</CustomObjectTranslation>

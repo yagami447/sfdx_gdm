@@ -1,0 +1,147 @@
+<apex:page lightningStyleSheets="true" standardController="Plano_de_Auditoria__c" extensions="AuditarVisitaController" sidebar="false"
+    showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+    </head>
+    <div class="SLDS" id="page">
+
+        <body>
+            <apex:form id="form">
+                <div class="slds-page-header slds-page-header_object-home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <div class="slds-grid">
+                        <div class="slds-col">
+                            <div class="slds-media slds-no-space slds-grow">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-goals">
+                                        <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#goal')}"></use>
+                                    </svg>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p class="slds-text-title--caps slds-line-height--reset">Produtos do:</p>
+                                    <p class="slds-page-header__title slds-truncate" title="ALL">{!Plano_de_Auditoria__c.Name}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                            <apex:outputPanel >
+                                <apex:selectList id="SafraSearch" value="{!safraSelected}" styleClass="form-control col-md-2 col-xs-12" style="width:auto"
+                                    size="1">
+                                    <apex:selectOptions value="{!safraFiltrer}"></apex:selectOptions>
+                                </apex:selectList>
+                                <apex:commandButton styleClass="slds-button" value="Filtrar" action="{!getProductosParaAuditar}" reRender="search, Variedades, form"
+                                />
+                                <apex:commandButton styleClass="slds-button slds-button--neutral slds-not-selected" value="Salvar" reRender="Variedades"
+                                    action="{!Save}" />
+                                <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!goToPlano}" value="Plano de Auditoria"
+                                    immediate="true" html-formnovalidate="formnovalidate" />
+                                <!-- <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!goToCalendario}" value="Calendario"
+                                    immediate="true" html-formnovalidate="formnovalidate" /> -->
+                                <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!goToObservaciones}" value="OBSERVAÇÕES"
+                                    immediate="true" html-formnovalidate="formnovalidate" />
+                                <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!generatePDF}" value="Generar PDF"
+                                    immediate="true" html-formnovalidate="formnovalidate" />
+                            </apex:outputPanel>
+                        </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-align-bottom">
+                            <p class="slds-text-body_large">Produtos </p>
+                        </div>
+                    </div>
+                    <apex:outputPanel styleClass="fyi" id="mess">
+                        <apex:messages />
+                    </apex:outputpanel>
+                </div>
+                <apex:outputPanel id="Variedades">
+                    <apex:dataTable value="{!productosDelPlano}" var="variedad" styleclass="data table table-bordered table-striped no-margin"
+                        rendered="{!productosDelPlano.size > 0}">
+                        <apex:column headerValue="SAFRA" headerClass="center" value="{!variedad.Safra__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; "
+                        />
+                        <apex:column headerValue="VARIEDADE" headerClass="center" value="{!variedad.Variedad__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="CATEGORIA" headerClass="center" value="{!variedad.Categoria_Oli__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="AREA AUTORIZADA" headerClass="center" value="{!variedad.Area_Autorizada__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="AREA PLANTADA" headerClass="center" value="{!variedad.Area_Plantada__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="PRODUCTIVIDADE" headerClass="center" value="{!variedad.Productividad__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; "
+                        />
+                        <apex:column headerValue="SEM. BRUTA" headerClass="center" value="{!variedad.Sem_Bruta__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; "
+                        />
+                        <apex:column headerValue="QUEBRA %" headerClass="center" value="{!variedad.Quebra__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="SEM. BENEFICIADA" headerClass="center" value="{!variedad.Sem_Beneficiada__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="SEM. APROVADA" headerClass="center" value="{!variedad.Sem_Aprobada__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="SEM. APROVADA VERIFICADA" headerClass="center" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;">
+                            <apex:inputField value="{!variedad.Sem_Aprovada_Verificada__c}" />
+                        </apex:column>
+                        <apex:column headerValue="SEM. COMERCIAL" headerClass="center" value="{!variedad.Sem_Comercializada__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="SEM. USO PROPRIO" headerClass="center" value="{!variedad.Sem_Uso_Propio__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="TOTAL COM+UP" headerClass="center" value="{!variedad.Total_Com_Up__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="SALDO" headerClass="center" value="{!variedad.Descarte__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;"
+                        />
+                        <apex:column headerValue="COMERCIALIZADO" headerClass="center" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;">
+                            <apex:inputField value="{!variedad.Comercializado__c}" />
+                        </apex:column>
+                        <apex:column headerValue="USO PROPRIO" headerClass="center" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; ">
+                            <apex:inputField value="{!variedad.Uso_Propio__c}" />
+                        </apex:column>
+                        <apex:column headerValue="Descarte Aprovado do CLIENTE" headerClass="center" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; ">
+                            <apex:inputField value="{!variedad.Descarte_Cliente__c}" />
+                        </apex:column>
+                        <apex:column headerValue="TOTAL COM+UP CLIENTE" headerClass="center" value="{!variedad.Total_Com_UP_Cliente__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; "
+                        />
+                        <apex:column headerValue="DIF VENDA" headerClass="center" value="{!variedad.Diferencia_de_Venta__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; "
+                        />
+                        <apex:column headerValue="DIF. Descarte Aprovado" headerClass="center" value="{!variedad.Diferencia_Descarte__c}" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px; "
+                        />
+                        <apex:column headerValue="Sair no Apontamento" headerClass="center" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;">
+                            <apex:inputField value="{!variedad.Salir_de_la_Visita__c}" html-disabled="{!variedad.Diferencia_de_Venta__c <= 0}" rendered="{!variedad.Diferencia_de_Venta__c <= 0}"
+                            />
+                            <apex:inputField value="{!variedad.Salir_de_la_Visita__c}" rendered="{!variedad.Diferencia_de_Venta__c > 0}" />
+                        </apex:column>
+                        <apex:column headerValue="Observação" headerClass="center" style="text-align: center; border-bottom: 1px solid #ddd; padding: 8px;">
+                            <apex:inputField value="{!variedad.Observacion__c}" required="{!!variedad.Salir_de_la_Visita__c}" />
+                        </apex:column>
+                    </apex:dataTable>
+                </apex:outputPanel>
+                <apex:pageBlock >
+                    <p class="slds-text-body_large">OBSERVAÇÕES:</p>
+                    <apex:inputField value="{!planoDeAuditoria.Observacion__c}" style="width:100%" />
+                </apex:pageBlock>
+            </apex:form>
+        </body>
+    </div>
+
+    <style>
+        .center {
+            text-align: center !important;
+        }
+        .footerTable {
+            font-weight: bold;
+        }
+        .center {
+            text-align: center
+        }
+        .Right {
+            text-align: right
+        }
+        .TitleNome {
+            Width: 5%;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .ValueNome {
+            font-weight: normal;
+            font-size: 15px;
+        }
+    </style>
+
+</apex:page>

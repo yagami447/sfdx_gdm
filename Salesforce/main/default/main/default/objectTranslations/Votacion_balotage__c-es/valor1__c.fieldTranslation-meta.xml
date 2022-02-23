@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- valor + votado en la primer vuelta --></help>
+    <label><!-- valor1 --></label>
+    <name>valor1__c</name>
+</CustomFieldTranslation>

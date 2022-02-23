@@ -1,0 +1,7 @@
+Foi gerado o caso {!Case.CaseNumber}
+
+Conta: {!Account.Name}
+
+Origem: {!Case.Origin} 
+
+Link: {!Case.Link}

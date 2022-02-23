@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sem Interesse</fullName>
+                <default>false</default>
+                <label>Sem Interesse</label>
+            </value>
+            <value>
+                <fullName>Enviada</fullName>
+                <default>false</default>
+                <label>Enviada</label>
+            </value>
+            <value>
+                <fullName>Rejeitada</fullName>
+                <default>false</default>
+                <label>Rejeitada</label>
+            </value>
+            <value>
+                <fullName>Rejeitada pelo Admin</fullName>
+                <default>false</default>
+                <label>Rejeitada pelo Admin</label>
+            </value>
+            <value>
+                <fullName>Aceita</fullName>
+                <default>false</default>
+                <label>Aceita</label>
+            </value>
+            <value>
+                <fullName>Negócio Fechado</fullName>
+                <default>false</default>
+                <label>Negócio Fechado</label>
+            </value>
+            <value>
+                <fullName>Negócio Desfeito</fullName>
+                <default>false</default>
+                <label>Negócio Desfeito</label>
+            </value>
+            <value>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+                <label>Cancelada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

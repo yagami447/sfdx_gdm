@@ -1,0 +1,53 @@
+<apex:page Controller="CRM_Controller" title="Datos Bonificacion" action="{!initDatosBonificacion}" tabStyle="Account" sidebar="false">    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickCanalVendas="{!verCanalVendas}" clickAreaAct="{!verAreaAct}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1000px">
+    <apex:sectionHeader title="Datos Bonificacion ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>            
+    <apex:pageBlock mode="edit">
+    <apex:pageBlockSection columns="2">       
+        <apex:pageBlockSection title="DSEM" columns="1">
+            <apex:outputLabel value="Manual da marca: ">                        
+                <apex:inputField value="{!crm_mult.DS_Manual_da_marca__c}" rendered="{!editDatosBonifDSEM == true}"></apex:inputField>   
+                <apex:outputField value="{!crm_mult.DS_Manual_da_marca__c}" rendered="{!editDatosBonifDSEM == false}"></apex:outputField>             
+            </apex:outputLabel>    
+            <apex:outputLabel value="Comodato Áreas para ensaios: ">
+                <apex:inputField value="{!crm_mult.DS_Areas_para_ensaios__c}" rendered="{!editDatosBonifDSEM == true}"></apex:inputField> 
+                <apex:outputField value="{!crm_mult.DS_Areas_para_ensaios__c}" rendered="{!editDatosBonifDSEM == false}"></apex:outputField>
+            </apex:outputLabel>   
+            <apex:outputLabel value="Numero de Reclamaçoes: ">
+                <apex:inputField value="{!crm_mult.DS_Reclam_de_prec__c}" rendered="{!editDatosBonifDSEM == true}"></apex:inputField> 
+                <apex:outputField value="{!crm_mult.DS_Reclam_de_prec__c}" rendered="{!editDatosBonifDSEM == false}"></apex:outputField>
+            </apex:outputLabel>
+            <apex:outputLabel value="% Meta a Alcanzar: ">
+                <apex:inputField value="{!crm_mult.DS_porc_Meta_a_Alcanzar__c}" rendered="{!editDatosBonifDSEM == true}"></apex:inputField> 
+                <apex:outputField value="{!crm_mult.DS_porc_Meta_a_Alcanzar__c}" rendered="{!editDatosBonifDSEM == false}"></apex:outputField>
+            </apex:outputLabel>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:commandLink style="width: 100px" value="Editar" action="{!editDatosBonificacionDSEM}" rendered="{!editDatosBonifDSEM == false && !crm_mult.Cerrado__c}" rerender="form"/> 
+            <apex:commandLink style="width: 100px" value="Cancelar " action="{!cancelEditDatosBonifDSEM}" rendered="{!editDatosBonifDSEM == true && !crm_mult.Cerrado__c}"/>
+            <apex:commandLink style="width: 100px" value="Salvar" action="{!saveDatosBonif}" rendered="{!editDatosBonifDSEM == true && !crm_mult.Cerrado__c}"/>
+        </apex:pageBlockSection>  
+        <apex:pageBlockSection title="BRMX" columns="1">
+            <apex:outputLabel value="CRM: ">                        
+                <!--<apex:inputField value="{!crm_mult.BR_Exclusividade_GDM__c}" rendered="{!editDatosBonifBRMX == true}"></apex:inputField>
+                <apex:outputField value="{!crm_mult.BR_Exclusividade_GDM__c}" rendered="{!editDatosBonifBRMX == false}"></apex:outputField>-->
+                <apex:inputField value="{!crm_mult.CRM_BRMX__c}" rendered="{!editDatosBonifBRMX == true}"></apex:inputField>
+                <apex:outputField value="{!crm_mult.CRM_BRMX__c}" rendered="{!editDatosBonifBRMX == false}"></apex:outputField>                
+            </apex:outputLabel>                
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:commandLink style="width: 100px" value="Editar" action="{!editDatosBonificacionBRMX}" rendered="{!editDatosBonifBRMX == false && !crm_mult.Cerrado__c}" rerender="form"/> 
+            <apex:commandLink style="width: 100px" value="Cancelar " action="{!cancelEditDatosBonifBRMX}" rendered="{!editDatosBonifBRMX == true && !crm_mult.Cerrado__c}"/>
+            <apex:commandLink style="width: 100px" value="Salvar" action="{!saveDatosBonif}" rendered="{!editDatosBonifBRMX == true && !crm_mult.Cerrado__c}"/>
+        </apex:pageBlockSection>              
+    </apex:pageBlockSection>   
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/> 
+    </apex:pageBlock>
+</apex:form>  
+</apex:panelGrid> 
+</apex:page>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsavel__c</fullName>
+    <description>Qual dos funcionários da Brasmax que estará responsável pela conta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Qual dos funcionários da Brasmax que estará responsável pela conta</inlineHelpText>
+    <label>Responsável BRMX</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>061 - Fernando Frehner</fullName>
+                <default>false</default>
+                <label>061 - Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>066 - Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>066 - Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>067 - Sergio Bertagnolli</fullName>
+                <default>false</default>
+                <label>067 - Sergio Bertagnolli</label>
+            </value>
+            <value>
+                <fullName>076 - Tiago Goulart</fullName>
+                <default>false</default>
+                <label>076 - Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>083 - Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>083 - Jorge Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>010 - Brasmax</fullName>
+                <default>false</default>
+                <label>010 - Brasmax</label>
+            </value>
+            <value>
+                <fullName>101 - Fausto Tadeu Fanchin</fullName>
+                <default>false</default>
+                <label>101 - Fausto Tadeu Fanchin</label>
+            </value>
+            <value>
+                <fullName>104 - Otavio Gorni</fullName>
+                <default>false</default>
+                <label>104 - Otavio Gorni</label>
+            </value>
+            <value>
+                <fullName>150 - João Serrano</fullName>
+                <default>false</default>
+                <label>150 - João Serrano</label>
+            </value>
+            <value>
+                <fullName>012 - Anderson Weissheimer</fullName>
+                <default>false</default>
+                <label>012 - Anderson Weissheimer</label>
+            </value>
+            <value>
+                <fullName>197 - Wagner Rank</fullName>
+                <default>false</default>
+                <label>197 - Wagner Rank</label>
+            </value>
+            <value>
+                <fullName>198 - Bernardo Zanardo</fullName>
+                <default>false</default>
+                <label>198 - Bernardo Zanardo</label>
+            </value>
+            <value>
+                <fullName>199 - Lucas Costa</fullName>
+                <default>false</default>
+                <label>199 - Lucas Costa</label>
+            </value>
+            <value>
+                <fullName>231 - Willian Von Scharten</fullName>
+                <default>false</default>
+                <label>231 - Willian Von Scharten</label>
+            </value>
+            <value>
+                <fullName>234 - Julio Cesar Poletto</fullName>
+                <default>false</default>
+                <label>234 - Julio Cesar Poletto</label>
+            </value>
+            <value>
+                <fullName>017 - Luis Fernando Cecatto</fullName>
+                <default>false</default>
+                <label>017 - Luis Fernando Cecatto</label>
+            </value>
+            <value>
+                <fullName>018 - Flávio Marçal dos Santos</fullName>
+                <default>false</default>
+                <label>018 - Flávio Marçal dos Santos</label>
+            </value>
+            <value>
+                <fullName>312 - Lucas Hilario Fantineli</fullName>
+                <default>false</default>
+                <label>312 - Lucas Hilario Fantineli</label>
+            </value>
+            <value>
+                <fullName>019 - Felipe Oliveira Costa</fullName>
+                <default>false</default>
+                <label>019 - Felipe Oliveira Costa</label>
+            </value>
+            <value>
+                <fullName>379 - Diego F. Gonçalves</fullName>
+                <default>false</default>
+                <label>379 - Diego F. Gonçalves</label>
+            </value>
+            <value>
+                <fullName>031 - Guilherme Sousa</fullName>
+                <default>false</default>
+                <label>031 - Guilherme Sousa</label>
+            </value>
+            <value>
+                <fullName>023 - Gabriel V. Finatto</fullName>
+                <default>false</default>
+                <label>023 - Gabriel V. Finatto</label>
+            </value>
+            <value>
+                <fullName>464 - Ana Laura Fernandes</fullName>
+                <default>false</default>
+                <label>464 - Ana Laura Fernandes</label>
+            </value>
+            <value>
+                <fullName>467 - Natalie de Mattos</fullName>
+                <default>false</default>
+                <label>467 - Natalie de Mattos</label>
+            </value>
+            <value>
+                <fullName>474 - Guilherme Menezes Salau</fullName>
+                <default>false</default>
+                <label>474 - Guilherme Menezes Salau</label>
+            </value>
+            <value>
+                <fullName>403 - Felipe Bianchessi</fullName>
+                <default>false</default>
+                <label>403 - Felipe Bianchessi</label>
+            </value>
+            <value>
+                <fullName>380 - Lucas de Souza Furlan</fullName>
+                <default>false</default>
+                <label>380 - Lucas de Souza Furlan</label>
+            </value>
+            <value>
+                <fullName>037 - Felipe Dias Louzada</fullName>
+                <default>false</default>
+                <label>037 - Felipe Dias Louzada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

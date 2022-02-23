@@ -1,0 +1,248 @@
+<apex:page language="{!IF(ISNULL(lenguajeUsuario),'en_US',lenguajeUsuario)}" id="aSiteReembalagemEditPage" showHeader="false" standardStylesheets="false"
+    cache="false" title="{!tituloDePagina}" controller="aSiteReembalagemController" action="{!validate}" docType="html-5.0"  >
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="body">
+            <style>
+                .selected {
+                    background: rgba(38, 185, 154, 0.16);
+                    border-color: rgba(221, 221, 221, 0.780392);
+                }
+            </style>
+            <script>
+                function disableOnSubmit(input) {
+                    setTimeout('disableAfterTimeout(\'' + input.id + '\');', 5);
+                }
+                function disableAfterTimeout(id) {
+                    var toDisable = document.getElementById(id);
+                    toDisable.disabled = 'disabled';
+                }
+
+
+            </script>
+            <body class="nav-md footer_fixed">
+                <center>
+                    <apex:panelGrid bgcolor="white" columns="1">
+                        <br/>
+                        <br/>
+                        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+                            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1">
+                                <apex:panelGroup >
+                                    <apex:form id="profileForm">
+
+
+                                        <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                                            <apex:facet name="start">
+                                                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                                                    &nbsp;
+                                                </div>
+                                                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                                                    <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                                                </div>
+                                            </apex:facet>
+                                        </apex:actionStatus>
+                                        <div class="row">
+                                            <div class="right_col" role="main" style="min-width:800px">
+                                                <div>
+                                                    <div class="page-title">
+                                                        <div class="title_left">
+                                                            <apex:outputPanel rendered="{!idDeReembalagemEditar != null}">
+                                                                <h3>{!$Label.Reembalagems} - Edição <!--{!$Label.Edit}--></h3>
+                                                            </apex:outputPanel>
+                                                            <apex:outputPanel rendered="{!idDeReembalagemEditar == null}">
+                                                                <h3>{!$Label.Reembalagems} - Novo <!--{!$Label.New}--></h3>
+                                                            </apex:outputPanel>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="x_panel">
+                                                            <div class="x_title">
+                                                                <h2>{!$ObjectType.Product2.LabelPlural}
+                                                                    <small>{!$Label.active_list}</small>
+                                                                </h2>
+                                                                <h2 style="color:red">&nbsp; {!mensajeErrorNohayProductos} </h2>
+
+                                                                <ul class="nav navbar-right panel_toolbox">
+                                                                    <li>
+                                                                        <a class="collapse-link">
+                                                                            <i class="fa fa-chevron-up"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div class="x_content">
+                                                                <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                                                    <apex:pageBlock id="it">
+                                                                        <apex:pageBlockTable value="{!OppLineItem}" var="oliAdded" styleclass="data table table-striped no-margin">
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}">
+                                                                                <apex:outputText value="{!oliAdded.variedad_nombre}" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label}">
+                                                                                <apex:outputText value="{!oliAdded.categoria_nombre}" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Quantity.Label}">
+                                                                                <apex:input type="number" value="{!oliAdded.amount}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                                <apex:outputPanel rendered="{!oliAdded.error_msg != null}" style="color:red; text-align:right;">
+                                                                                    <div>{!oliAdded.error_msg}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UNIDADE__c.Label}">
+                                                                                <apex:outputText value="{!oliAdded.unidade}" >
+                                                                                </apex:outputText>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Lote_Rebajado__c.Label}">
+                                                                                
+                                                                                <apex:input type="text" value="{!oliAdded.lote_rebajado}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                                <apex:outputPanel rendered="{!oliAdded.error_lote != null}" style="color:red; text-align:right;">
+                                                                                    <div>{!oliAdded.error_lote}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                                                <apex:commandLink value="{!$Label.Remove}" action="{!removeProduct}" reRender="it">
+                                                                                    <apex:param value="{!oliAdded.id}" assignTo="{!idItemRemover}" name="toRemove" />
+                                                                                </apex:commandLink> 
+                                                                            </apex:column>
+                                                                        </apex:pageBlockTable>
+                                                                        <apex:pageBlock >
+                                                                            <apex:outputPanel id="errorCantidad" rendered="{!mensajeErrorCantidadPortal != null}" style="color:red; text-align:left;">
+                                                                                <div>{!mensajeErrorCantidadPortal}</div>
+                                                                            </apex:outputPanel>
+                                                                        </apex:pageBlock>
+                                                                   
+
+                                                                        <apex:pageBlock title="Comentario">
+                                                                            <apex:inputTextarea id="nuevoReembalagem" styleClass="form-control col-md-10 col-xs-12" value="{!comentarioNuevaOportunidad}"
+                                                                            />
+                                                                        </apex:pageBlock>
+                                                                    </apex:pageBlock>
+                                                                </div>
+                                                                <br/>
+                                                                <br/>
+                                                                <br/>
+                                                            </div>
+
+                                                            <div class="x_title">
+                                                                <h2>Adicionar Produtos
+                                                                    <small>{!$Label.active_list}</small>
+                                                                </h2>
+                                                                <ul class="nav navbar-right panel_toolbox">
+                                                                    <li>
+                                                                        <a class="collapse-link">
+                                                                            <i class="fa fa-chevron-up"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+
+                                                            <div class="x_content">
+                                                                <div role="tabpanel" class="tab-pane" id="tab_items_new" aria-labelledby="profile-tab">
+                                                                    <apex:pageBlock id="it_new">
+                                                                       <apex:pageBlock id="ceroMenor">
+                                                                            <apex:outputPanel id="menorCero" rendered="{!mensajeErrorAdicion != null}" style="color:red; text-align:left;">
+                                                                                <div>{!mensajeErrorAdicion}</div>
+                                                                            </apex:outputPanel>
+                                                                        </apex:pageBlock>
+                                                                        <apex:pageBlockTable value="{!NewOppLineItem}" var="newOli" styleclass="data table table-striped no-margin">
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}">
+                                                                                <apex:selectList id="newVariedade" value="{!newOli.variedad}" styleClass="form-control col-md-2 col-xs-12" size="1" >
+                                                                                    <apex:selectoption itemvalue="" itemlabel="Selecionar variedade..." html-selected="true"></apex:selectoption>
+                                                                                    <apex:selectOptions value="{!VariedadesNewReembalagem}" />
+                                                                                        <apex:actionSupport action="{!setSelectedVariedad}" event="onchange" status="displayImg" reRender="newCategoria, unidades"></apex:actionSupport>
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="errorVariedad">
+																					<div>{!mensajeErrorVariedad}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label}">
+                                                                                <apex:selectList id="newCategoria" value="{!newOli.categoria}" styleClass="form-control col-md-2 col-xs-12" size="1">
+                                                                                    <apex:selectoption itemvalue="" itemlabel="Selecionar categoria..." html-selected="true"></apex:selectoption>
+                                                                                    
+                                                                                    <apex:selectOptions value="{!CategoriaNewReembalagem}" />
+                                                                                    <apex:actionSupport action="{!clearError}" event="onchange" reRender="errorCantidaderrorCantidad, errorVariedad"></apex:actionSupport>
+                                                                                	
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="errorCantidaderrorCantidad">
+                                                                                    <div>{!mensajeErrorCategoria}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Quantity.Label}">
+                                                                                <apex:input type="number" value="{!newOli.amount}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="errorCantidad">
+                                                                                    <div>{!mensajeErrorCantidad}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.UNIDADE__c.Label}">
+                                                                                <apex:selectList value="{!newOli.unidade}" styleClass="form-control col-md-2 col-xs-12" size="1" id="unidades">
+                                                                                    <apex:selectoption itemvalue="" itemlabel="Selecionar unidad..." html-selected="true"></apex:selectoption>
+                                                                                    <apex:selectOptions value="{!Unidades}" />
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="errorUnidad">
+                                                                                    <div>{!mensajeErrorUnidad}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Lote_Rebajado__c.Label}">
+                                                                                <apex:input type="text" value="{!newOli.lote_rebajado}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="errorLote">
+                                                                                    <div>{!mensajeErrorLote}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                                                <apex:commandLink value="{!$Label.Add}" action="{!addProduct}" reRender="it, errorCantidad, menorCero, ceroMenor, errorCantidaderrorCantidad, errorVariedad, errorLote, errorUnidad ">
+                                                                                </apex:commandLink>
+                                                                            </apex:column>
+
+                                                                        </apex:pageBlockTable>
+
+                                                                    </apex:pageBlock>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="x_content">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12 col-sm-9 col-xs-3">
+                                                                        <p style="color:red">
+                                                                            Salvar: armazena os dados para que, posteriormente, o multiplicador possa alterar os dados.
+                                                                            <br/> Salvar e enviar para aprovação: armazena os
+                                                                            dados definitivamente e encaminha para avaliação
+                                                                            da GDM.
+                                                                            <br/>
+                                                                        </p>
+                                                                        <br/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3 ">
+                                                                    <apex:commandButton id="save"  onclick="disableOnSubmit(this);" styleclass="btn btn-success" value="{!$Label.Submit}" action="{!saveReembalagem}"
+                                                                        reRender="saveMessage,profileForm, errorCantidad, errorEdicion">
+                                                                        <apex:param value="1" assignTo="{!paraAprobacion}" name="toApproval" />
+                                                                    </apex:commandButton>
+                                                                    <apex:commandButton id="save2"  onclick="disableOnSubmit(this);" styleclass="btn btn-success" value="{!$Label.Save}" action="{!saveReembalagem}"
+                                                                            reRender="mensajes,profileForm, errorCantidad, errorEdicion" />
+                                                                    <!--<apex:commandLink styleclass="btn btn-success" value="Imprimir" action="{!imprimirAnexo}" target="_blank"  />-->
+                                                                    <apex:commandButton styleclass="btn btn-primary" immediate="true" value="{!$Label.Cancel}" action="{!editCancel}" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:form>
+                                </apex:panelGroup>
+                            </apex:panelGrid>
+                        </apex:outputPanel>
+                    </apex:panelGrid>
+                </center>
+                <br/>
+            </body>
+        </apex:define>
+    </apex:composition>
+   
+</apex:page>

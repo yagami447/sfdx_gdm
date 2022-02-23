@@ -1,0 +1,260 @@
+@isTest
+public with sharing class SalvarA1APITest {
+	
+     @TestSetup
+    static void makeData(){
+
+        Account account = new Account(Name='test');
+
+        insert account;
+
+        Id recordTypeId = Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get('Anexo II').getRecordTypeId();
+
+        Opportunity opportunity = new Opportunity();
+        opportunity.Name = 'test config';
+        opportunity.Accountid = account.Id;
+        opportunity.Cultura__C = 'Milho';
+        opportunity.Marca__C = 'BRMX';
+        opportunity.Safra__C = '19/20';
+        opportunity.RecordTypeId = recordTypeId;
+        opportunity.StageName = 'Approved';
+        opportunity.CloseDate = system.Today();
+
+        insert opportunity;  
+		
+        SiteUser__c testUser = new SiteUser__c();
+		testUser.Email__c = 'test@gdm.com';
+		testUser.Password__c = '123456';
+        
+		insert testUser;
+        
+        Categoria__c categoria = new Categoria__c(Name = 'BASICA',
+                                                  Mostrar_en_portal__c = true);
+        
+		insert categoria;
+        
+        Variedad__c variedad = new Variedad__c(Name = 'Variedad1',
+                                               Ativa__c = true,
+                                               Regiao_disponivel_para_venda_basica__c = 'REGION 1',
+                                               Disponivel_para_venda_basica__c = true,
+                                               Marca_comercial__c = 'Brasmax');
+        
+        insert variedad;
+        
+        Product2 px1 = new Product2(Name = 'Test1',
+                                    Especie__c = 'SOJA',
+                                    Family = 'Royalty x Basica',
+                                    Categ__c = categoria.Id,
+                                    Variedade__c = variedad.Id );
+        
+        insert px1;
+   		
+        Id pricebookId = Test.getStandardPricebookId();
+        
+        PricebookEntry standardPrice = new PricebookEntry(
+                                        Pricebook2Id = pricebookId, Product2Id = px1.Id,
+                                        UnitPrice = 10000, IsActive = true);
+        insert standardPrice;
+        
+        Pricebook2 s = new Pricebook2(Name = 'Lista de precios estándar', IsActive = true);
+      	insert s;
+            
+        PricebookEntry pbesx = new PricebookEntry(Pricebook2Id=s.ID,
+                                                  	Product2Id=px1.ID,
+                                                    UnitPrice=0.00,
+                                                  	IsActive=TRUE,
+                                                    UseStandardPrice=FALSE);
+        
+        insert pbesx;
+        
+        Configuracion_BMX__c configBMX = new Configuracion_BMX__c();
+        configBMX.Name = '20/21';
+        configBMX.PM_Safra_Actual_A1__c = '19/20';
+        configBMX.PM_Safra_Actual_A2__c = '19/20';
+
+        insert configBMX;
+
+    } 
+    
+    @isTest
+    public static void getSalvarA1APITest() {
+
+        SalvarA1API.response result;
+        Account account = [select Id from Account limit 1];
+        SiteUser__c user = [select Id from SiteUser__c limit 1];
+        Categoria__c categoria = [select Id from Categoria__c WHERE Mostrar_en_portal__c = true limit 1];
+        Variedad__c variedad = [select Id FROM Variedad__c WHERE Ativa__c = true limit 1];
+        List<aAppendix.myOppItem> items = new List<aAppendix.myOppItem>();
+
+        aAppendix.myOppItem item = new aAppendix.myOppItem();
+            item.amount=1.00;
+            item.area_autorizada='';
+            item.area_plantada='';
+            item.categoria=categoria.Id;
+            item.categoria_a_rebajar=null;
+            item.categoria_a_rebajar_id=null;
+            item.categoria_id=null;
+            item.categoria_nombre='BASICA';
+            item.cnpj=null;
+            item.descarte='1';
+            item.epocaPlantio=null;
+            item.error_lote=null;
+            item.error_msg=null;
+            item.estadoProduccion_id=null;
+            item.estadoProduccion_nombre=null;
+            item.estado_comer_id=null;
+            item.haAutorizados=0.00;
+            item.id='';
+            item.indice=null;
+            item.lote_rebajado=null;
+            item.name=null;
+            item.registro='8745 RSF';
+            item.sem_aprobada='1';
+            item.sem_beneficiada='2';
+            item.sem_bruta='1';
+            item.sem_comer='a';
+            item.sem_bruta_A2=null;
+            item.sem_comer_up_aIII=null;
+            item.sem_rebajada='';
+            item.sem_uso_propio='1';
+            item.unidadDescarte=null;
+            item.unidade=null;
+            item.unidade_nombre=null;
+            item.variedad=variedad.Id;
+            item.variedad_nombre='BMX DESAFIO RR';
+            item.variedad_registro=null;
+
+        items.add(item);
+  
+		SalvarA1API.Request requestBody = new SalvarA1API.Request();
+        aAppendix.oppWrapper oportunidadWrapper = new aAppendix.oppWrapper();
+        oportunidadWrapper.idCooperador = null;
+        oportunidadWrapper.estadoComercialzacion = 'GO';
+        oportunidadWrapper.cnpj = '00.993.264/0019-12';
+        oportunidadWrapper.epocaPlantacion = 'Inverno';
+        oportunidadWrapper.rechazo = null;
+        oportunidadWrapper.renasem = '123456789876';
+        oportunidadWrapper.sufixCNPJ = null;
+      
+        List<String> estados = new List<String>{'AC'};
+        requestBody.accountId = account.Id;
+        requestBody.marca = 'BRMX';
+        requestBody.estados = estados;
+        requestBody.userId = user.Id;
+        requestBody.aprobacion = '';
+        requestBody.nuevosProductos = items;
+        requestBody.idAnexoEditar = null;
+        requestBody.opportunity = oportunidadWrapper;
+      
+		RestResponse resp = new RestResponse();
+        RestRequest req = new RestRequest(); 
+        
+        req.requestURI = '/services/apexrest/SalvarA1API/';  
+        req.httpMethod = 'POST';
+        req.requestBody = Blob.valueof(JSON.serialize(requestBody));
+
+        RestContext.request = req;
+        RestContext.response = resp;
+
+        test.startTest();
+        SalvarA1API.getSalvarA1API();       
+        test.stopTest();
+        
+        result = (SalvarA1API.response)JSON.deserialize(resp.responseBody.toString(), SalvarA1API.response.class);
+        
+        System.assertEquals(true, result.status);
+        System.assertEquals(Label.SalvarA1API_Success_Message, result.message);
+
+    }
+    
+     @isTest
+    public static void getSalvarA1APIAprovacionTest() {
+
+        SalvarA1API.response result;
+        Account account = [select Id from Account limit 1];
+        SiteUser__c user = [select Id from SiteUser__c limit 1];
+        Categoria__c categoria = [select Id from Categoria__c WHERE Mostrar_en_portal__c = true limit 1];
+        Variedad__c variedad = [select Id FROM Variedad__c WHERE Ativa__c = true limit 1];
+        List<aAppendix.myOppItem> items = new List<aAppendix.myOppItem>();
+
+        aAppendix.myOppItem item = new aAppendix.myOppItem();
+            item.amount=1.00;
+            item.area_autorizada='';
+            item.area_plantada='';
+            item.categoria=categoria.Id;
+            item.categoria_a_rebajar=null;
+            item.categoria_a_rebajar_id=null;
+            item.categoria_id=null;
+            item.categoria_nombre='BASICA';
+            item.cnpj=null;
+            item.descarte='1';
+            item.epocaPlantio=null;
+            item.error_lote=null;
+            item.error_msg=null;
+            item.estadoProduccion_id=null;
+            item.estadoProduccion_nombre=null;
+            item.estado_comer_id=null;
+            item.haAutorizados=0.00;
+            item.id='';
+            item.indice=null;
+            item.lote_rebajado=null;
+            item.name=null;
+            item.registro='8745 RSF';
+            item.sem_aprobada='1';
+            item.sem_beneficiada='2';
+            item.sem_bruta='1';
+            item.sem_comer='a';
+            item.sem_bruta_A2=null;
+            item.sem_comer_up_aIII=null;
+            item.sem_rebajada='';
+            item.sem_uso_propio='1';
+            item.unidadDescarte=null;
+            item.unidade=null;
+            item.unidade_nombre=null;
+            item.variedad=variedad.Id;
+            item.variedad_nombre='BMX DESAFIO RR';
+            item.variedad_registro=null;
+
+        items.add(item);
+
+		SalvarA1API.Request requestBody = new SalvarA1API.Request();
+        aAppendix.oppWrapper oportunidadWrapper = new aAppendix.oppWrapper();
+        oportunidadWrapper.idCooperador = null;
+        oportunidadWrapper.estadoComercialzacion = 'GO';
+        oportunidadWrapper.cnpj = '00.993.264/0019-12';
+        oportunidadWrapper.epocaPlantacion = 'Inverno';
+        oportunidadWrapper.rechazo = null;
+        oportunidadWrapper.renasem = '123456789876';
+        oportunidadWrapper.sufixCNPJ = null;
+        
+        List<String> estados = new List<String>{'AC'};
+        requestBody.accountId = account.Id;
+        requestBody.marca = 'BRMX';
+        requestBody.estados = estados;
+        requestBody.userId = user.Id;
+        requestBody.aprobacion = 'true';
+        requestBody.nuevosProductos = items;
+        requestBody.idAnexoEditar = null;
+        requestBody.opportunity = oportunidadWrapper;
+        
+		RestResponse resp = new RestResponse();
+        RestRequest req = new RestRequest(); 
+        
+        req.requestURI = '/services/apexrest/SalvarA1API/';  
+        req.httpMethod = 'POST';
+        req.requestBody = Blob.valueof(JSON.serialize(requestBody));
+
+        RestContext.request = req;
+        RestContext.response = resp;
+
+        test.startTest();
+        SalvarA1API.getSalvarA1API();
+        test.stopTest();
+        
+        result = (SalvarA1API.response)JSON.deserialize(resp.responseBody.toString(), SalvarA1API.response.class);
+  
+        System.assertEquals(true, result.status);
+        System.assertEquals(Label.SalvarA1API_Success_Message, result.message);
+
+    }
+}

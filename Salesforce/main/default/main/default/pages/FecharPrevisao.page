@@ -1,0 +1,24 @@
+<apex:page standardController="Opportunity">
+<apex:includeScript value="../../soap/ajax/20.0/connection.js"/>
+<apex:includeScript value="../../soap/ajax/10.0/apex.js"/> 
+<script>
+    sforce.connection.sessionId='{!GETSESSIONID()}';
+    
+    var rt = sforce.connection.query("SELECT Id FROM RecordType WHERE Name = 'Previsao Cerrada' limit 1"); 
+    records = rt.getArray("records"); 
+    rt_Opp = records[0].Id.toString(); 
+
+    var oppObj = new sforce.SObject("Opportunity"); 
+    oppObj.Id = '{!Opportunity.Id}'; 
+    oppObj.RecordTypeId = rt_Opp; //Poner id del recordtype en cuestion 
+    oppObj.StageName = 'Cerrada'; 
+    
+    var result = sforce.connection.update([oppObj]); 
+    if (result[0].success=='false') { 
+        alert(result[0].errors.message); 
+    } else { 
+        window.location.href=window.location.href; 
+    }
+
+</script>
+</apex:page>

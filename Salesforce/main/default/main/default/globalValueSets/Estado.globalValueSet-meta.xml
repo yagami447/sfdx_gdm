@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Acre (AC)</fullName>
+        <default>false</default>
+        <label>Acre (AC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alagoas (AL)</fullName>
+        <default>false</default>
+        <label>Alagoas (AL)</label>
+    </customValue>
+    <customValue>
+        <fullName>Amapá (AP)</fullName>
+        <default>false</default>
+        <label>Amapá (AP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Amazonas (AM)</fullName>
+        <default>false</default>
+        <label>Amazonas (AM)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bahia (BA)</fullName>
+        <default>false</default>
+        <label>Bahia (BA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceará (CE)</fullName>
+        <default>false</default>
+        <label>Ceará (CE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Distrito Federal (DF)</fullName>
+        <default>false</default>
+        <label>Distrito Federal (DF)</label>
+    </customValue>
+    <customValue>
+        <fullName>Espírito Santo (ES)</fullName>
+        <default>false</default>
+        <label>Espírito Santo (ES)</label>
+    </customValue>
+    <customValue>
+        <fullName>Goiás (GO)</fullName>
+        <default>false</default>
+        <label>Goiás (GO)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maranhão (MA)</fullName>
+        <default>false</default>
+        <label>Maranhão (MA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mato Grosso (MT)</fullName>
+        <default>false</default>
+        <label>Mato Grosso (MT)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mato Grosso do Sul (MS)</fullName>
+        <default>false</default>
+        <label>Mato Grosso do Sul (MS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Minas Gerais (MG)</fullName>
+        <default>false</default>
+        <label>Minas Gerais (MG)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pará (PA)</fullName>
+        <default>false</default>
+        <label>Pará (PA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Paraíba (PB)</fullName>
+        <default>false</default>
+        <label>Paraíba (PB)</label>
+    </customValue>
+    <customValue>
+        <fullName>Paraná (PR)</fullName>
+        <default>false</default>
+        <label>Paraná (PR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pernambuco (PE)</fullName>
+        <default>false</default>
+        <label>Pernambuco (PE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Piauí (PI)</fullName>
+        <default>false</default>
+        <label>Piauí (PI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rio de Janeiro (RJ)</fullName>
+        <default>false</default>
+        <label>Rio de Janeiro (RJ)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rio Grande do Norte (RN)</fullName>
+        <default>false</default>
+        <label>Rio Grande do Norte (RN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rio Grande do Sul (RS)</fullName>
+        <default>false</default>
+        <label>Rio Grande do Sul (RS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rondônia (RO)</fullName>
+        <default>false</default>
+        <label>Rondônia (RO)</label>
+    </customValue>
+    <customValue>
+        <fullName>Roraima (RR)</fullName>
+        <default>false</default>
+        <label>Roraima (RR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Santa Catarina (SC)</fullName>
+        <default>false</default>
+        <label>Santa Catarina (SC)</label>
+    </customValue>
+    <customValue>
+        <fullName>São Paulo (SP)</fullName>
+        <default>false</default>
+        <label>São Paulo (SP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sergipe (SE)</fullName>
+        <default>false</default>
+        <label>Sergipe (SE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tocantins (TO)</fullName>
+        <default>false</default>
+        <label>Tocantins (TO)</label>
+    </customValue>
+    <masterLabel>Estado</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

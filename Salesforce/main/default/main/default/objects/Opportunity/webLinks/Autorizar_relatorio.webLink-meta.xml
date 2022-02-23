@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Autorizar_relatorio</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Autorizar Relatorio</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+
+var opp = new sforce.SObject(&quot;Opportunity&quot;); 
+opp.Id = &apos;{!Opportunity.Id}&apos;; 
+opp.Autoriza_Comercial__c = true; 
+var result = sforce.connection.update([opp]); 
+window.location.href=window.location.href;</url>
+</WebLink>

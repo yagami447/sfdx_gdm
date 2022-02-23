@@ -1,0 +1,83 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+
+    <style>
+        pdfHead {
+        text-align: center;
+        }
+    </style>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    
+    <apex:pageBlock rendered="{!Opportunity.Marca__c == 'DSEM'}" >
+        <div style="align-content:center; align-self:center; align-items:center; text-align:center;">
+            <img src="{!$Resource.LogoImpDSEM}" style="width: 40%; height: 50%;"/>     
+        </div>
+        <br/><br/><br/><br/><br/>
+    </apex:pageBlock>
+    
+    <apex:pageBlock rendered="{!Opportunity.Marca__c == 'BRMX'}" >
+        <div style="align-content:center; align-self:center; align-items:center; text-align:center;">
+            <img src="{!$Resource.LogoImpBRMX2}" style="width: 40%; height: 50%;"/>     
+        </div>
+        <br/><br/><br/><br/><br/>
+    </apex:pageBlock>
+    
+    <apex:pageBlock rendered="{!Opportunity.Marca__c == 'NEOG'}" >
+        <div style="align-content:center; align-self:center; align-items:center; text-align:center;">
+            <img src="{!$Resource.LogoImpNEOG}" style="width: 40%; height: 50%;"/>   
+        </div>
+        <br/><br/><br/><br/><br/>
+    </apex:pageBlock>
+    
+    
+    
+    <table width="83%" Align="center">
+        <tr>
+            <td >
+                
+                <p align="center" style="font-size:17px"><b>AUTORIZAÇÃO PARA REEMBALAGEM DE SEMENTE DE SOJA</b></p>
+                
+                <p style="font-size:17px"><b>AUT REEMB Nº {!Opportunity.Name}</b></p>
+                
+                <p align="justify"> Cambé-PR, {!FechaCierre}. </p>
+                
+                <p align="justify">Por este instrumento particular de direito, a&nbsp;&nbsp;<b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, detentora dos direitos de exploração da marca  <b>{!MarcaImp}</b>,
+                    inscrita no CNPJ nº 07.007.165/0001-34 e Inscrição Estadual nº 90519331-73, abaixo assinada por seu
+                    representante legal, obtentora dos direitos legais sobre as cultivares relacionadas no quadro abaixo,
+                    vem por meio desta&nbsp;&nbsp;<b>AUTORIZAR</b> a empresa&nbsp;&nbsp;<b>{!Opportunity.Account.Name}</b>, inscrita no CNPJ nº {!cnpj} a&nbsp;&nbsp;<b>REEMBALAR SEMENTES DE SOJA</b>
+                    de acordo com as quantidades abaixo relacionadas: </p>
+                
+                
+                
+                <apex:pageBlock >
+                    <apex:pageblockSection columns="6">
+                        <apex:pageBlockTable value="{!Opportunity.OpportunityLineItems}" var="item" border="1">
+                            <!-- <apex:column width="80px"><apex:facet name="header">Produto</apex:facet>{!item.PriceBookEntry.Product2.Especie__c}</apex:column> -->
+                            <!-- <apex:column width="150px"><apex:facet name="header">Cultivar</apex:facet>{!item.PriceBookEntry.Product2.Description}</apex:column> -->
+                            <apex:column style="text-align:center" headerClass="pdfHead" width="150px"><apex:facet name="header"><div Style="text-align:center">Cultivar</div></apex:facet>{!item.PriceBookEntry.Product2.Variedade__r.Nombre_de_Registro__c}</apex:column>
+                            <apex:column style="text-align:center" headerClass="pdfHead" width="150px"><apex:facet name="header"><div Style="text-align:center">Categoria</div></apex:facet>{!item.PriceBookEntry.Product2.Categ__r.Name}</apex:column>
+                            <apex:column style="text-align:center" headerClass="pdfHead" width="150px"><apex:facet name="header"><div Style="text-align:center">Qtde Scs</div></apex:facet>{!item.Qtde_Scs_40kg__c}</apex:column>
+                            <apex:column style="text-align:center" headerClass="pdfHead" width="150px"><apex:facet name="header"><div Style="text-align:center">Unidade</div></apex:facet>{!item.UNIDADE__c}</apex:column>
+                            <apex:column style="text-align:center" headerClass="pdfHead" width="150px"><apex:facet name="header"><div Style="text-align:center">Lote N°</div></apex:facet>{!item.Lote_Rebajado__c}</apex:column>
+                        </apex:pageBlockTable> 
+                    </apex:pageBlockSection>
+                </apex:pageBlock>     
+                
+                <br/><br/>
+                
+                <p>Atenciosamente, <a style="color: white;"> \signedDate\</a>.</p>
+                
+                
+                <br/><br/><br/><br/><br/>
+                
+                <p style="color: white;">\s1\</p> <br/><br/>
+                
+                GDM Genética do Brasil S.A.
+            </td> 
+        </tr>
+    </table>
+    
+    
+    
+    
+    
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Price__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si el producto tiene un precio fijo</description>
+    <externalId>false</externalId>
+    <label>Preço fixo</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Safra --></label>
+    <name>Safra__c</name>
+    <picklistValues>
+        <masterLabel>17/18</masterLabel>
+        <translation><!-- 17/18 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18/19</masterLabel>
+        <translation><!-- 18/19 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>19/20</masterLabel>
+        <translation><!-- 19/20 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20/21</masterLabel>
+        <translation><!-- 20/21 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>21/22</masterLabel>
+        <translation><!-- 21/22 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

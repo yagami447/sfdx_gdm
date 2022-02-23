@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qt_Faturada__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Opportunity.RecordTypeId = &apos;01240000000M8J1&apos; , -1 *  Quantity, IF(OR(Opportunity.RecordTypeId = &apos;012400000009d91&apos;, Opportunity.RecordTypeId = &apos;012400000000zQu&apos;, Opportunity.RecordTypeId = &apos;01240000000MAR3&apos;), 0, Quantity))</formula>
+    <label>Qt. Faturada</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

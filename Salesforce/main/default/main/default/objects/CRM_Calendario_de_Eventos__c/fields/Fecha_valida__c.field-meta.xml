@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_valida__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(TEXT(Evento__c) = &quot;Palestra&quot;, TEXT(Evento__c) = &quot;Treinamento&quot;), 
+    IF(OR(TEXT(Marca__c) = &quot;BRMX&quot;, TEXT(Marca__c) = &quot;DSEM&quot;),
+        IF(OR(Estado__c = &quot;MS&quot;, Estado__c = &quot;PR&quot;, Estado__c = &quot;MT&quot;, Estado__c = &quot;RO&quot;, Estado__c = &quot;GO&quot;),
+            IF(DATEVALUE(CreatedDate) &lt;= DATE(2021,06,15), true, false),
+            IF(OR(Estado__c = &quot;SC&quot;, Estado__c = &quot;SP&quot;, Estado__c = &quot;MG&quot;, Estado__c = &quot;BA&quot;, Estado__c = &quot;MA&quot;, Estado__c = &quot;PI&quot;, Estado__c = &quot;TO&quot;),
+                IF(DATEVALUE(CreatedDate) &lt;= DATE(2021,07,15), true, false),
+                IF(OR(Estado__c = &quot;RS&quot;, Estado__c = &quot;PA&quot;),
+                    IF(DATEVALUE(CreatedDate) &lt;= DATE(2021,08,30), true, false),
+                    false
+                )
+            )
+        ), true), 
+    IF(OR(TEXT(Evento__c) = &quot;Día de Campo&quot;, TEXT(Evento__c) = &quot;Dia de Campo&quot;),
+        IF(TEXT(Marca__c) = &quot;DSEM&quot;,
+            IF(DATEVALUE(CreatedDate) &lt;= DATE(2021,12,31), true, false),
+            true
+        ),
+        IF(TEXT(Evento__c) = &quot;Emplacamento&quot;,  
+            IF(OR(TEXT(Marca__c) = &quot;BRMX&quot;, TEXT(Marca__c) = &quot;DSEM&quot;),      
+                IF(DATEVALUE(CreatedDate) &lt;= DATE(2021,02,15), true, false),
+                true
+        ),
+            IF(AND(TEXT(Evento__c) = &quot;Outdoor&quot;, TEXT(Marca__c) = &quot;NEOG&quot;),
+                true,
+                true)
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Fecha válida</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

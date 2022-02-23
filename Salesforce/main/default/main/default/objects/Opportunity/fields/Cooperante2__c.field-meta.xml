@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cooperante2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Informação exclusiva para autorização por conta e ordem.</inlineHelpText>
+    <label>Cooperante</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Cooperante__c.Cuenta__r.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Cooperante__c</referenceTo>
+    <relationshipLabel>Oportunidades (Nome do Cooperante)</relationshipLabel>
+    <relationshipName>Oportunidades2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

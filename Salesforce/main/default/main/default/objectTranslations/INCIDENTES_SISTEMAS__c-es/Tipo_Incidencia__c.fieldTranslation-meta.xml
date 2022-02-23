@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo_Incidencia --></label>
+    <name>Tipo_Incidencia__c</name>
+    <picklistValues>
+        <masterLabel>Mejora</masterLabel>
+        <translation><!-- Mejora --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pendiente</masterLabel>
+        <translation><!-- Pendiente --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

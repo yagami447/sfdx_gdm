@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Supervisor Comercial informante por Brasmax --></help>
+    <label><!-- BResponsável --></label>
+    <name>BR_Responsavel__c</name>
+    <picklistValues>
+        <masterLabel>061 - Fernando Frehner</masterLabel>
+        <translation><!-- 061 - Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>066 - Marcelo Steffen</masterLabel>
+        <translation><!-- 066 - Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>067 - Sergio Bertagnolli</masterLabel>
+        <translation><!-- 067 - Sergio Bertagnolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>076 - Tiago Goulart</masterLabel>
+        <translation><!-- 076 - Tiago Goulart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>083 - Jorge Cristiano Rosa</masterLabel>
+        <translation><!-- 083 - Jorge Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>095 - Brasmax</masterLabel>
+        <translation><!-- 095 - Brasmax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>101 - Fausto Tadeu Fanchin</masterLabel>
+        <translation><!-- 101 - Fausto Tadeu Fanchin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>111 - Pablo R. de Souza</masterLabel>
+        <translation><!-- 111 - Pablo R. de Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>150 - João Serrano</masterLabel>
+        <translation><!-- 150 - João Serrano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>151 - Anderson Weissheimer</masterLabel>
+        <translation><!-- 151 - Anderson Weissheimer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>196 - Edson Chambo</masterLabel>
+        <translation><!-- 196 - Edson Chambo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>197 - Wagner Rank</masterLabel>
+        <translation><!-- 197 - Wagner Rank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>198 - Bernardo Zanardo</masterLabel>
+        <translation><!-- 198 - Bernardo Zanardo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>199 - Lucas Costa</masterLabel>
+        <translation><!-- 199 - Lucas Costa --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

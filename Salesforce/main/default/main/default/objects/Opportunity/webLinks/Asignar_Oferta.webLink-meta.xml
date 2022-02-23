@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asignar_Oferta</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Asignar Oferta</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Opportunity.Id}&quot;;
+var regId = &quot;{!Opportunity.Macrorregion_de_VentasId__c}&quot;;
+var mar=&quot;{!Opportunity.Marca__c}&quot;;
+var pasa = true;
+var etapa = &quot;{!Opportunity.StageName}&quot;;
+var tipoOp = &quot;{!Opportunity.Tipo_de_Operacion__c}&quot;;
+
+
+if (etapa == &apos;PB-Aprobada&apos;){
+alert(&quot;Fase para gerar a Notificação deve ser PB-Pendiente.&quot;);
+pasa = false;
+}
+
+if(pasa == true){
+pasa=confirm(&apos;Tem certeza de querer notificar?&apos;);
+}
+
+if(pasa == true){
+var result = sforce.apex.execute(&quot;Opp_Utils&quot;,&quot;notificacionProd_New&quot;, {oppId : id});
+
+alert(result[0]);
+window.location.reload(true);
+}</url>
+</WebLink>

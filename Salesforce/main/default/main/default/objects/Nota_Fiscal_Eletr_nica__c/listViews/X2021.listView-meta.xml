@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2021</fullName>
+    <columns>NAME</columns>
+    <columns>Emitente__c</columns>
+    <columns>Destinatario__c</columns>
+    <columns>Vendedor__c</columns>
+    <columns>Data_e_hora_de_Emissao_do_Documento__c</columns>
+    <columns>Status__c</columns>
+    <columns>Motivo_invalida__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2020 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>12/31/2020 12:00 AM</value>
+    </filters>
+    <label>2020</label>
+</ListView>

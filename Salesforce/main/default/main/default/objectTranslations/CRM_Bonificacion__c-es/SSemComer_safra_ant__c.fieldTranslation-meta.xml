@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Suma de semilla comercializada para todas las variedades (Intacta y RR) informadas en el anexo III y IV de las 2 marcas de la safra anterior --></help>
+    <label><!-- Vendas Totais Safra anterior --></label>
+    <name>SSemComer_safra_ant__c</name>
+</CustomFieldTranslation>

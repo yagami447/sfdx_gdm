@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Justificativa__c</fullName>
+    <externalId>false</externalId>
+    <label>Justificativa de não compra</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Não encontrei semente</fullName>
+                <default>false</default>
+                <label>Não encontrei semente</label>
+            </value>
+            <value>
+                <fullName>Preço elevado</fullName>
+                <default>false</default>
+                <label>Preço elevado</label>
+            </value>
+            <value>
+                <fullName>Condição de pagamento inviável</fullName>
+                <default>false</default>
+                <label>Condição de pagamento inviável</label>
+            </value>
+            <value>
+                <fullName>Plantio de campo de sementes</fullName>
+                <default>false</default>
+                <label>Plantio de campo de sementes</label>
+            </value>
+            <value>
+                <fullName>Produtividade abaixo do esperado</fullName>
+                <default>false</default>
+                <label>Produtividade abaixo do esperado</label>
+            </value>
+            <value>
+                <fullName>Material não se encaixou em meu planejamento</fullName>
+                <default>false</default>
+                <label>Material não se encaixou em meu planejamento</label>
+            </value>
+            <value>
+                <fullName>Outros</fullName>
+                <default>false</default>
+                <label>Outros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

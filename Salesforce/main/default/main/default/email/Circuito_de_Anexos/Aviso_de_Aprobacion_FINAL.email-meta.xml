@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Aviso de Aprobacion FINAL</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aviso de Aprobacion FINAL</name>
+    <style>none</style>
+    <subject>Atenção: Anexo aprovado</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

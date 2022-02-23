@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tipo de evento --></help>
+    <label><!-- Evento --></label>
+    <name>Evento__c</name>
+    <picklistValues>
+        <masterLabel>Area comercial</masterLabel>
+        <translation><!-- Area comercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Día de Campo</masterLabel>
+        <translation><!-- Día de Campo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emplacamento</masterLabel>
+        <translation><!-- Emplacamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lado a Lado</masterLabel>
+        <translation><!-- Lado a Lado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outdoor</masterLabel>
+        <translation><!-- Outdoor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palestra</masterLabel>
+        <translation><!-- Palestra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Treinamento</masterLabel>
+        <translation><!-- Treinamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Treinamento Tecnico</masterLabel>
+        <translation><!-- Treinamento Tecnico --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

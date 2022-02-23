@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Detalhe Infraestructura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Detalhe Infraestructura</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Infraestructura_A --></label>
+        <name>Infraestructura_A</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Infraestructura_B --></label>
+        <name>Infraestructura_B</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <recordTypes>
+        <description><!-- Detalhe infraestrutura por Cidade --></description>
+        <label><!-- A --></label>
+        <name>A</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Detalhe infraestrutura pela empresa para a produção de sementes --></description>
+        <label><!-- B --></label>
+        <name>B</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Cantidad de Filiales por Region --></description>
+        <label><!-- F --></label>
+        <name>F</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Expectativa de Expansão/Ampliação por Cidade --></description>
+        <label><!-- G --></label>
+        <name>G</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Planejamiento Detalhe infraestrutura por Cidade --></description>
+        <label><!-- P_A --></label>
+        <name>P_A</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Planejamiento Detalhe infraestrutura pela empresa para a produção de sementes --></description>
+        <label><!-- P_B --></label>
+        <name>P_B</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Planejamiento Cantidad de Filiales por Region --></description>
+        <label><!-- P_F --></label>
+        <name>P_F</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Planejamento Expectativa de Expansão/Ampliação por Cidade --></description>
+        <label><!-- P_G --></label>
+        <name>P_G</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Deve entrar todos os dados para capacidade por cidade. --></errorMessage>
+        <name>Datos_Validos_A</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve entrar todos os dados para tratamento de sementes por empresa. --></errorMessage>
+        <name>Datos_Validos_B</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve entrar todos os dados para filiais. --></errorMessage>
+        <name>Datos_Validos_F</name>
+    </validationRules>
+</CustomObjectTranslation>

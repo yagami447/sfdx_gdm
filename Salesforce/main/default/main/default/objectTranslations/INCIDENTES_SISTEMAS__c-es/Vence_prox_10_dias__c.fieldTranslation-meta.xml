@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pone un &quot;SI&quot; se vence dentro de los proximos 10 dias y &quot;NO&quot; si no vence --></help>
+    <label><!-- Vence prox 10 dias --></label>
+    <name>Vence_prox_10_dias__c</name>
+</CustomFieldTranslation>

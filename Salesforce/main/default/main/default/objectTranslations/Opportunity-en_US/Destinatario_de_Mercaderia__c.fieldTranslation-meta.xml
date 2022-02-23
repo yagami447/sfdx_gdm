@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Recebedor mercadoria --></label>
+    <lookupFilter>
+        <errorMessage><!-- Destinatario de Mercadorias no pertenece a la Cuenta de la Venda o no se encuentra en SAP --></errorMessage>
+    </lookupFilter>
+    <name>Destinatario_de_Mercaderia__c</name>
+    <relationshipLabel><!-- Oportunidades --></relationshipLabel>
+</CustomFieldTranslation>

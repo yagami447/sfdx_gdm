@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_Completa__c</fullName>
+    <description>Marca que debe mostrarse en el envío de mails de anexos</description>
+    <externalId>false</externalId>
+    <formula>IF(Owner.Profile.Name = &apos;Administrativo_licencias&apos;,&apos;GDM Licenciamento&apos;,IF(AND(Owner.Profile.Name &lt;&gt; &apos;Administrativo_licencias&apos;,ISPICKVAL(Marca__c, &apos;DSEM&apos;)),&apos;DONMARIO SEMENTES&apos;, IF(AND(Owner.Profile.Name &lt;&gt; &apos;Administrativo_licencias&apos;,ISPICKVAL(Marca__c, &apos;BRMX&apos;)),&apos;BRASMAX GENÉTICA&apos;, &apos;NEOGEN&apos;)))</formula>
+    <label>Marca Completa</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

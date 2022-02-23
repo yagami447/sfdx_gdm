@@ -1,0 +1,114 @@
+<aura:component controller="RequisicaoApprovalTreeController"
+                implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="gridColumns" type="List" />
+    <aura:attribute name="gridData" type="Object" />
+    <aura:attribute name="gridExpandedRows" type="Object" />
+    <aura:attribute name="estado" type="String" default="Pendente"/>	
+    <aura:attribute name="isLoanding" type="boolean" default="true" />
+    <!-- <aura:attribute name="error" type="boolean" default="false" /> -->
+    <aura:attribute name="commentModal" type="boolean" default="false" />
+
+    <aura:attribute name="oldSelectedRows" type="List" />
+    <aura:attribute name="selectedRow" type="String" />
+    <aura:attribute name="deselectedRow" type="String" />
+    <aura:attribute name="TipoGerente" type="boolean" default="false" />
+
+
+    <aura:if isTrue="{!v.isLoanding}" >
+        <lightning:spinner alternativeText="Loading" size="large" />
+    </aura:if>
+    
+    <div class="slds-box slds-box_small" >
+        <div class="slds-box slds-grid slds-gutters" style="margin:10px;">
+            <div class="slds-col slds-size_3-of-4">
+                <lightning:select aura:id="estado" name="Estados"
+                                  label="Estados " value="{! v.estado }"
+                                  onchange="{! c.doInit }">
+                    <option value="Pendente"  >  Pendente  </option>
+                    <option value="Edição"    >  Edição    </option>
+                    <option value="Aprovada"  >  Aprovada  </option>
+                    <option value="Rejeitado" >  Rejeitado </option>
+                </lightning:select>
+            </div>            
+            <div class="slds-col slds-size_1-of-4" style="margin-top:1.5rem;">
+                <div class="slds-align_absolute-center" >   
+                    <lightning:button label="Aprovar"
+                                      onclick="{! c.approveHandler }"
+                                      disabled="{! v.estado != 'Pendente' }">
+                    </lightning:button>
+                    <lightning:button label="Rejeitar"
+                                      onclick="{! c.showModal }"
+                                      disabled="{! v.estado != 'Pendente' }">
+                    </lightning:button>
+                </div>            
+            </div>            
+        </div>
+        
+        <aura:if isTrue="{! !empty(v.gridData)}">
+            <lightning:treeGrid columns="{! v.gridColumns }"
+                            data="{! v.gridData }"
+                            keyField="Id"
+                            aura:id="mytree"
+                            onrowselection="{!c.onRowSelect}"
+                            ontoggle="{!c.onRowSelect}"
+                            hideCheckboxColumn="{! v.estado != 'Pendente' }"
+                            />
+        </aura:if>
+        <aura:if isTrue="{! empty(v.gridData)}">
+            <ui:message title="Information" severity="info" closable="true">
+                No se encontraron datos
+            </ui:message>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.commentModal}">
+            <section role="dialog" tabindex="-1" 
+            aria-labelledby="modal-heading-01" 
+            aria-modal="true" aria-describedby="modal-content-id-1" 
+            class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                            title="Close"
+                            onclick="{! c.showModal }">
+                    
+                        <lightning:icon iconName="action:close"
+                                        alternativeText="Indicates approval"/>
+                        <span class="slds-assistive-text">
+                            Close
+                        </span>
+                    </button>
+                    <h2 id="modal-heading-01"
+                        class="slds-modal__title slds-hyphenate">
+                        Rechazar Evento Royalty
+                    </h2>
+                
+                </header>
+                <div class="slds-modal__content slds-p-around_medium"
+                     id="modal-content-id-1">
+                
+                    <lightning:textarea name="input1"
+                                        label="Comentarios"
+                                        aura:id="comment"/>
+
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral"
+                            onclick="{! c.showModal }">
+                        Cancel
+                    </button>
+                    <button class="slds-button slds-button_brand"
+                            onclick="{! c.rejectHandler}" >
+                        Save
+                    </button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+        </aura:if>
+
+    </div>
+    
+</aura:component>

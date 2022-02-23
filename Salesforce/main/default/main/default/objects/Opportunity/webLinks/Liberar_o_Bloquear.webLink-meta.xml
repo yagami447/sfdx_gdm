@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liberar_o_Bloquear</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Liberar ou Bloquear</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/apex.js&quot;)}
+
+var opp = new sforce.SObject(&quot;Opportunity&quot;);
+opp.ID = &apos;{!Opportunity.Id}&apos;;
+
+sforce.connection.sessionId = &apos;{!$Api.Session_ID}&apos;;
+
+var results = sforce.apex.execute(&quot;Bloquear_LiberarController&quot;,&quot;liberar_bloquear_Classic&quot;, {recordId: opp.ID});
+
+if (results[0] == &quot;true&quot;){
+alert(&apos;Record unlocked, please remember to lock after edition&apos;);
+}
+if(results[0] == &quot;false&quot;){
+alert(&apos;Record locked&apos;);
+}
+
+window.location.reload(true);</url>
+</WebLink>

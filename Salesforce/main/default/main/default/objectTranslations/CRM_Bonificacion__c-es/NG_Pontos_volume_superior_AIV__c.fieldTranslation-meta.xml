@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pontos Vendas Superior NEOG AIV --></label>
+    <name>NG_Pontos_volume_superior_AIV__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aditivo_Facturado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si se facturó el aditivo y lo inhabilita para volver a utilizarlo.</description>
+    <externalId>false</externalId>
+    <label>Aditivo Facturado</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

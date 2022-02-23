@@ -1,0 +1,141 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="Apenddix3EditPage" showHeader="false" standardStylesheets="false" cache="false" title="Edit Append III" controller="aSiteAppendix3Controller" action="{!validate}" docType="html-5.0">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+.selected {
+    background: rgba(38,185,154,.16);
+    border-color: rgba(221,221,221,0.780392);
+}
+</style>
+<script>
+    function disableOnSubmit(input) {
+        setTimeout('disableAfterTimeout(\'' + input.id + '\');', 5);
+    }
+    function disableAfterTimeout(id) {
+        var toDisable = document.getElementById( id );
+        toDisable.disabled = 'disabled';        
+    }
+</script>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                <apex:panelGroup >
+                <apex:form id="profileForm">                    
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <!--<div class="">-->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>{!titulo} - {!$Label.New}</h3>
+                                </div>                                                                    
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                                        
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>{!$ObjectType.Product2.LabelPlural}<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="it" mode="edit">                                            
+                                                <apex:pageBlockTable value="{!App3Items}" var="s" styleclass="data table table-striped no-margin">
+                                                    <apex:column style="width:200px;" headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}"  >
+                                                        <apex:outputLabel style="width:200px;" value="{!s.variedad_nombre}" styleClass="form-control col-md-4 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column style="width:200px;" headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedad_de_Produto__c.Label}" >
+                                                        <apex:outputLabel style="width:200px;" value="{!s.variedad_registro}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column style="width:50px;" headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label}" >
+                                                        <apex:outputLabel style="width:50px;" value="{!s.categoria}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_bruta__c.Label}" >
+                                                        <apex:outputLabel value="{!s.sem_bruta_A2}" styleClass="form-control col-md-2 col-xs-12" />
+                                                    </apex:column>
+                                                    <!--
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_bruta__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_bruta}" required="required" html-min="0" styleClass="form-control col-md-4 col-xs-12" />
+                                                    </apex:column>
+                                                    -->
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_beneficiada__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_beneficiada}" required="required" html-min="0" styleClass="form-control col-md-4 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_aprovada__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_aprobada}" required="required" html-min="0" styleClass="form-control col-md-4 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_comercializada__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_comer}" required="required" html-min="0" styleClass="form-control col-md-4 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_uso_propio__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_uso_propio}" required="required" html-min="0" styleClass="form-control col-md-4 col-xs-12" />
+                                                    </apex:column>
+                                                    </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <!--***************************************************************************-->
+                                    <div class="form-group">
+                                    <div class="col-md-12 col-sm-9 col-xs-3" >
+                                    <p style="color:red">
+                                    Semente beneficiada é a quantidade de semente bruta que passou pelo processo de beneficamento (pré-limpeza, secagem, armazenamento, limpeza, classificação, pesagem, identificação (formação dos lotes), etc.)  considerando as autorizações de rebaixamento.<br/>
+                                    Semente aprovada é a quantidade de semente aprovada conforme laudo emitido por laboratório credenciado por órgão competente, considerando sacas de 40 Kg.<br/>                        
+                                    Semente comercializada é a quantidade de semente vendida, considerando sacas de 40 Kg. (Considerar as cultivares de categoria S2 que foram plantadas com destino a produção de grãos)<br/>
+                                    Semente uso próprio é a quantidade de semente reservada para plantio de campos de semente na próxima safra, considerando sacas de 40 Kg.<br/>
+                                    Salvar: armazena os dados para que, posteriormente, o multiplicador possa alterar os dados.<br/>                     
+                                    Salvar e enviar para aprovação: armazena os dados definitivamente e encaminha para avaliação da GDM.<br/>                      
+                                    </p>
+                                    <br/>  
+                                    </div>
+                                    </div>                                    
+                                    <!--***************************************************************************-->
+
+                                    
+                                    
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3 ">
+                                            <apex:commandButton id="save" onclick="disableOnSubmit(this);" styleclass="btn btn-success" value="{!$Label.Submit}" action="{!saveAppend3}" oncomplete="mostrarMsj()" rerender="mensajes,profileForm">
+                                                <apex:param value="1" assignTo="{!enviarAprobacion}" name="toApproval"/>
+                                            </apex:commandButton>
+                                            <apex:commandButton id="save2" onclick="disableOnSubmit(this);" styleclass="btn btn-success" value="{!$Label.Save}" action="{!saveAppend3}" oncomplete="mostrarMsj()" reRender="profileForm, mensajes">
+                                                <apex:param value="0" assignTo="{!enviarAprobacion}" name="toApproval2"/>
+                                            </apex:commandButton>    
+                                            <apex:commandButton styleclass="btn btn-primary" immediate="true" value="{!$Label.Cancel}" action="{!editCancel}" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    function mostrarMsj(){
+                        if ('{!mensaje}' != null && '{!mensaje}' != ''){
+                            alert('{!SUBSTITUTE(mensaje, "|", "\n")}');                                                        
+                        }
+                    }
+                </script>
+                </apex:form> 
+                </apex:panelGroup>
+            </apex:panelGrid> 
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    </body>
+</apex:define>
+</apex:composition>
+</apex:page>

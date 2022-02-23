@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Etapa --></label>
+    <name>Etapa__c</name>
+    <picklistValues>
+        <masterLabel>Descarte</masterLabel>
+        <translation><!-- Descarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documental</masterLabel>
+        <translation><!-- Documental --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eventual</masterLabel>
+        <translation><!-- Eventual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inventário de sobras</masterLabel>
+        <translation><!-- Inventário de sobras --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inventário físico</masterLabel>
+        <translation><!-- Inventário físico --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

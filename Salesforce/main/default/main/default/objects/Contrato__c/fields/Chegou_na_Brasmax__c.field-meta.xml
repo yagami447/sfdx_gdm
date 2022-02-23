@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chegou_na_Brasmax__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Click para informar que o contrato voltou para  assinado pelo multiplicador.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Click para informar que o contrato voltou para  assinado pelo multiplicador.</inlineHelpText>
+    <label>Chegou</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

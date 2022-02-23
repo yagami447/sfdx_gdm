@@ -1,0 +1,153 @@
+<apex:component language="{!IF(ISNULL(language),'en_US',language)}" 
+                id="header_Component" controller="aSiteHeaderController" 
+                allowDML="true">
+
+<script type="text/javascript">
+function goEvent(value) {
+    goEventos(value);
+}
+</script>
+
+<center>
+  <apex:form id="homeForm">
+  <!--<apex:panelGrid cellpadding="0" cellspacing="0" width="100%" border="0" columns="1" style="background-color:#002A3C ;text-align: left;" id="theHeader">-->
+
+    <apex:outputPanel styleClass="navbar navbar-inverse navbar-fixed-top" layout="block" html-role="navigation">
+      <apex:outputPanel styleClass="container" layout="block">
+        <apex:outputPanel styleClass="navbar-header" layout="block">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse ">
+            <apex:outputPanel styleClass="sr-only">Toggle navigation</apex:outputPanel>
+            <apex:outputPanel styleClass="icon-bar"></apex:outputPanel>
+            <apex:outputPanel styleClass="icon-bar"></apex:outputPanel>
+            <apex:outputPanel styleClass="icon-bar"></apex:outputPanel>
+          </button>
+          <!--<a class="navbar-brand" href="#" style="padding-top:2px;">
+              <apex:image url="{!URLFOR($Resource.SiteSamples, 'img/logo-gdm.png')}" height="46" styleclass="img" alt="Salesforce" title="Salesforce"/>
+          </a>-->
+        </apex:outputPanel>
+        <apex:outputPanel styleClass="navbar-collapse collapse" layout="block" rendered="{!isLogged}" >
+            <ul class="nav navbar-nav">
+                <li ><a href="javascript:;" onclick="goDash()"><span class="glyphicon glyphicon-home"></span>  Dashboard</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="{!if(!logUser.Habilitado_Anexos__c,'display:none','')}">
+                <span class="glyphicon glyphicon-list-alt"></span>  Documentos <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:;" onclick="goContract()" style="pointer-events: none;">{!$ObjectType.Contrato__c.LabelPlural}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;" onclick="goApp1()">{!titulo1}</a></li>
+                        <li><a href="javascript:;" onclick="goApp2()">{!titulo2}</a></li>
+                        <li><a href="javascript:;" onclick="goApp3()">{!titulo3}</a></li>
+                        <li><a href="javascript:;" onclick="goApp4()">{!titulo4}</a></li>
+                        <li><a href="javascript:;" onclick="goApp5()">{!titulo5}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;" onclick="goAppReb1()">{!titulo1Reb}</a></li>
+                        <li><a href="javascript:;" onclick="goAppReb2()">{!titulo2Reb}</a></li>
+                                                <!-- Created divider and descarte option -->
+                        <li class="divider"></li>
+                        <li><a href="javascript:;" onclick="goAppDescarte()">{!titulo6} de Semente</a></li>
+                        <li><a href="javascript:;" onclick="goAppReembalagem()">{!titulo7}</a></li>
+
+                        <!-- Elias end -->
+                        <li class="divider"></li>
+                        <li><a href="javascript:;" onclick="goEstoque()">{!tituloEstoque}</a></li>                    
+                    </ul>
+                </li>
+                
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="{!if(!logUser.Habilitado_Eventos__c,'display:none','')}">
+                <span class="glyphicon glyphicon-calendar"></span>  Eventos <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <apex:repeat value="{!OptionEvento}" var="option">
+                            <li><a href="javascript:;" onclick="goEvent('{!option.value}');">{!option.value}</a></li>
+                        </apex:repeat>                                             
+                    </ul>
+                </li>
+                <li ><a href="javascript:;" onclick="goMidiaKit()"><span class="glyphicon glyphicon-file"></span>  {!tituloMidia}</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="{!if(or(!habilitadoMenuVotacion, !logUser.Habilitado_Votacion_DSEM__c),'display:none','')}">
+                <span class="glyphicon glyphicon-filter"></span>  Votação <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:;" onclick="goVotar()" style="{!if(!habilitadoVotar,'display:none','')}">{!tituloVotacion1}</a></li>
+                        <li><a href="javascript:;" onclick="goVotar()" style="{!if(habilitadoVotar,'display:none','')}">{!tituloVotacion2}</a></li>                                            
+                        <li><a href="javascript:;" onclick="goResumenVotos()">{!tituloVotacion3}</a></li>
+                    </ul>
+                </li>
+                
+                <!--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                    class="glyphicon glyphicon-search"></span>Search <b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="min-width: 300px;">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form class="navbar-form navbar-left" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" type="button">
+                                                Go!</button>
+                                        </span>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>-->
+                <li ><a href="javascript:;" onclick="goSaldos()" style="{!if((!hibilitadoDescontoRoyalties),'display:none','')}"><span class="glyphicon glyphicon-list"></span> Desconto Royalties</a></li>
+                <li ><a href="javascript:;" onclick="goCuentaCorriente()" style="{!if((!habilitadoContaCorriente),'display:none','')}"><span class="glyphicon glyphicon-usd"></span> Conta Corrente</a></li>
+                <li ><a href="javascript:;" onclick="goVenda()" style="{!if((!habilitadoVendaDeBasica),'display:none','')}"><span class="glyphicon glyphicon-shopping-cart"></span> Semente Basica</a></li>
+            </ul>
+            <div class="nav navbar-nav navbar-right" role="form">
+                <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-placement="bottom" title="{!activeAccount.Account__r.Name}">
+                        {!User.Name} ({!activeAccount.Account__r.Nome_fantasia__c})
+                        <span class=" fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">                        
+                        <li><a href="javascript:;" onclick="goProfile()"> {!$Label.Profile}</a></li>
+                        <!--<li>
+                            <a href="javascript:;">
+                            <span class="badge bg-red pull-right">50%</span>
+                            <span>Settings</span>
+                            </a>
+                        </li>--> 
+                        <li>
+                            <a href="javascript:;" onclick="logout()"><i class="fa fa-sign-out pull-right"></i> {!$Label.Site.Logout}</a>                            
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <apex:actionFunction action="{!gotoSalesReport}" name="goSalesRep" />
+            <apex:actionFunction action="{!gotoProdReport}" name="goProdRep" />
+                        
+            <apex:actionFunction action="{!closeSession}" name="logout" />
+            <apex:actionFunction action="{!gotoDashboard}" name="goDash" />
+          <apex:actionFunction action="{!gotoSaldos}" name="goSaldos" />
+            <apex:actionFunction action="{!gotoProfile}" name="goProfile" />
+            <apex:actionFunction action="{!gotoAppend1}" name="goApp1" />
+            <apex:actionFunction action="{!gotoAppend1Rebaja}" name="goAppReb1" />
+            <apex:actionFunction action="{!gotoAppend2}" name="goApp2" />
+            <apex:actionFunction action="{!gotoAppend2Rebaja}" name="goAppReb2" />            
+            <apex:actionFunction action="{!gotoAppend3}" name="goApp3" />
+            <apex:actionFunction action="{!gotoAppend4}" name="goApp4" />
+            <apex:actionFunction action="{!gotoAppend5}" name="goApp5" />
+                        <!-- Call action from controller and set it's name -->
+            <apex:actionFunction action="{!gotoDescarte}" name="goAppDescarte" />
+            <apex:actionFunction action="{!gotoReembalagem}" name="goAppReembalagem" />
+
+            <!-- Elias end -->
+            <apex:actionFunction action="{!gotoContract}" name="goContract" />            
+            <apex:actionFunction action="{!gotoEventos}" name="goEventos" rerender="homeForm">
+                <apex:param value="" assignTo="{!evento}" name="ev"/>
+            </apex:actionFunction>     
+            <apex:actionFunction action="{!gotoVotar}" name="goVotar" />                   
+            <apex:actionFunction action="{!gotoResumenVotos}" name="goResumenVotos" />
+            <apex:actionFunction action="{!gotoEstoque}" name="goEstoque" />
+            <apex:actionFunction action="{!gotoVendaBasica}" name="goVenda" />
+            <apex:actionFunction action="{!gotoCuentaCorriente}" name="goCuentaCorriente"/>
+            <apex:actionFunction action="{!gotoMidiaKit}" name="goMidiaKit" />
+        </apex:outputPanel><!--/.navbar-collapse -->
+      </apex:outputPanel>
+    </apex:outputPanel>
+    <!--</apex:panelGrid>-->
+  </apex:form>
+</center>
+</apex:component>

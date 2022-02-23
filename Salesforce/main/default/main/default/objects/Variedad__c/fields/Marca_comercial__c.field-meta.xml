@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_comercial__c</fullName>
+    <externalId>false</externalId>
+    <label>Marca comercial</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DM Sementes</fullName>
+                <default>false</default>
+                <label>DONMARIO</label>
+            </value>
+            <value>
+                <fullName>Brasmax</fullName>
+                <default>false</default>
+                <label>BRASMAX</label>
+            </value>
+            <value>
+                <fullName>Neogen</fullName>
+                <default>false</default>
+                <label>NEOGEN</label>
+            </value>
+            <value>
+                <fullName>Dagma</fullName>
+                <default>false</default>
+                <label>DAGMA</label>
+            </value>
+            <value>
+                <fullName>Licenças</fullName>
+                <default>false</default>
+                <label>LICENÇAS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

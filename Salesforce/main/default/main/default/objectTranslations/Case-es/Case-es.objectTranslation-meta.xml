@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reclamo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reclamos</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Fiscalizacion</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fiscalizacion MKT</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cerrar caso</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Información Visita Campo --></label>
+            <section>Información Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Información del Caso --></label>
+            <section>Información del Caso</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cierre Reclamo VB</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- Descrição do problema --></label>
+            <section>Descrição do problema</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Reclamos</layout>
+        <sections>
+            <label><!-- Brasmax --></label>
+            <section>Brasmax</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informações Assistência Técnica --></label>
+            <section>Informações Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Agricultor --></label>
+            <section>Informações do Agricultor</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Reclamação --></label>
+            <section>Informações do Reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de casos</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO ADMINISTRADOR</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Sistema --></label>
+            <section>Informações do Sistema</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO ALTA</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO ALTA COM Y GTE</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO ALTA CON ATEND</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Dados --></label>
+            <section>Dados</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO ALTA SIN ATEND</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO CERRADO</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação del Caso --></label>
+            <section>Informação del Caso</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO COMERCIAL</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita a Campo --></label>
+            <section>Informação Visita a Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO COMERCIAL ACEPTADO</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO DESARROLLO</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO DESARROLLO ACEPTADO</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO EN ANDAMENTO</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Dados --></label>
+            <section>Dados</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO EN ANDAMENTO - LE</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Dados --></label>
+            <section>Dados</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO EN ANDAMENTO MKT</layout>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Canal de Venda --></label>
+            <section>Contato Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO INDEMNIZACION</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO NUEVO</layout>
+        <sections>
+            <label><!-- Contacto Canal de Ventas --></label>
+            <section>Contacto Canal de Ventas</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações Assistência Técnica --></label>
+            <section>Informações Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Productor --></label>
+            <section>Productor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO PESQUISA</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO PRODUCCION</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO PROPUESTA CIERRE - LE</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO PROPUESTA CIERRE GER - LE</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO RECHAZADO</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO SOLO LECTURA</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Indemnização --></label>
+            <section>Informação Indemnização</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da Sistemas --></label>
+            <section>Informação da Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO VISITA CAMPO</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Reclamação --></label>
+            <section>Informações do Reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RECLAMO VISITA CAMPO CONFIRMADA</layout>
+        <sections>
+            <label><!-- Contato  Canal de Venda --></label>
+            <section>Contato  Canal de Venda</section>
+        </sections>
+        <sections>
+            <label><!-- Contato Assistência Técnica --></label>
+            <section>Contato Assistência Técnica</section>
+        </sections>
+        <sections>
+            <label><!-- Datos --></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Geral da reclamação --></label>
+            <section>Informação Geral da reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informação Visita Campo --></label>
+            <section>Informação Visita Campo</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Reclamação --></label>
+            <section>Informações do Reclamação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações sobre o problema --></label>
+            <section>Informações sobre o problema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Produtor --></label>
+            <section>Produtor</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reclamo Venta Basica</layout>
+        <sections>
+            <label><!-- Documentação --></label>
+            <section>Documentação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Agricultor --></label>
+            <section>Informações do Agricultor</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Sistemas --></label>
+            <section>Informações do Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Resolução --></label>
+            <section>Resolução</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reclamo Venta Basica Solo Lectura</layout>
+        <sections>
+            <label><!-- Documentação --></label>
+            <section>Documentação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Agricultor --></label>
+            <section>Informações do Agricultor</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Sistemas --></label>
+            <section>Informações do Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Resolução --></label>
+            <section>Resolução</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Fechar a reclamação --></label>
+        <name>Fechar_a_reclamacao</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Propor Fechamento da Reclamação --></label>
+        <name>Propor_fechamento</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Recusar proposta de fechamento --></label>
+        <name>Recusar_proposta_de_fechamento</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Fiscalização --></label>
+        <name>Fiscalizacion</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El reclamo se encuentra cerrado --></description>
+        <label><!-- RECLAMO CERRADO --></label>
+        <name>RECLAMO_CERRADO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El Gerente Comercial asignó el reclamo a un responsable de Cuenta. --></description>
+        <label><!-- RECLAMO COMERCIAL --></label>
+        <name>RECLAMO_COMERCIAL</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Corresponde el reclamo Comercial --></description>
+        <label><!-- RECLAMO COMERCIAL ACEPTADO --></label>
+        <name>RECLAMO_COMERCIAL_ACEPTADO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El Comercial Consulta a Desarrollo --></description>
+        <label><!-- RECLAMO CONS DESARROLLO --></label>
+        <name>RECLAMO_CONS_DESARROLLO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El Encargado del Reclamo de Desarrollo necesita una consulta técnica con Pesquisa --></description>
+        <label><!-- RECLAMO CONS PESQUISA --></label>
+        <name>RECLAMO_CONS_PESQUISA</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El Encargado del Reclamo Comercial necesita una consulta técnica con Producción --></description>
+        <label><!-- RECLAMO CONS PRODUCCION --></label>
+        <name>RECLAMO_CONS_PRODUCCION</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro de transicion entre Nuevo y En Atendimento. Es para completar datos. --></description>
+        <label><!-- RECLAMO CON ATEND EN EDICION --></label>
+        <name>RECLAMO_CON_ATEND_EN_EDICION</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Corresponde el reclamo a Desarrollo --></description>
+        <label><!-- RECLAMO DESARROLLO ACEPTADO --></label>
+        <name>RECLAMO_DESARROLLO_ACEPTADO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El reclamo paso de reclamo nuevo a reclamo en andamento porq es un reclamo con atendimento. --></description>
+        <label><!-- RECLAMO EN ANDAMENTO --></label>
+        <name>RECLAMO_EN_ANDAMENTO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RECLAMO INDEMNIZACION --></label>
+        <name>RECLAMO_INDEMNIZACION</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Es la primer etapa del reclamo. El Gerente Comercial define si es un reclamo Comercial o para Desarrollo. --></description>
+        <label><!-- RECLAMO NUEVO --></label>
+        <name>RECLAMO_NUEVO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se propone cerrar el caso completando las conclusiones con respecto al mismo. --></description>
+        <label><!-- RECLAMO PROPUESTA CIERRE --></label>
+        <name>RECLAMO_PROPUESTA_CIERRE</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- El reclamo no corresponde. --></description>
+        <label><!-- RECLAMO RECHAZADO --></label>
+        <name>RECLAMO_RECHAZADO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro de transicion entre Nuevo y Prop de Fechamento. Es para completar datos. --></description>
+        <label><!-- RECLAMO SIN ATEND EN EDICION --></label>
+        <name>RECLAMO_SIN_ATEND_EN_EDICION</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se solicita aprobación de Visita a Campo --></description>
+        <label><!-- RECLAMO VISITA CAMPO --></label>
+        <name>RECLAMO_VISITA_CAMPO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se aprueba la Visita al Campo --></description>
+        <label><!-- RECLAMO VISITA CAMPO CONF --></label>
+        <name>RECLAMO_VISITA_CAMPO_CONF</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reclamo --></label>
+        <name>Reclamo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reclamo Venda Basica --></label>
+        <name>Reclamo_Venda_Basica</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Indenização não aprovada --></errorMessage>
+        <name>Indemnizacion_No_Aprobada</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Se o Tipo de Reclamação for Qualidade de Sementes, deve-se acrescentar o Lote da Cultivar. --></errorMessage>
+        <name>Lote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Marca do Produto selecionado não se corresponde com a Marca ingressada no Reclamo. --></errorMessage>
+        <name>Producto_Marca</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Não encerrar ou fechar uma reclamação sem Descrever um Diagnóstico --></errorMessage>
+        <name>Reclamo_Cerrado_Sin_Diagnostico</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve ingressar uma data de Solução do Reclamo. --></errorMessage>
+        <name>Reclamo_Cerrado_sin_Fecha</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Não Passar a reclamação para a seguinte etapa , sem entrar em contato com o Produtor. --></errorMessage>
+        <name>Reclamo_Contactado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Responsable mal Asignado --></errorMessage>
+        <name>Reclamo_Mal_Asignado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para avançar a proposta de fechamento deve completar todos os dados. --></errorMessage>
+        <name>Reclamo_Prop_Cierre_Campos_Obligatorios</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve-se indicar um Responsável no Campo “Responsável”. --></errorMessage>
+        <name>Responsable_no_Seleccionado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve completar a data de solução do caso. --></errorMessage>
+        <name>Valida_Fecha_Cierre_Reclamo_VB</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve completar a Resolução do caso. --></errorMessage>
+        <name>Valida_Respuesta_Reclamo_VB</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve completar la Fecha Visita Campo. --></errorMessage>
+        <name>Validar_Visita_a_Campo</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Aceptar_Indemnizacion --></label>
+        <name>Aceptar_Indemnizacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Aceptar_Reclamo --></label>
+        <name>Aceptar_Reclamo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Asignar --></label>
+        <name>Asignar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Autorizar_Visita_a_Campo --></label>
+        <name>Autorizar_Visita_a_Campo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Avanzar --></label>
+        <name>Avanzar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cerrar_Reclamo --></label>
+        <name>Cerrar_Reclamo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Enviar_a_Desenvolvimento --></label>
+        <name>Enviar_a_Desenvolvimento</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Finalizar_Visita_Campo --></label>
+        <name>Finalizar_Visita_Campo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Imprimir_Reclamo --></label>
+        <name>Imprimir_Reclamo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Indemnizacion --></label>
+        <name>Indemnizacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pasar_Reclamo_a_Desarrollo --></label>
+        <name>Pasar_Reclamo_a_Desarrollo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pasar_a_Reclamo_Comercial --></label>
+        <name>Pasar_a_Reclamo_Comercial</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Proponer_Cierre_Reclamo --></label>
+        <name>Proponer_Cierre_Reclamo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rechazar_Reclamo --></label>
+        <name>Rechazar_Reclamo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rechazar_Visita --></label>
+        <name>Rechazar_Visita</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reclamo_a_Pesquisa --></label>
+        <name>Reclamo_a_Pesquisa</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reclamo_a_Producci_n --></label>
+        <name>Reclamo_a_Producci_n</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Recusar_proposta_de_fechamento --></label>
+        <name>Recusar_proposta_de_fechamento</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Responder_Consulta --></label>
+        <name>Responder_Consulta</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solicitar_Visita_a_Campo --></label>
+        <name>Solicitar_Visita_a_Campo</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendWithDocuSign --></label>
+        <name>dfsle__SendWithDocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

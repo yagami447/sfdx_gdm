@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PRODUCTION</label>
+    <protected>false</protected>
+    <values>
+        <field>Account_Id__c</field>
+        <value xsi:type="xsd:string">4dcbd8df-ef6f-47cc-9d11-0038893e31c8</value>
+    </values>
+    <values>
+        <field>Authentication_URL__c</field>
+        <value xsi:type="xsd:string">account.docusign.com</value>
+    </values>
+    <values>
+        <field>Certificate_Name__c</field>
+        <value xsi:type="xsd:string">docusign</value>
+    </values>
+    <values>
+        <field>Integration_Key__c</field>
+        <value xsi:type="xsd:string">fd0b68aa-2292-491b-9479-f26c4eb94017</value>
+    </values>
+    <values>
+        <field>User_Id__c</field>
+        <value xsi:type="xsd:string">da606dd5-301f-4b73-913e-3c9da942159c</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Operacao NFe --></label>
+    <name>Tipo_de_Operacao_NFe__c</name>
+    <picklistValues>
+        <masterLabel>Entrada</masterLabel>
+        <translation><!-- Entrada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salida</masterLabel>
+        <translation><!-- Salida --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

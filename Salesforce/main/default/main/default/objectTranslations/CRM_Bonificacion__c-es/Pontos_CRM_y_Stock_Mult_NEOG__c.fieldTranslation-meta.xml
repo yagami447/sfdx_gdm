@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pontos CRM y Stock Mult NEOG --></label>
+    <name>Pontos_CRM_y_Stock_Mult_NEOG__c</name>
+</CustomFieldTranslation>

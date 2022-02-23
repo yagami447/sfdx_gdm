@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_Tipo_Documento_contra_sucursal</fullName>
+    <active>true</active>
+    <description>Validación para impedir que se facturen Royalties desde la sucursal Londrina indicando un tipo de documento diferente a ZBES.</description>
+    <errorConditionFormula>AND(OR(PricebookEntry.Product2.Sector__c = &quot;02&quot;,PricebookEntry.Product2.Sector__c = &quot;06&quot;), NOT(ISPICKVAL(Opportunity.Tipo__c,&quot;ZBES - Venda Serviços NFSe&quot;)),ISPICKVAL(Opportunity.Sucursal__c,&quot;0095 Londrina&quot;), Opportunity.RecordTypeId = &apos;01240000000M58N&apos;)</errorConditionFormula>
+    <errorMessage>O tipo de documento selecionado não corresponde à Royalties fatura do ramo Londrina</errorMessage>
+</ValidationRule>

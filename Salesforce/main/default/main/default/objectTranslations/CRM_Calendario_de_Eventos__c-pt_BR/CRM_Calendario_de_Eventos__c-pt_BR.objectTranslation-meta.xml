@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Evento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Eventos</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Dia de Campo --></label>
+        <name>Dia_de_Campo</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Emplacamento --></label>
+        <name>Emplacamento</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Test a Campo --></label>
+        <name>Test_a_Campo</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Treinamento Tecnico --></label>
+        <name>Treinamento_Tecnico</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>CRM Evento Dia de Campo</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Evento Dia de Campo Comunidade</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Evento Emplacamento Comunidade</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Evento Lado a Lado Comunidade</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Evento completo</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Eventos Treinamentos Comunidade</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM evento Emplacamento</layout>
+        <sections>
+            <label><!-- Cidade --></label>
+            <section>Cidade</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM evento Treinamentos</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM evento test a campo</layout>
+        <sections>
+            <label><!-- Cidade --></label>
+            <section>Cidade</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Enviar para aprovação --></label>
+        <name>Enviar_para_aprovacao</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Dia de Campo, DMMAS, Feiras y Tours de Max. Rend. --></description>
+        <label><!-- Día de Campo --></label>
+        <name>Dia_de_Campo</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Emplacamentos --></description>
+        <label><!-- Emplacamento --></label>
+        <name>Emplacamento</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Lado a Lado, Strip Test, CESB y Area comercial --></description>
+        <label><!-- Test a campo --></label>
+        <name>Test_a_campo</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Palestra, Treinamento, Encontro y Jornada Tecnicas --></description>
+        <label><!-- Treinamento Tecnico --></label>
+        <name>Treinamento_Tecnico</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- completo --></label>
+        <name>completo</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Dados obrigatórios: Evento - Data. --></errorMessage>
+        <name>Datos_Validos_Calendario</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Editar_Itens --></label>
+        <name>Editar_Itens</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Editar_itens_novo --></label>
+        <name>Editar_itens_novo</name>
+    </webLinks>
+</CustomObjectTranslation>

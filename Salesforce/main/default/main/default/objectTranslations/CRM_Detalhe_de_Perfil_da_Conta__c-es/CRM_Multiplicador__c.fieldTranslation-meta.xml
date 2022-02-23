@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- el registro principal de CRM Multiplicador 
+determina la Cuenta y la Safra 
+o principal Multiplicador registro CRM
+determina a conta eo Safra --></help>
+    <label><!-- AAAA CRM Multiplicador --></label>
+    <name>CRM_Multiplicador__c</name>
+    <relationshipLabel><!-- Perfil da Conta --></relationshipLabel>
+</CustomFieldTranslation>

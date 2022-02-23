@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporte_Produccion_Basica__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Setor__c , &apos;Comercial&apos;, &apos;00O400000031Mxd&apos;, &apos;Desarrollo&apos;, &apos;00O33000004H180&apos;,&apos;00O400000031Mxd&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Reporte Produccion Basica</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

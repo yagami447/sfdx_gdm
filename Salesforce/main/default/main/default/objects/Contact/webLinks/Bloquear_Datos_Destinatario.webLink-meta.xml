@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bloquear_Datos_Destinatario</fullName>
+    <availability>online</availability>
+    <description>Envía los datos del Destinatario a SAP</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Bloquear Datos Destinatario</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Contact.Id}&quot;;
+var result = sforce.apex.execute(&quot;Acc_BloqDatos&quot;,&quot;FC_Bloq_Dest&quot;, {conId : id, target : 300});
+alert(result);
+
+
+//alert(&quot;Momentaneamente inhabilitado. Estamos realizando tareas de mantenimiento. Cuando el servicio esté activo, se le comunicará.&quot;);
+
+window.location.reload();</url>
+</WebLink>

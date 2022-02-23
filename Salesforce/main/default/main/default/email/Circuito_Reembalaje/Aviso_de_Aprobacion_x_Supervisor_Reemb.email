@@ -1,0 +1,6 @@
+Está disponível para aprovação:
+
+A Empresa {!Opportunity.Account} inseriu informações do {!Opportunity.RecordType} , identificação {!Opportunity.Name} para sua Análise.
+
+Clique no link abaixo para acesso ao salesforce:
+{!Opportunity.Link}

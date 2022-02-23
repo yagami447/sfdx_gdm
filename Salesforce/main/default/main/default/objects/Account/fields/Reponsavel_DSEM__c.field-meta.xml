@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reponsavel_DSEM__c</fullName>
+    <description>Qual dos funcionários da DSEM que estará responsável pela conta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Qual dos funcionários da DSEM que estará responsável pela conta</inlineHelpText>
+    <label>Responsável DSEM</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>061 - Fernando Frehner</fullName>
+                <default>false</default>
+                <label>061 - Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>066 - Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>066 - Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>067 - Sergio Bertagnoli</fullName>
+                <default>false</default>
+                <label>067 - Sergio Bertagnoli</label>
+            </value>
+            <value>
+                <fullName>010 - GDM Genetica</fullName>
+                <default>false</default>
+                <label>010 - GDM Genetica</label>
+            </value>
+            <value>
+                <fullName>011 - Pablo R. de Souza</fullName>
+                <default>false</default>
+                <label>011 - Pablo R. de Souza</label>
+            </value>
+            <value>
+                <fullName>014 - Cristian Pirolli</fullName>
+                <default>false</default>
+                <label>014 - Cristian Pirolli</label>
+            </value>
+            <value>
+                <fullName>015 - Fagner Regis de Oliveira</fullName>
+                <default>false</default>
+                <label>015 - Fagner Regis de Oliveira</label>
+            </value>
+            <value>
+                <fullName>016 - Murilo Brazero Cacheffo</fullName>
+                <default>false</default>
+                <label>016 - Murilo Brazero Cacheffo</label>
+            </value>
+            <value>
+                <fullName>234 - Julio Cesar Poletto</fullName>
+                <default>false</default>
+                <label>234 - Julio Cesar Poletto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

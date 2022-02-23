@@ -1,0 +1,322 @@
+<apex:page Controller="CRM_Controller" title="Infraestrutura" action="{!init}" tabStyle="Account" sidebar="false">    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickCanalVendas="{!verCanalVendas}" clickAreaAct="{!verAreaAct}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1000px">
+    <apex:sectionHeader title="Infraestrutura ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>    
+<apex:pageBlock mode="edit">
+<apex:Messages style="font-weight:bold;font-size:18px"/>
+<!--<apex:pageMessages escape="false"/>-->
+<apex:pageBlockSection columns="1">    
+    <apex:pageBlock mode="edit" title="Capacidade de Produção por UBS">     
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!infraestructura_A}"  var="infr_A" id="inf_A" style="width: 600px">
+            <apex:column headerValue="Região">
+                <apex:outputField value="{!infr_A.Region__c}" rendered="{!infr_A.Id != editInfrA}"/>
+                <!-- <apex:inputField value="{!infr_A.Region__c}" rendered="{!infr_A.Id == editInfrA}"/> -->
+            </apex:column>
+            <apex:column headerValue="Municipio">
+                <apex:outputField value="{!infr_A.Cidade__c}" rendered="{!infr_A.Id != editInfrA}"/>
+                <apex:inputField value="{!infr_A.Cidade__c}" rendered="{!infr_A.Id == editInfrA}"/>
+            </apex:column>
+            <apex:column headerValue="Capacidade (Sacas)">
+                <apex:facet name="footer"><apex:outputField value="{!crm_mult.Capacidade_x_cidade__c}"/></apex:facet>
+                <apex:outputField value="{!infr_A.Capacidade__c}" rendered="{!infr_A.Id != editInfrA}"/>
+                <apex:inputField value="{!infr_A.Capacidade__c}" rendered="{!infr_A.Id == editInfrA}"/>
+            </apex:column>
+            <apex:column headerValue="Produção Real/Produção Atual">
+                <apex:facet name="footer"><apex:outputField value="{!crm_mult.Total_Produccion_Real_Actual__c}"/></apex:facet>
+                <apex:outputField value="{!infr_A.Produccion_Real_Actual__c}" rendered="{!infr_A.Id != editInfrA}"/>
+                <apex:inputField value="{!infr_A.Produccion_Real_Actual__c}" rendered="{!infr_A.Id == editInfrA}"/>
+            </apex:column>
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editInfraestructura_A}" rerender="form" rendered="{!infr_A.Id != editInfrA}">Editar
+                    <apex:param name="editInfr_A" value="{!infr_A.Id}" assignTo="{!editInfrA}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarInfraestructura}" rendered="{!infr_A.Id != editInfrA}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminarInfr" value="{!infr_A.Id}" assignTo="{!elimInfr}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditInfraestructura_A}" rendered="{!infr_A.Id == editInfrA}">Cancelar</apex:commandLink>&nbsp;                
+                <apex:commandLink action="{!saveEditInfraestructura_A}" rendered="{!infr_A.Id == editInfrA}">Salvar</apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>                        
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarInfA}" rerender="form" rendered="{!adicionar_inf_A == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarInfA}" rerender="form" rendered="{!adicionar_inf_A == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!adicionar_inf_A && !crm_mult.Cerrado__c}">
+        <apex:pageblocktable value="{!nuevo_infraestructura_A}" var="nuevo_inf_A" id="nuevo_inf_A" style="width: 400px">
+            <!-- <apex:column headerValue="Região">
+                <apex:inputField value="{!nuevo_inf_A.Region__c}"></apex:inputField>
+            </apex:column> -->
+            <apex:column headerValue="Municipio">            
+                <apex:inputField value="{!nuevo_inf_A.Cidade__c}"></apex:inputField>
+            </apex:column>                
+            <apex:column headerValue="Capacidade (Sacas)">                        
+                <apex:inputField value="{!nuevo_inf_A.Capacidade__c}"></apex:inputField>
+            </apex:column>   
+            <apex:column headerValue="Produção Real/Produção Atual">                        
+                <apex:inputField value="{!nuevo_inf_A.Produccion_Real_Actual__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addInfraestructura_A}" />
+            </apex:column>    
+        </apex:pageblocktable>
+        </apex:pageBlockSection>      
+    </apex:pageBlock>
+    
+    <apex:pageBlock mode="edit" title="Capacidade  de Tratamento por Empresa" id="capXEmp">
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!infraestructura_B}"  var="infr_B" id="inf_B" style="width: 600px">
+            <apex:column headerValue="Empresa">
+                <apex:inputField value="{!infr_B.Empresa__c}" rendered="{!infr_B.Id == editInfrB}"></apex:inputField>
+                <apex:outputField value="{!infr_B.Empresa__c}" rendered="{!infr_B.Id != editInfrB}"></apex:outputField>
+            </apex:column>
+            <apex:column headerValue="Capacidade (Sacas)"> 
+                <apex:facet name="footer"><apex:outputField value="{!crm_mult.Trat_Sem_x_Empresa_Capac__c}" /></apex:facet>           
+                <apex:inputField value="{!infr_B.Capacidade__c}" rendered="{!infr_B.Id == editInfrB}"></apex:inputField>
+                <apex:outputField value="{!infr_B.Capacidade__c}" rendered="{!infr_B.Id != editInfrB}"></apex:outputField>
+            </apex:column>    
+            
+            <apex:column headerValue="Volume tratado"> 
+                <apex:facet name="footer"><apex:outputField value="{!crm_mult.Trat_Sem_x_Empresa_Volume_Trat__c}" /></apex:facet>           
+                <apex:inputField value="{!infr_B.Volume_Tratado__c}" rendered="{!infr_B.Id == editInfrB}"></apex:inputField>
+                <apex:outputField value="{!infr_B.Volume_Tratado__c}" rendered="{!infr_B.Id != editInfrB}"></apex:outputField>
+            </apex:column>
+                        
+            <apex:column headerValue="Exclusividade">                        
+                <apex:inputField value="{!infr_B.Exclusividade__c}" rendered="{!infr_B.Id == editInfrB}"></apex:inputField>
+                <apex:outputField value="{!infr_B.Exclusividade__c}" rendered="{!infr_B.Id != editInfrB}"></apex:outputField>
+            </apex:column>
+            <!-- <apex:column headerValue="Agroquimico">                        
+                <apex:outputField value="{!infr_B.Produto__c}" rendered="{!infr_B.Id != editInfrB}"></apex:outputField>
+                <apex:selectList value="{!editAgroquimico}" size="1" rendered="{!infr_B.Id == editInfrB}"><apex:selectOptions value="{!Agroquimicos}" rendered="{!infr_B.Id == editInfrB}"/></apex:selectList>
+            </apex:column>-->
+            
+            <apex:column headerValue="Tratamento Aplicado">                        
+                <apex:outputField value="{!infr_B.Agroquimico__c}" rendered="{!infr_B.Id != editInfrB}"></apex:outputField>
+                <apex:inputField value="{!infr_B.Agroquimico__c}" rendered="{!infr_B.Id == editInfrB}"></apex:inputField>
+            </apex:column>
+            
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editInfraestructura_B}" rerender="form" rendered="{!infr_B.Id != editInfrB}">Editar
+                    <apex:param name="editInfr_B" value="{!infr_B.Id}" assignTo="{!editInfrB}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarInfraestructura}" rendered="{!infr_B.Id != editInfrB}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminarInfr" value="{!infr_B.Id}" assignTo="{!elimInfr}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditInfraestructura_B}" rendered="{!infr_B.Id == editInfrB}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditInfraestructura_B}" rendered="{!infr_B.Id == editInfrB}">Salvar</apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarInfB}" rerender="form" rendered="{!adicionar_inf_B == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarInfB}" rerender="form" rendered="{!adicionar_inf_B == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+
+        
+        <apex:pageBlockSection rendered="{!adicionar_inf_B && !crm_mult.Cerrado__c}" >
+        <apex:pageblocktable value="{!nuevo_infraestructura_B}" var="nuevo_inf_B" id="nuevo_inf_B">
+            <apex:column headerValue="Empresa">
+                <apex:inputField value="{!nuevo_inf_B.Empresa__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Capacidade (Sacas)">            
+                <apex:inputField value="{!nuevo_inf_B.Capacidade__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Volume tratado">            
+                <apex:inputField value="{!nuevo_inf_B.Volume_Tratado__c}"></apex:inputField>
+            </apex:column>                
+            <apex:column headerValue="Exclusividade">                        
+                <apex:inputField value="{!nuevo_inf_B.Exclusividade__c}"></apex:inputField>
+            </apex:column>   
+            <!-- <apex:column headerValue="Agroquimico">                        
+                <apex:selectList value="{!nuevoAgroquimico}" size="1"><apex:selectOptions value="{!Agroquimicos}"/></apex:selectList>
+            </apex:column>-->
+            
+            <apex:column headerValue="Tratamento Aplicado">                        
+                <apex:inputField value="{!nuevo_inf_B.Agroquimico__c}"></apex:inputField>
+            </apex:column>
+            
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addInfraestructura_B}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection>  
+    </apex:pageBlock>
+ </apex:pageBlockSection>
+ 
+ <apex:pageBlockSection columns="1">    
+    <apex:pageBlock mode="edit" title="Expectativa  de Expansão/Ampliação" >     
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!infraestructura_G}"  var="infr_G" id="inf_G" style="width: 600px">
+            <apex:column headerValue="Expansão/Ampliação">
+                <apex:outputField value="{!infr_G.Expansion__c}" rendered="{!infr_G.Id != editInfrG}"/>
+                <apex:inputField value="{!infr_G.Expansion__c}" rendered="{!infr_G.Id == editInfrG}"/>
+            </apex:column>
+            <apex:column headerValue="Região">
+                <apex:outputField value="{!infr_G.Region__c}" rendered="{!infr_G.Id != editInfrG}"/>
+                <!-- <apex:inputField value="{!infr_G.Region__c}" rendered="{!infr_G.Id == editInfrG}"/>-->
+            </apex:column>
+            <apex:column headerValue="Municipio">
+                <apex:outputField value="{!infr_G.Cidade__c}" rendered="{!infr_G.Id != editInfrG}"/>
+                <apex:inputField value="{!infr_G.Cidade__c}" rendered="{!infr_G.Id == editInfrG}"/>
+            </apex:column>
+            <apex:column headerValue="Capacidade (Sacas)">
+                <!-- <apex:facet name="footer">{!crm_mult.Capacidade_x_cidade__c}</apex:facet>-->
+                <apex:outputField value="{!infr_G.Capacidade__c}" rendered="{!infr_G.Id != editInfrG}"/>
+                <apex:inputField value="{!infr_G.Capacidade__c}" rendered="{!infr_G.Id == editInfrG}"/>
+            </apex:column>
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editInfraestructura_G}" rerender="form" rendered="{!infr_G.Id != editInfrG}">Editar
+                    <apex:param name="editInfr_G" value="{!infr_G.Id}" assignTo="{!editInfrG}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarInfraestructura}" rendered="{!infr_G.Id != editInfrG}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminarInfr" value="{!infr_G.Id}" assignTo="{!elimInfr}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditInfraestructura_G}" rendered="{!infr_G.Id == editInfrG}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditInfraestructura_G}" rerender="form" rendered="{!infr_G.Id == editInfrG}">Salvar</apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>                        
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarInfG}" rerender="form" rendered="{!adicionar_inf_G == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarInfG}" rerender="form" rendered="{!adicionar_inf_G == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!adicionar_inf_G && !crm_mult.Cerrado__c}">
+        <apex:pageblocktable value="{!nuevo_infraestructura_G}" var="nuevo_inf_G" id="nuevo_inf_G" style="width: 400px">
+            <apex:column headerValue="Expansão/Ampliação">
+                <apex:inputField value="{!nuevo_inf_G.Expansion__c}"></apex:inputField>
+            </apex:column>
+            <!-- <apex:column headerValue="Região">
+                <apex:inputField value="{!nuevo_inf_G.Region__c}"></apex:inputField>
+            </apex:column> -->
+            <apex:column headerValue="Municipio">            
+                <apex:inputField value="{!nuevo_inf_G.Cidade__c}"></apex:inputField>
+            </apex:column>                
+            <apex:column headerValue="Capacidade (Sacas)">                        
+                <apex:inputField value="{!nuevo_inf_G.Capacidade__c}"></apex:inputField>
+            </apex:column>   
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addInfraestructura_G}" />
+            </apex:column>    
+        </apex:pageblocktable>
+        </apex:pageBlockSection>      
+    </apex:pageBlock>
+ </apex:pageBlockSection>
+  
+ </apex:pageBlock>
+        
+    <apex:pageBlock mode="edit" title="Outros dados">
+    <apex:pageBlockSection columns="2">
+    
+    
+        <apex:pageBlockSection columns="1" title="Quantidade de filiais"> 
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!infraestructura_F}"  var="infr_F" id="inf_F" style="width:400px">
+            <apex:column headerValue="Região">
+                <apex:inputField value="{!infr_F.Region__c}" rendered="{!infr_F.Id == editInfrF}"></apex:inputField>
+                <apex:outputField value="{!infr_F.Region__c}" rendered="{!infr_F.Id != editInfrF}"></apex:outputField>
+            </apex:column>
+            <apex:column headerValue="Quantidade">            
+                <apex:inputField value="{!infr_F.Capacidade__c}" rendered="{!infr_F.Id == editInfrF}"></apex:inputField>
+                <apex:outputField value="{!infr_F.Capacidade__c}" rendered="{!infr_F.Id != editInfrF}"></apex:outputField>
+            </apex:column>                
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editInfraestructura_F}" rerender="form" rendered="{!infr_F.Id != editInfrF}">Editar
+                    <apex:param name="editInfr_F" value="{!infr_F.Id}" assignTo="{!editInfrF}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarInfraestructura}" rendered="{!infr_F.Id != editInfrF}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminarInfr" value="{!infr_F.Id}" assignTo="{!elimInfr}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditInfraestructura_F}" rendered="{!infr_F.Id == editInfrF}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditInfraestructura_F}" rerender="form" rendered="{!infr_F.Id == editInfrF}">Salvar</apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarInfF}" rerender="form" rendered="{!adicionar_inf_F == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarInfF}" rerender="form" rendered="{!adicionar_inf_F == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+
+        
+        <apex:pageBlockSection rendered="{!adicionar_inf_F && !crm_mult.Cerrado__c}" >
+        <apex:pageblocktable value="{!nuevo_infraestructura_F}" var="nuevo_inf_F" id="nuevo_inf_F">
+            <apex:column headerValue="Região">
+                <apex:inputField value="{!nuevo_inf_F.Region__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Quantidade">            
+                <apex:inputField value="{!nuevo_inf_F.Capacidade__c}"></apex:inputField>
+            </apex:column>                
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addInfraestructura_F}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        </apex:pageBlockSection>
+    
+    
+        <!--
+        <apex:pageBlockSection title="Volume de Vendas em %" columns="1">
+            <apex:outputLabel value="Tratada:  ">                                        
+                <apex:inputField value="{!crm_mult.Ventas_de_Sem_Tratada__c}" rendered="{!editInfrC == true}"></apex:inputField>
+                <apex:outputField value="{!crm_mult.Ventas_de_Sem_Tratada__c}" rendered="{!editInfrC == false}"></apex:outputField>
+            </apex:outputLabel>    
+            <apex:outputLabel value="Sem Tratar:  ">                                           
+                <apex:inputField value="{!crm_mult.Vendas_de_Sem_sem_tratar__c}" rendered="{!editInfrC == true}"></apex:inputField>
+                <apex:outputField value="{!crm_mult.Vendas_de_Sem_sem_tratar__c}" rendered="{!editInfrC == false}"></apex:outputField>
+            </apex:outputLabel>    
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:commandLink style="width: 100px" value="Editar" action="{!editInfraestructura_C}" rendered="{!editInfrC == false && !crm_mult.Cerrado__c}" rerender="form"/> 
+            <apex:commandLink style="width: 100px" value="Cancelar " action="{!cancelEditInfraestructura_C}" rendered="{!editInfrC == true && !crm_mult.Cerrado__c}"/>
+            <apex:commandLink style="width: 100px" value="Salvar" action="{!saveInfraestructura}" rendered="{!editInfrC == true && !crm_mult.Cerrado__c}"/>
+        </apex:pageBlockSection> 
+        -->
+        <apex:pageBlockSection title="Campos de Produção de Sementes " columns="1">
+            <apex:outputLabel value="% de área de multiplicação própria: ">                        
+                <apex:inputField value="{!crm_mult.Area_multiplic_propia__c}" rendered="{!editInfrD == true}"></apex:inputField>
+                <apex:outputField value="{!crm_mult.Area_multiplic_propia__c}" rendered="{!editInfrD == false}"></apex:outputField>
+            </apex:outputLabel>    
+            <apex:outputLabel value="% de área de multiplicação terceirizada: ">
+                <apex:inputField value="{!crm_mult.area_multiplic_terceirizada__c}" rendered="{!editInfrD == true}"></apex:inputField> 
+                <apex:outputField value="{!crm_mult.area_multiplic_terceirizada__c}" rendered="{!editInfrD == false}"></apex:outputField>
+            </apex:outputLabel>   
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:commandLink style="width: 100px" value="Editar" action="{!editInfraestructura_D}" rendered="{!editInfrD == false && !crm_mult.Cerrado__c}" rerender="form"/> 
+            <apex:commandLink style="width: 100px" value="Cancelar " action="{!cancelEditInfraestructura_D}" rendered="{!editInfrD == true && !crm_mult.Cerrado__c}"/>
+            <apex:commandLink style="width: 100px" value="Salvar" action="{!saveInfraestructura}" rendered="{!editInfrD == true && !crm_mult.Cerrado__c}"/>
+        </apex:pageBlockSection>                
+        <apex:pageBlockSection title="Equipe Comercial vinculada a Semente" columns="1">
+            <apex:outputLabel value="Agrônomos:  ">                        
+                <apex:inputField value="{!crm_mult.Agronomos__c}" rendered="{!editInfrE == true}"></apex:inputField>
+                <apex:outputField value="{!crm_mult.Agronomos__c}" rendered="{!editInfrE == false}"></apex:outputField>
+            </apex:outputLabel>    
+            <apex:outputLabel value="Técnicos:  ">
+                <apex:inputField value="{!crm_mult.Tecnicos__c}" rendered="{!editInfrE == true}"></apex:inputField>           
+                <apex:outputField value="{!crm_mult.Tecnicos__c}" rendered="{!editInfrE == false}"></apex:outputField>
+            </apex:outputLabel> 
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:commandLink style="width: 100px" value="Editar" action="{!editInfraestructura_E}" rendered="{!editInfrE == false && !crm_mult.Cerrado__c}" rerender="form"/>   
+            <apex:commandLink style="width: 100px" value="Cancelar " action="{!cancelEditInfraestructura_E}" rendered="{!editInfrE == true && !crm_mult.Cerrado__c}"/>
+            <apex:commandLink style="width: 100px" value="Salvar" action="{!saveInfraestructura}" rendered="{!editInfrE == true && !crm_mult.Cerrado__c}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlockSection>    
+    </apex:pageBlock>
+
+</apex:form>  
+</apex:panelGrid> 
+</apex:page>

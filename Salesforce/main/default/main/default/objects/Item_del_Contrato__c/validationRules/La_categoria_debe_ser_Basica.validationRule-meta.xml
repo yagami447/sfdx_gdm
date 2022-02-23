@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>La_categoria_debe_ser_Basica</fullName>
+    <active>false</active>
+    <description>La categoria del producto seleccionado debe ser Basica</description>
+    <errorConditionFormula>text(Cultivar__r.Categoria__c)  &lt;&gt;&apos;Basica&apos;</errorConditionFormula>
+    <errorDisplayField>Cultivar__c</errorDisplayField>
+    <errorMessage>La categoria del producto seleccionado debe ser Basica. Seleccione otro producto cuya categoría sea Basica.
+A categoria de produto selecionado deve ser básica. Escolha outro produto cuja categoria é básica.</errorMessage>
+</ValidationRule>

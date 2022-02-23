@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Condição de pagamento --></label>
+    <name>Condi_o_de_pagamento__c</name>
+    <picklistValues>
+        <masterLabel>2 quotas</masterLabel>
+        <translation><!-- 2 quotas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 quotas</masterLabel>
+        <translation><!-- 3 quotas --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

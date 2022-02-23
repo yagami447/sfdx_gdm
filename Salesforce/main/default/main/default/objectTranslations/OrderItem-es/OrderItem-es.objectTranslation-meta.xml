@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Producto de oferta interna</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Productos de ofertas internas</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato de productos de pedido</layout>
+        <sections>
+            <label><!-- Información adicional --></label>
+            <section>Información adicional</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Unable to edit record --></errorMessage>
+        <name>Accesibilidad</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Os produtos não podem ser alterados se já estiverem ativos --></errorMessage>
+        <name>No_se_pueden_cambiar_los_pedidos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- UnitPrice is not editable --></errorMessage>
+        <name>UnitPrice</name>
+    </validationRules>
+</CustomObjectTranslation>

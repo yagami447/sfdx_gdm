@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Debe_aprobar_prazos__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+AND(
+NOT(ISNULL(Novo_segundo_vencimento__c)),
+OR(ISNULL(Campaign.Kg_para_2_parcelas_no_m_ximo__c),
+Kg_de_produto__c &lt; Campaign.Kg_para_2_parcelas_no_m_ximo__c)
+),
+AND(
+NOT(ISNULL(Novo_terceiro_vencimento__c)),
+OR(ISNULL(Campaign.Kg_para_3_parcelas_no_m_ximo__c),
+Kg_de_produto__c &lt; Campaign.Kg_para_3_parcelas_no_m_ximo__c)
+),
+AND(
+NOT(ISNULL(Novo_quarto_vencimento__c)),
+OR(ISNULL(Campaign.Kg_para_4_parcelas_no_m_ximo__c),
+Kg_de_produto__c &lt; Campaign.Kg_para_4_parcelas_no_m_ximo__c)
+),
+AND(
+NOT(ISNULL(Novo_quinto_vencimento__c)),
+OR(ISNULL(Campaign.Kg_para_5_parcelas_no_m_ximo__c),
+Kg_de_produto__c &lt; Campaign.Kg_para_5_parcelas_no_m_ximo__c)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Debe aprobar prazos</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

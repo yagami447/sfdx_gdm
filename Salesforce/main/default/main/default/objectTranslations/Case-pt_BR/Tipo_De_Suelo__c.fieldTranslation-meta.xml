@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Solo --></label>
+    <name>Tipo_De_Suelo__c</name>
+    <picklistValues>
+        <masterLabel>Arenoso</masterLabel>
+        <translation><!-- Arenoso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Argiloso</masterLabel>
+        <translation><!-- Argiloso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misto</masterLabel>
+        <translation><!-- Misto --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

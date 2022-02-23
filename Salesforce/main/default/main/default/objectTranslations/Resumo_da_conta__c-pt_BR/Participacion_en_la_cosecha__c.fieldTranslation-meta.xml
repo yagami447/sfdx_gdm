@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Qual foi a Participação (%) da BRASMAX /e ou DONMARIO na safra  ( _______________ ): --></help>
+    <label><!-- Participacion en la cosecha --></label>
+    <name>Participacion_en_la_cosecha__c</name>
+</CustomFieldTranslation>

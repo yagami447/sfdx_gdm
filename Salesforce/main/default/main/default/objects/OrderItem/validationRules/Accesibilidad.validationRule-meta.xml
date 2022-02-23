@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accesibilidad</fullName>
+    <active>true</active>
+    <description>Gerente LE, Gerente Marketing LE, Markintg solo pueden ver</description>
+    <errorConditionFormula>$Profile.Name = &apos;Gerente LE&apos;  ||  $Profile.Name = &apos;Gerente Marketing LE&apos; ||  $Profile.Name = &apos;Marketing&apos;</errorConditionFormula>
+    <errorMessage>Unable to edit record</errorMessage>
+</ValidationRule>

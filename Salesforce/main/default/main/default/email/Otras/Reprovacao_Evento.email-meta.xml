@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Enviado quando o evento é reprovado</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Reprovação Evento</name>
+    <style>none</style>
+    <subject>Seu evento de  {!CRM_Calendario_de_Eventos__c.Evento__c} foi reprovado.</subject>
+    <textOnly>Olá {!Contact.Name}{!User.Name},
+
+Seu evento: {!CRM_Calendario_de_Eventos__c.Name} foi recusado pelo seguinte motivo: {!ApprovalRequest.Comments}
+
+Detalhes do Evento:
+Evento: {!CRM_Calendario_de_Eventos__c.Evento__c}
+Fase: {!CRM_Calendario_de_Eventos__c.Fase__c}
+Agricultor: {!CRM_Calendario_de_Eventos__c.Nome_do_agricultor_2__c}
+Revenda: {!CRM_Calendario_de_Eventos__c.Revenda_2__c}
+Cidade: {!CRM_Calendario_de_Eventos__c.Municipio__c}
+Estado: {!CRM_Calendario_de_Eventos__c.Estado__c}
+Safra: {!CRM_Calendario_de_Eventos__c.Safra__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Coordenador Brasmax --></label>
+    <lookupFilter>
+        <errorMessage><!-- El Coordenador Brasmax debe ser un Usuario con Perfil Coordenador --></errorMessage>
+    </lookupFilter>
+    <name>CoordenadorBrasmax__c</name>
+    <relationshipLabel><!-- Cuentas (Coordenador Brasmax) --></relationshipLabel>
+</CustomFieldTranslation>

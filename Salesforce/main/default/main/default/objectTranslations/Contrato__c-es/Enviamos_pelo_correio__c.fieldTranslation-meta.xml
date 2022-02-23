@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Click para sim, se já foi enviado. Indicar data de envio. Click para não, se ainda não foi enviado. --></help>
+    <label><!-- Enviamos pelo correio --></label>
+    <name>Enviamos_pelo_correio__c</name>
+</CustomFieldTranslation>

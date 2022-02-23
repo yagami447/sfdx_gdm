@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- True si supero las ventas de semilla comercializada de la campaña anterior --></help>
+    <label><!-- Aumento as Vendas? --></label>
+    <name>DS_Aumento_nas_Vendas__c</name>
+</CustomFieldTranslation>

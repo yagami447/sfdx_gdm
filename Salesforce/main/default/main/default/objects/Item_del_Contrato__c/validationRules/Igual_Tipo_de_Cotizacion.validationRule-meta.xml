@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Igual_Tipo_de_Cotizacion</fullName>
+    <active>false</active>
+    <description>Chequea si el Producto seleccionado tiene el mismo tipo de cotizacion que la cabecera</description>
+    <errorConditionFormula>Text( Contrato_de_Multiplicacion__r.Tipo_de_Cota_o__c ) &lt;&gt;  Tipo_de_Cotizacion__c</errorConditionFormula>
+    <errorDisplayField>Cultivar__c</errorDisplayField>
+    <errorMessage>A cultivar selecionada não tem a mesma tipo de cotização de que o contrato</errorMessage>
+</ValidationRule>

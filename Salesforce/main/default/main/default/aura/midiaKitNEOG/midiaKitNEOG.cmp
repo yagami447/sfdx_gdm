@@ -1,0 +1,30 @@
+<aura:component controller="aSiteMidiaKitNEOGController" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+	
+    <aura:attribute name="ArteResProdutividade" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="slds-card">
+		                       
+                
+        <div class="slds-grid">
+        
+		<div class="slds-card__body slds-card__body_inner slds-scrollable_x" style="width:100%;">			
+            
+				<table class="slds-table">
+					<thead>
+						<tr>
+                            Arte de Resultado de Produtividade <br/><br/>                          
+							<aura:iteration items="{!v.ArteResProdutividade}" var="header">
+                                <p>{!header.nombre}</p>
+                                <div onclick="{!c.gotoURL}" data-value="{!header.link}">
+    								<lightning:button label="Baixar"/>
+								</div>                                
+							</aura:iteration>
+						</tr>
+					</thead>					
+				</table>
+			
+		</div>
+	</div>	
+</div>        
+</aura:component>

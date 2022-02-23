@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsavel_y_Tipo__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASESAFEID(OwnerId) + &quot;-&quot; + TEXT(Tipo__c)</formula>
+    <label>Responsavel y Tipo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

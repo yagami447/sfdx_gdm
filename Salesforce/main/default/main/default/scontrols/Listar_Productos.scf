@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+<head> 
+<title>Detalle de la Oportunidad</title><link href="00630000004i76o_files/common.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet"><link href="00630000004i76o_files/custom.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet"><link href="00630000004i76o_files/assistive.css" type="text/css" media="aural,braille,embossed" rel="stylesheet"> 
+<link rel="shortcut icon" href="https://na1.salesforce.com/favicon.ico"> 
+<link href="/dCSS/Theme2/default/common.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" ><link href="/dCSS/Theme2/default/custom.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" ><link href="/css/assistive.css" type="text/css" media="aural,braille,embossed" rel="stylesheet" > 
+<link rel="shortcut icon" href="https://na1.salesforce.com/favicon.ico"> 
+<script src="https://www.salesforce.com/services/lib/ajax/beta3.3/sforceclient.js" type="text/javascript"></script> 
+<script> 
+var tpl_head = ""; 
+tpl_head +=" <div class=\"bRelatedList\">"; 
+tpl_head +=" <div class=\"bNext\">"; 
+tpl_head +=" <div class=\"withFilter\">"; 
+tpl_head +=" <div class=\"clearingBox\"></div>"; 
+tpl_head +=" </div>"; 
+tpl_head +=" </div>"; 
+tpl_head +=" <div class=\"listOpportunityLineItem\">"; 
+tpl_head +=" <div class=\"bPageBlock secondaryPalette\">"; 
+tpl_head +=" <div class=\"pbHeader\">"; 
+tpl_head +=" <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"; 
+tpl_head +=" <tbody>"; 
+tpl_head +=" <tr>"; 
+tpl_head +=" <td class=\"pbTitle\">"; 
+tpl_head +=" <img src=\"/s.gif\" alt=\"\" title=\"\" class=\"minWidth\" height=\"1\" width=\"1\">"; 
+tpl_head +=" <img src=\"/s.gif\" alt=\"\" class=\"relatedListIcon\">"; 
+tpl_head +=" <h3>Productos de (%OpportunityName%)</h3>"; 
+tpl_head +=" </td>"; 
+tpl_head +=" <td class=\"pbButton\">"; 
+tpl_head +=" </td>"; 
+tpl_head +=" <td class=\"pbHelp\">"; 
+tpl_head +=" </td>"; 
+tpl_head +=" </tr>"; 
+tpl_head +=" "; 
+tpl_head +=" </tbody>"; 
+tpl_head +=" </table>"; 
+tpl_head +=" </div>"; 
+tpl_head +=" <div class=\"pbBody\">"; 
+tpl_head +=" <table class=\"list\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"; 
+tpl_head +=" <tbody>"; 
+tpl_head +=" <tr class=\"headerRow\">"; 
+tpl_head +=" <th scope=\"col\" class=\"\">Produto</th>"; 
+tpl_head +=" <th scope=\"col\" class=\"numericalColumn\">Quantidade</th>"; 
+//tpl_head +=" <th scope=\"col\" class=\"CurrencyElement\">Precio lista</th>"; 
+tpl_head +=" <th scope=\"col\" class=\"CurrencyElement\">Preço de venda</th>"; 
+//tpl_head +=" <th scope=\"col\" class=\"CurrencyElement\">Precio Neto</th>"; 
+//tpl_head +=" <th scope=\"col\" class=\"numericalColumn\">Com Dist Cont</th>"; 
+//tpl_head +=" <th scope=\"col\" class=\"numericalColumn\">Com Dist+Int</th>"; 
+//tpl_head +=" <th scope=\"col\" class=\"numericalColumn\">Bonif Dist</th>"; 
+//tpl_head +=" <th scope=\"col\" class=\"numericalColumn\">Interes</th>"; 
+tpl_head +=" <th scope=\"col\" class=\"numericalColumn\">Preço total</th>"; 
+tpl_head +=" </tr>"; 
+
+var tpl_row = ""; 
+tpl_row +=" <tr class=\"dataRow even last first\" onmouseout=\"if (typeof(hiOff) != 'undefined'){hiOff(this);}\" onfocus=\"if (typeof(hiOn) != 'undefined'){hiOn(this);}\" onblur=\"if (typeof(hiOff) != 'undefined'){hiOff(this);}\" onmouseover=\"if (typeof(hiOn) != 'undefined'){hiOn(this);}\">"; 
+tpl_row +=" <td class=\"dataCell\">%product_name%</td>"; 
+tpl_row +=" <td class=\"dataCell numericalColumn\">%Quantity%</td>"; 
+//tpl_row +=" <td class=\"dataCell CurrencyElement\">%ListPrice%</td>"; 
+tpl_row +=" <td class=\"dataCell CurrencyElement\">%UnitPrice%</td>"; 
+/*
+tpl_row +=" <td class=\"dataCell CurrencyElement\">%Precio_Neto%</td>"; 
+tpl_row +=" <td class=\"dataCell numericalColumn\">%Com_dist_cont%</td>"; 
+tpl_row +=" <td class=\"dataCell numericalColumn\">%Com_dist_int%</td>"; 
+tpl_row +=" <td class=\"dataCell numericalColumn\">%bonif_dist%</td>"; 
+tpl_row +=" <td class=\"dataCell numericalColumn\">%interes_linea%</td>"; 
+*/
+tpl_row +=" <td class=\"dataCell numericalColumn\">%TotalPrice%</td>"; 
+tpl_row +=" </tr>"; 
+
+var tpl_foot = ""; 
+tpl_foot +="</tbody>"; 
+tpl_foot +=" </table>"; 
+tpl_foot +=" </div>"; 
+tpl_foot +=" <div class=\"pbFooter secondaryPalette\">"; 
+tpl_foot +=" <div class=\"bg\"></div>"; 
+tpl_foot +=" </div>"; 
+tpl_foot +=" </div>"; 
+tpl_foot +=" </div>"; 
+tpl_foot +=" <div class=\"listElementBottomNav\"></div>"; 
+tpl_foot +=" </div>"; 
+
+var _opp = null; 
+var _det = null; 
+var _prods = null; 
+var _pbe = null; 
+
+var oppId = "{!Opportunity.Id}"; 
+var oppName = "{!Opportunity.Name}"; 
+
+function initPage() {
+	sforceClient.setLoginUrl("https://www.salesforce.com/services/Soap/u/7.0"); 
+	sforceClient.registerInitCallback(startUp); 
+	sforceClient.init("{!API.Session_ID}", "{!API.Partner_Server_URL_70}", false);
+} 
+
+function startUp() { 
+	getDetail(); 
+} 
+
+//************************************************************ NO SE USA
+function getOpp(){ 
+	setMsg("Obteniendo Información de la Oportunidad..."); 
+	var soql = "Select Id, Name, Pricebook2Id, PricebookId, CloseDate From Opportunity Where Id = '" + oppId + "'";
+	sforceClient.Query(soql, getOppCallback); 
+} 
+function getOppCallback(queryResult) { 
+	if (queryResult.size > 0){ 
+		_opp = queryResult.records[0]; 
+		setMsg("Obteniendo Información de la Oportunidad. OK"); 
+		getDetail(); 
+	} 
+	else{ 
+		setMsg("Error. No se pudo obtener la Oportunidad. Error"); 
+	} 
+} 
+//*************************************************************
+
+function getDetail(){ 
+	setMsg("Obteniendo Detalle..."); 
+	var soql = "Select Id, PricebookEntryId, ProductId, UnitPrice, TotalPrice, Quantity From OpportunityLineItem Where OpportunityId = '" + oppId + "'"; 
+	sforceClient.Query(soql, getDetCallback); 
+} 
+
+function getDetCallback(queryResult) { 
+	if (queryResult.size > 0){ 
+		setMsg("Obteniendo Detalle.OK"); 
+		_det = queryResult.records; 
+		getProds();
+	} 
+	else{ 
+		setMsg("No hay Productos en esta Nota de Venta."); 
+	} 
+} 
+
+function getProds(){ 
+	setMsg("Obteniendo Productos..."); 
+	var pids = new Array(); 
+	var pbids = new Array(); 
+	for (var i=0; i< _det.length; i++){ 
+		pbids.push(_det[i].get("PricebookEntryId")); 
+	}
+	_pbe = sforceClient.Retrieve("Id, Product2Id, UnitPrice", "PricebookEntry", pbids); 
+	if (_pbe != null && _pbe.length > 0){ 
+		for (var i=0; i< _pbe.length; i++){ 
+			pids.push(_pbe[i].get("Product2Id")); 
+		} 
+	} 
+
+	if (pids.length > 0){
+		sforceClient.Retrieve("Id, Name", "Product2", pids, getProdsCallback);
+	}
+} 
+
+function getProdsCallback(sObjects){
+	if (sObjects != null){
+		_prods = sObjects;
+		setMsg("Obteniendo Productos. OK");
+		showProds();
+	}
+	else{
+		setMsg("Error. No se pudo obtener Información de los Productos ");
+	}
+} 
+
+//************* Funciones auxiliares
+function getProd(pbeid){ 
+	var pid ="";
+	if (_pbe != null && _pbe.length > 0)
+		for (var i=0; i< _pbe.length; i++)
+			if (_pbe[i].get("Id") == pbeid )
+				pid = _pbe[i].get("Product2Id"); 
+	 
+	if (_prods != null && _prods.length > 0) 
+		for (var i=0; i< _prods.length; i++) 
+			if (_prods[i].get("Id") == pid) 
+				return _prods[i]; 
+
+	return null; 
+} 
+
+function setMsg( msg){
+	document.getElementById("div_msg").innerHTML += "<br>" + msg;
+}
+
+function writeDiv(divname, msg){
+	document.getElementById(divname).innerHTML = msg;
+} 
+
+function formatNumber(num, dec){ 
+	if (num == null){ 
+		num = 0; 
+	} 
+	return num.toFixed(dec); 
+}
+
+//***************************************
+
+function showProds(){ 
+
+	if (_det != null && _det.length > 0){ 
+		var report = ""; 
+		var head = tpl_head.replace("%OpportunityName%", oppName);
+		report += head; 
+
+		for (var i=0; i<_det.length;i++){ 
+			var prod = getProd(_det[i].get("PricebookEntryId")); 
+			var row = tpl_row.replace("%product_name%", prod.get("Name")); 
+			row = row.replace("%ProductId%",_det[i].get("Id")); 
+			row = row.replace("%Quantity%",formatNumber(_det[i].get("Quantity"),2)); 
+			//row = row.replace("%ListPrice%",formatNumber(_det[i].get("ListPrice"),3)); 
+			row = row.replace("%UnitPrice%",formatNumber(_det[i].get("UnitPrice"),3)); 
+			//row = row.replace("%Precio_Neto%",formatNumber(_det[i].get("PRECIO_NETO__c"),3)); 
+			//row = row.replace("%Com_dist_cont%",formatNumber(_det[i].get("Comision_Distr_Contado__c"),3)); 
+			//row = row.replace("%Com_dist_int%",formatNumber(_det[i].get("Comision_Distr_Int__c"),3)); 
+			//row = row.replace("%bonif_dist%",formatNumber(_det[i].get("Bonificacion_Distribuidor__c"),3)); 
+			//row = row.replace("%interes_linea%",formatNumber(_det[i].get("Interes_Linea__c"),3)); 
+			//row = row.replace("%subtotal%",formatNumber(_det[i].get("Subtotal_a_Facturar_Linea__c"),3)); 
+			row = row.replace("%TotalPrice%",formatNumber(_det[i].get("TotalPrice"),3)); 
+			report += row;
+		}
+		var foot = "";
+		foot = tpl_foot;
+		report += foot;
+	}
+	writeDiv("tableDiv", report);
+} 
+
+</script> 
+</head> 
+<body onload="initPage()"> 
+<DIV id="tableDiv"> 
+<table width="100%"> 
+<tr> 
+<td align=center> 
+<b>Procesando Nota de Venta, por favor espere...</b> 
+</td> 
+</tr> 
+<tr> 
+<td align=center> 
+<img src="/img/waiting_dots.gif" border="0" width=156 height=15> 
+</td> 
+</tr> 
+<tr> 
+<td align=center> 
+<div id="div_msg"><div> 
+</td> 
+</tr> 
+</table> 
+</DIV> 
+</body> 
+</html>

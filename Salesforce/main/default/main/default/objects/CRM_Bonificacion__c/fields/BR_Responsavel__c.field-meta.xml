@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Responsavel__c</fullName>
+    <description>Supervisor Comercial informante por Brasmax</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Supervisor Comercial informante por Brasmax</inlineHelpText>
+    <label>BResponsável</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>066 - Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>066 - Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>061 - Fernando Frehner</fullName>
+                <default>false</default>
+                <label>061 - Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>067 - Sergio Bertagnolli</fullName>
+                <default>false</default>
+                <label>067 - Sergio Bertagnolli</label>
+            </value>
+            <value>
+                <fullName>076 - Tiago Goulart</fullName>
+                <default>false</default>
+                <label>076 - Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>083 - Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>083 - Jorge Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>095 - Brasmax</fullName>
+                <default>false</default>
+                <label>095 - Brasmax</label>
+            </value>
+            <value>
+                <fullName>101 - Fausto Tadeu Fanchin</fullName>
+                <default>false</default>
+                <label>101 - Fausto Tadeu Fanchin</label>
+            </value>
+            <value>
+                <fullName>111 - Pablo R. de Souza</fullName>
+                <default>false</default>
+                <label>111 - Pablo R. de Souza</label>
+            </value>
+            <value>
+                <fullName>150 - João Serrano</fullName>
+                <default>false</default>
+                <label>150 - João Serrano</label>
+            </value>
+            <value>
+                <fullName>151 - Anderson Weissheimer</fullName>
+                <default>false</default>
+                <label>151 - Anderson Weissheimer</label>
+            </value>
+            <value>
+                <fullName>196 - Edson Chambo</fullName>
+                <default>false</default>
+                <label>196 - Edson Chambo</label>
+            </value>
+            <value>
+                <fullName>198 - Bernardo Zanardo</fullName>
+                <default>false</default>
+                <label>198 - Bernardo Zanardo</label>
+            </value>
+            <value>
+                <fullName>199 - Lucas Costa</fullName>
+                <default>false</default>
+                <label>199 - Lucas Costa</label>
+            </value>
+            <value>
+                <fullName>197 - Wagner Rank</fullName>
+                <default>false</default>
+                <label>197 - Wagner Rank</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,543 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="MidiaKitPage" showHeader="false" standardStylesheets="false" cache="false" title="{!titulo}" controller="aSiteMidiaKitController" action="{!validate}">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+.selected {
+    background: rgba(38,185,154,.16);
+    border-color: rgba(221,221,221,0.780392);
+}
+</style>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                <apex:panelGroup >
+                <apex:form id="profileForm">                    
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <!--<div class="">-->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>Midia Kit</h3>
+                                    <!--<h3>{!titulo}</h3>-->
+                                </div>                                                                                                    
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                
+                                                
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="max-width:800px">
+                            <apex:outputPanel rendered="{!activeSession.Marca__c == 'BRMX'}">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Arte de Resultado de Produtividade</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont">                                                                                        
+                                            <apex:pageblockTable value="{!ArteResProdutividadeBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                    
+                                                    <!--<a id='dwnldLnk' style="display:none;" />
+                                                    <apex:commandLink value="Baixar" action="{!getPdfUrl}" oncomplete="descargarPDF();" rerender="script">                                                        
+                                                        <apex:param value="{!s.link}" assignTo="{!urlImprimir}" name="toEdit"/>
+                                                        <apex:param value="{!s.nombre}" assignTo="{!nombrePDF}" name="toEdit2"/>
+                                                    </apex:commandLink>-->                                                   
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                                                            
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Big Bag</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_con" aria-labelledby="profile-tab">
+                                            <apex:pageBlock >                                                                                        
+                                            <apex:pageblockTable value="{!BigBagBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                    
+                                                    <!--<a id='dwnldLnk' style="display:none;" />
+                                                    <apex:commandLink value="Baixar" action="{!getPdfUrl}" oncomplete="descargarPDF();" rerender="script">                                                        
+                                                        <apex:param value="{!s.link}" assignTo="{!urlImprimir}" name="toEdit"/>
+                                                        <apex:param value="{!s.nombre}" assignTo="{!nombrePDF}" name="toEdit2"/>
+                                                    </apex:commandLink>-->                                                   
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                                                            
+                                </div>                                                                
+                                                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>LOGOS</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock title="Brasmax Institucional" id="cont2">                                                                                        
+                                            <apex:pageblockTable value="{!LogosBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock title="Logos Cultivares" id="cont3">                                                                                        
+                                            <apex:pageblockTable value="{!LogosCultivaresBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                        
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Manual de Identidade Visual</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_con" aria-labelledby="profile-tab">
+                                            <apex:pageBlock >                                                                                        
+                                            <apex:pageblockTable value="{!ManualIdentVisualBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                    
+                                                    <!--<a id='dwnldLnk' style="display:none;" />
+                                                    <apex:commandLink value="Baixar" action="{!getPdfUrl}" oncomplete="descargarPDF();" rerender="script">                                                        
+                                                        <apex:param value="{!s.link}" assignTo="{!urlImprimir}" name="toEdit"/>
+                                                        <apex:param value="{!s.nombre}" assignTo="{!nombrePDF}" name="toEdit2"/>
+                                                    </apex:commandLink>-->                                                   
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                                                            
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Modelo de Autorização de Resultados</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">                                                                                       
+                                            <apex:pageBlock id="cont1"> 
+                                            <apex:pageblockTable value="{!TermosBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                      
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Outdoor</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont7">                                                                                        
+                                            <apex:pageblockTable value="{!OutdoorBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                          
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Placas de campo</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont4">                                                                                        
+                                            <apex:pageblockTable value="{!PlacasCampoBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>    
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Sacaria</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock >                                                                                        
+                                            <apex:pageblockTable value="{!SacariaBRMX}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>    
+                                                                
+                            </apex:outputPanel>    
+                                
+                            
+                            
+                            <apex:outputPanel rendered="{!activeSession.Marca__c == 'DSEM'}">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Arte de Resultado de Produtividade</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock >                                                                                        
+                                            <apex:pageblockTable value="{!ArteResProdutividadeDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                          
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                                                            
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Big Bag</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont16">                                                                                        
+                                            <apex:pageblockTable value="{!BigBagDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                          
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                                                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>LOGOS</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock title="Cultivar Soja" id="cont11">                                                                                        
+                                            <apex:pageblockTable value="{!LogosCultivaresDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock title="Híbrido Milho" id="cont14">                                                                                        
+                                            <apex:pageblockTable value="{!LogosHibridosDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+									</div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock title="Institucional" id="cont12">                                                                                        
+                                            <apex:pageblockTable value="{!LogosDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                        
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Manual de Identidade Visual</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont10">                                                                                        
+                                            <apex:pageblockTable value="{!ManualIdentVisualDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                          
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                                                            
+                                </div>
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Outdoor</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont17">                                                                                        
+                                            <apex:pageblockTable value="{!OutdoorDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                           
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>     
+                                
+                                <!--
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>DONMARIO MAS</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock title="Vídeos curtos" id="cont12a">                                                                                        
+                                            <apex:pageblockTable value="{!VideosCultivaresDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                        
+                                </div>
+                                -->
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Placas de Campo</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont13">                                                                                        
+                                            <apex:pageblockTable value="{!PlacasCampoDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                        
+                                </div> 
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Sacaria</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock >                                                                                        
+                                            <apex:pageblockTable value="{!SacariaDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                        
+                                </div>      
+                                
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Videos</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>                                                                                                            
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock >                                                                                        
+                                            <apex:pageblockTable value="{!VideosDSEM}" var="s" styleclass="data table table-striped no-margin">
+                                                <apex:column headerValue="Nome do Arquivo" value="{!s.nombre}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="Baixar" onclick="JavaScript:window.open('{!s.link}')" target="_blank"/>                                                                                                                                                         
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>                                                                        
+                                </div>                                                               
+                                                                                                                                                                                           
+                            </apex:outputPanel>
+                            
+                            
+                                
+                                
+                            </div>
+                        </div>                        
+                        
+                        <div class="clearfix"></div>
+                                                
+                        
+                    </div>
+                </div>
+                
+                </apex:form> 
+                </apex:panelGroup>
+            </apex:panelGrid> 
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    
+    <apex:outputPanel id="script">
+    <script>
+                    function generarBlob(b64Data, contentType, sliceSize) {
+                      contentType = contentType || '';
+                      sliceSize = sliceSize || 512;
+                      var byteCharacters = atob(b64Data);
+                      var byteArrays = [];
+                      for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                        var slice = byteCharacters.slice(offset, offset + sliceSize);
+                        var byteNumbers = new Array(slice.length);
+                        for (var i = 0; i < slice.length; i++) {
+                          byteNumbers[i] = slice.charCodeAt(i);
+                        }
+                        var byteArray = new Uint8Array(byteNumbers);
+                        byteArrays.push(byteArray);
+                      }
+
+                      var blob = new Blob(byteArrays, {type: contentType});
+                      return blob;
+                    }
+
+                    function descargarPDF(){
+                    alert('{!nombrePDF}');
+                      var blob = generarBlob("{!pdfBlob}", "application/pdf");
+                      var blobUrl = URL.createObjectURL(blob);
+                      var link = document.createElement('a');
+                      link.href = blobUrl;
+                      link.download = '{!nombrePDF}';
+                      link.dispatchEvent(new MouseEvent('click'));
+                    }
+
+                    </script>
+    </apex:outputPanel>
+    
+    </body>
+</apex:define>
+</apex:composition>
+</apex:page>

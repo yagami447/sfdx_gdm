@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_Oferta</fullName>
+    <active>true</active>
+    <description>Valida que la cantidad cancela no supere la pendiente</description>
+    <errorConditionFormula>AND( Opportunity.RecordType.Name = &apos;VB - Pasada SAP&apos;,Quant_Rechazada__c &gt; (Quantity - Quant_Confirmada__c))</errorConditionFormula>
+    <errorMessage>A quantidade recusada não pode ser maior que a Quantidade menos Quant Confirmada.</errorMessage>
+</ValidationRule>

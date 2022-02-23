@@ -1,0 +1,352 @@
+<apex:page tabStyle="CRM_Calendario_de_Eventos__c" standardController="CRM_Calendario_de_Eventos__c" extensions="newCRMEventoController" action="{!redirectNewEvento}" sidebar="false" showHeader="true" standardStylesheets="false"  applyBodyTag="false" docType="html-5.0">
+<head>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}"/>
+</head>
+<div class="SLDS">
+<body>
+    <script src="/soap/ajax/30.0/connection.js"></script>
+    <script type="text/javascript">  
+      
+        function createEvento(evento,tipo) {
+            sforce.connection.sessionId = "{!$Api.Session_ID}";
+            var query1 = sforce.connection.query("select PM_Safra_Actual_Eventos__c, CRM_Safra_Siguiente__c from Configuracion_BMX__c limit 1");
+            var query2 = sforce.connection.query("select Id from RecordType where Name = '" + tipo + "' and sobjectType = 'CRM_Calendario_de_Eventos__c' limit 1");
+            var qResult = query1.getArray("records");
+            var qResult2 = query2.getArray("records");
+            var start = new Date;
+            var safra = qResult[0].PM_Safra_Actual_Eventos__c;
+            var id = qResult2[0].Id;
+            var recId = sforce.one.createRecord('CRM_Calendario_de_Eventos__c', id, { 'Data__c' : start, 'Safra__c' : safra, 'Evento__c' : evento, 'Name' : evento});            
+        }
+        
+    </script>
+     
+    <apex:form >
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+        <div class="slds-section-title--divider">Selecione um tipo de evento</div>        
+        <div class="slds-page-header slds-page-header_object-home" >
+        <div class="slds-section__title">CRM Eventos</div>
+        <div class="slds-grid slds-wrap">
+        
+        <div class="slds-col slds-p-horizontal_medium slds-size_1-of-1 slds-large-size_1-of-2">
+        <apex:outputPanel >
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Novo Evento">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Dia de Campo</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Día de campo','Día de campo')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>
+        </article>
+        </apex:outputPanel>    
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="DONMARIO MAS">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Estação DONMARIO MAS</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Estação DONMARIO MAS','Día de campo')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Novo Anexo II">            
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Treinamento</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel ><button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Treinamento','Treinamento Tecnico')">Novo Evento</button></apex:outputPanel>
+            </div>
+          </div>
+        </article>
+        </apex:outputPanel>        
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Palestra">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Palestra</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel ><button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Palestra','Treinamento Tecnico')">Novo Evento</button></apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+                
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="L x L">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">L x L</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel ><button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Lado a Lado','Test a campo')">Novo Evento</button></apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Area comercial">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Área comercial</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Area comercial','Test a campo')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Emplacamento">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Emplacamento</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Emplacamento','Emplacamento')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        </div>
+        
+        <div class="slds-col slds-p-horizontal_medium slds-size_1-of-1 slds-large-size_1-of-2">
+        <apex:outputPanel >
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Tour dos Máximos Rendimentos">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Tour dos Máximos Rendimentos</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel ><button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Tour dos Máximos Rendimentos','Día de campo')">Novo Evento</button></apex:outputPanel>
+            </div>
+          </div>      
+          </article>                                      
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>        
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Feiras">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Feiras</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Feiras','Día de campo')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Encontro Tecnico">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Encontro Técnico</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel ><button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Encontro Técnico','Treinamento Tecnico')">Novo Evento</button></apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Jornada Tecnica">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Jornada Técnica</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel ><button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Jornada Técnica','Treinamento Tecnico')">Novo Evento</button></apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Strip Test">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Strip Test</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Strip Test','Test a campo')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="CESB">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">CESB</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('CESB','Test a campo')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-event" title="Painel Tecnico">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#event')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body"><h2><span class="slds-text-heading_small">Painel Técnico</span></h2></div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('Painel Técnico','Treinamento Tecnico')">Novo Evento</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        
+        </div>
+        </div>
+        </div>        
+      </div>        
+    </div>
+    </apex:form>
+</body>
+</div>
+</apex:page>

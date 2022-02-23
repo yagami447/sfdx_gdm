@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebaja_Anexo_I_Pedido_Relacionado</fullName>
+    <active>true</active>
+    <errorConditionFormula>$RecordType.Name == &apos;Anexo I Rebaixamento Ha&apos; &amp;&amp;  Anexo_Relacionado__r.RecordTypeId != &apos;01240000000M7Lv&apos;</errorConditionFormula>
+    <errorDisplayField>Anexo_Relacionado__c</errorDisplayField>
+    <errorMessage>Debe seleccionar una oportunidad Anexo I.</errorMessage>
+</ValidationRule>

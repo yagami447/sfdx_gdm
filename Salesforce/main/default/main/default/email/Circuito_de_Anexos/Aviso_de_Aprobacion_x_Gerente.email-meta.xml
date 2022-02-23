@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Aviso de Aprobación del Gerente del Anexo</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aviso de Aprobacion x Gerente</name>
+    <style>none</style>
+    <subject>Aviso de Aprobación por parte del Gerente</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

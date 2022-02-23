@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Volume Comprado Próxima Safra (Kg) --></label>
+    <name>Volume_Comprado_Proxima_Safra__c</name>
+</CustomFieldTranslation>

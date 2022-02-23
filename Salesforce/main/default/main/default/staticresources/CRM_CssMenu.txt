@@ -1,0 +1,74 @@
+h1
+{
+color:green;
+}
+.button1
+{
+background-color:#00FF00;
+font-weight:bold;
+color:#E56717;
+}
+.button2
+{
+background-color:#C12283;
+font-weight:bold;
+color:#EE9A4D;
+}
+a:hover
+{
+color:#F665AB;
+}
+a
+{
+color:#52D017;
+}
+
+.clear
+{ /* generic container (i.e. div) for floating buttons */
+   overflow: hidden;
+   width: 100%;
+}
+
+.boton {
+   background: transparent url('/resource/1326398767000/CssBoton2') no-repeat scroll top right;
+   color: #444;
+   display: block;
+   float: left;
+   font: normal 12px arial, sans-serif;
+   height: 38px;
+   margin-right: 6px;
+   padding-right: 8px; /* sliding doors padding */
+   text-decoration: none;
+}
+
+a.button {
+   background: transparent url('/resource/1326398767000/CssBoton2') no-repeat scroll top right;
+   color: #444;
+   display: block;
+   float: left;
+   font: normal 12px arial, sans-serif;
+   height: 38px;
+   margin-right: 6px;
+   padding-right: 8px; /* sliding doors padding */
+   text-decoration: none;
+}
+
+a.button span
+{
+   background: transparent url('/resource/1326398743000/CssBoton') no-repeat;
+   display: block;
+   line-height: 38px;
+   padding: 5px 0 5px 38px;
+}
+a.button:active
+{
+   background-position: bottom right;
+   color: #000;
+   outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span
+{
+   background-position: bottom left;
+   padding: 6px 0 4px 18px; /* push text down 1px */
+}

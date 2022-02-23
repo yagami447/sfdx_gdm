@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Qual dos funcionários da Brasmax que estará responsável pela conta --></help>
+    <label><!-- Responsável --></label>
+    <name>Responsavel__c</name>
+    <picklistValues>
+        <masterLabel>Antonio Paiva</masterLabel>
+        <translation><!-- Antonio Paiva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Frehner</masterLabel>
+        <translation><!-- Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Gaspar</masterLabel>
+        <translation><!-- Fernando Gaspar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jacques Müllich</masterLabel>
+        <translation><!-- Jacques Müllich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jorge Cristiano Rosa</masterLabel>
+        <translation><!-- Jorge Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Pires</masterLabel>
+        <translation><!-- Lucas Pires --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Steffen</masterLabel>
+        <translation><!-- Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open</masterLabel>
+        <translation><!-- Open --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sergio Bertagnolli</masterLabel>
+        <translation><!-- Sergio Bertagnolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thiago Schwonka</masterLabel>
+        <translation><!-- Thiago Schwonka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiago Goulart</masterLabel>
+        <translation><!-- Tiago Goulart --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,56 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName" controller="AttachmentContentController">
+
+    <aura:attribute name="isReady" type="Boolean" default="false" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+    <aura:attribute name="att" type="Object" default="{'name': ''}" />
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <force:recordData aura:id="load"
+        fields="RecordType.Name,Evento__c,Marca__c"
+        recordId="{!v.recordId}"
+        targetFields="{!v.simpleRecord}"
+        targetRecord="{!v.sObjectName}"
+        targetError="{!v.recordError}"
+        recordUpdated="{!c.loadRecord}" />
+
+    <aura:if isTrue="{!v.isReady}">
+        <div class="slds-box slds-theme_default">
+            <div class="slds-is-relative">
+                <lightning:spinner aura:id="spinner" class="slds-hide" size="small" variant="brand" />
+                <div class="slds-var-m-bottom_small">
+                    <div class="slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-var-m-right_small">
+                                <lightning:input name="file" type="file" label="Arquivo" accept="image/*, application/pdf"
+                                    onchange="{!c.handleFilesChange}" />
+                                <span class="slds-form-element__help">{!v.att.name}</span>
+                            </div>
+                            <div class="slds-col">
+                                <lightning:select aura:id="select" name="select" label="Tipo de Arquivo">
+                                    <option value="Arquivos gerais">Arquivos gerais</option>
+                                    <option value="Termo de autorização">Termo de autorização</option>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        <div class="slds-col">
+                            <lightning:button variant="brand" name="accept" label="Adicionar" title="Adicionar Arquivo"
+                                onclick="{!c.addAttachment}" />
+                        </div>
+                    </div>
+                </div>
+                <lightning:datatable
+                    keyField="id"
+                    data="{!v.data}"
+                    columns="{!v.columns}"
+                    hideCheckboxColumn="true"
+                    resizeColumnDisabled="true"
+                    onrowaction="{!c.handleRowAction}" />
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

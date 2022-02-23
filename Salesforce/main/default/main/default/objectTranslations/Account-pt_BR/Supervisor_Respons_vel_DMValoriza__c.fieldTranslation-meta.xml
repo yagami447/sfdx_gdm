@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Supervisor responsável DONMARIO Valoriza --></help>
+    <label><!-- Supervisor Responsável DMValoriza --></label>
+    <name>Supervisor_Respons_vel_DMValoriza__c</name>
+    <picklistValues>
+        <masterLabel>Adriano Mandarino</masterLabel>
+        <translation><!-- Adriano Mandarino --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ana Luiza Martins</masterLabel>
+        <translation><!-- Ana Luiza Martins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cristian Pirolli</masterLabel>
+        <translation><!-- Cristian Pirolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erinelson Digner</masterLabel>
+        <translation><!-- Erinelson Digner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Bianchessi</masterLabel>
+        <translation><!-- Felipe Bianchessi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Louzada</masterLabel>
+        <translation><!-- Felipe Louzada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geovani Otowicz</masterLabel>
+        <translation><!-- Geovani Otowicz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gustavo Suzano</masterLabel>
+        <translation><!-- Gustavo Suzano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>João Pedro Fossa Bernardy</masterLabel>
+        <translation><!-- João Pedro Fossa Bernardy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>João Victor Silva Trombim</masterLabel>
+        <translation><!-- João Victor Silva Trombim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karine Govea</masterLabel>
+        <translation><!-- Karine Govea --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Furlan</masterLabel>
+        <translation><!-- Lucas Furlan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lukas Reghin</masterLabel>
+        <translation><!-- Lukas Reghin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Matheus Marx</masterLabel>
+        <translation><!-- Matheus Marx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rafael Neubauer</masterLabel>
+        <translation><!-- Rafael Neubauer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

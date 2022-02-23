@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Necessidade__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Necessidade</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo_de_Cultivares__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Multiplicação</fullName>
+                <default>false</default>
+                <label>Multiplicação</label>
+            </value>
+            <value>
+                <fullName>Difusão</fullName>
+                <default>false</default>
+                <label>Difusão</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Comerciais</controllingFieldValue>
+            <controllingFieldValue>Lançamentos</controllingFieldValue>
+            <valueName>Multiplicação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lançamentos</controllingFieldValue>
+            <valueName>Difusão</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para informar que un reclamo paso a Producción</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Reclamo a Producción</name>
+    <style>none</style>
+    <subject>Reclamo a Producción</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

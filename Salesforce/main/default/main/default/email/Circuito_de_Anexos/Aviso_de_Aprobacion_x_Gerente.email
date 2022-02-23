@@ -1,0 +1,17 @@
+{!Today}
+
+Estimado/a ,
+{!Opportunity.Account}
+
+Cumplimos con el deber de informarle, que su información brindada a través del Portal ha sido aprobada por el Gerente.
+Código de identificación {!Opportunity.Name}
+{!Opportunity.RecordType}
+
+
+Gracias por su interés en {!Opportunity.Marca_Completa__c}. Esperamos poder colaborar con {!NullValue(Account.Name, "su empresa.")} En breve, recibirá por correo un paquete de información. Mientras tanto, revise el resumen adjunto de la empresa.
+
+Atentamente,
+
+{!User.FullName}
+{!Opportunity.Marca_Completa__c}
+{!User.Email}

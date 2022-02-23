@@ -1,0 +1,130 @@
+<aura:component implements="force:appHostable,lightning:actionOverride" controller="NotaFiscalElectronicaController" access="global" >
+    
+    <aura:attribute name="data" type="object"  /> 
+    <aura:attribute name="dataString" type="string"></aura:attribute>
+    <aura:attribute name="claveFiscal" type="string"/>
+    <aura:attribute name="oportunidadID" type="string"/>
+
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="loading" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.loading}">
+        <lightning:spinner aura:id="mySpinner" />
+    </aura:if>
+    <div style="margin-top:20px;">
+    </div>
+    <aura:handler name="changeAccount" event="c:NotaFiscalElectronica_FieldChange" action="{!c.handleChange}" />
+    
+    <lightning:layout class="slds-page-header slds-page-header--object-home slds-box" >
+        
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="NF-e"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">NF-e</h1>
+                <h2 class="slds-text-heading--medium">Nota Fiscal electronica</h2>
+            </div>
+        </lightning:layoutItem>
+        
+        
+        <lightning:layout horizontalAlign="center" class="slds-m-left_medium">
+            <lightning:layoutItem size="12" padding="around-small" >
+                <lightning:input aura:id="NfeForm" class="label-hidden" label="Senha Fiscal"
+                                 name="nfeName"
+                                 value="{!v.claveFiscal}"
+                                 maxlength="44"
+                                 placeholder="Inserte senha fiscal"
+                                 required="true"
+                                 /> 
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:button label="Consultar" 
+                                  variant="brand"
+                                  onclick="{!c.toggle}"
+                                  iconName="utility:search"
+                                  disabled="{!empty(v.claveFiscal)}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:layout>
+    
+  <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+            <div class="slds-modal__container MyModalContainer">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick="{!c.closeModel}" title="Close">
+                        <lightning:icon class="slds-button__icon slds-button__icon_large" variant="inverse"  iconName="utility:close" size="small" alternativeText="Indicates Close"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p>
+                        A oportunidade já existe.
+                    </p>
+                    <p>
+                        Deseja ser redirecionado para este?
+                    </p>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button label="Sim" 
+                                      variant="brand"
+                                      onclick="{!c.gotoURL}"
+                                      iconName="utility:internal_share"/>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <div aura:id="obj" class="slds-card slds-hide" style="padding-bottom:40px;">
+        
+        <div class="slds-card">
+            <lightning:tabset selectedTabId="one" class="slds-m-top_medium">
+                
+                <lightning:tab label="NF-e" id="one">
+                    <c:NotaFiscalElectronica_NFe data="{!v.data}"/>
+                </lightning:tab>
+                
+                <lightning:tab label="Emitente" id="two">
+                    <c:NotaFiscalElectronica_Emitente data="{!v.data.nfeProc.NFe.infNFe.emit}"/>
+                </lightning:tab>
+                
+                <lightning:tab label="Destinatário" id="three">
+                    <c:NotaFiscalElectronica_Destinatario  data="{!v.data.nfeProc.NFe.infNFe.dest}"/>
+                </lightning:tab>
+                
+                <lightning:tab label="Produtos e Serviços" id="four">
+                    
+                    <c:NotaFiscalElectronica_Products data="{!v.data.nfeProc.NFe.infNFe.det}"/>
+                </lightning:tab>
+                
+                <lightning:tab label="Totais" id="five">
+                    <c:NotaFiscalElectronica_Totais data="{!v.data.nfeProc.NFe.infNFe.total.ICMSTot}"/>
+                </lightning:tab>
+                
+                <lightning:tab label="Transporte" id="six">
+                    <c:NotaFiscalElectronica_Transporte data="{!v.data.nfeProc.NFe.infNFe.transp}"/>      
+                </lightning:tab>
+                
+                <lightning:tab label="Cobrança" id="seven">
+                    <c:NotaFiscalElectronica_Cobranca data="{!v.data.nfeProc.NFe.infNFe}"/>      
+                </lightning:tab>
+                
+                <lightning:tab label="Informações Adicionais" id="eight">
+                    <c:NotaFiscalElectronica_InformacoesAdicionales data="{!v.data.nfeProc.NFe.infNFe.infAdic}"/>
+                </lightning:tab>
+                
+                
+            </lightning:tabset>
+            
+            
+            <div class="slds-float--right" style="margin-right:40px;">
+                <lightning:buttonGroup>
+                    <lightning:button aura:id="opportunityButton" variant="brand"  label="Salvar" title="Salvar" onclick="{! c.createOpportunity }"/>     
+                </lightning:buttonGroup>
+            </div>        
+        </div>
+        
+        
+    </div>
+    
+    
+    
+</aura:component>

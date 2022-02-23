@@ -1,0 +1,31 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" extensions="Opp_Multi_View_Ctrl">
+    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+        <tr><td><!--<apex:image url="{!$Resource.LogoImpresion}" />--></td><td align="right"><a href="javascript:window.print();">Imprimir</a></td></tr>
+    </table>
+    <apex:sectionHeader subtitle="{!opp.name}" title="Autorização de Rebaixamento de Categoría" rendered="{!Rebaja}"/>
+    <apex:form >
+        <apex:pageBlock title="Detalhes de {!opp.Stagename}" mode="detail">
+            <apex:pageBlockSection >
+                <apex:outputField value="{!opp.name}" />
+                <apex:outputField value="{!opp.Stagename}" />
+                <apex:outputField value="{!opp.accountid}"/>
+                <apex:outputField value="{!opp.Safra__c}" />
+                <apex:outputField value="{!opp.closedate}"/>
+            </apex:pageBlockSection>            
+        </apex:pageBlock>
+    <apex:pageblock title="Produtos" mode="detail">
+    <apex:outputLabel value="Nenhum registro para exibir" rendered="{!NOT(showItems)}" />
+    <apex:pageBlockTable value="{!Items}" var="item" rendered="{!showItems}" >
+        <apex:column ><apex:facet name="header">Produto</apex:facet>{!item.PricebookEntry.Product2.Name}</apex:column>
+        <apex:column headerValue="Produto Original">
+            <apex:outputText value="{!item.Produto_Rebaixado_Nombre__c}"/>
+        </apex:column>
+        <apex:column ><apex:facet name="header">Data</apex:facet><apex:outputField value="{!item.Data__c}"/></apex:column>
+        
+
+        <apex:column ><apex:facet name="header">Sem. Beneficiada</apex:facet><apex:outputField value="{!item.Semente_beneficiada__c}"/></apex:column>
+        <apex:column ><apex:facet name="header">Sem. Aprovada</apex:facet><apex:outputField value="{!item.Semente_aprovada__c}"/></apex:column>
+    </apex:pageBlockTable>
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

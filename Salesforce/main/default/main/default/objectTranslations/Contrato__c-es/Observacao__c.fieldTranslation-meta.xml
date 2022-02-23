@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Informações genéricas sobre o processo de recebimento dos contratos --></help>
+    <label><!-- Observação --></label>
+    <name>Observacao__c</name>
+</CustomFieldTranslation>

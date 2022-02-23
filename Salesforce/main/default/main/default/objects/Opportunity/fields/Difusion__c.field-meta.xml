@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Difusion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si la venta de Basica se destina para difusión o no.</description>
+    <externalId>false</externalId>
+    <label>Difusão</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

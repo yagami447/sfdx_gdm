@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notificaci_n_Aprobaci_n_Recomenda_o_Desenvolvimento_y_Pesquisa</fullName>
+        <description>Notificación Aprobación Recomendação Desenvolvimento y Pesquisa</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>amedeiros@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>bparreira@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jsandri@globant.com.qasap4</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_Aprobaci_n_Recomenda_o_Desenvolvimento_y_Pesquisa</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_Rechazo_Recomenda_o_Desenvolvimento_y_Pesquisa</fullName>
+        <description>Notificación Rechazo Recomendação Desenvolvimento y Pesquisa</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>amedeiros@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>bparreira@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jsandri@globant.com.qasap4</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_Rechazo_Recomenda_o_Desenvolvimento_y_Pesquisa</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_aprobaci_n_Recomenda_o_Marqueting_BRMX</fullName>
+        <description>Notificación aprobación Recomendação Marqueting BRMX</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cpirolli@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ksantos@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_aprobaci_n_Recomenda_o_Marqueting_BRMX</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_aprobaci_n_Recomenda_o_Marqueting_DSEM</fullName>
+        <description>Notificación aprobación Recomendação Marqueting DSEM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nmanzatto@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_aprobaci_n_Recomenda_o_Marqueting_DSEM</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_aprobaci_n_Recomenda_o_Marqueting_NEOG</fullName>
+        <description>Notificación aprobación Recomendação Marqueting NEOG</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dsahao@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_aprobaci_n_Recomenda_o_Marqueting_NEOG</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_rechazo_Recomenda_o_Marqueting_BRMX</fullName>
+        <description>Notificación rechazo Recomendação Marqueting BRMX</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cpirolli@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ksantos@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_rechazo_Recomenda_o_Marqueting_BRMX</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_rechazo_Recomenda_o_Marqueting_DSEM</fullName>
+        <description>Notificación rechazo Recomendação Marqueting DSEM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nmanzatto@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_rechazo_Recomenda_o_Marqueting_DSEM</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_rechazo_Recomenda_o_Marqueting_NEOG</fullName>
+        <description>Notificación rechazo Recomendação Marqueting NEOG</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dsahao@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Plantilla_Notificaci_n_rechazo_Recomenda_o_Marqueting_NEOG</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Fase_de_aprobacion</fullName>
+        <field>Fase_de_Aprova_o__c</field>
+        <literalValue>Em processo</literalValue>
+        <name>Fase de aprobacion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fase_de_aprobacion_aprobadp</fullName>
+        <field>Fase_de_Aprova_o__c</field>
+        <literalValue>Aprovado</literalValue>
+        <name>Fase de aprobacion_aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fase_de_aprobacion_rechazado</fullName>
+        <field>Fase_de_Aprova_o__c</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>Fase de aprobacion_rechazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

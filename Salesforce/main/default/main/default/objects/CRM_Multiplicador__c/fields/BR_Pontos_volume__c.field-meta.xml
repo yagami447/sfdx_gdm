@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Pontos_volume__c</fullName>
+    <description>Pontos (volume) del excel Fórmula desconto de Royalty</description>
+    <externalId>false</externalId>
+    <formula>IF(BR_SemComer_Safra_actual__c&gt;250000,16,IF(BR_SemComer_Safra_actual__c&gt;150000, 12, IF( BR_SemComer_Safra_actual__c &gt;70000, 6, IF( BR_SemComer_Safra_actual__c &gt;40000, 3, 0) )) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Pontos (volume) del excel Fórmula desconto de Royalty</inlineHelpText>
+    <label>Pontos Vendas BRMX</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

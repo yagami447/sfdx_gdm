@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participante__c</fullName>
+    <externalId>false</externalId>
+    <label>Participante</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anderson Clayton Weissheimer</fullName>
+                <default>false</default>
+                <label>Anderson Clayton Weissheimer</label>
+            </value>
+            <value>
+                <fullName>Andre Aguilar</fullName>
+                <default>false</default>
+                <label>Andre Aguilar</label>
+            </value>
+            <value>
+                <fullName>Arquimedes Gonçalves De Moura</fullName>
+                <default>false</default>
+                <label>Arquimedes Gonçalves De Moura</label>
+            </value>
+            <value>
+                <fullName>Augusto Cesar Teodoro Rodrigues</fullName>
+                <default>false</default>
+                <label>Augusto Cesar Teodoro Rodrigues</label>
+            </value>
+            <value>
+                <fullName>Augusto Gelain Rebeschini</fullName>
+                <default>false</default>
+                <label>Augusto Gelain Rebeschini</label>
+            </value>
+            <value>
+                <fullName>Bruno De Moraes Ribeiro</fullName>
+                <default>false</default>
+                <label>Bruno De Moraes Ribeiro</label>
+            </value>
+            <value>
+                <fullName>Bruno Fiorin Zaninetti</fullName>
+                <default>false</default>
+                <label>Bruno Fiorin Zaninetti</label>
+            </value>
+            <value>
+                <fullName>Carlos Martinelli</fullName>
+                <default>false</default>
+                <label>Carlos Martinelli</label>
+            </value>
+            <value>
+                <fullName>Cesar De Matos Silva</fullName>
+                <default>false</default>
+                <label>Cesar De Matos Silva</label>
+            </value>
+            <value>
+                <fullName>Cezar Marchesan</fullName>
+                <default>false</default>
+                <label>Cezar Marchesan</label>
+            </value>
+            <value>
+                <fullName>Christian Rodrigues</fullName>
+                <default>false</default>
+                <label>Christian Rodrigues</label>
+            </value>
+            <value>
+                <fullName>Cristian Pirolli</fullName>
+                <default>false</default>
+                <label>Cristian Pirolli</label>
+            </value>
+            <value>
+                <fullName>Daniel Vidal</fullName>
+                <default>false</default>
+                <label>Daniel Vidal</label>
+            </value>
+            <value>
+                <fullName>Davi Genes Teixeira Lima</fullName>
+                <default>false</default>
+                <label>Davi Genes Teixeira Lima</label>
+            </value>
+            <value>
+                <fullName>Diego Batista Rocha</fullName>
+                <default>false</default>
+                <label>Diego Batista Rocha</label>
+            </value>
+            <value>
+                <fullName>Diego Francisco Gonçalves</fullName>
+                <default>false</default>
+                <label>Diego Francisco Gonçalves</label>
+            </value>
+            <value>
+                <fullName>Edson Chambo Ruiz Junior</fullName>
+                <default>false</default>
+                <label>Edson Chambo Ruiz Junior</label>
+            </value>
+            <value>
+                <fullName>Eduardo Silvestrini Tonello</fullName>
+                <default>false</default>
+                <label>Eduardo Silvestrini Tonello</label>
+            </value>
+            <value>
+                <fullName>Emanuel Augusto Coutinho da Silva</fullName>
+                <default>false</default>
+                <label>Emanuel Augusto Coutinho da Silva</label>
+            </value>
+            <value>
+                <fullName>Emerson Yassunori Ito</fullName>
+                <default>false</default>
+                <label>Emerson Yassunori Ito</label>
+            </value>
+            <value>
+                <fullName>Fagner Regis de Oliveira</fullName>
+                <default>false</default>
+                <label>Fagner Regis de Oliveira</label>
+            </value>
+            <value>
+                <fullName>Felipe Dalsasso</fullName>
+                <default>false</default>
+                <label>Felipe Dalsasso</label>
+            </value>
+            <value>
+                <fullName>Felipe Manoel Alves</fullName>
+                <default>false</default>
+                <label>Felipe Manoel Alves</label>
+            </value>
+            <value>
+                <fullName>Felipe Oliveira Da Costa</fullName>
+                <default>false</default>
+                <label>Felipe Oliveira Da Costa</label>
+            </value>
+            <value>
+                <fullName>Fernando Calazans</fullName>
+                <default>false</default>
+                <label>Fernando Calazans</label>
+            </value>
+            <value>
+                <fullName>Fernando Frenher</fullName>
+                <default>false</default>
+                <label>Fernando Frenher</label>
+            </value>
+            <value>
+                <fullName>Fernando Ichikawa</fullName>
+                <default>false</default>
+                <label>Fernando Ichikawa</label>
+            </value>
+            <value>
+                <fullName>Flavio Marcal Dos Santos</fullName>
+                <default>false</default>
+                <label>Flavio Marcal Dos Santos</label>
+            </value>
+            <value>
+                <fullName>Geovani Otowicz</fullName>
+                <default>false</default>
+                <label>Geovani Otowicz</label>
+            </value>
+            <value>
+                <fullName>Guilherme Barivieira</fullName>
+                <default>false</default>
+                <label>Guilherme Barivieira</label>
+            </value>
+            <value>
+                <fullName>Gustavo Introvini Haab</fullName>
+                <default>false</default>
+                <label>Gustavo Introvini Haab</label>
+            </value>
+            <value>
+                <fullName>Hugo Leonardo Lima Gomes</fullName>
+                <default>false</default>
+                <label>Hugo Leonardo Lima Gomes</label>
+            </value>
+            <value>
+                <fullName>Joao Elias Sebba Roriz Muniz</fullName>
+                <default>false</default>
+                <label>Joao Elias Sebba Roriz Muniz</label>
+            </value>
+            <value>
+                <fullName>Joao Garibaldi</fullName>
+                <default>false</default>
+                <label>Joao Garibaldi</label>
+            </value>
+            <value>
+                <fullName>Joner Dalcin</fullName>
+                <default>false</default>
+                <label>Joner Dalcin</label>
+            </value>
+            <value>
+                <fullName>Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>Jorge Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>Jose Emilio Marini Faria</fullName>
+                <default>false</default>
+                <label>Jose Emilio Marini Faria</label>
+            </value>
+            <value>
+                <fullName>Jose Francisco</fullName>
+                <default>false</default>
+                <label>Jose Francisco</label>
+            </value>
+            <value>
+                <fullName>Jose Guilherme Carneiro Silva</fullName>
+                <default>false</default>
+                <label>Jose Guilherme Carneiro Silva</label>
+            </value>
+            <value>
+                <fullName>Junior Sandri</fullName>
+                <default>false</default>
+                <label>Junior Sandri</label>
+            </value>
+            <value>
+                <fullName>Leucir Zanella</fullName>
+                <default>false</default>
+                <label>Leucir Zanella</label>
+            </value>
+            <value>
+                <fullName>Lucas Augusto Schio</fullName>
+                <default>false</default>
+                <label>Lucas Augusto Schio</label>
+            </value>
+            <value>
+                <fullName>Lucas Hilário Fantineli</fullName>
+                <default>false</default>
+                <label>Lucas Hilário Fantineli</label>
+            </value>
+            <value>
+                <fullName>Lucas Mansano Zanella</fullName>
+                <default>false</default>
+                <label>Lucas Mansano Zanella</label>
+            </value>
+            <value>
+                <fullName>Luiz Fernando Ceccatto</fullName>
+                <default>false</default>
+                <label>Luiz Fernando Ceccatto</label>
+            </value>
+            <value>
+                <fullName>Maicol De Mattos</fullName>
+                <default>false</default>
+                <label>Maicol De Mattos</label>
+            </value>
+            <value>
+                <fullName>Maiquel Gustavo Maehler</fullName>
+                <default>false</default>
+                <label>Maiquel Gustavo Maehler</label>
+            </value>
+            <value>
+                <fullName>Marcelo Cassol</fullName>
+                <default>false</default>
+                <label>Marcelo Cassol</label>
+            </value>
+            <value>
+                <fullName>Marcelo Moraes</fullName>
+                <default>false</default>
+                <label>Marcelo Moraes</label>
+            </value>
+            <value>
+                <fullName>Marcio Locatelli</fullName>
+                <default>false</default>
+                <label>Marcio Locatelli</label>
+            </value>
+            <value>
+                <fullName>Marco Bianchini</fullName>
+                <default>false</default>
+                <label>Marco Bianchini</label>
+            </value>
+            <value>
+                <fullName>Marcos Marchioro</fullName>
+                <default>false</default>
+                <label>Marcos Marchioro</label>
+            </value>
+            <value>
+                <fullName>Mateus Henrique Favaro</fullName>
+                <default>false</default>
+                <label>Mateus Henrique Favaro</label>
+            </value>
+            <value>
+                <fullName>Matheus Araujo Oliveira</fullName>
+                <default>false</default>
+                <label>Matheus Araujo Oliveira</label>
+            </value>
+            <value>
+                <fullName>Maurício Diehl Guazzelli</fullName>
+                <default>false</default>
+                <label>Maurício Diehl Guazzelli</label>
+            </value>
+            <value>
+                <fullName>Michel Dotto</fullName>
+                <default>false</default>
+                <label>Michel Dotto</label>
+            </value>
+            <value>
+                <fullName>Murilo Brazero Cacheffo</fullName>
+                <default>false</default>
+                <label>Murilo Brazero Cacheffo</label>
+            </value>
+            <value>
+                <fullName>Nelson Bassetto Junior</fullName>
+                <default>false</default>
+                <label>Nelson Bassetto Junior</label>
+            </value>
+            <value>
+                <fullName>Osvaldo Manoel Ferreira</fullName>
+                <default>false</default>
+                <label>Osvaldo Manoel Ferreira</label>
+            </value>
+            <value>
+                <fullName>Otavio Gorni</fullName>
+                <default>false</default>
+                <label>Otavio Gorni</label>
+            </value>
+            <value>
+                <fullName>Pablo Souza</fullName>
+                <default>false</default>
+                <label>Pablo Souza</label>
+            </value>
+            <value>
+                <fullName>Patrick Hayra Dos Santos</fullName>
+                <default>false</default>
+                <label>Patrick Hayra Dos Santos</label>
+            </value>
+            <value>
+                <fullName>Paulo Novais</fullName>
+                <default>false</default>
+                <label>Paulo Novais</label>
+            </value>
+            <value>
+                <fullName>Rafael Neubauer</fullName>
+                <default>false</default>
+                <label>Rafael Neubauer</label>
+            </value>
+            <value>
+                <fullName>Rafael Witt</fullName>
+                <default>false</default>
+                <label>Rafael Witt</label>
+            </value>
+            <value>
+                <fullName>Raul Rauber</fullName>
+                <default>false</default>
+                <label>Raul Rauber</label>
+            </value>
+            <value>
+                <fullName>Rodrigo Roider Fogolari</fullName>
+                <default>false</default>
+                <label>Rodrigo Roider Fogolari</label>
+            </value>
+            <value>
+                <fullName>Tharso Souza Silva Brito</fullName>
+                <default>false</default>
+                <label>Tharso Souza Silva Brito</label>
+            </value>
+            <value>
+                <fullName>Thiago Celestino Dos Santos</fullName>
+                <default>false</default>
+                <label>Thiago Celestino Dos Santos</label>
+            </value>
+            <value>
+                <fullName>Thiago Rocha Sales</fullName>
+                <default>false</default>
+                <label>Thiago Rocha Sales</label>
+            </value>
+            <value>
+                <fullName>Tiago Da Silva Moreira</fullName>
+                <default>false</default>
+                <label>Tiago Da Silva Moreira</label>
+            </value>
+            <value>
+                <fullName>Vinicius Bellé</fullName>
+                <default>false</default>
+                <label>Vinicius Bellé</label>
+            </value>
+            <value>
+                <fullName>Vinicius Cesar Sambatti</fullName>
+                <default>false</default>
+                <label>Vinicius Cesar Sambatti</label>
+            </value>
+            <value>
+                <fullName>Vitor Linn</fullName>
+                <default>false</default>
+                <label>Vitor Linn</label>
+            </value>
+            <value>
+                <fullName>Vitor Pereira</fullName>
+                <default>false</default>
+                <label>Vitor Pereira</label>
+            </value>
+            <value>
+                <fullName>Wasley Luan Campoy</fullName>
+                <default>false</default>
+                <label>Wasley Luan Campoy</label>
+            </value>
+            <value>
+                <fullName>Wesley Batista Pfeffer</fullName>
+                <default>false</default>
+                <label>Wesley Batista Pfeffer</label>
+            </value>
+            <value>
+                <fullName>Wesley Silva</fullName>
+                <default>false</default>
+                <label>Wesley Silva</label>
+            </value>
+            <value>
+                <fullName>Willian Allann Loureiro Scabora</fullName>
+                <default>false</default>
+                <label>Willian Allann Loureiro Scabora</label>
+            </value>
+            <value>
+                <fullName>Willian Scharten</fullName>
+                <default>false</default>
+                <label>Willian Scharten</label>
+            </value>
+            <value>
+                <fullName>Lucas Furlan</fullName>
+                <default>false</default>
+                <label>Lucas Furlan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Evento__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>CRM Evento</label>
+    <referenceTo>CRM_Calendario_de_Eventos__c</referenceTo>
+    <relationshipLabel>CRM Eventos Offline</relationshipLabel>
+    <relationshipName>CRM_Eventos_Offline</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

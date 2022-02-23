@@ -1,0 +1,52 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="changePassword" showHeader="false" action="{!validate}" controller="aSiteChangePassController" standardStylesheets="false" title="{!$Label.site.change_password}">
+  <apex:composition template="{!$Site.Template}">
+    <apex:define name="body">
+    <body class="nav-md footer_fixed">  
+        <center>
+        <apex:panelGrid bgcolor="white" columns="1"> 
+            <br/>
+            <br/>
+            <apex:panelGrid width="100%" cellpadding="0" cellspacing="0" bgcolor="white" columns="1" styleClass="topPanelContainer"> 
+            <br/>
+            <apex:outputPanel layout="block" styleClass="topPanel" style="width:500px;">
+                <apex:form id="ForgotForm">
+                    <div class="container">    
+                    <div id="forgotPassbox" style="margin-top:50px;" class="mainbox">                    
+                        <div class="panel panel-info" >
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <apex:outputText styleClass="title" value="{!$Label.site.change_your_password}"/>
+                                </div>
+                            </div>
+                            <div style="padding-top:30px" class="panel-body" >
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <apex:inputSecret id="old-password" styleclass="form-control" value="{!oldPassword}" html-placeholder="{!$Label.site.old_password}" />
+                                </div>
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <apex:inputSecret id="new-password" styleclass="form-control" value="{!newPassword}" html-placeholder="{!$Label.site.new_password}" />
+                                </div>                                
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <apex:inputSecret id="ver-password" styleclass="form-control" value="{!verifyNewPassword}" html-placeholder="{!$Label.site.verify_new_password}" />
+                                </div>
+                                <apex:messages layout="block" styleClass="alert alert-danger errors" style="list-style-type: none;" />
+                                <div style="margin-top:10px" >
+                                    <div class="col-md-12">
+                                        <apex:commandButton id="submit" styleclass="btn btn-success" action="{!changePassword}" value="{!$Label.site.change_password}"/>
+                                    </div>
+                                </div>
+                            </div>                     
+                        </div>  
+                    </div>
+                    </div>     
+                </apex:form>
+            </apex:outputPanel>
+            </apex:panelGrid> 
+        </apex:panelGrid>            
+        </center>
+        </body>
+    </apex:define>
+  </apex:composition>
+</apex:page>

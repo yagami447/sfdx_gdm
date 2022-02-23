@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Safra_Actual__c</fullName>
+    <description>Indica la campaña actual con la que está trabajando CRM</description>
+    <externalId>false</externalId>
+    <label>CRM_Safra_Actual</label>
+    <length>5</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

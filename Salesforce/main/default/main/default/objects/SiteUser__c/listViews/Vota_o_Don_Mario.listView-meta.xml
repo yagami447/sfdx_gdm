@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vota_o_Don_Mario</fullName>
+    <columns>NAME</columns>
+    <columns>Active__c</columns>
+    <columns>Email__c</columns>
+    <columns>Habilitado_DSEM__c</columns>
+    <columns>Habilitado_Votacion_DSEM__c</columns>
+    <columns>Habilitado_Anexos__c</columns>
+    <columns>Habilitado_Eventos__c</columns>
+    <columns>Habilitar_Royalty__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Habilitado_Votacion_DSEM__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Votação Don Mario</label>
+    <language>es</language>
+</ListView>

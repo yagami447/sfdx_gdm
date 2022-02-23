@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tratamento de Sementes --></label>
+    <name>Tratamiento_de_Semilla__c</name>
+    <picklistValues>
+        <masterLabel>T00 - Sem</masterLabel>
+        <translation><!-- T00 - Sem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T05 - Cruiser+Maxim+Amulet</masterLabel>
+        <translation><!-- T05 - Cruiser+Maxim+Amulet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T06 - Cruiser+Maxim+Amulet+Co-Mo</masterLabel>
+        <translation><!-- T06 - Cruiser+Maxim+Amulet+Co-Mo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T07 - Maxim XL</masterLabel>
+        <translation><!-- T07 - Maxim XL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

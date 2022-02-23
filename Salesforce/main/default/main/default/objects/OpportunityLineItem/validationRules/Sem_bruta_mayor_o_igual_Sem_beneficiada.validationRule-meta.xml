@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sem_bruta_mayor_o_igual_Sem_beneficiada</fullName>
+    <active>false</active>
+    <description>Semente_bruta&lt; Semente_beneficiada</description>
+    <errorConditionFormula>Semente_bruta__c&lt; Semente_beneficiada__c</errorConditionFormula>
+    <errorDisplayField>Semente_beneficiada__c</errorDisplayField>
+    <errorMessage>O volume de semente Beneficiada não pode superar o de semente bruta</errorMessage>
+</ValidationRule>

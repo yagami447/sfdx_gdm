@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Categoria_resultante_Estim__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BR_Total_de_pontos_Estim__c &gt;= 16, IF(BR_Total_de_pontos_Estim__c &lt; 21, &apos;PRATA&apos;, IF(BR_Total_de_pontos_Estim__c &lt; 24, &apos;OURO&apos;, &apos;DIAMANTE&apos;)), &apos;-&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Categoria de cliente BRMX Estim</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

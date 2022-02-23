@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valida_Fecha_Cierre_Reclamo_VB</fullName>
+    <active>true</active>
+    <description>Valida_Fecha_Cierre_Reclamo_VB</description>
+    <errorConditionFormula>AND(RecordTypeId = &apos;01240000000MFFQ&apos;, ISPICKVAL(Status, &apos;Fechada&apos;), ISNULL(Data_da_solu_o_do_caso__c))</errorConditionFormula>
+    <errorDisplayField>Data_da_solu_o_do_caso__c</errorDisplayField>
+    <errorMessage>Deve completar a data de solução do caso.</errorMessage>
+</ValidationRule>

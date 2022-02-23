@@ -1,0 +1,490 @@
+<apex:page standardController="Contrato__c" extensions="PdfGeneratorController,ControladorAditivos" renderAs="pdf" showheader="false" action="{!initImpresionContratoTA}" applyBodyTag="false" docType="html-5.0">
+   <head>
+      <style>
+         b {
+            font-size: 13px !important;
+         }
+         
+         .tamanioFuente {
+            font-size:14px;
+         }
+
+         table.gridtable {
+         color: #333333;
+         border-width: 0.5pt;
+         border-color: #666666;
+         border-collapse: collapse;
+         }
+         table.gridtable th {
+         border-width: 0.5pt;
+         border-style: solid;
+         border-color: #666666;
+         }
+         table.gridtable td {
+         border-width: 0.5pt;
+         border-style: solid;
+         border-color: #666666;
+         background-color: #ffffff;
+         }
+         body .bRelatedList .pbBody table.list,
+         body .apexp .pbBody table.list {
+         border: 0.5pt solid #666666;
+         }
+         .centered {
+         text-align: center;
+         }
+         ol {
+         list-style-type: none;
+         counter-reset: item;
+         margin: 0;
+         padding: 0;
+         }
+         ol > li {
+         display: table;
+         counter-increment: item;
+         margin-bottom: 0.6em;
+         }
+         ol > li:before {
+         content: counters(item, ".") ". ";
+         display: table-cell;
+         padding-right: 0.6em;
+         }
+         li ol > li {
+         margin: 0;
+         }
+         li ol > li:before {
+         content: counters(item, ".") " ";
+         }
+         li ol > li.noStyle:before {
+         content: none;
+         }
+         noStyle {
+         list-style-type: none;
+         }
+         @page {
+         margin-top: 150px;
+         margin-bottom: 150px;
+         @bottom-right {
+         content: "Página " counter(page) " de " counter(pages);
+         font-weight: lighter;
+         font-size: 10.5pt;
+         }
+         @top-center {
+         content: "TERMO ADITIVO DE DEFINIÇÕES COMERCIAIS AO CONTRATO DE LICENÇA DE USO DE CULTIVAR";
+         font-weight: Bold;
+         font-size: 10.5pt;
+         padding-top: 65px;
+         }
+         @bottom-left {
+         content: 'Termo N° {!Contrato__c.Name}';
+         font-weight: lighter;
+         font-size: 10.5pt;
+         }
+         }
+      </style>
+   </head>
+   <div style="align-content:center; align-self:center; align-items:center; text-align:center;">
+      <img src="{!$Resource.LogoImpNEOG}" style="width: 40%; height: 50%;"/>     
+   </div>
+
+   <table width="100%" Align="center" columns="2">
+      <!--
+         <table width="80%" border="0" Align="center" columns="3">
+             <tr>
+                 <td align="left" width="10%"><font face="verdana">&nbsp;</font>                 
+                 </td>
+                 <td align="left" width="80%"><font face="verdana"><p><b><u>TERMO ADITIVO DE DEFINIÇÕES COMERCIAIS AO CONTRATO DE LICENÇA DE USO DE CULTIVAR</u></b></p></font>                 
+                 </td>
+                 <td align="left" width="10%"><font face="verdana">&nbsp;</font>                 
+                 </td>
+             </tr>
+         </table>
+         -->
+      <table width="100%" Align="center" columns="1">
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <table width="100%" Align="center" columns="1" style="font-size:14px;">
+         <tr>
+            <td>
+               <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td width="30%">
+                        <b>Termo nº.</b>
+                     </td>
+                     <td width="70%">
+                        <b>{!Contrato__c.Name}</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Licenciadora:</b>         
+                     </td>
+                     <td width="70%">
+                        <b>GDM GENÉTICA DO BRASIL S. A. (GDM)</b>         
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Endereço:</b> 
+                     </td>
+                     <td width="70%">
+                        Rua Antônio Rasteiro Filho, 2.700, Pq. Ind. José Garcia Gimenes, CEP 86183-751 
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Cidade/UF</b>
+                     </td>
+                     <td width="70%">
+                        Cambé - PR 
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>CNPJ:</b>
+                     </td>
+                     <td width="70%">
+                        07.007.165/0001-34  
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Insc. Estadual:</b>
+                     </td>
+                     <td width="70%">
+                        90519331-73 
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>          
+               <br/>         
+               <br/>   
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td width="30%">
+                        <b>Licenciado:</b>
+                     </td>
+                     <td width="70%">
+                        <b>{!nombre}</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Endereço:</b>         
+                     </td>
+                     <td width="70%">
+                        {!dirUnidade}         
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Cidade/UF:</b> 
+                     </td>
+                     <td width="70%">
+                        {!cidadeUF}
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>CNPJ/CPF:</b>
+                     </td>
+                     <td width="70%">
+                        {!cnpj} 
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>I. Estadual/Produtor:</b>
+                     </td>
+                     <td width="70%">
+                        {!inscEst}  
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>          
+               <br/>         
+               <br/>
+               <br/>   
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td width="30%">
+                        <b>Vigência:</b>
+                     </td>
+                     <td width="70%">
+                        <b>SAFRA {!Contrato__c.Safra__c}</b>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%" border="0">
+                  <tr>
+                     <td>&nbsp;</td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+          <tr>
+              <td style="text-align:justify;">        
+                  Considerando que a <b>GDM</b>  e o <b>Licenciado</b> reconhecem que as tecnologias <i>Intacta 2 Xtend®</i> 
+                  e <i>Conkesta E3®</i> não foram lançadas comercialmente pelas empresas proprietárias 
+                  das respectivas tecnologias e que a multiplicação na safra de 2020/2021 deverá 
+                  seguir critérios específicos, inclusive relativos à gestão responsável da tecnologias,
+                  com os quais a <b>GDM</b> e o <b>Licenciado</b> concordaram em observar, de acordo com o Contrato 
+                  entre as empresas proprietárias das respectivas tecnologias, a <b>GDM</b> e o <b>Licenciado</b>.
+              </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">        
+                
+                Em atenção ao exposto, as Partes acordam a assinatura do presente <b>TERMO ADITIVO AO CONTRATO DE LICENÇA DE
+                USO DE CULTIVAR</b>  (doravante simplesmente <b>“Termo Aditivo”</b>), tendo os efeitos condicionados (i) 
+                ao efetivo lançamento comercial das tecnologias <i>Intacta 2 Xtend®</i> e <i>Conkesta E3®</i> <b>e</b> (ii) da 
+                celebração do Aditivo de  <b>LICENÇA DE USO DE CULTIVAR</b> entre <b>GDM</b> e o <b>Licenciado</b> para deliberar demais termos e 
+                condições de licenciamento comercial, na melhor forma de direito, mediante as cláusulas e condições, 
+                mutuamente aceitas e outorgadas, a saber: 
+            </td>
+         </tr>
+         <tr>
+             <td>&nbsp;</td>
+         </tr> 
+          <p>
+              {!contrato_clonado}
+          </p>
+         <apex:outputPanel rendered="{!!contrato_clonado}">
+             <tr>
+                 <td style="display:table-data; text-align:justify;" class="tamanioFuente">
+                     <b>OBJETO DO CONTRATO</b> – <i>Licença não exclusiva, onerosa e intransferível concedida pela <b>GDM</b> ao <b>Licenciado</b>, 
+                     em caráter precário, do direito de uso da(s) Cultivar(es) Licenciada(s), a depender do lançamento
+                     comercial da Intacta 2 Xtend®, Enlist E3® e Conkesta E3®.</i>
+                 </td>
+             </tr>
+             <br/>
+             <tr> 
+                 <td style="display:table-data; text-align:justify; padding-bottom: 12px;" class="tamanioFuente">
+                     <b>OBJETO DO ADITIVO</b> – Determinação da(s) Cultivar(es) Licenciada(s) para a safra {!Contrato__c.Safra__c}, 
+                     e das Condições de Comercialização previstas no Contrato.
+                 </td>
+             </tr>
+         </apex:outputPanel>
+         <apex:outputPanel rendered="{!contrato_clonado}">
+             <tr>
+                 <td style="display:table-data; text-align:justify; padding-bottom: 12px;" class="tamanioFuente">
+                     <b>OBJETO DO ADITIVO</b> – Retificação total do Termo Aditivo ao Contrato de Licença de Uso de Cultivar nº  {!Contrato__c.Contrato_ant__r.Name}. 
+                 </td>
+             </tr>
+             <tr>
+                 <td style="display:table-data; text-align:justify; padding-bottom: 12px;" class="tamanioFuente">
+                     As Partes, em comum acordo, resolvem consolidar o presente Termo Aditivo, revogando e tornando sem efeito, 
+                     todas as disposições do termo aditivo nº.{!Contrato__c.Contrato_ant__r.Name}
+                     (incluindo, mas não se limitando as tabelas dos itens 1 e 2),
+                     que passa a vigorar, em sua íntegra, com a nova redação abaixo:               
+                 </td>
+             </tr>
+         </apex:outputPanel>
+         <tr>
+            <td style="text-align:justify;">
+               <ol style="text-align:justify;">
+                   <li style="padding-top: 12px;">
+                       Para fins do disposto no Contrato, as Cultivar(es) Licenciada(s) para a safra {!Contrato__c.Safra__c}
+                       <span style="text-align:left;">e as respectivas condições para venda das Sementes Comerciais serão aquelas estabelecidas na tabela abaixo:</span>
+                       <br/><br/>
+                       <apex:pageBlock >
+                           <apex:pageBlockTable width="100%" value="{!itemsVolumen}" var="j" styleClass="gridtable" style="font-size:12px;">
+                               <apex:column width="12%" headerValue="Cultivar" value="{!j.Variedad__r.Nombre_de_Registro__c}" style="text-align:center" headerClass="centered" />
+                               <apex:column width="11%" headerValue="Volume Autorizado para Comercia - lização (Sc/40KG)" style="text-align:center" headerClass="centered">
+                                   <apex:outputField value="{!j.Volumen_Aut_Comercializacion__c}" />
+                               </apex:column>
+                               <apex:column width="11%" headerValue="Certificado de Proteção de Cultivares" value="{!j.Variedad__r.Certificado_de_Protecao__c}" style="text-align:center" headerClass="centered" />
+                               <apex:column width="11%" headerValue="Registro Nacional de Cultivares RNC" value="{!j.Variedad__r.Numero_de_registro__c}" style="text-align:center" headerClass="centered" />
+                               <apex:column width="11%" headerValue="Estado de Comercia - lização (Território)" value="{!j.Contrato_de_Multiplicacion__r.Estados_Comercializacao__c}" style="text-align:center" headerClass="centered" />
+                               <apex:column width="11%" headerValue="Referência" style="text-align:center" headerClass="centered">
+                                   <apex:outputField value="{!j.Precio__c}" />
+                                   {!if(j.Variedad__r.Unidade_Preco__c=='KG','kg/Sc(40kg)', if(j.Variedad__r.Unidade_Preco__c=='USD', 'USD', ''))}
+                               </apex:column>
+                               <apex:column width="11%" headerValue="Mercado" style="text-align:center" headerClass="centered">
+                                   {!j.Cotacao_de_soja__c} ({!if(j.Cotacao_de_soja__c=='SAFRAS & MERCADO',ref_SyM,if(j.Cotacao_de_soja__c=='COOPERATIVA', ref_Coop, ref_Dolar))})
+                               </apex:column>
+                               <apex:column width="11%" headerValue="Praça" value="{!j.Praca__c}" style="text-align:center" headerClass="centered" />
+                           </apex:pageBlockTable>
+                       </apex:pageBlock>
+                       <br/>
+                       <ol>
+                           <li>
+                               Relativo a coluna “Mercado”:
+                               <ol>
+                                   <li style="{!if(!TA_haySyM,'display:none','')};" class="noStyle">{!ref_SyM}&nbsp; os valores de referência são os valores de compra e venda de soja disponível, apresentados em informativo diário de soja desta empresa.
+                                   </li>
+                                   <li style="{!if(!TA_hayCoop,'display:none','')}; " class="noStyle">{!ref_Coop}&nbsp; os valores de referência indicados se referem ao valor de compra de soja balcão apresentados por esta.
+                                   </li>
+                                   <li style="{!if(!TA_hayDolar,'display:none','')};" class="noStyle">{!ref_Dolar}&nbsp; a cotação estabelecida é a média de compra e venda do dólar PTAX apresentado pelo Banco Central do Brasil.
+                                   </li>
+                               </ol>
+                           </li>
+                       </ol>
+                   </li>
+                   <li >
+                       No caso do efetivo lançamento comercial das tecnologias <i>Intacta 2 Xtend®</i> e <i>Conkesta E3®</i> não ocorra antes de 01/08/2021, 
+                       a <b>GDM</b> concederá de forma excepcional, um desconto de R$ 3,00 (três reais) por Quilo de semente de Cultivar(es) Licenciada(s)
+                       descritas acima, adquirida da <b>GDM</b> em 2020, mediante compensação sobre os valores apurados a título de 
+                       royalties a pagar pelo <b>Licenciado</b>, no adiantamento de 31 de agosto de 2021 ou no caso de valor remanescente,
+                       em 15 de dezembro de 2021, desde que o <b>Licenciado</b> formalize a desistência 
+                       de comercialização das sementes das Cultivar(es) Licenciada(s). Este benefício não cumulativo a qualquer 
+                       outra bonificação oferecida para as Cultivar(es)<span style="text-align: left;"> Licenciada(s) descritas acima.</span>
+                       <br/>    
+                   </li>      
+                   <li style="text-align: left;">            
+                       No caso do efetivo lançamento comercial das tecnologias, a <b>GDM</b> por liberalidade, 
+                       ajustará regras de Bonificação para Cultivar(es) Licenciada(s) conforme Anexo deste Termo Aditivo.
+                   
+                       
+                       <br/> 
+                   </li>
+                   <li>             
+                       Permanecem em vigor todas as demais condições e dispositivos estabelecidos no contrato original.
+                   </li>
+                </ol>
+            </td>
+         </tr>
+         <tr>
+            <td>                                             
+               Por estarem assim justas e contratadas, firmam o presente instrumento, em 02 (duas) vias de igual teor,
+                juntamente com 2 (duas) testemunhas abaixo arroladas.                        
+            </td>
+         </tr>
+      </table>
+      <table width="100%">
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+       </table>
+       <div style="page-break-inside: avoid;">
+         <table width="90%" columns="1" style="font-size:14px;font-family:BookmanOldStyle;text-align:right;">
+            <tr>
+                  <td>Londrina, <a style="color: white;">\signedDate\</a>.</td>
+            </tr>
+         </table>
+         <!--<div style="page-break-before:always;"/>-->
+         <table width="100%">
+            <tr>
+               <td>&nbsp;<br/><br/><br/><br/><br/></td>
+            </tr>
+         </table>
+         <table width="100%" border="0" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+            <tr>
+               <td>
+                  <p style="color: white;">\s1\</p>
+               </td>
+               <td>_______________________________</td>
+            </tr>
+         <tr style="vertical-align:baseline;">
+               <th align="left" width="50%"><b>GDM GENÉTICA DO BRASIL S. A.</b>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+               </th>
+               <th align="left" width="50%">
+                  <b> {!nombre}</b>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+               </th>
+            </tr>
+            <tr>
+               <td align="left" width="50%">&nbsp;                 
+               </td>
+               <td align="left" width="50%">&nbsp;                 
+               </td>
+            </tr>
+            <tr>
+               <td align="left" width="50%"><b>TESTEMUNHAS:</b><br/>
+                  <br/>
+                  <br/>
+                  &nbsp;&nbsp;1. _______________________________<br/>
+                  &nbsp;&nbsp;Nome:<br/>
+                  &nbsp;&nbsp;CPF:                 
+               </td>
+               <td align="left" width="50%">&nbsp;<br/>
+                  <br/>
+                  <br/>
+                  &nbsp;&nbsp;2. _______________________________<br/>
+                  &nbsp;&nbsp;Nome:<br/>
+                  &nbsp;&nbsp;CPF:                 
+               </td>
+            </tr>
+         </table>
+      </div>
+      <div style="page-break-before:always;"/>
+      <table width="100%" border="0" Align="center" columns="3">
+         <tr>
+            <td align="center" width="50%" >
+               <font face="verdana">
+                  <p style="margin-top : -20px;"><b><u>ANEXO</u></b></p>
+                   <p><b><u>DA POLÍTICA DE BONIFICAÇÃO</u></b></p>
+               </font>
+             </td>
+          </tr>
+       </table>
+       <table width="100%" Align="center" columns="1" style="" class="tamanioFuente">
+           <tr>
+               <td style="text-align:justify;" class="tamanioFuente">
+                   Considerando que a <b>GDM</b> poderá conceder uma bonificação ao <b>Licenciado</b>, desde que o <b>Licenciado</b> esteja em pleno e
+                   integral cumprimento de todos os termos do Contrato e Termo Aditivo,
+                   incluindo, mas não se limitando, a regras de pagamento dos royalties, volume autorizado, 
+                   Estado de comercialização e objetivos da presente política de bonificação.
+               </td>
+               <br/>
+               <td style="text-align:justify;" class="tamanioFuente">
+                   Considerando que a <b>GDM</b> e o <b>Licenciado</b> reconhecem que as tecnologias <i>Intacta 2 Xtend®</i>, 
+                   <i>Enlist E3®</i> e <i>Conkesta E3®</i> não foram lançadas comercialmente pelas empresas proprietárias
+                   das respectivas tecnologias e que a multiplicação na safra de 2020/2021 deverá seguir 
+                   critérios específicos, inclusive relativos à gestão responsável da tecnologias, com os 
+                   quais a <b>GDM</b> e o <b>Licenciado</b> concordaram em observar, de acordo com o Contrato entre as empresas 
+                   proprietárias das respectivas tecnologias, a <b>GDM</b> e o <b>Licenciado</b>.
+               </td>
+               <br/>
+               <td style="text-align:justify;" class="tamanioFuente">
+                   As Partes ajustam que, condicionado (i) efetivo lançamento comercial das tecnologias <i>Intacta 2 Xtend®</i> 
+                   e <i>Conkesta E3®</i> <b>e</b> (ii) da celebração do Aditivo de <b>LICENÇA DE USO DE CULTIVAR</b> entre <b>GDM</b> e o <b>Licenciado</b>
+                   para deliberar demais termos e condições de licenciamento comercial, o <b>Licenciado</b> fará jus ao desconto
+                   de até 3 kg/sc (três quilograma por saca de 40kg) relativo a <u>“Bonificação 1</u>: Cumprimento de Informações e 
+                   Relatórios”; <u>“Bonificação 3</u>: Volume total comercializado” e <u>“Bonificação 4</u>: Ações Comerciais em Conjunto” 
+                   da Política de Bonificação, independente do cumprimento dos objetivos. Esse volume será descontado do total
+                   de quilograma devido à <b>GDM</b>, em função das vendas realizadas.
+               </td>
+               <br/>
+               <td style="text-align:justify;" class="tamanioFuente">
+                   Ainda, no caso do <b>Licenciado</b> cumprir as condições deste e dos demais Termo Aditivos, o <b>Licenciado</b> 
+                   fará jus a um desconto adicional de até 2 kg/sc (dois quilogramas por saca de 40kg) por Cultivar 
+                   Licenciada, sendo o valor será definido conforme resultado da <u>“Bonificação 2</u>: Desenvolvimento de 
+                   mercado e geração de demanda” dos demais Termos Aditivos assinados pelo <b>Licenciado</b>.
+               </td>
+           </tr>
+       </table>
+   </table>
+</apex:page>

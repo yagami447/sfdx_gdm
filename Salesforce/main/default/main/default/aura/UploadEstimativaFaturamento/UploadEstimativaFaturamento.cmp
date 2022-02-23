@@ -1,0 +1,84 @@
+<aura:component controller="CSVCreator" implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <aura:attribute name="csvObject" type="CSVObject"/>
+	<aura:attribute name="csvString" type="String"/>
+    <aura:attribute name="safra" type="String"/>
+    <aura:attribute name="mes" type="String"/>
+    	
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="v.csvString" action="{!c.handleGetCSV}"/>
+    
+    
+    
+    <aura:handler event="aura:waiting" action="{!c.waiting}"></aura:handler>
+	<aura:handler event="aura:doneWaiting" action="{!c.doneWaiting}"></aura:handler>
+	    	
+	<div class="slds-card">
+		<div class="slds-card__header slds-grid">
+			<header class="slds-media slds-media_center slds-has-flexi-truncate">
+				<div class="slds-media__body">
+					<h2 class="slds-card__header-title">
+						<span>Estimativa de Faturamento</span>
+					</h2>
+				</div>                                               
+                                
+                <!--<button class="slds-button slds-button_success" onclick="{!c.importData}">Importar</button>-->
+				<!--<button class="slds-button slds-button_destructive" onclick="{!c.cleanData}">Clean Data</button>-->
+			</header>
+                                                
+		</div>                        
+                
+        <div class="slds-grid">
+        <div class="slds-card__body slds-card__body_inner" style="width:30%;">
+        <lightning:recordEditForm aura:id="recordViewForm"
+                                  recordTypeId="0120b000000gzD4AAI"
+                                  objectApiName="Opportunity">                    
+    			<lightning:messages />
+                <div class="slds-grid">    			
+    				<div class="slds-col slds-size_1-of-2">
+                    	<lightning:inputField class="slds-button" fieldName="Safra__c" value="{!v.safra}" />   
+                	</div>
+                    <div class="slds-col slds-size_1-of-2">
+                    	 <lightning:inputField class="slds-button" fieldName="Mes__c" value="{!v.mes}" />    			
+                    </div> 
+                    
+                </div>
+			</lightning:recordEditForm>
+        </div>
+        <div class="slds-card__body slds-card__body_inner" style="width:30%;">
+            <br/><br/>
+            <div class="slds-col slds-size_1-of-1">                        
+               <button class="slds-button slds-button_success" onclick="{!c.importData}">Importar</button>                           
+            </div>
+        </div>
+        </div>
+        
+        <div class="slds-align--absolute-center">
+        	<ui:spinner aura:id="spinner" class="slds=hide"/>
+    	</div>
+        
+		<div class="slds-card__body slds-card__body_inner slds-scrollable_x" style="width:100%;">
+			<input type="file" class="file" aura:id="file" onchange="{!c.handleUploadFinished}"/>
+            <br/><br/>
+            <aura:if isTrue="{!not(empty(v.csvObject))}">
+				<table class="slds-table">
+					<thead>
+						<tr>
+							<aura:iteration items="{!v.csvObject.headers}" var="header">
+								<th>{!header.column_name}</th>
+							</aura:iteration>
+						</tr>
+					</thead>
+					<tbody id="table_body">
+						<aura:iteration items="{!v.csvObject.lines}" var="line">
+							<tr>
+								<aura:iteration items="{!line}" var="cell">
+									<td>{!cell}</td>
+								</aura:iteration>
+							</tr>
+						</aura:iteration>
+					</tbody>
+				</table>
+			</aura:if>
+		</div>
+	</div>	
+</aura:component>

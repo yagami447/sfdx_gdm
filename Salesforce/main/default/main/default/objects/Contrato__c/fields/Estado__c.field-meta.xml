@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado__c</fullName>
+    <externalId>false</externalId>
+    <label>Estado</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Edição</fullName>
+                <default>true</default>
+                <label>Edição</label>
+            </value>
+            <value>
+                <fullName>Pendente de Aprovação</fullName>
+                <default>false</default>
+                <label>Pendente de Aprovação</label>
+            </value>
+            <value>
+                <fullName>Aguardando Assinatura</fullName>
+                <default>false</default>
+                <label>Aguardando Assinatura</label>
+            </value>
+            <value>
+                <fullName>Pendente de Impressão</fullName>
+                <default>false</default>
+                <label>Pendente de Impressão</label>
+            </value>
+            <value>
+                <fullName>Pendente de Envio</fullName>
+                <default>false</default>
+                <label>Pendente de Envio</label>
+            </value>
+            <value>
+                <fullName>Pendente de Postagem</fullName>
+                <default>false</default>
+                <label>Pendente de Postagem</label>
+            </value>
+            <value>
+                <fullName>Aguarda Retorno</fullName>
+                <default>false</default>
+                <label>Aguarda Retorno</label>
+            </value>
+            <value>
+                <fullName>Chegou</fullName>
+                <default>false</default>
+                <label>Chegou</label>
+            </value>
+            <value>
+                <fullName>Inutilizado</fullName>
+                <default>false</default>
+                <label>Inutilizado</label>
+            </value>
+            <value>
+                <fullName>Anulado</fullName>
+                <default>false</default>
+                <label>Anulado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

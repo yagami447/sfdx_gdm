@@ -1,0 +1,138 @@
+<apex:page controller="AnticiposController" sidebar="false">
+    <script>
+        function switchMenu(obj,obj1,obj2) 
+        {
+            var el = document.getElementById(obj);                                       
+            if ( el.style.display != 'none' ) {
+            el.style.display = 'none';
+            }
+            else {
+            el.style.display = '';
+            }
+            var e2 = document.getElementById(obj1);                                       
+            if ( e2.style.display != 'none' ) {
+            e2.style.display = 'none';
+            }
+            else {
+            e2.style.display = '';
+            }
+            var e3 = document.getElementById(obj2);                                       
+            if ( e2.style.display != 'none' ) {
+            e3.style.display = 'none';
+            }
+            else {
+            e3.style.display = '';
+            }
+
+        }
+    </script>
+    <apex:sectionHeader title="Processar Antecipações" subtitle=""/>
+    <apex:pageMessages />    
+    <apex:form >
+        <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+            <apex:facet name="start" >
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                    &nbsp;
+                </div>
+                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                    <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                </div>
+            </apex:facet>
+        </apex:actionStatus> 
+        <apex:pageBlock >                        
+            <apex:pageBlockSection showHeader="false" columns="2" id="principal">
+                <apex:inputField value="{!opp.Safra__c}" id="safra" required="true"/>
+                <apex:inputField value="{!opp.Marca__c}" id="marca" required="true"/>
+                <apex:inputField value="{!opp.Region__c}" id="region" required="true"/>
+                <apex:outputText value=" " />                               
+                <apex:commandButton action="{!Buscar}" style="float:center;margin-left:300px;width:80px" value="Pesquisar" rerender="seccion_resultado,seccion_facturar" status="displayImg" oncomplete="MostrarMsj('{!Mensaje}')"></apex:commandButton>
+                <apex:actionStatus startText="Consultando..." id="status"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+                                     
+        <apex:pageBlock >                               
+            <apex:pageBlockSection columns="1" title="Resultado" id="seccion_resultado">
+            <apex:Messages />
+            <apex:pageBlock >
+               <apex:commandButton action="{!selectAll}" style="width:110px" value="Selecionar todos" rerender="resultado"></apex:commandButton> 
+               <apex:commandButton action="{!quitarSeleccion}" style="width:120px" value="Quitar todos" rerender="resultado"></apex:commandButton> 
+               <apex:commandButton action="{!CrearPedidos}" style="float:right;margin-right:16px;width:150px;background:black;color:white" value="Processar Antecipações" status="displayImg" oncomplete="MostrarMsj('{!Mensaje}')" rerender="seccion_resultado,seccion_facturar,principal"></apex:commandButton>
+            <script>                                             
+               function MostrarMsj(msj){
+                   if (msj != 'OK' && msj != '') alert (msj);
+               }
+            </script>        
+            </apex:pageBlock>                               
+            <apex:pageblocktable value="{!listaAnticipos}"  var="oppl" id="resultado">
+            <apex:column >
+                   <apex:facet name="header">                                        
+                         Itens                                                                               
+                    </apex:facet>
+                    <apex:outputpanel id="plusimage">
+                          <apex:image url="{!$Resource.Plus_Image}" onclick="switchMenu('{!$Component.inlinetablesec}','{!$Component.minusimage}','{!$Component.plusimage}')" title="Mostrar Items"/> 
+                    </apex:outputpanel>
+                    <apex:outputpanel id="minusimage" style="display:none;">
+                          <apex:image url="{!$Resource.Minus_Image}" onclick="switchMenu('{!$Component.inlinetablesec}','{!$Component.plusimage}','{!$Component.minusimage}')" title="Ocultar Items"/>
+                    </apex:outputpanel>
+                    <apex:outputpanel id="inlinetablesec" style="display:none;">
+                                                <apex:variable value="{!0}" var="rowNum"/>
+                                                <apex:repeat var="count" value="{!oppl.cab.AccountId}">
+                                                    <apex:variable var="rowNum" value="{!rowNum+1}"/>
+                                                </apex:repeat>
+                            <apex:outputText rendered="{!rowNum=0}">  No Items  </apex:outputText>
+                        <apex:pageblocktable value="{!oppl.items}" var="tm" rendered="{!rowNum>0}">
+                             <apex:column headerValue="Registro Cultivar">
+                                   <apex:outputfield value="{!tm.MATNR__c}"/>
+                             </apex:column>                            
+                             <apex:column headerValue="Volume Aut. Comercialização">
+                                   <apex:outputfield value="{!tm.Quantity}"/>
+                                   <apex:facet name="footer"><apex:outputField value="{!oppl.cab.Quantidade_Total__c}"/></apex:facet>
+                             </apex:column>  
+                             <apex:column headerValue="% Volume">
+                                 <apex:outputfield value="{!tm.WERKS__c}"/>
+                             </apex:column>            
+                             <apex:column headerValue="Quantidade">
+                                 <apex:outputfield value="{!tm.Quantidade__c}"/>
+                             </apex:column>                           
+                             <apex:column headerValue="Praça">
+                                   <apex:outputfield value="{!tm.AUFNR__c}"/>
+                             </apex:column>
+                             <apex:column headerValue="Preço">
+                                   <apex:outputfield value="{!tm.UnitPrice}"/>
+                             </apex:column>                                                                                 
+                             <apex:column headerValue="Cotação">
+                                   <apex:outputfield value="{!tm.Tipo_de_cambio__c}"/>
+                             </apex:column>
+                             <apex:column headerValue="VL Liquido">
+                                   <apex:outputfield value="{!tm.TotalPrice}"/>
+                             </apex:column>
+                        </apex:pageblocktable>
+                   </apex:outputpanel>     
+            </apex:column>  
+            
+            <apex:column headervalue="Sel.">
+                    <apex:inputCheckbox value="{!oppl.selected}"/>
+            </apex:column>
+            <apex:column headerValue="Nome da conta">
+                   <apex:OutputLink value="../{!oppl.cab.AccountId}"> <apex:outputField value="{!oppl.cab.Despachante__c}"/></apex:outputLink> 
+            </apex:column>
+            <!--<apex:column headerValue="Volume Aut. Comercialização">
+                   <apex:outputField value="{!oppl.cab.Quantidade_Total__c}"/>
+            </apex:column>-->
+            <apex:column headerValue="% Volume">
+                   <apex:outputField value="{!oppl.cab.CNPJ_CPF_Anexo__c}"/>
+            </apex:column>            
+            <apex:column headerValue="Quantidade">
+                   <apex:outputField value="{!oppl.cab.Cotizacion__c}"/>
+            </apex:column>            
+            <apex:column headerValue="VL Liquido">
+                   <apex:outputField value="{!oppl.cab.Amount}"/>                   
+            </apex:column>            
+        </apex:pageblocktable>
+  
+        </apex:pageBlockSection>                        
+        </apex:pageBlock>
+                
+    </apex:form>
+
+</apex:page>

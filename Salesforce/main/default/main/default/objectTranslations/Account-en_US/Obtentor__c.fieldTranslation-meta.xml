@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo utilizado sólo por el administrador. Todas las Sociedades que están en los productos deben tener la cuenta marcada con Obtentor = true --></help>
+    <label><!-- Obtentor --></label>
+    <name>Obtentor__c</name>
+</CustomFieldTranslation>

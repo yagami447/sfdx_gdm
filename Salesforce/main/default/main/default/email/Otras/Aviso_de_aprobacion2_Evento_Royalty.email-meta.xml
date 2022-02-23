@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aviso_de_aprobacion2_Evento Royalty</name>
+    <style>none</style>
+    <subject>{!IF(Evento_Royalty__c.Email_aprobacion__c,&quot;Disponível para aprovação Evento de royalty&quot;,&quot;Notificação de Rejeição de Evento de Royalty&quot;)}</subject>
+    <textOnly>h</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

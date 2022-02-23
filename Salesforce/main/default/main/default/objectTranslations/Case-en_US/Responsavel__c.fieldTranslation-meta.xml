@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Asignado en base al responsable de la cuenta para cada marca --></help>
+    <label><!-- Responsável --></label>
+    <name>Responsavel__c</name>
+</CustomFieldTranslation>

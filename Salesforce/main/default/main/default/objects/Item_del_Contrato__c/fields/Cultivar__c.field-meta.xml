@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cultivar__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Cultivar por el/los que se confecciona el contrato</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cultivar por el/los que se confecciona el contrato</inlineHelpText>
+    <label>Cultivar</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Items del Contrato</relationshipLabel>
+    <relationshipName>Items_del_Contrato</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

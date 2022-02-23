@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactivar</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Inactivar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var rt = sforce.connection.query(&quot;SELECT Id FROM RecordType WHERE Name = &apos;Inactivo&apos; AND SobjectType = &apos;Contact&apos; limit 1&quot;); 
+
+records = rt.getArray(&quot;records&quot;); 
+rt_cont = records[0].Id.toString(); 
+
+var contObj = new sforce.SObject(&quot;Contact&quot;); 
+contObj.Id = &quot;{!Contact.Id}&quot;; 
+contObj.TipoReg_Anterior__c = &quot;{!Contact.RecordTypeId}&quot;;
+contObj.Propietario_Anterior__c = &quot;00540000002nK10&quot;; 
+contObj.RecordTypeId = &quot;01240000000MDAE&quot;; 
+contObj.OwnerId = &quot;00540000002nK10&quot;; ///PRODUCTIVO
+var resultado = sforce.connection.update([contObj]); 
+
+if (resultado[0].success==&apos;false&apos;) { 
+alert(resultado[0].errors.message); 
+} else { 
+window.location.reload(true); 
+}</url>
+</WebLink>

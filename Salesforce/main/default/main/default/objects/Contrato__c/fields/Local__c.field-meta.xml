@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Local__c</fullName>
+    <description>Cidade da Cotação de Soja</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cidade da Cotação de Soja</inlineHelpText>
+    <label>Local</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campo Mourão/PR</fullName>
+                <default>false</default>
+                <label>Campo Mourão/PR</label>
+            </value>
+            <value>
+                <fullName>Não Me Toque/RS</fullName>
+                <default>false</default>
+                <label>Não Me Toque/RS</label>
+            </value>
+            <value>
+                <fullName>Rio Verde/GO</fullName>
+                <default>false</default>
+                <label>Rio Verde/GO</label>
+            </value>
+            <value>
+                <fullName>Campo Grande/MS</fullName>
+                <default>false</default>
+                <label>Campo Grande/MS</label>
+            </value>
+            <value>
+                <fullName>Chicago/CBOT</fullName>
+                <default>false</default>
+                <label>Chicago/CBOT</label>
+            </value>
+            <value>
+                <fullName>Passo Fundo/RS</fullName>
+                <default>false</default>
+                <label>Passo Fundo/RS</label>
+            </value>
+            <value>
+                <fullName>Londrina/PR</fullName>
+                <default>false</default>
+                <label>Londrina/PR</label>
+            </value>
+            <value>
+                <fullName>Palotina/PR</fullName>
+                <default>false</default>
+                <label>Palotina/PR</label>
+            </value>
+            <value>
+                <fullName>Rondonópolis/MT</fullName>
+                <default>false</default>
+                <label>Rondonópolis/MT</label>
+            </value>
+            <value>
+                <fullName>Barreiras/BA</fullName>
+                <default>false</default>
+                <label>Barreiras/BA</label>
+            </value>
+            <value>
+                <fullName>PTAX/BC</fullName>
+                <default>false</default>
+                <label>PTAX/BC</label>
+            </value>
+            <value>
+                <fullName>Assuncion/Paraguay</fullName>
+                <default>false</default>
+                <label>Assuncion/Paraguay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

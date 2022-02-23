@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email que se envia con la nueva clave al multiplicador</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Portal Multiplicadores Recuperar Clave</name>
+    <style>none</style>
+    <subject>Recuperar senha</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

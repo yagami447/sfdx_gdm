@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="data" type="object"  default=""/>     
+    <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+        <lightning:accordion activeSectionName="A" allowMultipleSectionsOpen="true">
+            <lightning:accordionSection name="A" label="Informações Complementares de Interesse do Contribuinte" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="12"  padding="around-small" class="custom-box">
+                        <ui:inputTextArea class="customDisabled"  label="Descrição"  value="{!v.data.infCpl}" rows="20"/>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

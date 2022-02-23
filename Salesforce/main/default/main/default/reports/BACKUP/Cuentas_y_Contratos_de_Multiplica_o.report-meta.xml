@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Monsanto_Autorizo__c</field>
+    </columns>
+    <columns>
+        <field>Account$Ativo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contrato_de_Multiplica_o__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contrato_de_Multiplica_o__r$Cultivar__c.Name</field>
+    </columns>
+    <columns>
+        <field>Account$Responsavel__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contrato_de_Multiplica_o__r$Chegou_na_Brasmax__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contrato_de_Multiplica_o__r$Tipo_de_Cota_o__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contrato_de_Multiplica_o__r$Cotacao_de_soja__c</field>
+    </columns>
+    <description>Cuentas con Contratos de Multiplicação</description>
+    <format>Tabular</format>
+    <name>Cuentas y Contratos de Multiplicação</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contratos_contratos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$Data_da_Autorizacion__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Variedad_Licenciada__c</fullName>
+    <externalId>false</externalId>
+    <label>Variedad Licenciada</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Licenciada__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AFS 110 RR</fullName>
+                <default>false</default>
+                <label>AFS 110 RR</label>
+            </value>
+            <value>
+                <fullName>FPS NETUNO RR</fullName>
+                <default>false</default>
+                <label>FPS NETUNO RR</label>
+            </value>
+            <value>
+                <fullName>FPS URANO RR</fullName>
+                <default>false</default>
+                <label>FPS URANO RR</label>
+            </value>
+            <value>
+                <fullName>ROOS CAMINO RR</fullName>
+                <default>false</default>
+                <label>ROOS CAMINO RR</label>
+            </value>
+            <value>
+                <fullName>ROOS AVANCE RR</fullName>
+                <default>false</default>
+                <label>ROOS AVANCE RR</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>AFS 110 RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FPS NETUNO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FPS URANO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>ROOS CAMINO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>ROOS AVANCE RR</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

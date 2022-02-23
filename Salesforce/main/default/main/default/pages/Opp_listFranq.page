@@ -1,0 +1,66 @@
+<apex:page Controller="Opp_tabListados" title="Venda da Basica" action="{!initBasica}">
+    <apex:sectionHeader title="Oportunidades" subtitle="Início" ></apex:sectionHeader>
+    <apex:pageBlock title="Pesquisa de oportunidades">
+        <apex:form >
+            <apex:outputLabel value="Critério:  "></apex:outputLabel>
+            <apex:inputText value="{!searchText}"></apex:inputText>
+            <apex:outputLabel value="Safra:  "></apex:outputLabel>
+            <apex:selectList value="{!Campania}" title="Indique la safra" size="1" style="width:100px; text-align: right" id="campania">
+                <apex:selectOption itemValue="(Nenhuma)" ></apex:selectOption>
+                <apex:selectOption itemValue="07/08" ></apex:selectOption>
+                <apex:selectOption itemValue="08/09" ></apex:selectOption>
+                <apex:selectOption itemValue="09/09" ></apex:selectOption>
+                <apex:selectOption itemValue="09/10" ></apex:selectOption>
+                <apex:selectOption itemValue="10/10" ></apex:selectOption>
+                <apex:selectOption itemValue="10/11" ></apex:selectOption>
+            </apex:selectList>&nbsp;
+            <apex:commandButton action="{!listar}" value="Pesquisar" id="searchBtn" rerender="acclist" status="status"/>&nbsp;
+            <apex:actionStatus startText="Consultando..." id="status"/>
+        </apex:form>
+    </apex:pageBlock>
+    <apex:outputPanel id="acclist">
+    <apex:pageBlock title="Oportunidades recentes">
+        <apex:pageBlockButtons location="top">
+        <apex:form >
+            <apex:commandButton rendered="{!NewButtonEnabled}" value="Nova oportunidade" action="{!NuevaBasica}"></apex:commandButton>
+        </apex:form>
+        </apex:pageBlockButtons>
+        <apex:form >
+            <apex:actionStatus startText="Consultando..." id="status2"/>
+            <div align="right" style="display:{!IF(NOT(ISNULL(result)),'block','none')}">
+                <font size="1pt">Página&nbsp;<apex:outputLabel value="{!PageNumber}"/>&nbsp;de&nbsp;<apex:outputLabel value="{!totalPageNumber}"/>&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                <apex:commandButton status="status2" value="<<" action="{!firstBtnClick}" disabled="{!firstButtonDisabled}" rerender="acclist"></apex:commandButton>
+                <apex:commandButton status="status2" value="Anterior" action="{!previousBtnClick}" disabled="{!previousButtonEnabled}" rerender="acclist"></apex:commandButton>
+                <apex:commandButton status="status2" value="Mais" action="{!nextBtnClick}" rerender="acclist" disabled="{!nextButtonDisabled}" ></apex:commandButton>
+                <apex:commandButton status="status2" value=">>" action="{!lastBtnClick}" disabled="{!lastButtonDisabled}" rerender="acclist"></apex:commandButton>
+            </div>
+            <apex:pageBlockTable value="{!result}" var="item" id="resultPanel">
+                <apex:column headerValue="Nome da oportunidade">
+                    <apex:outputLink value="../{!item.id}" id="elLink">
+                        <apex:outputText value="{!item.name}"/>
+                    </apex:outputLink>
+                </apex:column>
+<!--                <apex:column rendered="{!NOT(NewButtonEnabled)}" headervalue="Nome da oportunidade">
+                    <apex:OutputText value="{!item.name}" />
+                </apex:column>-->
+                <apex:column headerValue="Nome da conta">
+                    <apex:outputLink value="../{!item.Account.Id}" id="elLinkAcc">
+                        <apex:outputText value="{!item.Account.Name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Nome da Franqueado">
+                    <apex:outputLink value="../{!item.VB_Franqueado__c}" id="elLinkFran">
+                        <apex:outputText value="{!item.VB_Franqueado__r.Name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Data de fechamento">
+                    <apex:OutputText value="{!day(item.CloseDate)}/{!month(item.CloseDate)}/{!year(item.CloseDate)}"/>
+                </apex:column>
+<!--                <apex:column headerValue="Fase"><apex:OutputText value="{!item.StageName}"/></apex:column>
+                <apex:column headerValue="Safra"><apex:OutputText value="{!item.Safra__c}"/></apex:column>
+                <apex:column headerValue="Número"><apex:OutputText value="{!item.Numero_del__c}"/></apex:column>-->
+            </apex:pageBlockTable>
+        </apex:form>
+    </apex:pageBlock>
+    </apex:outputPanel>
+</apex:page>

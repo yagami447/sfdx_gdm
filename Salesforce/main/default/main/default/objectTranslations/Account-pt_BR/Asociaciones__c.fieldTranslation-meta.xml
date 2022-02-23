@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Associações --></label>
+    <name>Asociaciones__c</name>
+    <picklistValues>
+        <masterLabel>ABCSEM</masterLabel>
+        <translation><!-- ABCSEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABRASEM</masterLabel>
+        <translation><!-- ABRASEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABRASS</masterLabel>
+        <translation><!-- ABRASS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABRATES</masterLabel>
+        <translation><!-- ABRATES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGROSEM</masterLabel>
+        <translation><!-- AGROSEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APASEM</masterLabel>
+        <translation><!-- APASEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APASSUL</masterLabel>
+        <translation><!-- APASSUL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APPS</masterLabel>
+        <translation><!-- APPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APROSESC</masterLabel>
+        <translation><!-- APROSESC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APROSSUL</masterLabel>
+        <translation><!-- APROSSUL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APSEMG</masterLabel>
+        <translation><!-- APSEMG --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

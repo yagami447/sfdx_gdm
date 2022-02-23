@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Actualizar_Ob_Gen_Dem</fullName>
+        <field>BRMX_Desconto_Obj_Gen_Dem__c</field>
+        <formula>BR_Pontos_LxL__c + BR_Resultado_Palestra_e_Treinamentos__c + BR_Pontos_Emplacamentos__c</formula>
+        <name>Actualizar_Ob_Gen_Dem</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Ob_Gen_Dem_Estim</fullName>
+        <field>BRMX_Desconto_Obj_Gen_Dem_Estim__c</field>
+        <formula>BR_Pontos_LxL_Estim__c + BR_Resultado_Palestra_e_Trein_Estim__c + BR_Pontos_Emplacamentos_Estim__c</formula>
+        <name>Actualizar_Ob_Gen_Dem_Estim</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Ob_Rel_Gen_Dem_Copia</fullName>
+        <field>BRMX_Desconto_Obj_Rel_Gen_Dem_Copia__c</field>
+        <formula>BRMX_Desconto_Obj_Rel_Gen_Dem__c</formula>
+        <name>Actualizar_Ob_Rel_Gen_Dem_Copia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Ob_Rel_Gen_Dem_Estim_Copia</fullName>
+        <field>BRMX_Desconto_Obj_Rel_Gen_Dem_Est_Copia__c</field>
+        <formula>BRMX_Desconto_Obj_Rel_Gen_Dem_Estim__c</formula>
+        <name>Actualizar_Ob_Rel_Gen_Dem_Estim_Copia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Pontos_Obj_Gen_Dem_NEOG</fullName>
+        <field>NEOG_Pontos_Obj_Gen_Dem__c</field>
+        <formula>((NG_Palestras_Realizado__c + NG_Treinamentos_Realizado__c + NG_Participacao_dia_campo_realizado__c) * IF(NG_Categoria_resultante__c = &quot;STANDARD&quot;, 100, IF(NG_Categoria_resultante__c = &quot;PLUS&quot;, 500, 1000))) + IF(CONTAINS(Region_Comercial_Copia__c,&quot;REGION&quot;),
+(NG_LXL_Realizado_Plantado__c * IF(NG_Categoria_resultante__c = &quot;STANDARD&quot;, 0, IF(NG_Categoria_resultante__c = &quot;PLUS&quot;, 1500, 3000))),0) + (NG_LXL_Realizado_Colhido__c * IF(NG_Categoria_resultante__c = &quot;STANDARD&quot;, 300, IF(NG_Categoria_resultante__c = &quot;PLUS&quot;, 1500, 3000))) + (NG_Identifica_o_de_beiras_de_rodovia__c * IF(NG_Categoria_resultante__c = &quot;STANDARD&quot;, 200, IF(NG_Categoria_resultante__c = &quot;PLUS&quot;, 1000, 2000))) + (NG_Outdoor_Realizado__c * IF(NG_Categoria_resultante__c = &quot;STANDARD&quot;, 400, IF(NG_Categoria_resultante__c = &quot;PLUS&quot;, 2000, 4000)))</formula>
+        <name>Actualizar Pontos Obj Gen Dem NEOG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Pontos_Vendas_BRMX</fullName>
+        <field>BR_Pontos_volume_2__c</field>
+        <formula>IF(OR(Region_Comercial__c=&quot;REGION 1&quot;, Region_Comercial__c=&quot;REGION 2&quot;),
+
+IF(BR_SemComer_Safra_actual__c&gt;220000,16,IF(BR_SemComer_Safra_actual__c&gt;120000, 12, IF(BR_SemComer_Safra_actual__c &gt;70000, 6, IF(BR_SemComer_Safra_actual__c &gt;40000, 3, 0)))),
+
+IF(BR_SemComer_Safra_actual__c&gt;550000,18,IF(BR_SemComer_Safra_actual__c&gt;350000,16,IF(BR_SemComer_Safra_actual__c&gt;270000, 12, IF( BR_SemComer_Safra_actual__c &gt;200000, 6, IF( BR_SemComer_Safra_actual__c &gt;130000, 3, 0)))))
+
+)</formula>
+        <name>Actualizar Pontos Vendas BRMX</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Pontos_Vendas_BRMX_Estim</fullName>
+        <field>BR_Pontos_volume_Estim__c</field>
+        <formula>IF(OR(Region_Comercial__c=&quot;REGION 1&quot;, Region_Comercial__c=&quot;REGION 2&quot;),
+
+IF(BR_SemComer_Safra_actual_Estim__c&gt;220000,16,IF(BR_SemComer_Safra_actual_Estim__c&gt;120000, 12, IF(BR_SemComer_Safra_actual_Estim__c&gt;70000, 6, IF(BR_SemComer_Safra_actual_Estim__c&gt;40000, 3, 0)))),
+
+IF(BR_SemComer_Safra_actual_Estim__c&gt;550000,18,IF(BR_SemComer_Safra_actual_Estim__c&gt;350000,16,IF(BR_SemComer_Safra_actual_Estim__c&gt;270000, 12, IF( BR_SemComer_Safra_actual_Estim__c&gt;200000, 6, IF( BR_SemComer_Safra_actual_Estim__c&gt;130000, 3, 0)))))
+
+)</formula>
+        <name>Actualizar Pontos Vendas BRMX Estim</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Pontos_Vendas_NEOG</fullName>
+        <field>NG_Pontos_volume__c</field>
+        <formula>IF(OR(Region_Comercial__c=&quot;REGION 1&quot;, Region_Comercial__c=&quot;REGION 2&quot;),
+
+IF(NG_Soma_de_Sem_Comercializada__c&gt;30000,IF(NG_Categoria_resultante__c=&quot;PREMIUM&quot;, 1, IF(NG_Categoria_resultante__c=&quot;PLUS&quot;, 0.5, 0.25)),
+IF(NG_Soma_de_Sem_Comercializada__c&gt;10000,IF(NG_Categoria_resultante__c=&quot;PREMIUM&quot;, 0.5, IF(NG_Categoria_resultante__c=&quot;PLUS&quot;, 0.25,0)),0)),
+
+ 
+IF(NG_Soma_de_Sem_Comercializada__c&gt;60000,IF(NG_Categoria_resultante__c=&quot;PREMIUM&quot;, 1, IF(NG_Categoria_resultante__c=&quot;PLUS&quot;, 0.5, 0.25)),
+IF(NG_Soma_de_Sem_Comercializada__c&gt;30000,IF(NG_Categoria_resultante__c=&quot;PREMIUM&quot;, 0.5, IF(NG_Categoria_resultante__c=&quot;PLUS&quot;, 0.25,0)),0))
+
+)</formula>
+        <name>Actualizar Pontos Vendas NEOG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Pontos_Vendas_Superior_NEOG</fullName>
+        <field>NG_Pontos_volume_superior__c</field>
+        <formula>IF(OR(Region_Comercial__c=&quot;REGION 1&quot;, Region_Comercial__c=&quot;REGION 2&quot;),
+
+IF(NG_Soma_de_Sem_Comercializada__c&gt;45000, 1, 0),
+IF(NG_Soma_de_Sem_Comercializada__c&gt;75000, 1, 0)
+)</formula>
+        <name>Actualizar Pontos Vendas Superior NEOG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Region_Comercial_Copia</fullName>
+        <description>Actualización del campo valor de Region_Comercial__c en Region_Comercial_Copia__c para regla de colaboracion</description>
+        <field>Region_Comercial_Copia__c</field>
+        <formula>Region_Comercial__c</formula>
+        <name>Actualizar Region Comercial Copia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Actualizar Pontos Obj Gen Dem NEOG</fullName>
+        <actions>
+            <name>Actualizar_Pontos_Obj_Gen_Dem_NEOG</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Pontos Vendas BRMX</fullName>
+        <actions>
+            <name>Actualizar_Pontos_Vendas_BRMX</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Pontos Vendas BRMX Estim</fullName>
+        <actions>
+            <name>Actualizar_Pontos_Vendas_BRMX_Estim</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Pontos Vendas NEOG</fullName>
+        <actions>
+            <name>Actualizar_Pontos_Vendas_NEOG</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Pontos Vendas Superior NEOG</fullName>
+        <actions>
+            <name>Actualizar_Pontos_Vendas_Superior_NEOG</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Region Comercial Copia</fullName>
+        <actions>
+            <name>Actualizar_Region_Comercial_Copia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Se dispara una actualización de campo copian el valor de Región_Comercial__c en Región_Comercial_Copia__c regla de colaboracion</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar_Ob_Gen_Dem</fullName>
+        <actions>
+            <name>Actualizar_Ob_Gen_Dem</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar_Ob_Gen_Dem_Estim</fullName>
+        <actions>
+            <name>Actualizar_Ob_Gen_Dem_Estim</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar_Ob_Rel_Gen_Dem_Copia</fullName>
+        <actions>
+            <name>Actualizar_Ob_Rel_Gen_Dem_Copia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar_Ob_Rel_Gen_Dem_Estim_Copia</fullName>
+        <actions>
+            <name>Actualizar_Ob_Rel_Gen_Dem_Estim_Copia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CRM_Multiplicador__c.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

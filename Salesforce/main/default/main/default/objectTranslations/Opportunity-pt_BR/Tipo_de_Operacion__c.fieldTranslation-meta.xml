@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Operação --></label>
+    <name>Tipo_de_Operacion__c</name>
+    <picklistValues>
+        <masterLabel>1-Pedido</masterLabel>
+        <translation><!-- 1-Pedido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10-Rateio de volume</masterLabel>
+        <translation><!-- 10-Rateio de volume --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2-Pedido Complementar</masterLabel>
+        <translation><!-- 2-Pedido Complementar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2-Plantio</masterLabel>
+        <translation><!-- 2-Plantio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3-Ajuste</masterLabel>
+        <translation><!-- 3-Ajuste --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3-Estimativa</masterLabel>
+        <translation><!-- 3-Estimativa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4-Cancelamento</masterLabel>
+        <translation><!-- 4-Cancelamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4-Colheita</masterLabel>
+        <translation><!-- 4-Colheita --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5-Beneficiamento</masterLabel>
+        <translation><!-- 5-Beneficiamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5-Realocação</masterLabel>
+        <translation><!-- 5-Realocação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6-Administração Excedente</masterLabel>
+        <translation><!-- 6-Administração Excedente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6-Armazenagem</masterLabel>
+        <translation><!-- 6-Armazenagem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7-Descarte</masterLabel>
+        <translation><!-- 7-Descarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8-Cessão</masterLabel>
+        <translation><!-- 8-Cessão --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9-Certificação</masterLabel>
+        <translation><!-- 9-Certificação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rebaixamento</masterLabel>
+        <translation><!-- Rebaixamento --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

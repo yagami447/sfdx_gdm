@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>OpportunityLineItem.Semente_uso_propio__c:SUM + OpportunityLineItem.Semente_comercializada__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Comercializada + Uso Próprio</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>COMERCIALIZAÇÃO</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>( OpportunityLineItem.Semente_comercializada__c:SUM + OpportunityLineItem.Semente_uso_propio__c:SUM )  / OpportunityLineItem.Semente_aprovada__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Comercializada / Aprovada</description>
+        <developerName>FORMULA2</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>EFICIÊNCIA</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>( OpportunityLineItem.Semente_comercializada__c:SUM + OpportunityLineItem.Semente_uso_propio__c:SUM )  / OpportunityLineItem.Semente_aprovada__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Comercializada / Aprovada</description>
+        <developerName>FORMULA4</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>S. COM. / S. APR.</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>100 * (OpportunityLineItem.Area__c:SUM - PREVGROUPVAL(OpportunityLineItem.Area__c:SUM, Opportunity.Safra__c)) / PREVGROUPVAL(OpportunityLineItem.Area__c:SUM, Opportunity.Safra__c) / 100</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Porcentaje de crescimento 08/09</description>
+        <developerName>FORMULA5</developerName>
+        <downGroupingContext>Opportunity.Safra__c</downGroupingContext>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Crescimento de Hectare</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(OpportunityLineItem.Area__c:SUM - PREVGROUPVAL(OpportunityLineItem.Area__c:SUM, Opportunity.Safra__c) )  / PREVGROUPVAL(OpportunityLineItem.Area__c:SUM, Opportunity.Safra__c)</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>(Ha 08/09 - Ha 07/08) / Ha. 07/08</description>
+        <developerName>FORMULA6</developerName>
+        <downGroupingContext>Opportunity.Safra__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Crescimento</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>OpportunityLineItem.Area__c</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Account.Region__c</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>Opportunity.Safra__c</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Huge</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Ha Autorizados por Região em cada Safra</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>PRODUCT_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>OpportunityLineItem.Area__c</field>
+    </columns>
+    <columns>
+        <field>OpportunityLineItem.Semente_beneficiada__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>OpportunityLineItem.Semente_aprovada__c</field>
+    </columns>
+    <columns>
+        <field>OpportunityLineItem.Semente_comercializada__c</field>
+    </columns>
+    <columns>
+        <field>OpportunityLineItem.Area_Plantada__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Opportunity.Produccion</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Safra__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>07/08,08/09</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Region__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Safra__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Eficiência por Região Histórica</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>OpportunityProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

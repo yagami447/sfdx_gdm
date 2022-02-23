@@ -1,0 +1,13 @@
+Estimado {!Contact.FirstName}:
+
+{!Organization.Name} utiliza Salesforce CRM para compartir información como candidatos, oportunidades y productos con sus socios. Es seguro, rápido y tan fácil como hacer clic.
+
+¿Está interesado en saber más acerca de cómo conectarse con {!Organization.Name}? No es necesario que sea usuario de Salesforce CRM. Cumplimente esta encuesta:
+{!Contact_PartnerSurveyUrl}
+
+Gracias por su respuesta. {!Organization.Name} aprecia su participación.
+
+Atentamente,
+
+
+{!User.FirstName} {!User.LastName}

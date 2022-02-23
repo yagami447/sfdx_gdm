@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Soma_de_Meta__c</fullName>
+    <description>Suma de todas las variedades informada en la nueva oportunidad “Objetivo Contrato Royalties” por Multiplicador/marca/safra</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Suma de todas las variedades informada en la nueva oportunidad “Objetivo Contrato Royalties” por Multiplicador/marca/safra</inlineHelpText>
+    <label>Volumen Aut. Comercializacion</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

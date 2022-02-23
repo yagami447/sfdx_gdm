@@ -1,0 +1,75 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+<!-- <center>
+     <p style="font-size:20px">ANEXO I</p>
+     <h2>AUTORIZAÇÃO</h2>
+  </center>
+  <center>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <p style="font-size:20px"><b>AUT MULT Nº {!Opportunity.Name}/2012</b></p>
+  </center>
+  <br/> <br/>
+  -->
+  <table width="100%" Align="center" columns="2">
+    <tr>
+         <td >
+             <IMG SRC="{!RutaLogo}" style="width: 50%; height: 50%"></img>              
+         </td> 
+    </tr>
+</table>
+  <br/><br/><br/><br/><br/><br/><br/>
+  
+<table Align="center">
+
+   <tr>
+     <td>
+ 
+  <p align="center" style="font-size:17px"><b>AUTORIZAÇÃO PARA EXPORTAÇÃO DE SEMENTE DE SOJA</b></p>
+  
+  <br/>
+ 
+  <p style="font-size:17px"><b>AUT EXP Nº {!Opportunity.Name}</b></p>
+  
+  <p align="justify">Por este instrumento particular de direito, a&nbsp;&nbsp;<b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, detentora dos direitos de exploração da marca  <b>{!MarcaImp}</b>,
+  inscrita no CNPJ nº 07.007.165/0001-34 e Inscrição Estadual nº 90519331-73, abaixo assinada por seu
+  representante legal, obtentora dos direitos legais sobre as cultivares relacionadas no quadro abaixo,
+  vem por meio desta&nbsp;&nbsp;<b>AUTORIZAR</b> a empresa&nbsp;&nbsp;<b>{!Opportunity.Account.Name}</b>, inscrita no CNPJ nº {!cnpj} a&nbsp;&nbsp;<b>EXPORTAR SEMENTES DE SOJA AO PARAGUAI</b>
+  não se opondo e de acordo com as quantidades abaixo relacionadas: </p>
+
+
+  <apex:pageBlock >
+  <apex:pageblockSection columns="6">
+     <!-- <apex:pageBlockTable value="{!Opportunity.OpportunityLineItems}" var="item" border="1"> -->
+     <apex:pageBlockTable value="{!ItemExportacion}" var="item" border="1" align="center">
+        <apex:column width="80px"><apex:facet name="header">Produto</apex:facet>{!item.PriceBookEntry.Product2.Especie__c}</apex:column>
+        <apex:column width="150px"><apex:facet name="header">Cultivar</apex:facet>{!item.PriceBookEntry.Product2.Description}</apex:column>
+        <apex:column width="80px"><apex:facet name="header">Categoria</apex:facet>{!item.TMP_Observaciones__c}</apex:column>
+        <apex:column width="80px"><apex:facet name="header">Quantidade (Sc)</apex:facet>{!item.Volume__c}</apex:column>
+        </apex:pageBlockTable> 
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+
+  <br/>
+  
+  <p align="justify">A semente será enviada para <b>{!Opportunity.Importador__r.Name}</b> localizada 
+  na {!Opportunity.Importador__r.ShippingStreet} - {!Opportunity.Importador__r.ShippingCity} - {!Opportunity.Importador__r.ShippingState} - {!Opportunity.Importador__r.ShippingCountry}, através do Despachante 
+  Aduaneiro <b>{!Opportunity.Despachante_Aduanero__r.Name}</b>, representado por&nbsp;&nbsp; {!Opportunity.Despachante_Aduanero__r.Representante__c}.</p>
+  
+  <p align="justify"> Cambé-PR, {!FechaCierre}. </p>
+  
+  <br/>
+  
+  Atenciosamente,
+  
+  <br/><br/><br/>
+     ___________________________________ <br/>
+         
+      GDM GENETICA DO BRASIL S.A.
+ </td> 
+</tr>
+</table>
+
+  
+    
+  
+  
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Local Origem --></label>
+    <name>Local_Origem__c</name>
+    <picklistValues>
+        <masterLabel>Fazenda Butiá</masterLabel>
+        <translation><!-- Fazenda Butiá --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Semente Agrorosso</masterLabel>
+        <translation><!-- Semente Agrorosso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sementes Talismã</masterLabel>
+        <translation><!-- Sementes Talismã --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sergio Roos</masterLabel>
+        <translation><!-- Sergio Roos --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

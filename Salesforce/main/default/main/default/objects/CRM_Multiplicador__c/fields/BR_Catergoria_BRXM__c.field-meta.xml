@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Catergoria_BRXM__c</fullName>
+    <description>Porcentaje que corresponde según Categoria</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(BR_Superou_Meta__c =true, BR_Pontos_LxL__c &gt; 0, BR_Pontos_dias_de_campo__c &gt; 0, BR_Resultado_Palestra_e_Treinamentos__c &gt; 0, BR_Total_de_pontos__c&gt;17), 
+IF(CONTAINS(Region_Comercial_Copia__c,&quot;REGION&quot;), 
+IF(BR_Total_de_pontos__c&gt;=31 , 2/13, 1/13) 
+, 
+IF(BR_Total_de_pontos__c&gt;=31 , 2/14, 1/14))
+,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Porcentaje que corresponde según Categoria</inlineHelpText>
+    <label>%Desconto BRMX</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mes_atual__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Mes__c) = CASE(MONTH(TODAY())-1, 1,&quot;Janeiro&quot;,2,&quot;Fevereiro&quot;,3,&quot;Março&quot;,4,&quot;Abril&quot;,5,&quot;Maio&quot;,6,&quot;Junho&quot;,7,&quot;Julho&quot;,8,&quot;Agosto&quot;,9,&quot;Setembro&quot;,10,&quot;Outubro&quot;,11,&quot;Novembro&quot;,12,&quot;Dezembro&quot;,&quot;&quot;)</formula>
+    <label>Mês atual</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

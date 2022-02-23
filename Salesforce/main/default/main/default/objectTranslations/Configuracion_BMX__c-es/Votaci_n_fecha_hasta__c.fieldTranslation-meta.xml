@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Fecha de cierre de la votación(según la vuelta, en Votacion Nro de Vuelta --></help>
+    <label><!-- Votación Sul fecha hasta --></label>
+    <name>Votaci_n_fecha_hasta__c</name>
+</CustomFieldTranslation>

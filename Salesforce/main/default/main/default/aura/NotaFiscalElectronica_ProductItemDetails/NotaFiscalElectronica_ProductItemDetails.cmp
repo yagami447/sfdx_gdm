@@ -1,0 +1,202 @@
+<aura:component >
+    <aura:attribute name="det" type="Object"  /> 
+    <aura:attribute name="isOpen" type="Boolean" default="false"/> 
+    
+    <aura:registerEvent name="changeAccount" type="c:NotaFiscalElectronica_FieldChange"/>
+    
+    <tr class="slds-hint-parent">
+        <td scope="row" width="5%">
+            <lightning:buttonIcon iconName="utility:add"  onclick="{! c.handleClick }" size="xx-small" alternativeText="Detalhe" />
+        </td>
+        <td data-label="Num." scope="row" width="6%" style="width:10%; ">
+            <div class="slds-truncate" title="Num">
+                <ui:outputNumber value="{!v.det.nItem}"/>
+            </div>
+        </td>
+        <td data-label="Descrição" width="40%">
+            <div class="slds-truncate" title="Descrição">
+                <ui:outputText  value="{!v.det.prod.xProd}"/>
+            </div>
+        </td>
+        <td data-label="Produto" width="20%">
+            <div class="slds-truncate" title="Produto">
+                <l_lookup:Lookup objectType="Product2" selectedRecordId="{!v.det.prod.productId}" queryCondition="IsActive = true" ></l_lookup:Lookup>
+            </div>
+        </td>	
+        <td data-label="Real qtd." scope="row" width="6%" style="width:10%; ">
+            
+            <div class="slds-truncate" title="Qtd"  width="15%">
+                <form class="slds-form--stacked"> 
+                    <lightning:input type="number" aura:id="quantityProduct" onchange="{!c.handleChange}" label="number" variant = "label-hidden" value="{!v.det.prod.quantityReal}"/>
+                </form>
+            </div>
+            
+        </td>
+        
+        <td data-label="Qtd.">
+            <div class="slds-truncate" title="Qtd"  width="15%">
+                <ui:outputNumber  value="{!v.det.prod.qCom}"/>
+            </div>
+        </td>
+        <td data-label="Unidade Comercial"  width="15%">
+            <div class="slds-truncate" title="Unidade Comercial">
+                <ui:outputNumber  value="{!v.det.prod.uCom}"/>
+            </div>
+        </td>
+        
+        <td data-label="Valor(R$)"  width="15%">
+            <div class="slds-truncate" title="Valor(R$)">
+                <ui:outputNumber   value="{!v.det.prod.vProd}"/>
+            </div>
+        </td>
+    </tr>
+    
+    <tr class="slds-hint-parent">
+        <aura:if isTrue="{!v.isOpen}">
+            <td data-label="Valor(R$)"  colspan="8" style="background-color:white;">
+                <lightning:card title="Detalhe do produto" >
+                    <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large">
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Validade" value="{!v.det.prod.validade}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="6" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Motivo invalidado" value="{!v.det.prod.motivoInvalido}"></lightning:input>
+                        </lightning:layoutItem>                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código do produto" value="{!v.det.prod.cProd}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código NCM" value="{!v.det.prod.NCM}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código CEST" value="{!v.det.prod.CEST}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            
+                        </lightning:layoutItem>
+                        
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Indicador de Escala Relevante" value="{!v.det.prod.indEscala}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="6"  flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="CNPJ do Fabricante da Mercadoria" value=""></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código de Benefício Fiscal na UF" value=""></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código EX da TIPI" value="{!v.det.prod.EXTIPI}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="6" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="CFOP" value="{!v.det.prod.CFOP}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Outras Despesas Acessórias" value="{!v.det.prod.vOutro}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Valor do Desconto" value="{!v.det.prod.vDesc}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="6" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Valor Total do Frente" value="{!v.det.prod.vFrete}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="3" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Valor Total do Seguro" value="{!v.det.prod.vSeg}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        
+                        
+                        <lightning:layoutItem size="12" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:select class="customDisabled" label="Indicador de Composição do Valor Total da NF-e" value="{!v.det.prod.indTot}">
+                                <option value="0">0 - O valor do item (vProd) não compõe o valor total da NF-e (vProd)</option>
+                                <option value="1">1 - O valor do item (vProd) compõe o valor total da NF-e (vProd)</option>
+                            </lightning:select>
+                            <!--<lightning:input class="customDisabled"  label="Indicador de Composição do Valor Total da NF-e" value="{!v.det.prod.indTot}"></lightning:input>-->
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código EAN Comercial" value="{!v.det.prod.cEAN}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Unidade Comercial" value="{!v.det.prod.uCom}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Quantidade Comercial" value="{!v.det.prod.qCom}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Código EAN Tributável" value="{!v.det.prod.cEANTrib}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Unidade Tributável" value="{!v.det.prod.uTrib}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Quantidade Tributável" value="{!v.det.prod.qTrib}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input  class="customDisabled"  label="Valor unitário de comercialização" value="{!v.det.prod.vUnCom}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Valor unitário de tributação" value="{!v.det.prod.vUnTrib}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box"></lightning:layoutItem>
+                        
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Número do pedido de compra" value="{!v.det.prod.xPed}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Item do pedido de compra" value="{!v.det.prod.nItemPed}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Valor Aproximado dos Tributos" value=""></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="4" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Número da FCI" value="{!v.det.prod.nFCI}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                        
+                        <lightning:layoutItem size="12" flexibility="auto" padding="around-small" class="custom-box">
+                            <lightning:input class="customDisabled"  label="Descrição" value="{!v.det.infAdProd}"></lightning:input>
+                        </lightning:layoutItem>
+                        
+                    </lightning:layout>
+                </lightning:card>
+            </td>
+        </aura:if> 
+        
+    </tr>
+    
+</aura:component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>profile_filter</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Profile.Name = &apos;Comercial LE&apos;</errorConditionFormula>
+    <errorMessage>Este perfil não está de acordo com o perfil Comercial LE</errorMessage>
+</ValidationRule>

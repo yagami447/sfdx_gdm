@@ -1,0 +1,275 @@
+<apex:page id="SaldoSafraId" showheader="false" standardstylesheets="false" cache="false" controller="aSiteCreateRoyaltyEventController" action="{!validate}" doctype="html-5.0">
+    
+    <!-- Include Twitter Bootstrap and jQuery: -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+    <!-- Include the plugin's CSS and JS: -->
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="body">
+            <body class="nav-md footer_fixed">
+                <center>
+                    <br />
+                    <br />
+                    <apex:panelgrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1" style="margin:20px;width: 80%;">
+                        <apex:form id="profileForm">
+                            <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                                <apex:facet name="start" >
+                                    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                                        &nbsp;
+                                    </div>
+                                    <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                                        <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                                     </div>
+                                </apex:facet>
+                            </apex:actionStatus>    
+                            <div class="right_col" role="main" style="min-width:800px">
+                                <div class="x_panel">
+                                    <div class="x_content" style="background: rgba(240, 240, 240, 90); border: 1px solid gray; border-radius: 3px">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items_new" aria-labelledby="profile-tab" align="center">
+                                            <apex:pageblock >
+                                                
+                                                <table width="100%" align="center">
+                                                    <tr>
+                                                        <td width="15%">
+                                                            <apex:outputtext value="Saldo inicial: " style="font-size:16px"/>
+                                                        </td>
+                                                        <td width="15%" align="right" lang="en-150">
+                                                            <apex:outputField value="{!saldoActual.Saldo__c}" style="font-size:16px"/>
+                                                        </td>
+                                                        <td width="40%" />                                                   
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="15%">
+                                                            <b><apex:outputtext value="Saldo atual: " style="font-size:16px" /></b>
+                                                            
+                                                        </td>
+                                                        <td width="15%" align="right">
+                                                            <b><apex:outputField value="{!saldoActual.Saldo_Disponible__c}" style="font-size:16px"/></b>
+                                                        </td>
+                                                        <td width="40%" />
+                                                        <td width="30%">
+                                                            <apex:outputtext value="Safra: {!safraActual}" style="font-size:16px"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </apex:pageblock>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <apex:pageMessages />
+                                    <div class="x_content" style="background: rgba(250, 250, 250, 90); border: 1px solid gray; border-radius:3px">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items_new" aria-labelledby="profile-tab" align="center">
+                                            <apex:pageblock >
+                                                <center style="margin: 30px"><b><apex:outputText value="Nova Ação de Royalties" style="font-size:25px;"/></b></center>
+                                                <div class="x_title">
+                                                    <apex:panelGrid columns="6" id="theGrid1" width="100%">
+                                                        <apex:outputText value="Nome" style="font-size: 16px" />
+                                                        <apex:inputtext value="{!newEvent.Name}" style="padding: 5px; width: 70%; font-size: 16px" />
+                                                        <apex:outputText value="Data de criação" style="font-size: 16px" />
+                                                        <apex:inputField type="date" showDatePicker="false" value="{!newEvent.Fecha__c}" style="padding: 5px; width: 70%; font-size: 16px" />
+                                                        <!-- <apex:outputText value="Status" style="font-size: 16px"/>
+<apex:outputText value="{!evento.Estado__c}" style="padding: 5px; font-size: 16px"/> -->
+                                                        <apex:outputText value="Valor total" style="font-size: 16px"/>
+                                                        <apex:outputField id="value" value="{!newEvent.Valor__c}" style="padding: 5px; width: 70%; font-size: 16px"/>
+                                                    </apex:panelGrid>
+                                                    <br/>
+                                                    <apex:panelGrid columns="2" id="theGrid2" width="100%">
+                                                        <apex:outputText value="Comentarios" style="padding: 5px; font-size: 16px" />
+                                                        <apex:inputtext value="{!newEvent.Comentarios__c}" style="padding: 5px; width: 100%; font-size: 16px" />
+                                                    </apex:panelGrid>
+                                                </div>
+                                            </apex:pageblock>
+                                            <br/>
+                                            <center><apex:outputText value="Adicionar Item" style="font-size:25px"/></center><br/>
+                                            <apex:pageBlock id="ERNewItem">
+                                                <apex:pageBlockTable headerClass="headerStyle" value="{!newItem}" var="i" styleclass="table table-bordered table-condensed table-striped">
+                                                    <apex:column headerValue="Tipo" style="width:11%">
+                                                        <apex:selectList value="{!i.Tipo__c}" styleClass="form-control" size="1" style="width:100%">
+                                                            <apex:selectOptions value="{!optionTipo}"/>      
+                                                            <apex:actionSupport action="{!changeTipo}" event="onchange" status="displayImg" reRender="profileForm"></apex:actionSupport>                    
+                                                        </apex:selectList>                                                                                                                                                   
+                                                    </apex:column>
+                                                    <apex:column headerValue="Item" style="width:15%">
+                                                        <apex:selectList value="{!i.Item__c}" styleClass="form-control" size="1" style="width:100%">
+                                                            <apex:selectOptions value="{!optionItem}"/>                          
+                                                            <apex:actionSupport action="{!changeItem}" event="onchange" status="displayImg" reRender="profileForm"></apex:actionSupport>
+                                                        </apex:selectList>                                                                                                                                                   
+                                                    </apex:column>
+                                                    <apex:column headerValue="Comentário" style="width:22%">
+                                                        <apex:inputText styleClass="form-control" value="{!i.Comentario__c}" style="width:350px, aling: center"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Modelo" style="width:8%" rendered="{!newItem.Tipo__c == 'Brinde'}">
+                                                        <apex:inputField styleClass="form-control" value="{!i.Modelo__c}" style="width:60px, aling: center"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Tamanho" style="width:8%" rendered="{!newItem.Tipo__c == 'Brinde'}">
+                                                        <apex:inputField styleClass="form-control" value="{!i.Tamanio__c}" style="width:60px, aling: center"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Cultivar" style="width:18%" rendered="{!newItem.Tipo__c == 'Placa' || newItem.Tipo__c == 'Outdoor' || newItem.Tipo__c == 'Semente'}">
+                                                        <apex:selectList value="{!i.Variedad__c}" styleClass="form-control" size="1" style="width:100%">
+                                                            <apex:selectOptions value="{!optionCultivar}"/>                                                                                      
+                                                        </apex:selectList>                                                                                                                                                   
+                                                    </apex:column>
+                                                    <apex:column headerValue="Quantidade" style="width:4%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:inputText styleClass="form-control" value="{!i.Quantidade__c}" style="width:100px, aling: center"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="UF" style="width:8%" rendered="{!newItem.Tipo__c == 'Outdoor'}">
+                                                        <apex:selectList value="{!i.UF__c}" styleClass="form-control" size="1" style="width:100%">
+                                                            <apex:selectOptions value="{!optionUF}"/>                                                                                      
+                                                        </apex:selectList>                                                                                                                                                   
+                                                    </apex:column>
+                                                    <apex:column headerValue="Cidade" style="width:15%" rendered="{!newItem.Tipo__c == 'Outdoor'}">
+                                                        <apex:inputText styleClass="form-control" value="{!i.Cidade__c}" style="width:100px, aling: center"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Data" style="width:7%;" rendered="{!tipoAccion == 'Reembolso'}">
+                                                        <apex:inputField type="date" styleClass="form-control" showDatePicker="false" value="{!i.Data__c}" style="width:100%; aling: center"/> 
+                                                    </apex:column>
+                                                    <apex:column headerValue="Valor" style="width:10%">
+                                                        <apex:inputField styleClass="form-control" value="{!i.Valor__c}" style="width:100%; aling: center" rendered="{!tipoAccion == 'Reembolso'}"/>
+                                                        <apex:outputField styleClass="form-control" value="{!i.Valor_Unitario__c}" style="width:100%; aling: center" rendered="{!tipoAccion == 'Pedido'}"/>
+                                                    </apex:column>
+                                                    <apex:column style="width:10%">    
+                                                        <apex:commandLink styleclass="btn btn-round btn-success" action="{!agregarItem}" oncomplete="mostrarMsj();" reRender="profileForm,ERItems,value">
+                                                            <i class="fa fa-fw -square fa-plus-circle"></i>
+                                                            <span>&nbsp;&nbsp;</span>Adicionar<span>&nbsp;&nbsp;</span>
+                                                        </apex:commandLink>                                                                                                                                               
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                            <br/>
+                                            <apex:pageBlock id="ERItems">                                            
+                                                <center><apex:outputText value="Itens Adicionados" style="font-size:25px" rendered="{!item.size > 0 }"/></center><br/>
+                                                <apex:pageBlockTable rendered="{!item.size > 0 }" headerClass="headerStyle" value="{!item}" var="i" styleclass="table table-bordered table-condensed table-striped">                  
+                                                    <apex:column style="width:9%">
+                                                        <apex:facet name="header">Tipo</apex:facet>
+                                                        <apex:outputText styleClass="form-control" value="{!i.Tipo__c}" style="width:100%"/>    
+                                                        <apex:facet name="footer"/>                                                                                                                                                  
+                                                    </apex:column>
+                                                    <apex:column style="width:10%">
+                                                        <apex:facet name="header">Item</apex:facet>
+                                                        <apex:selectList value="{!i.Item__c}" styleClass="form-control" size="1" style="width:100%;pointer-events: none;" rendered="{!i.Id == null}">
+                                                            <apex:selectOptions value="{!optionItemAll}"/>                                                                                      
+                                                        </apex:selectList>      
+                                                        <apex:outputText styleClass="form-control" value="{!i.Item__c}" rendered="{!i.Id != null}" style="width:100%"/>                                                                                                               
+                                                        <apex:facet name="footer"/>                                                                                                                                                  
+                                                    </apex:column>   
+                                                    <apex:column headerValue="Comentário"  style="width:20%">
+                                                        <apex:outputText styleClass="form-control" value="{!i.Comentario__c}" style="width:100%"/>
+                                                    </apex:column>       
+                                                    <apex:column headerValue="Modelo"  style="width:1%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:outputText styleClass="form-control" value="{!i.Modelo__c}" style="width:100%"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Tamanho"  style="width:1%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:outputText styleClass="form-control" value="{!i.Tamanio__c}" style="width:100%"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Cultivar"  style="width:18%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:selectList value="{!i.Variedad__c}" styleClass="form-control" size="1" style="width:100%;pointer-events: none;" rendered="{!i.Id == null}">
+                                                            <apex:selectOptions value="{!optionCultivar}"/>                                                                                      
+                                                        </apex:selectList>   
+                                                        <apex:outputText styleClass="form-control" value="{!i.Variedad__r.Name}" rendered="{!i.Id != null}" style="width:100%"/>                                                                                                             
+                                                    </apex:column>
+                                                    <apex:column headerValue="Quantidade"  style="width:4%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:outputText styleClass="form-control" value="{!i.Quantidade__c}" style="width:100%"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="UF" style="width:8%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:selectList value="{!i.UF__c}" styleClass="form-control" size="1" style="width:100%;pointer-events: none;" rendered="{!i.Id == null}">
+                                                            <apex:selectOptions value="{!optionUF}"/>                                                                                      
+                                                        </apex:selectList>  
+                                                        <apex:outputText styleClass="form-control" value="{!i.UF__r.Name}" rendered="{!i.Id != null}" style="width:100%"/> 
+                                                    </apex:column>
+                                                    <apex:column headerValue="Cidade"  style="width:12%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:outputText styleClass="form-control" value="{!i.Cidade__c}" style="width:100%"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Data" style="width:7%" rendered="{!tipoAccion == 'Reembolso'}">                                                 
+                                                        <apex:outputText value="{0,date,dd'/'MM'/'yyyy}" styleClass="form-control" style="width:100%">
+                                                            <apex:param value="{!i.Data__c}" /> 
+                                                        </apex:outputText>
+                                                    </apex:column>     
+                                                    <apex:column style="width:10%" rendered="{!tipoAccion == 'Pedido'}">
+                                                        <apex:facet name="header">Valor Unitário</apex:facet>                                                        
+                                                        <apex:outputField styleClass="form-control" value="{!i.Valor_Unitario__c}" style="width:100%"/>    
+                                                    </apex:column>      
+                                                    <apex:column style="width:15%">
+                                                        <apex:facet name="header">Valor</apex:facet>                                                        
+                                                        <apex:outputField styleClass="form-control" value="{!i.Valor__c}" style="width:100%"/>    
+                                                        <apex:facet name="footer"/>                                                                                                                                                 
+                                                    </apex:column>                                                 
+                                                    <apex:column >    
+                                                        <apex:commandLink styleclass="btn btn-round btn-danger" action="{!eliminarItem}" reRender="ERItems,value">
+                                                            <i class="fa fa-fw -square fa-ban"></i>
+                                                            <apex:param value="{!i.Indice__c}" assignTo="{!linea}" name="toRemove" />
+                                                            <span>&nbsp;&nbsp;</span>Remover<span>&nbsp;&nbsp;</span>
+                                                        </apex:commandLink>                                                                                                                                               
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                            <br/>
+                                            <apex:pageblock >
+                                                
+                                                <div class="form-group top_search ">
+                                                    <div class="btn-group" data-toggle="buttons" style="width:100%">
+                                                        <center>
+                                                            <apex:commandbutton action="{!guardarEvento}" oncomplete="mostrarMsj();" style="padding:10px; margin:5px"
+                                                                                value="Salvar" styleclass="btn btn-round btn-success" reRender="profileForm,ERItems,value"/>
+                                                            <apex:commandbutton action="{!enviarParaAprobacion}" oncomplete="mostrarMsj();" style="padding:10px; margin:5px"
+                                                                                value="Enviar para aprovação" styleclass="btn btn-round btn-success" reRender="profileForm,ERItems,value"/>
+                                                            <apex:commandbutton action="{!goToSaldoSafra}" style="padding:10px; margin:5px"
+                                                                                value="Cancelar" styleclass="btn btn-round btn-danger" reRender="profileForm,ERItems,value"/>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </apex:pageblock>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top:15px">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <apex:actionFunction action="{!guardarEvento}" name="guardarEvento" />
+                            <apex:actionFunction action="{!enviarParaAprobacion}" name="enviarParaAprobacion" />
+                            <apex:actionFunction action="{!goToSaldoSafra}" name="cancelarEvento" />
+                            <script type="text/javascript">
+                                function mostrarMsj(){
+                                    if ('{!mensaje}' != null && '{!mensaje}' != ''){
+                                        alert('{!SUBSTITUTE(mensaje, "|", "\n")}');                                                        
+                                    }
+                                }
+                            </script>
+                        </apex:form>
+                    </apex:panelgrid>
+                    <br />
+                </center>
+            </body>
+        </apex:define>
+    </apex:composition>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('select[id$-item-options]').multiselect({
+            includeSelectAllOption: true,
+            maxHeight: 200,
+            numberDisplayer: 0
+        });
+    });
+    
+    function removeItem(element) {
+        var strElement = element[0].innerText;
+        strElement = strElement.replace('x', '');
+        strElement = strElement.trim();
+        
+        $('select[id$-item-options]').multiselect('deselect', strElement, true);
+        $('select[id$-item-options]').multiselect('refresh');
+        
+        element.remove();
+    }
+    </script>
+</apex:page>

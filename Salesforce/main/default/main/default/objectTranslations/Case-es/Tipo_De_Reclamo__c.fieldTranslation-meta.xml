@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo De Reclamação --></label>
+    <name>Tipo_De_Reclamo__c</name>
+    <picklistValues>
+        <masterLabel>Performance-Sanidade</masterLabel>
+        <translation><!-- Performance-Sanidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preço</masterLabel>
+        <translation><!-- Preço --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualidade de Semente-Mistura</masterLabel>
+        <translation><!-- Qualidade de Semente-Mistura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualidade do Sementes</masterLabel>
+        <translation><!-- Qualidade do Sementes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detalle_Indemnizacion__c</fullName>
+    <description>En este campo se detalla la indemnización que le corresponde al Multiplicador</description>
+    <externalId>false</externalId>
+    <label>Detalhe Indenização</label>
+    <length>3000</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,55 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" 
+                controller="ordemDeCompraController"
+                access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:listView aura:id="listOrders"
+                        objectApiName="Order"
+                        listName="AllOrders"
+                        rows="5"
+                        showSearchBar="true"
+                        showActionBar="false"
+                        enableInlineEdit="true"
+                        showRowLevelActions="false"
+                        />
+    
+    <aura:attribute name="isLoading" type="Boolean"  default="false" />
+
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner alternativeText="Loading" size="medium" />
+    </aura:if> 
+    <section role="dialog" tabindex="-1" 
+             aria-labelledby="modal-heading-01" 
+             aria-modal="true" aria-describedby="modal-content-id-1" 
+             class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <!-- <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                            title="Close" onclick="{! c.showModal }">
+                    
+                        <lightning:icon iconName="action:close" alternativeText="Indicates approval"/>
+                        <span class="slds-assistive-text">Close</span>
+                    </button> -->
+                
+                <lightning:buttonIcon iconName="utility:close"
+                                      onclick="{! c.gotoURL }"
+                                      alternativeText="close"
+                                      variant="bare-inverse"
+                                      class="slds-modal__close"/>
+                
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Generar orden de compra</h2>
+                
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                
+                <lightning:input name="input1" aura:id="inputPurchaseOrder" required="true" label="Ingrese orden de compra" />
+                
+            </div>
+            <footer class="slds-modal__footer">
+                <!--<button class="slds-button slds-button_neutral" onclick="{! c.return }">Cancel</button>-->
+                <button class="slds-button slds-button_brand" onclick="{! c.consultaSapControllerJs}" >Generar</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</aura:component>

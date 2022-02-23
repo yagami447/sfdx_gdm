@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sem_Bruta_Anexo_II__c</fullName>
+    <description>IF(Opportunity.RecordTypeId = &apos;01240000000M7M0&apos;, Semente_bruta__c, IF(Opportunity.RecordTypeId = &apos;01240000000M7P4&apos;, Sem_Rebajada__c-Semente_bruta__c,0))</description>
+    <externalId>false</externalId>
+    <formula>IF(Opportunity.RecordTypeId = &apos;01240000000M7M0&apos;, Semente_bruta__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sem. Bruta Anexo II</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

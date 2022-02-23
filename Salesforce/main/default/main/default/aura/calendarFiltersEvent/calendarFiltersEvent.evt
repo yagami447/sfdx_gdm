@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Record Event for Calendar Filters (Audit Management)">
+    <aura:attribute name="filters" type="Object" />
+</aura:event>

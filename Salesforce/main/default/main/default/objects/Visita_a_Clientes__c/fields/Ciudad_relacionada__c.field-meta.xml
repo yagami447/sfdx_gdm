@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ciudad_relacionada__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Ciudad relacionada</label>
+    <referenceTo>Cidade__c</referenceTo>
+    <relationshipLabel>Relatórios e Observações</relationshipLabel>
+    <relationshipName>Relat_rios_e_Observa_es</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

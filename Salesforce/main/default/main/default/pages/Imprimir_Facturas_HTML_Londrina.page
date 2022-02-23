@@ -1,0 +1,134 @@
+<apex:page showHeader="false" sidebar="false" controller="Imprimir_Facturas_HTML">
+
+<html>
+<head>
+    <title>Imprimir Factura</title>
+</head>
+<body style="MARGIN: 0px;">
+<div style="WIDTH: 700px; FONT-FAMILY: Verdana;">
+    <div style="WIDTH: 700px; HEIGHT: 10px; background-color:white;"></div>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" style="WIDTH: 40px; HEIGHT: 130px;">
+                    <tr><td></td></tr>
+                </table> 
+            </td>
+            <td>
+                <table border="0" cellpadding="" cellspacing="0" style="font-size: 9pt; width:570px; height:100px;"> 
+                    <tr>
+                        <td style="padding-left:5; width: 5px"></td>
+                        <td colspan = "3">{!cuenta.Name}</td> 
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5; width: 5px"></td>
+                        <td colspan = "3">{!cuenta.BillingStreet}</td> 
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5; width:0px">&nbsp;</td> 
+                        <td style="width: 310px">&nbsp;</td>
+                        <td style="text-align: right; padding-right: 5;">&nbsp;</td>
+                        <td style="width: 170px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5; width:0px"></td> 
+                        <td style="width: 310px">{!cuenta.BillingCity}</td>
+                        <td style="text-align: right; padding-right: 5;"></td>
+                        <td style="width: 170px;">{!cuenta.BillingState}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5; width: 120px"> &nbsp;</td> 
+                        <td style="width: 310x">{!cuenta.CNPJ_CPF__c}</td>
+                        <td style="text-align: right; padding-right: 5;"> &nbsp;</td>
+                        <td style="width: 170px;">{!Fecha_Factura}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5; width: 120px"> &nbsp;</td> 
+                        <td style="width: 310x">&nbsp;</td>
+                        <td style="text-align: right; padding-right: 5;"> &nbsp;</td>
+                        <td style="width: 170px;">&nbsp;</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table> 
+ 
+    <table border="0" cellpadding="0" cellspacing="0" style="WIDTH: 100%; FONT-SIZE: 8pt;"> 
+    <tbody style="vertical-align: bottom;">
+        <tr>
+            <th scope="col" style="text-align: center; width: 80px; "></th> 
+            <th scope="col" style="text-align: center; width: 400px; "></th>
+            <th scope="col" style="text-align: center; width: 90px; "></th> 
+            <th scope="col" style="text-align: center; width: 100px; "></th>
+            <th scope="col" style="text-align: center; width: 60px; "></th>
+        </tr>
+        
+        <tr>
+            <td style="text-align: right;padding-right: 3px;"> &nbsp;</td>
+            <td style="text-align: left; padding-left: 3px;">Royalties referente a comercialização de</td>
+            <td style="text-align: right; padding-right: 3px;"> &nbsp;</td> 
+            <td style="text-align: right; padding-right: 3px;"> &nbsp;</td> 
+        </tr>
+ 
+        <!--data repeater inicio-->
+        <apex:repeat value="{!items}" var="item">
+        <tr>
+            <td style="text-align: right;padding-right: 3px;">{!item.quantity}</td>
+            <td style="text-align: left; padding-left: 3px;">Sc de semente de Soja da Cultivar {!item.pricebookentry.product2.description} </td>
+            <td style="text-align: right; padding-right: 3px;">
+            <apex:outputText value="{0,number,#.0000}"><apex:param value="{!(item.UnitPrice * opp.Tipo_de_cambio__c)}"/></apex:outputtext></td>
+            <td style="text-align: right; padding-right: 3px;">
+            <apex:outputText value="{0,number,#.00}"><apex:param value="{!(item.TotalPrice * opp.Tipo_de_cambio__c)}"/></apex:outputtext></td> 
+        </tr>
+        <!-- //data repeater fin -->        
+        </apex:repeat>
+        <tr>
+            <td style="text-align: right;padding-right: 3px;"> &nbsp;</td>
+            <td style="text-align: left; padding-left: 3px;">Na safra ({!opp.safra__c})</td>
+            <td style="text-align: right; padding-right: 3px;"> &nbsp;</td> 
+            <td style="text-align: right; padding-right: 3px;"> &nbsp;</td> 
+        </tr>
+ 
+        <!-- //data repeater inicio en blanco repito hasta 24 lineas -->
+        <apex:repeat value="{!lineasRelleno}" var="lineas">
+        <tr>
+            <td style="text-align: right;padding-right: 3px;"> &nbsp;</td>
+            <td style="text-align: left; padding-left: 3px;"> &nbsp;</td>
+            <td style="text-align: right; padding-right: 3px;"> &nbsp;</td> 
+            <td style="text-align: right; padding-right: 3px;"> &nbsp;</td> 
+        </tr>
+        </apex:repeat>        
+        <!-- //data repeater fin -->
+        <tr>
+            <td style="text-align: right;padding-right: 3px;"></td>
+            <td style="text-align: left; padding-left: 3px;">Nota Fiscal Nº &nbsp; <apex:outputText value="{0,number,#.##}"><apex:param value="{!opp.Numero_Legal__c}"/></apex:outputtext></td>
+            <td style="text-align: right; padding-right: 3px;"></td> 
+            <td style="text-align: right; padding-right: 3px;"></td> 
+        </tr>
+ 
+    </tbody>
+    </table>
+</div>
+<div style="HEIGHT: 40px">
+    <table border="0" cellpadding="0" cellspacing="0" style="FONT-SIZE: 10pt; WIDTH: 100%;">
+        <tbody>
+            <tr style="vertical-align: middle; HEIGHT: 40px; text-align: right;">
+                <td style="width: 90px;"></td>
+                <td style="width: 300px;"> &nbsp;</td> 
+                <td style="width: 125px;"> &nbsp;</td> 
+                <td style="width: 125px;">
+                <apex:outputText value="{0,number,#.00}"><apex:param value="{!(opp.Amount * opp.Tipo_de_cambio__c)}"/></apex:outputtext></td>
+                <td style="width: 60px; "></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- </div> -->
+</BODY></HTML> 
+
+<script>
+      setTimeout('window.print()',1000);             
+</script>
+
+</apex:page>

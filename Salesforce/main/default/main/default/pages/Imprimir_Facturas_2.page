@@ -1,0 +1,76 @@
+<apex:page controller="Imprimir_Facturas_Controller_2">
+    <apex:sectionHeader title="Imprimir Facturas" subtitle=""/>        
+    <apex:form >        
+        <apex:pageBlock >
+            <apex:pageBlockSection showHeader="false" id="principal" columns="3">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Filial"/>
+                    <apex:inputField value="{!opp.Sucursal__c}"/>
+                </apex:pageBlockSectionItem>                
+                <apex:commandButton action="{!Buscar}" style="float:center;margin-left:10px;width:80px" value="Pesquisar" rerender="seccion_resultado,seccion_facturar,imprimir" status="status"></apex:commandButton>
+                <apex:actionStatus startText="Consultando..." id="status"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Numero Legal Desde"/>
+                    <apex:inputField value="{!opp.Numero_Legal__c}" style="width:80px;"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Numero Legal Hasta"/>
+                    <apex:inputField value="{!opp2.Numero_Legal__c}" style="width:80px;"/>
+                </apex:pageBlockSectionItem>
+
+
+                
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+                        
+        <apex:pageBlock title="Factura a Imprimir" id="imprimir">   
+            <apex:pageMessages />                     
+            <apex:pageBlockSection showHeader="false" columns="2">
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel style="font-size:18px" value="Número Legal"/>
+                    <apex:outputText style="font-size:18px" value="{0,number,#.##}"><apex:param value="{!oppImprimir.Numero_Legal__c}"/></apex:outputtext>
+                </apex:pageBlockSectionItem>
+                <!--<apex:commandButton action="{!Imprimir}" style="float:center;margin-left:400px;width:80px" value="Buscar" rerender="seccion_resultado,resultado,imprimir" status="status"></apex:commandButton>-->
+                <!--<apex:outputLink value="{!UrlFor($SControl.Imprimir_opp,oppImprimir.Id)}" target="_blank" disabled="{!ImprimirDisabled}" style="font-size:18px">Imprimir</apex:outputLink>-->                       
+                <apex:commandButton action="{!Imprimir}" oncomplete="openWin('{!ImprimirUrl}')" disabled="{!ImprimirDisabled}" value="Imprimir" style="width:90px;height:25px;background:black;color:white;font-size:14px"></apex:commandButton>                       
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value=""/>
+                </apex:pageBlockSectionItem>
+                <apex:commandButton action="{!Siguiente}" rerender="seccion_resultado,seccion_facturar,imprimir" value="Siguiente" disabled="{!ImprimirDisabled}" style="width:90px;height:25px;font-size:14px" status="status2"></apex:commandButton>                       
+                <apex:outputText ></apex:outputText>
+                <apex:actionStatus startText="Procesando..." id="status2"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+                                                             
+        <apex:pageBlock >                               
+            <apex:pageBlockSection columns="1" title="Resultado" id="seccion_resultado">
+            <!--<apex:pageMessages />-->
+            <apex:pageBlock >
+            <script>
+               function openWin(url){                                  
+                   <!--window.open(url,'','fullscreen,scrollbars');    -->
+                   window.open(url,'','toolbar=1,status=1,menubar=1,resizable=1');
+                   return false;               
+               }
+               
+               function MostrarMsj(msj){
+                   if (msj != '') alert (msj);
+               }
+            </script>            
+            </apex:pageBlock>        
+            <!-- <apex:commandButton style="float:center;margin-left:400px;width:80px;background:black;color:white" value="Imprimir" oncomplete="MostrarMsj('{!Mensaje}')" action="{!Imprimir}"></apex:commandButton> -->                       
+            <apex:pageBlockTable value="{!listaOpp}" var="oppl" id="resultado">
+                <apex:column headerValue="Conta"><apex:OutputLink value="../{!oppl.Account.Id}"> <apex:outputField value="{!oppl.Account.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Fatura"><apex:OutputLink value="../{!oppl.Id}"> <apex:outputField value="{!oppl.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Status"><apex:OutputField value="{!oppl.Estado_Facturacion__c}"/></apex:column>
+                <apex:column headerValue="Safra"><apex:OutputField value="{!oppl.Safra__c}"/></apex:column>
+                <apex:column headerValue="Data"><apex:OutputField value="{!oppl.CloseDate}"/></apex:column>
+                <apex:column headerValue="Numero Legal"><apex:OutputText value="{0,number,#.##}"><apex:param value="{!oppl.Numero_Legal__c}"/></apex:outputtext></apex:column>
+                <!--<apex:column headerValue=""><apex:outputLink value="{!UrlFor($SControl.Imprimir_opp,oppl.Id)}" target="_blank">Imprimir</apex:outputLink></apex:column>-->
+            </apex:pageBlockTable>    
+            </apex:pageBlockSection>                        
+        </apex:pageBlock>
+                
+    </apex:form>
+
+</apex:page>

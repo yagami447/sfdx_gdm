@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_do_evento__c</fullName>
+    <externalId>false</externalId>
+    <label>Status do evento</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Muito ruim</fullName>
+                <default>false</default>
+                <label>Muito ruim</label>
+            </value>
+            <value>
+                <fullName>Ruim</fullName>
+                <default>false</default>
+                <label>Ruim</label>
+            </value>
+            <value>
+                <fullName>Regular</fullName>
+                <default>false</default>
+                <label>Regular</label>
+            </value>
+            <value>
+                <fullName>Bom</fullName>
+                <default>false</default>
+                <label>Bom</label>
+            </value>
+            <value>
+                <fullName>Muito bom</fullName>
+                <default>false</default>
+                <label>Muito bom</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

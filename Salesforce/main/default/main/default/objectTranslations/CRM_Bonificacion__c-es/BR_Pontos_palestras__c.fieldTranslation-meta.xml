@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pontos (palestras) excel Fórmula Desconto de Royalty --></help>
+    <label><!-- BPontos (palestras) --></label>
+    <name>BR_Pontos_palestras__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca__c</fullName>
+    <externalId>false</externalId>
+    <label>Marca</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DONMARIO</fullName>
+                <default>false</default>
+                <label>DONMARIO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX</fullName>
+                <default>false</default>
+                <label>BRASMAX</label>
+            </value>
+            <value>
+                <fullName>NEOGEN</fullName>
+                <default>false</default>
+                <label>NEOGEN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

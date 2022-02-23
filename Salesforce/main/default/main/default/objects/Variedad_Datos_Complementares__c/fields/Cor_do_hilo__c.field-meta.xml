@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cor_do_hilo__c</fullName>
+    <externalId>false</externalId>
+    <label>Cor do hilo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preta Imperfeita</fullName>
+                <default>false</default>
+                <label>Preta Imperfeita</label>
+            </value>
+            <value>
+                <fullName>Marrom Clara</fullName>
+                <default>false</default>
+                <label>Marrom Clara</label>
+            </value>
+            <value>
+                <fullName>Marrom Média</fullName>
+                <default>false</default>
+                <label>Marrom Média</label>
+            </value>
+            <value>
+                <fullName>Preta</fullName>
+                <default>false</default>
+                <label>Preta</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

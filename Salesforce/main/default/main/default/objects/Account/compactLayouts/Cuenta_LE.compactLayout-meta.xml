@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuenta_LE</fullName>
+    <fields>Name</fields>
+    <fields>Nome_fantasia__c</fields>
+    <fields>Region_Comercial__c</fields>
+    <fields>Responsavel__c</fields>
+    <fields>Reponsavel_DSEM__c</fields>
+    <fields>Responsavel_NEOGEN__c</fields>
+    <label>Cuenta LE</label>
+</CompactLayout>

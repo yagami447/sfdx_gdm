@@ -1,0 +1,180 @@
+<apex:page standardController="Account" extensions="opportunityFichaExtension" >  
+    
+    <!-- <apex:sectionHeader title="Oportunidades" subtitle="Oportunidades"/>-->
+    <!-- <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockButtons location="top">
+               <apex:commandButton value="Nova Oportunidade" action="{!crearOpp}"/>
+               <apex:commandButton value="Ir Para Lista" action="{!ListadoOpp}"/>               
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    
+    </apex:form>
+    -->
+    <apex:form >
+    <apex:variable var="classic" value="{!$User.UIThemeDisplayed == 'Theme2' || $User.UIThemeDisplayed == 'Theme3'}"/>
+    <apex:pageBlock >
+        <apex:outputPanel layout="block" style="overflow:auto; height:200px; margin: 0 2px">                                                   
+        <apex:pageBlockTable value="{!Oppz}" var="o" id="resultPanel">
+            <apex:column headerValue="Nome da Oportunidade">
+            <!-- 
+                <apex:facet name="header">
+                    <apex:commandLink value="Nombre Oportunidad" action="{!doSort}" rerender="resultPanel">
+                        <apex:param name="sortField" value="Name" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>
+                
+                <apex:outputLink value="../{!o.id}" id="elLink">
+                    <apex:outputText value="{!o.name}"/>
+                </apex:outputLink>-->
+                <apex:commandLink action="/{!o.Id}" target="_blank" value="{!o.Name}"/>
+            </apex:column>
+            <apex:column headerValue="Fase">
+            <!-- 
+                <apex:facet name="header">
+                    <apex:commandLink value="Fecha De Cierre" action="{!doSort}" rerender="resultPanel">
+                        <apex:param name="sortField" value="CloseDate" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>-->
+                <apex:outputField value="{!o.StageName}"/>
+            </apex:column>
+            <apex:column headerValue="Safra">
+            <!-- 
+                <apex:facet name="header">
+                    <apex:commandLink value="Safra" action="{!doSort}" rerender="resultPanel">
+                        <apex:param name="sortField" value="Safra__c" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>-->
+                <apex:outputField value="{!o.Safra__c}"/>
+            </apex:column>
+            <apex:column headerValue="Data de Fechamiento">
+            <!-- 
+                <apex:facet name="header">
+                    <apex:commandLink value="Fecha De Cierre" action="{!doSort}" rerender="resultPanel">
+                        <apex:param name="sortField" value="CloseDate" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>-->
+                <apex:outputField value="{!o.CloseDate}"/>
+            </apex:column>
+            <!--
+            <apex:column headerValue="Nombre Cuenta">
+             
+                <apex:facet name="header">
+                    <apex:commandLink value="Nombre Cuenta" action="{!doSort}" rerender="resultPanel">
+                        <apex:param name="sortField" value="AccountId" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>
+                <apex:outputLink value="../{!o.Account.Id}" id="elLinkAcc">
+                    <apex:outputText value="{!o.Account.Name}"/>
+                </apex:outputLink>
+            </apex:column>
+            -->
+            <apex:column headerValue="Tipo de Registro de Oportunidades">
+            <!-- 
+                <apex:facet name="header">
+                    <apex:commandLink value="Tipo de Registro" action="{!doSort}" rerender="resultPanel">
+                        <apex:param name="sortField" value="RecordTypeId" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>-->
+                <apex:outputField value="{!o.RecordType.Name}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:outputPanel>
+        <br/>
+        <apex:commandLink action="/006?rlid=RelatedOpportunityList&id={!id}" target="_parent" value="Ir a lista >>" rendered="{!classic}"/>    
+         <!-- <apex:commandLink action="/lightning/r/{!cuenta.id}/related/Opportunities/view" target="_parent" value="Ir a lista >>" rendered="{!!classic}"/> This only works only if the related list exist in related tab of this record -->
+         <apex:commandLink action="{!ListadoOpp}" target="_parent" value="Ir a lista>>" rendered="{!!classic}"/>
+    </apex:pageBlock>
+    </apex:form>
+    
+    </apex:page>
+    <!-- 
+    action="{!init}"
+    extensions="opportunityFichaExtension"
+    <apex:outputPanel layout="block" style="width:100%">
+    <apex:sectionHeader title="Oportnidades" subtitle="Oportunidades"/>
+        <apex:form >
+           <apex:pageBlock >
+            <apex:pageBlockSection showHeader="false" columns="3" id="principal">
+
+                     <apex:selectList value="{!filtroOpp.Name}" size="1" style="width:70px" required="true" onkeyup="refreshTotals()"><apex:selectOptions value="{!OptionVistas}"/></apex:selectList>
+                <apex:actionStatus startText="Pesquisando..." id="status"/>
+                <apex:inputField value="{!filtroOpp.Safra__c}" id="safra" style="width:100px;"/>
+                <apex:commandButton action="{!hacerBusqueda}" rerender="resultNV, principal" value="Pesquisar" status="status"></apex:commandButton>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>        
+    </apex:form>
+    <apex:form >
+    
+    <apex:pageBlock title="Opportnidades" id="resultNV">
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton value="Nueva Nota de Venta" action="{!crearNV}"/>        
+        </apex:pageBlockButtons>        
+            <apex:pageBlockTable value="{!notasVenta}" var="item" id="resultPanel">
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Número de NV" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="Name" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:outputLink value="../{!item.id}" id="elLink">
+                        <apex:outputText value="{!item.name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Nombre de la Cuenta" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="AccountId" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:outputLink value="../{!item.Account.Id}" id="elLinkAcc">
+                        <apex:outputText value="{!item.Account.Name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Distribuidor" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="ID_Distribuidor__c" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:outputField value="{!item.ID_Distribuidor__c}"/> 
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Campaña" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="Campana__c" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:outputField value="{!item.CAMPANA__c}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Etapa" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="StageName" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:outputField value="{!item.StageName}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Fecha de Cierre" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="CloseDate" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:OutputText value="{!day(item.CloseDate)}/{!month(item.CloseDate)}/{!year(item.CloseDate)}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:commandLink value="Tipo de Pedido" action="{!doSort}" rerender="resultPanel">
+                            <apex:param name="sortField" value="Tipo__c" assignTo="{!sortField}"/>
+                        </apex:commandLink>
+                    </apex:facet>
+                    <apex:outputField value="{!item.TIPO__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+    </apex:outputPanel>
+    
+</apex:page>
+    !-->

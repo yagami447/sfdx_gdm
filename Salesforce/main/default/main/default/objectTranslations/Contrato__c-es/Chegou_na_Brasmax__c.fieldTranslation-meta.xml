@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Click para informar que o contrato voltou para  assinado pelo multiplicador. --></help>
+    <label><!-- Chegou --></label>
+    <name>Chegou_na_Brasmax__c</name>
+</CustomFieldTranslation>

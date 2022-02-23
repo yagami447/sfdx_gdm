@@ -1,0 +1,10 @@
+{!Today} 
+
+As informações carregadas foram aprovadas. 
+
+Código de identificação {!Opportunity.Name}. 
+Conta {!Opportunity.Account}
+Tipo de declaração {!Opportunity.RecordType}
+
+Clique no link abaixo para acesso ao salesforce: 
+{!Opportunity.Link}

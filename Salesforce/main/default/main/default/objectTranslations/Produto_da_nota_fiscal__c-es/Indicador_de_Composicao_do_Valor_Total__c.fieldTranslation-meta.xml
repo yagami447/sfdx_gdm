@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Indicador de Composição do Valor Total --></label>
+    <name>Indicador_de_Composicao_do_Valor_Total__c</name>
+    <picklistValues>
+        <masterLabel>O valor do item (vProd) compõe o valor total da NF-e (vProd)</masterLabel>
+        <translation><!-- O valor do item (vProd) compõe o valor total da NF-e (vProd) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>O valor do item (vProd) não compõe o valor total da NF-e (vProd)</masterLabel>
+        <translation><!-- O valor do item (vProd) não compõe o valor total da NF-e (vProd) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

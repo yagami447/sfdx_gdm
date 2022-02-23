@@ -1,0 +1,32 @@
+<aura:component controller="AuditManagementController">
+
+    <ltng:require
+        styles="{!$Resource.fullcalendar + '/fullcalendar/fullcalendar.min.css'}"
+        scripts="{!join(',',
+                    $Resource.fullcalendar + '/fullcalendar/lib/jquery.min.js',
+                    $Resource.fullcalendar + '/fullcalendar/lib/jquery-ui.min.js',
+                    $Resource.fullcalendar + '/fullcalendar/lib/moment.min.js',
+                    $Resource.fullcalendar + '/fullcalendar/fullcalendar.min.js',
+                    $Resource.fullcalendar + '/fullcalendar/locale-all.js'
+                )}"
+        afterScriptsLoaded="{!c.afterScriptsLoaded}" />
+
+    <aura:registerEvent name="calEvent" type="c:calendarEvent" />
+
+    <aura:method name="updateEvent" action="{!c.updateEvent}">
+        <aura:attribute name="recordByEvent" type="Object" />
+    </aura:method>
+    <aura:method name="addFilters" action="{!c.addFilters}">
+        <aura:attribute name="filters" type="Object" />
+    </aura:method>
+
+    <aura:attribute name="events" type="Object[]" />
+    <aura:attribute name="auditorSelected" type="String" />
+    <aura:handler name="change" value="{!v.auditorSelected}" action="{!c.onChangeAuditor}" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner alternativeText="Loading" size="medium" variant="brand" />
+    </aura:if>
+    <div aura:id="calendar"></div>
+</aura:component>

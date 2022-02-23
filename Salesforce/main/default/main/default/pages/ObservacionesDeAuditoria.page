@@ -1,0 +1,164 @@
+<apex:page lightningStyleSheets="true" standardController="Plano_de_Auditoria__c" extensions="ObservacionesDeAuditoriaController"
+    sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+    </head>
+    <div class="SLDS" id="page">
+
+        <body>
+            <apex:form id="form">
+                <div class="slds-page-header slds-page-header_object-home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <div class="slds-grid">
+                        <div class="slds-col">
+                            <div class="slds-media slds-no-space slds-grow">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-goals">
+                                        <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#goal')}"></use>
+                                    </svg>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p class="slds-text-title--caps slds-line-height--reset">OBSERVAÇÕES do:</p>
+                                    <p class="slds-page-header__title slds-truncate" title="ALL">{!Plano_de_Auditoria__c.Name}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                            <apex:outputPanel >
+                                <apex:commandButton styleClass="slds-button slds-button--neutral slds-not-selected" value="Salvar" reRender="Variedades"
+                                    action="{!Save}" />
+                                <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!goToAuditar}" value="Cancelar"
+                                    immediate="true" html-formnovalidate="formnovalidate" />
+                                <!-- <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!goToCalendario}" value="Calendario"
+                                    immediate="true" html-formnovalidate="formnovalidate" /> -->
+                            </apex:outputPanel>
+                        </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-align-bottom">
+                            <p class="slds-text-body_large">OBSERVAÇÕES </p>
+                        </div>
+                    </div>
+                    <apex:outputPanel styleClass="fyi" id="mess">
+                        <apex:messages />
+                    </apex:outputpanel>
+                </div>
+                <apex:outputPanel >
+                    <tr>
+                        <td style="text-align:left;">Contato: </td>
+                        <apex:outputField value="{!crm.Multiplicador__c}" />
+                    </tr>
+                    <br/>
+                    <br/>
+                    <tr>
+                        <td style="text-align:left;">Possuem Sistema implantado na empresa ? Qual ?</td>
+                        <apex:inputField value="{!crm.Sistema_Implantado__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Possuem Cooperados ou Somente áreas próprias para multiplicação ?</td>
+                        <apex:inputField value="{!crm.Miembros_o_area_para_Multiplicar__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Para realizarem a
+                            <b>inscrição dos Campos de Produção de Sementes,</b> emitem
+                            <b>Notas Fiscais de Venda / ou Tranferência para Consumo</b> para os
+                            <b>Volumes que são destinados a Plantio (Uso Próprio)</b>, e que são informados na
+                            <b>Relação de Campos para Produção de Sementes</b> ?</td>
+                        <apex:inputField value="{!crm.Emiten_Facturas_de_Venta_Transferencia__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">O
+                            <b>Sistema</b> da empresa
+                            <b>separa os volumes destinados a Uso Próprio</b> dos volumes que são
+                            <b>comercializados ao produtor</b> ?:</td>
+                        <apex:inputField value="{!crm.Separa_los_volumenes__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Realizam
+                            <b>Compra e Venda</b> de Sementes de
+                            <b>Terceiros</b> ?</td>
+                        <apex:inputField value="{!crm.Compra_Vende_Semillas_de_Terceros__c}" />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">O
+                            <b>Sistema da empresa</b> consegue
+                            <b>separar</b> os
+                            <b>volumes de Produção Própria dos volumes adquiridos e vendidos de Terceiros</b> ?:</td>
+                        <apex:inputField value="{!crm.Separa_los_volumenes_2__c}" />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">O Saldo de
+                            <b>Descarte de Sementes Aprovadas e Reprovadas</b> que
+                            <b>NÃO</b> foram Comercializadas ou destinadas a Plantio (Uso Próprio) é mencionado na Nota Fiscal
+                            de Venda ( Envio à Indústria ) ?</td>
+                        <apex:inputField value="{!crm.Mencion_factura_de_venta__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Conforme
+                            <b>Cláusula 5.1</b>, parágrafo
+                            <b>"i"</b> e
+                            <b>"j"</b> do
+                            <b>Contrato de Licença de Uso de Cultivar</b> ao efetuar o descarte, obrigatoriamente deve especificar
+                            na Nota Fiscal de Venda a indústria os seguintes dados:
+                            <b>Nome da Cultivar, Categoria, Lotes e Quantidades</b>. Realizam a operação ?</td>
+                        <apex:inputField value="{!crm.Clausula_5_1__c}" />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Qual é a % de Quebra Técnica MÉDIA (da empresa) referente ao volume BRUTO de semente de soja que
+                            entra na UBS para o volume que é Beneficiado ?</td>
+                        <apex:inputField value="{!crm.Quebra__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Trabalha com
+                            <b>outros obtentores</b> ? Quais ? </td>
+                        <apex:inputField value="{!crm.Otros_criadores__c}" />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Qual foi a Participação (%) da BRASMAX /e ou DONMARIO na safra:</td>
+                        <apex:inputField value="{!crm.Participacion_en_la_cosecha__c}"
+                        />
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Porcentagem (%) das Vendas Totais RR </td>
+                        <apex:inputField value="{!crm.Ventas_Totales_RR__c}" />
+                        <td style="text-align:left;"> e INTACTA </td>
+                        <apex:inputField value="{!crm.Ventas_Totales_INTACTA__c}" />
+                        <td style="text-align:left;"> na safra </td>
+                        <apex:inputField value="{!crm.Safra__c}" />
+                    </tr>
+                </apex:outputPanel>
+            </apex:form>
+        </body>
+    </div>
+    <style type="text/css">
+        .custPopup {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 11px;
+            position: absolute;
+            width: 600px;
+            margin-left: -240px;
+            top: 100px;
+        }
+        .popupBackground {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+    </style>
+</apex:page>

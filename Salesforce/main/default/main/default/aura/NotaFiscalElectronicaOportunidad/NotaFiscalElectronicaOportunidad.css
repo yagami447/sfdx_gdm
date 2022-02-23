@@ -1,0 +1,12 @@
+.THIS .label-hidden > label {
+	display: none;
+}
+.THIS .MyModalContainer {
+    width: 30%;
+    max-width: 52.0625rem;
+    min-width: 14rem;
+}
+
+.THIS .button {
+    float: left;
+}

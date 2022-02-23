@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Si Monsanto autoriza a esta cuenta, seleccionar esta casilla. --></help>
+    <label><!-- Monsanto Autorizou? --></label>
+    <name>Monsanto_Autorizo__c</name>
+</CustomFieldTranslation>

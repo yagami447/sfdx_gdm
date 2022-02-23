@@ -1,0 +1,84 @@
+<apex:page standardController="Opportunity" extensions="opportunityExtension" lightningStylesheets="true" sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">    
+<head>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}"/>
+</head>
+<div class="SLDS">
+  <body>
+    <apex:form >    
+      <apex:outputPanel rendered="{!IF(recordTypeDevName == 'Reembalaje',false,true)}">
+             
+          <table class="slds-table slds-table--bordered slds-max-medium-table_stacked-horizontal">
+           
+            <thead>
+              <tr class="slds-text-title--caps">                    
+                <apex:repeat value="{!Fields}" var="f">
+                    <th scope="col">
+                        <div class="slds-truncate">{!f.label}</div>
+                    </th>
+                </apex:repeat>
+              </tr>
+            </thead>
+            <tbody>
+              <apex:repeat value="{!Items}" var="i">
+              <tr>
+                <apex:repeat value="{!Fields}" var="f">  
+                    <td data-label="{!f.label}">
+                      <div class="slds-truncate" title="{!i[f]}}">
+                        <apex:outputField value="{!i[f]}" />
+                      </div>
+                    </td>
+                </apex:repeat>
+              </tr>
+              </apex:repeat>
+            </tbody>
+          </table>
+        </apex:outputPanel>   
+          <!--Reembalaje -->
+        <apex:outputPanel rendered="{!IF(recordTypeDevName == 'Reembalaje',true,false)}">
+             
+          <table class="slds-table slds-table--bordered slds-max-medium-table_stacked-horizontal">
+           
+            <thead>
+              <tr class="slds-text-title--caps">                 
+               
+                    <th scope="col">
+                        <div class="slds-truncate">Nome Comercial</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate">Registro Cultivar</div>
+                  </th>
+                    <th scope="col">
+                      <div class="slds-truncate">Categoria</div>
+                  </th>
+                  
+               
+                <th scope="col">
+                  <div class="slds-truncate">Quantidade</div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate">Unidade</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate">Lote</div>
+          </th>
+              </tr>
+            </thead>
+            <tbody>
+              <apex:repeat value="{!Items}" var="i">
+              <tr>
+                <apex:repeat value="{!Fields}" var="f">  
+                    <td data-label="{!f.label}">
+                      <div class="slds-truncate" title="{!i[f]}}">
+                        <apex:outputField value="{!i[f]}" />
+                      </div>
+                    </td>
+                </apex:repeat>
+              </tr>
+              </apex:repeat>
+            </tbody>
+          </table>
+        </apex:outputPanel>  
+    </apex:form>
+  </body>
+</div>
+</apex:page>

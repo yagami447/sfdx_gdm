@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notificar</fullName>
+    <availability>online</availability>
+    <description>Envía mail notificando el estado actual de Producción de Basica</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Notificar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Opportunity.Id}&quot;;
+var regId = &quot;{!Opportunity.Macrorregion_de_Ventas__c}&quot;;
+var mar=&quot;{!Opportunity.Marca__c}&quot;;
+var pasa = true;
+var etapa = &quot;{!Opportunity.StageName}&quot;;
+var tipoOp = &quot;{!Opportunity.Tipo_de_Operacion__c}&quot;;
+
+
+if (etapa == &apos;PB-Aprobada&apos;){
+alert(&quot;Fase para gerar a Notificação deve ser PB-Pendiente.&quot;);
+pasa = false;
+}
+if(tipoOp == null || tipoOp == &apos;&apos;){
+alert(&quot;Você deve digitar um Tipo de Operação.&quot;);
+pasa = false;
+}
+if(pasa == true){ 
+pasa=confirm(&apos;Tem certeza de querer notificar?&apos;);
+}
+
+if(pasa == true){
+var result = sforce.apex.execute(&quot;Opp_Utils&quot;,&quot;notificacionProd&quot;, {oppId : id, regionId : regId, marca : mar});
+
+alert(result[0]);
+window.location.reload(true);
+}
+//if (result[1] == &apos;ok&apos;){
+
+//var oppObj = new sforce.SObject(&quot;Opportunity&quot;);
+//oppObj.Id = &quot;{!Opportunity.Id}&quot;;
+//oppObj.StageName = &apos;PB-Aprobada&apos;;
+//oppObj.Notificado__c = true;
+//var resultado = sforce.connection.update([oppObj]);
+
+//if (resultado[0].success==&apos;false&apos;) {
+//alert(resultado[0].errors.message);
+//} else {
+//window.location.reload(true);
+//}
+//}</url>
+</WebLink>

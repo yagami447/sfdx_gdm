@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vence_prox_10_dias__c</fullName>
+    <description>Pone un &quot;SI&quot; se vence dentro de los proximos 10 dias y &quot;NO&quot; si no vence</description>
+    <externalId>false</externalId>
+    <formula>IF( Fecha_Limite_Solucion__c  &lt;= DATE( YEAR(  TODAY()  ) , IF (DAY(  TODAY() ) +10&gt;30 , MONTH(  TODAY() ) +1, MONTH(  TODAY() )  ), IF (DAY(  TODAY() ) +10&gt;30, 30 - DAY(  TODAY() ) + 10, DAY(  TODAY() ) +10 )) ,  &quot;SI&quot;,  &quot;NO&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Pone un &quot;SI&quot; se vence dentro de los proximos 10 dias y &quot;NO&quot; si no vence</inlineHelpText>
+    <label>Vence prox 10 dias</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

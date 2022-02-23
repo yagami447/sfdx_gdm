@@ -1,0 +1,57 @@
+<template>
+    <lightning-card>
+        <!--Component Header-->
+        <h2 id="neogen-title-new-opportunity" slot="title" class="neogen-title">
+            <lightning-icon icon-name="action:goal" size="small"></lightning-icon>
+            &nbsp;&nbsp;&nbsp;
+            {label.createopportunity}
+        </h2>        
+        <!--Component Body-->
+        <div class="neogen-body ">
+
+            <lightning-layout multiple-rows>
+                <lightning-layout-item padding="around-small" size="12">
+                    <lightning-combobox
+                        name="region"
+                        label="Region"
+                        placeholder="Select region"
+                        options={regiones}
+                        value={value}
+                        onchange={handleChangeRegion}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12">
+                    <lightning-combobox
+                        name="marca"
+                        label="Marca"
+                        options={marcas}
+                        value={value}
+                        placeholder="Select marca"
+                        onchange={handleChangeMarca}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12">
+                    <lightning-combobox
+                        name="safra"
+                        label="Safra"
+                        value={value}
+                        placeholder="Select safra"
+                        options={safras} 
+                        onchange={handleChangeSafra}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12" class="slds-text-align_right">
+                    <lightning-button 
+                        variant="brand" 
+                        label={label.createopportunity} 
+                        title={label.createopportunity} 
+                        onclick={handleClickNew} 
+                        class="slds-m-left_x-small"
+                        disabled={isButtonDisabled}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+            
+        </div>
+    </lightning-card>
+</template>

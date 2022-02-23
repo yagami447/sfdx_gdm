@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>adminbr@donmario.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>StageName</field>
+        <field>Marca__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Actualizar_RT_Autorizado</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Aprobada</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <label>Aprobación Gerente Comercial</label>
+        <name>Aprobacion_Gerente_Comercial</name>
+        <rejectionActions>
+            <action>
+                <name>Actualizar_Etapa_Rech</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Actualizar_RT_REchazado</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Proceso de aprobación para evitar que se le envíen mails a los SC de la cuenta ACME.</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.RecordType</field>
+            <operation>equals</operation>
+            <value>VB - Pendiente,VB - Rechazada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Pablo Souza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Thiago Schwonka</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Marcelo Steffen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Sérgio Bertagnoli</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>equals</operation>
+            <value>ACME</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Fecha_Cierre</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Actualizar_Etapa</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Venda da Básica ACME</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>27</processOrder>
+    <recallActions>
+        <action>
+            <name>Actualizar_Etapa_Rech</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Detalle Calendário de eventos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRM Detalles Calendário de eventos</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Dia de Campo --></label>
+        <name>Dia_de_Campo</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Emplacamento --></label>
+        <name>Emplacamento</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Test a Campo --></label>
+        <name>Test_a_Campo</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Treinamento TEcnico --></label>
+        <name>Treinamento_TEcnico</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <webLinks>
+        <label><!-- Editar_Produtos --></label>
+        <name>Editar_Produtos</name>
+    </webLinks>
+</CustomObjectTranslation>

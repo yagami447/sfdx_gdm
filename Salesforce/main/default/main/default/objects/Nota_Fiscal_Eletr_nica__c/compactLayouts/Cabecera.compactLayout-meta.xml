@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cabecera</fullName>
+    <fields>Name</fields>
+    <fields>NFe__c</fields>
+    <fields>Emitente__c</fields>
+    <fields>Destinatario__c</fields>
+    <fields>Data_e_hora_de_Saida_ou_da_Entrada__c</fields>
+    <fields>Data_e_hora_de_Emissao_do_Documento__c</fields>
+    <label>Cabecera</label>
+</CompactLayout>

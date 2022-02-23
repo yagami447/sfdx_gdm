@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ventas_Sem_Tratar_Mas_Tratadas_Igual_100</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( OR( NOT(ISNULL(Vendas_de_Sem_sem_tratar__c)),NOT(ISNULL(Ventas_de_Sem_Tratada__c))), ( IF( ISNULL(Vendas_de_Sem_sem_tratar__c), 0, Vendas_de_Sem_sem_tratar__c) + IF( ISNULL(Ventas_de_Sem_Tratada__c), 0, Ventas_de_Sem_Tratada__c)) &lt;&gt; 1, FALSE)</errorConditionFormula>
+    <errorMessage>% de Vendas de Sem sem tratar + % de Vendas de Sem Tratada deve ser 100%</errorMessage>
+</ValidationRule>

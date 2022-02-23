@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mancha olho-de-rã --></label>
+    <name>Mancha_olho_de_r__c</name>
+    <picklistValues>
+        <masterLabel>MR</masterLabel>
+        <translation><!-- MR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MS</masterLabel>
+        <translation><!-- MS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R</masterLabel>
+        <translation><!-- R --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S</masterLabel>
+        <translation><!-- S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sem informação</masterLabel>
+        <translation><!-- Sem informação --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

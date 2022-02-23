@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Categoria CFOP --></label>
+    <name>Categoria_CFOP__c</name>
+    <picklistValues>
+        <masterLabel>00 - Industria (cooperativa)</masterLabel>
+        <translation><!-- 00 - Industria (cooperativa) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01 - Electricidad</masterLabel>
+        <translation><!-- 01 - Electricidad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02 - Comunicacion</masterLabel>
+        <translation><!-- 02 - Comunicacion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03 - Transporte</masterLabel>
+        <translation><!-- 03 - Transporte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04 - Servicios</masterLabel>
+        <translation><!-- 04 - Servicios --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>05 - Bienes de consumo</masterLabel>
+        <translation><!-- 05 - Bienes de consumo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>06 - Cliente, no contribuyente</masterLabel>
+        <translation><!-- 06 - Cliente, no contribuyente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>07 - Cliente agricola</masterLabel>
+        <translation><!-- 07 - Cliente agricola --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08 - Empresa de distribucion</masterLabel>
+        <translation><!-- 08 - Empresa de distribucion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>09 - Sucursal del fabricante</masterLabel>
+        <translation><!-- 09 - Sucursal del fabricante --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

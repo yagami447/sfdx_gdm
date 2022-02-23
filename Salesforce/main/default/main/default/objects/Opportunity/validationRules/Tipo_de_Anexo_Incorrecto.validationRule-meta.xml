@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Anexo_Incorrecto</fullName>
+    <active>true</active>
+    <description>Valida que el tipo de Anexo relacionado sea el que se puede seleccionar para la rebaja que se está realizando.</description>
+    <errorConditionFormula>OR(AND(RecordType.Name = &apos;Anexo I Rebaixamento Ha&apos;, Anexo_Relacionado__r.RecordType.Name &lt;&gt; &apos;Anexo I&apos;), AND(RecordType.Name = &apos;Anexo II Rebaixamento Sacas&apos;, Anexo_Relacionado__r.RecordType.Name &lt;&gt; &apos;Anexo II&apos;))</errorConditionFormula>
+    <errorDisplayField>Anexo_Relacionado__c</errorDisplayField>
+    <errorMessage>Tipo de Anexo Relacionado é incorreto</errorMessage>
+</ValidationRule>

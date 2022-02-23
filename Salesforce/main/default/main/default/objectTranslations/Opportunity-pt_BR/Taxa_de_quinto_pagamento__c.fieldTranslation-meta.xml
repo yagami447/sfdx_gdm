@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- % Pedido 5º parcela --></label>
+    <name>Taxa_de_quinto_pagamento__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anexos_I_DSEM</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Safra__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.AnexoI</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>notContain</operation>
+        <value>Schwonka,Thiago</value>
+    </filters>
+    <filters>
+        <field>Marca__c</field>
+        <operation>equals</operation>
+        <value>DSEM</value>
+    </filters>
+    <label>Anexos I DSEM</label>
+    <sharedTo>
+        <role>Admin</role>
+        <role>Administracion_3</role>
+        <role>Administracion_y_Fiscalizador</role>
+        <role>Comercial_R2_DSEM</role>
+        <role>Director</role>
+    </sharedTo>
+</ListView>

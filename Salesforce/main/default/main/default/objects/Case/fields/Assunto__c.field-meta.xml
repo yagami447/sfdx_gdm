@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assunto__c</fullName>
+    <externalId>false</externalId>
+    <label>Assunto</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abertura de vagem</fullName>
+                <default>false</default>
+                <label>Abertura de vagem</label>
+            </value>
+            <value>
+                <fullName>Abortamento de vagem</fullName>
+                <default>false</default>
+                <label>Abortamento de vagem</label>
+            </value>
+            <value>
+                <fullName>Chuva na colheita</fullName>
+                <default>false</default>
+                <label>Chuva na colheita</label>
+            </value>
+            <value>
+                <fullName>Deficiência nutricional</fullName>
+                <default>false</default>
+                <label>Deficiência nutricional</label>
+            </value>
+            <value>
+                <fullName>Desenvolvimento vegetativo</fullName>
+                <default>false</default>
+                <label>Desenvolvimento vegetativo</label>
+            </value>
+            <value>
+                <fullName>Doença</fullName>
+                <default>false</default>
+                <label>Doença</label>
+            </value>
+            <value>
+                <fullName>Fitotoxicidade</fullName>
+                <default>false</default>
+                <label>Fitotoxicidade</label>
+            </value>
+            <value>
+                <fullName>Haste verde</fullName>
+                <default>false</default>
+                <label>Haste verde</label>
+            </value>
+            <value>
+                <fullName>Maturação</fullName>
+                <default>false</default>
+                <label>Maturação</label>
+            </value>
+            <value>
+                <fullName>Mistura varietal</fullName>
+                <default>false</default>
+                <label>Mistura varietal</label>
+            </value>
+            <value>
+                <fullName>Morte de planta</fullName>
+                <default>false</default>
+                <label>Morte de planta</label>
+            </value>
+            <value>
+                <fullName>Nematoide</fullName>
+                <default>false</default>
+                <label>Nematoide</label>
+            </value>
+            <value>
+                <fullName>Praga</fullName>
+                <default>false</default>
+                <label>Praga</label>
+            </value>
+            <value>
+                <fullName>Qualidade de semente</fullName>
+                <default>false</default>
+                <label>Qualidade de semente</label>
+            </value>
+            <value>
+                <fullName>Retenção foliar</fullName>
+                <default>false</default>
+                <label>Retenção foliar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

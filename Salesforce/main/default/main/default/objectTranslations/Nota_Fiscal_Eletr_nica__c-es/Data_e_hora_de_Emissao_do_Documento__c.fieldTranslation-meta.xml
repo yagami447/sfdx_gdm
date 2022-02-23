@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Data e hora de Emissao do Documento --></label>
+    <name>Data_e_hora_de_Emissao_do_Documento__c</name>
+</CustomFieldTranslation>

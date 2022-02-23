@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>OpportunityLineItem.Semente_uso_propio__c:SUM + OpportunityLineItem.Semente_comercializada__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <description>COMERCIALIZADA + USO PRÓPRIO</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>COMERCIALIZAÇÃO</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>OpportunityLineItem.Area__c:SUM * 35</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Ha Autoriz. X Taxa de semente produzida por ha</description>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Potencial de Produção</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>( OpportunityLineItem.Semente_comercializada__c:SUM + OpportunityLineItem.Semente_uso_propio__c:SUM )  / OpportunityLineItem.Semente_aprovada__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Comercializada / Aprovada</description>
+        <developerName>FORMULA4</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>EFICIENCIA SEM. APROVADA</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>OpportunityLineItem.Area__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>OpportunityLineItem.Area_Plantada__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>PRODUCT_NAME</field>
+    </columns>
+    <columns>
+        <field>OpportunityLineItem.Cidade__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Respons_vel__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Safra__c</field>
+    </columns>
+    <columns>
+        <field>Account.Estado__c</field>
+    </columns>
+    <columns>
+        <field>Product2.Categoria__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Sociedad__c</field>
+    </columns>
+    <columns>
+        <field>Account.Responsavel__c</field>
+    </columns>
+    <columns>
+        <field>Product2.Categ__c</field>
+    </columns>
+    <columns>
+        <field>Product2.Sociedad__c</field>
+    </columns>
+    <description>Area autorizada e volume comercializado por cultivar</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Safra__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>11/12,12/12</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Opportunity.Comercial,Opportunity.Produccion,Opportunity.Rebaja</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>ACME</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OpportunityLineItem.Variedade_Prod__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>BMX APOLO RR,BMX ATIVA RR,BMX ENERGIA RR,BMX FORÇA RR,BMX IMPACTO RR,BMX MAGNA RR,BMX POTÊNCIA RR,BMX TITAN RR,BMX TURBO RR</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OpportunityLineItem.Variedade_Prod__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Area X Comercialização</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

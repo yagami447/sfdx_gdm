@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Estimativas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Estimativas</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Requisito de compra</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Requisito de compra Milho</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Número da Estimativa</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Milho --></label>
+        <name>Milho</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Soja --></label>
+        <name>Soja</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- A marca e a região são obrigatórias. --></errorMessage>
+        <name>Marca_y_Regiao_Obrigatorio</name>
+    </validationRules>
+</CustomObjectTranslation>

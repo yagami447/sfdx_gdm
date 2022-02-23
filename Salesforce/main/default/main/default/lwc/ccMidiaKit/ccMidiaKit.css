@@ -1,0 +1,10 @@
+.category {
+    margin: 10px 0;
+    border:1px solid #b0b0b0;
+    border-radius: 4px;
+    
+}
+.category-title{
+    margin-bottom: 10px;
+    font-weight: bold;
+}

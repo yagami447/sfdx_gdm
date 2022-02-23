@@ -1,0 +1,55 @@
+<aura:component >
+    <aura:attribute name="data" type="object"  default=""/> 
+    <aura:attribute name="activeSections" type="List" default="['A','B','C']" />
+
+    <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+        <lightning:accordion activeSectionName="{!v.activeSections}" allowMultipleSectionsOpen="true">
+            
+            <lightning:accordionSection name="C" label="Participante">
+                <lightning:layout multipleRows="true" class="slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="4" padding="around-small" class="custom-box">
+                        <lightning:input label="Participante" value="{!v.data.nfeProc.NFe.infNFe.ide.participante}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+            
+            <lightning:accordionSection name="A" label="Dados NF-e">
+                <lightning:layout multipleRows="true" class="slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="1" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Modelo" value="{!v.data.nfeProc.NFe.infNFe.ide.mod}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto"  size="1" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled"  label="Serie" value="{!v.data.nfeProc.NFe.infNFe.ide.serie}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="2"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled"  label="Número" value="{!v.data.nfeProc.NFe.infNFe.ide.nNF}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto"  size="4" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled"  label="Data de Emissão" value="{!v.data.nfeProc.NFe.infNFe.ide.dhEmi}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled"  label="Data/Hora de Saída ou da Entrada" value="{!v.data.nfeProc.NFe.infNFe.ide.dhSaiEnt}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+            
+            <lightning:accordionSection name="B" label="Emissao">
+                <lightning:layout  multipleRows="true" class="slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="6" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled"  label="Natureza da Operação" value="{!v.data.nfeProc.NFe.infNFe.ide.natOp}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto"  size="2" padding="around-small" class="custom-box">
+                        <lightning:select class="customDisabled" label="Tipo da Operação" value="{!v.data.nfeProc.NFe.infNFe.ide.tpNF}">
+                            <option value="0">0 - Entrada</option>
+                            <option value="1">1 - Salida</option>
+                        </lightning:select>
+                        <!--   <lightning:input   label="Tipo da Operação" value=""></lightning:input>-->
+                    </lightning:layoutItem>
+                    <!--   <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled"  label="Situação Atual" value="AUTORIZADA (Ambiente de autorização: Produção)"></lightning:input>
+                    </lightning:layoutItem> -->
+                </lightning:layout>
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

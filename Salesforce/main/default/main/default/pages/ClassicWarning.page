@@ -1,0 +1,7 @@
+<apex:page standardController="Nota_Fiscal_Eletr_nica__c">
+        <apex:pageMessage id="msg" escape="0" 
+                          summary="Esta página não pode ser exibida na versão Salesforce Classic, alterne para a visualização Lightning para vê-la. " 
+                          severity="warning" strength="3"/>
+    
+        
+</apex:page>

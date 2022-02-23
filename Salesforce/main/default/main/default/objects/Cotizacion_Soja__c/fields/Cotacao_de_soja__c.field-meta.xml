@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cotacao_de_soja__c</fullName>
+    <description>Lista de Cotizaciones de Soja. Debe tener los mismos elementos que el campo Cotação de soja del objeto Contrato de Multiplicação.</description>
+    <externalId>false</externalId>
+    <label>Cotação de soja</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ADM</fullName>
+                <default>false</default>
+                <label>ADM</label>
+            </value>
+            <value>
+                <fullName>ASUNCION</fullName>
+                <default>false</default>
+                <label>ASUNCION</label>
+            </value>
+            <value>
+                <fullName>C. VALE</fullName>
+                <default>false</default>
+                <label>C. VALE</label>
+            </value>
+            <value>
+                <fullName>C. VALE - Palotina (PR)</fullName>
+                <default>false</default>
+                <label>C. VALE - Palotina (PR)</label>
+            </value>
+            <value>
+                <fullName>CHICAGO</fullName>
+                <default>false</default>
+                <label>CHICAGO</label>
+            </value>
+            <value>
+                <fullName>COAMO</fullName>
+                <default>false</default>
+                <label>COAMO</label>
+            </value>
+            <value>
+                <fullName>COAMO - Campo Mourão (PR)</fullName>
+                <default>false</default>
+                <label>COAMO - Campo Mourão (PR)</label>
+            </value>
+            <value>
+                <fullName>COTRIJAL</fullName>
+                <default>false</default>
+                <label>COTRIJAL</label>
+            </value>
+            <value>
+                <fullName>COTRIJAL - Não me Toque (RS)</fullName>
+                <default>false</default>
+                <label>COTRIJAL - Não me Toque (RS)</label>
+            </value>
+            <value>
+                <fullName>DOLAR</fullName>
+                <default>false</default>
+                <label>DOLAR</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Barreiras (BA)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Barreiras (BA)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Brasília (DF)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Brasília (DF)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Campo Grande (MS)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Campo Grande (MS)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Diamantino (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Diamantino (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Londrina (PR)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Londrina (PR)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Paragominas (PA)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Paragominas (PA)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Passo Fundo (RS)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Passo Fundo (RS)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Pedro Afonso (TO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Pedro Afonso (TO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Primavera (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Primavera (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rio Verde (GO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rio Verde (GO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rondonópolis (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rondonópolis (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Sorriso (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Sorriso (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Uberlandia (MG)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Uberlandia (MG)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Unaí (MG)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Unaí (MG)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Uruçui (PI)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Uruçui (PI)</label>
+            </value>
+            <value>
+                <fullName>SAFRAS &amp; MERCADO</fullName>
+                <default>false</default>
+                <label>SAFRAS &amp; MERCADO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

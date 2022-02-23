@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Relatórios e Observações</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Relatórios e Observações</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato de Visita a Clientes</layout>
+        <sections>
+            <label><!-- Dados --></label>
+            <section>Dados</section>
+        </sections>
+        <sections>
+            <label><!-- Informação --></label>
+            <section>Informação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Sistema --></label>
+            <section>Informações do Sistema</section>
+        </sections>
+        <sections>
+            <label><!-- Multiplicador --></label>
+            <section>Multiplicador</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- La Conta no debe estar vacia si a modalidade es Multiplicador Brasmax --></errorMessage>
+        <name>Conta_Multiplicador_Brasmax</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El nome de multiplicador no debe estar vacio si a modalidade es Revenda Brasmax, Concorrente o Outro --></errorMessage>
+        <name>Nome_Concorrente</name>
+    </validationRules>
+</CustomObjectTranslation>

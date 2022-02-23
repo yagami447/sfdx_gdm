@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- O Sistema da empresa separa os volumes destinados a Uso Próprio dos volumes que são comercializados ao produtor ? --></help>
+    <label><!-- Separa los volumenes --></label>
+    <name>Separa_los_volumenes__c</name>
+</CustomFieldTranslation>

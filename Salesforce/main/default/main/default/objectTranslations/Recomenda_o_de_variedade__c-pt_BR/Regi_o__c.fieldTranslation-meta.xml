@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Região --></label>
+    <name>Regi_o__c</name>
+    <picklistValues>
+        <masterLabel>Cerrado</masterLabel>
+        <translation><!-- Cerrado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sul</masterLabel>
+        <translation><!-- Sul --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reclamo_Prop_Cierre_Campos_Obligatorios</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name = &apos;RECLAMO PROPUESTA CIERRE&apos;, Reclamo_con_atendimento__c, OR( ISNULL(AccountId), ISNULL(Contacto_Canal_Ventas__c), ISNULL(ContactId), ISPICKVAL(Contacto_Responsable__c, &quot;&quot;), ISNULL(Asistencia_Tecnica__c), ISBLANK(Assistente_Tecnico__c), ISNULL(Macroregion_de_Ventas__c), ISNULL(Microregion_de_Ventas__c), ISNULL(Data_de_plantio__c), ISPICKVAL(Estagio_de_desenvolvimento__c, &quot;&quot;), ISPICKVAL(Regi_o_da_planta__c, &quot;&quot;), ISNULL(Poblacion_de_plantas__c), ISNULL(Altitud_Campo__c), ISBLANK(Diagnostico__c), ISBLANK(Recomendacion__c),  ISBLANK(Justificativa_fechamento__c), ISNULL(Data_da_solu_o_do_caso__c),
+NOT(Agricultor_acordo_com_fechamento__c)))</errorConditionFormula>
+    <errorMessage>Para avançar a proposta de fechamento deve completar todos os dados.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,20 @@
+<apex:page controller="Opp_wzEstoque_Ctrl" tabStyle="OpportunityLineItem">
+    <apex:sectionHeader subtitle="Nova oportunidade" title="Edição de items de oportunidade">    
+        <apex:form >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlock title="Produtos">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!prev2}" value="Cancelar"/>
+                    <apex:commandButton action="{!guardar}" value="Salvar"/>
+                </apex:pageBlockButtons>               
+                <apex:panelGrid columns="1" id="theGrid" width="100%">
+                    <apex:dataTable value="{!selitems}" var="p1" styleClass="list">
+                        <apex:column Style="width:100px;"><apex:facet name="header">Produto</apex:facet>{!p1.item.pricebookentry.Product2.Variedad__c}</apex:column>
+                        <apex:column ><apex:facet name="header">Estim. Sem. Previção</apex:facet><apex:inputField Style="width:90px;" value="{!p1.item.Estim_Sem_Previsao__c}"/></apex:column>
+                        <apex:column ><apex:facet name="header">Estim. Sem. Comerc.</apex:facet><apex:inputField value="{!p1.item.Estim_Sem_Comerc__c}"/></apex:column>
+                    </apex:dataTable>
+                </apex:panelGrid>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:sectionHeader>
+</apex:page>

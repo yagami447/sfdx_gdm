@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <div slot="title" class="slds-media slds-no-space slds-grow">
+            <div class="slds-media__figure">
+                <lightning-icon icon-name="action:goal" size="small"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+                <p class="slds-text-title_caps slds-line-height_reset">Adiciona Produtos a</p>
+                <p class="slds-page-header__title slds-truncate" title="ALL">{title}</p>
+            </div>
+        </div>
+        <lightning-button label="Salvar" onclick={handleSave} slot="actions"></lightning-button>
+        <lightning-button variant="brand" label="Voltar" class="slds-var-m-left_xx-small" onclick={handleCancel} slot="actions"></lightning-button>
+        <p class="slds-var-p-horizontal_small">Itens Selecionados</p>
+        <template if:true={recordId}>
+            <template if:true={eventType}>
+                <c-crud-event-items record-id={recordId} event-type={eventType}></c-crud-event-items>
+                <c-add-event-items record-id={recordId} event-type={eventType} onaddproduct={handleAddProduct}></c-add-event-items>
+            </template>
+        </template>
+    </lightning-card>
+</template>

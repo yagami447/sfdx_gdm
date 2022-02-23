@@ -1,0 +1,100 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+
+<table width="100%" Align="center" columns="1">
+    <tr>
+         <td >
+             <apex:outputPanel rendered="{!marca == 'NEOG'}">
+                 <IMG SRC="{!$Resource.LogoImpNEOG}" style="width: 25%; height: 25%"></img>
+             </apex:outputPanel>
+             <apex:outputPanel rendered="{!marca != 'NEOG'}">
+                 <IMG SRC="{!RutaLogo}" style="width: 25%; height: 25%"></img>  
+             </apex:outputPanel>                             
+         </td> 
+
+    </tr>
+    <tr>
+        <TD colspan="1">&nbsp;</TD>
+    </tr>
+    <td aling="left"><font face="verdana">
+           <apex:outputText style="font-weight:900" value="Oportunidade {!Opportunity.Name}"></apex:outputText> 
+    </font></td>
+    <tr>
+        <TD><hr></hr></TD>
+    </tr>
+</table>
+ 
+<table width="100%" Align="center" columns="2">
+
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-weight:900" value="Conta:  "></apex:outputText> 
+              <apex:outputText value="{!Opportunity.Account.Name}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="CNPJ:  "></apex:outputText> 
+             <apex:outputText value="{!Opportunity.Account.CNPJ_CPF__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-weight:900" value="Safra:  "></apex:outputText> 
+              <apex:outputText value="{!Opportunity.Safra__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Época de Plantio:  "></apex:outputText> 
+             <apex:outputText value="{!Opportunity.Epoca_de_Plantio__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-weight:900" value="Fase:  "></apex:outputText> 
+              <apex:outputText value="{!Opportunity.Estado_Anexos_Portal_Miltiplicadores__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Data de fechamento:  "></apex:outputText> 
+             <apex:outputText value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!Opportunity.CloseDate}" /></apex:outputText>
+         </font></td>
+    </tr>
+
+    
+    
+    <tr>
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Marca:  "></apex:outputText> 
+             <apex:outputText value="{!MarcaImp}"></apex:outputText>
+         </font></td>
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Tipo de Registro:  "></apex:outputText> 
+             <apex:outputText value="{!Opportunity.RecordType.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+
+
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD><hr></hr></TD>
+    </tr>
+</table>
+
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD><br></br></TD>
+    </tr>
+</table>
+
+</table>
+
+        <apex:pageBlock >
+        <apex:outputPanel layout="block" style="overflow:auto; height:250px;margin: 2px; font-size: 12px; text-align:center" >
+            <apex:pageBlockTable value="{!Items}" var="i" width="100%">
+                <apex:repeat value="{!Fields}" var="f">
+                    <apex:column headerValue="{!f.label}">
+                    <apex:outputField value="{!i[f]}" /><apex:facet name="footer"><br/>{!totalesAnexos[f.FieldPath]}</apex:facet></apex:column>
+                </apex:repeat>
+            </apex:pageBlockTable>
+        </apex:outputPanel> 
+        </apex:pageBlock> 
+  
+</apex:page>

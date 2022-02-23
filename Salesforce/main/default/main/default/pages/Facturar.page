@@ -1,0 +1,73 @@
+<apex:page controller="Facturar_Controller" sidebar="false">
+    <apex:sectionHeader title="Facturar" subtitle=""/>
+    <apex:pageMessages />    
+    <apex:form >
+        <apex:pageBlock >                        
+            <apex:pageBlockSection showHeader="false" columns="3" id="principal">
+                <apex:inputField value="{!opp.AccountId}" id="cuenta"/>
+                <apex:inputField value="{!opp.Safra__c}" id="safra"/>
+                <apex:inputField value="{!cuenta.Estado__c}" id="estado"/>
+                <apex:inputField value="{!contrato.Tipo_de_Cota_o__c}" id="tipocot"/>
+                <apex:inputField value="{!contrato.Cotacao_de_soja__c}" id="contrato"/>
+                <apex:inputField value="{!pro.Variedad__c}" id="variedad"/>
+                <apex:outputText value=" " />
+                <apex:commandButton action="{!Buscar}" style="float:center;margin-left:450px;width:80px" value="Pesquisar" rerender="seccion_resultado,seccion_facturar" status="status" oncomplete="MostrarMsj('{!Mensaje}')"></apex:commandButton>
+                <apex:actionStatus startText="Consultando..." id="status"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="seccion_facturar">
+           <apex:pageBlockSection columns="4" title="Datos Para Facturar">
+               <apex:pageBlockSectionItem labelStyle="width:250px">
+                    <apex:outputLabel value="Data de fijação"/>
+                    <apex:inputField value="{!Fact_Param.Fecha_fijacion_T_de_cambio__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Cotação"/>
+                    <apex:inputField value="{!Fact_Param.Tipo_de_cambio__c}"/>
+                </apex:pageBlockSectionItem>    
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Filial"/>
+                    <apex:inputField value="{!Fact_Param.Sucursal__c}"/>
+                </apex:pageBlockSectionItem>    
+               <apex:commandButton style="float:right;margin-right:30px;width:110px;background:black;color:white" value="Facturar Seleccion" action="{!CrearFacturas}" oncomplete="MostrarMsj('{!Mensaje}')" rerender="seccion_resultado,seccion_facturar,principal"></apex:commandButton>             
+            </apex:pageBlockSection>                                           
+        </apex:pageBlock>
+                             
+        <apex:pageBlock >                               
+            <apex:pageBlockSection columns="1" title="Resultado" id="seccion_resultado">
+            <apex:pageMessages />
+            <apex:pageBlock >
+               <apex:commandButton action="{!selectAll}" style="width:110px" value="Seleccionar Todo" rerender="resultado"></apex:commandButton> 
+               <apex:commandButton action="{!quitarSeleccion}" style="width:110px" value="Quitar Seleccion" rerender="resultado"></apex:commandButton> 
+               <apex:commandButton onclick="openWin('{!verDetalles}')" disabled="{!VerDetallesDisabled}" style="float:right;margin-right:16px;width:110px" value="Ver Detalles"></apex:commandButton>                              
+            <script>
+               function openWin(url){                                  
+                   window.open(url,'','fullscreen,scrollbars');
+               }
+               
+               function MostrarMsj(msj){
+                   if (msj != '') alert (msj);                   
+               }
+            </script>            
+            </apex:pageBlock>                               
+            <apex:pageBlockTable value="{!listaOpp}" var="oppl" id="resultado">
+                <apex:column headerValue=""><apex:inputCheckbox value="{!oppl.Selected}"/></apex:column> 
+                <apex:column headerValue="Cuenta"><apex:OutputLink value="../{!oppl.oport.Account.Id}"> <apex:outputField value="{!oppl.oport.Account.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Oportunidad"><apex:OutputLink value="../{!oppl.oport.Id}"> <apex:outputField value="{!oppl.oport.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Safra"><apex:OutputField value="{!oppl.oport.Safra__c}"/></apex:column>                  
+                <apex:column headerValue="Fecha"><apex:OutputField value="{!oppl.oport.CloseDate}"/></apex:column>                  
+              <!--  <apex:column headerValue=""><apex:CommandLink value="Ver Detalle"></apex:CommandLink></apex:column>    
+                <apex:column headerValue="">                      
+                   <apex:commandButton value="Cambiar Estado" action="{!CambiarEstadoItem}" oncomplete="alert('{!Mensaje}')">
+                      <apex:param name="key" value="{!opp.Id}"></apex:param>
+                   </apex:commandButton> 
+                </apex:column>-->
+
+            </apex:pageBlockTable>    
+            </apex:pageBlockSection>                        
+        </apex:pageBlock>
+                
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Administracion_y_Fiscalizador</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Aprobada</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Analiza el Supervisor</description>
+        <label>Análisis por el Supervisor</label>
+        <name>Paso_1</name>
+        <rejectionActions>
+            <action>
+                <name>Aviso_de_Desaprobaci_n_x_Supervisor</name>
+                <type>Alert</type>
+            </action>
+            <action>
+                <name>Limpiar_Next_Step</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Rechazada_x_Supervisor</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Este proceso de Aprobación se utiliza para los Anexos II y V. 
+Avisará al Focal Point de la disponibilidad del Documento para imprimir una vez Autorizado x el Supervisor.</description>
+    <emailTemplate>Circuito_de_Anexos/CA_Anexo_I</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.RecordType</field>
+            <operation>equals</operation>
+            <value>Anexo II,Anexo V,Descarte</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Pablo Souza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Sérgio Bertagnoli</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>notEqual</operation>
+            <value>Marcelo Steffen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Contact</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Aprobada,AN - Anulada</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Aviso_de_Aprobacion_FINAL</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Contrato_de_Multiplicaci_n_disponible</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Fecha_Cierre</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Limpiar_Next_Step</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Limpiar_Motivo_de_Rechazo</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Pendiente_de_An_lisis</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Anexos II y V Comunidad</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>20</processOrder>
+    <recallActions>
+        <action>
+            <name>Actualizar_Etapa_Rech</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Limpiar_Next_Step</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

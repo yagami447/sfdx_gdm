@@ -1,0 +1,15 @@
+Estimado/a {!Connection.ExternalContactFirstName}:
+
+Gracias por su reciente invitación de conexión con {!Organization.Name}, recibida el {!Connection.ReceivedDate}.
+
+Tras considerarlo detenidamente, hemos decidido no aceptar su invitación en este momento. Permítame confesarle que no ha sido fácil tomar esta decisión.
+
+Le transmitimos nuestros mejores deseos para el futuro de su empresa. Esperamos poder conectarnos en una fecha futura.
+
+
+Atentamente,
+
+
+{!User.FirstName} {!User.LastName}
+
+{!Organization.Name}

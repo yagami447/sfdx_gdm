@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Correo que se dispara cuando se envía a aprobar una Opp de Producción de Básica</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Alerta 1 Producción de Básica</name>
+    <style>none</style>
+    <subject>Produção de Básica - Aprovação Pendente</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

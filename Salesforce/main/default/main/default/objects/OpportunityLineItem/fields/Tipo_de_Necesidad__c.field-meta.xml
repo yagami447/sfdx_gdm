@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Necesidad__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Necessidade</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Multiplicação</fullName>
+                <default>false</default>
+                <label>Multiplicação</label>
+            </value>
+            <value>
+                <fullName>Difusão Multiplicador</fullName>
+                <default>false</default>
+                <label>Difusão Multiplicador</label>
+            </value>
+            <value>
+                <fullName>Difusão Comercial</fullName>
+                <default>false</default>
+                <label>Difusão Comercial</label>
+            </value>
+            <value>
+                <fullName>Dia de Campo</fullName>
+                <default>false</default>
+                <label>Dia de Campo</label>
+            </value>
+            <value>
+                <fullName>Lado a Lado</fullName>
+                <default>false</default>
+                <label>Lado a Lado</label>
+            </value>
+            <value>
+                <fullName>Strip Test</fullName>
+                <default>false</default>
+                <label>Strip Test</label>
+            </value>
+            <value>
+                <fullName>Desenvolvimento</fullName>
+                <default>false</default>
+                <label>Desenvolvimento</label>
+            </value>
+            <value>
+                <fullName>Desenvolvimento Manejo</fullName>
+                <default>false</default>
+                <label>Desenvolvimento Manejo</label>
+            </value>
+            <value>
+                <fullName>Desenvolvimento Rede</fullName>
+                <default>false</default>
+                <label>Desenvolvimento Rede</label>
+            </value>
+            <value>
+                <fullName>Difusão E.B.E. (Eventos / Bera de estrada)</fullName>
+                <default>false</default>
+                <label>Difusão E.B.E. (Eventos / Bera de estrada)</label>
+            </value>
+            <value>
+                <fullName>Ensayo Rede</fullName>
+                <default>false</default>
+                <label>Ensayo Rede</label>
+            </value>
+            <value>
+                <fullName>Ensayo Manejo</fullName>
+                <default>false</default>
+                <label>Ensayo Manejo</label>
+            </value>
+            <value>
+                <fullName>Difusão para Multiplicador ou Revenda (40kg)</fullName>
+                <default>false</default>
+                <label>Difusão para Multiplicador ou Revenda (40kg)</label>
+            </value>
+            <value>
+                <fullName>Difusão GDM Comercial</fullName>
+                <default>false</default>
+                <label>Difusão GDM Comercial</label>
+            </value>
+            <value>
+                <fullName>Difusão GDM – DC /ST</fullName>
+                <default>false</default>
+                <label>Difusão GDM – DC /ST</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

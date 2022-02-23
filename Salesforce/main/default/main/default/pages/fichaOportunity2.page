@@ -1,0 +1,40 @@
+<apex:page standardController="Account" extensions="opportunityFichaExtension" lightningStylesheets="true" sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">  
+    
+    <apex:form >
+    <apex:variable var="classic" value="{!$User.UIThemeDisplayed == 'Theme2' || $User.UIThemeDisplayed == 'Theme3'}"/>
+    <apex:pageBlock >
+        <apex:outputPanel layout="block" style="overflow:auto; height:250px; margin: 0 2px">                                                   
+        <apex:pageBlockTable value="{!Oppz}" var="o" id="resultPanel">
+            <apex:column headerValue="Nome da Oportunidade">
+            
+                <apex:commandLink action="/{!o.Id}" target="_parent" value="{!o.Name}"/>
+            </apex:column>
+            <apex:column headerValue="Fase">
+            
+                <apex:outputField value="{!o.StageName}"/>
+            </apex:column>
+            <apex:column headerValue="Safra">
+
+                <apex:outputField value="{!o.Safra__c}"/>
+            </apex:column>
+            <apex:column headerValue="Data de Fechamiento">
+
+                <apex:outputField value="{!o.CloseDate}"/>
+            </apex:column>
+
+            <apex:column headerValue="Tipo de Registro de Oportunidades">
+
+                <apex:outputField value="{!o.RecordType.Name}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:outputPanel>
+        <br/>
+        <div align="center" draggable="false" >
+        <apex:commandLink action="/006?rlid=RelatedOpportunityList&id={!id}" target="_parent" value="Ir a lista >>" rendered="{!classic}"/>        
+        <!-- <apex:commandLink action="/lightning/r/{!id}/related/Opportunities/view" target="_parent" value="Exibir tudo" rendered="{!!classic}"/>   This only works only if the related list exist in related tab of this record-->
+        <apex:commandLink action="{!ListadoOpp}" target="_parent" value="Ir a lista>>" rendered="{!!classic}"/>
+        </div>
+    </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

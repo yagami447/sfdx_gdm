@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Multiplicador</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRM Multiplicador</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Canal de Vendas --></label>
+        <name>Canal_de_Vendas</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Infraestructura_C --></label>
+        <name>Infraestructura_C</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Infraestructura_D --></label>
+        <name>Infraestructura_D</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Infraestructura_E --></label>
+        <name>Infraestructura_E</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Vendas_A --></label>
+        <name>Vendas_A</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Vendas_D --></label>
+        <name>Vendas_D</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Vendas_E --></label>
+        <name>Vendas_E</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>CRM Multiplicador Admin</layout>
+        <sections>
+            <label><!-- BRASMAX --></label>
+            <section>BRASMAX</section>
+        </sections>
+        <sections>
+            <label><!-- DONMARIO --></label>
+            <section>DONMARIO</section>
+        </sections>
+        <sections>
+            <label><!-- Estimativa --></label>
+            <section>Estimativa</section>
+        </sections>
+        <sections>
+            <label><!-- NEOGEN --></label>
+            <section>NEOGEN</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Multiplicador MKT</layout>
+        <sections>
+            <label><!-- BRASMAX --></label>
+            <section>BRASMAX</section>
+        </sections>
+        <sections>
+            <label><!-- DONMARIO --></label>
+            <section>DONMARIO</section>
+        </sections>
+        <sections>
+            <label><!-- Estimativa --></label>
+            <section>Estimativa</section>
+        </sections>
+        <sections>
+            <label><!-- NEOGEN --></label>
+            <section>NEOGEN</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato CRM Multiplicador</layout>
+        <sections>
+            <label><!-- BRASMAX --></label>
+            <section>BRASMAX</section>
+        </sections>
+        <sections>
+            <label><!-- DONMARIO --></label>
+            <section>DONMARIO</section>
+        </sections>
+        <sections>
+            <label><!-- NEOGEN --></label>
+            <section>NEOGEN</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Incidencia para votar</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- % de área de multiplicação própria + % de área de multiplicação terceirizada deve ser 100% --></errorMessage>
+        <name>Area_Mult_Propia_Igual_A_Area_Mult_Terc</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve entrar Desconto Classe 3 MKT e Desconto Obj Rel Gen Dem MKT --></errorMessage>
+        <name>BRMX_Desconto_Classe_3_MKT_Completo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- % de área de multiplicação própria + % de área de multiplicação terceirizada deve ser 100% --></errorMessage>
+        <name>Pl_Area_Mult_Pr_Igual_A_Pl_Area_Mult_T</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- % de Vendas de Sem sem tratar + % de Vendas de Sem Tratada deve ser 100% --></errorMessage>
+        <name>Pl_Ventas_S_Tratar_Mas_Pl_Tratadas_100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- % de Vendas de Sem sem tratar + % de Vendas de Sem Tratada deve ser 100% --></errorMessage>
+        <name>Ventas_Sem_Tratar_Mas_Tratadas_Igual_100</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tratamiento_de_Semilla__c</fullName>
+    <description>En este campo se indica el tratamiento de semilla.</description>
+    <externalId>false</externalId>
+    <label>Tratamento de Sementes</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>T00 - Sem</fullName>
+                <default>true</default>
+                <label>T00 - Sem</label>
+            </value>
+            <value>
+                <fullName>T05 - Cruiser+Maxim+Amulet</fullName>
+                <default>false</default>
+                <label>T05 - Cruiser+Maxim+Amulet</label>
+            </value>
+            <value>
+                <fullName>T06 - Cruiser+Maxim+Amulet+Co-Mo</fullName>
+                <default>false</default>
+                <label>T06 - Cruiser+Maxim+Amulet+Co-Mo</label>
+            </value>
+            <value>
+                <fullName>T07 - Maxim XL</fullName>
+                <default>false</default>
+                <label>T07 - Maxim XL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

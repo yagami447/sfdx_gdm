@@ -1,0 +1,25 @@
+<aura:component controller="customBtnAprovalProcessController"  implements="force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes">
+	
+    <aura:handler name="init" value="{!this}" action="{!c.sendToApprove}"/>
+
+    <aura:attribute name='titleMessage' type="String" default="Cargando" />
+    <aura:attribute name='message' type="String" default="A oportunidade está sendo autorizada" />
+    <aura:attribute name='severityMessge' type="String" default= "info"/>
+    
+    
+    <ui:message title="{!v.titleMessage}" severity="{!v.severityMessge}" closable="false">
+        {!v.message}
+    </ui:message>
+    <center>
+        <aura:if isTrue="{!equals(v.severityMessge,'info')}">
+            <div style="position: relative;
+                        display: inline-block;
+                        width: 80px;
+                        height: 80px;"
+                 >
+                <lightning:spinner alternativeText="Loading" size="large" />
+            </div>
+        </aura:if>
+    </center>
+    
+</aura:component>

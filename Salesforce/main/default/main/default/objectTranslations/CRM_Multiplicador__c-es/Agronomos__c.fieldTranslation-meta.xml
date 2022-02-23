@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Agrônomo (equipe comercial) --></help>
+    <label><!-- Agrônomos --></label>
+    <name>Agronomos__c</name>
+</CustomFieldTranslation>

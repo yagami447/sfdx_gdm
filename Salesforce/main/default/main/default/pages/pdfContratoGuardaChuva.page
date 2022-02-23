@@ -1,0 +1,1745 @@
+<apex:page standardController="Contract" extensions="PdfGeneratorController" renderAs="pdf" action="{!initImpresionContratoGuardaChuva}" docType="html-5.0">
+<head>
+<style>  
+table.gridtable {
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;    
+    border-collapse: collapse;
+}
+table.gridtable th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;    
+}
+table.gridtable td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+  
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+@page {
+    @bottom-right {
+          content: "Página " counter(page) " de " counter(pages);
+          font-weight: lighter;
+          font-size:8pt;
+    }    
+    @top-right {
+          content: "Contrato N° {!Contract.ContractNumber}";
+          font-weight: lighter;
+          font-size:8pt;
+    }
+}
+</style> 
+</head>
+
+<table width="100%" Align="center" columns="2">
+   
+<table width="80%" border="0" Align="center" columns="3">
+    <tr>
+        <td align="left" width="10%"><font face="verdana">&nbsp;</font>                 
+        </td>
+        <td align="left" width="80%"><font face="verdana"><p><b><u>CONTRATO DE LICENÇA DE USO DE CULTIVAR</u></b></p></font>                 
+        </td>
+        <td align="left" width="10%"><font face="verdana">&nbsp;</font>                 
+        </td>
+    </tr>
+</table>
+
+
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD>&nbsp;</TD>
+    </tr>
+</table>
+
+<table width="80%" Align="center" columns="1" style="font-size:14px;">
+    <tr>
+        <TD>     
+        <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+            <tr>
+                <td width="30%">
+                    <b>Contrato nº.</b>
+                </td>
+                <td width="70%" colspan="3">
+                    <b>{!nroContrato}</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Licenciadora:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    <b>GDM GENÉTICA DO BRASIL S. A. (GDM)</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>CNPJ:</b>
+                </td>
+                <td width="25%">
+                    07.007.165/0001-34
+                </td>
+                <td width="25%">
+                    <b>Inscrição Estadual</b>
+                </td>
+                <td width="20%">
+                    90519331-73
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Unidade:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    Rua Antônio Rasteiro Filho, 2.700, Parque Industrial José Garcia Gimenes, Cambé, Paraná, CEP 86183-751
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Correspondência:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    O mesmo
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>E-mail:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    admvendas@gdmseeds.com
+                </td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+            <td>          
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+        <TD>  
+        <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">            
+            <tr>
+                <td width="30%">
+                    <b>Licenciado:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    <b>{!nombre}</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>CNPJ/CPF:</b>
+                </td>
+                <td width="25%">
+                    {!cnpj}
+                </td>
+                <td width="25%">
+                    <b>Inscrição Estadual</b>
+                </td>
+                <td width="20%">
+                    {!inscEst}
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Unidade:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    {!dirUnidade}
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Correspondência:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    {!dirCorrespondencia}
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>E-mail:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    {!email}
+                </td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+        
+        <tr>
+            <td>          
+                &nbsp;
+            </td>
+        </tr>
+        
+        <TR>
+        <TD style="text-align:justify;">           
+        <em>Considerando que a <b>GDM</b> é uma empresa do grupo DonMario, cujo objeto principal é o
+        desenvolvimento de novas cultivares de soja.</em>
+        </TD>
+        </TR>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <TR>
+        <TD style="text-align:justify;">
+        <em>
+        Considerando que a <b>GDM</b> é detentora das marcas Brasmax e suas variações.
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <tr>
+        <td style="text-align:justify;">
+        <em>
+        Considerando que o <b>Licenciado</b> tem interesse em obter uma licença para utilizar a(s)
+        Cultivar(es) Licenciada(s) na multiplicação e comercialização de sementes de soja, sendo que
+        a(s) Cultivar(es) Licenciada(s)já se encontra(m) registrada(s) junto ao Registro Nacional de
+        Cultivares – RNC e protegida(s) e/ou em processo de obtenção de proteção perante o Serviço
+        Nacional de Proteção de Cultivares – SNPC.
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <tr>
+        <td style="text-align:justify;">
+        <em>
+        Considerando que o <b>Licenciado</b> reconhece a titularidade da <b>GDM</b> e da Asociados Don Mario
+        S.A., conforme o caso, sobre a(s) Cultivar(es) Licenciada(s), e que necessita de prévia
+        autorização da <b>GDM</b> para utilizar a(s) Cultivar(es) Licenciada(s), sob pena de infringir os
+        direitos de propriedade intelectual da <b>GDM</b>.
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <tr>
+        <td style="text-align:justify;">
+        <em>
+        Considerando que a <b>GDM</b> e o <b>Licenciado</b> continuarão a desenvolver suas atividades de
+        maneira independente e autônoma, cada uma delas suportando isoladamente seus próprios
+        riscos e resultados.
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <tr>
+        <td style="text-align:justify;">
+        <em>
+        As Partes têm entre si justo e acertado firmar o presente Contrato de Licença de Uso de
+        Cultivar para Multiplicação e Comercialização de Sementes de Soja (doravante simplesmente
+        “Contrato”), de acordo com as condições abaixo mutuamente pactuadas.
+        </em>                               
+        </TD>
+        </TR>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <TR>
+        <TD style="text-align:justify;">
+        
+        <ol style="text-align:justify;">
+        <li><span style="text-align:left;">
+        <b>DAS DEFINIÇÕES</b></span><br/><br/>
+        <ol>
+            <li>
+                Para os fins deste Contrato e do Termo Aditivo de Definições Comerciais, os termos
+                abaixo terão os seguintes significados:
+                <ol>
+                    <li>                        
+                        <b>Área</b> – Constitui o(s) campo(s) de produção de sementes referido(s) no
+                        Anexo I.
+                    </li>                    
+                    <li>
+                        <b>Cultivar(es) Licenciada(s)</b> – É(são) a(s) cultivar(es) de soja
+                        licenciada(s) sob o presente Contrato, devidamente registrada(s) perante o
+                        Registro Nacional de Cultivares – RNC e com pedido de proteção de
+                        cultivares perante o Serviço Nacional de Proteção de Cultivares – SNPC
+                        concedido ou em andamento.
+                    </li>
+                    <li>
+                        <b>Definição para Formação do Valor dos <i>Royalties</i></b> - O valor dos
+                        Royalties será determinado pela multiplicação entre <b>Quantidade</b>,
+                        <b>Referência</b> e <b>Cotação</b>, de cada uma das Cultivar(es) Licenciada(s):
+                        <ol>
+                            <li>
+                                <u>Quantidade:</u> é a soma total de sementes comercializadas acrescidas
+                                das sementes destinadas a (i) uso próprio e/ou (ii) qualquer operação
+                                fiscal, na forma dos Relatório de Sementes Comercializadas e de Uso
+                                Próprio (Anexo III) e Relatório de Sementes Comercializadas e de Uso
+                                Próprio mais Descarte (Anexo IV), onde a cada 40 Kg (quarenta quilos) de
+                                Semente Comercial corresponde a um Saco.
+                            </li>
+                            <li>
+                                <u>Referência:</u> é a importância estabelecida pela <b>GDM</b> no Termo Aditivo
+                                de Definições Comerciais, cobrada para cada Saco de Semente Comercial.
+                                O preço será a quantidade de quilos de grão de soja indústria (Kg) ou de
+                                Dólares Americanos (USD), conforme cada caso.
+                            </li>
+                            <li>
+                                <u>Cotação:</u> É a média dos valores de referência fixados em moeda
+                                corrente, por empresa indicada pela <b>GDM</b>, no período de novembro do <b>ano 
+                                anterior a cada ano de vigência do Termo Aditivo e Contrato</b>, em uma
+                                determinada Praça (Localidade) e Mercado indicados no Termo Aditivo.
+                            </li>
+                        </ol>   
+                    </li>
+                    <li>
+                        <b>Evento Bt</b> ou <b>Evento Transgênico MON87701</b> – Significa o evento de
+                        inserção do gene transgênico criado pela Monsanto Company por meio da
+                        transformação do plasmídeo designado como MON53570 na variedade de
+                        Soja A5547.
+                    </li>
+                    <li>
+                        <b>Evento RR2</b> ou <b>Evento Transgênico MON89788</b> – Significa o evento
+                        de inserção do gene transgênico identificado no pedido de prorrogação
+                        USDA nº 06-178-01p.
+                    </li>
+                    <li>
+                        <b>Orientações Técnicas</b> – Informações técnicas acerca da multiplicação
+                        das sementes da(s) Cultivar(es) Licenciada(s), que poderão ser dadas pela
+                        empresa <b>GDM</b> ao <b>Licenciado</b>, por escrito ou verbalmente, durante a
+                        administração dos campos e a multiplicação na Área, bem como
+                        disposições previstas na legislação aplicável e/ou estabelecidas pelos
+                        órgãos reguladores da produção e comercialização de sementes, as quais
+                        deverão ser rigorosamente cumpridas pelo <b>Licenciado</b>.
+                    </li>
+                    <li>
+                        <b>Marcas</b> – Significam as Marcas especificadas neste Contrato, de
+                        titularidade da <b>GDM</b>, as quais a <b>GDM</b> está devidamente autorizada a
+                        utilizar, licenciar e sublicenciar, bem como quaisquer outras Marcas ou
+                        símbolos de identificação que venham a ser utilizados ou registrados por
+                        <b>GDM</b> no futuro para a identificação da(s) Cultivar(es) Brasmax e/ou das
+                        sementes.
+                    </li>
+                    <li>
+                        <b>Portal</b> – É a página http://www.brasmaxgenetica.com.br/ – através
+                        da qual o <b>Licenciado</b> deverá, mediante cadrastramento de usuário e acesso
+                        com <i>login</i> e senha, enviar os relatórios e demais informações previstas neste
+                        Contrato. O <b>Licenciado</b> será o único responsável pelo uso do Portal feito
+                        através de seu cadastro e de suas informações de <i>login</i> e senha, e isentará
+                        a <b>GDM</b> de qualquer responsabilidade na hipótese de acesso ao cadastro de
+                        usuário do <b>Licenciado</b> no Portal por terceiros que não sejam o <b>Licenciado</b>.
+                    </li>
+                    <li>
+                        <b>Relatório de Produção de Sementes Brutas</b> – Relatório que deverá
+                        ser enviado pelo <b>Licenciado</b>, através do Portal, até o dia <b>15 de julho de
+                        cada ano de vigência do Contrato</b>, na forma do <b>Anexo II</b>, indicando o
+                        volume total de produção de Sementes Brutas, bem como eventuais
+                        descartes nos termos deste Contrato e do Termo Aditivo de Denifições
+                        Comerciais aplicável à safra em questão.
+                    </li>    
+                    <li>
+                        <b>Relatório de Sementes Comercializadas e de Uso Próprio</b> –
+                        Relatório que deverá ser enviado pelo <b>Licenciado</b>, através do Portal, até o
+                        dia <b>05 de dezembro de cada ano de vigência do Contrato</b>, na forma do
+                        <b>Anexo III</b>, indicando o volume total de Sementes Comercializadas e de Uso
+                        Próprio nos termos deste Contrato e do Termo Aditivo de Denifições
+                        Comerciais aplicável à safra em questão.
+                    </li>
+                    <li>
+                        <b>Relatório de Complemento de Vendas</b> – Relatório que deverá ser
+                        enviado pelo <b>Licenciado</b>, através do Portal, até o dia <b>15 de março de cada
+                        ano de vigência do Contrato</b>, na forma do <b>Anexo IV</b>, indicando o volume
+                        total final de Sementes Comerciais efetivamente beneficiadas, aprovadas e
+                        comercializadas e sementes destinadas ao Uso Próprio produzidas nos
+                        termos deste Contrato e do Termo Aditivo de Denifições Comerciais
+                        aplicável à safra em questão, bem como eventuais descartes.
+                    </li>
+                    <li>
+                        <b>Royalties</b> – Retribuição a ser paga pelo <b>Licenciado</b> à <b>GDM</b>, em razão
+                        da licença de uso da(s) Cultivar(es) Licenciada(s), nos termos deste
+                        Contrato. O <i>Royalty</i> previsto neste Contrato jamais se confundirá com
+                        qualquer tipo de cobrança referente ao uso da Tecnologia Intacta RR2
+                        PRO™ da Monsanto ou de outras tecnologias de terceiros cuja utilização
+                        tenha sido autorizada ao <b>Licenciado</b> pelo(s) respectivo(s) titular(es).    
+                    </li>
+                    <li>
+                        <b>Sementes Comerciais</b> – São as sementes produzidas, classificadas,
+                        aprovadas ou reprovadas pelo <b>Licenciado</b>, em todas as operações fiscais,
+                        que não tenha destino comprovado para a indústria e/ou ração animal, a
+                        partir do uso da(s) Cultivar(es) Licenciada(s), contendo tecnologias
+                        previstas neste Contrato ou em Termo Aditivo, para posterior
+                        comercialização no Território, de acordo com o estabelecido no presente
+                        Contrato e na lei e/ou regulamentação aplicáveis. O descarte de sementes
+                        (aprovadas e/ou reprovadas) fora das regras estabelecidas, tanto neste
+                        Contrato quanto nas normas Brasileiras, gera, automaticamente, a
+                        obrigação de pagar Royalties sobre tais volumes.
+                    </li>
+                    <li>
+                        <b>Sistema de Soja Monsanto</b> – Significa o sistema de licenciamento e
+                        captura de valor na cultura da soja desenvolvido pela Monsanto para o
+                        Território, o qual o <b>Licenciado</b> conhece e aceita. As condições do Sistema
+                        de Soja Monsanto poderão ser modificadas pela Monsanto anualmente,
+                        independentemente de notificação prévia.
+                    </li>
+                    <li>
+                        <b>Tecnologia RR</b> – Significa a tecnologia desenvolvida pela Monsanto e
+                        suas afiliadas que confere à soja resistência ao glifosato.
+                    </li>
+                    <li>
+                        <b>Tecnologia Intacta RR2 PRO™</b> – Significa a tecnologia desenvolvida
+                        pela Monsanto e suas afiliadas que confere à soja tolerância ao glifosato e
+                        resistência a insetos (em decorrência do Evento RR2 e do Evento Bt,
+                        respectivamente, e nenhum outro evento). A Tecnologia Intacta RR2 PRO™
+                        está protegida por direitos de propriedade intelectual de natureza diversa,
+                        compreendendo inclusive tecnologia patenteada e não patenteada,
+                        segredos de negócio dados e aprovações regulatórias e aperfeiçoamentos
+                        contínuos pela empresa Monsanto e suas afiliadas.
+                    </li>
+                    <li>
+                        <b>Termo Aditivo de Definições Comerciais</b> ou simplesmente <b>Termo
+                        Aditivo</b> – Documento que deverá ser firmado anualmente entre as Partes,
+                        onde serão determinadas a(s) Cultivar(es) Licenciada(s) a cada safra, as
+                        condições de comercialização e a política de bonificação, dentre outras
+                        avenças. O <b>Licenciado</b> deverá retornar o Termo Aditivo à <b>GDM</b>
+                        devidamente assinado até o dia 20 de setembro de cada ano de vigência do
+                        Contrato ou, na hipótese do <b>Licenciado</b> adquirir sementes de <b>GDM</b> com
+                        objetivo de multiplicação, deverá retornar o Termo Aditivo à <b>GDM</b> antes do
+                        recebimento das respectivas sementes, o que vier primeiro.
+                    </li>
+                    <li>
+                        <b>Território</b> – São os Estados da República Federativa do Brasil,
+                        indicados em Termo Aditivo de Definições Comerciais, onde o Licenciado
+                        poderá comercializar as Sementes Comerciais produzidas sob este
+                        Contrato.
+                    </li>
+                    <li>
+                        <b>Uso Próprio</b> – Sementes de soja resultantes do plantio da(s)
+                        Cultivar(es) Licenciada(s), reservadas para o uso próprio do Licenciado na
+                        safra seguinte e declaradas na forma dos Anexos III e IV, as quais deverão
+                        ser produzidas exclusivamente pelo Licenciado e utilizadas nos termos da
+                        Lei nº. 10.711 de 05 de agosto de 2003.
+                    </li>
+                    <li>
+                        <b>Volume Autorizado para Comercialização</b> – É o volume autorizado a
+                        cada safra através do respectivo Termo Aditivo de Definições Comerciais,
+                        para a comercialização de Sementes Comerciais a partir da(s) Cultivar(es)
+                        Licenciada(s).
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DO OBJETO</b></span><br/><br/>
+            <ol>
+                <li>
+                    O objeto deste Contrato é a licença não exclusiva, onerosa e intransferível
+                    concedida pela <b>GDM</b> ao <b>Licenciado</b>, em caráter precário e sujeita ao cumprimento
+                    de todos os termos deste Contrato, do direito de uso da(s) Cultivar(es) Licenciada(s),
+                    para a produção e posterior comercialização de Sementes Comerciais no Território,
+                    de acordo com as especificações estabelecidas em cada Termo Aditivo das
+                    Definições Comerciais celebrado entre as Partes.
+                    <ol>
+                        <li>
+                            A <b>GDM</b> reserva para si o direito de alterar, a seu exclusivo critério, as
+                            Cultivar(es) Licenciada(s) que será(ão) oferecida(s) ao <b>Licenciado</b> a cada safra,
+                            bem como as respectivas condições de comercialização que serão estabelecidas
+                            em cada Termo Aditivo de Definições Comerciais celebrado anualmente
+                            durante a vigência deste Contrato.
+                        </li>
+                        <li>
+                            A <b>GDM</b> neste ato também concede ao <b>Licenciado</b> uma licença não exclusiva,
+                            precária, gratuita e intransferível de uso das Marcas, nos termos estabelecidos
+                            neste Contrato. Todo e qualquer uso das Marcas reverterá exclusivamente em
+                            benefício dos respectivos titulares.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    O <b>Licenciado</b> não está autorizado a sublicenciar o uso da(s) Cultivar(es)
+                    Licenciada(s) e das Marcas, no Território ou fora dele, sem aprovação prévia e por
+                    escrito da <b>GDM</b>.
+                </li>
+                <li>
+                    É condição para a execução deste Contrato a apresentação, por parte do
+                    <b>Licenciado</b>, do instrumento contratual de empresa(s) que detenha(m) direitos de
+                    propriedade intelectual, compreendendo inclusive tecnologia patenteada e não
+                    patenteada, marcas, segredos de negócio, dados e aprovações regulatórias, bem
+                    como aperfeiçoamentos contínuos vinculado(s) à(s) Cultivar(es) Licenciada(s),
+                    incluindo mas não se limitando a Monsanto do Brasil Ltda., através do qual esta(s)
+                    empresa(s) concede(m) ao <b>Licenciado</b> as autorizações necessárias para multiplicar
+                    e vender as sementes de soja com os respectivos direitos, incluindo mas não se
+                    limitando a Tecnologia Intacta RR2 PRO™, com prazo idêntico ou superior ao deste
+                    instrumento, sendo que, se em qualquer momento tal(is) empresa(s) decidir(em) por
+                    cancelar seu(s) contrato(s) com o <b>Licenciado</b>¸ este instrumento fica
+                    automaticamente rescindido, não tendo o <b>Licenciado</b> direito a qualquer tipo de
+                    ressarcimento.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DO USO DA CULTIVAR</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Licenciado</b> não poderá utilizar a(s) Cultivar(es) Licenciada(s) de maneira
+                    diferente e para fins diversos daqueles autorizados pela <b>GDM</b> através do presente
+                    Contrato.        
+                </li>
+                <li>
+                    O <b>Licenciado</b> se compromete a usar e comercializar as Sementes Comerciais da(s)
+                    Cultivar(es) Licenciada(s) de acordo com a legislação em vigor e as Orientações
+                    Técnicas.
+                </li>
+                <li>
+                    O <b>Licenciado</b> se compromete a concentrar seus maiores esforços para zelar pela(s)
+                    e pela reputação da <b>GDM</b> e das Marcas no mercado de
+                    sementes, comprometendo-se a não tomar qualquer medida que possa ser
+                    considerada prejudicial ou que lhes diminua o valor.
+                </li>
+                <li>
+                    O <b>Licenciado</b> concorda em comunicar imediatamente a <b>GDM</b> a respeito de
+                    qualquer infração ou tentativa de infração da(s) Cultivar(es) Licenciada(s) que
+                    venha a ter conhecimento, sendo certo que a <b>GDM</b> tomará as medidas que julgar
+                    convenientes para resguardar seus direitos.
+                </li>
+                <li>
+                    O <b>Licenciado</b> tem direito, por todo o período de vigência da presente licença, de
+                    utilizar o volume de Sementes Comerciais licenciado de acordo com o Termo Aditivo
+                    de Definições Comerciais, ficando expressamente proibida a aquisição de sementes
+                    com outros licenciados e/ou produtores de sementes com destino a multiplicação,
+                    salvo mediante a autorização prévia e por escrito da <b>GDM</b>.
+                </li>
+                <li>
+                    De acordo com a viabilidade econômica, será responsabilidade do <b>Licenciado</b>
+                    realizar <i>roguing</i> (retirada de plantas diferentes à variedade plantada) nas Áreas,
+                    visando à manutenção da pureza das Sementes Comerciais na categoria a ser
+                    produzida.
+                </li>
+                <li>
+                    O <b>Licenciado</b> se compromete a cumprir com toda a legislação (Federal, Estadual e
+                    Municipal) pertinente ao vazio sanitário relativo às Áreas utilizadas.
+                </li>
+                <li>
+                    É de responsabilidade do <b>Licenciado</b> todo o custo com o processo de multiplicação,
+                    armazenamento, beneficiamento, irrigação, enfim, tudo o que se fizer necessário
+                    para a produção das Sementes Comerciais nos termos deste Contrato.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece que deverá seguir todas as práticas agronômicas de
+                    manejo, inclusive o Refúgio, informadas pela Monsanto do Brasil Ltda. ou por
+                    qualquer outra empresa que detenha direitos de propriedade intelectual
+                    vinculado(s) à(s) Cultivar(es) Licenciada(s), assim como pela legislação vigente,
+                    comprometendo-se a recomendar tais práticas quando da venda das Sementes
+                    Comerciais.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece e confirma que as sementes com Tecnologia Intacta
+                    RR2 PRO™ (i) não são recomendadas para solos compactados e sem palhada ou
+                    áreas com encharcamento; bem como (ii) apresentam suscetibilidade a fitóftora.
+                </li>
+            </ol>        
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA VIGÊNCIA</b></span><br/><br/>
+            <ol>
+                <li>
+                    O presente Contrato entrará em vigor na data de sua assinatura pelas Partes e terá
+                    a vigência pelo mesmo prazo ajustado do(s) Termo(s) Aditivo(s) de Definições
+                    Comerciais vinculado(s) a este instrumento.    
+                </li>
+                <li>
+                    O término ou rescisão do presente Contrato implicará a rescisão imediata do(s)
+                    Termo(s) Aditivo(s) de Definições Comerciais vigente(s) vinculado(s) a este
+                    instrumento.
+                </li>
+                <li>
+                    O término ou rescisão do(s) Termo(s) Aditivo(s) de Definições Comerciais vigente(s)
+                    e a não celebração de Termo Aditivo para a safra subsequente implicará a rescisão
+                    imediata do presente Contrato.
+                </li>
+                <li>
+                    A emissão da Autorização (Anexo I) por parte da <b>GDM</b> está vinculada ao (i) envio
+                    das informações nela constantes por parte do <b>Licenciado</b>, de acordo com a
+                    cláusula “Da Utilização do portal” e a (ii) celebração do(s) Termo(s) Aditivo(s) de
+                    Definições Comerciais para a safra correspondente.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DAS OBRIGAÇÕES DO LICENCIADO</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Licenciado</b> assume a obrigação de:
+                    <ol>
+                        <li>
+                            Observar e cumprir todos os termos deste Contrato de acordo com as
+                            leis e regulamentos aplicáveis no Brasil, inclusive de inscrição e/ou
+                            credenciamento no Registro Nacional de Sementes e Mudas (RENASEM),
+                            bem como as Orientações Técnicas;
+                        </li>
+                        <li>
+                            Inscrever os campos de produção das Sementes Comerciais e das
+                            sementes destinadas ao Uso Próprio junto à(s) entidade(s) de certificação
+                            e/ou fiscalização aplicável(is), seguindo as determinações legais e
+                            administrativas que regulam a produção e comercialização das Sementes
+                            Comerciais no Território;
+                        </li>
+                        <li>
+                            Empenhar-se na divulgação da(s) Cultivar(es) Licenciada(s), na qual
+                            receberá apoio e orientação técnica da <b>GDM</b> e/ou de terceiros
+                            expressamente indicados pela <b>GDM</b>, de acordo com a disponibilidade da
+                            mesma, conforme a <b>GDM</b> entender necessário;
+                        </li>
+                        <li>
+                            No caso de solicitação da <b>GDM</b> quanto ao cumprimento de parâmetros<br/>
+                            técnicos de qualidade, o <b>Licenciado</b> deverá disponibilizar a lista de<br/>
+                            produtores cooperados devidamente aprovados pela <b>GDM</b>, a lista de<br/>
+                            laboratórios prestadores de serviço de análise, localização e áreas de todos<br/>
+                            os campos de multiplicação da(s) Cultivar(es) Licenciada(s), assim como o<br/>
+                            volume total de sementes produzidas, beneficiadas, aprovadas,<br/>
+                            comercializadas e utilizadas para Uso Próprio sob este Contrato, seja pelo<br/>
+                            Licenciado ou por seus cooperantes previamente aprovados pela <b>GDM</b>;
+                        </li>
+                        <li>
+                            Não permitir a reembalagem de sementes produzidas para terceiros,
+                            exceto com a autorização por escrito da <b>GDM</b>;
+                        </li>
+                        <li>
+                            Enviar à <b>GDM</b>, através do Portal, até o dia <b>15 de julho de cada ano
+                            de vigência do Contrato</b> o Relatório de Produção de Sementes Brutas;
+                        </li>
+                        <li>
+                            Enviar à <b>GDM</b>, através do Portal, até o dia <b>05 de dezembro de cada
+                            ano de vigência do Contrato</b>, o Relatório de Sementes Comercializadas e
+                            de Uso Próprio;
+                        </li>
+                        <li>
+                            Enviar à <b>GDM</b>, através do Portal, até o dia <b>15 de março de cada ano
+                            de vigência do Contrato</b>, o Relatório de Complemento de Vendas;
+                        </li>
+                        <li>
+                            Eliminar, destinando à indústria, os lotes de Sementes Comerciais
+                            aprovados que não sejam comercializados e também os lotes reprovados
+                            para comercialização, devendo o <b>Licenciado</b>, previamente à eliminação
+                            destes lotes, solicitar a autorização expressa da <b>GDM</b> (por carta registrada
+                            ou e-mail), mencionando expressamente o volume que deseja encaminhar
+                            para industrialização, de modo a obter autorização de descarte;
+                            <ol>
+                                <li>
+                                    Uma vez recebida a solicitação de descarte, a <b>GDM</b> terá o prazo
+                                    máximo de 7 (sete) dias úteis para autorizar o descarte ou auditar
+                                    (pessoalmente ou por algum representante) os lotes que o <b>Licenciado</b>
+                                    deseja descartar e qualquer outra informação correlata. Em caso de
+                                    silêncio da <b>GDM</b> no referido prazo de 7 (sete) dias (isto é, não havendo
+                                    comunicação de auditoria ou autorização de descarte neste prazo) o
+                                    <b>Licenciado</b> ficará livre para efetuar o mesmo;
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Ao efetuar o descarte, obrigatoriamente especificar nas notas fiscais
+                            de venda do produto descartado e destinado à industrialização os seguintes
+                            dados: nome da Cultivar Licenciada, categoria, lotes e quantidades,
+                            juntamente com a descrição do destino industrial das sementes. Tais notas
+                            fiscais deverão ser conservadas nos arquivos do <b>Licenciado</b> pelo prazo de
+                            05 (cinco) anos subsequentes à vigência do Contrato e poderão ser
+                            solicitadas a qualquer tempo pela <b>GDM</b>;
+                        </li>
+                        <li>
+                            Salvo autorização por escrito da <b>GDM</b>, não prestar serviço de
+                            classificação e/ou beneficiamento a terceiros de sementes de soja de
+                            variedades que contenham genética de propriedade intelectual da <b>GDM</b> a
+                            terceiros, ainda que estes justifiquem que se trata de semente destinada a
+                            uso próprio nos termos da Lei nº. 10.711 de 05 de agosto de 2003;
+                        </li>
+                        <li>
+                            Pagar pontualmente a <b>GDM</b> os valores devidos;
+                        </li>
+                        <li>
+                            Fazer constar, nas embalagens das sementes de qualquer categoria
+                            obtidas mediante multiplicação e destinadas à comercialização, assim
+                            como em todo outro material de publicidade, o nome da cultivar, a
+                            logomarca e as expressões definidas, inclusive de soja geneticamente
+                            modificada que confere à soja tolerância ao glifosato e resistência a insetos
+                            (em decorrência do Evento RR2 e do Evento Bt, respectivamente, e nenhum
+                            outro evento) e também a logomarca que identifique ser esta soja resistente
+                            ao disposto acima, tudo conforme as regras de Uso das Marcas deste
+                            Contrato e regras de empresa que detenha direitos de propriedade
+                            intelectual vinculada(s) a(s) Cultivar(es) Licenciada(s);
+                        </li>
+                        <li>
+                            Não adquirir de terceiros para fins de produção, sementes de soja
+                            produzidas a partir da(s) Cultivar(es) Licenciada(s) ou de qualquer outra
+                            cultivar de propriedade da <b>GDM</b> e/ou de suas afiliadas, salvo mediante
+                            autorização por escrito da <b>GDM</b>;
+                        </li>
+                        <li>
+                            É vedado ao <b>Licenciado</b> (i) a comercialização de sementes fora do
+                            território autorizado por <b>GDM</b> e (ii) a comercialização de sementes de
+                            maneira que prejudique o valor da(s) Cultivar(es) Licenciada(s) no mercado
+                            de sementes no território;
+                        </li>
+                        <li>
+                            Observar e fazer cumprir fielmente os termos sistemas de regras
+                            determinados por outra empresa que detenha direitos de propriedade
+                            intelectual vinculada(s) a(s) Cultivar(es) Licenciada(s), inclusive do Sistema
+                            de Soja Monsanto, assim como todo o tocante aos materiais de divulgação
+                            (logomarca, informações técnicas, refúgio, etc.), sacarias, e quaisquer
+                            outros materiais que façam menção sobre as exigências das respectivas
+                            regras no uso de suas marcas para todo o citado;
+                        </li>
+                        <li>
+                            No tocante à embalagem e materiais promocionais, assegurar que
+                            qualquer informação cuja divulgação seja obrigatória, ocorra de acordo com
+                            a legislação aplicável a sementes e cultivares, com o disposto neste
+                            Contrato e com os padrões fornecidos pela <b>GDM</b>;
+                        </li>
+                        <li>
+                            Seguir os padrões fornecidos pela <b>GDM</b> no tocante às embalagens a
+                            serem utilizadas para as Sementes Comerciais, conforme cláusula “Da
+                            Regra de Uso das Marcas”;
+                        </li>
+                        <li>
+                            Atender as disposições do objeto deste contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Mediante prévia e expressa autorização da <b>GDM</b>, o <b>Licenciado</b> poderá firmar
+                    Contratos com cooperantes para realizar as multiplicações, desde que (a) os
+                    volumes totais da autorização anual sejam respeitados por todos os envolvidos, (b)
+                    o <b>Licenciado</b> mantenha rígido controle sobre a produção dos cooperantes, devendo
+                    constar expressamente dos contratos celebrados entre o <b>Licenciado</b> e seus
+                    cooperantes a previsão de visitas, auditorias, inspeções e fiscalizações pela <b>GDM</b>
+                    ou auditores independentes indicados pela <b>GDM</b> mediante previa comunicação, (c)
+                    seja mantido cadastro atualizado de todos os envolvidos, (d) seja garantido
+                    completo e permanente intercâmbio de informações com a <b>GDM</b> a esse respeito e,
+                    especialmente, (e) que as Sementes Comerciais produzidas por tais cooperantes
+                    sejam entregues única e <em>exclusivamente</em> ao <b>Licenciado</b>.    
+                    <ol>
+                        <li>
+                            Em qualquer caso, o <b>Licenciado</b> será o único e diretamente
+                            responsável pelo cumprimento das obrigações descritas neste Contrato,
+                            ainda que a <b>GDM</b> autorize a execução de contratos entre o <b>Licenciado</b> e
+                            eventuais cooperantes;
+                        </li>
+                        <li>
+                            Em nenhuma hipótese os cooperantes do <b>Licenciado</b> poderão destinar
+                            sementes para Uso Próprio, devendo a totalidade da produção dos
+                            cooperantes compreender apenas Sementes Comerciais para posterior
+                            comercialização pelo <b>Licenciado</b>.
+                        </li>
+                    </ol>
+                </li>        
+                <li>
+                    O <b>Licenciado</b> será o único e exclusivo responsável pela qualidade das Sementes
+                    Comerciais, sejam elas produzidas pelo <b>Licenciado</b> ou por seus cooperantes, se
+                    obrigando, frente à <b>GDM</b>, a responder pelas reclamações de terceiros relacionados
+                    à pureza genética, poder germinativo e todo e qualquer outro vício eventualmente
+                    existente; seja por danos e/ou prejuízos diretos e/ou indiretos. Igualmente, o
+                    <b>Licenciado</b> se obriga a reparar eventuais prejuízos e/ou danos que sejam causados
+                    à imagem, crédito ou bom nome comercial da <b>GDM</b>, em virtude de defeitos de
+                    qualidade das Sementes Comerciais produzidas.
+                </li>
+                <li>
+                    O <b>Licenciado</b> se obriga a seguir toda a legislação vigente no tocante ao uso correto
+                    da denominação da cultivar, principalmente no tocante aos documentos fiscais e
+                    etiquetas de sacaria. Para tanto, reconhece que, nestes casos específicos, deve ser
+                    utilizada a denominação da(s) Cultivar(es) Licenciada(s) e, em hipótese alguma, o
+                    nome comercial das mesmas ou quaisquer tipos de associações vinculando a
+                    denominação com o nome comercial da cultivar.
+                    <ol>
+                        <li>
+                            A <b>GDM</b> se compromete em transmitir ao <b>Licenciado</b> as denominações
+                            da(s) cultivar(es) com seu(s) respectivo(s) nome(s) comercial(is), constantes
+                            do Termo Aditivo de Definições Comerciais.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA UTILIZAÇÃO DO PORTAL</b></span><br/><br/>
+            <ol>
+                <li>
+                    A utilização do Portal pelo <b>Licenciado</b> para o envio dos relatórios e informações
+                    previstas neste Contrato se dará mediante acesso através de <i>login</i> e senha, sendo
+                    responsabilidade exclusiva do <b>Licenciado</b> a utilização do Portal, em qualquer
+                    momento, devendo o <b>Licenciado</b> não informar a terceiros esses dados de <i>login</i> e
+                    senha, responsabilizando-se integralmente pelo uso que deles seja feito.
+                    <ol>
+                        <li>
+                            A senha será enviada ao endereço eletrônico (e-mail) indicado pelo
+                            <b>Licenciado</b> no preâmbulo deste Contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    O <b>Licenciado</b> compromete-se a informar a <b>GDM</b> imediatamente, e através de meio
+                    seguro, a respeito de qualquer uso não autorizado de sua conta, bem como de
+                    qualquer acesso não autorizado ao Portal por terceiros.
+                </li>
+                <li>
+                    O <b>Licenciado</b> é o único responsável pelas operações efetuadas por meio de seu
+                    login e senha no Portal, sendo que assume como vinculantes e legalmente válidas
+                    todas as informações enviadas.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece que é responsável por quaisquer informações falsas ou
+                    incorretas que possam ser inseridas para a utilização e acesso ao Portal. O
+                    <b>Licenciado</b> isenta a <b>GDM</b> de qualquer responsabilidade quanto à veracidade dos
+                    dados fornecidos.
+                </li>
+                <li>
+                    A <b>GDM</b> poderá alterar, a qualquer tempo e sem aviso prévio, as condições de acesso
+                    ao seu Portal.
+                </li>
+                <li>
+                    Não é permitida a utilização de nenhum dispositivo, <i>software</i>, aplicativo ou outro
+                    recurso que venha a interferir nas atividades e operações do Portal, bem como nas
+                    contas ou bancos de dados, sem a prévia análise e aprovação da <b>GDM</b>.
+                </li>
+                <li>
+                    A <b>GDM</b> não se responsabiliza por qualquer dano, prejuízo ou perda no equipamento
+                    do <b>Licenciado</b> decorrentes do uso do Portal, inclusive de qualquer acesso realizado
+                    por terceiros. A <b>GDM</b> também não será responsável por qualquer vírus que possa
+                    atacar o equipamento do <b>Licenciado</b> em decorrência do acesso, utilização ou
+                    navegação no Portal ou como consequência da transferência de dados, arquivos,
+                    imagens, textos ou áudio contidos no mesmo. O <b>Licenciado</b> não poderá atribuir à
+                    <b>GDM</b> nenhuma responsabilidade nem exigir o pagamento de quaisquer
+                    indenizações, inclusive por lucro cessante, em virtude de prejuízos resultantes de
+                    dificuldades técnicas ou falhas nos sistemas operacionais e anti-virus utilizados
+                    pelo <b>Licenciado</b> ou falhas gerais decorrentes da navegação do <b>Licenciado</b> na
+                    <i>internet</i>. Eventualmente, o Portal poderá não estar disponível por motivos técnicos
+                    ou falhas na <i>internet</i>, ou por qualquer outro evento fortuito ou de força maior alheio
+                    ao controle da <b>GDM</b>, sendo certo que nenhuma responsabilidade poderá ser
+                    atribuída à <b>GDM</b> em razão de eventual indisponibilidade temporária do Portal.
+                </li>                
+            </ol>        
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DOS PREÇOS E FORMAS DE PAGAMENTOS</b></span><br/><br/>
+            <ol>
+                <li>
+                    Para a(s) Cultivar(es) Licenciada(s), o <b>Licenciado</b> deverá pagar a <b>GDM</b>, a título de
+                    <i>royalties</i>, o valor em Reais, para cada saca de 40 (quarenta) quilogramas de
+                    sementes, das classes C1, C2, S1 e S2, utilizada para uso próprio ou comercializada 
+                    na safra agrícola vigente, conforme condições estabelecidas no Termo Aditivo de 
+                    Definições Comerciais aplicável à safra em referência. Ressalta-se que o valor aqui 
+                    disposto não inclui qualquer tipo de quantia a ser repassada para a empresa 
+                    Monsanto a título da Tecnologia Intacta RR2 PROTM. ou a qualquer outro obtentor 
+                    de Biotecnologia.
+                    <ol>
+                        <li>
+                            Os valores apurados a título de <i>royalties</i> deverão ser pagos pelo 
+                            <b>Licenciado</b> à GDM, em 2 (duas) parcelas, da seguinte forma:
+                            <ol>
+                                <li>
+                                    Na forma de adiantamento, o valor correspondente a 30% (trinta por 
+                                    centro) do Volume Autorizado para Comercialização indicado no Termo 
+                                    Aditivo com vencimento em <b>31 de agosto de cada ano de vigência do 
+                                    contrato.</b>
+                                </li>
+                                <li>
+                                    O valor remanescente em <b>15 de dezembro de cada ano de vigência 
+                                    do contrato</b>, considerando os volumes efetivamente comercializados no 
+                                    “Relatório de Sementes Comercializadas e de Uso Próprio” (Anexo III).
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Na hipótese de diferença do valor pago na parcela de adiantamento 
+                            com vencimento em 31 de agosto de cada ano de vigência do contrato pelo 
+                            <b>Licenciado</b> levando-se em consideração Volume Autorizado para 
+                            Comercialização indicado neste Termo Aditivo e os volumes efetivamente 
+                            comercializados no “Relatório de Sementes Comercializadas e de Uso 
+                            Próprio” (Anexo III), a <b>GDM</b> adotará as seguintes medidas:
+                            <ol>
+                                <li>
+                                    Caso o valor pago pelo <b>Licenciado</b> seja maior que o efetivamente 
+                                    devido à <b>GDM</b>, será concedido ao <b>Licenciado</b> um crédito da diferença 
+                                    apurada. Nesse caso, a <b>GDM</b> reembolsará ao <b>Licenciado</b> o valor devido.
+                                </li>
+                                <li>
+                                    Caso o valor pago pelo <b>Licenciado</b> seja menor que o efetivamente 
+                                    devido, o <b>Licenciado</b> deverá pagar à <b>GDM</b> a diferença, conforme 
+                                    atualização a ser apurada na parcela dos <i>Royalties</i> com vencimento em 15 
+                                    de dezembro do ano de vigência do Contrato de Licença de Uso de Cultivar.
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    O pagamento correspondente à diferença eventualmente apurada no Relatório de
+                    Complemento de Vendas deverá ser efetuado até o dia <b>30 de março de cada ano
+                    de vigência do Contrato</b>.
+                </li>
+                <li>
+                    Fica acordado que o valores apurados nos termos acima deverão ser pagos através 
+                    de depósito em conta bancária a ser informada pela <b>GDM</b> ou através de boleto 
+                    bancário enviado ao <b>Licenciado</b>. Ainda, fica acordado que os valores estipulados 
+                    se tratam de valores líquidos, sem qualquer desconto ou abatimento de qualquer 
+                    natureza.
+                </li>
+                <li>
+                    Para efeito de cobrança dos valores de <i>royalties</i> previstos deverá ser considerada
+                    Semente Comercial e uso próprio, toda a semente classificada, aprovada ou
+                    reprovada, que não tenha destino comprovado para a indústria e/ou ração animal.
+                    O descarte de sementes (aprovadas e/ou reprovadas) fora das regras estabelecidas
+                    neste contrato gera, automaticamente, a obrigação de pagar <i>Royalties</i> sobre tais
+                    volumes.
+                </li>
+                <li>
+                    Os valores referentes à utilização das tecnologias vinculadas à(s) Cultivar(es)
+                    Licenciada(s) deverão ser pagos de acordo com as orientações dos respectivos
+                    titulares.
+                    <ol>
+                        <li>
+                            A obrigação referente à utilização da Tecnologia Intacta RR2 PRO™
+                            deve ser paga para Monsanto, em condições que esta empresa fixe para
+                            operações no País, e para quem e onde esta decida.
+                        </li>
+                        <li>
+                            A remuneração devida a <b>GDM</b> pelo <b>Licenciado</b> por uso da(s)
+                            Cultivar(es) Licenciada(s), não deve se confundir com uma eventual
+                            remuneração, devida a Monsanto pela utilização da Tecnologia Intacta RR2
+                            PRO™ ou a qualquer outro obtentor de Biotecnologia.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Em caso de atraso no pagamento de quaisquer valores devidos à <b>GDM</b> sob este
+                    Contrato, o <b>Licenciado</b> pagará uma multa moratória de 10% (dez por cento) sobre
+                    o montante devido, devidamente corrigido pelo IGPM/FGV (ou por outro índice que
+                    o substitua), mais juros de 1,00 % (um por cento) ao mês, bem como deverá o
+                    <b>Licenciado</b> ressarcir eventuais gastos judiciais ou extrajudiciais incorridos pela
+                    <b>GDM</b> para receber seu crédito.
+                </li>
+                <li>
+                    Se, nos prazos estabelecidos neste instrumento, o <b>Licenciado</b> não enviar os
+                    relatórios com informações reais, ou ainda, havendo diferenças entre as
+                    quantidades de sementes declaradas pelo <b>Licenciado</b> através de dados enviados a
+                    <b>GDM</b> e as quantidades efetivamente existentes, poderá ocorrer a rescisão
+                    automática do presente contrato, independentemente de qualquer aviso ou
+                    interpelação.
+                    <ol>
+                        <li>
+                            Ocorrendo o acima previsto, o <b>Licenciado</b> deverá pagar em favor da
+                            <b>GDM</b> o valor integral correspondente aos <i>Royalties</i> relativos à quantidade
+                            de sementes não declarada, devidamente corrigido IGPM/FGV (ou por
+                            outro índice que o substitua), acrescidos de juros de 1,00% (um por cento)
+                            ao mês e de eventuais gastos judiciais ou extrajudiciais que a <b>GDM</b> tenha
+                            para receber seu crédito, inclusive honorários advocatícios equivalentes a
+                            20% (vinte por cento) sobre o valor do débito, podendo ainda a <b>GDM</b> cobrar,
+                            a título de cláusula penal (artigos 408 e seguintes do Código Civil), a multa
+                            convencional não compensatória de 100% (cem por cento) sobre os
+                            <i>royalties</i> devidos, bem como prejuízos.
+                        </li>
+                    </ol>    
+                </li>
+                <li>
+                    O <b>Licenciado</b> autoriza a emissão de título de crédito, inclusive duplicatas, para
+                    cobrança dos <i>Royalties</i>, correção monetária, juros e possíveis multas. Além disso,
+                    fica autorizada pelo <b>Licenciado</b>, em caso de inadimplemento, a realização de
+                    protestos dos títulos a serem emitidos.
+                </li>                
+            </ol>        
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA BONIFICAÇÃO</b></span><br/><br/>
+            <ol>
+                <li>
+                    A <b>GDM</b> poderá conceder uma bonificação ao <b>Licenciado</b>, a exclusivo critério da
+                    <b>GDM</b> e desde que o <b>Licenciado</b> esteja em pleno e integral cumprimento de todos
+                    os termos deste Contrato.
+                </li>
+                <li>
+                    O valor da bonificação será variável em função dos critérios estabelecidos no Termo
+                    Aditivo de Definições Comerciais.
+                    <ol>
+                        <li>
+                            O não reconhecimento da <b>GDM</b> de qualquer tipo de bonificação não
+                            ensejará direito a qualquer tipo de reclamação por parte do <b>Licenciado</b>.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DOS DIREITOS ADICIONAIS DA GDM</b></span><br/><br/>
+            <ol>
+                <li>
+                    São direitos da <b>GDM</b>, sem prejuízo de outros descritos neste Contrato:
+                    <ol>
+                        <li>
+                            Realizar revisões, visitas, auditorias e fiscalizações na Área e em
+                            quaisquer instalações do <b>Licenciado</b> e de seus cooperantes onde as
+                            Sementes Comerciais sejam produzidas, beneficiadas, armazenadas ou de
+                            qualquer forma manuseadas, bem como em equipamentos e campos, por
+                            amostragem e a seu exclusivo critério, visando assegurar o cumprimento
+                            pelo <b>Licenciado</b> do presente Contrato, da legislação aplicável e das
+                            Orientações Técnicas e padrões estabelecidos pela <b>GDM</b>;
+                        </li>
+                        <li>
+                            Realizar as análises de germinação, vigor, pureza física e pureza
+                            varietal em seu próprio laboratório de análises ou em laboratórios
+                            especialmente contratados para este fim;
+                        </li>
+                        <li>
+                            Emitir autorização expressa ao <b>Licenciado</b> para início da
+                            multiplicação;
+                        </li>
+                        <li>
+                            Aprovar ou reprovar a lista de produtores cooperados indicados pelo
+                            <b>Licenciado</b>;
+                        </li>
+                        <li>
+                            Rescindir este ou qualquer outro instrumento firmado entre as Partes
+                            na hipótese do <b>Licenciado</b> possuir qualquer débito pretérito em favor da
+                            <b>GDM</b>.
+                        </li>
+                        <li>
+                            Indicar o Volume Autorizado para Comercialização e o Território de
+                            venda das Sementes Comerciais.
+                        </li>
+                    </ol>
+                </li>
+            </ol>                
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DAS INSPEÇÕES E AUDITORIAS</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Licenciado</b> reconhece que a <b>GDM</b> poderá, em qualquer momento,
+                    diretamente ou por auditor independente, inspecionar e/ou auditar os processos
+                    de multiplicação e comercialização das Sementes Comerciais, nos termos da
+                    presente licença, bem como quaisquer instalações do <b>Licenciado</b> e de seus
+                    cooperantes onde as Sementes Comerciais sejam produzidas, beneficiadas,
+                    armazenadas ou de qualquer forma manuseadas.
+                    <ol>
+                        <li>
+                            O <b>Licenciado</b> reconhece e concorda que as inspeções e/ou auditorias
+                            poderão ocorrer em até 5 (cinco) anos após o término ou rescisão do
+                            presente Contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Com o objetivo de viabilizar a inspeção e/ou auditorias descritas, o
+                    <b>Licenciado</b> desde já permite à <b>GDM</b> e aos auditores independentes contratados
+                    pela <b>GDM</b> o livre acesso de seus representantes aos campos de cultivo, unidades
+                    de beneficiamento, armazéns e depósitos, permitindo ainda livre acesso aos mapas
+                    de produção e comercialização de sementes, aos laboratórios de sementes
+                    utilizados pelo <b>Licenciado</b>, aos laudos e boletins de análise de sementes de
+                    Cultivar(es) Licenciada(s) gerados por si ou por terceiros (ainda que estejam sob a
+                    guarda destes últimos), a qualquer evento de controle e movimentação de
+                    mercadorias, incluindo estoques de grãos e sementes de soja, à política de preços
+                    praticados pelo <b>Licenciado</b> no Território, à documentação em papel ou digital
+                    relativa à compra e venda de sementes de soja, assim como todo e qualquer outro
+                    documento, dado, elemento ou informação relativa à produção, beneficiamento e
+                    comercialização de sementes de soja, em qualquer formato, inclusive digital, a fim
+                    de que sejam realizadas todas as verificações e inspeções que se fizerem
+                    necessárias para averiguar o cumprimento fiel deste Contrato, bem como da
+                    legislação em vigor.
+                </li>
+                <li>
+                    Mediante solicitação escrita da <b>GDM</b>, o <b>Licenciado</b> permitirá análise
+                    confidencial de todos os documentos pertinentes e/ou outras informações escritas
+                    pertinentes, em qualquer formato, a fim de confirmar que o <b>Licenciado</b> cumpriu
+                    suas obrigações previstas neste Contrato.
+                </li>
+                <li>
+                    A <b>GDM</b> se obriga a manter sigilo das informações obtidas do <b>Licenciado</b> ou
+                    advindas com a fiscalização exercida sobre as atividades em questão, em relação
+                    ao objeto principal deste Contrato, exceto quando o uso de tais informações seja
+                    necessário para defender seus direitos estabelecidos neste instrumento.
+                </li>
+                <li>
+                    No caso de alteração do sistema (<i>software</i>) utilizado pelo <b>Licenciado</b>, este se
+                    compromete a manter os registros/dados relativos à(s) Cultivar(es) Licenciada(s)
+                    disponíveis e acessíveis a possíveis auditorias que possam ser realizadas em até 5
+                    (cinco) anos após o término ou rescisão do presente Contrato.
+                    <ol>
+                        <li>
+                            Na ocorrência específica de (a) migração/alteração de sistema ou (b)
+                            eliminação/alteração de códigos internos vinculados a determinada(s)
+                            variedade(s) de Cultivar(es) Licenciada(s), o <b>Licenciado</b> se compromete a
+                            dar rastreabilidade para o processo, a fim de que não haja perda de
+                            informação na transição disposta.
+                        </li>
+                    </ol>
+                </li>
+            </ol>                
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA PROPRIEDADE INTELECTUAL</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Licenciado</b> reconhece e concorda que a <b>GDM</b> é detentora exclusiva dos
+                    direitos de comercialização/exploração comercial da(s) Cultivar(es) Licenciada(s),
+                    cuja propriedade intelectual pertence a Asociados Don Mario S. A. e/ou GDM
+                    Genética do Brasil S. A., conforme o caso, nos termos da Lei Federal 9.456 de 1997.
+                    <ol>
+                        <li>
+                            O <b>Licenciado</b> reconhece e concorda que a presente outorga não lhe
+                            concede qualquer titularidade ou direito sobre a(s) Cultivar(es)
+                            Licenciada(s) ou sobre qualquer das Marcas senão os direitos de uso
+                            especificados no presente instrumento.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece e concorda que as Sementes Comerciais são
+                    derivadas da(s) Cultivar(es) Licenciada(s), de propriedade da Asociados Don Mario
+                    S.A. e/ou GDM Genética do Brasil S. A., e que o material nelas contido, possui
+                    tecnologias de propriedade de terceiros, compreendendo inclusive tecnologia
+                    patenteada e não patenteada, segredos de negócio dados e aprovações regulatórias
+                    e aperfeiçoamentos contínuos. Nesse sentido, o <b>Licenciado</b> se compromete a
+                    utilizar a(s) Cultivar(es) Licenciada(s) única e exclusivamente para os fins e formas
+                    aqui descritos.
+                </li>
+                <li>
+                    As Partes reconhecem e concordam que o disposto neste Contrato não exaure
+                    os direitos da <b>GDM</b> com relação às autorizações futuras ao <b>Licenciado</b> e/ou a
+                    qualquer terceiro, no que se refere à(s) Cultivar(es) Licenciada(s), nem a qualquer
+                    outro direito de propriedade intelectual da <b>GDM</b> e/ou de qualquer empresa a ela
+                    relacionada, não sendo admitida qualquer interpretação no sentido de exaustão de
+                    direitos em virtude deste Contrato.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece que as cultivares em questão se encontram, neste
+                    momento, registradas perante o Registro Nacional de Cultivares – RNC, protegidas
+                    ou em processo de obtenção da proteção perante o Serviço Nacional de Proteção de
+                    Cultivares – SNPC, sendo que este processo poderá ser concluído na vigência do
+                    presente instrumento.
+                </li>
+                <li>
+                    Em caso de término ou rescisão deste Contrato, por qualquer motivo, o
+                    <b>Licenciado</b> destinará toda e qualquer Semente Comercial à indústria como soja
+                    grão.
+                </li>
+                <li>
+                    As disposições contidas nesta cláusula prevalecem ao término ou rescisão
+                    deste Contrato por qualquer motivo.
+                </li>
+            </ol>                
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA REGRA DE USO DAS MARCAS</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Licenciado</b> reconhece que não é proprietário de nenhuma Marca citada
+                    neste instrumento, sendo que a(s) proprietária(s) mantém o direito sobre a mesma
+                    para especificar todos os aspectos de uso, incluindo, mas não limitado à: forma,
+                    lugar, tipo, <i>layout</i>, desenho, canais comerciais, canais de distribuição e mídia, ou
+                    para estes usos, ou em conexão com todas as formas de exposição, marketing,
+                    etiquetas, descrição de produtos, sites de internet, materiais promocionais de
+                    vendas, e todas as outras formas de uso da Marca. Todo uso das Marcas reverterá
+                    em benefício da(s) respectiva(s) proprietária(s). É obrigação do <b>Licenciado</b> acatar
+                    todas as orientações de uso das Marcas, sejam verbais ou escritas, que poderão ser
+                    modificadas ou revisadas pela(s) proprietária(s) conforme entender(em) necessário,
+                    sem necessidade de expresso aviso prévio.
+                </li>
+                <li>
+                    A comercialização de Sementes Comerciais sem observar as obrigações
+                    descritas neste Contrato, ou mesmo a divulgação publicitária das Sementes
+                    Comerciais e/ou da(s) Cultivar(es) Licenciada(s) em violação a qualquer termo
+                    estabelecido no presente Contrato, serão considerados como descumprimento
+                    grave por parte do <b>Licenciado</b>, que deverá deixar de fazer uso e referência às
+                    Marcas e responderá pelos danos e prejuízos eventualmente decorrentes da
+                    violação, sem prejuízo da rescisão imediata deste Contrato pela <b>GDM</b>, a exclusivo
+                    critério da <b>GDM</b>.
+                </li>
+                <li>
+                    O uso das Marcas pelo <b>Licenciado</b> deverá ser restrito à execução do objeto
+                    deste Contrato e em estrita observância às orientações contidas no Manual da
+                    Marca a ser entregue pela <b>GDM</b>.
+                </li>
+                <li>
+                    O <b>Licenciado</b> deverá zelar pelo bom nome e elevado conceito das Marcas,
+                    abstendo-se da prática de qualquer ato que as possa desabonar e corrigindo
+                    qualquer falha apontada no mesmo dia da solicitação da(s) proprietária(s) da
+                    Marca, ou em um prazo compatível conforme o caso, sendo que em nenhuma
+                    hipótese este prazo poderá exceder 10 (dez) dias da solicitação.
+                </li>
+                <li>
+                    A autorização do uso das Marcas não concede ao <b>Licenciado</b> qualquer direito
+                    sobre as mesmas e/ou quaisquer símbolos ou sinais distintivos delas integrantes,
+                    independentemente do tempo de utilização, sendo vedada qualquer alteração nas
+                    Marcas pelo <b>Licenciado</b>. A utilização das Marcas pelo <b>Licenciado</b> será realizada
+                    em observação às instruções da <b>GDM</b>, especialmente quanto a sua forma de
+                    apresentação (Quadro I).
+                </li>
+                <li>
+                    Os direitos da(s) proprietária(s) com relação às Marcas não permitem ao
+                    <b>Licenciado</b>, durante a vigência deste Contrato ou inclusive depois de seu término
+                    ou rescisão, alegar que havia sido criado em seu benefício, qualquer direito de
+                    titularidade ou propriedade com relação às Marcas, bem como qualquer fundo de
+                    comércio, uma vez que o presente instrumento somente lhe assegura autorização
+                    para utilizar as Marcas a título precário e sempre de acordo com as normas e limites
+                    fixados neste instrumento.
+                </li>
+                <li>
+                    O <b>Licenciado</b> está terminantemente proibido de (a) registrar nomes de
+                    domínios contendo qualquer das Marcas e outros símbolos distintivos da(s)
+                    proprietária(s) ou semelhantes; (b) de financiar, operar ou contribuir para a
+                    formação de “sítios na internet” que venham a incorporar ou utilizar as Marcas ou
+                    outros símbolos de identificação sem a prévia e expressa anuência da <b>GDM</b> ou do
+                    respectivo titular; ou (c) utilizar-se de outros nomes ou símbolos semelhantes que
+                    possam fazer confusão com a denominação da(s) Cultivar(es) Licenciada(s) e/ou da
+                    <b>GDM</b>, bem como das Marcas.
+                </li>
+                <li>
+                    O <b>Licenciado</b> se obriga, desde logo, a não praticar, nem permitir que se
+                    pratique qualquer ato ou omissão que prejudique, ou possa vir a prejudicar, a
+                    imagem da(s) proprietária(s) de qualquer uma das Marcas.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece que é vedado depositar, a qualquer tempo, qualquer
+                    pedido de registro para as Marcas, bem como quaisquer outras marcas
+                    semelhantes ou suscetíveis a confusão com as Marcas, frente a qualquer órgão
+                    governamental competente, no Brasil e no exterior, durante a vigência do presente
+                    Contrato e também após o seu término ou rescisão.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece que é vedada a utilização de qualquer das Marcas
+                    ou da denominação social da <b>GDM</b> ou de suas coligadas, em todo ou em parte (a)
+                    para compor ou integrar a denominação social de qualquer empresa,
+                    empreendimento, ou estabelecimento comercial; (b) em recibos, faturas e quaisquer
+                    outros documentos de natureza contábil, cambial ou fiscal.
+                </li>
+                <li>
+                    Em caso de qualquer infração no uso das Marcas ou direito autoral da <b>GDM</b>
+                    por terceiros, o <b>Licenciado</b> deverá informar imediatamente a <b>GDM</b> e, se possível,
+                    fornecer à <b>GDM</b> exemplares da violação. A <b>GDM</b>, e somente ela, tomará qualquer
+                    medida que julgar conveniente para a reparação de seus direitos.
+                </li>
+                <li>
+                    O <b>Licenciado</b> reconhece que toda comercialização das Sementes Comerciais
+                    deve ser exclusivamente feita através das embalagens conforme orientações 
+                    técnicas, que conterão todas as normas tocantes às Marcas.
+                    <ol>
+                        <li>
+                            O <b>Licenciado</b> reconhece que a <b>GDM</b> é legítima titular das marcas
+                            indicadas no Manual da Marca a ser entregue ao <b>Licenciado</b>.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Na opção por determinada(s) Cultivar(es) Licenciada(s) que contenham
+                    tecnologias de titularidade da DuPont De Nemours and Company ou de suas
+                    afiliadas, o <b>Licenciado</b> deverá <em>utilizar as</em> Marcas “STS”, “DuPont™” e “Classic®”,
+                    de titularidade da DuPont De Nemours and Company ou suas afiliadas, conforme
+                    o caso, da seguinte forma:
+                    <ol>
+                        <li>
+                            O <b>Licenciado</b> deverá identificar as Sementes Comerciais como uma
+                            variedade “STS”, de acordo com as instruções expressas <b>GDM</b>. A marca
+                            “STS” deverá ser utilizada exclusiva e obrigatoriamente em associação com
+                            a comercialização das Sementes Comerciais. Em nenhum momento o
+                            <b>Licenciado</b> deverá fazer menção à marca “STS” de forma independente das
+                            marcas “DuPont™” e “Classic®”. O <b>Licenciado</b> deverá incluir um aviso em
+                            todos os materiais de divulgação, tais como etiquetas, peças de
+                            comunicação de marketing, descrição de produtos, sites de internet,
+                            materiais de venda promocional, entre outros, que as Marcas são
+                            licenciadas da <b>GDM</b> e DuPont. O aviso deverá conter as especificações
+                            abaixo descritas ou, em caso contrário, seguir as especificações expressas
+                            da <b>GDM</b>: “STS”, “DuPontTM” e “Classic®” <i>são marcas registradas da Dupont
+                            De Nemours and Company ou de suas afiliadas, e são utilizadas sob licença
+                            de Asociados Don Mario S.A. e suas afiliadas Brasileiras</i>.
+                        </li>
+                        <li>
+                            Deverá também o <b>Licenciado</b> recomendar o correto uso dos produtos
+                            em função do que DuPont e <b>GDM</b> estabeleçam. Em caso de recomendações,
+                            as Marcas “DuPont™” e “Classic®” deverão ser utilizadas somente em
+                            conjunto, como segue: “DuPont™ Classic®”. Portanto, o <b>Licenciado</b> não
+                            está autorizado a utilizar as duas Marcas acima citadas separadamente.
+                        </li>
+                        <li>
+                            As Marcas “STS”, “DuPont™” “Classic®” deverão seguir o padrão
+                            estipulado no Quadro II abaixo.
+                        </li>
+                    </ol>
+                </li>            
+                <li>
+                    <span style="text-align:left;">QUADRO I: MARCA BRASMAX</span><br/><br/>
+                
+                    <table class="gridtable" width="75%" border="1" Align="center" columns="3">
+                        <tr>
+                             <td align="center" width="25%"><font face="verdana"><p>Número de Pedido/Registro</p></font>                 
+                             </td>
+                             <td align="center" width="50%"><font face="verdana"><p>Marca</p></font>                 
+                             </td>
+                             <td align="center" width="25%"><font face="verdana"><p>Classe</p></font>                 
+                             </td>
+                        </tr>
+                        <tr>
+                             <td align="center" width="25%"><font face="verdana"><p>900310162</p></font>                 
+                             </td>
+                             <td align="center" width="50%"><IMG SRC="{!$Resource.LogoImpBRMX2}" style="width: 50%; height: 50%"></img>                 
+                             </td>
+                             <td align="center" width="25%"><font face="verdana"><p>44</p></font>                 
+                             </td>
+                        </tr>
+                    </table>        
+                    <br/><br/>                
+                </li>
+                <li>
+                    <span style="text-align:left;">QUADRO II: MARCAS DA DUPONT</span><br/><br/>
+        
+                        <table class="gridtable" width="75%" border="1" Align="center" columns="3">
+                            <tr>
+                                 <td align="center" width="25%"><font face="verdana"><p>Número de Pedido/Registro</p></font>                 
+                                 </td>
+                                 <td align="center" width="50%"><font face="verdana"><p>Marca</p></font>                 
+                                 </td>
+                                 <td align="center" width="25%"><font face="verdana"><p>Classe</p></font>                 
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td align="center" width="25%"><font face="verdana"><p>830561145</p></font>                 
+                                 </td>
+                                 <td align="center" width="50%"><font face="verdana"><p><b>STS</b></p></font>                 
+                                 </td>
+                                 <td align="center" width="25%"><font face="verdana"><p>31</p></font>                 
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td align="center" width="25%"><font face="verdana"><p>002883821</p></font>                 
+                                 </td>
+                                 <td align="center" width="50%"><font face="verdana"><p><b>DUPONT ™</b></p></font>                 
+                                 </td>
+                                 <td align="center" width="25%"><font face="verdana"><p>01.10/50/90</p></font>                 
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td align="center" width="25%"><font face="verdana"><p>811448630</p></font>                 
+                                 </td>
+                                 <td align="center" width="50%"><font face="verdana"><p><b>CLASSIC®</b></p></font>                 
+                                 </td>
+                                 <td align="center" width="25%"><font face="verdana"><p>01.50</p></font>                 
+                                 </td>
+                            </tr>
+                        </table>
+                    
+                        <br/><br/>
+                </li>        
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA RESCISÃO</b></span><br/><br/>
+            <ol>
+                <li>
+                    Sem prejuízos das outras disposições presentes neste instrumento, este
+                    Contrato poderá ser rescindido de pleno direito a qualquer tempo,
+                    independentemente de qualquer aviso, interpelação ou notificação judicial ou
+                    extrajudicial, nas seguintes hipóteses:
+                    <ol>
+                        <li>
+                            Em caso de descumprimento de qualquer das cláusulas estabelecidas
+                            neste instrumento, caso não seja sanado dentro de 15 (quinze) dias
+                            contados a partir do recebimento da notificação, requerendo a cessação da
+                            violação pela outra Parte;
+                        </li>
+                        <li>
+                            Na hipótese de ser requerida a falência, processo de recuperação
+                            judicial ou insolvência de qualquer das Partes;
+                        </li>
+                        <li>
+                            Cessão ou transferência deste Contrato, bem como de qualquer de
+                            suas obrigações, seja total ou parcial, sem prévia anuência da <b>GDM</b>;
+                        </li>
+                        <li>
+                            Caso seja constatada a prática de qualquer ato fraudulento na
+                            execução de qualquer atividade ou obrigação do <b>Licenciado</b> ou de seus
+                            cooperantes; ou
+                        </li>
+                        <li>
+                            Caso ocorra qualquer atraso no envio dos relatórios previstos nos
+                            Anexos II, III e IV deste Contrato, bem como na hipótese de verificação de
+                            inconsistências entre as informações fornecidas pelo <b>Licenciado</b> nos
+                            referidos relatórios e as informações obtidas pela <b>GDM</b> através de
+                            auditorias, inspeções, fiscalizações e visitas aos campos de multiplicação e
+                            instalações do <b>Licenciado</b> e de seus cooperantes.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Uma vez rescindido ou terminado o presente Contrato, por qualquer motivo,
+                    cessará automaticamente o licenciamento da(s) Cultivar(es) Licenciada(s) e das
+                    Marcas ao <b>Licenciado</b>, independentemente de qualquer notificação nesse sentido.
+                    Neste caso, o <b>Licenciado</b> deverá vender toda e qualquer semente de soja produzida
+                    nos termos deste Contrato à indústria como grão.
+                </li>
+                <li>
+                    Caso haja recusa de cumprimento do estabelecido acima, a <b>GDM</b> poderá, a
+                    qualquer momento e sem necessidade de autorização prévia ou caução, buscar e
+                    apreender junto ao <b>Licenciado</b> e/ou seus cooperantes todos os materiais relativos
+                    ao presente Contrato, à(s) Cultivar(es) Licenciada(s), às Sementes Comerciais e/ou
+                    às Marcas, em qualquer lugar onde tais materiais se encontrarem.
+                </li>
+            </ol>                
+        </li>    
+        
+        <li><span style="text-align:left;">
+            <b>DAS PENALIDADES</b></span><br/><br/>
+            <ol>
+                <li>
+                    Sem prejuízo de outras penalidades dispostas neste instrumento, o
+                    descumprimento das obrigações assumidas pelo <b>Licenciado</b> sujeitará o
+                    <b>Licenciado</b> às seguintes penalidades:
+                    <ol>
+                        <li>
+                            Na hipótese de rescisão unilateral, por parte do <b>Licenciado</b>, ocorrerá
+                            contra este uma multa estipulada em um porcentual de 10% (dez por
+                            cento) do valor total de royalties devidos a <b>GDM</b> sobre a safra vigente.
+                            Todos os valores devidos, inclusive a multa prevista neste item,
+                            deverão ser pagos pelo <b>Licenciado</b> em até 15 dias contados da
+                            rescisão;
+                        </li>
+                        <li>
+                            Em caso de infração sobre a comercialização de sementes (i) acima do
+                            Volume Autorizado para Comercialização e/ou, (ii) fora do território, o
+                            <b>Licenciado</b> responderá pelas perdas, danos e prejuízos, além da
+                            multa não compensatória estipulada em um porcentual de 100% (cem
+                            por cento) do valor da semente irregularmente transferida e eventuais
+                            gastos de cobrança, judiciais ou extrajudiciais, que a <b>GDM</b> tenha para
+                            receber seu crédito.
+                        </li>
+                        <li>
+                            Sem prejuízo das penalidades específicas previstas ao longo do
+                            Contrato, o descumprimento ou infração de qualquer das obrigações
+                            assumidas pelo <b>Licenciado</b>, ficando expressamente proibida a
+                            manipulação ou comercialização das Sementes Comerciais, sendo que
+                            o <b>Licenciado</b> destruirá destinando à indústria. Ainda, neste caso, o
+                            <b>Licenciado</b> pagará a <b>GDM</b>, a título de multa não compensatória, o
+                            valor equivalente a até 100% (cem por cento) dos Royalties devidos por
+                            toda a produção pela qual está autorizado a vender, sem prejuízo de
+                            pagamento de eventuais perdas e danos.
+                        </li>
+                    </ol>
+                </li>
+            </ol>                
+        </li> 
+        
+        <li><span style="text-align:left;">
+            <b>DAS INFORMAÇÕES CONFIDENCIAIS</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Licenciado</b> se obriga, por si, seus sócios/acionistas, empregados,
+                    dirigentes, conselheiros, funcionários, colaboradores, cooperantes e eventuais
+                    terceiros contratados, a manter em absoluto sigilo e confidencialidade e, portanto,
+                    a não divulgar, sem a prévia e expressa autorização da <b>GDM</b>, todas e quaisquer
+                    informações, dados, desenhos, manuais, etc., que tenham chegado ao seu
+                    conhecimento por qualquer meio e a qualquer título, contendo ou não a indicação
+                    de sigilo e/ou confidencialidade, mesmo mediante o término ou rescisão do
+                    Contrato, por qualquer motivo que este ocorra, (“Informação Confidencial”), sob
+                    pena de responsabilização pelas respectivas perdas e danos, civis e criminais,
+                    diretos e indiretos.
+                </li>
+                <li>
+                    Para os efeitos aqui previstos, incluem-se no conceito de Informação
+                    Confidencial, sem limitações, todas as informações, resultados de testes, relatórios,
+                    sementes e quaisquer outros documentos obtidos pelo <b>Licenciado</b>, por si, seus
+                    sócios/acionistas, empregados, dirigentes, conselheiros, funcionários,
+                    colaboradores, cooperantes e eventuais terceiros contratados, em razão do
+                    Contrato, os quais são ora reconhecidos como de exclusiva titularidade da <b>GDM</b>.
+                </li>
+                <li>
+                    Somente será admitido como legítimo motivo de exceção à obrigatoriedade de
+                    sigilo e confidencialidade aqui previsto, a divulgação de Informação Confidencial
+                    nas seguintes hipóteses:
+                    <ol>
+                        <li>
+                            Informações que já eram comprovadamente conhecidas pelo
+                            <b>Licenciado</b> anteriormente à celebração deste Contrato;
+                        </li>
+                        <li>
+                            Existência de prévia e expressa anuência da <b>GDM</b>, por representante
+                            legal desta, desde que a divulgação seja feita nos limites e restrições
+                            indicados por esta;
+                        </li>
+                        <li>
+                            A Informação Confidencial foi comprovadamente conhecida através de
+                            outra fonte, de forma legal e legítima, independentemente do Contrato;
+                        </li>
+                        <li>
+                            Existência de determinação judicial e/ou administrativa para o
+                            conhecimento da Informação Confidencial, observados os termos deste
+                            Contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    A obrigação de sigilo e confidencialidade aqui prevista subsistirá ao término
+                    ou rescisão do Contrato, por qualquer motivo que este ocorra.
+                </li>
+                <li>
+                    O <b>Licenciado</b> compromete-se a entregar a <b>GDM</b> toda a documentação e
+                    respectivas cópias por ela obtidas e/ou geradas em razão do Contrato,
+                    imediatamente após o seu término ou rescisão, por qualquer motivo que este
+                    ocorra, ou dar-lhes o destino eventualmente indicado pela <b>GDM</b>.
+                </li>
+                <li>
+                    Caso o <b>Licenciado</b> seja compelido, durante a vigência deste Contrato ou
+                    mesmo após o seu término ou rescisão, por qualquer motivo, a divulgar qualquer
+                    Informação Confidencial, no todo ou em parte, por ordem judicial, administrativa
+                    ou outra determinação oficial ou do Poder Público, o <b>Licenciado</b> deverá notificar
+                    imediatamente a <b>GDM</b>, de modo que a <b>GDM</b> possa requerer uma liminar ou
+                    qualquer outra medida preventiva capaz de evitar a divulgação da Informação
+                    Confidencial. Caso tal liminar ou outra medida não seja obtida, o <b>Licenciado</b>
+                    deverá fornecer apenas e tão somente a Informação Confidencial requerida e
+                    utilizar seus melhores esforços para que seja dado tratamento confidencial a tal
+                    informação.
+                </li>
+            </ol>
+        </li>    
+        
+        <li><span style="text-align:left;">
+            <b>DAS DISPOSIÇÕES GERAIS</b></span><br/><br/>
+            <ol>
+                <li>
+                    As modificações das cláusulas ou condições deste Contrato somente terão
+                    validade mediante a celebração do respectivo termo modificativo, sendo que
+                    correspondências enviadas por uma Parte à outra não contribuirão na renovação,
+                    salvo se firmadas pelos representantes legais das Partes indicando acordo mútuo
+                    entre as mesmas e caracterizando aditivo contratual.
+                </li>
+                <li>
+                    Os direitos e obrigações aqui previstos não serão cedidos nem transferidos,
+                    no todo ou em parte, a qualquer terceiro sem o prévio consentimento escrito da
+                    outra Parte, ficando estipulado que a <b>GDM</b> poderá ceder este Contrato a outra
+                    empresa com relação à reorganização, consolidação, cisão, incorporação referente
+                    ao objeto deste contrato, seja isoladamente, seja em conjunto com outros negócios
+                    da <b>GDM</b> como parte de reorganização total da mesma.
+                </li>
+                <li>
+                    O não exercício dos direitos e faculdades asseguradas às Partes no presente
+                    instrumento, em sua totalidade ou em parte, deverão ser sempre considerados, em
+                    qualquer hipótese, como mera liberdade, não constituindo, de forma alguma,
+                    novação das condições ora pactuadas, nem tampouco renúncia a qualquer direito
+                    ou faculdade. A concessão de qualquer tolerância, por parte da <b>GDM</b>, no caso de
+                    descumprimento de qualquer das cláusulas previstas no presente instrumento não
+                    implica renúncia aos direitos que têm a <b>GDM</b>, podendo-os exercer, dentro ou fora
+                    de juízo a qualquer tempo.
+                </li>
+                <li>
+                    O presente Contrato prevalece e substitui todos os entendimentos anteriores,
+                    verbais ou escritos, inclusive contratos e acordos eventualmente já celebrados
+                    entre as Partes cujo objeto e vigência sejam os mesmos aqui constantes. O
+                    <b>Licenciado</b> reconhece e confirma não haver qualquer reclamação ou pedido de
+                    qualquer ordem em relação à <b>GDM</b>, seja por força das obrigações assumidas em
+                    contratos anteriores, seja a que título for, não havendo qualquer indenização ou
+                    perdas e danos a serem postuladas perante <b>GDM</b> até a data de assinatura deste
+                    Contrato.
+                </li>
+                <li>
+                    Este Contrato, bem como o Termo Aditivo de Definições Comerciais,
+                    representa o acordo integral entre as Partes contratantes no que se refere aos
+                    direitos e obrigações referentes à licença de uso da(s) Cultivar(es) Licenciada(s)
+                    concedida ao <b>Licenciado</b> pela <b>GDM</b>. Não existem declarações, acordos ou
+                    condições colaterais especificamente estipuladas no presente instrumento.
+                </li>
+                <li>
+                    Qualquer notificação cuja apresentação seja exigida ou permitida nos termos
+                    do presente instrumento deverá ser apresentada por escrito, e terá sido eficazmente
+                    apresentada se (a) entregue pessoalmente, (b) enviada por correio com porte pago
+                    antecipado, ou (c) enviada por <i>fac-símile</i>, e-mail ou outros meios idôneos de
+                    comunicação eletrônica, nas direções estabelecidas no preâmbulo deste Contrato,
+                    acompanhados de confirmação de recebimento.
+                </li>
+                <li>
+                    Caso qualquer uma das cláusulas ou termos do presente Contrato seja
+                    considerada inválida ou ineficaz, todas as demais cláusulas e termos permanecerão
+                    em pleno vigor e efeito.
+                </li>
+                <li>
+                    Toda e qualquer comunicação entre as Partes, relativas ao presente Contrato
+                    e ao seu objeto, somente será considerada válida se enviada para os endereços
+                    físicos e de mensagem eletrônica (e-mail) apontados na identificação das Partes no
+                    preâmbulo deste Contrato, sempre mediante confirmação de recebimento.
+                    <ol>
+                        <li>
+                            As comunicações realizadas por mensagem eletrônica (e-mail) serão
+                            válidas e consideradas entregues na correspondente data da transmissão,
+                            consoante o respectivo comprovante de transmissão.
+                        </li>
+                        <li>
+                            Todas e quaisquer notificações, instruções e comunicações nos termos
+                            deste Contrato serão válidas e consideradas entregues na data do seu
+                            respectivo recebimento, conforme comprovado por meio de recibo assinado
+                            pelo destinatário, da entrega da notificação judicial ou extrajudicial.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Nenhuma das Partes será responsável por perdas e danos decorrentes do
+                    atraso ou inadimplemento de qualquer das obrigações previstas neste Contrato se
+                    em razão de caso fortuito ou força maior. Na hipótese do <b>Licenciado</b> ficar
+                    impossibilitado de cumprir suas obrigações contratuais por um período igual ou
+                    superior a 03 (três) meses, a <b>GDM</b> terá o direito de rescindir este Contrato, sem
+                    que qualquer indenização seja devida ao <b>Licenciado</b>.
+                </li>
+                <li>
+                    O presente Contrato é celebrado em caráter irrevogável e irretratável,
+                    obrigando as Partes e seus sucessores.
+                </li>
+                <li>
+                    A <b>GDM</b> e o <b>Licenciado</b> são empresas distintas. A relação entre elas não
+                    importa nem pode induzir a existência de sociedade, de integração econômica, de
+                    consórcio ou de solidariedade nas obrigações de qualquer natureza.
+                </li>
+                <li>
+                    As cláusulas deste Contrato que por sua natureza tenham caráter eterno
+                    assim permanecerão inclusive depois do término ou rescisão do presente Contrato
+                    por qualquer motivo.
+                </li>
+                <li>
+                    As Partes reconhecem que nenhuma das disposições contida neste Contrato
+                    se destina a tacitamente criar ou será interpretada como se criasse entre a <b>GDM</b> e
+                    o <b>Licenciado</b> relacionamento de franqueador/franqueado, considerando que, entre
+                    outras razões (i) não há qualquer tipo de subordinação jurídica, (ii) não há proibição
+                    do uso de marca própria do <b>Licenciado</b> ou de outros, (iii) o <b>Licenciado</b> tem a
+                    liberdade de contratação com terceiros. Nenhuma Parte contratante terá direito ou
+                    poder expresso ou tácito para assumir ou criar obrigações por conta ou em nome
+                    de qualquer outra Parte, para representar a outra Parte perante qualquer entidade
+                    governamental, vincular a outra Parte a qualquer contrato, acordo ou compromisso
+                    com qualquer terceiro, ou para por outra forma atuar como agente da outra Parte.
+                </li>
+                <li>
+                    As Partes outorgam a este instrumento a força de título executivo, líquido e
+                    exigível, nos termos do artigo 784, III do Código de Processo Civil Brasileiro,
+                    aplicando-se, para tanto, as disposições dos artigos 134, 497, 498, 499, 500 e 501,
+                    bem como o Livro II, artigo 771 e seguintes do Código de Processo Civil,
+                    reconhecendo as Partes que a imposição de perdas e danos não constituirá
+                    reparação adequada pelo descumprimento de qualquer disposição ora pactuada.
+                </li>
+                <li>
+                    Este Contrato será regido pelas leis brasileiras, sendo que as Partes
+                    contratantes se obrigam por si, seus herdeiros e sucessores e elegem o Foro da
+                    cidade de Londrina, Paraná, Brasil, com renúncia expressa a qualquer outro, por
+                    mais privilegiado que seja.
+                </li>
+            </ol>                
+        </li>           
+        
+        </ol>
+        </TD>
+        </TR>
+        
+        
+        <TR>
+        <TD>                                             
+        E, estando justas e contratadas, as Partes firmam este Contrato em 02 (duas) vias de igual
+        teor e forma, frente às testemunhas abaixo.                        
+        </TD>
+    </tr>
+</table>
+
+<table width="80%">
+    <tr>
+        <TD>&nbsp;</TD>
+    </tr>
+</table>
+
+<table width="90%" columns="1" style="font-size:14px;font-family:BookmanOldStyle;text-align:right;">
+    <tr>
+        <TD>Cambé, {!fecha}.</TD>
+    </tr>
+</table>
+
+<table width="80%">
+    <tr>
+        <TD>&nbsp;<br/><br/><br/><br/><br/></TD>
+    </tr>
+</table>
+
+<table width="80%" border="0" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+    <tr>
+        <td align="left" width="50%"><b>GDM GENÉTICA DO BRASIL S. A.</b><br/><br/><br/><br/><br/>                 
+        </td>
+        <td align="left" width="50%"><b>{!nombre}</b><br/><br/><br/><br/><br/>                 
+        </td>
+    </tr>
+    <tr>
+        <td align="left" width="50%">&nbsp;                 
+        </td>
+        <td align="left" width="50%">&nbsp;                 
+        </td>
+    </tr>
+    <tr>
+        <td align="left" width="50%"><b>TESTEMUNHAS:</b><br/>
+        &nbsp;&nbsp;1. _______________________________<br/>
+        &nbsp;&nbsp;Nome:<br/>
+        &nbsp;&nbsp;CPF:                 
+        </td>
+        <td align="left" width="50%">&nbsp;<br/>
+        &nbsp;&nbsp;2. _______________________________<br/>
+        &nbsp;&nbsp;Nome:<br/>
+        &nbsp;&nbsp;CPF:                 
+        </td>
+    </tr>
+</table>
+
+</table>
+
+</apex:page>

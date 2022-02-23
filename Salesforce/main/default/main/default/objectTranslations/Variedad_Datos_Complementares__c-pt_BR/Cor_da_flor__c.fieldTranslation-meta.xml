@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cor da flor --></label>
+    <name>Cor_da_flor__c</name>
+    <picklistValues>
+        <masterLabel>Branca</masterLabel>
+        <translation><!-- Branca --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roxa</masterLabel>
+        <translation><!-- Roxa --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

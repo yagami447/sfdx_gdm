@@ -1,0 +1,62 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" controller="aSiteLoginController" id="loginPage" showHeader="false" standardStylesheets="false" cache="false" title="{!$Label.site.site_login}">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+    <body class="nav-md footer_fixed">   
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1">
+        <br/>
+        <br/>
+        <apex:panelGrid width="100%" cellpadding="0" cellspacing="0" bgcolor="white" columns="1" > 
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="width:480px;">
+            <apex:form id="loginForm">
+            <div class="container">    
+            <div id="loginbox" style="margin-top:50px; max-width:500px; width:100%;" class="mainbox">
+                <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">{!$Label.Site.site_login} {!company}</div>
+                        <!--
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px">
+                            <apex:outputLink value="{!$Page.aSiteForgotPass}"> {!$Label.site.forgot_your_password_q}</apex:outputLink>
+                        </div>
+                        -->
+                    </div>
+                    <div style="padding-top:30px" class="panel-body" >
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <apex:inputText id="login-username2" styleclass="form-control" value="{!username}" html-placeholder="{!$Label.site.email}"  />
+                        </div>                                               
+                        
+
+ 
+                        <div style="margin-bottom: 25px" class="input-group">                                                                            
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <apex:inputSecret id="login-password" styleclass="form-control" value="{!password}" html-placeholder="{!$Label.site.password}" />
+                        </div>                        
+                        <div style="margin-bottom:0px; float:right; font-size: 80%; position: relative; top:-20px" class="input-group">
+                             <!--<apex:outputLink value="{!$Page.aSiteForgotPass}"> {!$Label.site.forgot_your_password_q}</apex:outputLink>-->
+                             <apex:commandLink action="{!forwardToForgotPassword}"> {!$Label.site.forgot_your_password_q}</apex:commandLink>
+                        </div>
+                        <apex:messages layout="block" styleClass="alert alert-danger errors" style="list-style-type: none;" />
+                        <div style="margin-top:0px" >
+                            <!-- Button -->
+                            <div class="col-md-12">
+                                <apex:commandButton id="btn-login" styleclass="btn btn-success" value="{!$Label.site.login_button}" action="{!login}" />
+                            </div>
+                        </div>
+                    </div>                     
+                </div>  
+            </div>
+            </div>     
+            </apex:form>
+        </apex:outputPanel>
+        </apex:panelGrid> 
+    </apex:panelGrid>
+    </center>
+    </body>
+    <br/>
+</apex:define>
+</apex:composition>
+</apex:page>

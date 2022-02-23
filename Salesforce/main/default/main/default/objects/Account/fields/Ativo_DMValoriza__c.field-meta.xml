@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ativo_DMValoriza__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ativo DMValoriza</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ativo DMValoriza</inlineHelpText>
+    <label>Ativo DMValoriza</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Id de la lista de precios de DSEM --></help>
+    <label><!-- PM Lista de Precios DSEM --></label>
+    <name>PM_Lista_de_Precios_DSEM__c</name>
+</CustomFieldTranslation>

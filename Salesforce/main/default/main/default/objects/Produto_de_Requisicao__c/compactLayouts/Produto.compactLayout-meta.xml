@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produto</fullName>
+    <fields>Variedad__c</fields>
+    <fields>Quantidade__c</fields>
+    <fields>Requisicao_de_compra__c</fields>
+    <fields>Multiplicador__c</fields>
+    <label>Produto</label>
+</CompactLayout>

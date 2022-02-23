@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Colaboracion_Alfredo_Oliveria</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboracion Alfredo Oliveria</label>
+        <sharedTo>
+            <group>Alfredo_Do_Oliveira_Cunha</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>GERMINEX AGROPECUARIA LTDA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Evento__c</field>
+            <operation>equals</operation>
+            <value>Treinamento,Palestra,Lado a Lado,Outdoor,Emplacamento</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Neogen</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Neogen PROGRESSO</label>
+        <sharedTo>
+            <group>Neogen_PROGRESSO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>PROGRESSO AGROINDUSTRIAL LTDA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Evento__c</field>
+            <operation>equals</operation>
+            <value>Treinamento,Palestra,Lado a Lado,Outdoor,Emplacamento</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ZT_AGRICOLA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Eventos para ZT AGRICOLA</description>
+        <label>ZT AGRICOLA</label>
+        <sharedTo>
+            <portalRole>JOSECARLOSSTEFANELLOSCAPINUsuriodeParceiro</portalRole>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>equals</operation>
+            <value>0050b000005hKh0</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CRM_Calend</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Calend</label>
+        <sharedTo>
+            <role>Administracion_3</role>
+        </sharedTo>
+        <sharedFrom>
+            <group>Comerciales_General</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

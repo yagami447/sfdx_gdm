@@ -1,0 +1,19 @@
+<apex:page controller="Opp_wzFranq_Ctrl" tabStyle="OpportunityLineItem">
+    <apex:sectionHeader subtitle="Nova Venda da Basica" title="Edição de items de oportunidade">    
+        <apex:form >
+            <apex:pageBlock title="Produtos">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!prev2}" value="Atras" immediate="true"/>
+                    <apex:commandButton action="{!guardar}" value="Salvar" rerender="msgs"/>
+                </apex:pageBlockButtons>
+                <apex:pageMessages id="msgs" />                               
+                <apex:panelGrid columns="1" id="theGrid" width="100%">
+                    <apex:dataTable value="{!selitems}" var="p1" styleClass="list">
+                        <apex:column ><apex:facet name="header">Produto</apex:facet>{!p1.item.pricebookentry.Name}</apex:column>
+                        <apex:column ><apex:facet name="header">Qtde Scs (40kg)</apex:facet><apex:inputField required="true" value="{!p1.item.Qtde_Scs_40kg__c}"/></apex:column>
+                    </apex:dataTable>
+                </apex:panelGrid>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:sectionHeader>
+</apex:page>

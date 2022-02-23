@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Autoriza_Comercial__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicador que los comerciales autorizan el relatorio de venda para posteriormente facturarlo</description>
+    <externalId>false</externalId>
+    <label>Autoriza Comercial</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

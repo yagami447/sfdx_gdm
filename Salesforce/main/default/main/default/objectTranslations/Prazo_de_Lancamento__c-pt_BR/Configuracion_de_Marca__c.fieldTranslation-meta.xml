@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Configuración de Marca --></label>
+    <name>Configuracion_de_Marca__c</name>
+    <relationshipLabel><!-- Prazos de Lançamento --></relationshipLabel>
+</CustomFieldTranslation>

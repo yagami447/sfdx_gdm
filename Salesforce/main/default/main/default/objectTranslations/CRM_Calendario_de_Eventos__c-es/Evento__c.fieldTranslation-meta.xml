@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tipo de evento --></help>
+    <label><!-- Evento --></label>
+    <name>Evento__c</name>
+    <picklistValues>
+        <masterLabel>Area comercial</masterLabel>
+        <translation><!-- Area comercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CESB</masterLabel>
+        <translation><!-- CESB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Día de Campo</masterLabel>
+        <translation><!-- Día de Campo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emplacamento</masterLabel>
+        <translation><!-- Emplacamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Encontro Técnico</masterLabel>
+        <translation><!-- Encontro Técnico --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Estação DONMARIO MAS</masterLabel>
+        <translation><!-- Estação DONMARIO MAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feiras</masterLabel>
+        <translation><!-- Feiras --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jornada Técnica</masterLabel>
+        <translation><!-- Jornada Técnica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lado a Lado</masterLabel>
+        <translation><!-- Lado a Lado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outdoor</masterLabel>
+        <translation><!-- Outdoor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Painel Técnico</masterLabel>
+        <translation><!-- Painel Técnico --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palestra</masterLabel>
+        <translation><!-- Palestra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strip Test</masterLabel>
+        <translation><!-- Strip Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tour dos Máximos Rendimentos</masterLabel>
+        <translation><!-- Tour dos Máximos Rendimentos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Treinamento</masterLabel>
+        <translation><!-- Treinamento --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Realizado LxL Con Prod --></label>
+    <name>BR_Realizado_LxL_Con_Prod__c</name>
+</CustomFieldTranslation>

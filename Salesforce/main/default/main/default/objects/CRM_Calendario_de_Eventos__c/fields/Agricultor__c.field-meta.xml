@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agricultor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Objeto relacionado a uma conta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Objeto relacionado a uma conta</inlineHelpText>
+    <label>Agricultor</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Eventos (Agricultor)</relationshipLabel>
+    <relationshipName>Eventos</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

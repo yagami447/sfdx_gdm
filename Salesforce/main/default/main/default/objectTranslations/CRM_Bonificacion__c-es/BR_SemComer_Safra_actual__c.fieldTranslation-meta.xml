@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Suma de semilla comercializada para todas las variedades (Intacta y RR) informadas en el anexo III y IV de la safra actual, de la Empresa Brasmax --></help>
+    <label><!-- Vendas BRMX --></label>
+    <name>BR_SemComer_Safra_actual__c</name>
+</CustomFieldTranslation>

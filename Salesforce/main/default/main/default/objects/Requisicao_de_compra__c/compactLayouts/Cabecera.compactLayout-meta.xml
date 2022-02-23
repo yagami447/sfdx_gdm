@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cabecera</fullName>
+    <fields>Name</fields>
+    <fields>Tipo__c</fields>
+    <fields>Multiplicador__c</fields>
+    <fields>Marca__c</fields>
+    <fields>Safra__c</fields>
+    <fields>Regiao_comercial__c</fields>
+    <label>Cabecera</label>
+</CompactLayout>

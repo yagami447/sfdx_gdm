@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Supervisor Comercial informante por DSem --></help>
+    <label><!-- DResponsável --></label>
+    <name>DS_Responsavel__c</name>
+    <picklistValues>
+        <masterLabel>096 - Charles C. Pintro</masterLabel>
+        <translation><!-- 096 - Charles C. Pintro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>104 - Otavio Gorni</masterLabel>
+        <translation><!-- 104 - Otavio Gorni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>105 - Rogério A. Schneider</masterLabel>
+        <translation><!-- 105 - Rogério A. Schneider --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>106 - Sandro Ferrari M</masterLabel>
+        <translation><!-- 106 - Sandro Ferrari M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>152 - Fernando Calazans</masterLabel>
+        <translation><!-- 152 - Fernando Calazans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>190 - Marcos Berlezi</masterLabel>
+        <translation><!-- 190 - Marcos Berlezi --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

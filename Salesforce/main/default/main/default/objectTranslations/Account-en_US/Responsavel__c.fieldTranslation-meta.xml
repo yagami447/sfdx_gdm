@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Qual dos funcionários da Brasmax que estará responsável pela conta --></help>
+    <label><!-- Responsável BRMX --></label>
+    <name>Responsavel__c</name>
+    <picklistValues>
+        <masterLabel>010 - Brasmax</masterLabel>
+        <translation><!-- 010 - Brasmax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>012 - Anderson Weissheimer</masterLabel>
+        <translation><!-- 012 - Anderson Weissheimer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>017 - Luis Fernando Cecatto</masterLabel>
+        <translation><!-- 017 - Luis Fernando Cecatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>018 - Flávio Marçal dos Santos</masterLabel>
+        <translation><!-- 018 - Flávio Marçal dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>019 - Felipe Oliveira Costa</masterLabel>
+        <translation><!-- 019 - Felipe Oliveira Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>023 - Gabriel V. Finatto</masterLabel>
+        <translation><!-- 023 - Gabriel V. Finatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>031 - Guilherme Sousa</masterLabel>
+        <translation><!-- 031 - Guilherme Sousa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>037 - Felipe Dias Louzada</masterLabel>
+        <translation><!-- 037 - Felipe Dias Louzada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>061 - Fernando Frehner</masterLabel>
+        <translation><!-- 061 - Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>066 - Marcelo Steffen</masterLabel>
+        <translation><!-- 066 - Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>067 - Sergio Bertagnolli</masterLabel>
+        <translation><!-- 067 - Sergio Bertagnolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>076 - Tiago Goulart</masterLabel>
+        <translation><!-- 076 - Tiago Goulart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>083 - Jorge Cristiano Rosa</masterLabel>
+        <translation><!-- 083 - Jorge Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>101 - Fausto Tadeu Fanchin</masterLabel>
+        <translation><!-- 101 - Fausto Tadeu Fanchin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>104 - Otavio Gorni</masterLabel>
+        <translation><!-- 104 - Otavio Gorni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>150 - João Serrano</masterLabel>
+        <translation><!-- 150 - João Serrano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>197 - Wagner Rank</masterLabel>
+        <translation><!-- 197 - Wagner Rank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>198 - Bernardo Zanardo</masterLabel>
+        <translation><!-- 198 - Bernardo Zanardo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>199 - Lucas Costa</masterLabel>
+        <translation><!-- 199 - Lucas Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>231 - Willian Von Scharten</masterLabel>
+        <translation><!-- 231 - Willian Von Scharten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>234 - Julio Cesar Poletto</masterLabel>
+        <translation><!-- 234 - Julio Cesar Poletto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>312 - Lucas Hilario Fantineli</masterLabel>
+        <translation><!-- 312 - Lucas Hilario Fantineli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>379 - Diego F. Gonçalves</masterLabel>
+        <translation><!-- 379 - Diego F. Gonçalves --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>380 - Lucas de Souza Furlan</masterLabel>
+        <translation><!-- 380 - Lucas de Souza Furlan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>403 - Felipe Bianchessi</masterLabel>
+        <translation><!-- 403 - Felipe Bianchessi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>464 - Ana Laura Fernandes</masterLabel>
+        <translation><!-- 464 - Ana Laura Fernandes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>467 - Natalie de Mattos</masterLabel>
+        <translation><!-- 467 - Natalie de Mattos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>474 - Guilherme Menezes Salau</masterLabel>
+        <translation><!-- 474 - Guilherme Menezes Salau --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

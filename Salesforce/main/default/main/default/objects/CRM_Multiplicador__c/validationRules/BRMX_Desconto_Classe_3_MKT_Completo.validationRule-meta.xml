@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRMX_Desconto_Classe_3_MKT_Completo</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(NOT(ISNULL(BRMX_Desconto_Classe_3_MKT__c)), ISNULL(BRMX_Desconto_Obj_Rel_Gen_Dem_MKT__c)),AND(NOT(ISNULL(BRMX_Desconto_Obj_Rel_Gen_Dem_MKT__c)), ISNULL(BRMX_Desconto_Classe_3_MKT__c)))</errorConditionFormula>
+    <errorMessage>Deve entrar Desconto Classe 3 MKT e Desconto Obj Rel Gen Dem MKT</errorMessage>
+</ValidationRule>

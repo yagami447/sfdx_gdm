@@ -1,0 +1,1008 @@
+<apex:page showHeader="false" language="pt-br"
+           standardStylesheets="false" cache="false" action="{!validate}"
+           controller="aSiteVendaDeBasicaController" docType="html-5.0">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <apex:composition template="{!$Site.Template}">
+        <apex:includescript value="{!$Resource.styleClassContainer.css}" />
+        
+        <apex:define name="body">
+
+            <style>
+                .headerCenter{
+                	text-align: center;
+                }
+                 .headerLeft{
+                	text-align: left;
+                }
+                .padding{
+                	padding: 0 10% 0 0;
+                }
+                
+                .padding2{
+                	padding: 0 0 0 2%;
+                }
+                
+                .badge-success {
+                color: #fff;
+                background-color: #28a745;
+                }
+                
+                .badge-secondary {
+                color: #fff;
+                background-color: #010101;
+                }               
+                .selected {
+                background: rgba(38,185,154,.16);
+                border-color: rgba(221,221,221,0.780392);
+                }
+                .x_title {
+                margin-bottom: 0px;
+                }
+                .btn {
+                margin-bottom: 0px;
+                margin-right: 0px;
+                }
+                .col1 {
+                width: 70%;
+                text-align: center;
+                }
+                .col7 {
+                width: 70%;
+                text-align: left;
+                padding: 0 0 0 5%;
+                }
+                .col2, .col3 {
+                width: 15%;
+                text-align: center;
+                padding: 0 0 1% 0;
+                }
+                .col4 {
+                width: 25%;
+                text-align: left;
+                padding: 0 0 1% 0;
+                padding: 0 0 0 5%;
+                }
+                .col5 {
+                width: 50%;
+                text-align: center;
+                } 
+                .col6 {
+                width: 35%;
+                text-align: left;
+                }
+                .col8 {
+                width: 35%;
+                text-align: center;
+                }
+                .col9 {
+                width: 15%;
+                text-align: center;
+                }
+                .col10 {
+                width: 15%;
+                text-align: center;
+                }
+                .col11 {
+                    width: 10%;
+                    text-align: left;
+                }
+                .col12 {
+                    width: 45%;
+                    text-align: center;
+                } 
+                .tab-pane:not(.active) {
+                display: none important!;
+                }
+            </style>
+            
+            <body class="nav-md footer_fixed">
+            <center>
+                <br/>
+                <br/>      
+                <apex:panelGrid id="panelId" cellpadding="0" cellspacing="0" bgcolor="white" columns="1" style="margin:5px; width:90%"> 
+                    
+                    <apex:form id="profileForm">
+                        <div id="testmodal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Inserir motivo de recusa</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Deixe um comentário sobre por que você decide rejeitá-lo.</p>
+                                        <apex:inputTextarea style="width:100%;" rows="5" id="comentario" value="{!comentario}"/>
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary btn-danger " data-dismiss="modal"  onclick="recusar();">Recusar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <apex:outputPanel id="status" >
+                            <apex:actionStatus id="pageStatus">
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+	                                        <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                                            &nbsp;
+                                        </div>
+                                        <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                                            <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                                        </div>
+                                    </apex:outputPanel>            
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </apex:outputPanel> 
+                        
+                        <div class="right_col" role="main" style="min-width:800px;width: 100%;">
+                            <div class="page-title">
+                                <div class="title_left"> <h3>Venda de Basica</h3> </div>
+
+                                
+                                <div class="title_right">       
+                                                                        <!--<button href="javascript:;" onclick="toggle('new')" type="button" class="btn btn-round btn-success">{!$Label.New}</button>-->
+                                </div>
+                            </div>             
+                            <div class="x_panel subtable"  data-id="new"  style="display: none; min-width:800px;"  collapsible="true" >
+                                <div class="x_title">
+                                    <h2>Criar solicitação</h2> <div class="clearfix"/>
+                                </div>
+                                <div class="x_content">    
+                                    <apex:pageBlock id="pageBlockOpportunity">
+                                        
+                                        <div class="x_title">
+                                            <apex:panelGrid columns="3" id="theGrid1" columnClasses="col4, col5, col6" width="100%">
+                                                <apex:outputText value="Estimativa de compra"></apex:outputText>
+                                                <apex:outputText value=""></apex:outputText>
+                                                <apex:outputText value=""></apex:outputText>
+                                            </apex:panelGrid>
+                                            <br/>
+                                            <apex:panelGrid columns="3" id="theGrid2" columnClasses="col8, col8, col8" width="100%">
+                                                <apex:outputText value="Multiplicador"/>
+                                                <apex:outputText value="Marca"/>
+                                                <apex:outputText value="Safra"/> 
+                                            </apex:panelGrid>
+                                            <apex:panelGrid columns="3" id="theGrid3" columnClasses="col8, col8, col8" width="100%">
+                                                <apex:outputText value="{!cuenta.Name}"></apex:outputText>
+                                                <apex:outputText value="{!cuenta.Marca__c}"></apex:outputText>
+                                                <apex:outputText value="{!safraActual}"></apex:outputText>
+                                            </apex:panelGrid>
+                                            <br/>
+                                            <apex:panelGrid columns="3" id="theGrid4" columnClasses="col8, col8, col8" width="100%">
+                                                <apex:outputText value="Tipo"/>
+                                                <apex:outputText value="Região"/>
+                                                <apex:outputText value=""/>
+                                            </apex:panelGrid>
+                                            <apex:panelGrid columns="3" id="theGrid5" columnClasses="col8, col8, col8" width="100%">
+                                                <apex:outputText value="Multiplicador"></apex:outputText>
+                                                <apex:outputText value="{!cuenta.Region__r.Name}"></apex:outputText>
+                                                <apex:outputText value=""></apex:outputText>
+                                            </apex:panelGrid>
+                                            <br/>
+                                        </div>
+                                    </apex:pageBlock>
+                                </div>
+                                <div class="x_content">     
+                                    
+                                    <apex:pageBlock id="pageBlockProduct2">
+                                        <div class="x_title">
+                                            <apex:panelGrid columns="3" id="theGrid6" columnClasses="col4, col5, col6" width="100%">
+                                                <apex:outputText value="Produtos"></apex:outputText>
+                                                <apex:selectlist value="{!newProduct}" size="1" multiselect="false" style="height: 30px;">
+                                                    <apex:selectoptions value="{!productOptions}" />
+                                                </apex:selectlist>
+                                                <apex:commandButton status="pageStatus"  styleClass="btn btn-success" value="Adicionar Produto" id="agregar" action="{!searchProducts}" reRender="seleccionarProductos " >
+                                                    <apex:param name="addItem" assignTo="{!addItem}" value="{!newProduct}"/>
+                                                </apex:commandButton>
+                                            </apex:panelGrid>
+                                            <apex:outputpanel id="seleccionarProductos">
+                                                <apex:outputpanel rendered="{!hayProductos}">
+                                                    <br/>
+                                                    <apex:panelGrid columns="3" id="theGrid7" columnClasses="col1, col2, col3" width="100%">
+                                                        <apex:outputText value="Nome do produto"></apex:outputText>
+                                                        <apex:outputText value="Quantidade"></apex:outputText>
+                                                        <apex:outputText value=""></apex:outputText>
+                                                    </apex:panelGrid>
+                                                    <apex:repeat value="{!newProducts}" var="prod">
+                                                        <apex:panelGrid columns="3" id="theGrid8" columnClasses="col7, col2, col3" width="100%">
+                                                            <apex:outputText value="{!newProducts[prod].label}"></apex:outputText>
+                                                            <apex:input value="{!newProducts[prod].cantidad}" id="cantidad" style="width: 60%;"/>
+                                                            <apex:commandButton styleClass="btn btn-danger" value="x" id="eliminiar" action="{!eliminarProductos}" reRender="seleccionarProductos" >
+                                                                <apex:param name="itemToRemove" assignTo="{!itemToRemove}" value="{!newProducts[prod].id}"/>
+                                                            </apex:commandButton>
+                                                        </apex:panelGrid>
+                                                    </apex:repeat>
+                                                </apex:outputpanel>
+                                            </apex:outputpanel> 
+                                        </div>
+                                    </apex:pageBlock>
+                                </div>
+                            </div>
+                             
+                            <div class="x_panel"    style= " margin-top:1em;">
+                                <div class="x_title">
+                                    <h2></h2> <div class="clearfix"/>
+                                </div>
+                                <div class="x_content">
+                                    <div class="card-header tab-card-header">
+                                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="true">Pedidos</a>
+                                            </li>
+                                            
+                                             <li class="nav-item active">
+                                                <a class="nav-link" id="one-tab" data-toggle="tab"  href="#one" role="tab" aria-controls="One" aria-selected="true" aria-expanded="true">Estimativa de compra</a>
+                                            </li>
+                                            <!--<li class="nav-item">
+                                                <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Transporte</a>
+                                            </li>-->
+                                             
+                                           <!-- <li class="nav-item">
+                                                <a  class="nav-link" id="four-tab" data-toggle="tab" href="#four" 
+                                                    role="tab" aria-controls="Four" aria-selected="false" 
+                                                    onclick="changePagingNumber1()">
+                                                    Rastreamiento de transportes
+                                                    
+                                                </a> 
+                                                <apex:commandButton action="{!changePagingNumber}" style="display: none" 
+                                                                    styleClass="botonFuncion1" reRender="myButtons">
+                                                    <apex:param name="firstParam" assignTo="{!pagingNumber}" value="0" />
+                                                </apex:commandButton>
+                                            </li> -->
+                                            <!-- DEPRECADO POR CELSO TEMPORALMENTE
+                                            <li class="nav-item">
+                                                <a  class="nav-link" id="five-tab" data-toggle="tab" href="#five" 
+                                                    role="tab" aria-controls="Five" aria-selected="false" 
+                                                    onclick="changePagingNumber2()">Devoluções</a>
+                                                <apex:commandButton action="{!changePagingNumber}" style="display: none"
+                                                                    styleClass="botonFuncion2" reRender="myButtons2">
+                                                    <apex:param name="firstParam" assignTo="{!pagingNumber}" value="1" />
+                                                </apex:commandButton>
+                                            </li>-->
+                                            
+
+                                        </ul>
+                                    </div>
+                                    <script>
+                                        function changePagingNumber1(){
+                                            document.getElementsByClassName('botonFuncion1')[0].click();
+                                        }
+                                        function changePagingNumber2(){
+                                            document.getElementsByClassName('botonFuncion2')[0].click();
+                                        }
+                                    </script>
+
+                                <div class="tab-content" id="myTabContent">
+                                        <!--Proposta -->
+                                        <apex:outputPanel rendered="{!opportunitiesWrapperValues.size == 0}" styleclass="data table table-striped no-margin">
+                                                                <div >
+                                                                     Nenhuma Oportunidade foi iniciada ainda.
+                                                                </div>
+                                                            </apex:outputPanel>
+                                        <div class="p-4 featured-tab-body tab-pane fade in active" id="two" role="tabpanel" aria-labelledby="two-tab">
+                                            <apex:pageBlock id="opps">
+                                                <apex:pageblockTable value="{!opportunitiesWrapperValues}" var="opo" styleclass="data table table-striped no-margin"  >
+                                                    <apex:column rendered="{!or(opo.venta.StageName == 'Na aprovação do multiplicador', opo.venta.StageName == 'Aprobada')}">
+                                                    <!-- <apex:pageBlock id="quotes"> -->
+                                                        <apex:pageblockTable id="quotes" value="{!opo.presupuestosWrapperValues}" var="q"  styleclass="data table table-striped no-margin" rendered="{!opo.presupuestosWrapperValues.size != 0}"> 
+                                                            <apex:column headervalue="" headerclass="TableTitle">
+                                                                <button type="button" class="btn btn-link" onclick="toggle('{!q.presupuesto.Id}') " style="width: 15px; height:15px; padding:0; ">+</button>
+                                                            </apex:column>
+                                                            <apex:column value="{!q.oppName}" headerValue="Numero do Pedido"/>
+                                                            <apex:column value="{!q.presupuesto.Status}" />
+                                                            <apex:column value="{!q.presupuesto.TotalPrice}" />    
+                                                            
+                                                            
+                                                            <!-- <apex:column styleclass="data table table-striped no-margin subtable  " colspan="12" style="display: {!IF(q.presupuesto.IsSyncing,'table-cell', 'none')}; padding-left: 3em;padding-top: 1em; " html-data-id="{!q.presupuesto.Id}" breakbefore="true"> -->
+                                                            <apex:column styleclass="data table table-striped no-margin subtable  " colspan="12" style="display: {!IF(q.presupuesto.IsSyncing,'table-cell', 'none')}; padding-left: 3em;padding-top: 1em; " html-data-id="{!q.presupuesto.Id}" breakbefore="true">
+                                                                <apex:outputPanel rendered="{!q.presupuestosItems.size == 0}" >
+                                                                    Nenhum produto foi anexado
+                                                                </apex:outputPanel> 
+                                                                
+                                                                
+                                                                <apex:outputPanel rendered="{!q.presupuestosItems.size != 0}">
+                                                                    
+                                                                    <div class="x_title" style="margin-left:18%;width:50%">
+                                                                        <h2>Tabela de vencimentos</h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <apex:panelGrid columns="3" width="65%" style="margin-left:20%" id="condicion">
+                                                                        
+                                                                        <!-- OCULTO POR REQUERIMIENTO DE CELSO
+                                                                        <apex:outputText style="width: 100%;" value="Condição de pagamento"></apex:outputText>
+                                                                        <apex:outputText style="width: 100%;" value="{!q.condicionDePago}" rendered="{!!modificarCondicionDePago}"></apex:outputText>
+                                                                        <apex:selectlist value="{!q.condicionDePago}" size="1" multiselect="false" style="width: 80%; margin-left:10%" rendered="{!modificarCondicionDePago}">
+                                                                            <apex:selectoptions value="{!condicionesDePagos}" />
+                                                                        </apex:selectlist>
+                                                                        <apex:commandButton styleClass="btn btn-round btn-success" value="Asignar" action="{!setCondicionDePago}" reRender="condicion" rendered="{!modificarCondicionDePago}">
+                                                                            <apex:param name="modificarCondicionDePago" assignTo="{!modificarCondicionDePago}" value="false"/>
+                                                                        </apex:commandButton>
+                                                                        <apex:commandButton styleClass="btn btn-round btn-error" value="Modificar" action="{!setCondicionDePago}" reRender="condicion" rendered="{!!modificarCondicionDePago}">
+                                                                            <apex:param name="modificarCondicionDePago" assignTo="{!modificarCondicionDePago}" value="true"/>
+                                                                        </apex:commandButton>-->
+                                                                        
+                                                                        <apex:pageblocktable id="vencTable" value="{!q.importes}" var="importe" align="center" width="100%" rendered="{!q.importSize > 0}">
+                                                                            
+                                                                    <!-- <apex:column headerValue="Vencimento" width="10%" headerclass="subTableTitle" value="{!importe.vencimiento}"/> REQUERIMIENTO DE CELSO-->
+                                                                            <apex:column headerValue="Data de vencimento" width="25%" headerclass="subTableTitle" value="{!importe.nuevoVencimiento}" />
+                                                                            <apex:column headerValue="% de Pagamento" width="20%" value="{!importe.quantidade}%" />
+                                                                    <!-- <apex:column headerValue="Dias de prorrogação" width="10%" headerclass="subTableTitle"  value="{!importe.diasProrrogacion}" /> REQUERIMIENTO DE CELSO-->
+                                                                    <!-- <apex:column headerValue="% Juros" width="10%" headerclass="subTableTitle" value="{!importe.Juros}%" /> REQUERIMIENTO DE CELSO-->
+                                                                            <apex:column headerValue="Valor total" width="35%" headerclass="subTableTitle" value="{!importe.total}" /><!--OK-->
+                                                                        </apex:pageblocktable>
+                                                                        
+                                                                        
+                                                                    </apex:panelGrid>
+                                                                    
+                                                                    <div class="x_title">
+                                                                        <h2>Produtos</h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <apex:pageblocktable id="accTable" value="{!q.presupuestosItems}" var="producto" align="center" width="100%">
+                                                                        
+                                                                        <apex:column headerValue="Nome de registro" width="12%" value="{!producto.Product2.Description}" />
+                                                                        <apex:column headerValue="Nome comercial" width="25%" headerclass="subTableTitle" value="{!producto.Product2.Name}"/><!--OK-->
+                                                                <!-- <apex:column headerValue="Categoria" width="10%" headerclass="subTableTitle" value="{!producto.Product2.Categoria__c}"/> REQUERIMIENTO DE CELSO -->
+                                                                        <apex:column headerValue="Tipo de necessidade" width="15%" headerclass="subTableTitle" value="{!producto.Tipo_de_necessidade__c	}" />
+                                                                        <apex:column headerValue="Quantidade Kg" width="12%" headerclass="subTableTitle"  value="{!producto.Quantity}" /><!--OK-->
+                                                                        <apex:column headerValue="Unidade" width="12%" headerclass="subTableTitle" value="{!producto.Product2.UNIDADE__c}" />
+                                                                        <apex:column headerValue="Preço KG"  width="12%" headerclass="subTableTitle" value="{!producto.UnitPrice}" />
+                                                                        <apex:column headerValue="Valor total" width="12%" headerclass="subTableTitle" value="{!producto.TotalPrice}" /><!--OK-->
+                                                                        
+                                                                    </apex:pageblocktable>
+                                                                    
+                                                                    
+                                                                    <div style="margin:20px;" >
+                                                                    </div>
+                                                                    
+                                                                    <apex:pageBlock id="btns" rendered="{!and(q.presupuesto.Status == 'Aguardando aprovação', opo.venta.StageName = 'Na aprovação do multiplicador') }">
+                                                                        <div align="center" draggable="false" >
+                                                                            <!-- ***** Funcionamiento dependiente del orden de las lineas de codigo. No modificar. ***** -->
+                                                                            <button onclick="this.nextSibling.nextSibling.nextSibling.click(); this.nextSibling.nextSibling.nextSibling.nextSibling.click(); " type="button" class="btn btn-round btn-success">Autorizar</button>
+                                                                            <button onclick="this.nextSibling.nextSibling.nextSibling.click(); showModalConfirmacion('testmodal');" type="button" class="btn btn-round btn-danger">Recusar</button>
+                                                                            <apex:inputCheckbox value="{!opo.isSelect}" style="display:none"></apex:inputCheckbox>
+                                                                            <apex:commandButton styleClass="btn btn-round btn-success" value="Autorizar"  action="{!approvalQuote}" style="display:none"/>
+                                                                            <apex:commandButton styleClass="btn btn-round btn-success" value="Recusar prueba"  action="{!setIdToReject}" style="display:none" reRender="two">
+                                                                                <apex:param name="indexOpp" value="{!opo.venta.Id}" assignTo="{!indexOpp}"/>
+                                                                            </apex:commandButton>
+                                                                            <!-- ***** Fin de funcionamiento dependiente del orden de las lineas de codigo ***** -->
+                                                                        </div>
+                                                                    </apex:pageBlock>
+                                                                    
+                                                                    <div style="margin:20px;" >
+                                                                    </div>
+                                                                </apex:outputPanel> 
+                                                                
+                                                            </apex:column>
+                                                        </apex:pageblockTable>
+                                                    </apex:column> 
+                                                    <!-- </apex:pageBlock>   -->
+                                                </apex:pageblockTable>
+                                            </apex:pageBlock> 
+                                        </div>
+                                        <!-- Transporte -->
+                                        <div class="p-4 featured-tab-body tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">
+                                            <apex:pageBlock id="pageTransporte">
+                                                <apex:outputPanel rendered="{!venta.stagename != 'Revisão do administrador de vendas'}"> 
+                                                    <div style="margin:20px">Uma proposta deve ter sido aprovada.</div>
+                                                </apex:outputPanel>
+                                                
+                                                <apex:outputPanel id="transporte" rendered="{!venta.stagename == 'Revisão do administrador de vendas'}"> 
+                                                    
+                                                    <center style="margin-top:20px;"><h2>Pedidos para distribuir</h2></center>
+                                                    <div style="margin-bottom:20px;">
+                                                        <apex:panelGrid columns="3" id="theGrid7" columnClasses="col7, col2, col3" width="100%"  styleclass="table-striped">
+                                                            <apex:outputText style="font-weight:bold;" value="Nome do produto"></apex:outputText>
+                                                            <apex:outputText style="font-weight:bold;" value="Quantidade"></apex:outputText>
+                                                            <apex:outputText value=""></apex:outputText>
+                                                        </apex:panelGrid>
+                                                        
+                                                        <apex:repeat value="{!productosSeleccionadosValues}" var="oppLineItem">
+                                                            <apex:panelGrid columns="3" id="theGrid8" columnClasses="col7, col2, col3" width="100%" style="margin:0px important!;" styleclass=" table-striped no-margin">
+                                                                <apex:outputText value="{!oppLineItem.label}"></apex:outputText>
+                                                                <apex:outputText value="{!oppLineItem.cantidad}"></apex:outputText>
+                                                                <apex:outputText value=""></apex:outputText>
+                                                            </apex:panelGrid>
+                                                        </apex:repeat>
+                                                    </div>
+                                                    
+                                                    <center style="margin-top:20px;"><h2>Distribuição de pedidos</h2></center>
+                                                    
+                                                    <div class="x_title" style="margin-top:20px;">                                                                                                          
+                                                        <apex:outputPanel id="adicionarOrder"> 
+                                                            <apex:outputText value="{!error}"   style="color:red"/>
+                                                        </apex:outputPanel>
+                                                        <apex:panelGrid columns="4" columnClasses="col8, col8, col10, col9" width="100%">
+                                                            <apex:outputText value="Contato"></apex:outputText>
+                                                            
+                                                            <apex:outputText value="Produtos"></apex:outputText>
+                                                            
+                                                            <apex:outputText value="Quantidade"></apex:outputText>
+                                                            
+                                                            <apex:outputText value=""></apex:outputText>
+                                                            
+                                                            <apex:selectlist value="{!contactProduct.contactId}" size="1" multiselect="false" style="height: 30px; width: 95%;">
+                                                                <apex:selectoptions value="{!listContacts}" />
+                                                            </apex:selectlist>
+                                                            
+                                                            <apex:selectlist value="{!contactProduct.productId}" size="1" multiselect="false" style="height: 30px; width: 95%;">
+                                                                <apex:selectoptions value="{!newProductOptions}" />
+                                                            </apex:selectlist>
+                                                            
+                                                            <apex:input value="{!contactProduct.cantidad}" type="number" style="width: 90%; height: 30px;"></apex:input>
+                                                            
+                                                            <apex:commandButton styleClass="btn btn-success" value="Adicionar"  action="{!adicionarOrder}" reRender="pageTransporte" status="pageStatus">
+                                                                <apex:param name="addItem" assignTo="{!addItem}" value="{!contactProduct.contactId}"/>
+                                                            </apex:commandButton>
+                                                        </apex:panelGrid>
+                                                    </div>
+                                                    <!--<apex:outputPanel >-->
+                                                    
+                                                    <apex:outputPanel rendered="{!ordersByContactValues.size == 0}">
+                                                        Os pedidos não foram distribuídos
+                                                    </apex:outputPanel> 
+                                                    
+                                                    <apex:outputPanel rendered="{!ordersByContactValues.size != 0}">
+                                                        <apex:pageblockTable value="{!ordersByContactValues}" var="p" styleclass="data table table-striped no-margin">  
+                                                            
+                                                            <apex:column headervalue="" headerclass="TableTitle">
+                                                                <button type="button" class="btn btn-link" onclick="toggle('{!p.anOrder.id}') " style="width: 15px; height:15px; padding:0; ">+</button>
+                                                            </apex:column>
+                                                            <apex:column value="{!p.nomeDoContacto}" headerValue="Nome de contato"  />
+                                                            <apex:column value="{!p.rua}" headerValue="Rua" />
+                                                            <apex:column value="{!p.ciudade}" headerValue="Cidade"/>
+                                                            <apex:column value="{!p.estado}" headerValue="Estado" />
+                                                            <apex:column value="{!p.pais}" headerValue="Pais" />
+                                                            <apex:column value="{!p.anOrder.StageName}" />
+                                                            
+                                                            <apex:column styleclass="data table table-striped no-margin subtable" colspan="6" style=" padding-left: 3em;padding-top: 1em; " html-data-id="{!p.anOrder.id}" breakbefore="true">
+                                                                <apex:outputpanel id="newListOrderItems">
+                                                                    <!-- <apex:outputPanel rendered="{!p.size != 0}" > -->
+                                                                    <apex:panelGrid columns="3" id="theGrid7" columnClasses="col7, col2, col3" width="100%">
+                                                                        <apex:outputText style="font-weight:bold;" value="Produtos"></apex:outputText>
+                                                                        <apex:outputText style="font-weight:bold;" value="Quantidade"></apex:outputText>
+                                                                        <apex:outputText value=""></apex:outputText>
+                                                                    </apex:panelGrid>
+                                                                    <apex:repeat value="{!p.orderItems}" var="item">
+                                                                        <apex:panelGrid columns="3" id="theGrid8" columnClasses="col7, col2, col3" width="100%">
+                                                                            <apex:outputText value="{!p.orderItems[item].Product2.Name}"></apex:outputText>                                                                            
+                                                                            <apex:outputText value="{!p.orderItems[item].Quantity}"></apex:outputText>
+                                                                            <apex:commandButton reRender="pageTransporte" status="pageStatus" styleClass="btn btn-danger" value="x" id="eliminar" action="{!deleteOrderItem}"  >
+                                                                                <apex:param name="itemToRemove" assignTo="{!itemToRemove}" value="{!p.orderItems[item].id}"/>
+                                                                                <apex:param name="contactToRemove" assignTo="{!contactToRemove}" value="{!p.anOrder.Destinatario_de_Mercaderia__c}"/>
+                                                                            </apex:commandButton>
+                                                                        </apex:panelGrid>
+                                                                    </apex:repeat>
+                                                                    <div style="margin:20px;"></div>
+                                                                    <!--</apex:outputPanel> -->
+                                                                </apex:outputPanel> 
+                                                            </apex:column>                                                    
+                                                        </apex:pageblockTable>
+                                                    </apex:outputPanel>
+                                                </apex:outputPanel>
+                                            </apex:pageBlock>  
+                                        </div>
+                               			
+                                        <!-- Requisicion de Compra / Estimativa de compra -->
+                                       
+                                         
+                                        <div class="p-4 featured-tab-body tab-pane fade" id="one" role="tabpanel" aria-labelledby="one-tab">
+                                            <br/>                                
+                                                <apex:pageBlock id="mensajeDeError">
+                                                    <apex:messages layout="block" styleClass="alert alert-danger errors" style="list-style-type: none;"/> 
+                                                </apex:pageBlock>
+
+                                                <apex:pageBlock id="mensajeDeExito">
+                                                    <apex:messages layout="block" styleClass="alert alert-success btn-default" style="list-style-type: none;"/> 
+                                                </apex:pageBlock>
+                                             
+                                            
+                                          	<apex:pageblock >
+                                                <br/>
+                                                    <apex:pageBlockTable value="{!2}" var="ff" align="left" width="100%">
+                                                        <apex:column headerClass="headerCenter  padding" styleClass="padding " headerValue="Produtos" width="20%" >
+                                                            <apex:selectList value="{!productoRequisicionSeleccionado}"  size="1" disabled="{!!requisicionEditable}" styleclass="form-control">
+                                                                <apex:selectOptions value="{!variedadOptions}"></apex:selectOptions>
+                                                            </apex:selectList>
+                                                        </apex:column>
+                                                        <apex:column headerClass="headerCenter " styleClass="" headerValue="Quantidade Kg" width="10%">
+                                            
+                                                            <apex:outputText value="{!cantidadRequisicionErrorMessage}" rendered="{!LEN(cantidadRequisicionErrorMessage)>0}" />
+                                                            
+                                            
+                                                            <apex:input disabled="{!!requisicionEditable}" styleClass="form-control" 
+                                                                    type="text" value="{!cantidadRequisicion}" id="quantidade_kg_input" html-data-type="currency"
+                                                                    style="text-align: center;"/>
+                                                            <script>
+                                                                // Jquery Dependency
+                                                                // var idInput = '#'+'{!$Component.cantidadInput}';
+                                                                $("input[data-type='currency").on({
+                                                                    keyup: function() {
+                                                                    formatCurrency($(this));
+                                                                    },
+                                                                    blur: function() { 
+                                                                    formatCurrency($(this), "blur");
+                                                                    }
+                                                                });
+
+
+                                                                function formatNumber(n) {
+                                                                // format number 1000000 to 1,234,567
+                                                                return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+                                                                }
+
+
+                                                                function formatCurrency(input, blur) {
+                                                                // appends $ to value, validates decimal side
+                                                                // and puts cursor back in right position.
+                                                                
+                                                                // get input value
+                                                                var input_val = input.val();
+                                                                
+                                                                // don't validate empty input
+                                                                if (input_val === "") { return; }
+                                                                
+                                                                // original length
+                                                                var original_len = input_val.length;
+                                                                     
+                                                                // initial caret position 
+                                                                var caret_pos = input.prop("selectionStart");
+                                                                    
+                                                                // check for decimal
+                                                                if (input_val.indexOf(",") >= 0) {
+                                                                     
+                                                                    // get position of first decimal
+                                                                    // this prevents multiple decimals from
+                                                                    // being entered
+                                                                    var decimal_pos = input_val.indexOf(",");
+                                                                     
+                                                                    // split number by decimal point
+                                                                    var left_side = input_val.substring(0, decimal_pos);
+                                                                    var right_side = input_val.substring(decimal_pos);
+                                                                     
+                                                                    // add commas to left side of number
+                                                                    left_side = formatNumber(left_side);
+                                                                     
+                                                                    // validate right side
+                                                                    right_side = formatNumber(right_side);
+                                                                    
+                                                                    // On blur make sure 2 numbers after decimal
+                                                                    if (blur === "blur") {
+                                                                    right_side += "00";
+                                                                    }
+                                                                    
+                                                                    // Limit decimal to only 2 digits
+                                                                    right_side = right_side.substring(0, 2);
+                                                                     
+                                                                    // join number by .
+                                                                    input_val = left_side + "," + right_side;
+                                                                     
+                                                                } else {
+                                                                    // no decimal entered
+                                                                    // add commas to number
+                                                                    // remove all non-digits
+                                                                    input_val = formatNumber(input_val);
+                                                                    input_val = input_val;
+                                                                    
+                                                                    // final formatting
+                                                                    if (blur === "blur") {
+                                                                    input_val += ",00";
+                                                                    }
+                                                                }
+                                                                
+                                                                // send updated string to input
+                                                                input.val(input_val);
+                                                                // put caret back in the right position
+                                                                var updated_len = input_val.length;
+                                                                caret_pos = updated_len - original_len + caret_pos;
+                                                                input[0].setSelectionRange(caret_pos, caret_pos);
+                                                                }
+                                                            
+                                                            function clearQuantidadeKgInput() {
+                                                               document.getElementById('{!$Component.quantidade_kg_input}').value = '';
+                                                            }
+                                                            </script>
+                                                            
+                                                        
+                                                                        <!-- html-oninput="this.value=this.value.replace(/[^0-9\\.\\,]/g,'');" -->
+                                                        
+                                                        </apex:column>
+                                                        <apex:column width="10%" styleClass="padding2">
+                                                            <apex:commandButton disabled="{!!requisicionEditable}" styleClass="btn btn-success"
+                                                                                action="{!crearProductoRequisicion}" value="Adicionar"
+                                                                                id="Adicionar" reRender="mensajeDeError, tablaProductosRequisicion"
+                                                                                oncomplete="clearQuantidadeKgInput();"/>
+                                                        </apex:column>
+                                                        
+                                                        <apex:column width="3%" styleClass="padding2">
+                                                            <h6>Safra: <span class="badge badge-secondary">{!safraActual}</span></h6>
+                                                        </apex:column>
+                                                        
+                                                         <apex:column width="3%" styleClass="padding2" >
+                                                            <h6>Status: <span class="{!IF(estadoRequisicion == 'Aprovada', 'badge badge-success', 'badge badge-secondary')}">{!estadoRequisicion}</span></h6>
+                                                        </apex:column>
+                                                    </apex:pageBlockTable>
+
+                                            </apex:pageblock>
+
+                                            <div>
+                                            
+                                                
+                                                <apex:pageBlock html-style="padding-top: 80px;" id="tablaProductosRequisicion">      
+                                                  
+                                                    <apex:datatable headerClass="center" styleclass="data table table-bordered table-striped no-margin" rendered="{!productosRequisicion.size > 0}" value="{!productosRequisicion}" var="i" width="90%" style="padding:30px;" align="center">
+                                                        <apex:column style="padding: 2px; vertical-align: middle" headerClass="headerLeft" headerValue="Nome do produto"  width="50%" >
+                                                            <apex:outputText value="{!i.nombre}"></apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column style="padding: 2px; vertical-align: middle" headerClass="headerCenter" styleClass="headerCenter" headerValue="Quantidade"  width="50%" >
+                                                    
+                                                       <!-- <apex:outputText lang="pt" value="{0,number, Integer}">
+                                                                <apex:param value="{!i.cantidad}" />
+                                                            </apex:outputText> -->
+                                                    
+                                                            <apex:outputText value="{!i.cantidadString}"></apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column style="padding: 2px;" >
+                                                            <div style="{!IF(requisicionEditable, 'display:block', 'display:none')}">
+                                                                <apex:commandButton styleClass="btn btn-danger btn-sm" action="{!eliminarProductoRequisicion}" value="x" id="Quitar" reRender="tablaProductosRequisicion">
+                                                                    <apex:param name="prodId" value="{!i.idPR}" assignTo="{!idEliminar}"/>
+                                                                </apex:commandButton>
+                                                            </div>  
+                                                        </apex:column>
+                                                    </apex:datatable>
+                                                </apex:pageBlock>
+                                            </div>
+                                            
+                                             <div style="{!IF(requisicionEditable, 'display:block', 'display:none')}">
+                                                 <div align="center">
+                                                     <button class="btn  btn-success" type="button" onclick="showModalConfirmacion('confirmarSalvar');">
+                                                          Salvar
+                                                     </button>
+                                                     &nbsp;                                             
+                                                     <button class="btn  btn-success" type="button" onclick="showModalConfirmacion('confirmarEnviar');">
+                                                         Enviar para aprovação
+                                                     </button>
+                                                 </div>
+                                            </div>  
+                                        
+                                          
+                                            <!-- modal confirmacion salvar -->
+                                        
+                                            <apex:outputPanel >
+                                                <div id="confirmarSalvar" class="modal fade">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                <h4 class="modal-title">Deseja salvar essas informações?</h4>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                <apex:commandButton styleClass="btn btn-primary" reRender="myPanel,mensajeDeExito" value="Confirmar"
+                                                                                    action="{!guardarRequisicion}" html-data-dismiss="modal"
+                                                                                    oncomplete="setTimeout(function(){}, 1000); refresh();"
+                                                                                    >
+                                                                </apex:commandButton>
+                                                                <apex:actionFunction action="{!refresh}" name="refresh" reRender=""  />
+                                                            </div>
+                                                        </div>                      
+                                                    </div>
+                                                </div>
+                                            </apex:outputPanel>
+                                       
+                                            <!-- modal confirmacion salvar -->
+                                            
+                                            <!-- modal confirmacion enviar para aprobacion -->
+                                        
+                                            <apex:outputPanel >
+                                                <div id="confirmarEnviar" class="modal fade">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                <h4 class="modal-title">Deseja enviar para aprovação?</h4>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                <apex:commandButton styleClass="btn btn-primary" reRender="myPanel" value="Confirmar"
+                                                                                    action="{!sumbitForApproval}" html-data-dismiss="modal">
+                                                                </apex:commandButton>
+                                                            </div>
+                                                        </div>                      
+                                                    </div>
+                                                </div>
+                                            </apex:outputPanel>
+                                       
+                                            <!-- modal confirmacion enviar para aprobacion -->
+                                        </div>
+                                        <!--Rastreamiento de Transporte-->
+                                        <!-- <div class="p-4 featured-tab-body tab-pane fade " id="four" role="tabpanel" aria-labelledby="four-tab">
+                                            
+                                            <apex:pageBlock id="pageRastreamiento">
+                                                <apex:outputPanel rendered="{!IF(OportunidadesCVBAutorizadas.size > 0, false, true)}" >
+                                                    Todavia no se ha generado ningun envio.
+                                                </apex:outputPanel> 
+                                                
+                                                <apex:outputPanel id="myPanel">
+                                                    
+                                                    <apex:pageblockTable value="{!OportunidadesCVBAutorizadas}" var="p" styleclass="data table table-striped no-margin">  
+                                                        <apex:column headervalue="" headerclass="TableTitle">
+                                                            <button type="button" class="btn btn-link" onclick="toggle('{!p.Id}') " style="width: 15px; height:15px; padding:0; ">+</button>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Remesa"> 
+                                                            <apex:outputText style="line-height: 28px;" value="{!p.Numero_Entrega__c}"> </apex:outputText>              
+                                                        </apex:column>
+                                                        <apex:column headerValue="Documento Transporte">
+                                                            <apex:outputText style="line-height: 28px;" value="{!p.Documento_Transporte__c}"> </apex:outputText>              
+                                                        </apex:column>
+                                                        <apex:column headerValue="Numero Pedido" >
+                                                            <apex:outputText style="line-height: 28px;" value="{!p.Nro_Pedido_SAP__c}"> </apex:outputText>              
+                                                        </apex:column>
+                                                        <apex:column headerValue="Inicio Carga" >
+                                                            <apex:outputText style="line-height: 28px;" value="{0, date,  dd'/'MM'/'yyyy}">
+                                                                <apex:param value="{!p.Inicio_Cargamento__c}" /> 
+                                                            </apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Inicio Transporte" >
+                                                            <apex:outputText style="line-height: 28px;" value="{0, date,  dd'/'MM'/'yyyy}">
+                                                                <apex:param value="{!p.Inicio_Transporte__c}" /> 
+                                                            </apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Fin Transporte">
+                                                            <apex:outputText style="line-height: 28px;" value="{0, date, dd'/'MM'/'yyyy}">
+                                                                <apex:param value="{!p.Fin_Transporte__c}" /> 
+                                                            </apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Estado">
+                                                            <apex:outputText style="line-height: 28px;" value=" {!p.Estado__c} "/>
+                                                        </apex:column>
+                                                        <apex:column >                    -->
+                                                            <!-- style="{!IF(p.Estado__c == 'Entrege' && p.Confirmado__c == false, 'visibility:visible', 'visibility:hidden')}"   -->
+                                                            <!-- <button style="{!IF(p.Estado__c == 'Entregue' && p.Confirmado__c == false, 'visibility:visible', 'visibility:hidden')}"
+                                                                    id="confirmar-{!p.id}" type="button" 
+                                                                    class="btn btn-link" onclick="confirmar('{!p.id}');" >Confirmar 
+                                                            </button>	
+                                                            <apex:commandLink style="{!IF(p.Estado__c == 'Entregue' && p.Confirmado__c == false, 'visibility:visible', 'visibility:hidden')}"
+                                                                              action="{!goToDevoluciones}" styleClass="btn btn-link"
+                                                                              value="Devolver" >
+                                                                <apex:param name="OppoId" value="{!p.id}" assignTo="{!OpportunityIdADevolver}"/>
+                                                                
+                                                            </apex:commandLink>	 -->
+                                                            <!-- modal  -->
+                                                            <!-- <apex:outputPanel >
+                                                                <div id="modalConfirmacion-{!p.id}" class="modal fade">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title">Deseja confirmar a chegada o transporte?</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <p>Deixe um comentário</p>
+                                                                                <apex:inputTextarea style="width:100%;" rows="5" id="Comentarios_de_confirmacion" value="{!comentarioRastreamientoTransporte}"/>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                                
+                                                                                <apex:commandButton styleClass="btn btn-primary" reRender="myPanel" value="Confirmar"
+                                                                                                    action="{!SaveComentarioConfirmacion}" html-data-dismiss="modal">
+                                                                                    <apex:param name="OpportunityIdAConfirmar" value="{!p.id}" assignTo="{!OpportunityIdAConfirmar}"/>
+                                                                                </apex:commandButton>
+                                                                                
+                                                                            </div>
+                                                                        </div>                      
+                                                                    </div>
+                                                                </div>
+                                                            </apex:outputPanel> -->
+                                                            <!-- modal  -->
+                                                        <!-- </apex:column> -->
+                                                        
+                                                    <!--                                                         
+                                                        <apex:column styleclass="data table table-striped no-margin subtable" colspan="9" style="display: none;" html-data-id="{!p.id}" breakbefore="true">
+                                                            <apex:panelGrid columns="2" id="theGrid7" columnClasses="col7, col2" width="100%">
+                                                                <apex:outputText style="font-weight:bold;" value="Produtos"></apex:outputText>
+                                                                <apex:outputText style="font-weight:bold;" value="Quantidade"></apex:outputText>
+                                                            </apex:panelGrid>
+                                                            <apex:repeat value="{!p.OpportunityLineItems}" var="item">
+                                                                <apex:panelGrid columns="2" id="theGrid8" columnClasses="col7, col2" width="100%">
+                                                                    <apex:outputText value="{!item.Name}"></apex:outputText>                                                                            
+                                                                    <apex:outputText value="{!item.Quantity}"></apex:outputText>
+                                                                </apex:panelGrid>
+                                                            </apex:repeat>
+                                                        </apex:column>    
+                                                    </apex:pageblockTable>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel id="myButtons">
+                                                    <div align="center">
+                                                        <apex:commandButton styleclass="btn btn-sm  btn-primary" action="{!Previous}" title="Anterior" value="Anterior"
+                                                                            rendered="{!showPrevDev}" reRender="myPanel,myButtons"/> 
+                                                        &nbsp; &nbsp; <apex:outputText value="{!CurrentPage} | {!TotalPages}" /> &nbsp; &nbsp;
+
+                                                        <apex:commandButton styleclass="btn btn-sm btn-primary"  action="{!Next}" title="Proximo" value="Proximo"
+                                                                            rendered="{!showNextDev}" reRender="myPanel,myButtons"/>
+                                                    </div>   
+                                                </apex:outputPanel> 
+
+                                            </apex:pageBlock>  
+                                            
+                                           
+                                        </div> -->
+                                         <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                                        <!--Devoluções-->
+                                        <!-- <div class="p-4 featured-tab-body tab-pane fade " id="five" role="tabpanel" aria-labelledby="five-tab">
+                                            
+                                            <apex:pageBlock id="pageRastreamiento2">
+                                                <apex:outputPanel rendered="{!IF(OportunidadesDevolucion.size > 0, false, true)}" >
+                                                    Todavia no se ha generado ninguna devolucion.
+                                                </apex:outputPanel> 
+                                                
+                                                <apex:outputPanel id="myPanel2">
+                                                    
+                                                    <apex:pageblockTable value="{!OportunidadesDevolucion}" var="p" styleclass="data table table-striped no-margin">  
+                                                        <apex:column headervalue="" headerclass="TableTitle">
+                                                            <button type="button" class="btn btn-link" onclick="toggle('{!p.Id}') " style="width: 15px; height:15px; padding:0; ">+</button>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Nombre"> 
+                                                            <apex:outputText style="line-height: 28px;" value="{!p.Name}"> </apex:outputText>              
+                                                        </apex:column>
+                                                        <apex:column headerValue="Documento Transporte">
+                                                            <apex:outputText style="line-height: 28px;" value="{!p.Documento_Transporte__c}"> </apex:outputText>              
+                                                        </apex:column>
+                                                        <apex:column headerValue="Numero Pedido" >
+                                                            <apex:outputText style="line-height: 28px;" value="{!p.Nro_Pedido_SAP__c}"> </apex:outputText>              
+                                                        </apex:column>
+                                                        <apex:column headerValue="Inicio Carga" >
+                                                            <apex:outputText style="line-height: 28px;" value="{0, date,  dd'/'MM'/'yyyy}">
+                                                                <apex:param value="{!p.Inicio_Cargamento__c}" /> 
+                                                            </apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Inicio Transporte" >
+                                                            <apex:outputText style="line-height: 28px;" value="{0, date,  dd'/'MM'/'yyyy}">
+                                                                <apex:param value="{!p.Inicio_Transporte__c}" /> 
+                                                            </apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Fin Transporte">
+                                                            <apex:outputText style="line-height: 28px;" value="{0, date, dd'/'MM'/'yyyy}">
+                                                                <apex:param value="{!p.Fin_Transporte__c}" /> 
+                                                            </apex:outputText>
+                                                        </apex:column>
+                                                        <apex:column headerValue="Estado">
+                                                            <apex:outputText style="line-height: 28px;" value=" {!p.Estado__c} "/>
+                                                        </apex:column> -->
+                                                        <!-- <apex:column >                   
+                                                            
+                                                            <apex:commandLink style="{!IF(p.Estado__c == 'Entregue' && p.Confirmado__c == false, 'visibility:visible', 'visibility:hidden')}"
+                                                                              action="{!goToDevoluciones}" styleClass="btn btn-link"
+                                                                              value="Devolver" >
+                                                                <apex:param name="OppoId" value="{!p.id}" assignTo="{!OpportunityIdADevolver}"/>
+                                                                
+                                                            </apex:commandLink>	
+                                                        </apex:column> -->
+                                                        
+                                                        
+                                                        <!-- <apex:column styleclass="data table table-striped no-margin subtable" colspan="9" style="display: none;" html-data-id="{!p.id}" breakbefore="true">
+                                                            <apex:panelGrid columns="2" id="theGrid7" columnClasses="col7, col2" width="100%">
+                                                                <apex:outputText style="font-weight:bold;" value="Produtos"></apex:outputText>
+                                                                <apex:outputText style="font-weight:bold;" value="Quantidade"></apex:outputText>
+                                                            </apex:panelGrid>
+                                                            <apex:repeat value="{!p.OpportunityLineItems}" var="item">
+                                                                <apex:panelGrid columns="2" id="theGrid8" columnClasses="col7, col2" width="100%">
+                                                                    <apex:outputText value="{!item.Name}"></apex:outputText>                                                                            
+                                                                    <apex:outputText value="{!item.Quantity}"></apex:outputText>
+                                                                </apex:panelGrid>
+                                                            </apex:repeat>
+                                                        </apex:column>    
+                                                    </apex:pageblockTable>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel id="myButtons2">
+                                                    <div align="center">
+                                                        <apex:commandButton styleclass="btn btn-sm  btn-primary" action="{!Previous}" title="Anterior" value="Anterior"
+                                                                            rendered="{!showPrevDev}" reRender="myPanel2,myButtons2"> -->
+                                                            <!-- <apex:param assignTo="{!pagingNumber}" value="1" /> -->
+                                                        <!-- </apex:commandButton>
+                                                        &nbsp; &nbsp; <apex:outputText value="{!CurrentPage} | {!TotalPages}" /> &nbsp; &nbsp;
+                                                         
+                                                        <apex:commandButton styleclass="btn btn-sm btn-primary"  action="{!Next}" title="Proximo" value="Proximo"
+                                                                            rendered="{!showNextDev}" reRender="myPanel2,myButtons2"> -->
+                                                                            <!--disabled="{!DisableNext(1)}" -->
+                                                            <!-- <apex:param assignTo="{!pagingNumber}" value="1" /> -->
+                                                        <!-- </apex:commandButton>
+                                                    </div>   
+                                                </apex:outputPanel> 
+
+                                            </apex:pageBlock>  
+                                            
+                                           
+                                        </div> -->
+                                         <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                                        </div>
+                                    </div>
+                            </div>                            
+                        </div>
+                        <apex:actionFunction action="{!init}" name="goNew" />
+                        <apex:actionFunction action="{!rejectQuote}" name="recusar" reRender="myTabContent" />
+                        
+                        <!-- <apex:actionFunction action="{!deselectChk}" name="deselectChk" reRender="chkIsSelect"  /> -->
+
+                    </apex:form> 
+                </apex:panelGrid>
+            </center>
+            </body> 
+            <script type="text/javascript">
+                function enableChk(){
+                    document.getElementBy
+                }
+                
+            </script>
+            <script type="text/javascript">
+            
+           function ocultarConfirmacion(id){
+                document.getElementById('confirmar-'+id).style.visibility = "hidden";
+           }
+           
+            function confirmar(id) {
+                var str = "#modalConfirmacion-" + id;
+                $(str).modal('show');
+            }
+
+			function showModalConfirmacion(nombreModal) {
+                var str = '#' + nombreModal;
+                $(str).modal('show');
+            }
+
+            
+            function toggle(id){
+                var elements = document.getElementsByClassName("subtable");
+                for (var i=0; i < elements.length;i++) {
+                    
+                    if (elements[i].getAttribute("data-id") == id) {
+                        
+                        if (elements[i].style.display == "none") {
+                            elements[i].style.display = "table-cell";
+                        } else {
+                            elements[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            
+            $(document).ready(function(){
+                var show_btn=$('.show-modal');
+                var show_btn=$('.show-modal');
+                //$("#testmodal").modal('show');
+                
+                show_btn.click(function(){
+                    $("#testmodal").modal('show');
+                })
+            });
+            
+            $(function() {
+                console.log('Entrando a funcion response');
+                $('#responses').on('click', function( e ) {
+                    console.log('Entrando a click en funcion response');
+                    Custombox.open({
+                        target: '#testmodal-1',
+                        effect: 'fadein'
+                    });
+                    e.preventDefault();
+                });
+            });
+            
+            $('#bologna-list a').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            </script>
+            <style>
+                .center{
+                vertical-align: center !important;
+                }
+            </style>
+        </apex:define>
+    </apex:composition>
+</apex:page>

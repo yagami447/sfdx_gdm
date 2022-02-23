@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRMX_Desconto_Classe_3__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(Region_Comercial_Copia__c,&quot;REGION&quot;),
+IF(BR_Total_de_pontos__c &gt; 23 , 18.75, IF(BR_Total_de_pontos__c &gt;= 21, 12.50, IF(BR_Total_de_pontos__c &gt;= 16, 6.25, 0))),
+IF(BR_Total_de_pontos__c &gt; 23 , 17.64, IF(BR_Total_de_pontos__c &gt;= 21, 11.76, IF(BR_Total_de_pontos__c &gt;= 16, 5.88, 0))))
++ BRMX_Desconto_Obj_Rel_Gen_Dem_Copia__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BRMX Desconto Classe 3</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

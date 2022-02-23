@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_Total_Aux__c</fullName>
+    <description>Se copia en este campo el valor de Preço Total mediante una regla de flujo. Es para poder usar un campo resumen en la cabecera.</description>
+    <externalId>false</externalId>
+    <label>Preço Total Aux</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

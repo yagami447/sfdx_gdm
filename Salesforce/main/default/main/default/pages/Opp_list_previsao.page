@@ -1,0 +1,55 @@
+<apex:page Controller="Opp_tabListados" label="Controle de Estoque" title="Controle de Estoque" action="{!initEstoque}">
+    <apex:sectionHeader title="Oportunidades de previção e estoque" subtitle="Início"/>
+    <apex:pageBlock title="Pesquisa de oportunidades">
+        <apex:form >
+            <apex:outputLabel value="Critério:  " style="font-weight:bold;">
+                <apex:inputText value="{!searchText}" />
+            </apex:outputLabel>&nbsp;&nbsp;
+            <apex:outputLabel value="Região:  " style="font-weight:bold;">
+                <apex:inputField value="{!opp.Regiao__c}" style="width: 60px" />
+            </apex:outputLabel>&nbsp;&nbsp;
+            <apex:outputLabel value="Mês:  " style="font-weight:bold;">
+                <apex:inputField value="{!opp.Mes__c}" />
+            </apex:outputLabel>&nbsp;&nbsp;
+            <apex:commandButton action="{!listar}" value="Pesquisar" id="searchBtn" rerender="acclist" status="status"/>&nbsp;
+            <apex:actionStatus startText="Consultando..." id="status"/>
+        </apex:form>
+    </apex:pageBlock>
+    <apex:outputPanel id="acclist">
+    <apex:pageBlock title="Oportunidades recentes">
+        <apex:pageBlockButtons location="top">
+        <apex:form >
+            <apex:commandButton rendered="{!NewButtonEnabled}" value="Nova oportunidade"  action="{!NuevaEstoque}"></apex:commandButton>
+        </apex:form>
+        </apex:pageBlockButtons>
+        <apex:form >
+            <apex:actionStatus startText="Consultando..." id="status2"/>
+            <div align="right" style="display:{!IF(NOT(ISNULL(result)),'block','none')}">
+                <font size="1pt">Página&nbsp;<apex:outputLabel value="{!PageNumber}"/>&nbsp;de&nbsp;<apex:outputLabel value="{!totalPageNumber}"/>&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                <apex:commandButton status="status2" value="<<" action="{!firstBtnClick}" disabled="{!firstButtonDisabled}" rerender="acclist"></apex:commandButton>
+                <apex:commandButton status="status2" value="Anterior" action="{!previousBtnClick}" disabled="{!previousButtonEnabled}" rerender="acclist"></apex:commandButton>
+                <apex:commandButton status="status2" value="Mais" action="{!nextBtnClick}" rerender="acclist" disabled="{!nextButtonDisabled}" ></apex:commandButton>
+                <apex:commandButton status="status2" value=">>" action="{!lastBtnClick}" disabled="{!lastButtonDisabled}" rerender="acclist"></apex:commandButton>
+            </div>
+            <apex:pageBlockTable value="{!result}" var="item" id="resultPanel">
+                <apex:column headerValue="Nome da oportunidade">
+                    <apex:outputLink value="../{!item.id}" id="elLink">
+                        <apex:outputText value="{!item.name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Nome da conta">
+                    <apex:outputLink value="../{!item.Account.Id}" id="elLinkAcc">
+                        <apex:outputText value="{!item.Account.Name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Região">
+                    <apex:OutputText value="{!item.Regiao__r.Name}"/>
+                </apex:column>
+                <apex:column headerValue="Mês">
+                    <apex:OutputText value="{!item.Mes__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:form>
+    </apex:pageBlock>
+    </apex:outputPanel>
+</apex:page>

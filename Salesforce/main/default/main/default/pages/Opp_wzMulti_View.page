@@ -1,0 +1,74 @@
+<apex:page standardController="Opportunity" extensions="Opp_Multi_View_Ctrl" action="{!init}">
+    <apex:sectionHeader subtitle="{!opp.name}" title="Oportunidade de Comercialização" rendered="{!Comercial}"/><apex:sectionHeader subtitle="{!opp.name}" title="Oportunidade de Multiplicação" rendered="{!Produccion}"/>
+    <apex:sectionHeader subtitle="{!opp.name}" title="Oportunidade de Venda da Básica" rendered="{!Basica}"/><apex:sectionHeader subtitle="{!opp.name}" title="Oportunidade de Rebaixamento" rendered="{!Rebaja}"/>
+    <apex:sectionHeader subtitle="{!opp.name}" title="Oportunidade de Exportação" rendered="{!Exportacion}"/>
+    <apex:detail relatedList="false" title="false" />
+    <apex:form >
+    <apex:pageblock title="Produtos" mode="detail">
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton rendered="{!OR(Basica,Produccion)}" action="{!addProduct}" value="Adicionar Produto"></apex:commandButton>
+            <apex:commandButton rendered="{!Rebaja}" action="{!Agregar_Prod}" value="Adicionar Produto"></apex:commandButton>
+        </apex:pageBlockButtons>        
+        <apex:outputLabel value="Nenhum registro para exibir" rendered="{!NOT(showItems)}" />
+        <!-- Productos de Rebajamiento -->
+        <apex:pageBlockTable value="{!Items}" var="item" rendered="{!AND(showItems,Rebaja)}" >
+            <apex:column headerValue="Produto Original">
+                <apex:outputLink value="https://na2.salesforce.com/{!item.Produto_Rebaixado__c}" id="elLink">
+                    <apex:outputText value="{!item.Produto_Rebaixado_Nombre__c}"/>
+                </apex:outputLink>
+            </apex:column>
+            <apex:column ><apex:facet name="header">Produto</apex:facet>{!item.PricebookEntry.Product2.Name}</apex:column>
+            <apex:column ><apex:facet name="header">Data</apex:facet><apex:outputField value="{!item.Data__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Beneficiada</apex:facet><apex:outputField value="{!item.Semente_beneficiada__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Aprovada</apex:facet><apex:outputField value="{!item.Semente_aprovada__c}"/></apex:column>
+        </apex:pageBlockTable>
+        <!-- Productos de Relatorio de Produccion -->
+        <apex:pageBlockTable value="{!Items}" var="item" rendered="{!AND(showItems,Produccion)}" >
+<!--            <apex:column ><apex:facet name="header">Id</apex:facet>{!item.Id}</apex:column>-->
+            <apex:column ><apex:facet name="header">Produto</apex:facet>{!item.PricebookEntry.Product2.Name}</apex:column>
+            <apex:column ><apex:facet name="header">Autorização</apex:facet><apex:outputField value="{!item.Autori__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Data</apex:facet><apex:outputField value="{!item.Data__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Cidade</apex:facet><apex:outputField value="{!item.Cidade__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Ha. Autorizados</apex:facet><apex:outputField value="{!item.Area__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Ha. Plantados</apex:facet><apex:outputField value="{!item.Area_Plantada__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Bruta</apex:facet><apex:outputField value="{!item.Semente_bruta__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Beneficiada</apex:facet><apex:outputField value="{!item.Semente_beneficiada__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Aprovada</apex:facet><apex:outputField value="{!item.Semente_aprovada__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Aut.Desc.Sem.Bruta</apex:facet><apex:outputField Style="width:85px; "value="{!item.Autorizacion_V_Industria__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Qtde.Aut.Sem.Bruta(Scs)</apex:facet><apex:outputField Style="width:85px;" value="{!item.Cantidad_autorizada_vi__c}"/></apex:column>
+        </apex:pageBlockTable>
+        <!-- Productos de Venta de Basica -->
+        <apex:pageBlockTable value="{!Items}" var="item" rendered="{!AND(showItems,Basica)}" >
+            <!--<apex:column ><apex:facet name="header">Id</apex:facet>{!item.Id}</apex:column>-->
+            <apex:column ><apex:facet name="header">Produto</apex:facet>{!item.PricebookEntry.Product2.Name}</apex:column>
+            <apex:column ><apex:facet name="header">Qtde Scs (40kg)</apex:facet><apex:outputField value="{!item.Qtde_Scs_40kg__c}"/></apex:column>
+        </apex:pageBlockTable>
+        <!-- Productos de Relatorio de Venda -->
+        <apex:pageBlockTable value="{!Items}" var="item" rendered="{!AND(showItems,Comercial)}" >
+<!--            <apex:column ><apex:facet name="header">Id</apex:facet>{!item.Orden__c}</apex:column>-->
+            <!--<apex:column ><apex:facet name="header">Produto</apex:facet>{!item.PricebookEntry.Product2.Name}</apex:column>-->
+            <apex:column ><apex:facet name="header">Produto</apex:facet>
+            <apex:outputLink value="/{!item.Id}" id="idprod">
+               <apex:outputText value="{!item.PricebookEntry.Product2.Name}"/>
+            </apex:outputLink>
+            </apex:column>
+            <apex:column ><apex:facet name="header">Data</apex:facet><apex:outputField value="{!item.Data__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Uso Próprio</apex:facet><apex:outputField value="{!item.Semente_uso_propio__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Sem. Com.</apex:facet><apex:outputField value="{!item.Semente_comercializada__c}"/></apex:column>
+            <apex:column ><apex:facet name="header">Descarte Sem. Aprovada</apex:facet>
+                <apex:outputField rendered="{!item.Autorizacion_V_Industria__c != ''}" value="{!item.Autorizacion_V_Industria__c}"/>
+                <apex:outputText rendered="{!item.Autorizacion_V_Industria__c = ''}">&nbsp;</apex:outputText>
+            </apex:column>
+            <apex:column ><apex:facet name="header">Qtde. Aut. Sem. Aprovada (sacas)</apex:facet><apex:outputField value="{!item.Cantidad_autorizada_Aprov__c}"/></apex:column>
+        </apex:pageBlockTable>
+        <!-- Productos de Exportacion -->
+        <apex:pageBlockTable value="{!Items}" var="item" rendered="{!AND(showItems,Exportacion)}" >
+            <!--<apex:column ><apex:facet name="header">Id</apex:facet>{!item.Id}</apex:column>-->
+            <apex:column ><apex:facet name="header">Produto</apex:facet>{!item.PricebookEntry.Product2.Name}</apex:column>
+            <apex:column ><apex:facet name="header">Volume</apex:facet><apex:outputField value="{!item.Volume__c}"/></apex:column>
+        </apex:pageBlockTable>
+
+    
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

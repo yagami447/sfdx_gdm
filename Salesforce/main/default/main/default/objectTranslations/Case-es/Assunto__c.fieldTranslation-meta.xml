@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Assunto --></label>
+    <name>Assunto__c</name>
+    <picklistValues>
+        <masterLabel>Abertura de vagem</masterLabel>
+        <translation><!-- Abertura de vagem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abortamento de vagem</masterLabel>
+        <translation><!-- Abortamento de vagem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chuva na colheita</masterLabel>
+        <translation><!-- Chuva na colheita --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deficiência nutricional</masterLabel>
+        <translation><!-- Deficiência nutricional --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desenvolvimento vegetativo</masterLabel>
+        <translation><!-- Desenvolvimento vegetativo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doença</masterLabel>
+        <translation><!-- Doença --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fitotoxicidade</masterLabel>
+        <translation><!-- Fitotoxicidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haste verde</masterLabel>
+        <translation><!-- Haste verde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maturação</masterLabel>
+        <translation><!-- Maturação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mistura varietal</masterLabel>
+        <translation><!-- Mistura varietal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Morte de planta</masterLabel>
+        <translation><!-- Morte de planta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nematoide</masterLabel>
+        <translation><!-- Nematoide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Praga</masterLabel>
+        <translation><!-- Praga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualidade de semente</masterLabel>
+        <translation><!-- Qualidade de semente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retenção foliar</masterLabel>
+        <translation><!-- Retenção foliar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

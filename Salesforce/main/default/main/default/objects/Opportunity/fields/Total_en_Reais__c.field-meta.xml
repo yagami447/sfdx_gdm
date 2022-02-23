@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_en_Reais__c</fullName>
+    <description>Calcula el total en Reales para VB</description>
+    <externalId>false</externalId>
+    <label>Total en Reais</label>
+    <summarizedField>OpportunityLineItem.Precio_Total_Aux__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

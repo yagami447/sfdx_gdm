@@ -1,0 +1,123 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="Apenddix2RebPage" showHeader="false" standardStylesheets="false" cache="false" title="{!titulo} - {!$Label.Reductions}" controller="aSiteAppendix2Controller" action="{!validate}">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+.selected {
+    background: rgba(38,185,154,.16);
+    border-color: rgba(221,221,221,0.780392);
+}
+</style>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                <apex:panelGroup >
+                <apex:form id="profileForm">                    
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <div class="">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>{!titulo} - {!$Label.Reductions}</h3>
+                                </div>                                                                    
+                                <div class="title_right">                                                      
+                                    <div class="form-group pull-right top_search">
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <button href="javascript:;" onclick="goNew()" type="button" class="btn btn-round btn-success">{!$Label.New}</button>                                                                          
+                                        </div>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>{!$Label.Anexos}<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont" rendered="{!appends2Reb.size>0}">
+                                            <apex:pageblockTable value="{!appends2Reb}" var="s" styleclass="data table table-striped no-margin"  >
+                                                <apex:column headerClass="column-title" value="{!s.Name}" styleclass="{!IF(s.Id==recRebId,'selected','')}" />
+                                                <!--<apex:column value="{!s.AccountId}" styleclass="{!IF(s.Id==recRebId,'selected','')}"/>-->
+                                                <apex:column value="{!s.Safra__c}" styleclass="{!IF(s.Id==recRebId,'selected','')}"/>
+                                                <apex:column value="{!s.Epoca_de_Plantio__c}" styleclass="{!IF(s.Id==recRebId,'selected','')}"/>
+                                                <apex:column value="{!s.CreatedDate}" styleclass="{!IF(s.Id==recRebId,'selected','')}"/>
+                                                <apex:column value="{!s.Estado_Anexos_Portal_Miltiplicadores__c}" styleclass="{!IF(s.Id==recRebId,'selected','')}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" styleclass="{!IF(s.Id==recRebId,'selected','')}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="{!$Label.View_Products}" action="{!setActiveApp2Reb}" rerender="cont, it">
+                                                        <apex:param value="{!s.Id}" assignTo="{!recRebId}" name="toSelect"/>
+                                                    </apex:commandLink>
+                                                    <!--<apex:outputText rendered="{!s.Estado_Anexos_Portal_Miltiplicadores__c=='Edição'}"> | </apex:outputText>-->
+                                                    <apex:commandLink value=" | Editar" action="{!gotoEditRebaja}" rendered="{!s.Estado_Anexos_Portal_Miltiplicadores__c=='Edição'}">
+                                                        <apex:param value="{!s.Id}" assignTo="{!editRebajaId}" name="toEdit"/>
+                                                        <apex:param value="{!s.Anexo_Relacionado__c}" assignTo="{!aIIaRebajarId}" name="toReb"/>
+                                                    </apex:commandLink>
+                                                    <apex:commandLink value=" | Imprimir" action="{!imprimirAnexo2Reb}" target="_blank">
+                                                        <apex:param value="{!s.Id}" assignTo="{!recRebId}" name="toImp"/>
+                                                    </apex:commandLink>
+                                                    <apex:commandLink value=" | Documento" action="{!imprimirContratoReb}" rendered="{!s.StageName=='Aprobada'}" target="_blank">
+                                                        <apex:param value="{!s.Id}" assignTo="{!recRebId}" name="toImpContrato"/>
+                                                    </apex:commandLink>
+                                                    </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                                                
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <apex:pageBlock id="panel-it" rendered="{!appends2Reb.size>0}">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>{!$ObjectType.Product2.LabelPlural}<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="it" rendered="{!appends2Reb.size>0}">                                                 
+                                                <apex:pageBlockTable value="{!relatedAppRebItems}" var="i" styleclass="data table table-striped no-margin">
+                                                    <apex:repeat value="{!FieldsReb}" var="f">
+                                                        <apex:column headerValue="{!IF(f.label = 'Categoria Plantada','Categoria Origem',IF(f.label = 'Categoria','Categoria Rebaixada',f.label))}"><apex:outputField value="{!i[f]}" /></apex:column>
+                                                    </apex:repeat>
+                                                </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>
+                            </apex:pageBlock>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <apex:actionFunction action="{!gotoNewRebajaSel}" name="goNew" />
+                </apex:form> 
+                </apex:panelGroup>
+            </apex:panelGrid> 
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    </body>
+</apex:define>
+</apex:composition>
+</apex:page>

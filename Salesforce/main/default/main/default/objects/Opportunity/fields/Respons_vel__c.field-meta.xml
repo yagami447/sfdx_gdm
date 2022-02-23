@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Respons_vel__c</fullName>
+    <externalId>false</externalId>
+    <label>Responsável</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pablo R de Souza</fullName>
+                <default>false</default>
+                <label>Pablo R de Souza</label>
+            </value>
+            <value>
+                <fullName>Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>Edison Carneiro</fullName>
+                <default>false</default>
+                <label>Edison Carneiro</label>
+            </value>
+            <value>
+                <fullName>Fernando Frehner</fullName>
+                <default>false</default>
+                <label>Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>Thiago Schwonka</fullName>
+                <default>false</default>
+                <label>Thiago Schwonka</label>
+            </value>
+            <value>
+                <fullName>Lucas Pires</fullName>
+                <default>false</default>
+                <label>Lucas Pires</label>
+            </value>
+            <value>
+                <fullName>Fernando Gaspar</fullName>
+                <default>false</default>
+                <label>Fernando Gaspar</label>
+            </value>
+            <value>
+                <fullName>Sergio Bertagnolli</fullName>
+                <default>false</default>
+                <label>Sergio Bertagnolli</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

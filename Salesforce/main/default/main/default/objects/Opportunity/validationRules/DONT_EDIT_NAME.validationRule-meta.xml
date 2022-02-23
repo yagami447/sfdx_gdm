@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DONT_EDIT_NAME</fullName>
+    <active>true</active>
+    <description>Cant edit opportunity name on community</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK($User.ContactId))
+    , NOT(ISNEW())
+    , ISCHANGED(Name)
+)</errorConditionFormula>
+    <errorMessage>Não pode alterar o nome da oportunidade</errorMessage>
+</ValidationRule>

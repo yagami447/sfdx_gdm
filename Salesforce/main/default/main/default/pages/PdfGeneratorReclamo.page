@@ -1,0 +1,282 @@
+<apex:page standardController="Case" extensions="PdfGeneratorController" renderAs="pdf">
+<table width="100%" Align="center" columns="1">
+    <tr>
+         <td >
+             <IMG SRC="https://na2.salesforce.com/resource/1361987555000/LogoImpReclamos"></img>         
+         </td> 
+
+    </tr>
+    <tr>
+        <TD colspan="1">&nbsp;</TD>
+    </tr>
+    <td aling="left"><font face="verdana">
+           <apex:outputText style="font-weight:900" value="Reclamação  {!Reclamo.CaseNumber}"></apex:outputText> 
+    </font></td>
+    <tr>
+        <TD><hr></hr></TD>
+    </tr>
+</table>
+<table width="100%" Align="center" columns="2">
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-weight:900" value="Microregion:  "></apex:outputText> 
+              <apex:outputText value="{!Reclamo.Microregion_de_Ventas__r.Name}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Produtor:  "></apex:outputText> 
+             <apex:outputText value="{!Reclamo.Contact.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Macroregion:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Macroregion_de_Ventas__r.Name}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Municipio:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Ciudad_del_Agricultor__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Data do Contato:  "></apex:outputText> 
+                <apex:outputText value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!Reclamo.Fecha_de_Contacto__c}" /></apex:outputText> 
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Estado:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Contact.Estado__r.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Data da Visita:  "></apex:outputText> 
+                <apex:outputText value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!Reclamo.Fecha_Visita_Campo__c}"/></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Telefone:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Contact.Phone}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Tipo de Solo:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Tipo_De_Suelo__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Email:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Contact.Email}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Irrigação:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Irrigacion__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Latitude:  "></apex:outputText> 
+                <!-- <apex:outputText value="{!Reclamo.Latitude__c}"></apex:outputText>-->
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Chuvas:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Lluvias__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Longitude:  "></apex:outputText>  
+                <!-- <apex:outputText value="{!Reclamo.Longitude__c}"></apex:outputText> -->
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Temperatura:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Temperatura__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Altitude:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Altitud_Campo__c}"></apex:outputText>
+         </font></td>
+    </tr>
+</table>
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD><hr></hr></TD>
+    </tr>
+</table>
+<table width="100%" Align="center" columns="2">
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-weight:900" value="Assistencia Técnica:  "></apex:outputText> 
+              <apex:outputText value="{!Reclamo.Asistencia_Tecnica__r.Name}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Cultivar:  "></apex:outputText> 
+             <apex:outputText value="{!Reclamo.Cultivar__r.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Assistennte Técnico:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Assistente_Tecnico__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Categoria Semente:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Cultivar__r.Categ__r.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Telefone:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Asistencia_Tecnica__r.Phone}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Lote:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Lote__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Email:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Asistencia_Tecnica__r.Email}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Multiplicador:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Account.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                 
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Revenda:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Contacto_Canal_Ventas__r.Name}"></apex:outputText>
+         </font></td>
+    </tr>
+</table>
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD><hr></hr></TD>
+    </tr>
+    <tr> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Informações sobre o Problema:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Sintomas__c}"></apex:outputText>
+         </font></td>
+    </tr>
+</table>
+<table width="100%" Align="center" columns="2">
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-weight:900" value="Data de Plantio:  "></apex:outputText>
+              <apex:outputText value="{0,date,DD'/'MM'/'yyyy}"><apex:param value="{!Reclamo.Data_de_plantio__c}" /></apex:outputText> 
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-weight:900" value="Estágio de desenvolvimento:  "></apex:outputText> 
+             <apex:outputText value="{!Reclamo.Estagio_de_desenvolvimento__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Área Total de Soja:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Area_Total_de_Soja__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Região da planta:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Regi_o_da_planta__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Área da Cultivar:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.area_Total__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="População de Plantas:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Poblacion_de_plantas__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Área Problema:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.area_problema__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Tratamento de Sementes:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Tratamiento_de_Semillas__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                 
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Produto:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Producto_Tratamiento__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+                 
+         </font></td> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Dosis:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Dosis_Producto_Tratamiento__c}"></apex:outputText>
+         </font></td>
+    </tr>
+</table>
+<table width="100%" Align="center" columns="1">
+    <tr> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Manejo da Lavoura:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Manejo_del_cultivo__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+        <TD colspan="2">&nbsp;</TD>
+    </tr>
+    <tr> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Atendente:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Responsable__c}"></apex:outputText>
+         </font></td>
+    </tr>   
+    <tr> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Diagnóstico:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Diagnostico__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+        <TD colspan="2">&nbsp;</TD>
+    </tr>
+    <tr> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="Recomendação:  "></apex:outputText> 
+                <apex:outputText value="{!Reclamo.Recomendacion__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+        <TD colspan="2">&nbsp;</TD>
+    </tr>
+    <tr> 
+         <td align="left"><font face="verdana">
+                <apex:outputText style="font-weight:900" value="* Sugere-se que acompanhe o formulário duas a três fotos caracterizando o problema."></apex:outputText> 
+         </font></td>
+    </tr>
+</table>
+<!--<
+    <apex:sectionHeader title="Ficha de Campo" subtitle="Atendimento a Reclamacoes" />
+        <apex:form >                       
+           <apex:pageBlock title="Información de Produtor" id="pruebaMessage">                        
+                <apex:messages />
+                <apex:pageBlockTable showHeader="false" columns="2" id="principal" >
+                    <apex:outputText value="Microregion:  {!Case.Microregion_de_Ventas__c}"></apex:outputText> 
+                    <apex:outputText value="Produtor:  {!Case.Contact.Name}"></apex:outputText> 
+                </apex:pageBlockTable>                                                    
+            </apex:pageBlock>        
+        </apex:form>
+    
+ --> 
+  
+</apex:page>

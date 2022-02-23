@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Dest. Bloqueado Admin</layout>
+        <sections>
+            <label><!-- Destinatario de Mercadorias --></label>
+            <section>Destinatario de Mercadorias</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Destinatario Mercaderia Bloqueado</layout>
+        <sections>
+            <label><!-- Destinatario de Mercadorias --></label>
+            <section>Destinatario de Mercadorias</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Destinatario Mercaderia Desbloqueado</layout>
+        <sections>
+            <label><!-- Destinatario de Mercadorias --></label>
+            <section>Destinatario de Mercadorias</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Administrativo</layout>
+        <sections>
+            <label><!-- Datos Destinatario --></label>
+            <section>Datos Destinatario</section>
+        </sections>
+        <sections>
+            <label><!-- Site de multiplicadores --></label>
+            <section>Site de multiplicadores</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Administrativo Inactivo</layout>
+        <sections>
+            <label><!-- Datos Destinatario --></label>
+            <section>Datos Destinatario</section>
+        </sections>
+        <sections>
+            <label><!-- Site de multiplicadores --></label>
+            <section>Site de multiplicadores</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de contactos</layout>
+        <sections>
+            <label><!-- Site de multiplicadores --></label>
+            <section>Site de multiplicadores</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de contactos - Comercial</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PL contactos Admin</layout>
+        <sections>
+            <label><!-- Site de multiplicadores --></label>
+            <section>Site de multiplicadores</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Se utiliza para crear los destinatarios como contactos asociados a la cuenta Cliente. Se dan de alta en SAP mediante la interfaz alta cliente. --></description>
+        <label><!-- Destinatario Bloqueado --></label>
+        <name>Destinatario_Bloqueado</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se utiliza para crear los destinatarios como contactos asociados a la cuenta Cliente. Se dan de alta en SAP mediante la interfaz alta cliente. --></description>
+        <label><!-- Destinatario Desbloqueado --></label>
+        <name>Destinatario_Desbloqueado</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Contactos Generales --></description>
+        <label><!-- Geral --></label>
+        <name>General</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Inactivo --></label>
+        <name>Inactivo</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Vendedor DMValoriza --></description>
+        <label><!-- Vendedor DMValoriza --></label>
+        <name>Vendedor_DMValoriza</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Se o contato não é uma pessoa fisica, tem que preencher o campo &quot;Inscrição Estadual&quot; --></errorMessage>
+        <name>Inscr_No_puede_quedar_vacia</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Se o contato é uma pessoa fisica, não tem que preencher o campo &quot;Inscrição Estadual&quot; --></errorMessage>
+        <name>Inscr_debe_quedar_vacia</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tem que preencher todos os campos na direção --></errorMessage>
+        <name>Validar_Direccion</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Bloquear_Datos_Destinatario --></label>
+        <name>Bloquear_Datos_Destinatario</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Inactivar --></label>
+        <name>Inactivar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reactivar --></label>
+        <name>Reactivar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solicitar_Eliminacion --></label>
+        <name>Solicitar_Eliminacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendWithDocuSign --></label>
+        <name>dfsle__SendWithDocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

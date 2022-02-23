@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_local_de_entrega</fullName>
+    <active>true</active>
+    <description>En las opp de produccion de basica, si se elige una local de entrega en la cabecera, se debe respetar la misma en los items.</description>
+    <errorConditionFormula>AND(Opportunity.Local_de_Entrega__c != NULL,Opportunity.Local_de_Entrega__c != Local_de_Entrega__c)</errorConditionFormula>
+    <errorMessage>Local de entrega en el item debe ser igual que local de entrega en la cabecera.</errorMessage>
+</ValidationRule>

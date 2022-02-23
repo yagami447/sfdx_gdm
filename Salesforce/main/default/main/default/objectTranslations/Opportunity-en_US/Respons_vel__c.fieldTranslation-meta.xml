@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Responsável --></label>
+    <name>Respons_vel__c</name>
+    <picklistValues>
+        <masterLabel>Edison Carneiro</masterLabel>
+        <translation><!-- Edison Carneiro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Frehner</masterLabel>
+        <translation><!-- Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Gaspar</masterLabel>
+        <translation><!-- Fernando Gaspar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Pires</masterLabel>
+        <translation><!-- Lucas Pires --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Steffen</masterLabel>
+        <translation><!-- Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pablo R de Souza</masterLabel>
+        <translation><!-- Pablo R de Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sergio Bertagnolli</masterLabel>
+        <translation><!-- Sergio Bertagnolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thiago Schwonka</masterLabel>
+        <translation><!-- Thiago Schwonka --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

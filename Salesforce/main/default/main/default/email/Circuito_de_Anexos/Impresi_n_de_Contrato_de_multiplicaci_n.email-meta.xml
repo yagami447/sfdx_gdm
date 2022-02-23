@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Documento disponible para su impresión</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Impresión de Contrato de multiplicación</name>
+    <style>none</style>
+    <subject>Disponível para Impressão:</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

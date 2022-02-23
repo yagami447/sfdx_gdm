@@ -1,0 +1,37 @@
+<apex:page controller="ExecutarBatchableController"  tabStyle="Account">
+     <apex:form id="formId" >
+        <apex:pageBlock title="Executar Processos Batchables">
+            <apex:pageBlockSection title="Actualizar Responsável da Conta" columns="1" >
+            
+            <apex:outputPanel layout="block" style="display:inline-flex;width:500px;"  >  
+                <apex:outputPanel layout="block" > 
+                    <apex:outputText value="Nome da conta"/>
+                     <apex:inputText value="{!searchKey}" label="Nome da conta" style="margin:10px;"/>      
+                </apex:outputPanel>  
+              
+                 <apex:outputPanel layout="block" style="display:inline-flex;" >     
+                      <apex:commandButton value="Buscar cuenta" action="{!buscarCuentas}"/>
+                        <apex:commandButton value="Borrar cuentas" action="{!borrarCuentas}"/>
+                 </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block">
+            
+            </apex:outputPanel>
+          
+                <apex:pageBlockTable id="pbTableAcc" value="{!cuentas}" var="c" rendered="{!!cuentas.empty && contaSeleccionada == null}">
+                   <apex:column >
+                      <apex:inputCheckbox title="Selecionar" >
+                          <apex:actionSupport event="onclick" action="{!seleccionarCuenta}" reRender="formId">
+                             <apex:param name="idSeleccionado" assignTo="{!idContaSeleccionada}" value="{!c.Id}"/>
+                          </apex:actionSupport>
+                      </apex:inputCheckbox>
+                   </apex:column>
+                   <apex:column value="{!c.Name}" />
+                </apex:pageBlockTable>
+                <apex:outputText value="{!contaSeleccionada.Name}" label="Conta selecionada: " rendered="{!contaSeleccionada != null}"></apex:outputText>
+                <apex:commandButton value="Atualizar Responsável" rendered="{!contaSeleccionada != null}" action="{!actualizarResponsable}" />
+                
+            </apex:pageBlockSection>
+         </apex:pageBlock>
+     </apex:form>
+</apex:page>

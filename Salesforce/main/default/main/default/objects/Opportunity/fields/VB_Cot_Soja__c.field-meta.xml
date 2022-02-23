@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VB_Cot_Soja__c</fullName>
+    <externalId>false</externalId>
+    <label>Cot. Soja</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADM</fullName>
+                <default>false</default>
+                <label>ADM</label>
+            </value>
+            <value>
+                <fullName>ASUNCION</fullName>
+                <default>false</default>
+                <label>ASUNCION</label>
+            </value>
+            <value>
+                <fullName>COAMO</fullName>
+                <default>false</default>
+                <label>COAMO</label>
+            </value>
+            <value>
+                <fullName>COTRIJAL</fullName>
+                <default>false</default>
+                <label>COTRIJAL</label>
+            </value>
+            <value>
+                <fullName>CHICAGO</fullName>
+                <default>false</default>
+                <label>CHICAGO</label>
+            </value>
+            <value>
+                <fullName>C. VALE</fullName>
+                <default>false</default>
+                <label>C. VALE</label>
+            </value>
+            <value>
+                <fullName>SAFRAS &amp; MERCADO</fullName>
+                <default>false</default>
+                <label>SAFRAS &amp; MERCADO</label>
+            </value>
+            <value>
+                <fullName>S&amp;M Campo Grande</fullName>
+                <default>false</default>
+                <label>S&amp;M Campo Grande</label>
+            </value>
+            <value>
+                <fullName>S&amp;M Rio Verde</fullName>
+                <default>false</default>
+                <label>S&amp;M Rio Verde</label>
+            </value>
+            <value>
+                <fullName>S&amp;M Sorriso</fullName>
+                <default>false</default>
+                <label>S&amp;M Sorriso</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Passo Fundo (RS)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Passo Fundo (RS)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Londrina (PR)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Londrina (PR)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rondonópolis (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rondonópolis (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Barreiras (BA)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Barreiras (BA)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Uberlandia (MG)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Uberlandia (MG)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Primavera (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Primavera (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rio Verde (GO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rio Verde (GO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Unaí (MG)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Unaí (MG)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Diamantino (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Diamantino (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Pedro Afonso (TO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Pedro Afonso (TO)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+Cuenta: {!Opportunity.Account}
+Supervisor: {!Opportunity.OwnerFirstName}
+Oportunidad: {!Opportunity.Name}
+Marca:   {!Opportunity.Marca__c}
+Safra:    {!Opportunity.Safra__c}
+Status:  (Recusada)
+Acessar: {!Opportunity.Link}

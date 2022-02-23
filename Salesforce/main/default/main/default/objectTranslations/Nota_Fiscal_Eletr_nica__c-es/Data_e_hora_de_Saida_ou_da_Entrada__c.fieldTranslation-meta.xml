@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Data e hora de Saida ou da Entrada --></label>
+    <name>Data_e_hora_de_Saida_ou_da_Entrada__c</name>
+</CustomFieldTranslation>

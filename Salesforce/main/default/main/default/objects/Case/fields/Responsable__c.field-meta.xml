@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsable__c</fullName>
+    <description>En este campo se indica el responsable del Reclamo.</description>
+    <externalId>false</externalId>
+    <label>Responsável</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Marca__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>061 - Fernando Frehner</fullName>
+                <default>false</default>
+                <label>061 - Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>066 - Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>066 - Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>067 - Sergio Bertagnolli</fullName>
+                <default>false</default>
+                <label>067 - Sergio Bertagnolli</label>
+            </value>
+            <value>
+                <fullName>076 - Tiago Goulart</fullName>
+                <default>false</default>
+                <label>076 - Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>083 - Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>083 - Jorge Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>096 - Charles C. Pintro</fullName>
+                <default>false</default>
+                <label>096 - Charles C. Pintro</label>
+            </value>
+            <value>
+                <fullName>101 - Fausto Tadeu Fanchin</fullName>
+                <default>false</default>
+                <label>101 - Fausto Tadeu Fanchin</label>
+            </value>
+            <value>
+                <fullName>104 - Otavio Gorni</fullName>
+                <default>false</default>
+                <label>104 - Otavio Gorni</label>
+            </value>
+            <value>
+                <fullName>105 - Rogério A. Schneider</fullName>
+                <default>false</default>
+                <label>105 - Rogério A. Schneider</label>
+            </value>
+            <value>
+                <fullName>106 - Sandro Ferrari M</fullName>
+                <default>false</default>
+                <label>106 - Sandro Ferrari M</label>
+            </value>
+            <value>
+                <fullName>111 - Pablo R. de Souza</fullName>
+                <default>false</default>
+                <label>111 - Pablo R. de Souza</label>
+            </value>
+            <value>
+                <fullName>150 - João Serrano</fullName>
+                <default>false</default>
+                <label>150 - João Serrano</label>
+            </value>
+            <value>
+                <fullName>151 - Anderson Clayton Weissheimer</fullName>
+                <default>false</default>
+                <label>151 - Anderson Clayton Weissheimer</label>
+            </value>
+            <value>
+                <fullName>152 - Fernando Calazans</fullName>
+                <default>false</default>
+                <label>152 - Fernando Calazans</label>
+            </value>
+            <value>
+                <fullName>190 - Marcos Berlezi</fullName>
+                <default>false</default>
+                <label>190 - Marcos Berlezi</label>
+            </value>
+            <value>
+                <fullName>196 - Edson Chambo</fullName>
+                <default>false</default>
+                <label>196 - Edson Chambo</label>
+            </value>
+            <value>
+                <fullName>217 - Cristian Pirolli</fullName>
+                <default>false</default>
+                <label>217 - Cristian Pirolli</label>
+            </value>
+            <value>
+                <fullName>224 - Fernando Frehner</fullName>
+                <default>false</default>
+                <label>224 - Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>225 - Fagner Regis de Oliveira</fullName>
+                <default>false</default>
+                <label>225 - Fagner Regis de Oliveira</label>
+            </value>
+            <value>
+                <fullName>229 - Murilo Brazero Cacheffo</fullName>
+                <default>false</default>
+                <label>229 - Murilo Brazero Cacheffo</label>
+            </value>
+            <value>
+                <fullName>231 - Willian Von Scharten</fullName>
+                <default>false</default>
+                <label>231 - Willian Von Scharten</label>
+            </value>
+            <value>
+                <fullName>238 - Luis Fernando Cecatto</fullName>
+                <default>false</default>
+                <label>238 - Luis Fernando Cecatto</label>
+            </value>
+            <value>
+                <fullName>289 - Flávio Marçal dos Santos</fullName>
+                <default>false</default>
+                <label>289 - Flávio Marçal dos Santos</label>
+            </value>
+            <value>
+                <fullName>312 - Lucas Hilario Fantineli</fullName>
+                <default>false</default>
+                <label>312 - Lucas Hilario Fantineli</label>
+            </value>
+            <value>
+                <fullName>319 - Felipe Oliveira Costa</fullName>
+                <default>false</default>
+                <label>319 - Felipe Oliveira Costa</label>
+            </value>
+            <value>
+                <fullName>345 - Eduardo L. da Silva</fullName>
+                <default>false</default>
+                <label>345 - Eduardo L. da Silva</label>
+            </value>
+            <value>
+                <fullName>346 - Marco A. Marchioro</fullName>
+                <default>false</default>
+                <label>346 - Marco A. Marchioro</label>
+            </value>
+            <value>
+                <fullName>Com. BMX 1 - Fausto Fanchin</fullName>
+                <default>false</default>
+                <label>Com. BMX 1 - Fausto Fanchin</label>
+            </value>
+            <value>
+                <fullName>Com. BMX 2 - Fernando Frenher</fullName>
+                <default>false</default>
+                <label>Com. BMX 2 - Fernando Frenher</label>
+            </value>
+            <value>
+                <fullName>Com. BMX 3 - J. Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>Com. BMX 3 - J. Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>Com. BMX 4 - Sérgio Bertagnoli</fullName>
+                <default>false</default>
+                <label>Com. BMX 4 - Sérgio Bertagnoli</label>
+            </value>
+            <value>
+                <fullName>Com. BMX 5 - Antonio Paiva</fullName>
+                <default>false</default>
+                <label>Com. BMX 5 - Antonio Paiva</label>
+            </value>
+            <value>
+                <fullName>Com. BMX 5 - Tiago Goulart</fullName>
+                <default>false</default>
+                <label>Com. BMX 5 - Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>Com. DSEM 1 - Charles C. Pinto</fullName>
+                <default>false</default>
+                <label>Com. DSEM 1 - Charles C. Pinto</label>
+            </value>
+            <value>
+                <fullName>Com. DSEM 2 - Otavio Ogorni</fullName>
+                <default>false</default>
+                <label>Com. DSEM 2 - Otavio Ogorni</label>
+            </value>
+            <value>
+                <fullName>Com. DSEM 3 - Sandro Ferrari M.</fullName>
+                <default>false</default>
+                <label>Com. DSEM 3 - Sandro Ferrari M.</label>
+            </value>
+            <value>
+                <fullName>Com. DSEM 4 - Fernando Calazans</fullName>
+                <default>false</default>
+                <label>Com. DSEM 4 - Fernando Calazans</label>
+            </value>
+            <value>
+                <fullName>Gerente Des. BRMX - Francisco Nogara</fullName>
+                <default>false</default>
+                <label>Gerente Des. BRMX - Francisco Nogara</label>
+            </value>
+            <value>
+                <fullName>Gerente Des. BRMX - Pablo Souza</fullName>
+                <default>false</default>
+                <label>Gerente Des. BRMX - Pablo Souza</label>
+            </value>
+            <value>
+                <fullName>Gerente Des. DSEM - Carlos Pattis</fullName>
+                <default>false</default>
+                <label>Gerente Des. DSEM - Carlos Pattis</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>083 - Jorge Cristiano Rosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>104 - Otavio Gorni</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>111 - Pablo R. de Souza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>151 - Anderson Clayton Weissheimer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>196 - Edson Chambo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>225 - Fagner Regis de Oliveira</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>231 - Willian Von Scharten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>238 - Luis Fernando Cecatto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>289 - Flávio Marçal dos Santos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>312 - Lucas Hilario Fantineli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>319 - Felipe Oliveira Costa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>152 - Fernando Calazans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>217 - Cristian Pirolli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>229 - Murilo Brazero Cacheffo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEOG</controllingFieldValue>
+            <valueName>345 - Eduardo L. da Silva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEOG</controllingFieldValue>
+            <valueName>346 - Marco A. Marchioro</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

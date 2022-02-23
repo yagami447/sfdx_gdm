@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Aviso de Ciudad pendiente de verificación</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aviso - Ciudad Pendiente de Validación</name>
+    <style>none</style>
+    <subject>Aviso - Aguardando aprovação Cidade</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

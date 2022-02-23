@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Qual dos funcionários da DSEM que estará responsável pela conta --></help>
+    <label><!-- Responsável DSEM --></label>
+    <name>Reponsavel_DSEM__c</name>
+    <picklistValues>
+        <masterLabel>010 - GDM Genetica</masterLabel>
+        <translation><!-- 010 - GDM Genetica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>011 - Pablo R. de Souza</masterLabel>
+        <translation><!-- 011 - Pablo R. de Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>014 - Cristian Pirolli</masterLabel>
+        <translation><!-- 014 - Cristian Pirolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>015 - Fagner Regis de Oliveira</masterLabel>
+        <translation><!-- 015 - Fagner Regis de Oliveira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>016 - Murilo Brazero Cacheffo</masterLabel>
+        <translation><!-- 016 - Murilo Brazero Cacheffo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>061 - Fernando Frehner</masterLabel>
+        <translation><!-- 061 - Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>066 - Marcelo Steffen</masterLabel>
+        <translation><!-- 066 - Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>067 - Sergio Bertagnoli</masterLabel>
+        <translation><!-- 067 - Sergio Bertagnoli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>234 - Julio Cesar Poletto</masterLabel>
+        <translation><!-- 234 - Julio Cesar Poletto --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

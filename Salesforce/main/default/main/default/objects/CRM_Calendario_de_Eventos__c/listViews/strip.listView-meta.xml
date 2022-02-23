@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>strip</fullName>
+    <columns>NAME</columns>
+    <columns>Nome_do_agricultor__c</columns>
+    <columns>Municipio__c</columns>
+    <columns>Estado__c</columns>
+    <columns>Cuenta__c</columns>
+    <columns>Data__c</columns>
+    <columns>Marca__c</columns>
+    <columns>Safra__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Evento__c</field>
+        <operation>equals</operation>
+        <value>Strip Test</value>
+    </filters>
+    <label>Strip Test</label>
+</ListView>

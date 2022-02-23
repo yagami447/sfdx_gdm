@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Total_de_pontos__c</fullName>
+    <externalId>false</externalId>
+    <formula>BR_Pontos_volume__c + BR_Pontos_penetra_o__c+BR_Pontos_LxL__c+ 
+BR_Resultado_Palestra_e_Treinamentos__c +BR_Pontos_dias_de_campo__c+BR_Pontos_mix__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AAAA Total de Pontos BRMX</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

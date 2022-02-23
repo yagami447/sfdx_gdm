@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solicitar_Eliminacion</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Solicitar Eliminação</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Contact.Id}&quot;; 
+var usId = &quot;{!$User.Id}&quot;; 
+var elim = &quot;{!Contact.Eliminacion__c}&quot;; 
+var pasa = true; 
+
+if (elim == true){ 
+alert(&quot;Já se solicitou a eliminação deste contato.&quot;); 
+pasa = false; 
+} 
+
+if(pasa == true){ 
+pasa=confirm(&apos;Tem certeza de querer Solicitar Eliminação?&apos;); 
+} 
+
+if(pasa == true){ 
+var result = sforce.apex.execute(&quot;Opp_Utils&quot;,&quot;notificacionContacto&quot;, {contId : id, userId : usId}); 
+
+alert(result[0]); 
+if (result[1] == &apos;ok&apos;){ 
+
+var contObj = new sforce.SObject(&quot;Contact&quot;); 
+contObj.Id = &quot;{!Contact.Id}&quot;; 
+contObj.Eliminacion__c = true; 
+var resultado = sforce.connection.update([contObj]); 
+
+if (resultado[0].success==&apos;false&apos;) { 
+alert(resultado[0].errors.message); 
+} else { 
+window.location.reload(true); 
+} 
+} 
+}</url>
+</WebLink>

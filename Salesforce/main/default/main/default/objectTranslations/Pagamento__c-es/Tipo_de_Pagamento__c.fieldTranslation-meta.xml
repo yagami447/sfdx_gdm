@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Pagamento --></label>
+    <name>Tipo_de_Pagamento__c</name>
+    <picklistValues>
+        <masterLabel>Atualização de Comercialização</masterLabel>
+        <translation><!-- Atualização de Comercialização --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pagamento atrasado após 31/12</masterLabel>
+        <translation><!-- Pagamento atrasado após 31/12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pagamento atrasado até 31/12</masterLabel>
+        <translation><!-- Pagamento atrasado até 31/12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pagamento em dia</masterLabel>
+        <translation><!-- Pagamento em dia --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

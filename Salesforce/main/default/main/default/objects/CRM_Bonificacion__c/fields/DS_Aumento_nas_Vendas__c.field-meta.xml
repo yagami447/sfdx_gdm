@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DS_Aumento_nas_Vendas__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True si supero las ventas de semilla comercializada de la campaña anterior</description>
+    <externalId>false</externalId>
+    <inlineHelpText>True si supero las ventas de semilla comercializada de la campaña anterior</inlineHelpText>
+    <label>Aumento as Vendas?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

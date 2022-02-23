@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CRM_Area_de_Atuacion__c.Safra__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CRM_Area_de_Atuacion__c.Cuenta__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CRM_Area_de_Atuacion__c.Tipo__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_Area_de_Atuacion__c.Sacas__c</field>
+    </columns>
+    <description>Para Verificar Modelo BASE_CRM_AREA_ATUACION_SF_BR</description>
+    <filter>
+        <criteriaItems>
+            <column>CRM_Area_de_Atuacion__c.Safra__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>15/16</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CRM_Area_de_Atuacion__c.Cuenta__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>acme</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CRM_Area_de_Atuacion__c.Cuenta__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GIRASSOL AGRICOLA LTDA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GO - NORTE</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Tabular</format>
+    <name>CRM Area Atuacion (Test BI)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$CRM_Area_de_Atuacion__c@CRM_Area_de_Atuacion__c.Regi_o__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

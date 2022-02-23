@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aditivo_DSEM</fullName>
+    <active>true</active>
+    <label>Aditivo DSEM</label>
+    <picklistValues>
+        <picklist>Cotacao_de_soja__c</picklist>
+        <values>
+            <fullName>ADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%2E VALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHICAGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COAMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COTRIJAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Barreiras %28BA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Diamantino %28MT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Londrina %28PR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Passo Fundo %28RS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Pedro Afonso %28TO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Rondonópolis %28MT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Uberlandia %28MG%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFRAS %26 MERCADO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Aguarda Retorno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chegou</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edição</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente de Aprovação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente de Impressão</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente de Postagem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estados_Comercializacao__c</picklist>
+        <values>
+            <fullName>MG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Local__c</picklist>
+        <values>
+            <fullName>Assuncion%2FParaguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barreiras%2FBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campo Grande%2FMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campo Mourão%2FPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chicago%2FCBOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Londrina%2FPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Não Me Toque%2FRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PTAX%2FBC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palotina%2FPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passo Fundo%2FRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rio Verde%2FGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rondonópolis%2FMT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quem_negocia__c</picklist>
+        <values>
+            <fullName>BRASMAX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTIÁ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DON MARIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUTUCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROOS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region_Comercial__c</picklist>
+        <values>
+            <fullName>CERRADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGION 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGION 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsavel__c</picklist>
+        <values>
+            <fullName>Antonio Paiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Frehner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Gaspar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacques Müllich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Pires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcelo Steffen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sergio Bertagnolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thiago Schwonka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiago Goulart</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Safra__c</picklist>
+        <values>
+            <fullName>17%2F18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2F19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2F20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%2F21</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sociedad__c</picklist>
+        <values>
+            <fullName>DSEM</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Cota_o__c</picklist>
+        <values>
+            <fullName>FATURAMENTO</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_contrato__c</picklist>
+        <values>
+            <fullName>BASICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULTIPLICAÇÃO</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipos_de_Assinaturas__c</picklist>
+        <values>
+            <fullName>Eletronica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

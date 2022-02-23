@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Descripcion__c</fullName>
+    <description>Descripcion de la incidencia</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describa lo suficientemente detallada la incidencia para poder hacer un analisis de la misma, haga referencia a archivos anexos si es necesario.</inlineHelpText>
+    <label>Descripcion</label>
+    <length>32000</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

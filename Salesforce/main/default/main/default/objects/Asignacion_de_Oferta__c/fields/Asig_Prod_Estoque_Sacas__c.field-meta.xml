@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asig_Prod_Estoque_Sacas__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(Prod_Subtotal__c != 0, Prod_Estoque_Sacas__c / Prod_Subtotal__c * Cantidad_Asignada__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Asig Prod Estoque Sacas</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

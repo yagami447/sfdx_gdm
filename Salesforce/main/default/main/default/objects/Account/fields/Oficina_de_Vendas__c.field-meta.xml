@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oficina_de_Vendas__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Region__r.Oficina_Ventas__c)</formula>
+    <label>Oficina de Vendas</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

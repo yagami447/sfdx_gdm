@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_Validos_A</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name == &apos;A&apos; , OR(ISNULL(Capacidade__c), ISNULL(Cidade__c), ISNULL(Region__c)))</errorConditionFormula>
+    <errorMessage>Deve entrar todos os dados para capacidade por cidade.</errorMessage>
+</ValidationRule>

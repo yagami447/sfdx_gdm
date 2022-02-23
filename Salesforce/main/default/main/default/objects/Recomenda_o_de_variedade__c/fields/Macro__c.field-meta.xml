@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Macro__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Macro</label>
+    <referenceTo>Macrorregi_o_de_Vendas__c</referenceTo>
+    <relationshipLabel>Recomendações de variedades</relationshipLabel>
+    <relationshipName>Recomenda_es_de_variedades</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

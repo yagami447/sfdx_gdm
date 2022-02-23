@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cod Juros --></label>
+    <name>Cod_Juros__c</name>
+    <picklistValues>
+        <masterLabel>01 - CálcJuros parts.pdr.</masterLabel>
+        <translation><!-- 01 - CálcJuros parts.pdr. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02 - Cálc.juros saldos</masterLabel>
+        <translation><!-- 02 - Cálc.juros saldos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03 - CálcJurosSald cond.2</masterLabel>
+        <translation><!-- 03 - CálcJurosSald cond.2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04 - CálcJuros part.cond2</masterLabel>
+        <translation><!-- 04 - CálcJuros part.cond2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>05 - CálcJurosSald cond.3</masterLabel>
+        <translation><!-- 05 - CálcJurosSald cond.3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10 - Cálc.juros projeto</masterLabel>
+        <translation><!-- 10 - Cálc.juros projeto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12 - Cálc.jrs. sld.cta.Rz</masterLabel>
+        <translation><!-- 12 - Cálc.jrs. sld.cta.Rz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>D1 - Cálc.juros p/advert.</masterLabel>
+        <translation><!-- D1 - Cálc.juros p/advert. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RS - N/A</masterLabel>
+        <translation><!-- RS - N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VK - CálcJurosParts.Ad CP</masterLabel>
+        <translation><!-- VK - CálcJurosParts.Ad CP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

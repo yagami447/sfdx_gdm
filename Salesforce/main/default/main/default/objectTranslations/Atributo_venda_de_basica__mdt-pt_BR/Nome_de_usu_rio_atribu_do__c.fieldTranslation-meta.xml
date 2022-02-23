@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Nome de usuário atribuído --></label>
+    <name>Nome_de_usu_rio_atribu_do__c</name>
+</CustomFieldTranslation>

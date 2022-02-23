@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- indica si está disponible para votar(que vuelta)  o está cerrado. --></help>
+    <label><!-- Vuelta --></label>
+    <name>Vuelta__c</name>
+    <picklistValues>
+        <masterLabel>1</masterLabel>
+        <translation><!-- 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2</masterLabel>
+        <translation><!-- 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>cerrado</masterLabel>
+        <translation><!-- cerrado --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

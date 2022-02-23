@@ -1,0 +1,13 @@
+Caro multiplicador, {!Evento_Royalty__c.Cuenta__c}
+
+As informações que você inseriu através do Portal não foram aprovadas.
+Para que possa realizar as alterações necessárias, é permitida a edição das informações já contidas no Portal.
+Clique no link abaixo para acessar o portal.
+
+Tipo: Evento de royalty
+Código de identificação: {!Evento_Royalty__c.Name}
+Motivo de Rejeição: {!ApprovalRequest.Comments}
+Portal: http://brasmaxgenetica.force.com/portal?comp=BRMX 
+Atenciosamente,
+
+{!ApprovalRequest.Process_Approver}

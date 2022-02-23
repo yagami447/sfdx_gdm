@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>INCIDENTE SISTEMAS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>INCIDENTES SISTEMAS</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato de INCIDENTE SISTEMAS</layout>
+        <sections>
+            <label><!-- Analisis --></label>
+            <section>Analisis</section>
+        </sections>
+        <sections>
+            <label><!-- Descripcion --></label>
+            <section>Descripcion</section>
+        </sections>
+        <sections>
+            <label><!-- Reviosion --></label>
+            <section>Reviosion</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

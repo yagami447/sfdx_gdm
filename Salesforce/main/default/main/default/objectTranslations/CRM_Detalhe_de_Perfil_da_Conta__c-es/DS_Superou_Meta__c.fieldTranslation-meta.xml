@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Evaluación de : Suma de Semente Comercializada, versus suma de metas, teniendo en cuenta Cultivares de Tecnología Intacta --></help>
+    <label><!-- AAAA Superou 85% DSEM --></label>
+    <name>DS_Superou_Meta__c</name>
+</CustomFieldTranslation>

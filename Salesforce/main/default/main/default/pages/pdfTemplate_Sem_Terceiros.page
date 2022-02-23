@@ -1,0 +1,74 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+<!-- <center>
+     <p style="font-size:20px">ANEXO I</p>
+     <h2>AUTORIZAÇÃO</h2>
+  </center>
+  <center>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <p style="font-size:20px"><b>AUT MULT Nº {!Opportunity.Name}/2012</b></p>
+  </center>
+  <br/> <br/>
+  -->
+<!--  <br/><br/><br/><br/><br/><br/><br/>-->
+  
+<table width="100%" Align="center" columns="2">
+    <tr>
+         <td >
+             <apex:image rendered="{!Opportunity.Marca__c=='BRMX'}" url="{!URLFOR($Resource.LogoImpBRMX)}" style="width: 50%; height: 50%" /> 
+             <apex:image rendered="{!Opportunity.Marca__c=='DSEM'}" url="{!URLFOR($Resource.LogoImpDSEM)}" style="width: 50%; height: 50%" />
+             <apex:image rendered="{!Opportunity.Marca__c=='NEOG'}" url="{!URLFOR($Resource.LogoImpNEOG)}" style="width: 50%; height: 50%" />
+         </td> 
+    </tr>
+</table>  
+  
+<table Align="center">
+   <tr>
+     <td>
+ 
+  <p align="center" style="font-size:17px"><b>AUTORIZAÇÃO PARA AQUISIÇÃO DE SEMENTES DE TERCEIROS</b></p>
+  
+  <br/>
+ 
+  <p style="font-size:17px"><b>Nº {!Opportunity.Name}</b></p>
+    
+  <p align="justify">A <b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ/CPF sob 
+  07.007.165/0001-34, detentora dos direitos de exploração da marca <b>{!MarcaImp}</b>, 
+  com sede em Cambé-PR, dedicada à criação de cultivares de Soja, vem através deste documento
+  <b>AUTORIZAR {!Opportunity.Account.Name}</b> inscrita(o) no CNPJ/CPF sob nº {!cnpj}, a adquirir de terceiros as
+  cultivares de soja conforme as categorias de sementes relacionadas abaixo:</p>
+
+  <apex:pageBlock >
+  <apex:pageblockSection columns="6">
+     <apex:pageBlockTable value="{!Items}" var="item" border="1" align="center">
+        <apex:column width="150px"><apex:facet name="header">Cultivar</apex:facet>{!item.Registro_Cultivar__c}</apex:column>
+        <apex:column width="80px"><apex:facet name="header">Categoria</apex:facet>{!item.Categoria_Prod__c}</apex:column>
+        <apex:column width="80px">
+            <apex:facet name="header">Quantidade (Sc 40kg)</apex:facet><apex:outputField value="{!item.Quantidade__c}"/>
+            <apex:facet name="footer">{!totalesAnexos['Quantidade__c']}</apex:facet>            
+        </apex:column>
+        </apex:pageBlockTable> 
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  <br/>    
+  
+  <p align="justify">
+  Esta autorização é válida somente para a safra {!safra}.
+  </p>  
+    
+  <p align="justify">
+  Cambé-PR, {!FechaCierre}. 
+  </p>
+    
+  <br/><br/><br/>
+         
+  GDM Genética do Brasil S.A.
+  
+ </td> 
+</tr>
+</table>
+
+  
+    
+  
+  
+</apex:page>

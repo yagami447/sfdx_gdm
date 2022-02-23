@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Etapa__c</fullName>
+    <externalId>false</externalId>
+    <label>Etapa</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inventário físico</fullName>
+                <default>false</default>
+                <label>Inventário físico</label>
+            </value>
+            <value>
+                <fullName>Descarte</fullName>
+                <default>false</default>
+                <label>Descarte</label>
+            </value>
+            <value>
+                <fullName>Inventário de sobras</fullName>
+                <default>false</default>
+                <label>Inventário de sobras</label>
+            </value>
+            <value>
+                <fullName>Documental</fullName>
+                <default>false</default>
+                <label>Documental</label>
+            </value>
+            <value>
+                <fullName>Eventual</fullName>
+                <default>false</default>
+                <label>Eventual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

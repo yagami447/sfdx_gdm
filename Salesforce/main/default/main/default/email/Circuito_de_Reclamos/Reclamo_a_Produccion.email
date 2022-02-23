@@ -1,0 +1,17 @@
+El Reclamo Nro.: {!Case.CaseNumber} fue pasado a Producción para obtener soporte en la toma de decisión.
+Cuenta: {!Case.Account} 
+Telefono: {!Case.CRM_Telefono_Productor__c} 
+Contacto: {!Case.Contact} 
+Telefono Contacto: {!Case.CRM_Telefono_Contacto__c}
+Detalles del Reclamo
+Cultivar: {!Case.Cultivar__c}    Data do Problema:{!Case.Data_do_problema__c}
+Sintomas: {!Case.Sintomas__c}
+Data de Plantio:{!Case.Data_de_plantio__c}
+Area Total de Soja: {!Case.Area_Total_de_Soja__c}
+Area Problema: {!Case.area_problema__c}
+Area da Cultivar: {!Case.area_Total__c}
+Estágio de desenvolvimiento: {!Case.Estagio_de_desenvolvimento__c}
+Región de la planta: {!Case.Regi_o_da_planta__c}
+Población de plantas: {!Case.Poblacion_de_plantas__c}
+Tratamento de Sementes: {!Case.Tratamiento_de_Semillas__c}
+Produto Tratamento: {!Case.Producto_Tratamiento__c}

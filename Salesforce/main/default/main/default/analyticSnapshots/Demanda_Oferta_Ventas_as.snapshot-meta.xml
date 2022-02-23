@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupColumn>FK_NAME</groupColumn>
+    <mappings>
+        <sourceField>Asignacion_de_Oferta__c.Region__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Regiao_Comercial__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>RowCount</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Cantidad_Registros__c</targetField>
+    </mappings>
+    <mappings>
+        <aggregateType>Sum</aggregateType>
+        <sourceField>Asignacion_de_Oferta__c.Com_Subtotal__c</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Com_subtotal__c</targetField>
+    </mappings>
+    <mappings>
+        <aggregateType>Sum</aggregateType>
+        <sourceField>Asignacion_de_Oferta__c.Cantidad_Asignada__c</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Cantidad_Asignada__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>FK_NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.ProductName__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>Asignacion_de_Oferta__c.Tipo_de_Necesidad__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Tipo_de_Necessidade__c</targetField>
+    </mappings>
+    <name>Demanda/Oferta/Ventas Asign.</name>
+    <runningUser>adminbr@donmario.com</runningUser>
+    <sourceReport>Sistemas/IA_Relatorio_Asignacion_17</sourceReport>
+    <targetObject>Analitica_DemandaVsVenta__c</targetObject>
+</AnalyticSnapshot>

@@ -1,0 +1,54 @@
+<aura:component >
+    <aura:attribute name="data" type="object"  default=""/> 
+    <aura:attribute name="activeSections" type="List" default="['A','B']" />
+
+    <aura:handler name="onchange" 
+              event="l_lookup:OnChange" 
+              action="{!c.handleChange}"/>
+    
+    <aura:registerEvent name="changeAccount" type="c:NotaFiscalElectronica_FieldChange"/>
+
+    <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+        <lightning:accordion activeSectionName="{!v.activeSections}" allowMultipleSectionsOpen="true">
+            <lightning:accordionSection name="A" label="Dados do Emitente" > 
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="6" padding="around-small" class="custom-box">
+                        <l_lookup:Lookup objectType="Account" selectedRecordId="{!v.data.accountId}" ></l_lookup:Lookup>
+                    </lightning:layoutItem>
+                     <lightning:layoutItem flexibility="auto" size="6" padding="around-small" class="custom-box">
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6" padding="around-small" class="custom-box">
+                        <lightning:input label="Nome / Razão Social" value="{!v.data.xNome}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="Nome Fantasia" value="{!v.data.xFant}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="CNPJ" value="{!v.data.CNPJ}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="Endereço" value="{!v.data.enderEmit.xLgr}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="Bairro / Distrito" value="{!v.data.enderEmit.xBairro}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="Município" value="{!v.data.enderEmit.xMun}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="Telefone" value="{!v.data.enderEmit.fone}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="UF" value="{!v.data.enderEmit.UF}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="País" value="{!v.data.enderEmit.xPais}"></lightning:input>
+                    </lightning:layoutItem>		
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input label="CNAE Fiscal" value="{!v.data.CNAE}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>     
+        </lightning:accordion>
+    </div>
+</aura:component>

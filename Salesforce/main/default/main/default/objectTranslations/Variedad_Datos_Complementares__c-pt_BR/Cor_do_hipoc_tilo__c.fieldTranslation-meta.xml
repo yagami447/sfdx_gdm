@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cor do hipocótilo --></label>
+    <name>Cor_do_hipoc_tilo__c</name>
+    <picklistValues>
+        <masterLabel>Ausente</masterLabel>
+        <translation><!-- Ausente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presente</masterLabel>
+        <translation><!-- Presente --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

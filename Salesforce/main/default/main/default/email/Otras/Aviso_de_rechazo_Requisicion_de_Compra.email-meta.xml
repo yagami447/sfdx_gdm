@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aviso de rechazo Requisicion de Compra</name>
+    <style>none</style>
+    <subject>Notificação de Rejeição de Requisição de compra</subject>
+    <textOnly>&lt;p&gt;DATA DA REJEIÇÃO {!ApprovalRequest.Response_Date}&lt;/p&gt;
+
+&lt;p&gt;Caro Multiplicador, {!Requisicao_de_compra__c.Nombre_del_multiplicador__c}&lt;/p&gt;
+
+&lt;p&gt;As informações que vossa empresa inseriu através do Portal não foram aprovadas.
+Para que possa realizar as alterações necessárias, é permitida a edição das informações já contidas no Portal.&lt;/p&gt;
+
+&lt;p&gt;Código de identificação {!Requisicao_de_compra__c.Name}&lt;/p&gt;
+&lt;p&gt;Tipo de declaração {!Requisicao_de_compra__c.Tipo__c}&lt;/p&gt;
+&lt;p&gt;Motivo de Rejeição   {!ApprovalRequest.Comments}&lt;/p&gt;
+
+&lt;p&gt;Atenciosamente,&lt;/p&gt;
+
+&lt;p&gt;{!ApprovalRequest.Process_Approver}&lt;/p&gt;</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

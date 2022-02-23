@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_total_estimado__c</fullName>
+    <description>* (1- (Descuento_porc__c/100) )</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(Opportunity.RecordTypeId = &apos;01240000000M58N&apos;, Opportunity.RecordTypeId = &apos;01240000000M58I&apos;, Opportunity.RecordTypeId = &apos;01240000000M58S&apos;, Opportunity.RecordTypeId = &apos;01240000000M8Iw&apos;, Opportunity.RecordTypeId = &apos;01240000000M8J1&apos;, Opportunity.RecordTypeId = &apos;01240000000MDU9&apos;, Opportunity.RecordTypeId = &apos;012180000000h39&apos;, Opportunity.RecordTypeId = &apos;012180000000h3E&apos;, Opportunity.RecordTypeId = &apos;0120b000000ExDL&apos;, Opportunity.RecordTypeId = &apos;0120b000000ExDG&apos;,
+Opportunity.RecordTypeId = &apos;0125a000000QkXG&apos;, Opportunity.RecordTypeId = &apos;0120v000000op3S&apos;),
+IF(Opportunity.CloseDate &lt; DATE(2015, 11, 25),
+ROUND(
+ROUND((UnitPrice * IF(OR(ISNULL(Tipo_de_cambio__c),Tipo_de_cambio__c = 0), 1, Tipo_de_cambio__c)), 2) * Quantity,2),
+UnitPrice * IF(OR(ISNULL(Tipo_de_cambio__c),Tipo_de_cambio__c = 0), IF(OR(ISNULL(Tipo_de_cambio__c),Tipo_de_cambio__c = 0), 1, Tipo_de_cambio__c), Tipo_de_cambio__c) * Quantity)
+* IF(OR(Opportunity.RecordTypeId = &apos;01240000000M8J1&apos;, Opportunity.RecordTypeId = &apos;01240000000M8Iw&apos;, Opportunity.RecordTypeId = &apos;01240000000MDU9&apos;), -1, 1)
+,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Preço total estimado</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

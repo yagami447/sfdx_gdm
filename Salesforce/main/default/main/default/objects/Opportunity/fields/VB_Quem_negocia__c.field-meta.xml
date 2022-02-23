@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VB_Quem_negocia__c</fullName>
+    <description>Quien negocia con el multiplicador la venta de basica que hace el Franqueado</description>
+    <externalId>false</externalId>
+    <label>Quem negocia?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brasmax</fullName>
+                <default>false</default>
+                <label>Brasmax</label>
+            </value>
+            <value>
+                <fullName>Butiá</fullName>
+                <default>false</default>
+                <label>Butiá</label>
+            </value>
+            <value>
+                <fullName>Mutuca</fullName>
+                <default>false</default>
+                <label>Mutuca</label>
+            </value>
+            <value>
+                <fullName>Roos</fullName>
+                <default>false</default>
+                <label>Roos</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

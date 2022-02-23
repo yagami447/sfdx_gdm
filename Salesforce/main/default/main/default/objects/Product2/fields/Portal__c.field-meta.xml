@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si el producto está habilitado/deshabilitado para ser devuelto en las APIs creadas para el nuevo Portal. Creado para US #13082</description>
+    <externalId>false</externalId>
+    <label>Portal</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

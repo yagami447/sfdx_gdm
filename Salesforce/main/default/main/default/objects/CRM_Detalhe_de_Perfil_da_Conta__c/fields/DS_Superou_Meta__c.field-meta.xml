@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DS_Superou_Meta__c</fullName>
+    <description>Evaluación de : Suma de Semente Comercializada, versus suma de metas, teniendo en cuenta Cultivares de Tecnología Intacta</description>
+    <externalId>false</externalId>
+    <formula>IF( AND(DS_Soma_de_Meta__c  &gt; 0, (DSoma_de_Sem_Comercializada__c/ DS_Soma_de_Meta__c  )&gt;=0.85) , true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Evaluación de : Suma de Semente Comercializada, versus suma de metas, teniendo en cuenta Cultivares de Tecnología Intacta</inlineHelpText>
+    <label>AAAA Superou 85% DSEM</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

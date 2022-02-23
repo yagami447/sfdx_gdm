@@ -1,0 +1,97 @@
+<apex:page standardController="Plano_de_Auditoria__c" extensions="PDFVisitaAuditadaController" renderAs="advanced_pdf" docType="html-5.0"
+    applyHtmlTag="false" applyBodyTag="false" showHeader="false" standardStylesheets="false" sidebar="false">
+
+    <head>
+        <style>
+            body {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .topLeft {
+                align-items: initial;
+                text-align: left;
+            }
+            .Center {
+                text-align: center;
+                font-size: x-small;
+            }
+            .footerTable {
+                font-weight: bold;
+                text-align: center;
+                font-size: small;
+            }
+            .bottomLeft {
+                text-align: left;
+                bottom: 0px;
+                left: 0px;
+                position: fixed;
+                display: block;
+            }
+            .bottomRight {
+                text-align: right;
+                bottom: 0px;
+                right: -100px;
+                position: fixed;
+                display: block;
+            }
+            .table-fotter {
+                bottom: 20px;
+                /* for bottom gap */
+                width: 100%;
+            }
+            .columnTable {
+                text-align: center;
+                font-size: small;
+                border: 1px solid rgb(0, 0, 0);
+                padding: 8px;
+            }
+            div.lastPage {
+                page: lastPage;
+            }
+        </style>
+        <tr>
+            <td>Cambé - PR, {!ahora}</td>
+        </tr>
+    </head>
+
+    <body>
+        <center>
+            <h1>APONTAMENTO DE AUDITORIA</h1>
+            <h2>{!apontamentoName}</h2>
+        </center>
+        <p>Em auditoria realizada no Multiplicador <b>{!account.Name}</b>, foram verificadas via relatórios sistêmicos, a comercialização efetiva maior que a quantidade anteriormente informada via anexos III e IV (Atualização de Vendas). </p>
+        <p>Todas as informações referentes ao ciclo de produção das safras foram analisadas e os números se apresentam nas seguintes diferenças: </p>
+        <br/>
+        <br/> 
+        <center><apex:dataTable columns="6" headerClass="Center" value="{!products}" var="product" footerClass="footerTable" style="width: 100%">
+            <apex:column headerValue="SAFRA" headerClass="Center" value="{!product.safra}" styleClass="columnTable"/>
+            <apex:column headerValue="CULTIVAR" headerClass="Center" value="{!product.variedad}" styleClass="columnTable"/>
+            <apex:column headerValue="CATEGORIA" headerClass="Center" value="{!product.categoria}" styleClass="columnTable"/>
+            <apex:column headerValue="ORIGEM" headerClass="Center" value="{!product.origen}" styleClass="columnTable"/>
+            <apex:column headerValue="QUANTIDADE" headerClass="Center" value="{!product.cantidad}" styleClass="columnTable" footerValue="TOTAL GERAL" footerClass="footerTable"/>
+            <apex:column headerValue="TOTAL SAFRA" headerClass="Center" value="{!product.totalSafra}" styleClass="columnTable" footerValue="{!total}" footerClass="footerTable"/>     
+        </apex:dataTable></center>
+        <br/>
+        <br/> 
+        <p><b>O Total Geral apontado pela auditoria é de {!total} Sacas,</b> as quais incidem multa e correção conforme pré-estabelecido em contrato.</p>
+        <p><b>OBS.:</b> {!plano.Observacion__c}</p>
+        <p>Assinatura.</p>
+    </body>
+    <footer>
+        <table style="bottom: -100px; position: absolute; width: 100%;">
+            <tr>
+                <td style="text-align: center; align-items: flex-start; width: 35%; border-top: 2px solid black;">
+                    <b>Raphael Matos Oliveira</b>
+                </td>
+                <td style="text-align: center; width: 30%;"></td>
+                <td style="text-align: center; align-items: flex-end; width: 35%; border-top: 2px solid black;">
+                    <b>{!account.Name}</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">Auditor</td>
+                <td style="text-align: center;"> </td>
+                <td style="text-align: center;">Resp. Comercial</td>
+            </tr>
+        </table>
+    </footer>
+</apex:page>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Enviar_Email_de_aprova_o_de_eventosSiteUser</fullName>
+        <description>Enviar Email de aprovação de eventosSiteUser</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SiteUserEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aprovaco_Evento</template>
+    </alerts>
+    <alerts>
+        <fullName>Enviar_Email_de_aprovacao_eventos</fullName>
+        <description>Enviar Email de aprovação de eventos</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aprovaco_Evento</template>
+    </alerts>
+    <alerts>
+        <fullName>Reprova_o_do_eventositeUser</fullName>
+        <description>Reprovação do eventositeUser</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SiteUserEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Reprovacao_Evento</template>
+    </alerts>
+    <alerts>
+        <fullName>Reprovacao_do_evento</fullName>
+        <description>Reprovação do evento</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Reprovacao_Evento</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Evento_AP</fullName>
+        <field>Fase__c</field>
+        <literalValue>Aprovado</literalValue>
+        <name>Evento AP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_AP_Lado_a_Lado_1</fullName>
+        <description>Actualización de campo de la primer instancia de aprobación para eventos Lado a Lado</description>
+        <field>Fase__c</field>
+        <literalValue>Aguardando resultado de colheita</literalValue>
+        <name>Evento AP Lado a Lado 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_AP_Lado_a_Lado_2</fullName>
+        <description>Actualización de campo de la segunda instancia de aprobación para eventos Lado a Lado</description>
+        <field>Fase__c</field>
+        <literalValue>Aprovado</literalValue>
+        <name>Evento AP Lado a Lado 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_PE</fullName>
+        <field>Fase__c</field>
+        <literalValue>Pendente</literalValue>
+        <name>Evento PE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_PE_Lado_a_Lado_1</fullName>
+        <description>Actualización de campo de la primer instancia de aprobación para eventos Lado a Lado</description>
+        <field>Fase__c</field>
+        <literalValue>Aguardando validação dados de plantio</literalValue>
+        <name>Evento PE Lado a Lado 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_PE_Lado_a_Lado_2</fullName>
+        <description>Actualización de campo de la segunda instancia de aprobación para eventos Lado a Lado</description>
+        <field>Fase__c</field>
+        <literalValue>Aguardando validação dados de colheita</literalValue>
+        <name>Evento PE Lado a Lado 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_RE</fullName>
+        <field>Fase__c</field>
+        <literalValue>Reprovado</literalValue>
+        <name>Evento RE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_RE_Lado_a_Lado_1</fullName>
+        <description>Actualización de campo de la primer instancia de aprobación para eventos Lado a Lado</description>
+        <field>Fase__c</field>
+        <literalValue>Reprovado</literalValue>
+        <name>Evento RE Lado a Lado 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Evento_RE_Lado_a_Lado_2</fullName>
+        <description>Actualización de campo de la segunda instancia de aprobación para eventos Lado a Lado</description>
+        <field>Fase__c</field>
+        <literalValue>Reprovado Colheita</literalValue>
+        <name>Evento RE Lado a Lado 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateSiteUserEmail</fullName>
+        <description>Update the siteUserEmail with the correct value, this allow us to have this field updated and send emails for the reject or aprove step.</description>
+        <field>SiteUserEmail__c</field>
+        <formula>Usuario__r.Email__c</formula>
+        <name>UpdateSiteUserEmail</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateSiteUserEmailCommunity</fullName>
+        <description>Update the siteUserEmail with the correct value, this allow us to have this field updated and send emails for the reject or aprove step.</description>
+        <field>SiteUserEmail__c</field>
+        <formula>$User.Email</formula>
+        <name>UpdateSiteUserEmailCommunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

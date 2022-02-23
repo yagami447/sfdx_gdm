@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cidade da Cotação de Soja --></help>
+    <label><!-- Local --></label>
+    <name>Local__c</name>
+    <picklistValues>
+        <masterLabel>Assuncion/Paraguay</masterLabel>
+        <translation><!-- Assuncion/Paraguay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Barreiras/BA</masterLabel>
+        <translation><!-- Barreiras/BA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campo Grande/MS</masterLabel>
+        <translation><!-- Campo Grande/MS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campo Mourão/PR</masterLabel>
+        <translation><!-- Campo Mourão/PR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chicago/CBOT</masterLabel>
+        <translation><!-- Chicago/CBOT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Londrina/PR</masterLabel>
+        <translation><!-- Londrina/PR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Não Me Toque/RS</masterLabel>
+        <translation><!-- Não Me Toque/RS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PTAX/BC</masterLabel>
+        <translation><!-- PTAX/BC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palotina/PR</masterLabel>
+        <translation><!-- Palotina/PR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passo Fundo/RS</masterLabel>
+        <translation><!-- Passo Fundo/RS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rio Verde/GO</masterLabel>
+        <translation><!-- Rio Verde/GO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rondonópolis/MT</masterLabel>
+        <translation><!-- Rondonópolis/MT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

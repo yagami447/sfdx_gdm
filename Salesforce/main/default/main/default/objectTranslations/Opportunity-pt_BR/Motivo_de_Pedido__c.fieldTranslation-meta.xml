@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motivo de Pedido --></label>
+    <name>Motivo_de_Pedido__c</name>
+    <picklistValues>
+        <masterLabel>Z0 - BR - NC Cancelamento da fatura</masterLabel>
+        <translation><!-- Z0 - BR - NC Cancelamento da fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z1 - BR - Erro no preço</masterLabel>
+        <translation><!-- Z1 - BR - Erro no preço --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z12 - BR - Devoluções</masterLabel>
+        <translation><!-- Z12 - BR - Devoluções --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z19 - BR - Troca de produto</masterLabel>
+        <translation><!-- Z19 - BR - Troca de produto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z20 - BR - Bonificação do preço</masterLabel>
+        <translation><!-- Z20 - BR - Bonificação do preço --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z21 - BR - Juros</masterLabel>
+        <translation><!-- Z21 - BR - Juros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z5 - BR - Alteração para novo Faturamento</masterLabel>
+        <translation><!-- Z5 - BR - Alteração para novo Faturamento --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRUEBA_AU_QA</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>PRUEBA AU QA</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var nro = &quot;{!Opportunity.Name}&quot;; 
+var stage = &quot;{!Opportunity.StageName}&quot;; 
+var idOrigen = &quot;{!Opportunity.Origen__c}&quot;; 
+var fecha_tipo_cambio = &quot;{!Opportunity.Fecha_fijacion_T_de_cambio__c}&quot;; 
+var tipo_cambio = &quot;{!Opportunity.Tipo_de_cambio__c}&quot;; 
+var sucursal = &quot;{!Opportunity.Sucursal__c}&quot;; 
+var condicion_pago = &quot;{!Opportunity.Condicion_de_Pago__c}&quot;; 
+var tipo = &quot;{!Opportunity.Tipo__c}&quot;; 
+var rt_opp = &quot;{!Opportunity.RecordTypeId}&quot;; 
+var resp = &apos;&apos;; 
+resp = &quot;{!Opportunity.Responsable__c}&quot;;
+var idDest = &quot;{!Opportunity.Destinatario_de_Mercaderia__c}&quot;;
+var rt = sforce.connection.query(&quot;SELECT Id, Name FROM RecordType WHERE Id = &apos;&quot;+rt_opp+ &quot;&apos; limit 1&quot;); 
+records = rt.getArray(&quot;records&quot;); 
+rt_VB = records[0].Name.toString(); 
+var pasa = true; 
+
+if (tipo.substring(0,4) != &apos;ZBNC&apos;){ 
+
+if(pasa &amp;&amp; (rt_VB == &apos;VB - Autorizada&apos; &amp;&amp; stage == &apos;AN - Anulada&apos;)){ 
+alert(&apos;Venda da Basica Anulada&apos;); 
+pasa = false; 
+} 
+
+if (fecha_tipo_cambio == &apos;&apos; &amp;&amp; rt_VB != &apos;Pendiente&apos;){ 
+alert(&apos;Falta fecha fijacion tipo de cambio&apos;); 
+pasa = false; 
+} 
+
+if (pasa &amp;&amp; tipo_cambio == &apos;&apos;){ 
+alert(&apos;Falta tipo de cambio&apos;); 
+pasa = false; 
+} 
+
+if (pasa &amp;&amp; (sucursal == &apos;&apos; &amp;&amp; idOrigen == &apos;&apos;)){ 
+alert(&apos;Falta sucursal&apos;); 
+pasa = false; 
+} 
+if (pasa &amp;&amp;(rt_opp == rt_VB &amp;&amp;  (idDest == null || idDest== &apos;&apos;))){ 
+alert(&apos;Falta Destinatario&apos;); 
+pasa = false; 
+} 
+
+if (pasa &amp;&amp; condicion_pago == &apos;&apos;){ 
+alert(&apos;Falta Condicion de Pago&apos;); 
+pasa = false; 
+} 
+   //if (pasa &amp;&amp; (rt_opp == rt_VB &amp;&amp; (resp == null || resp == &apos;&apos;))){ 
+if(pasa &amp;&amp; (rt_VB == &apos;VB - Autorizada&apos; &amp;&amp; (resp == null || resp == &apos;&apos;))){ 
+      alert(&apos;Falta Responsavél&apos;); 
+      pasa = false; 
+   } 
+
+
+} 
+
+if (pasa) { 
+var result = sforce.apex.execute(&quot;Opp_Sap_Alta&quot;,&quot;enviarSAP&quot;, {oppId : id, etapa : stage, target : 200}); 
+alert(&apos;Proceso Terminado.&apos;); 
+window.location.reload(true); 
+}</url>
+</WebLink>

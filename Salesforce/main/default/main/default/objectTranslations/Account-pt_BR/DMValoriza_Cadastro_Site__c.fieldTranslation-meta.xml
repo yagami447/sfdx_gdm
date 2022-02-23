@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Finalizou o cadastro no site DMValoriza --></help>
+    <label><!-- Cadastro Site DMValoriza --></label>
+    <name>DMValoriza_Cadastro_Site__c</name>
+</CustomFieldTranslation>

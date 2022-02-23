@@ -1,0 +1,45 @@
+<apex:component controller="CRM_Controller" id="menuComponent">
+
+    <apex:attribute name="clickInfraestructura" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickVendas" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickAreaAct" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickCanalVendas" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickCalendario" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickPlaneamientoInfr" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickPlaneamiento" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickPlaneamientoAreaA" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickDatosBonificacion" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickEncerrar" type="ApexPages.Action" description=""/>
+    <apex:attribute name="clickVolver" type="ApexPages.Action" description=""/>
+         
+    <apex:stylesheet value="{!$Resource.CRM_CssMenu}"/>    
+    <apex:form id="menuForm" style="height:100%;position:absolute;top:1%">
+    <!--<apex:outputPanel layout="block" style="width:50px" >-->
+    <apex:outputPanel layout="block" style="width:50px;height:100%;position:relative;top:1%">
+        <apex:panelGrid columns="1" style="cellpadding:0; cellspacing:0;" >       
+            <apex:commandButton action="{!clickInfraestructura}" value="Infraestrutura" id="btnInfraestructura" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickVendas}" value="Vendas" id="btnVendas" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickAreaAct}" value="Area de Atuação" id="btnAreaAct" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickCanalVendas}" value="Canal de Vendas" id="btnCanalVendas" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickCalendario}" value="Calendario de Eventos" id="btnCalendario" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickPlaneamientoInfr}" value="Plan. de Infraestrutura" id="btnPlaneamientoInfr" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickPlaneamiento}" value="Planejamiento de Vendas" id="btnPlaneamiento" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickPlaneamientoAreaA}" value="Plan. de Area de Atuação" id="btnPlaneamientoAreaA" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickDatosBonificacion}" value="Datos Bonificacion" id="btnDatosBonificacion" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickEncerrar}" value="Encerrar" id="btnEncerrar" styleClass="boton" style="width:140px;"/>
+            <apex:outputText value=""/>
+            <apex:outputText value=""/>
+            <apex:commandButton action="{!clickVolver}" value="Ir a Conta" id="btnVolver" styleClass="boton" style="width:140px;"/>
+         </apex:panelGrid> 
+    </apex:outputPanel>
+    </apex:form>
+</apex:component>

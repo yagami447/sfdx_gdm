@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_meta_por_marca</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Sociedad__c,&quot;BRMX&quot;), 
+OR(
+  Meta_Qde_Dias_de_Campo__c &gt; 0,
+  Meta_Qde_comodato_de_area__c &gt; 0
+)
+)</errorConditionFormula>
+    <errorMessage>As Metas de Días de Campo e comodato de Área não devem ser completadas para Brasmax</errorMessage>
+</ValidationRule>

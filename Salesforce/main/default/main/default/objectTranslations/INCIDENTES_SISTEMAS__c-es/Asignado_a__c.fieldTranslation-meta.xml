@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Persona responsable por la resolucion del problema --></help>
+    <label><!-- Asignado a --></label>
+    <name>Asignado_a__c</name>
+    <picklistValues>
+        <masterLabel>-</masterLabel>
+        <translation><!-- - --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amena</masterLabel>
+        <translation><!-- Amena --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aquilano</masterLabel>
+        <translation><!-- Aquilano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arias</masterLabel>
+        <translation><!-- Arias --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carlos Lizazu</masterLabel>
+        <translation><!-- Carlos Lizazu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cordoba</masterLabel>
+        <translation><!-- Cordoba --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daniela Bursa</masterLabel>
+        <translation><!-- Daniela Bursa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>G. Rossi</masterLabel>
+        <translation><!-- G. Rossi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Garmendia</masterLabel>
+        <translation><!-- Garmendia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Goria</masterLabel>
+        <translation><!-- Goria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Juan Manuel (Xioma)</masterLabel>
+        <translation><!-- Juan Manuel (Xioma) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Klenzi</masterLabel>
+        <translation><!-- Klenzi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laura Nuñez</masterLabel>
+        <translation><!-- Laura Nuñez --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcela Martinez (Xioma)</masterLabel>
+        <translation><!-- Marcela Martinez (Xioma) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nieto</masterLabel>
+        <translation><!-- Nieto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pernícoli</masterLabel>
+        <translation><!-- Pernícoli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poli</masterLabel>
+        <translation><!-- Poli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Santiago Romero</masterLabel>
+        <translation><!-- Santiago Romero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sebastián Vivot</masterLabel>
+        <translation><!-- Sebastián Vivot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Victoria Lagoa (Xioma)</masterLabel>
+        <translation><!-- Victoria Lagoa (Xioma) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

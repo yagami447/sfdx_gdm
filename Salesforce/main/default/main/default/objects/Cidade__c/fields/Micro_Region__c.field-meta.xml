@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Micro_Region__c</fullName>
+    <description>Micro Región en la que se encuentra la Ciudad</description>
+    <externalId>false</externalId>
+    <formula>Regi_o__r.Microrregi_o_de_Vendas__r.Name</formula>
+    <label>Micro Região</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

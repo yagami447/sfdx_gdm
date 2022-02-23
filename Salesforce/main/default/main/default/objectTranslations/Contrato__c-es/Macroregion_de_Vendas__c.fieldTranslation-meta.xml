@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Selecionar a MACROREGIÃO DE VENDAS --></help>
+    <label><!-- Macroregião de Vendas --></label>
+    <name>Macroregion_de_Vendas__c</name>
+    <relationshipLabel><!-- Contratos de Multiplicação --></relationshipLabel>
+</CustomFieldTranslation>

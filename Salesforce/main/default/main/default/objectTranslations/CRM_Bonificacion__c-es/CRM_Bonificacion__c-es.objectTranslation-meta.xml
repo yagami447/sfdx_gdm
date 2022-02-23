@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Bonificacion</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRM Bonificaciones</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Bonificacion BRMX</layout>
+        <sections>
+            <label><!-- Detalhe Politica Bonificação --></label>
+            <section>Detalhe Politica Bonificação</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bonificacion BRMX Gerente</layout>
+        <sections>
+            <label><!-- Detalhe Politica Bonificação --></label>
+            <section>Detalhe Politica Bonificação</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bonificacion DSEM</layout>
+        <sections>
+            <label><!-- Detalhe Politica Bonificação --></label>
+            <section>Detalhe Politica Bonificação</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bonificacion DSEM Gerente</layout>
+        <sections>
+            <label><!-- Detalhe Politica Bonificação --></label>
+            <section>Detalhe Politica Bonificação</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bonificacion NEOG</layout>
+        <sections>
+            <label><!-- Detalhe Politica Bonificação --></label>
+            <section>Detalhe Politica Bonificação</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bonificacion NEOG Gerente</layout>
+        <sections>
+            <label><!-- Detalhe Politica Bonificação --></label>
+            <section>Detalhe Politica Bonificação</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Aprovar desconto --></label>
+        <name>Aprobar_descuento</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- BRMX --></label>
+        <name>BRMX</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- DSEM --></label>
+        <name>DSEM</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NEOG --></label>
+        <name>NEOG</name>
+    </recordTypes>
+</CustomObjectTranslation>

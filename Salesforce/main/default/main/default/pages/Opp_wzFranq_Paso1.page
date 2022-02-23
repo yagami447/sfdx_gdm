@@ -1,0 +1,46 @@
+<apex:page controller="Opp_wzFranq_Ctrl" tabStyle="Opportunity">
+    <apex:sectionHeader title="Nova Venda da Basica" subtitle="Edição de oportunidade">
+    <apex:form >
+        <apex:pageBlock mode="detail" title="Editar Venda da Basica">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!Salir}" value="Salir" immediate="true"/>
+                <!--<apex:commandButton action="{!Cancel}" value="Salir" immediate="true"/>-->
+                <apex:commandButton action="{!next}" value="Avançar"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Franqueado">
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel value="Nro"></apex:outputLabel>
+                    <apex:inputField value="{!opp.Name}" required="true"/>
+                </apex:pageblockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Fase" />
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:selectList required="true" value="{!opp.Stagename}" size="1" id="fase" >
+                            <apex:selectOptions value="{!itemsFase}"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!opp.Safra__c}" required="true"/>
+                <apex:inputField value="{!opp.closedate}" required="true"/>
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel value="Multiplicador"></apex:outputLabel>
+                    <apex:inputField value="{!opp.AccountId}" required="true"/>
+                </apex:pageblockSectionItem>
+                <apex:inputField value="{!opp.VB_Franqueado__c}" required="true"/>
+                <apex:inputField value="{!opp.Negocio__c}" required="true"/>
+                
+<!--                <apex:inputField value="{!opp.VB_Quem_negocia__c}" required="true"/>
+                <apex:inputField value="{!opp.Respons_vel__c}" required="true"/>
+                <apex:inputField value="{!opp.VB_Cidade__c}" required="false"/>                
+                <apex:inputField value="{!opp.Enviamos_por_correio__c}" required="false"/>
+                <apex:inputField value="{!opp.Objetivo__c}" required="false"/>
+                <apex:inputField value="{!opp.VB_Cot_Soja__c}" required="false"/>                
+                <apex:inputField value="{!opp.VB_Ok_Grte_gral_p_Assinar__c}" required="false"/>
+                <apex:inputField value="{!opp.VB_Recebeu__c}" required="false"/>
+                <apex:inputField value="{!opp.VB_Chegou_na_Brasmax__c}" required="false"/>-->
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    </apex:sectionHeader>
+</apex:page>

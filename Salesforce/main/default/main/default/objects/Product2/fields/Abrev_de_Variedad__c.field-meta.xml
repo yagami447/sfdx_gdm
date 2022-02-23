@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Abrev_de_Variedad__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Variedad__c,&apos;BMX ATIVA RR&apos;,&apos;ATIVA&apos;,&apos;BMX MAGNA RR&apos;,&apos;MAGNA&apos;,&apos;BMX APOLO RR&apos;,&apos;APOLO&apos;,&apos;BMX TITAN RR&apos;,&apos;TITAN&apos;,&apos;BMX IMPACTO RR&apos;,&apos;IMPACTO&apos;,&apos;BMX FORÇA RR&apos;,&apos;FORÇA&apos;,&apos;BMX POTÊNCIA RR&apos;,&apos;POTÊNCIA&apos;,&apos;BMX ENERGIA RR&apos;,&apos;ENERGIA&apos;,&apos;BMX TURBO RR&apos;,&apos;TURBO&apos;,&apos;N/D&apos;)</formula>
+    <label>Abrev. de Variedad</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

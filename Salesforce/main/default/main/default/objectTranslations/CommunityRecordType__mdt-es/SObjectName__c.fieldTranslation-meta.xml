@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SObjectName --></label>
+    <name>SObjectName__c</name>
+    <picklistValues>
+        <masterLabel>CRM_Calendario_de_Eventos__c</masterLabel>
+        <translation><!-- CRM_Calendario_de_Eventos__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunity</masterLabel>
+        <translation><!-- Opportunity --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

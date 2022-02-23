@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT">
+    <aura:attribute name="value" type="String"/>
+    <aura:attribute name="field" type="String"/>
+    <aura:attribute name="position" type="String"/>
+</aura:event>

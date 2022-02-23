@@ -1,0 +1,13 @@
+Olá {!Receiving_User.FirstName},
+
+            Recebemos sua solicitação para alterar a senha na {!Community_Name}. Não podemos alterar sua senha neste momento.
+
+            {!CASE(1,
+            IF(VALUE(PASSWORD_LOCK_TIME) > 0, 1, 0), "Tente de novo em " + PASSWORD_LOCK_TIME + " minutos.",
+            IF(VALUE(PASSWORD_LOCK_TIME) < 0, 1, 0), "Contate seu administrador na " + Community_Name + " para desbloquear sua conta.",
+            "")}
+
+            Se não executou essa solicitação ou não reconhece essa ação, contate seu administrador na {!Community_Name} ou responda essa mensagem.
+
+            Obrgiado,
+            {!Community_Name}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_necessidade__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de necessidade</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MULTIPLICAÇÃO</fullName>
+                <default>false</default>
+                <label>MULTIPLICAÇÃO</label>
+            </value>
+            <value>
+                <fullName>DIFUSÃO</fullName>
+                <default>false</default>
+                <label>DIFUSÃO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

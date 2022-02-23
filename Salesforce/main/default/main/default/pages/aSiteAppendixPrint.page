@@ -1,0 +1,114 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="ApenddixPrintPage" cache="false" title="Impresion de Anexos" standardController="Opportunity" extensions="aSiteAppendixPrintController" action="{!validate}" applyBodyTag="false" renderAs="pdf">
+
+<head>
+<style type="text/css">
+        .headerRow {background-color:#D8D8D8 !important;} 
+        .row {color:#000000;} 
+</style>
+</head>
+
+
+<table width="100%" Align="center" columns="2">
+    <tr>
+         <td >
+             <apex:image rendered="{!appendix.Marca__c=='BRMX'}" url="{!URLFOR($Resource.LogoImpBRMX)}" style="width: 50%; height: 50%" /> 
+             <apex:image rendered="{!appendix.Marca__c=='DSEM'}" url="{!URLFOR($Resource.LogoImpDSEM)}" style="width: 50%; height: 50%" />
+         </td> 
+    </tr>
+</table>
+
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD colspan="1">&nbsp;</TD>
+    </tr>
+    <td aling="left"><font face="verdana">
+           <apex:outputText style="font-size: 18px; font-weight: bold;" value="Oportunidade {!appendix.Name}"></apex:outputText> 
+    </font></td>
+    <tr>
+        <TD><hr></hr></TD>
+    </tr>
+</table>
+ 
+<table width="100%" Align="center" columns="2" cellpadding="3">
+
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Account.Fields.Name.Label}:  "></apex:outputText> 
+              <apex:outputText style="font-size: 14px;" value="{!appendix.Account.Name}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Account.Fields.CNPJ_CPF__c.Label}:  "></apex:outputText> 
+             <apex:outputText style="font-size: 14px" value="{!appendix.Account.CNPJ_CPF__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Opportunity.Fields.Safra__c.Label}:  "></apex:outputText> 
+              <apex:outputText style="font-size: 14px" value="{!appendix.Safra__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Opportunity.Fields.Epoca_de_Plantio__c.Label}:  "></apex:outputText> 
+             <apex:outputText style="font-size: 14px" value="{!appendix.Epoca_de_Plantio__c}"></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Opportunity.Fields.Estado_Anexos_Portal_Miltiplicadores__c.Label}:  "></apex:outputText> 
+              <apex:outputText style="font-size: 14px" value="{!appendix.Estado_Anexos_Portal_Miltiplicadores__c}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText rendered="{!appendix.RecordType.Name == 'Anexo I'}" style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Opportunity.Fields.Anexo_Complementar__c.Label}:  "></apex:outputText> 
+             <apex:outputText rendered="{!appendix.RecordType.Name == 'Anexo I'}" style="font-size: 14px" value="{!appendix.Anexo_Complementar__c}"></apex:outputText>
+             
+             <apex:outputText rendered="{!appendix.RecordType.Name != 'Anexo I'}" style="font-size: 14px; font-weight: bold;" value="{!$Label.Date}:  "></apex:outputText> 
+             <apex:outputText rendered="{!appendix.RecordType.Name != 'Anexo I'}" style="font-size: 14px" value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!today()}" /></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$ObjectType.Opportunity.Fields.Marca__c.Label}:  "></apex:outputText> 
+              <apex:outputText style="font-size: 14px" value="{!marcaImp}"></apex:outputText>
+         </font></td> 
+         <td align="left"><font face="verdana">
+             <apex:outputText rendered="{!appendix.RecordType.Name == 'Anexo I'}" style="font-size: 14px; font-weight: bold;" value="{!$Label.Date}:  "></apex:outputText> 
+             <apex:outputText rendered="{!appendix.RecordType.Name == 'Anexo I'}" style="font-size: 14px" value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!today()}" /></apex:outputText>
+         </font></td>
+    </tr>
+    <tr>
+         <td align="left"><font face="verdana">
+             <apex:outputText style="font-size: 14px; font-weight: bold;" value="{!$Label.Appendix_Type}:  "></apex:outputText> 
+             <apex:outputText style="font-size: 14px" value="{!appendix.RecordType.Name}"></apex:outputText>
+         </font></td>
+         <td aling="left"><font face="verdana">
+              <apex:outputText style="font-size: 14px" value=" " ></apex:outputText> 
+              <apex:outputText style="font-size: 14px" value=" "></apex:outputText>
+         </font></td> 
+    </tr>    
+    
+        
+    <table width="100%" Align="center" columns="1">
+        <tr>
+            <td><hr></hr></td>
+        </tr>
+    </table>
+
+    <table width="100%" Align="center" columns="1">
+        <tr>
+            <td><br></br></td>
+        </tr>
+    </table>
+
+</table>
+  
+        <apex:pageBlock >
+        <apex:outputPanel layout="block" style="overflow:auto; height:250px;margin: 2px; font-size: 12px; text-align:left" >
+            <apex:pageBlockTable value="{!appendixItems}" var="i" width="100%" border="1" >
+                <apex:repeat value="{!Fields}" var="f">
+                    <apex:column value="{!i[f]}" headerValue="{!f.label}" headerClass="headerRow" styleClass="row"></apex:column>                    
+                </apex:repeat>
+            </apex:pageBlockTable>
+        </apex:outputPanel> 
+        </apex:pageBlock> 
+  
+            
+</apex:page>

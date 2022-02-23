@@ -1,0 +1,24 @@
+Estimado/a {!Connection.ExternalContactFirstName}:
+
+Como socios de {!Organization.Name}, nos gustaría invitarles a conectarse a nuestra reconocida plataforma Force.com, de salesforce.com.
+
+Creemos que la conexión entre dos empresas es el siguiente paso lógico en nuestra relación comercial y que sirve para fomentar la colaboración y el éxito entre ambas empresas.
+
+Para completar esta invitación, su cuenta de empresa de salesforce.com debe tener la opción "Salesforce to Salesforce" activada y necesitará tener las autorizaciones necesarias para completar el proceso. Si actualmente no es usuario de salesforce.com, tiene la oportunidad de solicitar una cuenta de prueba.
+
+Envíe esta solicitud a su administrador del sistema si no está seguro de si cumple las condiciones anteriores.
+
+Esperamos que acepte nuestra invitación haciendo clic en el siguiente vínculo:
+{!Connection.InvitationURL}
+
+Cuando nuestras empresas estén conectadas, podremos empezar a compartir registros y disponer de visibilidad en tiempo real de nuestro canal de oportunidades de forma inmediata.
+
+Esperamos poder colaborar con su empresa en pro del éxito común de ambas empresas.
+
+
+Atentamente,
+
+
+{!User.FirstName} {!User.LastName}
+
+{!Organization.Name}

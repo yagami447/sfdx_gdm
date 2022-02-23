@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Tratamento A</fullName>
+        <default>false</default>
+        <label>Tratamento A</label>
+    </customValue>
+    <customValue>
+        <fullName>Tratamento B</fullName>
+        <default>false</default>
+        <label>Tratamento B</label>
+    </customValue>
+    <description>Contiene los diferentes tipos de tratamentos que maneja GDM al momento de crear productos de estimativas o productos de Opportunidad (OpportunityLineItems) estos valores son dependientes del emblagem previamente seleccionado</description>
+    <masterLabel>Tratamentos</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

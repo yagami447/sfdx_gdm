@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Exclusividade_GDM__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>marcado = exclusivo
+no marcado = não exclusivo</description>
+    <externalId>false</externalId>
+    <inlineHelpText>marcado = exclusivo
+no marcado = não exclusivo</inlineHelpText>
+    <label>Exclusivo</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

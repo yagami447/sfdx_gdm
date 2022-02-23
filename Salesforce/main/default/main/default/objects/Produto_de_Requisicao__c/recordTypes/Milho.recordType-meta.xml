@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milho</fullName>
+    <active>true</active>
+    <label>Milho</label>
+    <picklistValues>
+        <picklist>Embalagem__c</picklist>
+        <values>
+            <fullName>Bag 5 Milhões Sementes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saca 60 Mil Sementes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tratamento__c</picklist>
+        <values>
+            <fullName>Tratamento A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tratamento B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Divulgar_em_nome_de__c</fullName>
+    <externalId>false</externalId>
+    <label>Divulgar em nome de</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agricultor</fullName>
+                <default>false</default>
+                <label>Agricultor</label>
+            </value>
+            <value>
+                <fullName>Multiplicador</fullName>
+                <default>false</default>
+                <label>Multiplicador</label>
+            </value>
+            <value>
+                <fullName>Parceiro</fullName>
+                <default>false</default>
+                <label>Parceiro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

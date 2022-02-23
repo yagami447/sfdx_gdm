@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Precio dependiendo del Tipo de Cotización, indicado en la cabecera. Si el valor que se expresa se refiere a Dolar o se refiere a Kg. de Soja --></help>
+    <label><!-- Preço --></label>
+    <name>Precio__c</name>
+</CustomFieldTranslation>

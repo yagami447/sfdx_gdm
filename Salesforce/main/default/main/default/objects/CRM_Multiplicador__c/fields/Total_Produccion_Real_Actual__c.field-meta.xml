@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Produccion_Real_Actual__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Produccion Real Actual</label>
+    <summarizedField>CRM_Infraestructura__c.Produccion_Real_Actual__c</summarizedField>
+    <summaryFilterItems>
+        <field>CRM_Infraestructura__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>A</value>
+    </summaryFilterItems>
+    <summaryForeignKey>CRM_Infraestructura__c.CRM_Multiplicador__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

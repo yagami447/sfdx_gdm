@@ -1,0 +1,1683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Add</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Add</shortDescription>
+        <value>Agregar</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_Descarte_Val_New_Anexo</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo Descarte Val New Anexo</shortDescription>
+        <value>Não é possível criar um anexo de descarte.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_Descarte_Validacion_A</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo Descarte Validacion A</shortDescription>
+        <value>Existe um anexo para a safra, conta e marca atual</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_Descarte_Validacion_B</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo Descarte Validacion B</shortDescription>
+        <value>O produto introduzido não existe no Anexo 1 e no Anexo I Rebaixamento Ha.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Val_Datos_No_Validos</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo III Val Datos No Validos</shortDescription>
+        <value>Datos no validos: Sem. Beneficiada - Sem. Aprobada - Sem. Comercializada - Sem. Uso Propio</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Val_Existe_Anexo_II</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo III Val Existe Anexo II</shortDescription>
+        <value>No posee Anexos II para esta campaña.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Val_New_Anexo</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo III Val New Anexo</shortDescription>
+        <value>No es posible crear un nuevo Anexo III.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Validacion_C</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo III Validacion C</shortDescription>
+        <value>Sem. Beneficiada no puede ser mayor que Sem. Bruta.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Validacion_D</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo_III_Validacion_D</shortDescription>
+        <value>Sem. Aprobada no puede ser mayor que Sem. Beneficiada</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Validacion_E</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo III Validacion E</shortDescription>
+        <value>Sem. Comercializada + Sem. Uso Propio no puede ser mayor que Sem. Aprobada.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_III_Validacion_F</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo III Validacion F</shortDescription>
+        <value>No puede ser cargado uso propio para la categoría S2.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Reb_Val_Cant_Rebajada</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Reb Val Cant Rebajada</shortDescription>
+        <value>Cantidad a rebajar excedida</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Reb_Val_Categ_Relacionadas</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Reb Val Categ Relacionadas</shortDescription>
+        <value>No existe en el Anexo II relacionado</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Reb_Val_Datos_No_Validos</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Reb Val Datos No Validos</shortDescription>
+        <value>Datos no validos: Sem. Rebaixada (Sacas)</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Reb_Val_Datos_No_Validos_2</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Reb Val Datos No Validos 2</shortDescription>
+        <value>Sem. Rebaixada (Sacas) debe ser mayor que 0</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Reb_Val_Datos_Oblig</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Reb Val Datos Oblig</shortDescription>
+        <value>Datos obligatorios: Sem. Rebaixada (Sacas)</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Reb_Val_Rebaja_Correcta</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Reb Val Rebaja Correcta</shortDescription>
+        <value>No es posible rebajar</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Val_Datos_No_Validos</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Val Datos No Validos</shortDescription>
+        <value>Datos no validos: Ha. Plantados (Ha) - Sem. Bruta (Sacas) - Descarte(Sacas)</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Val_Datos_Oblig</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Val Datos Oblig</shortDescription>
+        <value>En todos los campos sin información deberá ingresar el valor 0 (cero).</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Val_Existe_Anexo_I</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Val Existe Anexo I</shortDescription>
+        <value>No posee Anexos I para esta campaña.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Val_New_Anexo</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Val New Anexo</shortDescription>
+        <value>No es posible crear un nuevo Anexo II.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_II_Validacion_B</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo II Validacion B</shortDescription>
+        <value>El área sembrada no puede ser mayor que la autorizada.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_IV_Val_Datos_No_Validos</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo IV Val Datos No Validos</shortDescription>
+        <value>Datos no validos: Sem. Comercializada - Sem. Uso Propio - Descarte</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_IV_Val_Existe_Anexo_III</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo IV Val Existe Anexo III</shortDescription>
+        <value>No posee Anexo III para esta campaña.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_IV_Val_New_Anexo</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo IV Val New Anexo</shortDescription>
+        <value>No es posible crear un nuevo Anexo IV.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_IV_Validacion_B</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo IV Validacion B</shortDescription>
+        <value>Sem. Comercializada AIV + Sem. Uso Propio AIV + Sem. Descarte AIV + Sem. Comercializada AIII + Sem. Uso Propio AIII no puede ser diferente que Sem. Aprobada.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_Cantidades</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val Cantidades</shortDescription>
+        <value>Sem. Comercializada AV debe ser igual que Sem. Uso Propio AIII + Sem. Comercializada AIII + Sem. Uso Propio AIV + Sem. Comercializada AIV.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_Categ_Relacionadas</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val Categ Relacionadas</shortDescription>
+        <value>No existe en los Anexos relacionados</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_Datos_No_Validos</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val Datos No Validos</shortDescription>
+        <value>Datos no validos: Sem Comercializada + Uso Próprio (Sacas)</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_Datos_No_Validos_2</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val Datos No Validos 2</shortDescription>
+        <value>Sem. Comercializada (Sacas) debe ser mayor que 0</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_Datos_Oblig</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val Datos Oblig</shortDescription>
+        <value>Datos obligatorios: Variedad - Sem. Comercializada (Sacas)</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_Existe_Anexo_IV</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val Existe Anexo IV</shortDescription>
+        <value>No posee Anexo IV para esta campaña.</value>
+    </labels>
+    <labels>
+        <fullName>Anexo_V_Val_New_Anexo</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexo V Val New Anexo</shortDescription>
+        <value>No es posible crear un nuevo Anexo V.</value>
+    </labels>
+    <labels>
+        <fullName>Anexos</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Anexos</shortDescription>
+        <value>Anexos</value>
+    </labels>
+    <labels>
+        <fullName>Appendix_Type</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Appendix Type</shortDescription>
+        <value>Tipo de Anexo</value>
+    </labels>
+    <labels>
+        <fullName>AprovarRecusarVBPedidoAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AprovarRecusarVBPedidoAPI: Mensaje de error por defecto</shortDescription>
+        <value>Sua solicitação não pôde ser processada</value>
+    </labels>
+    <labels>
+        <fullName>AprovarRecusarVBPedidoAPI_Request_Rejected_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AprovarRecusarVBPedidoAPI: Mensaje de error por pedido rechazado</shortDescription>
+        <value>O pedido foi rejeitado</value>
+    </labels>
+    <labels>
+        <fullName>AprovarRecusarVBPedidoAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AprovarRecusarVBPedidoAPI: Mensaje de pedido aprobado</shortDescription>
+        <value>O pedido foi aprovado</value>
+    </labels>
+    <labels>
+        <fullName>Authorizations</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Authorizations</shortDescription>
+        <value>Autorizaciones</value>
+    </labels>
+    <labels>
+        <fullName>CRMAPI_Bad_Setting_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>CRMAPI: Mensaje de error por mala configuración</shortDescription>
+        <value>Não há configuração definida para o objeto CRM</value>
+    </labels>
+    <labels>
+        <fullName>CRMAPI_CRM_Created_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>CRMAPI: Mensaje de CRM Existente</shortDescription>
+        <value>Já existe um CRM criado para esta conta, marca e safra</value>
+    </labels>
+    <labels>
+        <fullName>CRMAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>CRMAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não é possível criar um CRM nesta data</value>
+    </labels>
+    <labels>
+        <fullName>CRMAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>CRMAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancelar</value>
+    </labels>
+    <labels>
+        <fullName>CantidadIgualCero</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>CantidadIgualCero</shortDescription>
+        <value>Debe ingresar un monto mayor o igual a cero</value>
+    </labels>
+    <labels>
+        <fullName>CidadesAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>CidadesAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não há cidades</value>
+    </labels>
+    <labels>
+        <fullName>CidadesAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>CidadesAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>CooperantesA1API_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>CooperantesA1API: Mensaje de Error por Defecto</shortDescription>
+        <value>Esta conta não tem colaboradores</value>
+    </labels>
+    <labels>
+        <fullName>CooperantesA1API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>CooperantesA1API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>CreateEvent</fullName>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>CreateEvent</shortDescription>
+        <value>Criar novo evento</value>
+    </labels>
+    <labels>
+        <fullName>CreateOpportunity</fullName>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>CreateOpportunity</shortDescription>
+        <value>Criar oportunidade</value>
+    </labels>
+    <labels>
+        <fullName>Date</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Date</shortDescription>
+        <value>Fecha</value>
+    </labels>
+    <labels>
+        <fullName>DeleteAttachmentAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>DeleteAttachmentAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>DeleteAttachmentAPI_Validation_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>DeleteAttachmentAPI: Mensaje de validación</shortDescription>
+        <value>Assegurese de que o arquivo existe e que sua Id está corretamente indicada.</value>
+    </labels>
+    <labels>
+        <fullName>Descarte_de_Semente</fullName>
+        <categories>Descarte de Semente</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Descarte de Semente</shortDescription>
+        <value>Descarte de Semente</value>
+    </labels>
+    <labels>
+        <fullName>Descartes</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Descartes</shortDescription>
+        <value>Descartes</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_CANT_AFTER_III</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_CANT_AFTER_III</shortDescription>
+        <value>Não pode inserir depois do anexo III</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_DESCARTE_INVALIDO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_DESCARTE_INVALIDO</shortDescription>
+        <value>Você não descartou essa cultivar.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_DUPLICATE_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_DUPLICATE_A2</shortDescription>
+        <value>Já existe um Anexo 2 com essas características.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_INVALID_MONTH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_INVALID_MONTH</shortDescription>
+        <value>Não é possível executar essa ação neste mês.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_MUST_LAUNCH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_MUST_LAUNCH</shortDescription>
+        <value>deve ser lançada</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NO_NEGATIVE</fullName>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_NO_NEGATIVE</shortDescription>
+        <value>Não pode lançar valor negativo.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NO_PRODUCT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_NO_PRODUCT</shortDescription>
+        <value>Não tem produto para fazer esse lançamento</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_PREENCHER_DADOS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_PREENCHER_DADOS</shortDescription>
+        <value>Preencha os dados dos produtos.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_VALUE_MISMATCH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_VALUE_MISMATCH</shortDescription>
+        <value>Os valores dessa cultivar não batem.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_WRONG_DAY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_WRONG_DAY</shortDescription>
+        <value>Não é possível executar essa ação hoje. Verifique os dias de lançamento.</value>
+    </labels>
+    <labels>
+        <fullName>Edit</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Editar</value>
+    </labels>
+    <labels>
+        <fullName>Edit_Profile</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Edit Profile</shortDescription>
+        <value>Editar Perfil</value>
+    </labels>
+    <labels>
+        <fullName>Email_is_required</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Email is required</shortDescription>
+        <value>El email es requerido!</value>
+    </labels>
+    <labels>
+        <fullName>ErrorAdicionNuevoItem</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ErrorAdicionNuevoItem</shortDescription>
+        <value>O produto não pode ser adicionado devido a um erro nos produtos já carregados.</value>
+    </labels>
+    <labels>
+        <fullName>ErrorCantidad</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ErrorCantidad</shortDescription>
+        <value>Debe ingresar un monto menor o igual a</value>
+    </labels>
+    <labels>
+        <fullName>ErrorCategoria</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ErrorCategoria</shortDescription>
+        <value>Seleccione una categoria</value>
+    </labels>
+    <labels>
+        <fullName>ErrorLote</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ErrorLote</shortDescription>
+        <value>Ingrese un Lote</value>
+    </labels>
+    <labels>
+        <fullName>ErrorUnidade</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ErrorUnidade</shortDescription>
+        <value>Selecione uma unidade</value>
+    </labels>
+    <labels>
+        <fullName>ErrorVariedad</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ErrorVariedad</shortDescription>
+        <value>Seleccione una variedad</value>
+    </labels>
+    <labels>
+        <fullName>EstadoParaCRMAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EstadoParaCRMAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>EstadoParaCRMAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EstadoParaCRMAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>EstimativaAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EstimativaAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não é possível criar estimativa</value>
+    </labels>
+    <labels>
+        <fullName>EstimativaAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EstimativaAPI: Mensaje de éxito</shortDescription>
+        <value>Os dados estão corretos, você pode criar a estimativa</value>
+    </labels>
+    <labels>
+        <fullName>EstimativaProductAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EstimativaProductAPI: Mensaje de error por defecto</shortDescription>
+        <value>Nenhum produto encontrado</value>
+    </labels>
+    <labels>
+        <fullName>EstimativaProductAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EstimativaProductAPI: Mensaje de éxito</shortDescription>
+        <value>Existem produtos de estimativa</value>
+    </labels>
+    <labels>
+        <fullName>Estimativa_Gerente</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estimativa_Gerente</shortDescription>
+        <value>Estimativa Gerente</value>
+    </labels>
+    <labels>
+        <fullName>Estimativa_Multiplicador</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estimativa_Multiplicador</shortDescription>
+        <value>Estimativa Multiplicador</value>
+    </labels>
+    <labels>
+        <fullName>Estimativa_Supervisor</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estimativa_Supervisor</shortDescription>
+        <value>Estimativa Supervisor</value>
+    </labels>
+    <labels>
+        <fullName>Estoque_Val_Datos_No_Validos</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estoque_Val_Datos_No_Validos</shortDescription>
+        <value>Datos no validos: Sem. Comercializada (Sacas) - Sem. Aprovada (Sacas)</value>
+    </labels>
+    <labels>
+        <fullName>Estoque_Val_New_Estoque</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estoque Val New Estoque</shortDescription>
+        <value>No es posible crear un nuevo Estoque.</value>
+    </labels>
+    <labels>
+        <fullName>Estoque_Validacion_A</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estoque_Validacion_A</shortDescription>
+        <value>Sem. Comercializada no puede ser mayor que Sem. Aprobada.</value>
+    </labels>
+    <labels>
+        <fullName>EventosAPI_Bad_Event_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EventosAPI: Mensaje de evento invalido</shortDescription>
+        <value>Tipo de evento inválido</value>
+    </labels>
+    <labels>
+        <fullName>EventosAPI_Bad_Settings_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EventosAPI: Mensaje de mala configuración</shortDescription>
+        <value>Não existe prazo de lançamento definido para o tipo de evento no estado selecionado</value>
+    </labels>
+    <labels>
+        <fullName>EventosAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EventosAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não é possível criar este tipo de evento</value>
+    </labels>
+    <labels>
+        <fullName>EventosAPI_Fase_LXL_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EventosAPI: Mensaje de error en fase lado a lado</shortDescription>
+        <value>Você deve indicar uma fase para eventos do tipo Lado a Lado</value>
+    </labels>
+    <labels>
+        <fullName>EventosAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>EventosAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ExceptionCannotUseS2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExceptionCannotUseS2</shortDescription>
+        <value>Cannot use S2 Cultivar for self use</value>
+    </labels>
+    <labels>
+        <fullName>ExceptionExceeded</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExceptionExceeded</shortDescription>
+        <value>This Cultivar has exceeded the permitted amount.</value>
+    </labels>
+    <labels>
+        <fullName>Fechar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Fechar</shortDescription>
+        <value>Fechar</value>
+    </labels>
+    <labels>
+        <fullName>Forgot_Password_Enter_Email</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Forgot Password Enter Email</shortDescription>
+        <value>Ingrese su email para recuperar la contraseña.</value>
+    </labels>
+    <labels>
+        <fullName>GetDocumentAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>GetDocumentAPI: Mensaje de error por defecto</shortDescription>
+        <value>Nenhum documento relacionado à sua pesquisa foi encontrado</value>
+    </labels>
+    <labels>
+        <fullName>GetDocumentAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>GetDocumentAPI: Mensaje de éxito</shortDescription>
+        <value>Foram encontrados documentos relacionados à sua pesquisa</value>
+    </labels>
+    <labels>
+        <fullName>Linea</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Linea</shortDescription>
+        <value>Linea</value>
+    </labels>
+    <labels>
+        <fullName>MidiaKitAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>MidiaKitAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>MidiaKitAPI_No_Items_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>MidiaKitAPI: Mensaje de error por no tener items relacionados</shortDescription>
+        <value>Não há itens relacionados a esta conta</value>
+    </labels>
+    <labels>
+        <fullName>MidiaKitAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>MidiaKitAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>MidiaKitAPI_Validation_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>MidiaKitAPI: Mensaje de validación para campos obligatorios</shortDescription>
+        <value>Por favor verifique os campos obrigatórios para fazer a consulta</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Nombre</value>
+    </labels>
+    <labels>
+        <fullName>NeedAnexoI</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NeedAnexoI</shortDescription>
+        <value>Precisa ter um anexo 1 aprovado para inserir este anexo.</value>
+    </labels>
+    <labels>
+        <fullName>NeedAnexoII</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NeedAnexoI</shortDescription>
+        <value>Precisa ter um anexo 2 aprovado para inserir este anexo.</value>
+    </labels>
+    <labels>
+        <fullName>NeedAnexoIII</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NeedAnexoI</shortDescription>
+        <value>Precisa ter um anexo 3 aprovado para inserir este anexo.</value>
+    </labels>
+    <labels>
+        <fullName>NeedAnexoIV</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NeedAnexoI</shortDescription>
+        <value>Precisa ter um anexo 4 aprovado para inserir este anexo.</value>
+    </labels>
+    <labels>
+        <fullName>New</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>New</shortDescription>
+        <value>Nuevo</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_Anexo_III_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Anexo III Mensaje de Error</shortDescription>
+        <value>Não há Anexo III aprovado</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_Anexo_II_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Anexo II Mensaje de Error</shortDescription>
+        <value>Não há Anexo II aprovado</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_Anexo_I_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Anexo I Mensaje de Error</shortDescription>
+        <value>Não há Anexo I aprovado</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_CVB_Approved_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: CVB Aprobada Mensaje de Error</shortDescription>
+        <value>Não há oportunidade de CVB aprovada</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_Existing_Anexo_IV_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Anexo IV Existente Mensaje de Error</shortDescription>
+        <value>Já existe um Anexo IV criado e não é possível criar um novo Anexo Descartar</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_Existing_Anexo_I_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Anexo I Existente Mensaje de Error</shortDescription>
+        <value>Já existe um Anexo III criado e não é possível criar um novo Anexo II Rebaixamento Sacas</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_General_Generic_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Mensaje de Error Genérico General</shortDescription>
+        <value>Anexo inválido</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_General_Generic_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Mensaje de Éxito Genérico General</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityAPI_Object_Contract_Without_Records_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityAPI: Objeto Contrato__c sin registros Mensaje de Error</shortDescription>
+        <value>Não foram encontrados registros do objeto Contract__c que atendam aos requisitos para esta solicitação</value>
+    </labels>
+    <labels>
+        <fullName>Password_Sent</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Password Sent</shortDescription>
+        <value>Hemos enviado un email con instrucciones para recuperar su contrseña. Verifique su bandeja en entrada.</value>
+    </labels>
+    <labels>
+        <fullName>Password_is_required</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Password is required</shortDescription>
+        <value>La contraseña es requerida!</value>
+    </labels>
+    <labels>
+        <fullName>Print</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Print</shortDescription>
+        <value>Imprimir</value>
+    </labels>
+    <labels>
+        <fullName>ProductsA2API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsA2API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsA3API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsA3API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsA4API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsA4API: Mensaje de exito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsA5API_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsA5API: Mensaje de error por defecto</shortDescription>
+        <value>Não há produtos para este anexo</value>
+    </labels>
+    <labels>
+        <fullName>ProductsA5API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsA5API: Mensaje de éxito</shortDescription>
+        <value>Existem produtos relacionados à oportunidade</value>
+    </labels>
+    <labels>
+        <fullName>ProductsCRMAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsCRMAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não há produtos ativados</value>
+    </labels>
+    <labels>
+        <fullName>ProductsCRMAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsCRMAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsDescarteAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsDescarteAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>ProductsDescarteAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsDescarteAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsEventAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsEventAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não há produtos habilitados para o tipo de evento selecionado</value>
+    </labels>
+    <labels>
+        <fullName>ProductsEventAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsEventAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsRebaixamentoAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ProductsRebaixamentoAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsReembalajeAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsReembalajeAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>ProductsReembalajeAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsReembalajeAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsVBAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsVBAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>ProductsVBAPI_Product_Not_Attached_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsVBAPI: Mensaje de error por producto no anexado</shortDescription>
+        <value>Nenhum produto foi anexado</value>
+    </labels>
+    <labels>
+        <fullName>ProductsVBAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsVBAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>ProductsVotacionAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsVotacionAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não há produtos disponíveis</value>
+    </labels>
+    <labels>
+        <fullName>ProductsVotacionAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ProductsVotacionAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>Profile</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Profile</shortDescription>
+        <value>Perfil de usuario</value>
+    </labels>
+    <labels>
+        <fullName>Rebajamiento_de_Bolsas</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Rebajamiento de Bolsas</shortDescription>
+        <value>Rebajamiento de Bolsas</value>
+    </labels>
+    <labels>
+        <fullName>Rebajamiento_de_Hectareas</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Rebajamiento de Hectareas</shortDescription>
+        <value>Rebajamiento de Hectareas</value>
+    </labels>
+    <labels>
+        <fullName>Recover_Password_Error</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Recover Password Error</shortDescription>
+        <value>Error al obtener una nueva contraseña. Contacte a admvendas@gdmseeds.com</value>
+    </labels>
+    <labels>
+        <fullName>Reductions</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Reductions</shortDescription>
+        <value>Rebajas</value>
+    </labels>
+    <labels>
+        <fullName>Reembalagems</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Reembalagem</shortDescription>
+        <value>Reembalagem</value>
+    </labels>
+    <labels>
+        <fullName>Remove</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Remove</shortDescription>
+        <value>Quitar</value>
+    </labels>
+    <labels>
+        <fullName>ResetAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ResetAPI: Mensaje de error por defecto</shortDescription>
+        <value>Nenhum registro associado a essa conta foi encontrado</value>
+    </labels>
+    <labels>
+        <fullName>ResetAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>ResetAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA1API_DML_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA1API: Mensaje de Error de DML</shortDescription>
+        <value>Ocorreu um erro ao tentar inserir o objeto</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA1API_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA1API: Mensaje de Error por Defecto</shortDescription>
+        <value>Um erro inesperado ocorreu</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA1API_First_Empty_Field_Validation_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA1API: Validación de Campo Obligatorio &quot;Estado de Comercialización&quot;</shortDescription>
+        <value>O campo &quot;Estado de Comercialização&quot; não pode estar vazio</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA1API_Second_Empty_Field_Validation_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA1API: Validación de Campo Obligatorio &quot;Lista de Nuevos Productos en Opp&quot;</shortDescription>
+        <value>O campo &quot;listaDeNuevosProductosDeOportunidad&quot; não pode estar vazio</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA1API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA1API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA2API_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA2API: Mensaje de error por defecto</shortDescription>
+        <value>Um erro inesperado ocorreu</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA2API_Opportunity_To_Edit_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA2API: Mensaje de error al editar una Oportunidad</shortDescription>
+        <value>O anexo que você deseja editar não atende aos requisitos</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA2API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA2API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA2API_Validation_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA2API: Mensaje de error en validación</shortDescription>
+        <value>Ocorreu um erro durante a validação dos dados</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA2RebaixamentoAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA2RebaixamentoAPI: Mensaje de error por defecto</shortDescription>
+        <value>Algo deu errado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA2RebaixamentoAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA2RebaixamentoAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA3API_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA3API: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA3API_Duplicate_Value_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA3API: Mensaje de error de valor duplicado</shortDescription>
+        <value>Já existe uma oportunidade criada para esta combinação de safra, conta e marca</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA3API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA3API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA4API_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA4API: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA4API_Duplicate_Value_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA4API: Mensaje de error de valor duplicado</shortDescription>
+        <value>Já existe uma oportunidade criada para esta combinação de safra, conta e marca</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA4API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA4API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA5API_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA5API: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarA5API_Validation_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarA5API: Mensaje de error de validación</shortDescription>
+        <value>Dados obrigatórios: Estado do Comercialização</value>
+    </labels>
+    <labels>
+        <fullName>SalvarCRMAPI_First_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarCRMAPI: Primer mensaje de error</shortDescription>
+        <value>Falha ao salvar devido a um problema com status de CRM</value>
+    </labels>
+    <labels>
+        <fullName>SalvarCRMAPI_Second_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarCRMAPI: Segundo mensaje de error</shortDescription>
+        <value>Falha ao salvar devido a um problema com itens de CRM</value>
+    </labels>
+    <labels>
+        <fullName>SalvarCRMAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarCRMAPI: Mensaje de éxito</shortDescription>
+        <value>Salvo com sucesso no objeto CRM</value>
+    </labels>
+    <labels>
+        <fullName>SalvarDescarteAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarDescarteAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarDescarteAPI_Incomplete_Units_Validation_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarDescarteAP: Mensaje de validación de unidades incompletas</shortDescription>
+        <value>Completar as unidades</value>
+    </labels>
+    <labels>
+        <fullName>SalvarDescarteAPI_Product_Validation_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarDescarteAPI: Mensaje de error respecto a errores en productos</shortDescription>
+        <value>Os produtos apresentam erros:</value>
+    </labels>
+    <labels>
+        <fullName>SalvarDescarteAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarDescarteAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarEstimativaAPI_Clarification_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>SalvarEstimativaAPI: Mensaje de aclaración en error</shortDescription>
+        <value>A requisição que você está tentando editar não existe</value>
+    </labels>
+    <labels>
+        <fullName>SalvarEstimativaAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>SalvarEstimativaAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não foi possível salvar / atualizar a estimativa</value>
+    </labels>
+    <labels>
+        <fullName>SalvarEstimativaAPI_Products_Quantity_Error_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>SalvarEstimativaAPI: Mensaje de error al intentar salvar una Estimativa sin prod</shortDescription>
+        <value>Não é possível submeter para aprovação Estimativas sem produtos</value>
+    </labels>
+    <labels>
+        <fullName>SalvarEstimativaAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>SalvarEstimativaAPI: Mensaje de éxito</shortDescription>
+        <value>Estimativa salvo / atualizado com sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarEventoAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarEventoAPI: Mensaje de error por defecto</shortDescription>
+        <value>Algo deu errado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarEventoAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarEventoAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarReembalajeAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarReembalajeAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarReembalajeAPI_Product_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarReembalajeAPI: Mensaje de error en producto</shortDescription>
+        <value>Os produtos apresentam erros:</value>
+    </labels>
+    <labels>
+        <fullName>SalvarReembalajeAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarReembalajeAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarReembalajeAPI_Unidade_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarReembalajeAPI: Mensaje de error en unidades</shortDescription>
+        <value>Preencha as unidades</value>
+    </labels>
+    <labels>
+        <fullName>SalvarStockAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarStockAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não foi possível registrar/atualizar</value>
+    </labels>
+    <labels>
+        <fullName>SalvarStockAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarStockAPI: Mensaje de éxito</shortDescription>
+        <value>Estoque foi atualizado com sucesso</value>
+    </labels>
+    <labels>
+        <fullName>SalvarVotoAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarVotoAPI: Mensaje de error por defecto</shortDescription>
+        <value>Ocorreu um erro inesperado</value>
+    </labels>
+    <labels>
+        <fullName>SalvarVotoAPI_Null_Region_Validation_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarVotoAPI: Mensaje de validación de campo región vacío</shortDescription>
+        <value>Por favor, verifique a região de sua conta para votar</value>
+    </labels>
+    <labels>
+        <fullName>SalvarVotoAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SalvarVotoAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Guardar</value>
+    </labels>
+    <labels>
+        <fullName>SaveDocumentAPI_Attachment_Content_Type_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SaveDocumentAPI: Mensaje de error de parámetro attachmentContent vacío</shortDescription>
+        <value>O parâmetro attachmentContentType é necessário para eventos Lado a Lado.</value>
+    </labels>
+    <labels>
+        <fullName>SaveDocumentAPI_Conditional_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SaveDocumentAPI: Mensaje de error por condición no cumplida</shortDescription>
+        <value>Parâmetro autorizado é válido apenas para eventos lado a lado</value>
+    </labels>
+    <labels>
+        <fullName>SaveDocumentAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SaveDocumentAPI: Mensaje de error por defecto</shortDescription>
+        <value>Algo deu errado:</value>
+    </labels>
+    <labels>
+        <fullName>SaveDocumentAPI_Empty_Body_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SaveDocumentAPI: Mensaje de error de cuerpo vacío</shortDescription>
+        <value>Corpo do arquivo ausente</value>
+    </labels>
+    <labels>
+        <fullName>SaveDocumentAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>SaveDocumentAPI: Mensaje de éxito</shortDescription>
+        <value>Documento criado</value>
+    </labels>
+    <labels>
+        <fullName>StockProductsAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>StockProductsAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não há produtos em estoque</value>
+    </labels>
+    <labels>
+        <fullName>StockProductsAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>StockProductsAPI: Mensaje de éxito</shortDescription>
+        <value>Produtos encontrados em estoque</value>
+    </labels>
+    <labels>
+        <fullName>Submit</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Enviar para aprobación</value>
+    </labels>
+    <labels>
+        <fullName>Task_Completed_Ok</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Task completed Ok</shortDescription>
+        <value>La tarea se completó exitosamente</value>
+    </labels>
+    <labels>
+        <fullName>Unknown_User</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Unknown User</shortDescription>
+        <value>Usuario desconocido.</value>
+    </labels>
+    <labels>
+        <fullName>Username_incorrent</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Username incorrent</shortDescription>
+        <value>El nombre de usuario o la contraseña son incorrectos!</value>
+    </labels>
+    <labels>
+        <fullName>Username_is_required</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Username is required</shortDescription>
+        <value>El nombre de usuario es requerido!</value>
+    </labels>
+    <labels>
+        <fullName>ValidaQuantidadePendente</fullName>
+        <categories>Site</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>Mensagem que avisa o usuário sobre a validação de quantidade.</shortDescription>
+        <value>A quantidade confirmada não pode ser maior que a Quantidade Pendente na Oferta.</value>
+    </labels>
+    <labels>
+        <fullName>ValorNegativo</fullName>
+        <categories>Site</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>Você deve digitar um valor negativo</shortDescription>
+        <value>Você deve digitar um valor negativo.</value>
+    </labels>
+    <labels>
+        <fullName>View_Products</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>View Products</shortDescription>
+        <value>Ver Productos</value>
+    </labels>
+    <labels>
+        <fullName>action</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Action</shortDescription>
+        <value>Acción</value>
+    </labels>
+    <labels>
+        <fullName>active</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Active</shortDescription>
+        <value>Activa</value>
+    </labels>
+    <labels>
+        <fullName>active_list</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Active List</shortDescription>
+        <value>lista activa</value>
+    </labels>
+    <labels>
+        <fullName>approval_date</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>approval date</shortDescription>
+        <value>Fecha de Aprobacion</value>
+    </labels>
+    <labels>
+        <fullName>choose</fullName>
+        <categories>Site.Button</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Choose</shortDescription>
+        <value>Elegir</value>
+    </labels>
+    <labels>
+        <fullName>user_report</fullName>
+        <categories>Site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>User report</shortDescription>
+        <value>Reporte de usuario</value>
+    </labels>
+    <labels>
+        <fullName>votosRealizadosAPI_Default_Error_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>votosRealizadosAPI: Mensaje de error por defecto</shortDescription>
+        <value>Não há votos</value>
+    </labels>
+    <labels>
+        <fullName>votosRealizadosAPI_Success_Message</fullName>
+        <categories>API</categories>
+        <language>pt_BR</language>
+        <protected>false</protected>
+        <shortDescription>votosRealizadosAPI: Mensaje de éxito</shortDescription>
+        <value>Sucesso</value>
+    </labels>
+</CustomLabels>

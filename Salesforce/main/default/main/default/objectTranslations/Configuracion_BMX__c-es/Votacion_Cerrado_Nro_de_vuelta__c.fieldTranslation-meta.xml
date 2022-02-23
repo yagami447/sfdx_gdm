@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Para a segunda rodada, as variedades, valores e região devem ser carregados no objeto &quot;Votaçao Balotagem&quot;. --></help>
+    <label><!-- Votacion Cerrado Nro de vuelta --></label>
+    <name>Votacion_Cerrado_Nro_de_vuelta__c</name>
+</CustomFieldTranslation>

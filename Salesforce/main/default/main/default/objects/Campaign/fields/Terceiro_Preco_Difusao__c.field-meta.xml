@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terceiro_Preco_Difusao__c</fullName>
+    <externalId>false</externalId>
+    <label>Terceiro Preço Difusão</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

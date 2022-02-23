@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aceptar_Reclamo</fullName>
+    <availability>online</availability>
+    <description>Considera el reclamo como válido</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Aceitar Reclamação</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+if(&apos;{!Case.Tipo_De_Reclamo__c}&apos; == &apos;Qualidade do Sementes&apos;){ 
+var rt = sforce.connection.query(&quot;SELECT Id FROM RecordType WHERE Name = &apos;RECLAMO COMERCIAL ACEPTADO&apos; limit 1&quot;); 
+var status = &apos;Reclamo Comercial Aceptado&apos; 
+}else{ 
+var rt = sforce.connection.query(&quot;SELECT Id FROM RecordType WHERE Name = &apos;RECLAMO DESARROLLO ACEPTADO&apos; limit 1&quot;); 
+var status = &apos;Reclamo Desarrollo Aceptado&apos; 
+
+} 
+records = rt.getArray(&quot;records&quot;); 
+rt_caso = records[0].Id.toString(); 
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.Id = &apos;{!Case.Id}&apos;; 
+caseObj.RecordTypeId = rt_caso; //Poner id del recordtype en cuestion 
+caseObj.Status = status; 
+caseObj.Fecha_de_Aceptacion__c = getCurrentSalesForceTime(); 
+var result = sforce.connection.update([caseObj]); 
+if (result[0].success==&apos;false&apos;) { 
+alert(result[0].errors.message); 
+} else { 
+window.location.href=window.location.href; 
+}
+
+function getCurrentSalesForceTime(){
+    var currentDateTime = sforce.connection.getServerTimestamp();
+    currentDateTime = setStringToDateTime(currentDateTime.timestamp);
+ 
+    return currentDateTime;
+}
+
+function setStringToDateTime(dateTimeObj){
+    var dateTimeObj;
+ 
+    if (dateTimeObj != null) {
+        dateTimeObj = sforce.internal.stringToDateTime(dateTimeObj);
+    }
+ 
+    return dateTimeObj;
+}</url>
+</WebLink>

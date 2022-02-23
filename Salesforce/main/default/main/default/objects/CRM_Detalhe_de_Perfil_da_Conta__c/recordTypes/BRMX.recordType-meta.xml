@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRMX</fullName>
+    <active>true</active>
+    <description>Variables utilizadas por Brasmax para la Categorizacion de los Multiplicadores</description>
+    <label>BRMX</label>
+    <picklistValues>
+        <picklist>BR_Categoria__c</picklist>
+        <values>
+            <fullName>OURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLATINUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRATA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR_Responsavel__c</picklist>
+        <values>
+            <fullName>061 - Fernando Frehner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>066 - Marcelo Steffen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>067 - Sergio Bertagnolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>076 - Tiago Goulart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>083 - Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>095 - Brasmax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101 - Fausto Tadeu Fanchin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>111 - Pablo R%2E de Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 - João Serrano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>151 - Anderson Weissheimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>196 - Edson Chambo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>197 - Wagner Rank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>198 - Bernardo Zanardo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>199 - Lucas Costa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DS_Responsavel__c</picklist>
+        <values>
+            <fullName>096 - Charles C%2E Pintro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104 - Otavio Gorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>105 - Rogério A%2E Schneider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>106 - Sandro Ferrari M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>152 - Fernando Calazans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>190 - Marcos Berlezi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

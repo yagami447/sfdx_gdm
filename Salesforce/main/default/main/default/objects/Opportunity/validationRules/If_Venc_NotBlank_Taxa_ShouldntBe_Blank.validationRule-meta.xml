@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Venc_NotBlank_Taxa_ShouldntBe_Blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(((NOT(ISBLANK(Novo_primeiro_vencimento__c)) &amp;&amp; ISBLANK(Taxa_de_primeiro_pagamento__c))
+|| (NOT(ISBLANK(Taxa_de_primeiro_pagamento__c)) &amp;&amp; ISBLANK(Novo_primeiro_vencimento__c))),
+((NOT(ISBLANK(Novo_segundo_vencimento__c)) &amp;&amp; ISBLANK(Taxa_de_segundo_pagamento__c))
+|| (NOT(ISBLANK(Taxa_de_segundo_pagamento__c)) &amp;&amp; ISBLANK(Novo_segundo_vencimento__c))),
+((NOT(ISBLANK(Novo_terceiro_vencimento__c)) &amp;&amp; ISBLANK(Taxa_de_terceiro_pagamento__c))
+|| (NOT(ISBLANK(Taxa_de_terceiro_pagamento__c)) &amp;&amp; ISBLANK(Taxa_de_terceiro_pagamento__c))),
+((NOT(ISBLANK(Novo_quarto_vencimento__c)) &amp;&amp; ISBLANK(Taxa_de_quarto_pagamento__c))
+|| (NOT(ISBLANK(Taxa_de_quarto_pagamento__c)) &amp;&amp; ISBLANK(Novo_quarto_vencimento__c))),
+((NOT(ISBLANK(Novo_quinto_vencimento__c)) &amp;&amp; ISBLANK(Taxa_de_quinto_pagamento__c))
+|| (NOT(ISBLANK(Taxa_de_quinto_pagamento__c)) &amp;&amp; ISBLANK(Novo_quinto_vencimento__c))))</errorConditionFormula>
+    <errorMessage>Taxa de pagamento do vencimento ou Fecha do vencimento não pode estar vazio.</errorMessage>
+</ValidationRule>

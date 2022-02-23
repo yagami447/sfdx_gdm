@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_saida_de_deposito__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de depósito</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Z041 - BR Deposito GDM</fullName>
+                <default>false</default>
+                <label>Z041 - BR Deposito GDM</label>
+            </value>
+            <value>
+                <fullName>Z042 - BR Deposito terceiro</fullName>
+                <default>false</default>
+                <label>Z042 - BR Deposito terceiro</label>
+            </value>
+            <value>
+                <fullName>ZBVM - Deposito GDM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ZBVM - Deposito GDM</label>
+            </value>
+            <value>
+                <fullName>ZBVN - Deposito terceiros</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ZBVN - Deposito terceiros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

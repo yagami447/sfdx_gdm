@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <!--Component Header-->
+        <h2 id="neogen-title-new-opportunity" slot="title" class="neogen-title">
+            <lightning-icon icon-name="action:goal" size="small"></lightning-icon>
+            {label.labelcreateevent}
+        </h2>        
+        <!--Component Body-->
+        <div class="neogen-body">
+            <!--Allowed record types-->
+            <template for:each={recordtypes.data} for:item="item" data-id={item.Id} data-name={item.Description}>
+                <div key={item.DeveloperName} class="neogen-tile-background slds-var-p-around_medium lgc-bg" data-id={item.Id} data-name={item.Description}>            
+                    <lightning-tile label={item.Name} type="media" onclick={handleClick} data-id={item.Id} data-name={item.Description}>
+                        <lightning-icon slot="media" icon-name="standard:opportunity" data-id={item.Id} data-name={item.Description}></lightning-icon>
+                        <p class="slds-truncate" title={item.Description} data-id={item.Id} data-name={item.Description}>{item.Description}</p>
+                    </lightning-tile>
+                </div> 
+            </template>        
+        </div>
+    </lightning-card>
+</template>

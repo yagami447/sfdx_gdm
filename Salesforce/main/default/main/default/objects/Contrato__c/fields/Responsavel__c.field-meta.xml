@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsavel__c</fullName>
+    <description>Qual dos funcionários da Brasmax que estará responsável pela conta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Qual dos funcionários da Brasmax que estará responsável pela conta</inlineHelpText>
+    <label>Responsável</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Jacques Müllich</fullName>
+                <default>false</default>
+                <label>Jacques Müllich</label>
+            </value>
+            <value>
+                <fullName>Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>Thiago Schwonka</fullName>
+                <default>false</default>
+                <label>Thiago Schwonka</label>
+            </value>
+            <value>
+                <fullName>Lucas Pires</fullName>
+                <default>false</default>
+                <label>Lucas Pires</label>
+            </value>
+            <value>
+                <fullName>Fernando Frehner</fullName>
+                <default>false</default>
+                <label>Fernando Frehner</label>
+            </value>
+            <value>
+                <fullName>Sergio Bertagnolli</fullName>
+                <default>false</default>
+                <label>Sergio Bertagnolli</label>
+            </value>
+            <value>
+                <fullName>Fernando Gaspar</fullName>
+                <default>false</default>
+                <label>Fernando Gaspar</label>
+            </value>
+            <value>
+                <fullName>Antonio Paiva</fullName>
+                <default>false</default>
+                <label>Antonio Paiva</label>
+            </value>
+            <value>
+                <fullName>Tiago Goulart</fullName>
+                <default>false</default>
+                <label>Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>Jorge Cristiano Rosa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

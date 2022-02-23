@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupColumn>PRODUCT_NAME</groupColumn>
+    <mappings>
+        <sourceField>Account.Region_Comercial__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Regiao_Comercial__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>RowCount</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Cantidad_Registros__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>PRODUCT_NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.ProductName__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>OpportunityLineItem.Tipo_de_Necesidad__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Tipo_de_Necessidade__c</targetField>
+    </mappings>
+    <mappings>
+        <aggregateType>Sum</aggregateType>
+        <sourceField>QUANTITY</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Analitica_DemandaVsVenta__c.Meta__c</targetField>
+    </mappings>
+    <name>Demanda/Oferta/Ventas Metas</name>
+    <runningUser>adminbr@donmario.com</runningUser>
+    <sourceReport>Sistemas/IA_Relatorio_Meta_17</sourceReport>
+    <targetObject>Analitica_DemandaVsVenta__c</targetObject>
+</AnalyticSnapshot>

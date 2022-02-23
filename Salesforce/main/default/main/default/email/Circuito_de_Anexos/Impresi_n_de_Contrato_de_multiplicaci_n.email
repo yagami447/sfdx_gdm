@@ -1,0 +1,5 @@
+O {!Opportunity.RecordType} do Multiplicadpor {!Opportunity.Account} está disponível para a impressão.
+
+Clique no link abaixo para acesso ao salesforce:
+
+{!Opportunity.Name} - {!Opportunity.Link}

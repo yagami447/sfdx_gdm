@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsable__c</fullName>
+    <externalId>false</externalId>
+    <label>Responsável</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Marca__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>105 - Rogério A. Schneider</fullName>
+                <default>false</default>
+                <label>105 - Rogério A. Schneider</label>
+            </value>
+            <value>
+                <fullName>096 - Charles C. Pintro</fullName>
+                <default>false</default>
+                <label>096 - Charles C. Pintro</label>
+            </value>
+            <value>
+                <fullName>106 - Sandro Ferrari M.</fullName>
+                <default>false</default>
+                <label>106 - Sandro Ferrari M.</label>
+            </value>
+            <value>
+                <fullName>066 - Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>066 - Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>067 - Sérgio Bertagnoli</fullName>
+                <default>false</default>
+                <label>067 - Sérgio Bertagnoli</label>
+            </value>
+            <value>
+                <fullName>083 - Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>083 - Jorge Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>061 - Fernando Frenher</fullName>
+                <default>false</default>
+                <label>061 - Fernando Frenher</label>
+            </value>
+            <value>
+                <fullName>077 - Antonio Paiva</fullName>
+                <default>false</default>
+                <label>077 - Antonio Paiva</label>
+            </value>
+            <value>
+                <fullName>076 - Tiago Goulart</fullName>
+                <default>false</default>
+                <label>076 - Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>111 - Pablo R de Souza</fullName>
+                <default>false</default>
+                <label>111 - Pablo R de Souza</label>
+            </value>
+            <value>
+                <fullName>095 - Brasmax</fullName>
+                <default>false</default>
+                <label>095 - Brasmax</label>
+            </value>
+            <value>
+                <fullName>101 - Fausto Fanchim</fullName>
+                <default>false</default>
+                <label>101 - Fausto Fanchim</label>
+            </value>
+            <value>
+                <fullName>104 - Otavio Gorni</fullName>
+                <default>false</default>
+                <label>104 - Otavio Gorni</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>066 - Marcelo Steffen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>067 - Sérgio Bertagnoli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>083 - Jorge Cristiano Rosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>061 - Fernando Frenher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>077 - Antonio Paiva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>076 - Tiago Goulart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>111 - Pablo R de Souza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>095 - Brasmax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRMX</controllingFieldValue>
+            <valueName>101 - Fausto Fanchim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>105 - Rogério A. Schneider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>096 - Charles C. Pintro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>106 - Sandro Ferrari M.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DSEM</controllingFieldValue>
+            <valueName>104 - Otavio Gorni</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,83 @@
+<aura:component >
+    <aura:attribute name="data" type="object"  default=""/> 
+    <aura:attribute name="activeSections" type="List" default="['A','B','C','D']" />
+
+    <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+        
+        <lightning:accordion activeSectionName="{!v.activeSections}" allowMultipleSectionsOpen="true">
+            <lightning:accordionSection name="A" label="Dados do Transporte" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="12"  padding="around-small" class="custom-box">
+                        <!--<lightning:input class="customDisabled" label="Modalidade do Frete" value="{!v.data.modFrete}"></lightning:input>-->
+                        
+                        
+                        <lightning:select class="customDisabled" label="Modalidade do Frete" value="{!v.data.modFrete}">
+                            <option value="0">0 - Por conta do emitente</option>
+                            <option value="1">1 - Por conta do Destinatario/Remetente</option>
+                            <option value="2">2 - Por conta de terceiros</option>
+                            <option value="3">3 - Sem frete</option>
+                        </lightning:select>
+                        
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="B" label="Transportador" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="12"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Razão Social / Nome" value="{!v.data.transporta.xNome}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Inscrição Estadual" value="{!v.data.transporta.IE}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Endereço Completo" value="{!v.data.transporta.xEnder}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Município" value="{!v.data.transporta.xMun}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="UF" value="{!v.data.transporta.UF}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="C" label="Veículo" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Placa" value="{!v.data.veicTransp.placa}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="UF" value="{!v.data.veicTransp.UF}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="RNTC" value="{!v.data.veicTransp.RNTC}"></lightning:input>
+                    </lightning:layoutItem>
+                    
+                </lightning:layout>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="D" label="Volumes" >
+                Volume 1
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Quantidade" value="{!v.data.vol.qVol}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Espécie" value="{!v.data.vol.esp}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Marca dos Volumes" value="{!v.data.vol.marca}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Numeração" value="{!v.data.vol.nVol}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Peso Líquido" value="{!v.data.vol.pesoL}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="4"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Peso Bruto" value="{!v.data.vol.pesoB}"></lightning:input>
+                    </lightning:layoutItem>
+                    
+                </lightning:layout>
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

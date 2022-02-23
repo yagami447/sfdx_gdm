@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Realizam Compra e Venda de Sementes de Terceiros ? --></help>
+    <label><!-- Compra/Vende Semillas de Terceros --></label>
+    <name>Compra_Vende_Semillas_de_Terceros__c</name>
+</CustomFieldTranslation>

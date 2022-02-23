@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Meta Qde Días de Campo Sem Custo --></label>
+    <name>Meta_Qde_Dias_de_Campo__c</name>
+</CustomFieldTranslation>

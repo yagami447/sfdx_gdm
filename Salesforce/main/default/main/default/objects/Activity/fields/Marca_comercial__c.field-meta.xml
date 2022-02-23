@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marca_comercial__c</fullName>
+    <description>Probando para ver si sale en el evento</description>
+    <externalId>false</externalId>
+    <label>Marca comercial</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brasmax</fullName>
+                <default>false</default>
+                <label>Brasmax</label>
+            </value>
+            <value>
+                <fullName>Don Mario</fullName>
+                <default>false</default>
+                <label>Don Mario</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Para realizarem a inscrição dos Campos de Produção de Sementes, emitem Notas Fiscais de Venda / ou Tranferência para Consumo para os Volumes que são destinados a Plantio (Uso Próprio), e que são informados na Relação de Campos para Produção de Sementes ? --></help>
+    <label><!-- Emiten Facturas de Venta / Transferencia --></label>
+    <name>Emiten_Facturas_de_Venta_Transferencia__c</name>
+</CustomFieldTranslation>

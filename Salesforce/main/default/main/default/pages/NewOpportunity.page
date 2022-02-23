@@ -1,0 +1,341 @@
+<apex:page standardController="Opportunity" extensions="newOppController" action="{!redirectNewOpp}" sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+<head>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}"/>
+</head>
+<div class="SLDS">
+<body>
+    <script src="/soap/ajax/30.0/connection.js"></script>
+    <script type="text/javascript">
+      
+        function createEvento(nombre,tipo,etapa) {
+        	console.log('yes');
+            sforce.connection.sessionId = "{!$Api.Session_ID}";
+            var uid = "{!$User.Id}";
+            var currentUser = sforce.connection.getUserInfo();
+            var query0 = sforce.connection.query("select name, UserRole.Name from user where id = '" + uid + "'");
+            var qResult0 = query0.getArray("records");
+            var marca = "BRMX";
+            if(qResult0[0].UserRole.Name == "Comercial R1 DSEM" || qResult0[0].UserRole.Name == "Comercial R2 DSEM")
+                marca = "DSEM";
+            <!--var query1 = sforce.connection.query("select CRM_Safra_Siguiente__c from Configuracion_BMX__c limit 1");            -->
+            var query2 = sforce.connection.query("select Id from RecordType where Name = '" + tipo + "' limit 1");
+            <!--var qResult = query1.getArray("records");-->
+            var qResult2 = query2.getArray("records");
+            var start = new Date;
+            <!--var safra = qResult[0].CRM_Safra_Siguiente__c;-->
+            var id = qResult2[0].Id;            
+            <!--sforce.one.createRecord('Opportunity', null, { 'CloseDate': start, 'Marca__c' : marca, 'StageName' : etapa, 'Safra__c' : safra, 'Name' : nombre, 'RecordTypeId' : id});-->
+            sforce.one.createRecord('Opportunity', id, { 'CloseDate': start, 'Marca__c' : marca, 'StageName' : etapa, 'Name' : nombre, 'RecordTypeId' : id});
+        }
+    </script>
+     
+    <apex:form >
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+        <div class="slds-section-title--divider">Selecione um tipo de registro</div>
+        
+        <div class="slds-page-header slds-page-header_object-home" >
+        <div class="slds-section__title">Anexos</div>            
+        <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Novo Anexo I">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Anexo I</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Anexo I','Edición')">Novo Anexo I</button>
+              </apex:outputPanel>
+            </div>
+          </div>
+        </article>
+        </apex:outputPanel>    
+        <apex:outputPanel rendered="{!Full == 0}">
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Novo Anexo II">            
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Anexo II</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Anexo II','Edición')">Novo Anexo II</button>
+              </apex:outputPanel>
+            </div>
+          </div>
+        </article>
+        </apex:outputPanel>    
+        <apex:outputPanel rendered="{!Full == 0}">
+        <br/>
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Novo Anexo III">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Anexo III</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Anexo III','Edición')">Novo Anexo I</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+        </apex:outputPanel>
+        </div>
+        </div>
+        
+        <div class="slds-col">
+        <div class="slds-page-header slds-page-header_object-home" style="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">            
+        <div class="slds-section__title">Outros</div>            
+        <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+        <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-opportunity" title="Nova Negociação Venda da Basica">
+                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2>
+                <span class="slds-text-heading_small">Venda de Basica</span>
+              </h2>
+           </div>
+          </header>
+          <div class="slds-no-flex">
+            <apex:outputPanel >              
+                <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Venda da Basica Completo','Edición')">Nova</button>
+            </apex:outputPanel>
+           </div>
+          </div>      
+          </article>
+        </apex:outputPanel>  
+        <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+        <br/>
+        <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-opportunity" title="Nova Negociação Venda da Basica">
+                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2>
+                <span class="slds-text-heading_small">Venda de Híbrido</span>
+              </h2>
+           </div>
+          </header>
+          <div class="slds-no-flex">
+            <apex:outputPanel >              
+                <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Venda da Hibrido','Edición')">Nova</button>
+            </apex:outputPanel>
+           </div>
+          </div>      
+          </article>
+        </apex:outputPanel>      
+        <apex:outputPanel rendered="{!Full == 0}">
+        <br/>
+        <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Pendiente">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Pendiente</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Pendiente','PE - Pendiente')">Pendente</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+          </apex:outputPanel>      
+          <apex:outputPanel rendered="{!Full == 0}">
+          <br/>
+          <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Estimativa de venda">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Estimativa de Venda</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <apex:commandLink styleClass="slds-button slds-button_neutral slds-not-selected" action="{!nuevaOpp}" value="Nova" immediate="true" html-formnovalidate="formnovalidate" >
+                      <apex:param name="tipo_opp" value="Estimativa de Venda" assignTo="{!tipo}"/>
+                  </apex:commandLink>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+          </apex:outputPanel>
+          <br/>
+          <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+          <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Estimativa de venda">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Estoque de Multiplicadores</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Stock Multiplicadores','Edición')">Novo Estoque</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+          </apex:outputPanel>
+
+          <br/>
+          <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+          <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Estoque de Multiplicadores Milho">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Estoque de Multiplicadores Milho</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Stock Multiplicadores Milho','Edición')">Novo Estoque</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+          </apex:outputPanel>
+
+          <br/>
+          <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+          <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Objetivo Vendas Royalties">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Objetivo Vendas Royalties</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Objetivo Ventas Royalties','Aprobada')">Novo Objetivo</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+          </apex:outputPanel>  
+          
+          <br/>
+          <apex:outputPanel rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">
+          <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Aquisição Sementes Terceiros">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" />
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading_small">Aquisição Sementes Terceiros</span>             
+                </h2>
+              </div>
+            </header>
+            <div class="slds-no-flex">
+              <apex:outputPanel >              
+                  <button class="slds-button slds-button_neutral slds-not-selected" onclick="createEvento('NOVO','Aquisição Sementes Terceiros','Edición')">Nova</button>
+              </apex:outputPanel>
+            </div>
+          </div>      
+          </article>
+          </apex:outputPanel>
+                  
+        </div>
+        </div>
+    </div>
+    </apex:form>
+</body>
+</div>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motivo Cierre --></label>
+    <name>Motivo_Cierre__c</name>
+    <picklistValues>
+        <masterLabel>Descartado</masterLabel>
+        <translation><!-- Descartado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terminado</masterLabel>
+        <translation><!-- Terminado --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

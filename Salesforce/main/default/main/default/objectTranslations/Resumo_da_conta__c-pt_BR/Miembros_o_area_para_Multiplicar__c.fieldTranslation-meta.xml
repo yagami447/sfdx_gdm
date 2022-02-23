@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Possuem Cooperados ou Somente áreas próprias para multiplicação ? --></help>
+    <label><!-- Miembros o area para Multiplicar --></label>
+    <name>Miembros_o_area_para_Multiplicar__c</name>
+</CustomFieldTranslation>

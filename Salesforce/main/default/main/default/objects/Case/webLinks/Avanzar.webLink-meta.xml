@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Avanzar</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Avançar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Case.Id}&quot;; 
+var atendim = &quot;{!Case.Reclamo_con_atendimento__c}&quot;
+
+var result = sforce.apex.execute(&quot;reclamosController&quot;,&quot;reclamoAEdicion&quot;, {caseId : id, atendimento: atendim}); 
+
+parent.location.href = result</url>
+</WebLink>

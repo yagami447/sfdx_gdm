@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Praça --></label>
+    <name>Praca__c</name>
+    <picklistValues>
+        <masterLabel>ADM</masterLabel>
+        <translation><!-- ADM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. VALE - Palotina (PR)</masterLabel>
+        <translation><!-- C. VALE - Palotina (PR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COAMO - Campo Mourão (PR)</masterLabel>
+        <translation><!-- COAMO - Campo Mourão (PR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COTRIJAL - Não me Toque (RS)</masterLabel>
+        <translation><!-- COTRIJAL - Não me Toque (RS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOLAR</masterLabel>
+        <translation><!-- DOLAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FATURAMENTO</masterLabel>
+        <translation><!-- FATURAMENTO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Barreiras (BA)</masterLabel>
+        <translation><!-- S&amp;M - Barreiras (BA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Brasília (DF)</masterLabel>
+        <translation><!-- S&amp;M - Brasília (DF) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Diamantino (MT)</masterLabel>
+        <translation><!-- S&amp;M - Diamantino (MT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Londrina (PR)</masterLabel>
+        <translation><!-- S&amp;M - Londrina (PR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Paragominas (PA)</masterLabel>
+        <translation><!-- S&amp;M - Paragominas (PA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Passo Fundo (RS)</masterLabel>
+        <translation><!-- S&amp;M - Passo Fundo (RS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Pedro Afonso (TO)</masterLabel>
+        <translation><!-- S&amp;M - Pedro Afonso (TO) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Primavera (MT)</masterLabel>
+        <translation><!-- S&amp;M - Primavera (MT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Rio Verde (GO)</masterLabel>
+        <translation><!-- S&amp;M - Rio Verde (GO) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Rondonópolis (MT)</masterLabel>
+        <translation><!-- S&amp;M - Rondonópolis (MT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Uberlandia (MG)</masterLabel>
+        <translation><!-- S&amp;M - Uberlandia (MG) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S&amp;M - Uruçui (PI)</masterLabel>
+        <translation><!-- S&amp;M - Uruçui (PI) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

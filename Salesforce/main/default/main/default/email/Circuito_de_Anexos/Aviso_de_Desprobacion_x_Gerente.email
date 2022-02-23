@@ -1,0 +1,18 @@
+{!Today}
+
+Caro Multiplicador,
+{!Opportunity.Account}
+As informações que vossa empresa inseriu através do Portal não foram aprovadas.
+Para que possa realizar as alterações necessárias, é permitida a edição das informações já contidas no Portal.
+Clique no link abaixo para acessar o portal.
+Código de identificação {!Opportunity.Name}.
+Tipo de declaração {!Opportunity.RecordType}
+Motivo de Rejeição   {!Opportunity.Motivo_de_Rechazo__c}
+
+
+Atenciosamente,
+
+
+{!User.FullName}
+{!Opportunity.Marca_Completa__c}
+{!User.Email}

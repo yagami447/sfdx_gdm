@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevision_con_Marca_Incorrecta</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( OR(RecordType.Name = &apos;Previsao&apos;,RecordType.Name = &apos;Stock Multiplicadores&apos;) ,OR( IF($UserRole.Name = &apos;Gerente BMX 1&apos;, FALSE ,AND( OR(CONTAINS($UserRole.Name, &apos;BMX&apos;), $Profile.Name = &apos;Administrativo_licencias&apos;) , ISPICKVAL( Marca__c , &apos;DSEM&apos;) )) , AND( CONTAINS($UserRole.Name, &apos;DSEM&apos;) , ISPICKVAL( Marca__c , &apos;BRMX&apos;))))</errorConditionFormula>
+    <errorMessage>Marca Inválida</errorMessage>
+</ValidationRule>

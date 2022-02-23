@@ -1,0 +1,13 @@
+Estimado/a {!Connection.ExternalContactFirstName}:
+
+Este mensaje le informa que {!Organization.Name} ha actualizado información importante del perfil de {!Connection.Name}. Puede ver detalles de los cambios en la sección de detalles del perfil, a la que puede acceder mediante la ficha Conexiones.
+
+Tenga en cuenta que algunas actualizaciones requieren que realice actualizaciones para asegurar la coherencia entre los procesos comerciales de las organizaciones.
+
+Gracias por su atención.
+
+Atentamente,
+
+
+
+{!Organization.Name}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Planejamiento Área multiplicação propia --></label>
+    <name>Plan_Area_multiplic_propia__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRMX_Desconto_Classe_2_Estim__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(Region_Comercial_Copia__c,&quot;REGION&quot;),
+IF(BRMX_Desconto_Obj_Gen_Dem_Estim__c &gt;= 12.49,
+IF(BR_Total_de_pontos_Estim__c &gt; 23 , 19.23, IF(BR_Total_de_pontos_Estim__c &gt;= 21, 15.38, IF(BR_Total_de_pontos_Estim__c &gt;= 16, 7.69, 0))), 0),
+IF(BRMX_Desconto_Obj_Gen_Dem_Estim__c &gt;= 11.76,
+IF(BR_Total_de_pontos_Estim__c &gt; 23, 14.28, IF(BR_Total_de_pontos_Estim__c &gt;= 21, 7.14, IF(BR_Total_de_pontos_Estim__c &gt;= 16, 3.57, 0))), 0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BRMX Desconto Classe 2 Estim</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Estado</label>
+    <referenceTo>Estado__c</referenceTo>
+    <relationshipLabel>Producto de oportunidad (Estado)</relationshipLabel>
+    <relationshipName>Producto_de_oportunidad2</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

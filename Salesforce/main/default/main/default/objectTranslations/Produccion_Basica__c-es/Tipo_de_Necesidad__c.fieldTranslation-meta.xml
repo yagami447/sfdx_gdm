@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Necesidad --></label>
+    <name>Tipo_de_Necesidad__c</name>
+    <picklistValues>
+        <masterLabel>Desenvolvimento Manejo</masterLabel>
+        <translation><!-- Desenvolvimento Manejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desenvolvimento Rede</masterLabel>
+        <translation><!-- Desenvolvimento Rede --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Difusão Comercial</masterLabel>
+        <translation><!-- Difusão Comercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Difusão E.B.E. (Eventos / Bera de estrada)</masterLabel>
+        <translation><!-- Difusão E.B.E. (Eventos / Bera de estrada) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Difusão GDM Comercial</masterLabel>
+        <translation><!-- Difusão GDM Comercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Difusão GDM – DC /ST</masterLabel>
+        <translation><!-- Difusão GDM – DC /ST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Difusão para Multiplicador ou Revenda (40kg)</masterLabel>
+        <translation><!-- Difusão para Multiplicador ou Revenda (40kg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ensayo Manejo</masterLabel>
+        <translation><!-- Ensayo Manejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ensayo Rede</masterLabel>
+        <translation><!-- Ensayo Rede --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplicação</masterLabel>
+        <translation><!-- Multiplicação --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

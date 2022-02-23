@@ -1,0 +1,308 @@
+<apex:page Controller="CRM_Controller" title="Planejamiento de Vendas" action="{!initPlaneamiento}" tabStyle="Account" sidebar="false">    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickAreaAct="{!verAreaAct}" clickCanalVendas="{!verCanalVendas}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1000px">
+    <apex:sectionHeader title="Planejamiento de Vendas ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>    
+    <apex:pageBlock mode="edit" >
+    <apex:Messages style="font-weight:bold;font-size:18px"/>
+    <!--<apex:pageMessages escape="false"/>-->
+    <apex:pageBlockSection columns="2">    
+        <apex:pageBlockSection columns="1">
+        <apex:pageBlockSection title="Quantidade BX que Pretende Produzir">
+        <apex:pageblocktable value="{!planeamiento_BMX}"  var="pbmx" id="pbmx" style="width: 350px">
+            <apex:column headerValue="Variedad">
+                <apex:outputField value="{!pbmx.Variedade_Prod__c}" rendered="{!pbmx.Id != editpbmx}"></apex:outputField>
+                <apex:selectList value="{!editVariedadBMX}" size="1" rendered="{!pbmx.Id == editpbmx}"><apex:selectOptions value="{!VariedadesBMX}" rendered="{!pbmx.Id == editpbmx}"/></apex:selectList>
+            </apex:column>
+            <apex:column headerValue="Volume em Sacos"> 
+                <apex:facet name="footer"><apex:outputText value="{!totalPlaneamientoBMX}"/></apex:facet>         
+                <apex:inputField value="{!pbmx.Volume__c}" rendered="{!pbmx.Id == editpbmx}"></apex:inputField>
+                <apex:outputField value="{!pbmx.Volume__c}" rendered="{!pbmx.Id != editpbmx}"></apex:outputField>
+            </apex:column>                
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editPlaneamientoBMX}" rerender="form" rendered="{!pbmx.Id != editpbmx}">Editar
+                    <apex:param name="edit_p_BMX" value="{!pbmx.Id}" assignTo="{!editpbmx}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarPlaneamientoBMX}" rendered="{!pbmx.Id != editpbmx}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminar_p_BMX" value="{!pbmx.Id}" assignTo="{!eliminar_planeamiento_BMX}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditPlaneamientoBMX}" rendered="{!pbmx.Id == editpbmx}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditPlaneamientoBMX}" rendered="{!pbmx.Id == editpbmx}">Salvar
+                    <apex:param name="saveedit_p_bmx" value="{!pbmx.Id}" assignTo="{!saveedit_planeamiento_bmx}"/>
+                </apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarPlaneamientoBMX}" rerender="form" rendered="{!adicionar_Planeamiento_BMX == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarPlaneamientoBMX}" rerender="form" rendered="{!adicionar_Planeamiento_BMX == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!adicionar_Planeamiento_BMX && !crm_mult.Cerrado__c}">
+        <apex:pageblocktable value="{!nuevo_planeamiento_BMX}" var="nuevo_p_BMX" id="nuevo_p_BMX">
+            <apex:column headerValue="Variedad">
+                <apex:selectList value="{!nuevaVariedadBMX}" size="1"><apex:selectOptions value="{!VariedadesBMX}"/></apex:selectList>
+            </apex:column>
+            <apex:column headerValue="Volume">            
+                <apex:inputField value="{!nuevo_p_BMX.Volume__c}"></apex:inputField>
+            </apex:column> 
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addNuevoPlaneamientoBMX}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection> 
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection columns="1">
+        <apex:pageBlockSection title="Quantidade DM que Pretende Produzir">
+        <apex:pageblocktable value="{!planeamiento_DMS}" var="pdms" id="pdms" style="width: 350px">
+            <apex:column headerValue="Variedad">
+                <apex:outputField value="{!pdms.Variedade_Prod__c}" rendered="{!pdms.Id != editpdms}"></apex:outputField>
+                <apex:selectList value="{!editVariedadDMS}" size="1" rendered="{!pdms.Id == editpdms}"><apex:selectOptions value="{!VariedadesDMS}" rendered="{!pdms.Id == editpdms}"/></apex:selectList>
+            </apex:column>
+            <apex:column headerValue="Volume em Sacos"> 
+                <apex:facet name="footer">{!totalPlaneamientoDMS}</apex:facet>           
+                <apex:inputField value="{!pdms.Volume__c}" rendered="{!pdms.Id == editpdms}"></apex:inputField>
+                <apex:outputField value="{!pdms.Volume__c}" rendered="{!pdms.Id != editpdms}"></apex:outputField>
+            </apex:column>                
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editPlaneamientoDMS}" rerender="form" rendered="{!pdms.Id != editpdms}">Editar
+                    <apex:param name="edit_p_dms" value="{!pdms.Id}" assignTo="{!editpdms}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarPlaneamientoDMS}" rendered="{!pdms.Id != editpdms}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminar_p_dms" value="{!pdms.Id}" assignTo="{!eliminar_planeamiento_dms}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditPlaneamientoDMS}" rendered="{!pdms.Id == editpdms}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditPlaneamientoDMS}" rendered="{!pdms.Id == editpdms}">Salvar
+                    <apex:param name="saveedit_p_dms" value="{!pdms.Id}" assignTo="{!saveedit_planeamiento_dms}"/>
+                </apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarPlaneamientoDMS}" rerender="form" rendered="{!adicionar_Planeamiento_DMS == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarPlaneamientoDMS}" rerender="form" rendered="{!adicionar_Planeamiento_DMS == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+                    
+        <apex:pageBlockSection rendered="{!adicionar_Planeamiento_DMS && !crm_mult.Cerrado__c}">
+        <apex:pageblocktable value="{!nuevo_planeamiento_DMS}" var="nuevo_p_DMS" id="nuevo_p_DMS">
+            <apex:column headerValue="Variedad">
+                <apex:selectList value="{!nuevaVariedadDMS}" size="1"><apex:selectOptions value="{!VariedadesDMS}"/></apex:selectList>
+            </apex:column>
+            <apex:column headerValue="Volume">            
+                <apex:inputField value="{!nuevo_p_DMS.Volume__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addNuevoPlaneamientoDMS}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+             
+    </apex:pageBlockSection>          
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <apex:pageBlock mode="edit" title="Quantidade que Pretende Produzir de Outro Multiplicador">
+    <apex:pageBlockSection columns="1">    
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!planeamiento_sacas_outros}" var="so" id="so" style="width: 300px">
+            <apex:column headerValue="Obtentor">
+                <apex:outputField value="{!so.Obtentor__c}" rendered="{!so.Id != editpso}"></apex:outputField>
+                <apex:inputField value="{!editSacasO.Obtentor__c}" rendered="{!so.Id == editpso}"><apex:actionSupport action="{!getVariedadesObt_Edit_SacasO}" event="onchange" reRender="so"></apex:actionSupport></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Cultivar">
+                <apex:outputField value="{!so.Variedad__c}" rendered="{!so.Id != editpso}"></apex:outputField>                
+                <apex:selectList value="{!editProdOutros}" size="1" rendered="{!so.Id == editpso}"><apex:selectOptions value="{!optionsEditOutros}" id="cultivar2"/></apex:selectList>
+            </apex:column>                
+            <apex:column headerValue="Volume em Sacos">
+                <apex:facet name="footer">{!totalPlaneamientoOutros}</apex:facet> 
+                <apex:outputField value="{!so.Volume__c}" rendered="{!so.Id != editpso}"></apex:outputField>                
+                <apex:inputField value="{!so.Volume__c}" rendered="{!so.Id == editpso}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editPSacasO}" rerender="form" rendered="{!so.Id != editpso}">Editar
+                    <apex:param name="edit_p_s_o" value="{!so.Id}" assignTo="{!editpso}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarPSacasO}" rendered="{!so.Id != editpso}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminar_p_s_o" value="{!so.Id}" assignTo="{!eliminar_p_sacas_o}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditPSacasO}" rendered="{!so.Id == editpso}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditPSacasO}" rendered="{!so.Id == editpso}">Salvar
+                    <apex:param name="saveedit_p_s_o" value="{!so.Id}" assignTo="{!saveedit_p_sacas_o}"/>
+                </apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarPSacasO}" rerender="form" rendered="{!adicionar_p_sacas_o == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarPSacasO}" rerender="form" rendered="{!adicionar_p_sacas_o == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!adicionar_p_sacas_o && !crm_mult.Cerrado__c}" id="addOutros">
+        <apex:pageblocktable value="{!nuevo_planeamiento_sacas_outros}" var="nuevo_s_o" id="nuevo_s_o">
+            <apex:column headerValue="Obtentor">
+                <apex:inputField value="{!nuevaSacasO.Obtentor__c}"><apex:actionSupport action="{!getVariedadesObt_New_SacasO}" event="onchange" reRender="addOutros"></apex:actionSupport></apex:inputField>
+            </apex:column> 
+            <apex:column headerValue="Cultivar">
+                <apex:selectList value="{!nuevoProdOutros}" size="1"><apex:selectOptions value="{!optionsNewOutros}" id="cultivar"/></apex:selectList>
+            </apex:column>
+            <apex:column headerValue="Volume em Sacos">
+                <apex:inputText value="{!nuevoProdOutrosVolume}"></apex:inputText>
+            </apex:column> 
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addNuevo_PSacasO}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+    </apex:pageBlockSection>    
+    </apex:pageBlock>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <apex:pageBlock mode="edit">
+    <apex:pageBlockSection columns="2">    
+        <apex:pageBlockSection columns="1">
+        <apex:pageBlockSection title="Quantidade que Pretende Verticalizar de Outro Multiplicador">                                                             
+        <apex:pageblocktable value="{!planeamiento_sacas_verticaliza}"  var="sv" id="sv" style="width: 300px">
+            <apex:column headerValue="Obtentor">                
+                <apex:outputField value="{!sv.Obtentor__c}" rendered="{!sv.Id != editpsv}"></apex:outputField>
+                <apex:inputField value="{!editSacasV.Obtentor__c}" rendered="{!sv.Id == editpsv}"></apex:inputField>
+            </apex:column>                
+            <apex:column headerValue="Volume">   
+                <apex:facet name="footer">{!totalPlaneamientoSacasVerticaliza}</apex:facet>             
+                <apex:outputField value="{!sv.Volume__c}" rendered="{!sv.Id != editpsv}"></apex:outputField>
+                <apex:inputField value="{!sv.Volume__c}" rendered="{!sv.Id == editpsv}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editPSacasV}" rerender="form" rendered="{!sv.Id != editpsv}">Editar
+                    <apex:param name="edit_p_s_v" value="{!sv.Id}" assignTo="{!editpsv}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarPSacasV}" rendered="{!sv.Id != editpsv}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminar_p_s_v" value="{!sv.Id}" assignTo="{!eliminar_p_sacas_v}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditPlaneamientoSacasV}" rendered="{!sv.Id == editpsv}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditPSacasV}" rendered="{!sv.Id == editpsv}">Salvar
+                    <apex:param name="saveedit_p_s_v" value="{!sv.Id}" assignTo="{!saveedit_p_sacas_v}"/>
+                </apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarPSacasV}" rerender="form" rendered="{!adicionar_p_sacas_v == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarPSacasV}" rerender="form" rendered="{!adicionar_p_sacas_v == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection rendered="{!adicionar_p_sacas_v && !crm_mult.Cerrado__c}">
+        <apex:pageblocktable value="{!nuevo_planeamiento_sacas_verticaliza}" var="nuevo_s_v" id="nuevo_s_v">            
+            <apex:column headerValue="Obtentor">
+                <apex:inputField value="{!nuevaSacasV.Obtentor__c}"></apex:inputField>
+            </apex:column> 
+            <apex:column headerValue="Volume em Sacos">
+                <apex:inputText value="{!nuevaSacasVVolume}"></apex:inputText>
+            </apex:column>
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addNuevo_PSacasV}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection columns="1">
+        <apex:pageBlockSection title="Quantidade que Pretende Comprar fora de Outro Multiplicador">
+        <apex:pageblocktable value="{!planeamiento_sacas_compra_fora}" var="scf" id="scf" style="width: 300px">            
+            <apex:column headerValue="Obtentor">
+                <apex:outputField value="{!scf.Obtentor__c}" rendered="{!scf.Id != editpscf}"></apex:outputField>
+                <apex:inputField value="{!editSacasCF.Obtentor__c}" rendered="{!scf.Id == editpscf}"></apex:inputField>
+            </apex:column>               
+            <apex:column headerValue="Volume">
+                <apex:facet name="footer">{!totalPlaneamientoSacasCF}</apex:facet>
+                <apex:outputField value="{!scf.Volume__c}" rendered="{!scf.Id != editpscf}"></apex:outputField>
+                <apex:inputField value="{!scf.Volume__c}" rendered="{!scf.Id == editpscf}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editPSacasCF}" rerender="form" rendered="{!scf.Id != editpscf}">Editar
+                    <apex:param name="edit_p_s_cf" value="{!scf.Id}" assignTo="{!editpscf}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarPSacasCF}" rendered="{!scf.Id != editpscf}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')">Excluir  
+                    <apex:param name="eliminar_p_s_cf" value="{!scf.Id}" assignTo="{!eliminar_p_sacas_cf}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditPSacasCF}" rendered="{!scf.Id == editpscf}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditPSacasCF}" rendered="{!scf.Id == editpscf}">Salvar
+                    <apex:param name="saveedit_p_s_cf" value="{!scf.Id}" assignTo="{!saveedit_p_sacas_cf}"/>
+                </apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection rendered="{!!crm_mult.Cerrado__c}">
+            <apex:commandLink action="{!adicionarPSacasCF}" rerender="form" rendered="{!adicionar_p_sacas_CF == false}">+ Adicionar</apex:commandLink>
+            <apex:commandLink action="{!adicionarPSacasCF}" rerender="form" rendered="{!adicionar_p_sacas_CF == true}">- Adicionar</apex:commandLink>
+        </apex:pageBlockSection>
+                    
+        <apex:pageBlockSection rendered="{!adicionar_p_sacas_CF && !crm_mult.Cerrado__c}">
+        <apex:pageblocktable value="{!nuevo_planeamiento_sacas_compra_fora}" var="nuevo_s_cf" id="nuevo_s_cf">
+            <apex:column headerValue="Obtentor">
+                <apex:inputField value="{!nuevaSacasCF.Obtentor__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Volume">
+                <apex:inputText value="{!nuevaSacasCFVolume}"></apex:inputtext>
+            </apex:column>
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addNuevo_PSacasCF}"/>
+            </apex:column>   
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+             
+    </apex:pageBlockSection>          
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <apex:pageBlock mode="edit" title="Outros dados">
+        <apex:pageBlockSection columns="2">
+            <apex:pageBlockSection title="Volume de Vendas em %" columns="1">
+                <apex:outputLabel value="Tratada:  ">                                        
+                    <apex:inputField value="{!crm_mult.Planejamiento_de_Sem_Tratada__c}" rendered="{!editPInfrC == true}"></apex:inputField>
+                    <apex:outputField value="{!crm_mult.Planejamiento_de_Sem_Tratada__c}" rendered="{!editPInfrC == false}"></apex:outputField>
+                </apex:outputLabel>    
+                <apex:outputLabel value="Sem Tratar:  ">                                           
+                    <apex:inputField value="{!crm_mult.Planejamiento_de_Sem_sem_tratar__c}" rendered="{!editPInfrC == true}"></apex:inputField>
+                    <apex:outputField value="{!crm_mult.Planejamiento_de_Sem_sem_tratar__c}" rendered="{!editPInfrC == false}"></apex:outputField>
+                </apex:outputLabel>    
+                <apex:outputText value=""/>
+                <apex:outputText value=""/>
+                <apex:outputText value=""/>
+                <apex:commandLink style="width: 100px" value="Editar" action="{!editPInfraestructura_C}" rendered="{!editPInfrC == false && !crm_mult.Cerrado__c}" rerender="form"/> 
+                <apex:commandLink style="width: 100px" value="Cancelar " action="{!cancelEditPInfraestructura_C}" rendered="{!editPInfrC == true && !crm_mult.Cerrado__c}"/>
+                <apex:commandLink style="width: 100px" value="Salvar" action="{!savePInfraestructura}" rendered="{!editPInfrC == true && !crm_mult.Cerrado__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlockSection>    
+    </apex:pageBlock>    
+    
+    </apex:form>  
+</apex:panelGrid> 
+</apex:page>

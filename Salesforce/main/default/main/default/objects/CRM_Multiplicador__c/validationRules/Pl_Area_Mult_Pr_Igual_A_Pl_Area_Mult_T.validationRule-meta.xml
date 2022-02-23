@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pl_Area_Mult_Pr_Igual_A_Pl_Area_Mult_T</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( OR( NOT(ISNULL(Plan_Area_multiplic_propia__c)),NOT(ISNULL(plan_area_multiplic_terceirizada__c))), ( IF( ISNULL(Plan_Area_multiplic_propia__c), 0, Plan_Area_multiplic_propia__c) + IF( ISNULL(plan_area_multiplic_terceirizada__c), 0, plan_area_multiplic_terceirizada__c)) &lt;&gt; 1, FALSE)</errorConditionFormula>
+    <errorMessage>% de área de multiplicação própria + % de área de multiplicação terceirizada deve ser 100%</errorMessage>
+</ValidationRule>

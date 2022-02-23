@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo --></label>
+    <name>Tipo__c</name>
+    <picklistValues>
+        <masterLabel>ZB00 - BR Oferta</masterLabel>
+        <translation><!-- ZB00 - BR Oferta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - Solicit. Nota de Cred.</masterLabel>
+        <translation><!-- ZC01 - Solicit. Nota de Cred. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCO - Oferta da Básica</masterLabel>
+        <translation><!-- ZCO - Oferta da Básica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO00 - BR Cuenta y Orden</masterLabel>
+        <translation><!-- ZO00 - BR Cuenta y Orden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO01 - BR Entrega Futura</masterLabel>
+        <translation><!-- ZO01 - BR Entrega Futura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO02 - BR Venta Exportación</masterLabel>
+        <translation><!-- ZO02 - BR Venta Exportación --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO03 - BR Venta Futura</masterLabel>
+        <translation><!-- ZO03 - BR Venta Futura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO04 - BR Vta. s/entrega</masterLabel>
+        <translation><!-- ZO04 - BR Vta. s/entrega --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO05 - BR Vta. Almacenam.</masterLabel>
+        <translation><!-- ZO05 - BR Vta. Almacenam. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO07 - BR Entrega Muestra</masterLabel>
+        <translation><!-- ZO07 - BR Entrega Muestra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO08 - BR Regalías s/NF</masterLabel>
+        <translation><!-- ZO08 - BR Regalías s/NF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO09 - BR Regalías</masterLabel>
+        <translation><!-- ZO09 - BR Regalías --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO10 - BR Material s/nombre</masterLabel>
+        <translation><!-- ZO10 - BR Material s/nombre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO11 - BR Fidelización</masterLabel>
+        <translation><!-- ZO11 - BR Fidelización --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO12 - BR Venta Normal</masterLabel>
+        <translation><!-- ZO12 - BR Venta Normal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO13 - Ped. Exterior</masterLabel>
+        <translation><!-- ZO13 - Ped. Exterior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO14 - Ped.Local - Fc ref/Entr</masterLabel>
+        <translation><!-- ZO14 - Ped.Local - Fc ref/Entr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZO15 - Ped.Local - Fc ref/Ped</masterLabel>
+        <translation><!-- ZO15 - Ped.Local - Fc ref/Ped --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

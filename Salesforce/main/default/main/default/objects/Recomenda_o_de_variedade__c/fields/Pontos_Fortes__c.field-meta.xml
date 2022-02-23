@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pontos_Fortes__c</fullName>
+    <externalId>false</externalId>
+    <label>Pontos Fortes</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alto potencial produtivo</fullName>
+                <default>false</default>
+                <label>Alto potencial produtivo</label>
+            </value>
+            <value>
+                <fullName>Superprecocidade: viabiliza a antecipação de semeadura visando 2a safra</fullName>
+                <default>false</default>
+                <label>Superprecocidade: viabiliza a antecipação de semeadura visando 2a safra</label>
+            </value>
+            <value>
+                <fullName>Excelente adaptação nas regiões de maior altitude</fullName>
+                <default>false</default>
+                <label>Excelente adaptação nas regiões de maior altitude</label>
+            </value>
+            <value>
+                <fullName>Excelente adaptação nas regiões de menor altitude</fullName>
+                <default>false</default>
+                <label>Excelente adaptação nas regiões de menor altitude</label>
+            </value>
+            <value>
+                <fullName>Ótima adaptação nas regiões de maior altitude</fullName>
+                <default>false</default>
+                <label>Ótima adaptação nas regiões de maior altitude</label>
+            </value>
+            <value>
+                <fullName>Porte controlado com resistência ao acamamento</fullName>
+                <default>false</default>
+                <label>Porte controlado com resistência ao acamamento</label>
+            </value>
+            <value>
+                <fullName>Resistente ao acamamento</fullName>
+                <default>false</default>
+                <label>Resistente ao acamamento</label>
+            </value>
+            <value>
+                <fullName>Estabilidade produtiva</fullName>
+                <default>false</default>
+                <label>Estabilidade produtiva</label>
+            </value>
+            <value>
+                <fullName>Boa arquitetura de planta</fullName>
+                <default>false</default>
+                <label>Boa arquitetura de planta</label>
+            </value>
+            <value>
+                <fullName>Precocidade</fullName>
+                <default>false</default>
+                <label>Precocidade</label>
+            </value>
+            <value>
+                <fullName>Bom potencial produtivo com tolerância à Ferrugem Asiática</fullName>
+                <default>false</default>
+                <label>Bom potencial produtivo com tolerância à Ferrugem Asiática</label>
+            </value>
+            <value>
+                <fullName>Alto potencial produtivo nas regiões mais quentes</fullName>
+                <default>false</default>
+                <label>Alto potencial produtivo nas regiões mais quentes</label>
+            </value>
+            <value>
+                <fullName>Boa uniformidade e estrutura de planta</fullName>
+                <default>false</default>
+                <label>Boa uniformidade e estrutura de planta</label>
+            </value>
+            <value>
+                <fullName>Ampla região de adaptação</fullName>
+                <default>false</default>
+                <label>Ampla região de adaptação</label>
+            </value>
+            <value>
+                <fullName>Cultivar precoce que permite abertura de semeadura e plantio de 2a safra nas regiões mais quentes</fullName>
+                <default>false</default>
+                <label>Cultivar precoce que permite abertura de semeadura e plantio de 2a safra nas regiões mais quentes</label>
+            </value>
+            <value>
+                <fullName>Excelente pacote sanitário</fullName>
+                <default>false</default>
+                <label>Excelente pacote sanitário</label>
+            </value>
+            <value>
+                <fullName>Ampla janela de plantio.</fullName>
+                <default>false</default>
+                <label>Ampla janela de plantio.</label>
+            </value>
+            <value>
+                <fullName>Alto potencial de ramificação</fullName>
+                <default>false</default>
+                <label>Alto potencial de ramificação.</label>
+            </value>
+            <value>
+                <fullName>Alto potencial de ramificação e resistência ao acamamento</fullName>
+                <default>false</default>
+                <label>Alto potencial de ramificação e resistência ao acamamento</label>
+            </value>
+            <value>
+                <fullName>Ideal para ambientes de alta tecnologia.</fullName>
+                <default>false</default>
+                <label>Ideal para ambientes de alta tecnologia.</label>
+            </value>
+            <value>
+                <fullName>Recomendado para áreas de várzea</fullName>
+                <default>false</default>
+                <label>Recomendado para áreas de várzea</label>
+            </value>
+            <value>
+                <fullName>Resistência a Phytophthora - Gene RPS1K</fullName>
+                <default>false</default>
+                <label>Resistência a Phytophthora - Gene RPS1K</label>
+            </value>
+            <value>
+                <fullName>Permite antecipação de plantio</fullName>
+                <default>false</default>
+                <label>Permite antecipação de plantio</label>
+            </value>
+            <value>
+                <fullName>Amplia a janela de plantio da segunda safra</fullName>
+                <default>false</default>
+                <label>Amplia a janela de plantio da segunda safra</label>
+            </value>
+            <value>
+                <fullName>Resistente a Phytophthora</fullName>
+                <default>false</default>
+                <label>Resistente a Phytophthora</label>
+            </value>
+            <value>
+                <fullName>STS™ (Tolerante a sulfonilureias)</fullName>
+                <default>false</default>
+                <label>STS™ (Tolerante a sulfonilureias)</label>
+            </value>
+            <value>
+                <fullName>Semiprecocidade</fullName>
+                <default>false</default>
+                <label>Semiprecocidade</label>
+            </value>
+            <value>
+                <fullName>Resistência a Nematoide de Cisto</fullName>
+                <default>false</default>
+                <label>Resistência a Nematoide de Cisto</label>
+            </value>
+            <value>
+                <fullName>Amplia a janela de plantio de milho na 2ª safra</fullName>
+                <default>false</default>
+                <label>Amplia a janela de plantio de milho na 2ª safra</label>
+            </value>
+            <value>
+                <fullName>Adaptada para o Mato Grosso</fullName>
+                <default>false</default>
+                <label>Adaptada para o Mato Grosso</label>
+            </value>
+            <value>
+                <fullName>Porte controlado</fullName>
+                <default>false</default>
+                <label>Porte controlado</label>
+            </value>
+            <value>
+                <fullName>Estabilidade</fullName>
+                <default>false</default>
+                <label>Estabilidade</label>
+            </value>
+            <value>
+                <fullName>Excelente desenvolvimento inicial</fullName>
+                <default>false</default>
+                <label>Excelente desenvolvimento inicial</label>
+            </value>
+            <value>
+                <fullName>Porte e ciclo adqueados ao Cerrado</fullName>
+                <default>false</default>
+                <label>Porte e ciclo adqueados ao Cerrado</label>
+            </value>
+            <value>
+                <fullName>Boa sanidade foliar</fullName>
+                <default>false</default>
+                <label>Boa sanidade foliar</label>
+            </value>
+            <value>
+                <fullName>Permite abertura de plantio</fullName>
+                <default>false</default>
+                <label>Permite abertura de plantio</label>
+            </value>
+            <value>
+                <fullName>Boa adaptação em área de média fertilidade</fullName>
+                <default>false</default>
+                <label>Boa adaptação em área de média fertilidade</label>
+            </value>
+            <value>
+                <fullName>Altamente responsiva à época de plantio e população</fullName>
+                <default>false</default>
+                <label>Altamente responsiva à época de plantio e população</label>
+            </value>
+            <value>
+                <fullName>Excelente sanidade foliar para Mancha-Alvo</fullName>
+                <default>false</default>
+                <label>Excelente sanidade foliar para Mancha-Alvo</label>
+            </value>
+            <value>
+                <fullName>Elevado PMS</fullName>
+                <default>false</default>
+                <label>Elevado PMS</label>
+            </value>
+            <value>
+                <fullName>Excelente adaptação para ambientes de alto potencial</fullName>
+                <default>false</default>
+                <label>Excelente adaptação para ambientes de alto potencial</label>
+            </value>
+            <value>
+                <fullName>Excelente aspecto visual a campo</fullName>
+                <default>false</default>
+                <label>Excelente aspecto visual a campo</label>
+            </value>
+            <value>
+                <fullName>Responsiva em condições de alta tecnologia</fullName>
+                <default>false</default>
+                <label>Responsiva em condições de alta tecnologia</label>
+            </value>
+            <value>
+                <fullName>Bom comportamento a macrophomina</fullName>
+                <default>false</default>
+                <label>Bom comportamento a macrophomina</label>
+            </value>
+            <value>
+                <fullName>Boa uniformidade de planta</fullName>
+                <default>false</default>
+                <label>Boa uniformidade de planta</label>
+            </value>
+            <value>
+                <fullName>Excelente pacote sanitário (radicular e foliar)</fullName>
+                <default>false</default>
+                <label>Excelente pacote sanitário (radicular e foliar)</label>
+            </value>
+            <value>
+                <fullName>Bom potencial produtivo com estabilidade</fullName>
+                <default>false</default>
+                <label>Bom potencial produtivo com estabilidade</label>
+            </value>
+            <value>
+                <fullName>Boa adaptação na abertura de semeadura na região fria</fullName>
+                <default>false</default>
+                <label>Boa adaptação na abertura de semeadura na região fria</label>
+            </value>
+            <value>
+                <fullName>Rusticidade nas regiões de alta adaptabilidade</fullName>
+                <default>false</default>
+                <label>Rusticidade nas regiões de alta adaptabilidade</label>
+            </value>
+            <value>
+                <fullName>Ampla janela de semeadura para as regiões frias (103 e 104)</fullName>
+                <default>false</default>
+                <label>Ampla janela de semeadura para as regiões frias (103 e 104)</label>
+            </value>
+            <value>
+                <fullName>Bom potencial de ramificação</fullName>
+                <default>false</default>
+                <label>Bom potencial de ramificação</label>
+            </value>
+            <value>
+                <fullName>Alto potencial produtivo com estabilidade nas regiões mais quentes</fullName>
+                <default>false</default>
+                <label>Alto potencial produtivo com estabilidade nas regiões mais quentes</label>
+            </value>
+            <value>
+                <fullName>Ampla Resitência a Cisto</fullName>
+                <default>false</default>
+                <label>Ampla Resitência a Cisto</label>
+            </value>
+            <value>
+                <fullName>Excelente adaptação para abertura de semeadura.</fullName>
+                <default>false</default>
+                <label>Excelente adaptação para abertura de semeadura.</label>
+            </value>
+            <value>
+                <fullName>Elevado PMG (Peso de mil grãos)</fullName>
+                <default>false</default>
+                <label>Elevado PMG (Peso de mil grãos)</label>
+            </value>
+            <value>
+                <fullName>Bom arranque inicial</fullName>
+                <default>false</default>
+                <label>Bom arranque inicial</label>
+            </value>
+            <value>
+                <fullName>Elevado potencial produtivo</fullName>
+                <default>false</default>
+                <label>Elevado potencial produtivo</label>
+            </value>
+            <value>
+                <fullName>Cultivar precoce para abertura de semeadura</fullName>
+                <default>false</default>
+                <label>Cultivar precoce para abertura de semeadura</label>
+            </value>
+            <value>
+                <fullName>Alto teto produtivo</fullName>
+                <default>false</default>
+                <label>Alto teto produtivo</label>
+            </value>
+            <value>
+                <fullName>Altamente responsiva ao emprego de tecnologia</fullName>
+                <default>false</default>
+                <label>Altamente responsiva ao emprego de tecnologia</label>
+            </value>
+            <value>
+                <fullName>Excelente alternativa para solos de textura média</fullName>
+                <default>false</default>
+                <label>Excelente alternativa para solos de textura média</label>
+            </value>
+            <value>
+                <fullName>Excelente potencial produtivo para solos de média e alta fertilidade</fullName>
+                <default>false</default>
+                <label>Excelente potencial produtivo para solos de média e alta fertilidade</label>
+            </value>
+            <value>
+                <fullName>Ampla adaptação</fullName>
+                <default>false</default>
+                <label>Ampla adaptação</label>
+            </value>
+            <value>
+                <fullName>Alto potencial produtivo com precocidade nas regiões mais quentes</fullName>
+                <default>false</default>
+                <label>Alto potencial produtivo com precocidade nas regiões mais quentes</label>
+            </value>
+            <value>
+                <fullName>Cultivar precoce que permite abertura de semeadura</fullName>
+                <default>false</default>
+                <label>Cultivar precoce que permite abertura de semeadura</label>
+            </value>
+            <value>
+                <fullName>Resitência a Cisto</fullName>
+                <default>false</default>
+                <label>Resitência a Cisto</label>
+            </value>
+            <value>
+                <fullName>Nova tecnologia associada a resistência a Cisto</fullName>
+                <default>false</default>
+                <label>Nova tecnologia associada a resistência a Cisto</label>
+            </value>
+            <value>
+                <fullName>Cultivar que permite antecipação de semeadura visando cultivo de segunda safra nas regiões frias (103 e 104 PR)</fullName>
+                <default>false</default>
+                <label>Cultivar que permite antecipação de semeadura visando cultivo de segunda safra nas regiões frias (103 e 104 PR)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

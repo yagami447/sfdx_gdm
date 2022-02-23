@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsavel_NEOGEN__c</fullName>
+    <externalId>false</externalId>
+    <label>Responsável NEOGEN</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>020 - Eduardo L. da Silva</fullName>
+                <default>false</default>
+                <label>020 - Eduardo L. da Silva</label>
+            </value>
+            <value>
+                <fullName>346 - Marco A. Marchioro</fullName>
+                <default>false</default>
+                <label>346 - Marco A. Marchioro</label>
+            </value>
+            <value>
+                <fullName>022 - Josiane Dotto Dalla Corte</fullName>
+                <default>false</default>
+                <label>022 - Josiane Dotto Dalla Corte</label>
+            </value>
+            <value>
+                <fullName>485 - Felipe Biasi</fullName>
+                <default>false</default>
+                <label>485 - Felipe Biasi</label>
+            </value>
+            <value>
+                <fullName>486 - Vagner Carvalho</fullName>
+                <default>false</default>
+                <label>486 - Vagner Carvalho</label>
+            </value>
+            <value>
+                <fullName>487 - Clevison Moraes</fullName>
+                <default>false</default>
+                <label>487 - Clevison Moraes</label>
+            </value>
+            <value>
+                <fullName>319 - Felipe Oliveira Costa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>319 - Felipe Oliveira Costa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

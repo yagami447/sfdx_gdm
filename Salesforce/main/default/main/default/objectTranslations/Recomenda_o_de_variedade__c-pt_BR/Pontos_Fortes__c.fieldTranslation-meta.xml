@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pontos Fortes --></label>
+    <name>Pontos_Fortes__c</name>
+    <picklistValues>
+        <masterLabel>Adaptada para o Mato Grosso</masterLabel>
+        <translation><!-- Adaptada para o Mato Grosso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Altamente responsiva ao emprego de tecnologia</masterLabel>
+        <translation><!-- Altamente responsiva ao emprego de tecnologia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Altamente responsiva à época de plantio e população</masterLabel>
+        <translation><!-- Altamente responsiva à época de plantio e população --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto potencial de ramificação e resistência ao acamamento</masterLabel>
+        <translation><!-- Alto potencial de ramificação e resistência ao acamamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto potencial de ramificação.</masterLabel>
+        <translation><!-- Alto potencial de ramificação. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto potencial produtivo</masterLabel>
+        <translation><!-- Alto potencial produtivo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto potencial produtivo com estabilidade nas regiões mais quentes</masterLabel>
+        <translation><!-- Alto potencial produtivo com estabilidade nas regiões mais quentes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto potencial produtivo com precocidade nas regiões mais quentes</masterLabel>
+        <translation><!-- Alto potencial produtivo com precocidade nas regiões mais quentes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto potencial produtivo nas regiões mais quentes</masterLabel>
+        <translation><!-- Alto potencial produtivo nas regiões mais quentes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto teto produtivo</masterLabel>
+        <translation><!-- Alto teto produtivo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ampla Resitência a Cisto</masterLabel>
+        <translation><!-- Ampla Resitência a Cisto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ampla adaptação</masterLabel>
+        <translation><!-- Ampla adaptação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ampla janela de plantio.</masterLabel>
+        <translation><!-- Ampla janela de plantio. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ampla janela de semeadura para as regiões frias (103 e 104)</masterLabel>
+        <translation><!-- Ampla janela de semeadura para as regiões frias (103 e 104) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ampla região de adaptação</masterLabel>
+        <translation><!-- Ampla região de adaptação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amplia a janela de plantio da segunda safra</masterLabel>
+        <translation><!-- Amplia a janela de plantio da segunda safra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amplia a janela de plantio de milho na 2ª safra</masterLabel>
+        <translation><!-- Amplia a janela de plantio de milho na 2ª safra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boa adaptação em área de média fertilidade</masterLabel>
+        <translation><!-- Boa adaptação em área de média fertilidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boa adaptação na abertura de semeadura na região fria</masterLabel>
+        <translation><!-- Boa adaptação na abertura de semeadura na região fria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boa arquitetura de planta</masterLabel>
+        <translation><!-- Boa arquitetura de planta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boa sanidade foliar</masterLabel>
+        <translation><!-- Boa sanidade foliar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boa uniformidade de planta</masterLabel>
+        <translation><!-- Boa uniformidade de planta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boa uniformidade e estrutura de planta</masterLabel>
+        <translation><!-- Boa uniformidade e estrutura de planta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bom arranque inicial</masterLabel>
+        <translation><!-- Bom arranque inicial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bom comportamento a macrophomina</masterLabel>
+        <translation><!-- Bom comportamento a macrophomina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bom potencial de ramificação</masterLabel>
+        <translation><!-- Bom potencial de ramificação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bom potencial produtivo com estabilidade</masterLabel>
+        <translation><!-- Bom potencial produtivo com estabilidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bom potencial produtivo com tolerância à Ferrugem Asiática</masterLabel>
+        <translation><!-- Bom potencial produtivo com tolerância à Ferrugem Asiática --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cultivar precoce para abertura de semeadura</masterLabel>
+        <translation><!-- Cultivar precoce para abertura de semeadura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cultivar precoce que permite abertura de semeadura</masterLabel>
+        <translation><!-- Cultivar precoce que permite abertura de semeadura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cultivar precoce que permite abertura de semeadura e plantio de 2a safra nas regiões mais quentes</masterLabel>
+        <translation><!-- Cultivar precoce que permite abertura de semeadura e plantio de 2a safra nas regiões mais quentes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cultivar que permite antecipação de semeadura visando cultivo de segunda safra nas regiões frias (103 e 104 PR)</masterLabel>
+        <translation><!-- Cultivar que permite antecipação de semeadura visando cultivo de segunda safra nas regiões frias (103 e 104 PR) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elevado PMG (Peso de mil grãos)</masterLabel>
+        <translation><!-- Elevado PMG (Peso de mil grãos) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elevado PMS</masterLabel>
+        <translation><!-- Elevado PMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elevado potencial produtivo</masterLabel>
+        <translation><!-- Elevado potencial produtivo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Estabilidade</masterLabel>
+        <translation><!-- Estabilidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Estabilidade produtiva</masterLabel>
+        <translation><!-- Estabilidade produtiva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente adaptação nas regiões de maior altitude</masterLabel>
+        <translation><!-- Excelente adaptação nas regiões de maior altitude --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente adaptação nas regiões de menor altitude</masterLabel>
+        <translation><!-- Excelente adaptação nas regiões de menor altitude --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente adaptação para abertura de semeadura.</masterLabel>
+        <translation><!-- Excelente adaptação para abertura de semeadura. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente adaptação para ambientes de alto potencial</masterLabel>
+        <translation><!-- Excelente adaptação para ambientes de alto potencial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente alternativa para solos de textura média</masterLabel>
+        <translation><!-- Excelente alternativa para solos de textura média --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente aspecto visual a campo</masterLabel>
+        <translation><!-- Excelente aspecto visual a campo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente desenvolvimento inicial</masterLabel>
+        <translation><!-- Excelente desenvolvimento inicial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente pacote sanitário</masterLabel>
+        <translation><!-- Excelente pacote sanitário --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente pacote sanitário (radicular e foliar)</masterLabel>
+        <translation><!-- Excelente pacote sanitário (radicular e foliar) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente potencial produtivo para solos de média e alta fertilidade</masterLabel>
+        <translation><!-- Excelente potencial produtivo para solos de média e alta fertilidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excelente sanidade foliar para Mancha-Alvo</masterLabel>
+        <translation><!-- Excelente sanidade foliar para Mancha-Alvo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ideal para ambientes de alta tecnologia.</masterLabel>
+        <translation><!-- Ideal para ambientes de alta tecnologia. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nova tecnologia associada a resistência a Cisto</masterLabel>
+        <translation><!-- Nova tecnologia associada a resistência a Cisto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Permite abertura de plantio</masterLabel>
+        <translation><!-- Permite abertura de plantio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Permite antecipação de plantio</masterLabel>
+        <translation><!-- Permite antecipação de plantio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Porte controlado</masterLabel>
+        <translation><!-- Porte controlado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Porte controlado com resistência ao acamamento</masterLabel>
+        <translation><!-- Porte controlado com resistência ao acamamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Porte e ciclo adqueados ao Cerrado</masterLabel>
+        <translation><!-- Porte e ciclo adqueados ao Cerrado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Precocidade</masterLabel>
+        <translation><!-- Precocidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recomendado para áreas de várzea</masterLabel>
+        <translation><!-- Recomendado para áreas de várzea --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resistente a Phytophthora</masterLabel>
+        <translation><!-- Resistente a Phytophthora --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resistente ao acamamento</masterLabel>
+        <translation><!-- Resistente ao acamamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resistência a Nematoide de Cisto</masterLabel>
+        <translation><!-- Resistência a Nematoide de Cisto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resistência a Phytophthora - Gene RPS1K</masterLabel>
+        <translation><!-- Resistência a Phytophthora - Gene RPS1K --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resitência a Cisto</masterLabel>
+        <translation><!-- Resitência a Cisto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Responsiva em condições de alta tecnologia</masterLabel>
+        <translation><!-- Responsiva em condições de alta tecnologia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rusticidade nas regiões de alta adaptabilidade</masterLabel>
+        <translation><!-- Rusticidade nas regiões de alta adaptabilidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS™ (Tolerante a sulfonilureias)</masterLabel>
+        <translation><!-- STS™ (Tolerante a sulfonilureias) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Semiprecocidade</masterLabel>
+        <translation><!-- Semiprecocidade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Superprecocidade: viabiliza a antecipação de semeadura visando 2a safra</masterLabel>
+        <translation><!-- Superprecocidade: viabiliza a antecipação de semeadura visando 2a safra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ótima adaptação nas regiões de maior altitude</masterLabel>
+        <translation><!-- Ótima adaptação nas regiões de maior altitude --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

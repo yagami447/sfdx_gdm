@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pubescência --></label>
+    <name>Pubesc_ncia__c</name>
+    <picklistValues>
+        <masterLabel>Cinza</masterLabel>
+        <translation><!-- Cinza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marrom</masterLabel>
+        <translation><!-- Marrom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marrom Clara</masterLabel>
+        <translation><!-- Marrom Clara --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

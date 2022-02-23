@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_Cierre__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo Cierre</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Estado__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Terminado</fullName>
+                <default>false</default>
+                <label>Terminado</label>
+            </value>
+            <value>
+                <fullName>Descartado</fullName>
+                <default>false</default>
+                <label>Descartado</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Completo</controllingFieldValue>
+            <valueName>Terminado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completo</controllingFieldValue>
+            <valueName>Descartado</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

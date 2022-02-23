@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prazo_Medio_Campanha__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Dias_de_primeira_prorrogaco__c+ 
+(IF(Prazos_sugeridos__c &gt;= 2, Dias_de_segunda_prorrogaco__c, 0)) +
+(IF(Prazos_sugeridos__c &gt;= 3, Dias_de_terceira_prorrogaco__c	, 0)) +
+(IF(Prazos_sugeridos__c &gt;= 4, Dias_de_quarta_prorrogaco__c, 0)) +
+(IF(Prazos_sugeridos__c &gt;= 5, Dias_de_quinta_prorrogaco__c, 0))) 
+/Prazos_sugeridos__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Prazo Medio Campanha</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

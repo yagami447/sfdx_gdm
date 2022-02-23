@@ -1,0 +1,75 @@
+<apex:page standardController="Opportunity" extensions="opportunitySacasExtension" lightningStylesheets="true" sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">    
+<head>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}"/>
+</head>
+<div class="SLDS">
+  <body>
+    <apex:form >    
+        <apex:outputPanel >
+
+          <table class="slds-table slds-table--bordered slds-max-medium-table_stacked-horizontal">
+            <thead>
+                Rebaixamentos
+              <tr class="slds-text-title--caps">                    
+               
+                    <th scope="col">
+                        <div class="slds-truncate">NOME COMERCIAL</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">REGISTRO CULTIVAR</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">CATEGORIA ORIGEM</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">CATEGORIA REBAIXADA</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">SEM REBAIXADA (SACAS)</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">LOTE</div>
+                    </th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <apex:repeat value="{!Items}" var="i">
+              <tr>
+                <td>
+                  <apex:outputField value="{!i.Variedade_Prod__c}" />
+                </td>
+                <td>
+                  <apex:outputField value="{!i.Registro_Cultivar__c}" />
+                </td>
+                <td>
+                  <apex:outputField value="{!i.Categoria_a_Rebaixar__r.Name}" />
+                </td>
+                <td>
+                  <apex:outputField value="{!i.Categoria__r.Name}" />
+                </td>
+                <td>
+                  <apex:outputField value="{!i.Sem_Rebajada__c}" />
+                </td>
+                <td>
+                  <apex:outputField value="{!i.Lote_Rebajado__c}" />
+                </td>
+              </tr>
+              <!--
+              <tr>
+                <apex:repeat value="{!Fields}" var="f">  
+                    <td data-label="{!f.label}">
+                      <div class="slds-truncate" title="{!i[f]}}">
+                        <apex:outputField value="{!i[f]}" />
+                      </div>
+                    </td>
+                </apex:repeat>
+              </tr>-->
+              </apex:repeat>
+            </tbody>
+          </table>
+        </apex:outputPanel>     
+    </apex:form>
+  </body>
+</div>
+</apex:page>

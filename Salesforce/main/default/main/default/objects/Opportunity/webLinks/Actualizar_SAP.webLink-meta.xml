@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actualizar_SAP</fullName>
+    <availability>online</availability>
+    <description>Actualiza Oferta en SAP</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Actualizar SAP</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Opportunity.Id}&quot;;
+var accId = &quot;{!Opportunity.AccountId}&quot;;
+var nro = &quot;{!Opportunity.Name}&quot;;
+var stage = &quot;{!Opportunity.StageName}&quot;;
+var ofPendiente = &quot;{!Opportunity.PE_bajar_SAP__c}&quot;;
+var pasa = true;
+
+if(ofPendiente == false){
+alert(&apos;Não há atualizações pendentes de baixar a SAP.&apos;);
+pasa = false;
+}
+
+if(pasa == true){
+var result = sforce.apex.execute(&quot;Opp_SAP_OfMod&quot;,&quot;modifOfertaSAP&quot;, {oppId : id, etapa : stage, target : 300});
+alert(&apos;Proceso Terminado.&apos;);
+
+window.location.reload(true);
+}</url>
+</WebLink>

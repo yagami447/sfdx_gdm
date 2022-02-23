@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Active_Campaign</fullName>
+        <description>If Direcor approve , isActive field must change to true</description>
+        <field>IsActive</field>
+        <literalValue>1</literalValue>
+        <name>Active Campaign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Atualizar_status_inicial</fullName>
+        <field>Status</field>
+        <literalValue>Aguardando Aprovação de Marketing</literalValue>
+        <name>Atualizar status inicial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Complete_campaign</fullName>
+        <description>When the approved campaign ends , one day after must change status to Completada</description>
+        <field>Status</field>
+        <literalValue>Completada</literalValue>
+        <name>Complete campaign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Etapa_1</fullName>
+        <field>Status</field>
+        <literalValue>Aguardando Aprovação do Gerente Geral</literalValue>
+        <name>Etapa 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Etapa_1_Rejeitado</fullName>
+        <field>Status</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>Etapa 1 Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Etapa_2</fullName>
+        <field>Status</field>
+        <literalValue>Aprovado</literalValue>
+        <name>Etapa 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Etapa_2_Rejected</fullName>
+        <field>Status</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>Etapa 2 Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Handler</fullName>
+        <description>Change status to &quot;En proceso&quot; when the activation date is between the start and end date of de campaign</description>
+        <field>Status</field>
+        <literalValue>En curso</literalValue>
+        <name>Status Handler</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_abort</fullName>
+        <description>Change status to Abort</description>
+        <field>Status</field>
+        <literalValue>Abortada</literalValue>
+        <name>Status abort</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_completed</fullName>
+        <description>One day after the campaign closes change status to Completed</description>
+        <field>Status</field>
+        <literalValue>Completada</literalValue>
+        <name>Status to completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_in_progress</fullName>
+        <description>When the start date of campaign is today, then change status to &quot;En curso&quot;</description>
+        <field>Status</field>
+        <literalValue>En curso</literalValue>
+        <name>Status to in progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Campaign not started</fullName>
+        <active>true</active>
+        <description>When activation date is before the start date of the campaign, schedule tasks to set the status to &quot;En curso&quot; in the start date and status to &quot;Completada&quot;  one day after end date</description>
+        <formula>AND(IsActive == TRUE, TODAY() &lt;   StartDate )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Status_to_completed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Status_to_in_progress</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.StartDate</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Campaign out of date</fullName>
+        <actions>
+            <name>Status_abort</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When actual date is above from Campaign end date, change status to Aborted</description>
+        <formula>AND(IsActive == TRUE, EndDate &lt; TODAY() )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Status Handler</fullName>
+        <actions>
+            <name>Status_Handler</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If the actual date is between the start date and the end date, must change the status to &quot;En curso&quot;,
+and schedule a task who is going to change the status of the record to &quot;Completada&quot; one day after the end date of the record.</description>
+        <formula>AND(IsActive == TRUE, StartDate &lt;=  TODAY() , EndDate &gt;=  TODAY()  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Complete_campaign</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

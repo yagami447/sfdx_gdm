@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Todos</fullName>
+    <columns>Regi_o__c</columns>
+    <columns>Marca__c</columns>
+    <columns>NAME</columns>
+    <columns>Variedad__c</columns>
+    <columns>Macro__c</columns>
+    <columns>Micro__c</columns>
+    <columns>Micro_Detalhe__c</columns>
+    <columns>Titulo__c</columns>
+    <columns>Fase_de_Aprova_o__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos</label>
+</ListView>

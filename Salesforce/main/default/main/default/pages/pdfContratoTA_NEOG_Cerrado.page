@@ -1,0 +1,1202 @@
+<apex:page standardController="Contrato__c" extensions="PdfGeneratorController,ControladorAditivos" renderAs="pdf" showheader="false" action="{!initImpresionContratoTA}" applyBodyTag="false" docType="html-5.0">
+   <head>
+      <style>
+         b {
+            font-size: 13px !important;
+         }
+
+         table.gridtable {
+         color: #333333;
+         border-width: 0.5pt;
+         border-color: #666666;
+         border-collapse: collapse;
+         }
+         table.gridtable th {
+         border-width: 0.5pt;
+         border-style: solid;
+         border-color: #666666;
+         }
+         table.gridtable td {
+         border-width: 0.5pt;
+         border-style: solid;
+         border-color: #666666;
+         background-color: #ffffff;
+         }
+         body .bRelatedList .pbBody table.list,
+         body .apexp .pbBody table.list {
+         border: 0.5pt solid #666666;
+         }
+         .centered {
+         text-align: center;
+         }
+         ol {
+         list-style-type: none;
+         counter-reset: item;
+         margin: 0;
+         padding: 0;
+         }
+         ol > li {
+         display: table;
+         counter-increment: item;
+         margin-bottom: 0.6em;
+         }
+         ol > li:before {
+         content: counters(item, ".") ". ";
+         display: table-cell;
+         padding-right: 0.6em;
+         }
+         li ol > li {
+         margin: 0;
+         }
+         li ol > li:before {
+         content: counters(item, ".") " ";
+         }
+         li ol > li.noStyle:before {
+         content: none;
+         }
+         noStyle {
+         list-style-type: none;
+         }
+         @page {
+         margin-top: 150px;
+         margin-bottom: 150px;
+         @bottom-right {
+         content: "Página " counter(page) " de " counter(pages);
+         font-weight: lighter;
+         font-size: 10.5pt;
+         }
+         @top-center {
+         content: "TERMO ADITIVO DE DEFINIÇÕES COMERCIAIS AO CONTRATO DE LICENÇA DE USO DE CULTIVAR";
+         font-weight: Bold;
+         font-size: 10.5pt;
+         padding-top: 65px;
+         }
+         @bottom-left {
+         content: 'Termo N° {!Contrato__c.Name}';
+         font-weight: lighter;
+         font-size: 10.5pt;
+         }
+         }
+      </style>
+   </head>
+   <div style="align-content:center; align-self:center; align-items:center; text-align:center;">
+      <img src="{!$Resource.LogoImpNEOG}" style="width: 40%; height: 50%;"/>     
+   </div>
+   <table width="100%" Align="center" columns="2">
+      <table width="100%" Align="center" columns="1">
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+      </table>
+      <table width="100%" Align="center" columns="1" style="font-size:14px;">
+         <tr>
+            <td>
+               <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td width="30%">
+                        <b>Termo nº.</b>
+                     </td>
+                     <td width="70%">
+                        <b>{!Contrato__c.Name}</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Licenciadora:</b>
+                     </td>
+                     <td width="70%">
+                        <b>GDM GENÉTICA DO BRASIL S. A. (GDM)</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Endereço:</b>
+                     </td>
+                     <td width="70%">
+                        Rua Antônio Rasteiro Filho, 2.700, Pq. Ind. José Garcia Gimenes, CEP 86183-751
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Cidade/UF</b>
+                     </td>
+                     <td width="70%">
+                        Cambé - PR
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>CNPJ:</b>
+                     </td>
+                     <td width="70%">
+                        07.007.165/0001-34
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Insc. Estadual:</b>
+                     </td>
+                     <td width="70%">
+                        90519331-73
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <br/>
+               <br/>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td width="30%">
+                        <b>Licenciado:</b>
+                     </td>
+                     <td width="70%">
+                        <b>{!nombre}</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Endereço:</b>
+                     </td>
+                     <td width="70%">
+                        {!dirUnidade}
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>Cidade/UF:</b>
+                     </td>
+                     <td width="70%">
+                        {!cidadeUF}
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>CNPJ/CPF:</b>
+                     </td>
+                     <td width="70%">
+                        {!cnpj}
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="30%">
+                        <b>I. Estadual/Produtor:</b>
+                     </td>
+                     <td width="70%">
+                        {!inscEst}
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <br/>
+               <br/>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td width="30%">
+                        <b>Vigência:</b>
+                     </td>
+                     <td width="70%">
+                        <b>SAFRA {!Contrato__c.Safra__c}</b>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%" border="0">
+                  <tr>
+                     <td>&nbsp;</td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               Têm entre si justo e acertado o presente <b>TERMO ADITIVO AO CONTRATO DE LICENÇA DE USO DE
+               CULTIVAR</b> (doravante simplesmente <b>“Termo Aditivo”</b>), na melhor forma de direito, mediante as cláusulas e condições, mutuamente aceitas e outorgadas, a saber:
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <b>OBJETO DO CONTRATO</b> – <em>Licença não exclusiva, onerosa e intransferível concedida pela <b>GDM</b> ao
+               <b>Licenciado</b>, em caráter precário, do direito de uso da(s) Cultivar(es) Licenciada(s).</em>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+              <tr style="display:{!IF(ContratoClonado,'table-data', 'none')};">
+               <td style="text-align:justify;">
+                  <b>OBJETO DO ADITIVO</b> – Retificação total do Termo Aditivo ao Contrato de Licença de Uso de Cultivar nº  {!Contrato__c.Contrato_ant__r.Name}. 
+               </td>
+            </tr>
+            <tr style="display:{!IF(ContratoClonado,'table-data', 'none')};">
+               <td style="text-align:justify;">
+                  As Partes, em comum acordo, resolvem consolidar o presente Termo Aditivo, revogando e tornando sem efeito, 
+                  todas as disposições do termo aditivo nº.{!Contrato__c.Contrato_ant__r.Name}
+                  (incluindo, mas não se limitando as tabelas dos itens 1 e 2),
+                  que passa a vigorar, em sua íntegra, com a nova redação abaixo:               
+               </td>
+            </tr>
+             <tr>
+                <td style="display:{!IF(ContratoClonado,'none', 'table-data')}; text-align:justify;">
+                   <b>OBJETO DO ADITIVO</b> – Determinação da(s) Cultivar(es) Licenciada(s) para a safra {!Contrato__c.Safra__c}, e das Condições
+                   de Comercialização previstas no Contrato.
+                </td>
+            </tr>
+          <tr>
+            <td style="text-align:justify;">
+               <ol style="text-align:justify;">
+                  <li style="padding-top: 12px;">
+                     Para fins do disposto no Contrato, as Cultivar(es) Licenciada(s) para a safra {!Contrato__c.Safra__c}
+                     <span style="text-align:left;">e as respectivas condições para venda das Sementes Comerciais serão aquelas estabelecidas na tabela abaixo:</span>
+                     <div style="page-break-before:always;" />
+                     <apex:pageBlock >
+                        <apex:pageBlockTable width="100%" value="{!itemsVolumen}" var="j" styleClass="gridtable" style="font-size:12px;">
+                           <apex:column width="12%" headerValue="Cultivar" value="{!j.Variedad__r.Nombre_de_Registro__c}" style="text-align:center" headerClass="centered" />
+                           <apex:column width="11%" headerValue="Volume Autorizado para Comercia - lização" style="text-align:center" headerClass="centered">
+                              <apex:outputField value="{!j.Volumen_Aut_Comercializacion__c}" />
+                           </apex:column>
+                           <apex:column width="11%" headerValue="Certificado de Proteção de Cultivares" value="{!j.Variedad__r.Certificado_de_Protecao__c}" style="text-align:center" headerClass="centered" />
+                           <apex:column width="11%" headerValue="Registro Nacional de Cultivares RNC" value="{!j.Variedad__r.Numero_de_registro__c}" style="text-align:center" headerClass="centered" />
+                           <apex:column width="11%" headerValue="Estado de Comercia - lização (Território)" value="{!j.Contrato_de_Multiplicacion__r.Estados_Comercializacao__c}" style="text-align:center" headerClass="centered" />
+                           <apex:column width="11%" headerValue="Referência" style="text-align:center" headerClass="centered">
+                              <apex:outputField value="{!j.Precio__c}" />
+                              {!if(j.Variedad__r.Unidade_Preco__c=='KG','kg/Sc(40kg)', if(j.Variedad__r.Unidade_Preco__c=='USD', 'USD', ''))}
+                           </apex:column>
+                           <apex:column width="11%" headerValue="Mercado" style="text-align:center" headerClass="centered">
+                              {!j.Cotacao_de_soja__c} ({!if(j.Cotacao_de_soja__c=='SAFRAS & MERCADO',ref_SyM,if(j.Cotacao_de_soja__c=='COOPERATIVA', ref_Coop, ref_Dolar))})
+                           </apex:column>
+                           <apex:column width="11%" headerValue="Praça" value="{!j.Praca__c}" style="text-align:center" headerClass="centered" />
+                        </apex:pageBlockTable>
+                     </apex:pageBlock>
+                     <br/>
+                     <ol>
+                        <li>
+                           Relativo a coluna “Mercado”:
+                           <ol>
+                              <li style="{!if(!TA_haySyM,'display:none','')};" class="noStyle">{!ref_SyM}&nbsp; os valores de referência são os valores de compra e venda de soja disponível, apresentados em informativo diário de soja desta empresa.
+                              </li>
+                              <li style="{!if(!TA_hayCoop,'display:none','')}; " class="noStyle">{!ref_Coop}&nbsp; os valores de referência indicados se referem ao valor de compra de soja balcão apresentados por esta.
+                              </li>
+                              <li style="{!if(!TA_hayDolar,'display:none','')};" class="noStyle">{!ref_Dolar}&nbsp; a cotação estabelecida é a média de compra e venda do dólar PTAX apresentado pelo Banco Central do Brasil.
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>
+                           Reforçamos que é vedado ao <b>Licenciado</b> a realização Volume Autorizado para Comercialização 
+                           acima do previsto neste Termo Aditivo, salvo se autorizado pela <b>GDM</b>, sob pena do volume excedido 
+                           não participar e receber os descontos da Política de Bonificação, além das demais implicações 
+                           previstas no Contrato.
+                        </li>
+                        
+                     </ol>
+                  </li>
+                   <li>
+                     As partes ajustam as condições de comercialização para aplicação em regras de Bonificação previstas
+                     <span style="text-align:left;">neste item, no CONTRATO DE LICENÇA DE USO DE CULTIVAR e o Anexo do presente Termo Aditivo:</span>
+                     <br/>
+                     <br/>
+                     <ol>
+                        <li>
+                           <b>Definições:</b>
+                           <ol>
+                              <li>
+                                 <u>Volume Total Autorizado para Comercialização</u> – É o volume total autorizado a cada  
+                                 safra através do presente Termo Aditivo, para a comercialização de Sementes Comerciais a
+                                 partir da(s) Cultivar(es) Licenciada(s).   
+                              </li>
+                              <li>
+                                 <u>Palestras, Treinamentos e Dias de Campo</u> – É a quantidade de palestras, treinamentos e
+                                 dias de campo (“atividades”) aplicadas a grupos de agricultores e/ou equipes técnicas a
+                                 serem realizados pelo <b>Licenciado</b>, sob suas custas e reponsabilidade. O público mínimo
+                                 para considerar uma atividade valida será de 10 agricultores e/ou 5 técnicos por evento.
+                                 Somente serão consideradas como válidos, as atividades que estiverem devidamente
+                                 informados no Portal do Multiplicador dentro dos 10 dias corridos após o evento. Por fim, 
+                                 o <b>Licenciado deverá encaminhar as informações para GDM</b>, até a data relativo a safra 
+                                 em referência neste Termo, indicada do conforme tabela abaixo, a depender do local no 
+                                 Estado da República Federativa do Brasil a ser realizado a palestra, treinamento e dias de 
+                                 campo.  
+                                 <div style="page-break-inside: avoid;"/>
+                                  <br/>
+                                  <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:10.5pt;font-family:BookmanOldStyle; page-break-inside: avoid;">
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              <b>UF</b>
+                                          </td>
+                                          <td style="text-align:left;">
+                                              <b>Data</b>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              MS, GO, MT, RO
+                                          </td>
+                                          <td style="text-align:left;">
+                                              15/06
+                                          </td>
+                                      </tr>                                      
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              PR, SC, SP, MG, TO, BA, MA, PI
+                                          </td>
+                                          <td style="text-align:left;">
+                                              15/07
+                                          </td>
+                                      </tr>                                      
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              RS, PA
+                                          </td>
+                                          <td style="text-align:left;">
+                                              30/08
+                                          </td>
+                                      </tr>
+                                  </table>
+                                  <br/>                           
+                              </li>                              
+                              <li>
+                                 <u>Lado a Lado Colhido (LxL Colhido)</u> - Consiste em ensaio(s) de competição que o <b>Licenciado</b> 
+                                 deverá: (i) conduzir sob suas custas e reponsabilidade, com área de, no mínimo, 0,5ha 
+                                 (meio hectare) e, máximo, 10ha (dez hectares); e (ii) informar à <b>GDM</b> os seguintes dados: 
+                                 (a) do proprietário da área de cultivo, seu Município e Estado, (b) da Cultivar(es) 
+                                 Licenciada(s) e demais cultivares concorrentes em relevância ao mercado de atuação da 
+                                 Cultivar Licenciada, presentes no LxL, (c) da localização (Rodovia, Km, latitude e longitude 
+                                 em que está localizado); (d) data de plantio, (e) tamanho da área plantada, (f) espaçamento, 
+                                 (g) cultura antecessora, (h) data de colheita; (i) dados de produtividade, (j) área colhida e 
+                                 (k) população final de plantas; Por fim, o <b>Licenciado</b> reconhece que deverá obter, 
+                                 mediante a assinatura de formulário padrão da <b>GDM</b> ou outro documento que contenha 
+                                 autorização expressa a <b>GDM</b>, o devido consentimento do proprietário/arrendatário 
+                                 (“Agricultor”) da área para <b>GDM</b> utilizar e divulgar os resultados oriundos da condução 
+                                 destes ensaios. A comprovação destes consentimos deverá ser encaminhada para <b>GDM</b> 
+                                 até a data relativo à safra em referência neste Termo, indicada do conforme tabela abaixo. 
+                                 Na hipótese de ocorrência de 2 ou mais ensaios realizados num Município e/ou mesmo 
+                                 local pelo mesmo Agricultor, será considerado para efeitos deste objetivo como um único 
+                                 evento de LxL. Por fim, o <b>Licenciado deverá encaminhar as informações para GDM</b>, até 
+                                 a data relativa a safra em referência neste Termo, indicada do conforme tabela abaixo, a 
+                                 depender do local no Estado da República Federativa do Brasil a ser realizado o LxL.  
+                                 <div style="page-break-inside: avoid;"/>
+                                  <br/>
+                                  <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:10.5pt;font-family:BookmanOldStyle; page-break-inside: avoid;">
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              <b>UF</b>
+                                          </td>
+                                          <td style="text-align:left;">
+                                              <b>Data</b>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              MS, GO, MT, RO
+                                          </td>
+                                          <td style="text-align:left;">
+                                              15/06
+                                          </td>
+                                      </tr>                                      
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              PR, SC, SP, MG, TO, BA, MA, PI
+                                          </td>
+                                          <td style="text-align:left;">
+                                              15/07
+                                          </td>
+                                      </tr>                                      
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              RS, PA
+                                          </td>
+                                          <td style="text-align:left;">
+                                              30/08
+                                          </td>
+                                      </tr>
+                                  </table>
+                                  <br/>                           
+                              </li>
+                              <li>
+                                 <u>Identificação das Cultivares NEOGEN nas Rodovias</u> É a quantidade de áreas à beira de
+                                 rodovia que o <b>Licenciado</b> deverá identificar com Placas com nome da(s) Cultivar(es)
+                                 Licenciada(s), sendo que o <b>Licenciado</b> deverá informar no Portal de Multiplicadores, até
+                                 o dia 30 de maio da safra em referência neste Termo, indicando os seguintes dados: (a)
+                                 do proprietário da área de cultivo, seu Município e Estado, (b) da Cultivar(es)
+                                 Licenciada(s), (c) da localização (Rodovia e Km em que está localizado), com registro
+                                 fotográfico. As identificações deverão seguir as seguintes normas: (i) Mínimo de 3 placas
+                                 pôr área e (ii) intervalo de 50 metros entre placas. As custas e condução das referidas
+                                 identificações será de inteira responsabilidade do <b>Licenciado</b>.                            
+                              </li>
+                              <li>
+                                 <u>Outdoor</u> - É a quantidade de painéis de divulgação publicitária (“Outdoor”) a ser realizado
+                                 pelo <b>Licenciado</b> em estradas, sob suas custas e reponsabilidade, incluindo resultados de
+                                 produtividade da(s) Cultivar(es) Licenciada(s) e marcas Neogen e a(s) de titularidade do
+                                 <b>Licenciado</b>, com tempo mínimo de veiculação de 30 dias e previa aprovação da <b>GDM</b> da
+                                 data e local de veiculação, assim como da arte e resultados utilizados. O <b>Licenciado</b>
+                                 deverá informar no Portal de Multiplicadores, em até 15 dias após a instalação do
+                                 Outdoor, indicando a localização (Rodovia e Km em que está localizado) efetivamente
+                                 veiculada, com registro fotográfico.      
+                                 <div style="page-break-inside: avoid;"/>
+                                  <br/>
+                                  <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:10.5pt;font-family:BookmanOldStyle; page-break-inside: avoid;">
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              <b>UF</b>
+                                          </td>
+                                          <td style="text-align:left;">
+                                              <b>Data</b>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              MS, GO, MT, RO
+                                          </td>
+                                          <td style="text-align:left;">
+                                              15/06
+                                          </td>
+                                      </tr>                                      
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              PR, SC, SP, MG, TO, BA, MA, PI
+                                          </td>
+                                          <td style="text-align:left;">
+                                              15/07
+                                          </td>
+                                      </tr>                                      
+                                      <tr>
+                                          <td style="text-align:left;">
+                                              RS, PA
+                                          </td>
+                                          <td style="text-align:left;">
+                                              30/08
+                                          </td>
+                                      </tr>
+                                  </table>
+                                  <br/>                      
+                              </li>
+                              <li>
+                                 <u>Controle de Estoque</u> – Relatório que deverá ser enviado pelo <b>Licenciado</b> no Portal de
+                                 Multiplicadores, até o dia 03 de cada mês de Abril a Novembro da safra em referência
+                                 neste Termo, indicando o volume de semente produzido e comercializado pelo <b>Licenciado</b>.                            
+                              </li>
+                              <li>
+                                 <u>CRM</u> – Relatório que deverá ser enviado pelo <b>Licenciado</b> no Portal de Multiplicadores, até
+                                 o dia 30 de Maio da safra em referência neste Termo, indicando Informações sobre
+                                 capacidade de produção da UBS, cultivares e volumes produzidos e comercializados e
+                                 projeções futuras, regiões de atuação, equipe diretamente ligada a comercialização de
+                                 semente, distribuição das vendas por canal, campos de produção e número de filiais.                            
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                       <ul>
+                           
+                       </ul>
+                  </li>
+                  <li>
+                     Permanecem em vigor todas as demais condições e dispositivos estabelecidos no contrato original.
+                  </li>
+               </ol>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Por estarem assim justas e contratadas, firmam o presente instrumento, em 02 (duas) vias de igual teor, juntamente com 2 (duas) testemunhas abaixo arroladas.
+            </td>
+         </tr>
+      </table>
+      <table width="100%">
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+      </table>
+      <div style="page-break-inside: avoid;">
+         <table width="100%" columns="1" 
+               style="font-size:14px;font-family:BookmanOldStyle;text-align:right; padding-bottom: 12px; padding-right: 40px;">
+            <tr>
+               <td>Londrina, <a style="color: white;">\signedDate\</a>.</td>
+            </tr>
+         </table>
+         
+         <table width="100%" border="0" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+            <br/>
+            <tr>
+               <td>
+                  <p style="color: white;">\s1\</p>
+               </td>
+               <td>_______________________________</td>
+            </tr>
+            
+            <apex:repeat value="{!numerosDeSignatarios}" var="s">
+               <tr>
+                     <td>
+                        <p style="color: white;">\s{!s}\</p>
+                     </td>
+                     <td>_______________________________</td>
+               </tr>
+            </apex:repeat>
+         <tr style="vertical-align:baseline;">
+               <th align="left" width="50%"><b>GDM GENÉTICA DO BRASIL S. A.</b>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+               </th>
+               <th align="left" width="50%">
+                  <b> {!nombre}</b>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+               </th>
+            </tr>
+            <tr>
+               <td align="left" width="50%">&nbsp;                 
+               </td>
+               <td align="left" width="50%">&nbsp;                 
+               </td>
+            </tr>
+            <tr>
+               <td align="left" width="50%"><b>TESTEMUNHAS:</b><br/>
+                  <br/>
+                  <br/>
+                  &nbsp;&nbsp;1. _______________________________<br/>
+                  &nbsp;&nbsp;Nome:<br/>
+                  &nbsp;&nbsp;CPF:                 
+               </td>
+               <td align="left" width="50%">&nbsp;<br/>
+                  <br/>
+                  <br/>
+                  &nbsp;&nbsp;2. _______________________________<br/>
+                  &nbsp;&nbsp;Nome:<br/>
+                  &nbsp;&nbsp;CPF:                 
+               </td>
+            </tr>
+         </table>
+      </div>
+
+      <!--
+      <table width="100%" border="0" Align="center" 
+              style="font-size:14px;font-family:BookmanOldStyle;">
+          
+         <br/>
+         <tr>
+            <td>
+               <p style="color: white;">\s1\</p>
+            </td>
+             <td>_______________________________</td>
+          </tr>
+          
+          <apex:repeat value="{!numerosDeSignatarios}" var="s">
+              <tr>
+                  <td>
+                      <p style="color: white;">\s{!s}\</p>
+                  </td>
+                  <td>_______________________________</td>
+              </tr>
+          </apex:repeat>
+        
+         <tr >
+            <td align="center" colspan="2"><b>GDM GENÉTICA DO BRASIL S. A.</b></td>
+            <td></td>
+         </tr>
+         <tr >
+            <td align="center" colspan="2" 
+                style="padding-top: 50px; padding-bottom: 20px;"><b>{!nombre}</b></td>
+            <td></td>
+         </tr>
+
+         <tr>
+            <td colspan="2" style="padding-bottom: 12px;">Testemunhas:</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td style="padding-bottom: 12px;">&nbsp;&nbsp;Nome:</td>
+            <td style="padding-bottom: 12px;">&nbsp;&nbsp;Nome:</td>
+         </tr>
+         <tr>
+            <td style="padding-bottom: 12px;">&nbsp;&nbsp;CPF:</td>
+            <td style="padding-bottom: 12px;">&nbsp;&nbsp;CPF:</td>
+         </tr>
+      </table>
+      -->
+      <div style="page-break-before:always;" />
+      <table width="100%" border="0" Align="center" columns="3">
+         <tr>
+            <td align="center" width="50%">
+               <font face="verdana">
+                  <p style="margin-top : -20px;"><b><u>ANEXO</u></b></p>
+                  <p><b><u>DA POLÍTICA DE BONIFICAÇÃO</u></b></p>
+               </font>
+            </td>
+         </tr>
+      </table>
+      <table width="100%" Align="center" columns="1" style="font-size:14px;">
+         <tr>
+            <td style="text-align:justify;">
+               Considerando que a política de bonificação terá como base (a) a qualificação pelo <b>Licenciado</b> de acordo
+               com o cumprimento do item “Classificação”, nas categorias “Standard”, “Plus” ou “Premium”; e (b) o
+               cumprimento dos Objetivos previstos nos itens “Bonificação1, Bonificação 2, Bonificação 3 e Bonificação 
+               4” abaixo, para a concessão de descontos sobre o valor dos royalties previsto ao Licenciado para as 
+               Cultivar(es) Licenciada(s) contendo tecnologias <em>Intacta RR2IPRO®, Intacta2 Xtend® e Conkesta E3®</em>.
+            </td>
+         </tr>
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+         <tr>
+            <td>
+               <b><u>Classificação</u>: Objetivos comerciais - Atingimento da Meta de Volume Mínimo Comercializado:</b>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>        
+               <u>Requisito 1</u>: Atingimento da Meta de Volume Mínimo Comercializado:
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;">
+                        <b>Percentual (%) de comercialização sobre a Volume autorizado para comercialização</b>
+                     </td>
+                     <td style="text-align:center;">
+                        <b>Pontos</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Menos de 65%
+                     </td>
+                     <td style="text-align:center;">
+                        0
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        De 65% a 80%
+                     </td>
+                     <td style="text-align:center;">
+                        1
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Mais de 80%
+                     </td>
+                     <td style="text-align:center;">
+                        2
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>        
+               <u>Requisito 2</u>: Volume de Sacas de Sementes Comerciais do portfólio Neogen comercializadas:
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;">
+                        <b>Volume de sacas de sementes comercializadas do portfólio Neogen</b>
+                     </td>
+                     <td style="text-align:center;">
+                        <b>Pontos</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Menor que 40.000 sacas
+                     </td>
+                     <td style="text-align:center;">
+                        0
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        De 40.001 a 80.000 sacas
+                     </td>
+                     <td style="text-align:center;">
+                        1
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Acima de 80.001 sacas
+                     </td>
+                     <td style="text-align:center;">
+                        2
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>        
+               Fica estabelecido que, de acordo com a classificação obtida nos Requisitos 1 ou 2 acima, o <b>Licenciado</b> 
+               poderá enquadrar-se nas categorias de desconto abaixo indicadas:
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;">
+                        <b>Classificação</b>
+                     </td>
+                     <td style="text-align:center;">
+                        <b>Categoria</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        De 0 a 1 ponto
+                     </td>
+                     <td style="text-align:center;">
+                        Standard
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        De 2 a 3 pontos
+                     </td>
+                     <td style="text-align:center;">
+                        Plus
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Até 4 pontos
+                     </td>
+                     <td style="text-align:center;">
+                        Premium
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <b><u>Bonificação 1</u>: Cumprimento de Informações e Relatórios:</b>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;" rowspan="2">
+                        <b>Informações e Relatórios</b>
+                     </td>
+                     <td style="text-align:center;" colspan="3">
+                        <b>Categoria</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;" colspan="1">
+                        Standard
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Plus
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Premium
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Anexos I, II, III, IV e V
+                     </td>
+                     <td style="text-align:center;" rowspan="3" colspan="1">
+                        0,25 kg/sc
+                     </td>
+                     <td style="text-align:center;" rowspan="3" colspan="1">
+                        0,5 kg/sc
+                     </td>
+                     <td style="text-align:center;" rowspan="3" colspan="1">
+                        1,0 kg/sc
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Controle de Estoque
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        CRM
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               Compreende-se a entrega pelo <b>Licenciado</b>, dos itens previstos no quadro acima de forma cumulativa, 
+               dentro dos tempos e condições definidos Contrato e presente Termo Aditivo, sendo vedado a cumulação 
+               de categorias.
+            </td>
+         </tr>
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <b><u>Bonificação 2</u>: Desenvolvimento de mercado e geração de demanda:</b>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;" rowspan="2">
+                        <b>Ações</b>
+                     </td>
+                     <td style="text-align:center;" colspan="3">
+                        <b>Categoria</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;" colspan="1">
+                        Standard
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Plus
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Premium
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Palestras, Treinamentos e Dias de Campo
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        100,0 kg
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        500,0 kg
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1.000,0 kg
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Identificação das Cultivares nas Rodovias
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        200,0 kg
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1.000,0 kg
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        2.000,0 kg
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        LxL Colhido
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        300,0 kg
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1.500,0 kg
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        3.000,0 kg
+                     </td>
+                  </tr>                                    
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               Compreende-se que a cada ação, o <b>Licenciado</b> acumula um volume em quilograma relativo à sua 
+               categoria, <u>limitado</u> a um desconto máximo de 2,0 kg/sc. Esse volume será descontado do total de 
+               quilograma devido à <b>GDM</b>, em função das vendas realizadas.
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%">
+                  <tr>
+                     <td width="10%" />
+                     <td width="90%">
+                        * Para fins de melhor entendimento, segue exemplo sobre o cálculo de desconto:
+                     </td>
+                  </tr>
+               </table>
+               <table width="100%">
+                  <tr>
+                     <td width="15%" />
+                     <td width="85%" style="text-align:justify;">
+                        Exemplo: se, o Licenciado qualificado na categoria Premium cumprir 06 ações de LxL Colhido, 
+                        03 ações de Identificação das Cultivares nas Rodovias perceberia o valor de 24.000,00 kg (vinte 
+                        e quatro mil quilogramas) de desconto sobre o valor dos royalties previsto, a depender da 
+                        limitação de 2,0kg/sc (2 quilogramas por saca de 40kg). Logo, na hipótese de apuração do valor 
+                        a pagar a GDM a título de royalties seja, por exemplo, 170.000 kg (cento e setenta mil 
+                        quilogramas), correspondendo a 10.000 sacas, será concedido um desconto de 20.000,00 kg 
+                        (vinte mil quilogramas) ou 2,00kg/sc (2 quilogramas por saca de 40kg), restando um saldo de 
+                        150.000 kg (cento e cinquenta mil quilogramas) devido pelo <b>Licenciado</b>.
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <b><u>Bonificação 3</u>: Ações Pós Safra:</b>         
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;" rowspan="2">
+                        <b>Ações Pós Safra</b>
+                     </td>
+                     <td style="text-align:center;" colspan="3">
+                        <b>Categoria</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;" colspan="1">
+                        Standard
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Plus
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Premium
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Palestras
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        100,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        500,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1.000,0 kg/sc
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Treinamentos
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        200,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1.000,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        2.000,0 kg/sc
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Outdoor
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        400,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        2.000,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        4.000,0 kg/sc
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               Compreende-se que a cada ação, o <b>Licenciado</b> acumula um volume em quilograma relativo à sua 
+               categoria, <u>limitado</u> a um desconto máximo de 1,0 kg/sc. Esse volume será descontado do total de 
+               quilograma devido à <b>GDM</b>, em função das vendas realizadas.
+            </td>
+         </tr>
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+         <tr>
+            <td>
+               <table width="100%">
+                  <tr>
+                     <td width="10%"/>
+                     <td width="90%">
+                        * Para fins de melhor entendimento, segue exemplo sobre o cálculo de desconto:
+                     </td>
+                  </tr>
+               </table>
+               <table width="100%">
+                  <tr>
+                     <td width="15%"/>
+                     <td width="85%" style="text-align:justify;">
+                        Exemplo: se, o Licenciado qualificado na categoria Premium cumprir 06 ações de Palestras, 03 
+                        ações de Outdoor (conforme definição no item 2.1 acima) perceberia o valor de 18.000,00 kg 
+                        (dezoito mil quilogramas) de desconto sobre o valor dos royalties previsto, a depender da 
+                        limitação de 1,0kg/sc (1 quilogramas por saca de 40kg). Logo, na hipótese de apuração do valor 
+                        a pagar a GDM a título de royalties seja, por exemplo, 170.000 kg (cento e setenta mil 
+                        quilogramas), correspondendo a 10.000 sacas, será concedido um desconto de 10.000,00 kg (dez 
+                        mil quilogramas) ou 1,00kg/sc (1 quilogramas por saca de 40kg), restando um saldo de 160.000 
+                        kg (cento e sessenta mil quilogramas) devido pelo <b>Licenciado</b>.
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <b><u>Bonificação 4</u>: Ações Comerciais em Conjunto</b>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <table width="100%" class="gridtable" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+                  <tr>
+                     <td style="text-align:center;" rowspan="2">
+                        <b>Volume total comercializado</b>
+                     </td>
+                     <td style="text-align:center;" colspan="3">
+                        <b>Categoria</b>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;" colspan="1">
+                        Standard
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Plus
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        Premium
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        0,0 a 100.000,00 sacos
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        0,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        0,0 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        0,0 kg/sc
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="text-align:center;">
+                        Acima de 100.001,00 sacos
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1,00 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1,00 kg/sc
+                     </td>
+                     <td style="text-align:center;" colspan="1">
+                        1,00 kg/sc
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               Compreende-se que cumprido o volume total comercializado acima previsto, o <b>Licenciado</b> fará jus a um 
+               desconto em quilogramas por saco conforme sua Categoria, para uso em ações comerciais a serem 
+               definidas em conjunto com a <b>GDM</b> e mediante a apresentação e aprovação pela GDM do recurso utilizado.
+            </td>
+         </tr>
+         <tr>
+            <TD>&nbsp;</TD>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               <b><u>Bonificação 5</u>: <u>Comercialização de Cultivares não BT</u></b>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:justify;">
+               Exclusivamente para a comercialização de Cultivar(es) Licenciada(s) que não contenham tecnologias 
+               <em>Intacta RR2 PRO®, Intacta2 Xtend® e Conkesta E3®</em>, o <b>Licenciado</b> poderá fazer jus a um desconto de até 
+               5,0 kgs por saco, para tais Cultivares Licenciadas, a ser aplicado sobre o volume de vendas efetivamente 
+               comercializado limitado a 30% sobre o volume total das vendas do portfólio Neogen.
+            </td>
+         </tr>
+      </table>
+   </table>
+</apex:page>

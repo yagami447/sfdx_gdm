@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Área de Atuação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRM Área de Atuação</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <validationRules>
+        <errorMessage><!-- Deve entrar todos os dados para area de atuação. --></errorMessage>
+        <name>Datos_Validos_Area_Atuacion</name>
+    </validationRules>
+</CustomObjectTranslation>

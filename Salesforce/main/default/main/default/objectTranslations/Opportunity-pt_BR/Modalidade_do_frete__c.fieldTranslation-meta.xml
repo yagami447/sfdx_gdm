@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Modalidade do frete --></label>
+    <name>Modalidade_do_frete__c</name>
+    <picklistValues>
+        <masterLabel>Por conta de terceiros</masterLabel>
+        <translation><!-- Por conta de terceiros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Por conta do Destinatario/Remetente</masterLabel>
+        <translation><!-- Por conta do Destinatario/Remetente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Por conta do emitente</masterLabel>
+        <translation><!-- Por conta do emitente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sem frete</masterLabel>
+        <translation><!-- Sem frete --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

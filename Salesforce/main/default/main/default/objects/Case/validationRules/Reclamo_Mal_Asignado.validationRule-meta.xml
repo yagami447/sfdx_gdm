@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reclamo_Mal_Asignado</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR( (ISPICKVAL(Responsable__c, &apos;Com. BMX 1 - Fausto Fanchin&apos;) || ISPICKVAL(Responsable__c, &apos;Com. BMX 2 - Fernando Frenher&apos;) || ISPICKVAL(Responsable__c, &apos;Com. BMX 3 - J. Cristiano Rosa&apos;) ||
+ISPICKVAL(Responsable__c, &apos;Com. BMX 4 - Sérgio Bertagnoli&apos;) ||
+ISPICKVAL(Responsable__c, &apos;Com. BMX 5 - Antonio Paiva&apos;) ||
+ISPICKVAL(Responsable__c, &apos;Com. BMX 5 - Tiago Goulart&apos;) ||
+ISPICKVAL(Responsable__c, &apos;Com. DSEM 1 - Charles C. Pinto&apos;) ||
+ISPICKVAL(Responsable__c, &apos;Com. DSEM 2 - Lucas C. Pires&apos;) || 
+ISPICKVAL(Responsable__c, &apos;Com. DSEM 3 - Sandro Ferrari M.&apos;) ||
+ISPICKVAL(Responsable__c, &apos;Com. DSEM 4 - Fernando Calazans&apos;)) &amp;&amp; ISPICKVAL(Tipo_De_Reclamo__c, &apos;Performance-Sanidade&apos;), (
+ ISPICKVAL(Responsable__c, &apos;Gerente Des. DSEM - Carlos Pattis&apos;) || 
+ISPICKVAL(Responsable__c, &apos;Gerente Des. BRMX - Francisco Nogara&apos;) || ISPICKVAL(Responsable__c, &apos;Gerente Des. BRMX - Pablo Souza&apos;)) &amp;&amp;  ISPICKVAL(Tipo_De_Reclamo__c, &apos;Qualidade do Sementes&apos;))</errorConditionFormula>
+    <errorMessage>Responsable mal Asignado</errorMessage>
+</ValidationRule>

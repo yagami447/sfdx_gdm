@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tamanho --></label>
+    <name>Tamanio__c</name>
+    <picklistValues>
+        <masterLabel>G</masterLabel>
+        <translation><!-- G --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GG</masterLabel>
+        <translation><!-- GG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M</masterLabel>
+        <translation><!-- M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P</masterLabel>
+        <translation><!-- P --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PP</masterLabel>
+        <translation><!-- PP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>XG</masterLabel>
+        <translation><!-- XG --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

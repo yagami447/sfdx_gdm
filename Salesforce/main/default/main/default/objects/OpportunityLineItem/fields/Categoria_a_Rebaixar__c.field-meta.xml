@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_a_Rebaixar__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Categoria Plantada</label>
+    <referenceTo>Categoria__c</referenceTo>
+    <relationshipLabel>Producto de oportunidad (Categoria a Rebaixar)</relationshipLabel>
+    <relationshipName>Producto_de_oportunidad1</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

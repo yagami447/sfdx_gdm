@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Em_Andamento</fullName>
+        <description>Cuando la visita esta sobre la fecha de realización se actualizara el estado del plano a &apos;Em Andamento&apos;</description>
+        <field>Status__c</field>
+        <literalValue>Em andamento</literalValue>
+        <name>Em Andamento</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

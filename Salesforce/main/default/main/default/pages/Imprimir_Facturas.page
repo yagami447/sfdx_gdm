@@ -1,0 +1,59 @@
+<apex:page controller="Imprimir_Facturas_Controller">
+
+    <apex:sectionHeader title="Imprimir Facturas" subtitle=""/>
+    <apex:pageMessages />
+    
+    <apex:form >       
+        
+        <apex:pageBlock >                        
+            <apex:pageBlockSection showHeader="false" columns="4" id="principal">
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Filial"/>
+                    <apex:inputField value="{!opp.Sucursal__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Numero Legal Desde"/>
+                    <apex:inputField value="{!opp.Numero_Legal__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Numero Legal Hasta"/>
+                    <apex:inputField value="{!opp2.Numero_Legal__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:commandButton action="{!Buscar}" style="width:80px" value="Buscar" rerender="seccion_resultado,seccion_facturar" status="status"></apex:commandButton>
+                <apex:actionStatus startText="Consultando..." id="status"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+                                                             
+        <apex:pageBlock >                               
+            <apex:pageBlockSection columns="1" title="Resultado" id="seccion_resultado">
+            <apex:pageMessages />
+            <apex:pageBlock >
+            <script>
+               function openWin(url){                                  
+                   window.open(url,'','fullscreen,scrollbars');
+               }
+               
+               function MostrarMsj(msj){
+                   if (msj != '') alert (msj);
+                   if (msj == 'Proceso Terminado')
+                      if(confirm('Desea Ir a la Ficha de Oportunidades?'))
+                         window.open('/apex/Opp_listMulti_Fc');
+               }
+            </script>            
+            </apex:pageBlock>        
+            <!-- <apex:commandButton style="float:center;margin-left:400px;width:80px;background:black;color:white" value="Imprimir" oncomplete="MostrarMsj('{!Mensaje}')" action="{!Imprimir}"></apex:commandButton> -->                       
+            <apex:pageBlockTable value="{!listaOpp}" var="oppl" id="resultado">
+                <apex:column headerValue="Conta"><apex:OutputLink value="../{!oppl.Account.Id}"> <apex:outputField value="{!oppl.Account.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Fatura"><apex:OutputLink value="../{!oppl.Id}"> <apex:outputField value="{!oppl.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Status"><apex:OutputField value="{!oppl.Estado_Facturacion__c}"/></apex:column>
+                <apex:column headerValue="Safra"><apex:OutputField value="{!oppl.Safra__c}"/></apex:column>
+                <apex:column headerValue="Data"><apex:OutputField value="{!oppl.CloseDate}"/></apex:column>
+                <apex:column headerValue="Numero Legal"><apex:OutputField value="{!oppl.Numero_Legal__c}"/></apex:column>
+                <apex:column headerValue=""><apex:outputLink value="{!UrlFor($SControl.Imprimir_opp,oppl.Id)}" target="_blank">Imprimir</apex:outputLink></apex:column>                       
+            </apex:pageBlockTable>    
+            </apex:pageBlockSection>                        
+        </apex:pageBlock>
+                
+    </apex:form>
+
+</apex:page>

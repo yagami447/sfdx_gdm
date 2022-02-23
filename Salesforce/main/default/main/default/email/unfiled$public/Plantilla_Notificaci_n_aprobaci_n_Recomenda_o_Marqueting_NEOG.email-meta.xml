@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Plantilla Notificación aprobación Recomendação Marqueting NEOG</name>
+    <style>none</style>
+    <subject>O registro {!Recomenda_o_de_variedade__c.Name} foi aprovado</subject>
+    <textOnly>O registro: &quot; {!Recomenda_o_de_variedade__c.Name} &quot; foi aprovado</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

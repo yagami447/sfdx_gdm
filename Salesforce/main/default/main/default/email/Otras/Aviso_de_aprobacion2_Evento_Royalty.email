@@ -1,0 +1,6 @@
+{!IF(
+    Evento_Royalty__c.Email_aprobacion__c,
+    "O EVENTO DE ROYALTY do multiplicador "+ Evento_Royalty__c.Cuenta__c+" está disponível para aprovação<br></br><br></br> Clique no link abaixo para acesso ao Salesforce: <br></br><br></br>"+Evento_Royalty__c.Name+" / "+ ApprovalRequest.External_URL+"<br></br><br></br>Atenciosamente,<br></br><br></br>"+ApprovalRequest.Process_Approver+"  ",
+
+    " Caro multiplicador, "+Evento_Royalty__c.Cuenta__c+"<br></br><br></br>As informações que você inseriu através do Portal não foram aprovadas.<br></br>Para que possa realizar as alterações necessárias, é permitida a edição das informações já contidas no Portal.<br></br>Clique no link abaixo para acessar o portal.<br></br><br></br>Tipo: Evento de royalty <br></br>Código de identificação: "+Evento_Royalty__c.Name+" <br></br>Motivo de Rejeição: "+ApprovalRequest.Comments+" <br></br>Portal: http://brasmaxgenetica.force.com/portal?comp=BRMX <br></br><br></br>Atenciosamente, <br></br><br></br> "+ApprovalRequest.Process_Approver +" ")
+}

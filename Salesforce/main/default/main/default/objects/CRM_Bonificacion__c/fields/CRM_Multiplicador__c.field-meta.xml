@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Multiplicador__c</fullName>
+    <description>el registro principal de CRM Multiplicador determina la Cuenta y la Safra o principal Multiplicador registro CRM determina a conta eo Safra</description>
+    <externalId>false</externalId>
+    <inlineHelpText>el registro principal de CRM Multiplicador determina la Cuenta y la Safra o principal Multiplicador registro CRM determina a conta eo Safra</inlineHelpText>
+    <label>CRM Multiplicador</label>
+    <referenceTo>CRM_Multiplicador__c</referenceTo>
+    <relationshipLabel>CRM Bonificaciones</relationshipLabel>
+    <relationshipName>CRM_Bonificaciones</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

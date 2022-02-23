@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Imprimir_Oportunidade</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Imprimir Oportunidade</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Opportunity.Id}&quot;;
+var name = &quot;{!Opportunity.Name}&quot;;
+var etapa = &quot;{!Opportunity.StageName}&quot;;
+var rt_opp = &quot;{!Opportunity.RecordTypeId}&quot;;
+var prop = &quot;{!Opportunity.OwnerId}&quot;;
+var lic = false;
+
+//if(prop == &apos;00540000001TNkCAAW&apos;){ lic = true; } // CARLOS PATTIS Para Sandbox 
+if (prop == &apos;00540000001TUHM&apos;) {
+    lic = true;
+} //Para Productivo 
+
+var rt = sforce.connection.query(&quot;SELECT Id, Name FROM RecordType WHERE Id = &apos;&quot; + rt_opp + &quot;&apos; limit 1&quot;);
+records = rt.getArray(&quot;records&quot;);
+rt_Name = records[0].Name.toString();
+
+if (rt_Name == &apos;Descarte&apos;) {
+    alert(&quot;Para gerar a autorização, deve aprová-la a partir do histórico de aprovações&quot;);
+} else if ((etapa == &apos;Aprobada&apos; || etapa == &apos;AU - Autorizada&apos; || etapa == &apos;Complementar informações&apos;)) {
+    if (rt_Name == &apos;Anexo I&apos;) {
+        var result = sforce.apex.execute(&quot;PdfGeneratorController&quot;, &quot;savePdfAnexoI&quot;, {
+            opId: id,
+            nombreOp: name,
+            licencias: lic
+        });
+    } else if(rt_Name != &apos;Descarte&apos;) {
+        var result = sforce.apex.execute(&quot;PdfGeneratorController&quot;, &quot;ImpresionOpp&quot;, {
+            opId: id,
+            nombreOp: name,
+            rtName: rt_Name,
+            marcaOpp: rt_Name,
+            licencias: lic
+        });
+    }
+} else {
+    alert(&quot;Fase para gerar a autorização deve ser aprovada.&quot;);
+}
+
+window.location.reload(true);</url>
+</WebLink>

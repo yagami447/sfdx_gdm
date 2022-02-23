@@ -1,0 +1,669 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="homePage" showHeader="false" standardStylesheets="false" cache="false" title="Home" controller="aSiteHomeController" action="{!validate}">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+    <body class="nav-md footer_fixed">   
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1" styleClass="topPanelContainer"> 
+        <br/>            
+            <apex:outputPanel layout="block" styleClass="topPanel">
+                <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                    <apex:panelGroup >
+                    <apex:form id="homeForm">
+                    
+                        <apex:actionFunction action="{!delay}" status="displayImg" name="redirect" reRender="profileForm" oncomplete="top.location = 'http://www.donmario.com/dmred';"/>                                          
+                        <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                            <apex:facet name="start" >
+                                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                                    &nbsp;
+                                    <br/><br/>
+                                    <center>
+                                    <h1 style="color:white;margin-top:20%;">
+                                        Será redirecionado para o portal do Paraguai.
+                                    </h1>
+                                    </center>
+                                </div>                                
+                                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                                    <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                                </div>
+                            </apex:facet>
+                        </apex:actionStatus>
+                    
+                        <apex:outputPanel styleClass="jumbotron" style="padding:0px;" layout="block">
+                            <apex:outputPanel styleClass="container" layout="block">
+                                <h2 style="font-size: 27px;">Olá, {!User.Name}</h2>
+                                <apex:outputPanel styleClass="container" layout="block" rendered="{!logUser.Habilitado_Anexos__c}">
+                                    <!--p>Atente-se ao prazo de 30 de abril para envio dos resultados de Lado a Lado (LxL).</p-->
+                                    <!--<p><a class="btn btn-primary btn-lg" role="button" onclick="goEvent('Lado a Lado');">Acesso ao Lado a Lado &raquo;</a></p>-->
+                                    <!--<p>O prazo para efetuar o lançamento do anexo II é 15/07/21. Fique atento!</p>-->
+                                    <!--<apex:commandButton styleClass="btn btn-primary btn-lg" value="Acesse o Anexo II" action="{!gotoAppend2}"/>-->
+                                    <p>O prazo para efetuar o lançamento dos anexos IV e V é 15/03/2022. Fique atento!</p>
+                                    <apex:commandButton styleClass="btn btn-primary btn-lg" value="Acesse o Anexo IV" action="{!gotoAppend4}"/>
+                                    <!--p>O prazo para efetuar o lançamento dos anexos IV e V é 15/03/2021. Fique atento!</p-->
+                                    <!--apex:commandButton styleClass="btn btn-primary btn-lg" value="Acesse o Anexo IV" action="{!gotoAppend4}"/-->
+                                </apex:outputPanel>   
+                                
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                        <apex:outputPanel styleClass="container" layout="block" rendered="{!logUser.Habilitado_Anexos__c}">
+                          <!-- Example row of columns -->
+                            <apex:outputPanel rendered="false" styleClass="row" layout="block">
+                                                                                                                          
+                                <apex:outputPanel styleClass="col-md-6" layout="block">
+                                    <div class="row tile_count">
+                                    <div class="tile_stats_count">
+                                    <span class="count_top"><i class="fa fa-industry"></i> Total Semente Bruta</span>
+                                    <div class="count">{!totalProduction}</div>
+                                    <!--<span class="count_bottom"><i class="green">{!diffProduction} </i> desde a ultima safra</span>-->
+                                    </div>
+                                    </div>
+                                    <!--
+                                    <p>Veja sua informação resumida em forma de gráficos.</p>
+                                    <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
+                                    -->
+                                </apex:outputPanel>
+
+                                <apex:outputPanel styleClass="col-md-6" layout="block">
+                                    <div class="row tile_count">
+                                    <div class="tile_stats_count">
+                                    <span class="count_top"><i class="fa fa-tree"></i> Total Ha. Plantado</span>
+                                    <div class="count green">{!totalPlantado}</div>
+                                    <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>{!diffSold} </i> desde a ultima safra</span>-->
+                                    </div>
+                                    </div>
+                                    <!--
+                                    <p>Veja sua informação resumida em forma de gráficos.</p>
+                                    <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
+                                    -->
+                                </apex:outputPanel>
+
+                                <!--
+                                <apex:outputPanel styleClass="col-md-4" layout="block">
+                                    <h2>Dashboard</h2>
+                                    <div class="row">
+                                                <p>Veja sua informação resumida em forma de gráficos.</p>
+                                    <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
+                                    </div>
+                                </apex:outputPanel>
+                                -->                                                                                                
+                            </apex:outputPanel>                    
+                            <!--<hr />-->
+
+                        </apex:outputPanel>
+                        
+                        <apex:actionFunction action="{!gotoAppend2}" name="goApp2" />
+                        <apex:actionFunction action="{!gotoAppend3}" name="goApp3" />
+                        <apex:actionFunction action="{!gotoAppend4}" name="goApp4" />
+                        <script>
+                            if ('{!redirectArg}' == 'true'){
+                                redirect();                                                        
+                            }
+                        </script>
+                    </apex:form> 
+                    
+                    
+                    
+                    <!--NUEVO****************************************************************-->
+                                <div>
+                                <div class="container text-center">                                            
+                                            <div class="row" style="border: 1px solid ">
+                                                <br/>
+                                                <div class="col-md-4">
+                                                    <p style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                        Pontos totais: {!FLOOR(total_puntos)}
+                                                    </p>
+                                                    <p style="{!if(marcaLog=='BRMX', 'display:none','')}">
+                                                        Desconto: {!porc_descuento} % 
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p>
+                                                        Categoria Anterior: {!categ_anterior}
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p>
+                                                        Categoria Atual: {!categ_actual}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <br/>
+                                            
+                                            <div class="row" style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td style="text-align:justify;">
+                                                           <table width="100%" Align="center" columns="5">
+                                                                <tr style="border-width: 0.5pt;border-style: solid;">
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;" rowspan="2">
+                                                                        <b>Classificação</b>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;" rowspan="2">
+                                                                        <b>Categoria</b>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;" rowspan="1" colspan="3">
+                                                                        <b>Valor do desconto em Porcentagem por Cultivar Licenciada:</b>                         
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="border-width: 0.5pt;border-style: solid;">
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <b>Classe 1</b>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <b>Classe 2</b>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <b>Classe 3</b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="border-width: 0.5pt;border-style: solid;">
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        De 16 a 20 pontos
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        Prata
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        0
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                            7,69%
+                                                                        </div>
+                                                                        <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                            3,57%
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                            6,25%
+                                                                        </div>
+                                                                        <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                            5,88%
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="border-width: 0.5pt;border-style: solid;">
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        De 21 a 23 pontos
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        Ouro
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        0
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                            15,38%
+                                                                        </div>
+                                                                        <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                            7,14%
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                            12,50%
+                                                                        </div>
+                                                                        <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                            11,76%
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="border-width: 0.5pt;border-style: solid;">
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        Acima de 23 pontos
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        Diamante
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        0
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                            19,23%
+                                                                        </div>
+                                                                        <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                            14,28%
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align:center;border-width: 0.5pt;border-style: solid;">
+                                                                        <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                            18,75%
+                                                                        </div>
+                                                                        <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                            17,64%
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            
+                                            <br/>
+                                            
+                                            <div class="row" style="border: 1px solid ">    
+                                            <div class="row">
+                                                <h3>
+                                                    Volume total de vendas e avanço sobre a meta                            
+                                                </h3>
+                                            </div>  
+                                            <div class="row">
+                                                <div class="col-md-6    ">
+                                                    <div class="row">
+                                                        <h2>
+                                                            <br/>
+                                                        </h2>
+                                                        <h2>
+                                                            Volume total autorizado: {!FLOOR(vol_autorizado)}
+                                                        </h2>
+                                                        <h2>
+                                                            Última atualização de venda: {!FLOOR(vol_vendido)}
+                                                        </h2>
+                                                        <br/><br/>
+                                                        <div style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                            <h4>
+                                                                (pontos requisito 2): {!FLOOR(puntos_req_2)}
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h4>
+                                                        Avanço (%)
+                                                    </h4>
+                                                    <div>
+                                                        <canvas id="gauge" style="width: 450px; height: 225px; margin: 0 -10%;"></canvas>
+                                                    </div>
+                                                    <div>
+                                                        <span id="gauge-value" style="color: black; font-size: 2em; font-weight: bold;"></span>
+                                                        <span style="color: black; font-size: 2em; font-weight: bold;">%</span>
+                                                    </div>
+                                                    <div style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                         <h4>
+                                                             (pontos requisito 1): {!FLOOR(puntos_req_1)}
+                                                         </h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                        <br/>
+                                        
+                                        <div class="row" style="{!if(marcaLog=='DSEM', 'display:none','border: 1px solid')}">
+                                        <div class="container text-center">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <h4>
+                                                        Penetração da tecnologia IPRO (%)
+                                                    </h4>
+                                                    <canvas id="piechart"></canvas>
+                                                    <br/><br/>
+                                                    <h4>
+                                                        (pontos requisito 3): {!FLOOR(puntos_req_3)}
+                                                    </h4>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h4>
+                                                        Mix de produto (%)
+                                                    </h4>
+                                                    <canvas id="barchart"></canvas>
+                                                    <br/><br/>
+                                                    <h4>
+                                                        (pontos requisito 4): {!FLOOR(puntos_req_4)}
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>      
+                                        
+                                        <br/>                                                                          
+                                        
+                                        <div class="container">
+                                            <div class="row" style="border: 1px solid ">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="{!if(marcaLog=='BRMX', 'display:none','')}">Ações Eletivas</th>
+                                                            <th style="{!if(marcaLog=='DSEM', 'display:none','')}">Objetivos de relacinamento e geração de demanda</th>
+                                                            
+                                                            <th>Meta</th>
+                                                            <th>Realizado</th>
+                                                            
+                                                            <th style="{!if(marcaLog=='BRMX', 'display:none','')}">Percentual para aplicação das Categorias</th>
+                                                            <th style="{!if(marcaLog=='DSEM', 'display:none','')}">Percentual de desconto (classe 3)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>LxL</td>
+                                                            <td>{!lxl_meta}</td>
+                                                            <td>{!lxl_realizado}</td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">30%</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                                <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                    6,25%
+                                                                </div>
+                                                                <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                    5,88%
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <apex:outputPanel rendered="{!lxl_realizado >= lxl_meta}">
+                                                                    <i class="fa fa-check-circle" style="color: green;"></i>
+                                                                </apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!lxl_realizado < lxl_meta}">
+                                                                    <i class="fa fa-times-circle" style="color: red;" ></i>
+                                                                </apex:outputPanel>
+                                                            </td>
+                                                        </tr>   
+                                                        <tr>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">Identificação das cultivares Brasmax nas rodovias</td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">Identificação das cultivares nas rodovias</td>
+                                                            <td>{!emp_meta}</td>
+                                                            <td>{!emp_realizado}</td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">30%</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                                <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                    3,125%
+                                                                </div>
+                                                                <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                    2,94%
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <apex:outputPanel rendered="{!emp_realizado >= emp_meta}">
+                                                                    <i class="fa fa-check-circle" style="color: green;"></i>
+                                                                </apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!emp_realizado < emp_meta}">
+                                                                    <i class="fa fa-times-circle" style="color: red;" ></i>
+                                                                </apex:outputPanel>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">Palestras</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">Palestras e treinamentos</td>
+                                                            <td>{!pal_trei_meta}</td>
+                                                            <td>{!pal_trei_realizado}</td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">20%</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                                <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                    3,125%
+                                                                </div>
+                                                                <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                    2,94%
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <apex:outputPanel rendered="{!pal_trei_realizado >= pal_trei_meta}">
+                                                                    <i class="fa fa-check-circle" style="color: green;"></i>
+                                                                </apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!pal_trei_realizado < pal_trei_meta}">
+                                                                    <i class="fa fa-times-circle" style="color: red;" ></i>
+                                                                </apex:outputPanel>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">Comodato de Área e Ensaios de Manejo</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">Controle de estoque</td>                                                            
+                                                            <td> - </td>
+                                                            <td> - </td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">10%</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                                <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                    3,125%
+                                                                </div>
+                                                                <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                    2,94%
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <apex:outputPanel rendered="{!((marcaLog=='BRMX' && puntos_stock > 0) || (marcaLog=='DSEM' && area_ensaios))}">
+                                                                    <i class="fa fa-check-circle" style="color: green;"></i>
+                                                                </apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!((marcaLog=='BRMX' && puntos_stock <= 0) || (marcaLog=='DSEM' && !area_ensaios))}">
+                                                                    <i class="fa fa-times-circle" style="color: red;" ></i>
+                                                                </apex:outputPanel>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">Dia de Campo Sem Custo</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">CRM</td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">{!dia_campo_meta}</td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">{!dia_campo_realizado}</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}"> - </td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}"> - </td>
+                                                            <td style="{!if(marcaLog=='BRMX', 'display:none','')}">10%</td>
+                                                            <td style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                                                <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                                    3,125%
+                                                                </div>
+                                                                <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                                    2,94%
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <apex:outputPanel rendered="{!((marcaLog=='BRMX' && puntos_crm > 0) || (marcaLog=='DSEM' && (dia_campo_realizado >= dia_campo_meta)))}">
+                                                                    <i class="fa fa-check-circle" style="color: green;"></i>
+                                                                </apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!((marcaLog=='BRMX' && puntos_crm <= 0) || (marcaLog=='DSEM' && (dia_campo_realizado < dia_campo_meta)))}">
+                                                                    <i class="fa fa-times-circle" style="color: red;" ></i>
+                                                                </apex:outputPanel>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <br/>
+                                        
+                                        
+                                        <div class="container" style="{!if(marcaLog=='DSEM', 'display:none','')}">
+                                            <div class="row" style="border: 1px solid ">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Volume de vendas</th>
+                                                            <th>Porcentagem de desconto</th>                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Classe 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {!FLOOR(vendas_classe1)}</td>
+                                                            <td>{!if(vendas_classe1 > 0, desc_classe1, 0)} %</td>                                                            
+                                                        </tr>   
+                                                        <tr>
+                                                            <td>Classe 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {!FLOOR(vendas_classe2)}</td>
+                                                            <td>{!if(vendas_classe2 > 0, desc_classe2, 0)} %</td>                                                            
+                                                        </tr>                 
+                                                        <tr>
+                                                            <td>Classe 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {!FLOOR(vendas_classe3)}</td>
+                                                            <td>{!if(vendas_classe3 > 0, desc_classe3, 0)} %</td>                                                            
+                                                        </tr>                                       
+                                                    </tbody>
+                                                </table>
+                                                <div style="{!if(region_cuenta=='CERRADO', 'display:none','')}">                                                                        
+                                                    Porcentagem de desconto superior a 12,50% nos objetivos de relacionamento e geração de demanda: {!desc_superior_classe3} %<br/>
+                                                (apenas classe 3)
+                                                </div>
+                                                <div style="{!if(or(region_cuenta=='REGION 1', region_cuenta=='REGION 2'), 'display:none','')}">                                                                        
+                                                    Porcentagem de desconto superior a 11,76% nos objetivos de relacionamento e geração de demanda: {!desc_superior_classe3} %<br/>
+                                                (apenas classe 3)
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        
+                                        <div class="container">
+                                            <div class="row" style="border: 1px solid ">
+                                                <table>
+                                                <tr>
+                                                <td>
+                                                <b><em>Lembramos que os resultados apontados neste portal são estimativas e podem variar a depender da consolidação de dados e documentos oficiais do<br/>
+                                                Multiplicador, a serem disponibilizados para o cálculo de desconto da Política de Bonificação.</em></b>
+                                                </td>
+                                                </tr>
+                                                </table>
+                                            </div>
+                                        </div>    
+                                        <br/>
+                                    </div>
+                                <!--NUEVO****************************************************************-->
+                    
+                    
+                    
+                    </apex:panelGroup>
+                </apex:panelGrid> 
+            </apex:outputPanel>
+        </apex:panelGrid> 
+    </apex:panelGrid>
+    </center>
+    </body>
+    <br/>
+</apex:define>
+</apex:composition>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <script>
+        // Bar chart
+        let barchartInfo = JSON.parse('{!indicador2json}');
+        console.table(barchartInfo);
+        let labelsForBarChart = barchartInfo.map(x => x.name);
+        let dataForBarChart = barchartInfo.map(y => y.data);
+
+        var ctx = document.getElementById('barchart');
+        var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: labelsForBarChart,
+                datasets: [{
+                    data: dataForBarChart,
+                    backgroundColor: backgroundColorsByData(dataForBarChart.length)
+                }]
+            },
+            options: {
+                legend: false,
+                scales: {
+                    yAxes: [{
+                        type: 'category',
+                        labels: labelsForBarChart,
+                        categorySpacing: 0,
+                        categoryPercentage: 1.0,
+                        barPercentage: 1.0,
+                        ticks: {
+                                minRotation: 0,
+                                fontSize: 8
+                            }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // Pie chart
+        let piechartInfo = JSON.parse('{!indicador3json}');
+        let labelsForPieChart = piechartInfo.map(x => x.name);
+        let dataForPieChart = piechartInfo.map(y => y.data);
+
+        var ctx1 = document.getElementById('piechart');
+        var myPieChart = new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: labelsForPieChart,
+                datasets: [{
+                    data: dataForPieChart,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                cutoutPercentage: 0
+            }
+        });
+
+        // Gauge chart
+        let gaugePercentage = {!avance};
+
+        var opts = {
+            angle: 0,
+            lineWidth: 0.6,
+            radiusScale: 1,
+            pointer: {
+                length: 0.6,
+                strokeWidth: 0.035,
+                color: '#000000'
+            },
+            staticZones: [
+                { strokeStyle: "#FFDD00", min: 70, max: 85 }, // Yellow
+                { strokeStyle: "#30B32D", min: 85, max: 100 }, // Green
+                { strokeStyle: "#F03E3E", min: 0, max: 70 }  // Red
+            ],
+            staticLabels: {
+                font: "10px sans-serif",
+                labels: [70, 85, 100],
+                color: "#000000",
+                fractionDigits: 0
+            },
+            limitMax: 125,
+            limitMin: 0,
+            colorStart: '#6FADCF',
+            colorStop: '#8FC0DA',
+            strokeColor: '#E0E0E0',
+            generateGradient: true,
+            highDpiSupport: true,
+        };
+
+        var target = document.getElementById('gauge');
+        var gauge = new Gauge(target).setOptions(opts);
+        gauge.setTextField(document.getElementById("gauge-value"), 2);
+        gauge.maxValue = 100;
+        gauge.setMinValue(0);
+        gauge.animationSpeed = 32;
+        gauge.set(gaugePercentage);
+
+        // Helper
+
+        function randomColor() {
+            var hue = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ', .6)';
+            return hue;
+        }
+
+        function backgroundColorsByData(s) {
+            let arr = [];
+            for (let i = 0; i < s; i++) {
+                arr.push(randomColor());
+            }
+            return arr;
+        }
+
+    </script>
+
+
+
+
+
+    
+
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enviar_a_Sap</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Enviar a Sap</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Account.Id}&quot;;
+var result = sforce.apex.execute(&quot;Acc_BloqDatos2&quot;,&quot;BloqCuenta&quot;, {accId : id, target : 200});
+alert(result); 
+
+
+//alert(&quot;Momentaneamente inhabilitado. Estamos realizando tareas de mantenimiento. Cuando el servicio esté activo, se le comunicará.&quot;); 
+
+window.location.reload();</url>
+</WebLink>

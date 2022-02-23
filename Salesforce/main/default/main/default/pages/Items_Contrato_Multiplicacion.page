@@ -1,0 +1,80 @@
+<apex:page Controller="itemsContratoMultController" title="Items del Contrato" tabStyle="Item_del_Contrato__c" action="{!init}">
+<apex:form id="form" style="width: 1000px">
+<apex:sectionHeader title="Items del contrato {!nombreContrato}"></apex:sectionHeader>
+<apex:pageBlock mode="edit">
+<apex:pageMessages />
+<apex:pageBlockSection >
+<apex:pageblocktable value="{!items}"  var="item" id="item" style="width: 400px">
+<apex:column headerValue="Variedade">
+    <apex:outputField value="{!item.Variedade__c}"/>
+    <!--<apex:outputField value="{!item.Variedade__c}" rendered="{!item.Id != editItem}"/>
+    <apex:selectList rendered="{!item.Id == editItem}" value="{!editBasica}" size="1"><apex:selectOptions rendered="{!item.Id == editItem}" value="{!ProductosBasica}"/></apex:selectList> -->
+</apex:column>
+<!-- <apex:column headerValue="Categoria" rendered="{!recTypeContrato == 'Aditivo BRMX' || recTypeContrato == 'Aditivo DSEM'}">
+    <apex:outputField value="{!item.Categoria__c}" rendered="{!item.Id != editItem}"/>
+    <apex:inputField value="{!item.Categoria__c}" rendered="{!item.Id == editItem}" required="true"/>
+</apex:column> -->
+<apex:column headerValue="Quantidade" rendered="{!recTypeContrato == 'Aditivo BRMX' || recTypeContrato == 'Aditivo DSEM'}">
+    <apex:outputField value="{!item.Quantidade__c}" rendered="{!item.Id != editItem}"/>
+    <apex:inputField value="{!item.Quantidade__c}" rendered="{!item.Id == editItem}" required="true"/>
+</apex:column>
+<apex:column headerValue="Porcentaje" rendered="{!recTypeContrato == 'Aditivo % BRMX' || recTypeContrato == 'Aditivo % DSEM'}">
+    <apex:outputField value="{!item.Porcentaje__c}" rendered="{!item.Id != editItem}"/>
+    <apex:inputField value="{!item.Porcentaje__c}" rendered="{!item.Id == editItem}" required="true"/>
+</apex:column>
+<apex:column headerValue="Preço" rendered="{!recTypeContrato != 'Aditivo BRMX' && recTypeContrato != 'Aditivo DSEM' && recTypeContrato != 'Aditivo % BRMX' && recTypeContrato != 'Aditivo % DSEM'}">
+    <apex:outputField value="{!item.Precio__c}" rendered="{!item.Id != editItem}"/>
+    <apex:inputField value="{!item.Precio__c}" rendered="{!item.Id == editItem}"/>
+</apex:column>
+<apex:column headerValue="Incidência para Votar" rendered="{!recTypeContrato == 'DSEM'}">
+    <apex:outputField value="{!item.Incidencia_para_Votar__c}" rendered="{!item.Id != editItem}"/>
+    <apex:inputField value="{!item.Incidencia_para_Votar__c}" rendered="{!item.Id == editItem}"/>
+</apex:column>
+<apex:column headerValue="" >
+    <apex:commandLink action="{!editarItem}" rerender="form" rendered="{!item.Id != editItem}" value="Editar ">
+        <apex:param name="edit_item" value="{!item.Id}"/>
+    </apex:commandLink>&nbsp;  
+    <apex:commandLink action="{!eliminarItem}" rendered="{!item.Id != editItem}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+        <apex:param name="eliminar_item" value="{!item.Id}"/>
+    </apex:commandLink>
+    <apex:commandLink action="{!cancelEditarItem}" rendered="{!item.Id == editItem}">Cancelar</apex:commandLink>&nbsp;
+    <apex:commandLink action="{!saveEditItem}" rendered="{!item.Id == editItem}">Salvar
+        <apex:param name="save_edit_item" value="{!item.Id}"/>
+    </apex:commandLink>
+</apex:column>
+</apex:pageblocktable>
+            <script>
+               function MostrarMsj(msj){
+                   if (msj != '') alert (msj);
+               }
+            </script> 
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Adicionar">
+<apex:pageblocktable value="{!nuevoItem}" var="nuevo" id="nuevo">
+<apex:column headerValue="Variedade">
+    <apex:selectList value="{!nuevoBasica}" size="1"><apex:selectOptions value="{!ProductosBasica}"/></apex:selectList>
+</apex:column>
+<!-- <apex:column headerValue="Categoria" rendered="{!recTypeContrato == 'Aditivo BRMX'  || recTypeContrato == 'Aditivo DSEM'}" >
+    <apex:inputField value="{!nuevo.Categoria__c}"/>
+</apex:column> -->
+<apex:column headerValue="Quantidade" rendered="{!recTypeContrato == 'Aditivo BRMX' || recTypeContrato == 'Aditivo DSEM'}">
+    <apex:inputField value="{!nuevo.Quantidade__c}"/>
+</apex:column>
+<apex:column headerValue="Porcentaje" rendered="{!recTypeContrato == 'Aditivo % BRMX' || recTypeContrato == 'Aditivo % DSEM'}">
+    <apex:inputField value="{!nuevo.Porcentaje__c}"/>
+</apex:column>
+<apex:column headerValue="Preço" rendered="{!recTypeContrato != 'Aditivo BRMX' && recTypeContrato != 'Aditivo DSEM' && recTypeContrato != 'Aditivo % BRMX' && recTypeContrato != 'Aditivo % DSEM'}">
+    <apex:inputField value="{!nuevo.Precio__c}"/>
+</apex:column>
+<apex:column headerValue="Incidência para Votar" rendered="{!recTypeContrato  == 'DSEM'}">
+    <apex:inputField value="{!nuevo.Incidencia_para_Votar__c}"/>
+</apex:column>
+<apex:column headerValue="">
+    <apex:commandLink style="width: 100px" value="Adicionar" action="{!addItem}" />
+</apex:column>
+</apex:pageblocktable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:commandButton value="Voltar" action="{!volver}"/>
+</apex:form>
+</apex:page>

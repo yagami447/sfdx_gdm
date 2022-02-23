@@ -1,0 +1,2723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- AnexoI --></label>
+        <name>AnexoI</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anexos --></label>
+        <name>Anexos</name>
+    </fieldSets>
+    <layouts>
+        <layout>Anexo I - Comunidades</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo I - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo I Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo II</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo II - Comunidades</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Não necessário preenchimento --></label>
+            <section>Não necessário preenchimento</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo II - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo II Administrador</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo II Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo III</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo III - Comunidades</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo III - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo III Administrador</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <section>Productos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo III Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo IV - Comunidades</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo IV - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo Rebaixamento</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo Rebaixamento - Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo Rebaixamento - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo Rebaixamento Sacas</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <section>Productos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo Rebaixamento Sacas - Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo Rebaixamento Sacas - Comunidad</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo V - Comundades</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo V - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexo V Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexos</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexos Administrador</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anexos Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anticipo - Autorizado</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Anticipo - Pendiente</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CVB - Autorizada</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CVB - Pendiente</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CVB - Pendiente Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CVB - Rechazada</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CVB - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Controle de Estoque</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da oportunidade --></label>
+            <section>Informação da oportunidade</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Controle de Estoque - Comunidad</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da oportunidade --></label>
+            <section>Informação da oportunidade</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Controle de Estoque - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação da oportunidade --></label>
+            <section>Informação da oportunidade</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Copia de Reembalaje - Comunidad</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Descarte - Comunidade</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Descarte - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Disponibilidade da Basica</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Disponibilidade da Basica-Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Estimativa Faturamento</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Estimativa de venda</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Estimativa de venda - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fc de Brasmax</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Contabilização SAP --></label>
+            <section>Datos de Contabilização SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fc de Brasmax - ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Contabilização SAP --></label>
+            <section>Datos de Contabilização SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fc de Brasmax - Comec</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Contabilização SAP --></label>
+            <section>Datos de Contabilização SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fc de Brasmax - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Contabilização SAP --></label>
+            <section>Datos de Contabilização SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fc de Brasmax Emitida</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Contabilização SAP --></label>
+            <section>Datos de Contabilização SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de oportunidades</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - AUTORIZADA</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - AUTORIZADA ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - PENDIENTE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - PENDIENTE ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - PENDIENTE Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - RECHAZADA</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NC - RECHAZADA ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - AUTORIZADA</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - AUTORIZADA ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - PENDIENTE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - PENDIENTE ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - RECHAZADA</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - RECHAZADA ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NV - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de Facturacion --></label>
+            <section>Datos de Facturacion</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Contrato Royalties</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Contrato Royalties - Admin</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Contrato Royalties - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Ventas</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Ventas - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Ventas Royalties</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Ventas Royalties - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Objetivo Ventas Royalties - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Oportunidad de Exp - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Oportunidad de Exportacion</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Oportunidad de Rebaj. - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Oportunidad de Rebajamiento</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Comercial</layout>
+        <sections>
+            <label><!-- Dados Generales --></label>
+            <section>Dados Generales</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Nueva sección --></label>
+            <section>Nueva sección</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Comercial - Produccion</layout>
+        <sections>
+            <label><!-- Dados Generales --></label>
+            <section>Dados Generales</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Nueva sección --></label>
+            <section>Nueva sección</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Comercial Admin</layout>
+        <sections>
+            <label><!-- Dados Generales --></label>
+            <section>Dados Generales</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Nueva sección --></label>
+            <section>Nueva sección</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Comercial Milho</layout>
+        <sections>
+            <label><!-- Dados Generales --></label>
+            <section>Dados Generales</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Comercial Solo Lectura</layout>
+        <sections>
+            <label><!-- Dados Generales --></label>
+            <section>Dados Generales</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Nueva sección --></label>
+            <section>Nueva sección</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Oferta</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Oferta Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Produccion</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Produccion Admin</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB-Produccion Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Previsao</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Previsao - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Previsao - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Previsao_Comunidade</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reembalagem</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de SIstemas --></label>
+            <section>Informação de SIstemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reembalaje - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relatorio de Prod. - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relatorio de Producao</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relatorio de Venda</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relatorio de Venda - ADMIN</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relatorio de Venda - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sementes Terceiros</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sementes Terceiros - Administrativo</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Stock Multiplicadores</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Comentarios --></label>
+            <section>Comentarios</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Stock Multiplicadores - Comunidade</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Comentários --></label>
+            <section>Comentários</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Stock Multiplicadores - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Comentarios --></label>
+            <section>Comentarios</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Stock Multiplicadores - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Comentarios --></label>
+            <section>Comentarios</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Stock Multiplicadores Milho</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Comentarios --></label>
+            <section>Comentarios</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB - Aprob Administrativos</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Dados Administração de Vendas --></label>
+            <section>Dados Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB - Aprobadas</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Dados Administração de Vendas --></label>
+            <section>Dados Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB - Aprobadas Admin</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Dados Administração de Vendas --></label>
+            <section>Dados Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB - Facturadas</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB - Facturadas Admin</layout>
+        <sections>
+            <label><!-- Datos Administração de Vendas --></label>
+            <section>Datos Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Detalhe --></label>
+            <section>Detalhe</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB - Pendiente</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Dados Administração de Vendas --></label>
+            <section>Dados Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Produtos --></label>
+            <section>Produtos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB Franq Mult - Solo Lectura</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>VB Pendiente - LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Dados Administração de Vendas --></label>
+            <section>Dados Administração de Vendas</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Sistemas --></label>
+            <section>Informação de Sistemas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Venta de Basica</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmações --></label>
+            <section>Confirmações</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Primeiro vencimento --></label>
+            <section>Primeiro vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <section>Productos</section>
+        </sections>
+        <sections>
+            <label><!-- Quarto vencimento --></label>
+            <section>Quarto vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Quinto vencimento --></label>
+            <section>Quinto vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Segundo vencimento --></label>
+            <section>Segundo vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Terceiro vencimento --></label>
+            <section>Terceiro vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Venta de Basica - Vendedores</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Primeiro vencimento --></label>
+            <section>Primeiro vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <section>Productos</section>
+        </sections>
+        <sections>
+            <label><!-- Quarto vencimento --></label>
+            <section>Quarto vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Quinto vencimento --></label>
+            <section>Quinto vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Segundo vencimento --></label>
+            <section>Segundo vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Terceiro vencimento --></label>
+            <section>Terceiro vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Venta de Basica Franq a Mult</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Venta de Hibrido</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmações --></label>
+            <section>Confirmações</section>
+        </sections>
+        <sections>
+            <label><!-- Importe --></label>
+            <section>Importe</section>
+        </sections>
+        <sections>
+            <label><!-- Outros dados --></label>
+            <section>Outros dados</section>
+        </sections>
+        <sections>
+            <label><!-- Primeiro vencimento --></label>
+            <section>Primeiro vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <section>Productos</section>
+        </sections>
+        <sections>
+            <label><!-- Quarto vencimento --></label>
+            <section>Quarto vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Quinto vencimento --></label>
+            <section>Quinto vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Segundo vencimento --></label>
+            <section>Segundo vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Terceiro vencimento --></label>
+            <section>Terceiro vencimento</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Inserir Motivo de Rejeição --></label>
+        <name>Agregar_motivo_de_Rechazo</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Autorizar --></label>
+        <name>Autorizar</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Bloquear/Liberar --></label>
+        <name>Bloquear_Liberar</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cancelamento --></label>
+        <name>Cancelamento</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Confirmar --></label>
+        <name>Confirmar</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Enviar para SAP --></label>
+        <name>Enviar_para_SAP</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Enviar para aprovação --></label>
+        <name>Enviar_para_aprova_o</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Procesar Estimativas --></label>
+        <name>Procesar_Estimativas</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Anexo I -Autorização para multiplicação --></description>
+        <label><!-- Anexo I --></label>
+        <name>AnexoI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Anexo II - Relatório de produção de sementes --></description>
+        <label><!-- Anexo II --></label>
+        <name>AnexoII</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Anexo III - Relatório de produção de sementes --></description>
+        <label><!-- AnexoIII - NO USAR --></label>
+        <name>AnexoIII</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Anexo IV - Atualização Comercial --></description>
+        <label><!-- AnexoIV --></label>
+        <name>AnexoIV</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Anexo V - Relatório vendas por Estado --></description>
+        <label><!-- Anexo V --></label>
+        <name>AnexoV</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Anexo III --></label>
+        <name>Anexo_III</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Anexo II Rebaixamento Sacas --></description>
+        <label><!-- Anexo II Rebaixamento Sacas --></label>
+        <name>Anexo_II_Rebaixamento_Sacas</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Anexo IV --></label>
+        <name>Anexo_IV</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Anexo I Rebaixamento Ha --></label>
+        <name>Anexo_I_Rebaixamento_Ha</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Antecipação Autorizada --></label>
+        <name>Anticipo_Autorizada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Antecipação Pendente --></label>
+        <name>Anticipo_Pendiente</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Aquisição Sementes Terceiros --></label>
+        <name>Aquisicion_Sementes_Terceiros</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Autorizada --></label>
+        <name>Autorizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Confirmación de Venta de Básica bajada a SAP --></description>
+        <label><!-- CVB Autorizada --></label>
+        <name>CVB_Autorizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Es la confirmación de la venta de básica antes de ser enviada a SAP como NV. --></description>
+        <label><!-- CVB Pendiente --></label>
+        <name>CVB_Pendiente</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Confirmación de Venta de Básica rechazada. --></description>
+        <label><!-- CVB Rechazada --></label>
+        <name>CVB_Rechazada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Detalle de lo que el multiplicador va a vender: relatorio de venda --></description>
+        <label><!-- Comercial --></label>
+        <name>Comercial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Descarte --></label>
+        <name>Descarte</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Oportunidad para ingresar el stock de Básica por Safra, Marca y Macroregión. --></description>
+        <label><!-- Disponibilidade da Basica --></label>
+        <name>Disponibilidade_da_Basica</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Estimativa de faturamento --></label>
+        <name>Estimativa_de_faturamento</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Estimativa de venda --></label>
+        <name>Estimativa_de_venda</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Exportacion --></label>
+        <name>Exportacion</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Fc de Brasmax x Venta de Genetica y Royalty (Basica - C-S) --></description>
+        <label><!-- Fc de Brasmax --></label>
+        <name>Fc_de_Brasmax</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Fc de Brasmax x Venta de Genetica y Royalty (Basica - C-S) Emitida --></description>
+        <label><!-- Fc de Brasmax Contabilizada --></label>
+        <name>Fc_de_Brasmax_Contabilizada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MBVentas --></label>
+        <name>MBVentas</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NC - Autorizada --></label>
+        <name>NC_Autorizada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NC - Pendiente --></label>
+        <name>NC_Pendiente</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NC - Rechazada --></label>
+        <name>NC_Rechazada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Objetivo Contrato Royalties --></label>
+        <name>Objetivo_Contrato_Royalties</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se utiliza para indicar los objetivos tanto de Venta de Royalties --></description>
+        <label><!-- Objetivo Ventas Royalties --></label>
+        <name>Objetivo_Ventas_Royalties</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se utiliza para indicar los objetivos tanto de Venta de Basica --></description>
+        <label><!-- Objetivo Ventas Semilla --></label>
+        <name>Objetivo_Ventas_Semilla</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Oportunidades para registrar los cambios de Oferta y demanda de Producción de Básica --></description>
+        <label><!-- PB-Comercial --></label>
+        <name>PB_Comercial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PB-Comercial Milho --></label>
+        <name>PB_Comercial_Milho</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Oportunidades para registrar los cambios de Oferta y demanda de Producción de Básica --></description>
+        <label><!-- PB-Desarrollo --></label>
+        <name>PB_Desarrollo</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Reemplaza al tipo de registro PB-Produccion a partir de la safra 15/16. Se crea a partir de la oferta que se consulta a SAP. --></description>
+        <label><!-- PB-Oferta --></label>
+        <name>PB_Oferta</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Oportunidades para registrar los cambios de Oferta y demanda de Producción de Básica --></description>
+        <label><!-- PB-Produccion --></label>
+        <name>PB_Produccion</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pendiente --></label>
+        <name>Pendiente</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Previsiones de Ventas de Bolsas de Básica --></description>
+        <label><!-- Previsao --></label>
+        <name>Previsao</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Indica que la previsión se encuentra cerrada y ya no se pueden generar más NV a partir de la misma. --></description>
+        <label><!-- Previsao Cerrada --></label>
+        <name>Previsao_Cerrada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Oportunidades para ingresar valores de Previção e Comerc. (Controle de Estoque) --></description>
+        <label><!-- Previsao e Estoque --></label>
+        <name>Previsao_e_Estoque</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Detalle de lo que el multiplicador va a sembrar: autorización correspondiente y relatorio de produccion --></description>
+        <label><!-- Produccion --></label>
+        <name>Produccion</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Detalle de lo que el multiplicador va a rebajar: autorización de rebajamiento --></description>
+        <label><!-- Rebaja --></label>
+        <name>Rebaja</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Rechazada --></label>
+        <name>Rechazada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reembalaje --></label>
+        <name>Reembalaje</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Stock Multiplicadores --></label>
+        <name>Stock_Multiplicadores</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Stock Multiplicadores Milho --></label>
+        <name>Stock_Multiplicadores_Milho</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Nota de Venta de Básica Autorizada --></description>
+        <label><!-- VB - Autorizada --></label>
+        <name>VB_Autorizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Nota de Venta de Básica Pasada a SAP y cerrada --></description>
+        <label><!-- VB - Pasada SAP --></label>
+        <name>VB_Facturada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Nota de Venta de Básica Pendiente --></description>
+        <label><!-- VB - Pendiente --></label>
+        <name>VB_Pendiente</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Nota de Venta de Básica Rechazada --></description>
+        <label><!-- VB - Rechazada --></label>
+        <name>VB_Rechazada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Venda da Basica --></description>
+        <label><!-- Venda da Basica --></label>
+        <name>VENTA_DE_BASICA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Venda da Basica Completo --></label>
+        <name>Venda_da_Basica_full</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Venda da Hibrido --></label>
+        <name>Venda_da_Hibrido</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- A soma dos taxas deve ser igual a 100% --></errorMessage>
+        <name>A_soma_dos_taxas</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Oportunidades devem ser criadas na fase de edição. --></errorMessage>
+        <name>BLOCK_COMMUNITY_EDICION</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Não pode alterar o nome da oportunidade --></errorMessage>
+        <name>DONT_EDIT_NAME</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A oportunidade deve ser aprovada pelo multiplicador. --></errorMessage>
+        <name>Deve_ser_aprovada_pelo_multiplicador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Você não tem permissões suficientes para modificar o estágio desta oportunidade. --></errorMessage>
+        <name>Etapa_CVB_Autorizada_No_Editable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Taxa de pagamento do vencimento ou Fecha do vencimento não pode estar vazio. --></errorMessage>
+        <name>If_Venc_NotBlank_Taxa_ShouldntBe_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Por favor utilizar somente 2 casas decimais. --></errorMessage>
+        <name>Limit_Taxa_de_primeiro_pagamento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Por favor utilizar somente 2 casas decimais. --></errorMessage>
+        <name>Limit_Taxa_de_quarto_pagamento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Por favor utilizar somente 2 casas decimais. --></errorMessage>
+        <name>Limit_Taxa_de_quinto_pagamento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Por favor utilizar somente 2 casas decimais. --></errorMessage>
+        <name>Limit_Taxa_de_segundo_pagamento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Por favor utilizar somente 2 casas decimais. --></errorMessage>
+        <name>Limit_Taxa_de_terceiro_pagamento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A conta tem de ser o mesmo que na ordem original --></errorMessage>
+        <name>NC_Cliente_igual_Cliente_pedido_original</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Marca Inválida --></errorMessage>
+        <name>Prevision_con_Marca_Incorrecta</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Região incorreta. --></errorMessage>
+        <name>Produccion_Basica_Region_Incorrecta</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe seleccionar una oportunidad Anexo II. --></errorMessage>
+        <name>Rebaja_Anexo_II_Pedido_Relacionado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe seleccionar una oportunidad Anexo I. --></errorMessage>
+        <name>Rebaja_Anexo_I_Pedido_Relacionado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Tipo de Anexo Relacionado é incorreto --></errorMessage>
+        <name>Tipo_de_Anexo_Incorrecto</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cobrado R$ no puede superar el Total en Reales (R$) --></errorMessage>
+        <name>Validacion_Monto_Cobrado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O Anexo relacionado deve ser da mesma conta que a rebaixa. --></errorMessage>
+        <name>Validar_Cuenta</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O estoque desse mês já foi lançado, atualize esse lançamento. --></errorMessage>
+        <name>duplicate_stock</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Actualizar_SAP --></label>
+        <name>Actualizar_SAP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Anular --></label>
+        <name>Anular</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Anular_110 --></label>
+        <name>Anular_110</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Anular_Factura --></label>
+        <name>Anular_Factura</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Anular_y_Clonar --></label>
+        <name>Anular_y_Clonar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Asignar_Oferta --></label>
+        <name>Asignar_Oferta</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Atualizar_Demanda --></label>
+        <name>Atualizar_Demanda</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Atualizar_lightning --></label>
+        <name>Atualizar_lightning</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Autorizar --></label>
+        <name>Autorizar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Autorizar_relatorio --></label>
+        <name>Autorizar_relatorio</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cancelamento_VB --></label>
+        <name>Cancelamento_VB</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cerrar_Prevision --></label>
+        <name>Cerrar_Prevision</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clonar --></label>
+        <name>Clonar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Confirmar --></label>
+        <name>Confirmar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contabilizar_Fc_en_Sap --></label>
+        <name>Contabilizar_Fc_en_Sap</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Descontabilizar --></label>
+        <name>Descontabilizar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Devolucion_Confirmacion --></label>
+        <name>Devolucion_Confirmacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Editar_Custom --></label>
+        <name>Editar_Custom</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Editar_Produtos --></label>
+        <name>Editar_Produtos</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Editar_produtos_comunidade --></label>
+        <name>Editar_produtos_comunidade</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Fechar_Previsao --></label>
+        <name>Fechar_Previsao</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generar_Aut_Anexo_I --></label>
+        <name>Generar_Aut_Anexo_I</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Imprimir_Autorizacion --></label>
+        <name>Imprimir_Autorizacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Imprimir_Autorizacion_reb --></label>
+        <name>Imprimir_Autorizacion_reb</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Imprimir_Factura --></label>
+        <name>Imprimir_Factura</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Imprimir_Oportunidade --></label>
+        <name>Imprimir_Oportunidade</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Liberar_o_Bloquear --></label>
+        <name>Liberar_o_Bloquear</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Liberar_para_edicion --></label>
+        <name>Liberar_para_edicion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Notificar --></label>
+        <name>Notificar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Oferta --></label>
+        <name>Oferta</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PRUEBA_AU_DES --></label>
+        <name>PRUEBA_AU_DES</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PRUEBA_AU_QA --></label>
+        <name>PRUEBA_AU_QA</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Productos --></label>
+        <name>Productos</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Produtos --></label>
+        <name>Produtos</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Produtos_ver --></label>
+        <name>Produtos_ver</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rechazar --></label>
+        <name>Rechazar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rechazar_Confirmacion --></label>
+        <name>Rechazar_Confirmacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rechazar_Liberar --></label>
+        <name>Rechazar_Liberar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Relatorio --></label>
+        <name>Relatorio</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Relatorio_Gral --></label>
+        <name>Relatorio_Gral</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Venda --></label>
+        <name>Venda</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Venda_Basica --></label>
+        <name>Venda_Basica</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Ver_Productos --></label>
+        <name>Ver_Productos</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- crear_sig_mes_stock --></label>
+        <name>crear_sig_mes_stock</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendWithDocuSign --></label>
+        <name>dfsle__SendWithDocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- prueba_oferta --></label>
+        <name>prueba_oferta</name>
+    </webLinks>
+</CustomObjectTranslation>

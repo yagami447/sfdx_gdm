@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Aviso_de_Cantidad_de_Semente_Bruta_superior_a_113_sacas</fullName>
+        <description>Aviso de Cantidad de Semente Bruta superior a 113 sacas</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Sem_Bruta_113_sacas</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Actualizar_Opp</fullName>
+        <description>Actualización de campo de Opp para que un update de ítem dispare el trigger de la cabecera.</description>
+        <field>Trigger__c</field>
+        <formula>TEXT(LastModifiedDate)</formula>
+        <name>Actualizar Opp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>OpportunityId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Precio_Total_Aux</fullName>
+        <field>Precio_Total_Aux__c</field>
+        <formula>Precio_Total__c</formula>
+        <name>Actualizar Precio Total Aux</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Sem_Comer_Uso_Propio</fullName>
+        <field>Sem_Comercializada_Uso_Proprio_Sacas__c</field>
+        <formula>Semente_comercializada__c</formula>
+        <name>Actualizar Sem Comer + Uso Propio</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_VL_Liquido_Copia</fullName>
+        <description>Actualización del campo valor de VL_Liquido__c en VL_Liquido_Copia__c para usarlo en campo resumen en Opportunity</description>
+        <field>VL_Liquido_Copia__c</field>
+        <formula>VL_Liquido__c</formula>
+        <name>Actualizar VL Liquido Copia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Atualizar_desconto_diferencial</fullName>
+        <field>Desconto_diferencial__c</field>
+        <formula>1 - ( UnitPrice / PricebookEntry.UnitPrice )</formula>
+        <name>Atualizar desconto diferencial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Objetivo_de_ventas_actualizar_quantity</fullName>
+        <field>Quantity</field>
+        <formula>IF(Quantidade__c &gt; 0, Quantidade__c, 0.01)</formula>
+        <name>Objetivo de ventas actualizar quantity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Actualizar Opp</fullName>
+        <actions>
+            <name>Actualizar_Opp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Objetivo Contrato Royalties,Anexo III,Anexo IV</value>
+        </criteriaItems>
+        <description>Actualización de campo de Opp para que un update de ítem dispare el trigger de la cabecera.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Sem Comer %2B Uso Propio</fullName>
+        <actions>
+            <name>Actualizar_Sem_Comer_Uso_Propio</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Anexo V</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar VL Liquido Copia</fullName>
+        <actions>
+            <name>Actualizar_Precio_Total_Aux</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Actualizar_VL_Liquido_Copia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Se dispara una actualización de campo copian el valor de VL_Liquido__c en VL_Liquido_Copia__c y Precio_Total__c en Precio_Total_Aux__c para usarlo en campo resumen en Opportunity.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcular desconto diferencial1</fullName>
+        <actions>
+            <name>Atualizar_desconto_diferencial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PricebookEntry.UnitPrice</field>
+            <operation>notEqual</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Objetivo de ventas actualizar quantity</fullName>
+        <actions>
+            <name>Objetivo_de_ventas_actualizar_quantity</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Objetivo Ventas Semilla</value>
+        </criteriaItems>
+        <description>Actualiza el campo quantity con quantidade en el tipo de opp Objetivo Venta Semilla</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Semente bruta %3E113 sacas</fullName>
+        <actions>
+            <name>Aviso_de_Cantidad_de_Semente_Bruta_superior_a_113_sacas</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>OpportunityLineItem.Semente_bruta__c</field>
+            <operation>greaterThan</operation>
+            <value>113</value>
+        </criteriaItems>
+        <description>Generar una alerta cuando se carga un valor de Semente Bruta superior a 113 sacas</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

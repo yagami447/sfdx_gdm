@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para informar al Gerente Comercial que se ha aprobado una Indemnización</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Reclamo Con Indemnizacion Aprobada</name>
+    <style>none</style>
+    <subject>Reclamo con Indemnización Aprobada</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

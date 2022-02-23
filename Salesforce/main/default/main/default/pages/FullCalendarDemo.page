@@ -1,0 +1,421 @@
+<apex:page lightningStylesheets="true" standardController="Plano_de_Auditoria__c" extensions="FullCalendarDemo" docType="html-5.0">
+
+    <apex:stylesheet value="{!URLFOR($Resource.fullcalendar,'fullcalendar/fullcalendar.min.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.fullcalendar,'/fullcalendar/lib/jquery.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.fullcalendar,'/fullcalendar/lib/jquery-ui.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.fullcalendar,'/fullcalendar/lib/moment.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.fullcalendar,'/fullcalendar/fullcalendar.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.fullcalendar,'/fullcalendar/locale-all.js')}" />
+    <apex:includeScript value="{!$Resource.fullcalendarDemo}" />
+    <apex:includeScript value="{!$Resource.SLDS}" />
+
+    <html>
+
+    <head>
+        <style>
+            .vf-header {
+                padding-left: 20px;
+                background-color: lightgrey;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-weight: bold;
+            }
+            .vf-input-element {
+                margin-left: 20px;
+            }
+            .toastDiv {
+                height: 4rem;
+                position: fixed;
+                z-index: 10;
+                margin-right: auto;
+                margin-left: auto;
+                right: 0;
+                left: 0;
+            }
+            .fc-event-container a {
+                background-color: dodgerblue;
+            }
+            .fc-time {
+                display: none;
+            }
+        </style>
+        <script>
+            function showToast(message) {
+                console.log(message);
+                var mensaje = document.getElementById("mensajeSuccess");
+                console.log(mensaje);
+                mensaje.innerHTML = message;
+                var element = document.getElementById("ToastMessage");
+                element.classList.toggle("slds-hidden");
+
+                setTimeout(() => {
+                    var element = document.getElementById("mensajeSuccess");
+
+                    let var12 = element.classList;
+                    console.log(var12);
+                    if (!var12.contains('slds-hidden')) {
+                        hideRToast();
+                    }
+                }, 4000);
+            }
+
+            function hideRToast() {
+                var element = document.getElementById("ToastMessage");
+                element.classList.add("slds-hidden");
+            }
+
+            function showToastError(message) {
+                console.log(message);
+                var mensaje = document.getElementById("mensajeError");
+                console.log(mensaje);
+                mensaje.innerHTML = message;
+                var element = document.getElementById("ToastErrorMessage");
+                element.classList.toggle("slds-hidden");
+
+                setTimeout(() => {
+                    var element = document.getElementById("ToastErrorMessage");
+
+                    let var12 = element.classList;
+                    console.log(var12);
+                    if (!var12.contains('slds-hidden')) {
+                        hideRToastError();
+                    }
+                }, 4000);
+            }
+
+            function hideRToastError() {
+                var element = document.getElementById("ToastErrorMessage");
+                element.classList.add("slds-hidden");
+            }
+        </script>
+    </head>
+
+    <body>
+        <apex:slds />
+        <div class="slds-scope">
+
+            <div class="demo-only toastDiv slds-hidden" id='ToastMessage'>
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+                        <span class="slds-assistive-text">success</span>
+                        <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#success')}"
+                                />
+                            </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small" id="mensajeSuccess">
+
+                            </h2>
+                        </div>
+                        <button class="slds-button slds-button_icon slds-notify__close  slds-button_icon-inverse" title="Close" onclick='hideRToast();'>
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#close')}"
+                                />
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-only toastDiv slds-hidden" style="height:4rem" id='ToastErrorMessage'>
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                        <span class="slds-assistive-text">error</span>
+                        <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error')}"
+                                />
+                                <!-- <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use> -->
+                            </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small " id="mensajeError">
+                            </h2>
+                        </div>
+                        <div class="slds-notify__close">
+                            <button class="slds-button slds-button_icon slds-notify__close  slds-button_icon-inverse" title="Close" onclick='hideRToastError();'>
+                                <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}"
+                                    />
+                                    <!-- <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use> -->
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <apex:form >
+            <apex:sectionHeader title="Calendário do Plano de Auditoria" subtitle="Gerenciar suas visitas" />
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-24" style="margin: 10px"></div>
+                <div class="slds-col slds-size_1-of-24" style="margin: 2px">
+                    <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!Cancel}" value="Salir" immediate="true"
+                        html-formnovalidate="formnovalidate" />
+                </div>
+                <div class="slds-col slds-size_4-of-24" style="margin: 2px">
+                    <apex:outputpanel id="search">
+                        <div style="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                                <apex:actionRegion renderRegionOnly="false" immediate="true">
+                                    <apex:actionFunction name="fetchResults" action="{!getAuditoresString}" reRender="accountsTable" status="searchStatus" />
+                                    <apex:input type="text" html-placeholder="Pesquisar auditor:" styleClass="slds-input slds-combobox__input" value="{!accountSearch}"
+                                        onkeydown="if(event.keyCode==13){this.blur();}else{resetTimer();}" />
+                                    <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                                        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                            <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+                                        </svg>
+                                    </span>
+                                    <!-- <apex:actionStatus id="searchStatus" startText="Pesquisando..." stopText=" "/> -->
+                                </apex:actionRegion>
+                            </div>
+                        </div>
+                    </apex:outputpanel>
+                </div>
+                <div class="slds-col slds-size_6-of-12" style="margin: 2px">
+                    <apex:actionRegion renderRegionOnly="false" immediate="true">
+                        <apex:outputpanel styleclass="slds-grid" id="accountsTable">
+                            <apex:selectList value="{!accountSelected}" size="1" multiselect="false" style="width: 94%">
+                                <apex:actionSupport event="onchange" />
+                                <apex:selectOptions value="{!auditoresOption}" />
+                            </apex:selectList>
+                        </apex:outputpanel>
+                    </apex:actionRegion>
+                </div>
+            </div>
+
+            <div style="width:100%">
+                <div id='calendar' style="width:70%; padding:20px; float:left"></div>
+                <div id='updateEvent' style="width:30%; padding:20px; float:right; display:none">
+                    <!---->
+                    <div class="vf-header">Atualizar evento</div>
+                    <p>
+                        <form id="updateEventForm" styleClass="updateEventFormClass">
+                            <table>
+                                <tr>
+                                    <td>Plano</td>
+                                    <td>
+                                        <apex:selectList id="updatePlano" style="width: 190px; margin: 5px" size="1" styleClass="updatePlanoClass">
+                                            <apex:selectOptions value="{!planos}"></apex:selectOptions>
+                                        </apex:selectList>
+                                    </td>
+                                </tr>
+                                <tr id="CuentaPrincipalID">
+                                    <td>Cuenta Principal</td>
+                                    <td>
+                                        <output id="updatePlanoCuenta" style="margin:5px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Titulo</td>
+                                    <td>
+                                        <input type="text" id="updateEventTitle" style="margin:5px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data de Início</td>
+                                    <td>
+                                        <input type="text" id="updateStartTime" style="margin:5px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data Final</td>
+                                    <td>
+                                        <input type="text" id="updateEndTime" style="margin:5px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cidade</td>
+                                    <td>
+                                        <input type="text" id="updateCity" style="margin:5px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UF</td>
+                                    <td>
+                                        <input type="text" id="updateUF" style="margin:5px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Etapa</td>
+                                    <td>
+                                        <apex:selectList id="updateEtapa" multiselect="false" style="margin:5px" size="1" styleClass="updateEtapaClass">
+                                            <apex:selectOption itemValue="Inventário físico" itemLabel="Inventário físico" />
+                                            <apex:selectOption itemValue="Descarte" itemLabel="Descarte" />
+                                            <apex:selectOption itemValue="Inventário de sobras" itemLabel="Inventário de sobras" />
+                                            <apex:selectOption itemValue="Documental" itemLabel="Documental" />
+                                            <apex:selectOption itemValue="Eventual" itemLabel="Eventual" />
+                                        </apex:selectList>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Auditor</td>
+                                    <td>
+                                        <apex:inputField id="updateAuditor" value="{!visita.Auditor__c}" style="margin:5px" styleClass="updateAuditorClass"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Responsável</td>
+                                    <td>
+                                        <apex:selectList id="updateResponsavel" multiselect="false" style="margin:5px" size="1" styleClass="updateResponsavelClass">
+                                            <apex:selectOption itemValue="Próprio" itemLabel="Próprio" />
+                                            <apex:selectOption itemValue="Terceiro" itemLabel="Terceiro" />
+                                        </apex:selectList>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- <td>
+                                        
+                                    </td> -->
+                                    <td colspan="2" style="text-align: center;">
+                                        <input type="hidden" id="recordId" name="recordId" />
+                                        <input type="submit" onclick="update(); return false;" value="Update Event" style="margin:5px" id="submitUpsert" />
+                                        <input type="button" onclick="auditarJs()" value="Auditar" class="btn" id="submitAuditar" />
+                                        <apex:actionFunction action="{!auditarCtrl}" name="passToController" reRender="Message">
+                                            <apex:param value="" name="PlanoId" assignTo="{!PlanoId}" />
+                                        </apex:actionFunction>
+                                        <apex:actionFunction action="{!clearMessages}" name="clearMssg" reRender="Message">
+                                        </apex:actionFunction>
+                                    </td>
+                                    <!-- <td>
+                                    </td> -->
+                                </tr>
+                                <apex:pageMessages id="Message" />
+                            </table>
+                        </form>
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                /**
+                 * Your org's my domain url
+                 * Please include port as well if any
+                 **/
+                var planoDeAuditoria = '{!$CurrentPage.parameters.Id}';
+                var origin = '';
+
+                $(document).ready(function () {
+                    //Attach Listeners
+                    attachListners();
+                    //Initialize calendar
+                    const calendar = CalendarSingleton.getCalendar();
+                    //Get user's events
+                    getEvents(calendar);
+                    $("#updateStartTime,#updateEndTime").datepicker({ dateFormat: "mm/dd/yy" });
+                });
+                /**
+                 * Function to invoke remote action to get current user's
+                 * all events and populate the calendar based on response
+                 * */
+                function getEvents() {
+                    //Invoking remote action                       
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FullCalendarDemo.getEvents}',
+                        '{!accountSelected}',
+                        function (result, event) {
+                            if (event.status) {
+                                //Call was successful, add events to calendar    
+                                // console.log('result: ',result);
+                                console.log('Result from backend time: ');
+                                let t = new Date(result[0].Start_Time__c);
+                                console.log('Start time : ' + t);
+                                let t2 = new Date(result[0].End_Time__c);
+                                console.log('End time : ' + t2);
+                                addEvents(result, calendar);
+                                //changeColors();
+                            } else if (event.type === 'exception') {
+                                //Exception in remote call
+                                console.error(`${event.message} ${event.where}`);
+                            } else {
+                                //Call was unsuccssful
+                                console.error(`${event.message}`);
+                            }
+                        },
+                        { escape: true }
+                    );
+                }
+                /**
+                 * Function to invoke remote action to get current user's
+                 * all events and populate the calendar based on response
+                 * */
+                function createOrUpdateEvents(calendarEvent) {
+                    // const auditor = $('#j_id0:j_id9:updateAuditor_lkid').val();
+                    //Invoking remote action
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FullCalendarDemo.createOrUpdateEvents}',
+                        calendarEvent, '{!accountSelected}',
+                        function (result, event) {
+
+                            if (event.status) {
+                                //Call was successful, add events to calendar    
+                                console.log('Adding events');
+                                console.log(result);
+                                addEvents(result, calendar);
+                                console.log('origin');
+                                console.log(origin);
+                                if (origin == 'insert') {
+                                    showToast('Evento Creado');
+                                } else if (origin == 'update') {
+                                    showToast('Evento Atualizado');
+                                }
+                            } else if (event.type === 'exception') {
+                                //Exception in remote call
+                                showToastError(`${event.message} ${event.where}`);
+                                console.error(`${event.message} ${event.where}`);
+                            } else {
+                                //Call was unsuccssful
+                                showToastError(`${event.message}`);
+                                console.error(`${event.message}`);
+                            }
+                        },
+                        { escape: true }
+                    );
+                }
+
+                function auditarJs() {
+                    var plano_Id = document.getElementsByClassName("updatePlanoClass")[0].value;
+                    passToController(plano_Id);
+                    window.setTimeout(clearMssg, 3000);
+                }
+
+                function update() {
+                    updateJs();
+                }
+            </script>
+        </apex:form>
+    </body>
+    <script type='text/javascript'>
+        // Esta variable indica el tiempo (segs) que se toma en ejecutar la busqueda, para cambiarla, cambiar este valor            
+        var waitTime = 1;
+
+        var countDown = waitTime + 1;
+        var started = false;
+
+        function resetTimer() {
+            countDown = waitTime + 1;
+            if (started == false) {
+                started = true;
+                runCountDown();
+            }
+        }
+        function runCountDown() {
+            countDown--;
+            if (countDown <= 0) {
+                fetchResults();
+                started = false;
+            }
+            else {
+                window.setTimeout(runCountDown, 500);
+            }
+        }
+    </script>
+
+    </html>
+</apex:page>

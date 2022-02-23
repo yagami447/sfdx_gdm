@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Texto que identifica al documento que anula la factura. Es el EP FB08 de SAP. --></help>
+    <label><!-- Sap EP FB08 Anulacion --></label>
+    <name>Sap_EP_FB08_Anulacion__c</name>
+</CustomFieldTranslation>

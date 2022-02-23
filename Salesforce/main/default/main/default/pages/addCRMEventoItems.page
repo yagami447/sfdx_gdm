@@ -1,0 +1,404 @@
+<apex:page lightningStyleSheets="true" standardController="CRM_Calendario_de_Eventos__c" action="{!updateAvailableList}"
+    extensions="CRMEventoItemsExtension" sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false"
+    applyBodyTag="false" docType="html-5.0">
+<head>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+</head>
+<div class="SLDS">
+
+<body>
+    <apex:form id="profileForm">
+        <div class="slds-page-header slds-page-header_object-home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                            <svg aria-hidden="true" class="slds-icon slds-icon-standard-goals">
+                                <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#goal')}"></use>
+                            </svg>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-title--caps slds-line-height--reset">Adiciona Produtos a </p>
+                            <p class="slds-page-header__title slds-truncate" title="ALL">{!CRM_Calendario_de_eventos__c.Name}</p>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                    <apex:outputPanel >
+                        <apex:commandLink styleClass="slds-button slds-button--neutral slds-not-selected" value="Salvar" action="{!onSave}" reRender="profileForm"
+                            oncomplete="mostrarMsj()" target="_parent" />
+                        <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!onCancel}" value="Cancelar"
+                            immediate="true" html-formnovalidate="formnovalidate" />
+                    </apex:outputPanel>
+                </div>
+            </div>
+            <div class="slds-grid">
+                <div class="slds-col slds-align-bottom">
+                    <p class="slds-text-body_large">Itens Selecionados </p>
+                </div>
+            </div>
+        </div>
+        <apex:outputpanel id="selected">
+        
+        <!--  ---------------------------------------------------------------- dia de campo -----------------------------------------------------------   -->
+        <apex:outputPanel rendered="{!theCRM.RecordType.Name == 'Día de Campo' || theCRM.RecordType.Name == 'Treinamento Tecnico'}">
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Action"></div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Obtentor__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultivar__c.Label}</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!shoppingCart}" var="s">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate" title="Action">
+                                <apex:commandButton styleClass="slds-button" value="Excluir" action="{!removeFromShoppingCart}" reRender="selected,searchResults" immediate="true" html-formnovalidate="formnovalidate">
+                                <apex:param value="{!s.Indice__c}" assignTo="{!toUnselect}" name="toUnselect" />
+                                </apex:commandButton>
+                            </div>
+                        </td>
+                        <td data-label="{!s.Cultivar__r.Obtentor__c}">
+                            <div class="slds-truncate" title="{!s.Cultivar__r.Obtentor__c}">
+                                <apex:outputField value="{!s.Cultivar__r.Obtentor__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Cultivar__r.Name}">
+                                <apex:outputField value="{!s.Cultivar__r.Name}"/>
+                            </div>
+                        </td>
+                      </tr>
+                </apex:repeat>
+            </tbody>
+            </table>
+        </apex:outputPanel>
+        <!--  -----------------------------------------------------------------END DIA DE CAMPO -------------------------------------------------------   -->
+        
+        <!--  ---------------------------------------------------------------- LADO a LADO -----------------------------------------------------------   -->
+        <apex:outputPanel rendered="{!theCRM.RecordType.Name == 'Test a campo'}">
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Action"></div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Produto_Principal__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Obtentor__c.Label}</div>
+                    </th>
+                    <th scope="col" >
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultivar__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Populacao_de_plantas__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Espacamento__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Area_plantada__c.Label}</div>
+                    </th>
+                    <th scope="col" >
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Area_Colhida__c.Label}</div>
+                    </th>
+                    <th scope="col" >
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Produtividade__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Data_de_plantio__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Data_de_colheita__c.Label}</div>
+                    </th>
+                    <th scope="col" >
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Volume_doado__c.Label}</div>
+                    </th>
+                    <th scope="col" >
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultura_antecessora__c.Label}</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!shoppingCart}" var="s">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate" title="Action">
+                                <apex:commandButton styleClass="slds-button" value="Excluir" action="{!removeFromShoppingCart}" reRender="selected,searchResults" immediate="true" html-formnovalidate="formnovalidate">
+                                <apex:param value="{!s.Indice__c}" assignTo="{!toUnselect}" name="toUnselect" />
+                                </apex:commandButton>
+                            </div>
+                        </td>
+                        <td data-label="{!s.Produto_Principal__c}">
+                            <div class="slds-truncate" title="{!s.Produto_Principal__c}">
+                                <apex:inputField value="{!s.Produto_Principal__c}" html-data-id="produto_principal" onchange="handleProdutoPrincipal(event, this)" />
+                            </div>
+                        </td>
+                        <td data-label="{!s.Cultivar__r.Obtentor__c}">
+                            <div class="slds-truncate" title="{!s.Cultivar__r.Obtentor__c}">
+                                <apex:outputField value="{!s.Cultivar__r.Obtentor__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Cultivar__r.Name}">
+                                <apex:outputField value="{!s.Cultivar__r.Name}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Populacao_de_plantas__c}">
+                                <apex:inputField value="{!s.Populacao_de_plantas__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Espacamento__c}">
+                                <apex:inputField value="{!s.Espacamento__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Area_plantada__c}">
+                                <apex:inputField value="{!s.Area_plantada__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Area_Colhida__c}">
+                                <apex:inputField value="{!s.Area_Colhida__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Produtividade__c}">
+                                <apex:inputField value="{!s.Produtividade__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Data_de_plantio__c}">
+                                <apex:inputField value="{!s.Data_de_plantio__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Data_de_colheita__c}">
+                                <apex:inputField value="{!s.Data_de_colheita__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Volume_Doado__c}">
+                                <apex:inputField value="{!s.Volume_Doado__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Cultura_antecessora__c}">
+                                <apex:inputField value="{!s.Cultura_antecessora__c}"/>
+                            </div>
+                        </td>
+                      </tr>
+                </apex:repeat>
+            </tbody>
+            </table>
+        </apex:outputPanel>
+        <!--  -----------------------------------------------------------------END LxL ---------------------------------------------------------   -->
+        
+        <!--  ---------------------------------------------------------------- EMPLACAMENTO -----------------------------------------------------------   -->
+        <apex:outputPanel rendered="{!theCRM.RecordType.Name == 'Emplacamento'}">
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Action"></div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Obtentor__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultivar__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Area_Colhida__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Produtividade__c.Label}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Volume_doado__c.Label}</div>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!shoppingCart}" var="s">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate" title="Action">
+                                <apex:commandButton styleClass="slds-button" value="Excluir" action="{!removeFromShoppingCart}" reRender="selected,searchResults" immediate="true" html-formnovalidate="formnovalidate">
+                                <apex:param value="{!s.Indice__c}" assignTo="{!toUnselect}" name="toUnselect" />
+                                </apex:commandButton>
+                            </div>
+                        </td>
+                        <td data-label="{!s.Cultivar__r.Obtentor__c}">
+                            <div class="slds-truncate" title="{!s.Cultivar__r.Obtentor__c}">
+                                <apex:outputField value="{!s.Cultivar__r.Obtentor__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Cultivar__r.Name}">
+                                <apex:outputField value="{!s.Cultivar__r.Name}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Area_Colhida__c}">
+                                <apex:inputField value="{!s.Area_Colhida__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Produtividade__c}">
+                                <apex:inputField value="{!s.Produtividade__c}"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!s.Volume_Doado__c}">
+                                <apex:inputField value="{!s.Volume_Doado__c}"/>
+                            </div>
+                        </td>
+                      </tr>
+                </apex:repeat>
+            </tbody>
+            </table>
+        </apex:outputPanel>
+        <!--  -----------------------------------------------------------------END emplacamento ---------------------------------------------------------   -->
+        </apex:outputpanel>
+        
+        <apex:outputpanel id="search">
+        <div class="slds-page-header slds-page-header_object-home" style="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div class="slds-grid slds-grid_vertical">
+          <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+           <div class="slds-form-element">
+              <!--<div class="slds-form-element__control">-->
+                <div class="slds-combobox_container">
+                  <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">                      
+                      <apex:actionRegion renderRegionOnly="false" immediate="true">
+                          <apex:actionFunction name="fetchResults" action="{!updateAvailableList}" reRender="searchResults, mess, count" status="searchStatus"/>
+                          <apex:input type="text" html-placeholder="Pesquisar {!$ObjectType.Product2.LabelPlural} pelo {!$ObjectType.Product2.Fields.Obtentor__c.Label}/{!$ObjectType.Product2.Fields.Name.Label}:" styleClass="slds-input slds-combobox__input"
+                          value="{!searchString}" onkeydown="if(event.keyCode==13){this.blur();}else{resetTimer();}" />
+                          <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                          <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                              <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+                          </svg>                          
+                          </span>
+                          <apex:actionStatus id="searchStatus" startText="Pesquisando..." stopText=" "/>
+                      </apex:actionRegion>
+                    </div>
+                  </div>
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </apex:outputpanel>
+          <apex:outputpanel styleclass="slds-grid" id="searchResults">
+              <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table_fixed-layout">
+              <thead>
+                  <tr class="slds-text-title--caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Action">
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="{!$ObjectType.Product2.Fields.Obtentor__c.Label}">
+                            {!$ObjectType.Product2.Fields.Obtentor__c.Label}
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="{!$ObjectType.Product2.Fields.Name.Label}">
+                            {!$ObjectType.Product2.Fields.Name.Label}
+                        </div>
+                    </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <apex:repeat value="{!AvailableProducts}" var="a">
+                      <tr>
+                        <td>
+                            <div class="slds-truncate" title="Action">
+                                <apex:commandButton styleClass="slds-button slds-button--neutral" value="Adicionar" action="{!addToShoppingCart}" reRender="selected, mess, count">
+                                <apex:param value="{!a.Id}" assignTo="{!toSelect}" name="toSelect"/>
+                                </apex:commandButton>                            
+                            </div>
+                        </td>
+                        <th scope="row" data-label="{!a.Obtentor__c}">
+                            <div class="slds-truncate" title="{!a.Obtentor__c}">
+                                <apex:outputField value="{!a.Obtentor__c}"/>
+                            </div>
+                        </th>
+                        <td role="gridcell" data-label="{!a.Name}">
+                            <div class="slds-truncate" title="{!a.Name}">
+                                <apex:outputField value="{!a.Name}"/>
+                            </div>
+                        </td>
+                      </tr>
+                  </apex:repeat>
+              </tbody>
+              </table>
+          </apex:outputpanel>
+          <apex:outputPanel styleClass="fyi" id="mess" >
+              <apex:messages />
+              <apex:outputPanel styleClass="fyi" rendered="{!overLimit}" id="count">
+                  <br/>
+                  A pesquisa recuperou mais de 30 itens, insira um novo critério de filtro.
+                  <br/>
+              </apex:outputPanel>
+          </apex:outputpanel>
+        <script type='text/javascript'>
+            function mostrarMsj() {
+                if ("{!mensaje}") {
+                    alert("{!SUBSTITUTE(mensaje, '|', '\n')}");
+                }
+            }
+        </script>
+    </apex:form>
+</body>
+</div>
+
+<script type='text/javascript'>
+    // Esta variable indica el tiempo (segs) que se toma en ejecutar la busqueda, para cambiarla, cambiar este valor            
+    var waitTime = 1;
+    var countDown = waitTime + 1;
+    var started = false;
+
+    function resetTimer() {
+        countDown = waitTime + 1;
+        if (started == false) {
+            started = true;
+            runCountDown();
+        }
+    }
+
+    function runCountDown() {
+        countDown--;
+        if (countDown <= 0) {
+            fetchResults();
+            started = false;
+        } else {
+            window.setTimeout(runCountDown, 500);
+        }
+    }
+
+    function handleProdutoPrincipal(evt, ele) {
+        const fields = document.querySelectorAll("[data-id='produto_principal']");
+        fields.forEach((element, i) => {
+            if (element.checked && element !== ele) {
+                element.checked = false;
+            }
+        });
+    }
+</script>
+</apex:page>

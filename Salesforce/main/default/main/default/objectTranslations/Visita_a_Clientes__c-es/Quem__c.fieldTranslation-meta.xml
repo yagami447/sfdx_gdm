@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Quem --></label>
+    <name>Quem__c</name>
+    <picklistValues>
+        <masterLabel>Anderson Clayton Weissheimer</masterLabel>
+        <translation><!-- Anderson Clayton Weissheimer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bernardo Zanardo</masterLabel>
+        <translation><!-- Bernardo Zanardo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Charles Pintro</masterLabel>
+        <translation><!-- Charles Pintro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cristian Pirolli</masterLabel>
+        <translation><!-- Cristian Pirolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>César</masterLabel>
+        <translation><!-- César --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edson Chambo</masterLabel>
+        <translation><!-- Edson Chambo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fagner Regis de Oliveira</masterLabel>
+        <translation><!-- Fagner Regis de Oliveira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fausto Fanchin</masterLabel>
+        <translation><!-- Fausto Fanchin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Calazans</masterLabel>
+        <translation><!-- Fernando Calazans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Frenher</masterLabel>
+        <translation><!-- Fernando Frenher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flávio Marçal dos Santos</masterLabel>
+        <translation><!-- Flávio Marçal dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jorge Cristiano Rosa</masterLabel>
+        <translation><!-- Jorge Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>João Serrano</masterLabel>
+        <translation><!-- João Serrano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Costa</masterLabel>
+        <translation><!-- Lucas Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Hilario Fantineli</masterLabel>
+        <translation><!-- Lucas Hilario Fantineli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luis Fernando Cecatto</masterLabel>
+        <translation><!-- Luis Fernando Cecatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo</masterLabel>
+        <translation><!-- Marcelo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Steffen</masterLabel>
+        <translation><!-- Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcos S. Berlezi</masterLabel>
+        <translation><!-- Marcos S. Berlezi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Murilo Brazero Cacheffo</masterLabel>
+        <translation><!-- Murilo Brazero Cacheffo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otavio Gorni</masterLabel>
+        <translation><!-- Otavio Gorni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outro</masterLabel>
+        <translation><!-- Outro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pablo Souza</masterLabel>
+        <translation><!-- Pablo Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rogério Schneider</masterLabel>
+        <translation><!-- Rogério Schneider --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sandro Moreira</masterLabel>
+        <translation><!-- Sandro Moreira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Santiago</masterLabel>
+        <translation><!-- Santiago --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Santiago Schiappacasse</masterLabel>
+        <translation><!-- Santiago Schiappacasse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sergio Bertagnolli</masterLabel>
+        <translation><!-- Sergio Bertagnolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiago Goulart</masterLabel>
+        <translation><!-- Tiago Goulart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Willian Von Scharten</masterLabel>
+        <translation><!-- Willian Von Scharten --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

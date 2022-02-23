@@ -1,0 +1,155 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="Apenddix1Page" showHeader="false" standardStylesheets="false" cache="false" title="{!titulo}" controller="aSiteAppendix1Controller" action="{!validate}">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+.selected {
+    background: rgba(38,185,154,.16);
+    border-color: rgba(221,221,221,0.780392);
+}
+</style>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                
+                <apex:panelGroup >
+                <apex:form id="profileForm">                    
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <div class=""> 
+                            <div class="page-title">
+                                <div class="title_left">
+                                <h3>{!titulo} </h3>
+                                </div>
+                                <div class="title_right">                                                      
+                                    <div class="form-group pull-right top_search">
+                                        <apex:outputPanel >
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <button href="javascript:;" onclick="goNew()" type="button" class="btn btn-round btn-success">{!$Label.New}</button>                                                                          
+                                        </div>                                      
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Autorizações<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="cont" rendered="{!appends1.size>0}">
+                                            <apex:pageblockTable value="{!appends1}" var="s" styleclass="table table-striped no-margin"  >
+                                                <apex:column value="{!s.Name}" styleclass="{!IF(s.Id==recId,'selected','')}" />
+                                                <!--<apex:column value="{!s.AccountId}" styleclass="{!IF(s.Id==recId,'selected','')}"/>-->
+                                                <apex:column value="{!s.Safra__c}" styleclass="{!IF(s.Id==recId,'selected','')}"/>
+                                                <apex:column value="{!s.Epoca_de_Plantio__c}" styleclass="{!IF(s.Id==recId,'selected','')}"/>
+                                                <apex:column value="{!s.CreatedDate}" styleclass="{!IF(s.Id==recId,'selected','')}"/>
+                                                <apex:column value="{!s.StageName}" styleclass="{!IF(s.Id==recId,'selected','')}"/>
+                                                <apex:column value="{!s.Motivo_de_Rechazo__c}" styleclass="{!IF(s.Id==recId,'selected','')}"/>
+                                                <apex:column headerClass="column-title" headerValue="{!$Label.action}" styleclass="{!IF(s.Id==recId,'selected','')}" style="vertical-align: middle;">
+                                                    <apex:commandLink value="{!$Label.View_Products}" action="{!setActiveApp1}" rerender="cont, it">
+                                                        <apex:param value="{!s.Id}" assignTo="{!recId}" name="toSelect"/>
+                                                    </apex:commandLink>
+                                                <apex:commandLink value=" | {!$Label.Edit}" action="{!gotoEdit}" rendered="{!s.Estado_Anexos_Portal_Miltiplicadores__c=='Edição' || s.Estado_Anexos_Portal_Miltiplicadores__c=='Rechazado'}">
+                                                    <apex:param value="{!s.Id}" assignTo="{!idAnexoEditar}" name="toEdit" />
+                                                </apex:commandLink>
+
+                                                    <apex:commandLink value=" | Documento" action="{!imprimirContratoAnexoI}" rendered="{!s.StageName=='Aprobada'}" target="_blank">
+                                                        <apex:param value="{!s.Id}" assignTo="{!recId}" name="toImpContrato"/>
+                                                    </apex:commandLink>
+                                                    
+                                                </apex:column>                        
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                                                
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>{!$ObjectType.Product2.LabelPlural}<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="it" rendered="{!appends1.size>0}">
+                                            <apex:pageblockTable value="{!relatedAppItems}" var="s" styleclass="table table-striped no-margin">
+                                                <apex:repeat value="{!Fields}" var="f">                                                    
+                                                    <apex:column headerValue="{!f.label}"><apex:outputField value="{!s[f]}" /></apex:column>
+                                                </apex:repeat>
+                                                <!--<apex:column value="{!s.Produto_Rebaixado__c}"/>-->
+                                            </apex:pageblockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <apex:actionFunction action="{!gotoNew}" name="goNew" />
+                </apex:form> 
+                </apex:panelGroup>
+            </apex:panelGrid>
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    <apex:outputPanel id="script">
+            <script>
+            function generarBlob(b64Data, contentType, sliceSize) {
+                contentType = contentType || '';
+                sliceSize = sliceSize || 512;
+                var byteCharacters = atob(b64Data);
+                var byteArrays = [];
+                for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                var slice = byteCharacters.slice(offset, offset + sliceSize);
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+                byteArrays.push(byteArray);
+                }
+
+                var blob = new Blob(byteArrays, {type: contentType});
+                return blob;
+            }
+
+            function descargarPDF(){
+                var blob = generarBlob("{!pdfBlob}", "application/pdf");
+                var blobUrl = URL.createObjectURL(blob);
+                var link = document.createElement('a');
+                link.href = blobUrl;
+                link.download = '{!nombrePDF}';
+                link.dispatchEvent(new MouseEvent('click'));
+            }
+
+            </script>
+        </apex:outputPanel>
+    </body>
+</apex:define>
+</apex:composition>
+</apex:page>

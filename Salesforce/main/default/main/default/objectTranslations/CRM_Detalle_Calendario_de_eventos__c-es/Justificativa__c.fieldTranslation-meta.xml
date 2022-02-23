@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Justificativa de não compra --></label>
+    <name>Justificativa__c</name>
+    <picklistValues>
+        <masterLabel>Condição de pagamento inviável</masterLabel>
+        <translation><!-- Condição de pagamento inviável --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Material não se encaixou em meu planejamento</masterLabel>
+        <translation><!-- Material não se encaixou em meu planejamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Não encontrei semente</masterLabel>
+        <translation><!-- Não encontrei semente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outros</masterLabel>
+        <translation><!-- Outros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plantio de campo de sementes</masterLabel>
+        <translation><!-- Plantio de campo de sementes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preço elevado</masterLabel>
+        <translation><!-- Preço elevado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Produtividade abaixo do esperado</masterLabel>
+        <translation><!-- Produtividade abaixo do esperado --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

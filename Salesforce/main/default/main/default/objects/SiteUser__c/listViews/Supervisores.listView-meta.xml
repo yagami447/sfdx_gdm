@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supervisores</fullName>
+    <columns>NAME</columns>
+    <columns>Email__c</columns>
+    <columns>Password__c</columns>
+    <columns>Active__c</columns>
+    <columns>Habilitado_Anexos__c</columns>
+    <columns>Habilitado_Eventos__c</columns>
+    <columns>Habilitado_Votacion_DSEM__c</columns>
+    <columns>Habilitar_Royalty__c</columns>
+    <columns>Habilitado_BRMX__c</columns>
+    <columns>Habilitado_DSEM__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Supervisor__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Supervisores</label>
+    <language>es</language>
+    <sharedTo>
+        <group>Administracion</group>
+        <group>Gerencia_Administrativa</group>
+    </sharedTo>
+</ListView>

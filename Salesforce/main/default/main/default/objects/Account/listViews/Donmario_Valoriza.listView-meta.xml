@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donmario_Valoriza</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Nome_fantasia__c</columns>
+    <columns>CNPJ_CPF__c</columns>
+    <columns>Ativo_DMValoriza__c</columns>
+    <columns>DMValoriza_Cadastro_Site__c</columns>
+    <columns>Supervisor_Respons_vel_DMValoriza__c</columns>
+    <columns>Ativo__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ativo_DMValoriza__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Cuenta</value>
+    </filters>
+    <label>Donmario Valoriza</label>
+    <sharedTo>
+        <role>Administracion_3</role>
+    </sharedTo>
+</ListView>

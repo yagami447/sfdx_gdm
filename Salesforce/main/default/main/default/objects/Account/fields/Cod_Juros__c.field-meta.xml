@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cod_Juros__c</fullName>
+    <externalId>false</externalId>
+    <label>Cod Juros</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01 - CálcJuros parts.pdr.</fullName>
+                <default>false</default>
+                <label>01 - CálcJuros parts.pdr.</label>
+            </value>
+            <value>
+                <fullName>02 - Cálc.juros saldos</fullName>
+                <default>false</default>
+                <label>02 - Cálc.juros saldos</label>
+            </value>
+            <value>
+                <fullName>03 - CálcJurosSald cond.2</fullName>
+                <default>false</default>
+                <label>03 - CálcJurosSald cond.2</label>
+            </value>
+            <value>
+                <fullName>04 - CálcJuros part.cond2</fullName>
+                <default>false</default>
+                <label>04 - CálcJuros part.cond2</label>
+            </value>
+            <value>
+                <fullName>05 - CálcJurosSald cond.3</fullName>
+                <default>false</default>
+                <label>05 - CálcJurosSald cond.3</label>
+            </value>
+            <value>
+                <fullName>10 - Cálc.juros projeto</fullName>
+                <default>false</default>
+                <label>10 - Cálc.juros projeto</label>
+            </value>
+            <value>
+                <fullName>12 - Cálc.jrs. sld.cta.Rz</fullName>
+                <default>false</default>
+                <label>12 - Cálc.jrs. sld.cta.Rz</label>
+            </value>
+            <value>
+                <fullName>D1 - Cálc.juros p/advert.</fullName>
+                <default>false</default>
+                <label>D1 - Cálc.juros p/advert.</label>
+            </value>
+            <value>
+                <fullName>RS - N/A</fullName>
+                <default>false</default>
+                <label>RS - N/A</label>
+            </value>
+            <value>
+                <fullName>VK - CálcJurosParts.Ad CP</fullName>
+                <default>false</default>
+                <label>VK - CálcJurosParts.Ad CP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

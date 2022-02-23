@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plano de Auditoria</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planos de Auditoria</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Plano de Auditoria</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Auditar --></label>
+        <name>Auditar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Calendario --></label>
+        <name>Calendario</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Editar_Anexos --></label>
+        <name>Editar_Anexos</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Editar_Contas --></label>
+        <name>Editar_Contas</name>
+    </webLinks>
+</CustomObjectTranslation>

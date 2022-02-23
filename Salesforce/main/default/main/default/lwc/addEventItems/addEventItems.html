@@ -1,0 +1,13 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-box slds-var-m-around_small">
+        <lightning-input name="search" label="Produto" type="search" placeholder="Buscar produtos"
+            onkeyup={handleKeyUp}></lightning-input>
+    </div>
+    <div class="slds-border_top slds-var-m-around_small">
+        <lightning-datatable columns={columns} data={filteredData} key-field="Id" onrowaction={handleRowAction}
+            column-widths-mode="auto" hide-checkbox-column resize-column-disabled>
+        </lightning-datatable>
+    </div>
+</template>

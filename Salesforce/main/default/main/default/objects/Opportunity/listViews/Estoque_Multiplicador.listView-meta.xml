@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estoque_Multiplicador</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Mes__c</columns>
+    <columns>Safra__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Marca__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Stock_Multiplicadores</value>
+    </filters>
+    <filters>
+        <field>Marca__c</field>
+        <operation>equals</operation>
+        <value>BRMX,DSEM,NEOG</value>
+    </filters>
+    <filters>
+        <field>Safra__c</field>
+        <operation>equals</operation>
+        <value>20/21</value>
+    </filters>
+    <label>Estoque Multiplicador</label>
+    <sharedTo>
+        <role>Admin</role>
+        <role>Administracion_3</role>
+        <role>Comercial_R2_DSEM</role>
+        <role>Director</role>
+    </sharedTo>
+</ListView>

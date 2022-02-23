@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Productos</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Produtos</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var nro = &quot;{!Opportunity.Name}&quot;; 
+var stage = &quot;{!Opportunity.StageName}&quot;;
+var ope = &quot;{!Opportunity.Tipo_de_Operacion__c}&quot;;
+var rt_opp = &quot;{!Opportunity.RecordTypeId}&quot;;
+var vf_url = &quot;/apex/opportunityProductEntry&quot;;
+var vf_param = &apos;statusbar=no,menubar=no,resizable=no,left=100,top=100,width=600,height=450&apos;; 
+
+var rt = sforce.connection.query(&quot;SELECT Id, Name FROM RecordType WHERE Id = &apos;&quot;+rt_opp+ &quot;&apos; limit 1&quot;); 
+records = rt.getArray(&quot;records&quot;); 
+rt_Name = records[0].Name.toString(); 
+
+pasa = true;
+
+if((rt_Name == &apos;VB - Pendiente&apos; &amp;&amp; stage == &apos;Bloqueada&apos;) || ((rt_Name == &apos;PB-Comercial&apos; || rt_Name == &apos;PB-Produccion&apos; || rt_Name == &apos;PB-Desarrollo&apos; || rt_Name == &apos;PB-Oferta&apos;) &amp;&amp; (stage == &apos;PB-Aprobada&apos; || (ope == null || ope == &apos;&apos;)))){
+   if((rt_Name == &apos;PB-Comercial&apos; || rt_Name == &apos;PB-Produccion&apos; || rt_Name == &apos;PB-Desarrollo&apos;) &amp;&amp; (ope == null || ope == &apos;&apos;)){
+            	alert(&apos;Por favor, especifique um Tipo de Operação&apos;);
+                pasa = false;
+            }else{
+            	alert(&apos;Opp Bloqueada&apos;);
+            	pasa = false;
+            }
+}
+if(pasa){
+  var mywin = window.location.href=vf_url +&apos;?scontrolCaching=1&amp;id={!Opportunity.Id}&apos;;
+}</url>
+</WebLink>

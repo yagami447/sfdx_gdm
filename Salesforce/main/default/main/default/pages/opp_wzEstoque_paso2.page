@@ -1,0 +1,31 @@
+<apex:page controller="Opp_wzEstoque_Ctrl" tabStyle="OpportunityLineItem">
+    <apex:sectionHeader title="Nova oportunidade" subtitle="Seleção de produtos">
+    <apex:form >
+        <apex:pageBlock title="Produtos">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!prev}" value="Cancelar"/>
+            <apex:commandButton action="{!next2}" value="Adicionar e Avançar"/>
+        </apex:pageBlockButtons>
+        <apex:inputText value="{!filtro}"/>
+        <apex:commandButton value="Localizar produtos"/>
+        <apex:outputText value="  (vacio lista todos)"></apex:outputText>
+        <br/><br/>
+        <apex:pageMessages />
+        <apex:pageBlockSection title="Lista de produtos" columns="1">
+            <apex:panelGrid columns="1" id="theGrid" width="100%">
+                <apex:dataTable value="{!items}" var="p1" styleClass="list">
+                     <apex:column >
+                        <apex:facet name="header">Selecionar</apex:facet>
+                        <apex:inputCheckbox value="{!p1.selected}" />
+                     </apex:column>
+                     <apex:column >
+                        <apex:facet name="header">Produto</apex:facet>
+                        {!p1.item.pricebookentry.Product2.Variedad__c}
+                     </apex:column>
+                </apex:dataTable>
+            </apex:panelGrid>
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:sectionHeader>
+</apex:page>

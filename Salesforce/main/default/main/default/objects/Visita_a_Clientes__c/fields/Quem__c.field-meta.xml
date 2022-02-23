@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quem__c</fullName>
+    <externalId>false</externalId>
+    <label>Quem</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anderson Clayton Weissheimer</fullName>
+                <default>false</default>
+                <label>Anderson Clayton Weissheimer</label>
+            </value>
+            <value>
+                <fullName>Charles Pintro</fullName>
+                <default>false</default>
+                <label>Charles Pintro</label>
+            </value>
+            <value>
+                <fullName>Cristian Pirolli</fullName>
+                <default>false</default>
+                <label>Cristian Pirolli</label>
+            </value>
+            <value>
+                <fullName>Edson Chambo</fullName>
+                <default>false</default>
+                <label>Edson Chambo</label>
+            </value>
+            <value>
+                <fullName>Fagner Regis de Oliveira</fullName>
+                <default>false</default>
+                <label>Fagner Regis de Oliveira</label>
+            </value>
+            <value>
+                <fullName>Fausto Fanchin</fullName>
+                <default>false</default>
+                <label>Fausto Fanchin</label>
+            </value>
+            <value>
+                <fullName>Fernando Calazans</fullName>
+                <default>false</default>
+                <label>Fernando Calazans</label>
+            </value>
+            <value>
+                <fullName>Fernando Frenher</fullName>
+                <default>false</default>
+                <label>Fernando Frenher</label>
+            </value>
+            <value>
+                <fullName>Flávio Marçal dos Santos</fullName>
+                <default>false</default>
+                <label>Flávio Marçal dos Santos</label>
+            </value>
+            <value>
+                <fullName>João Serrano</fullName>
+                <default>false</default>
+                <label>João Serrano</label>
+            </value>
+            <value>
+                <fullName>Jorge Cristiano Rosa</fullName>
+                <default>false</default>
+                <label>Jorge Cristiano Rosa</label>
+            </value>
+            <value>
+                <fullName>Lucas Hilario Fantineli</fullName>
+                <default>false</default>
+                <label>Lucas Hilario Fantineli</label>
+            </value>
+            <value>
+                <fullName>Luis Fernando Cecatto</fullName>
+                <default>false</default>
+                <label>Luis Fernando Cecatto</label>
+            </value>
+            <value>
+                <fullName>Marcelo Steffen</fullName>
+                <default>false</default>
+                <label>Marcelo Steffen</label>
+            </value>
+            <value>
+                <fullName>Murilo Brazero Cacheffo</fullName>
+                <default>false</default>
+                <label>Murilo Brazero Cacheffo</label>
+            </value>
+            <value>
+                <fullName>Otavio Gorni</fullName>
+                <default>false</default>
+                <label>Otavio Gorni</label>
+            </value>
+            <value>
+                <fullName>Pablo Souza</fullName>
+                <default>false</default>
+                <label>Pablo Souza</label>
+            </value>
+            <value>
+                <fullName>Rogério Schneider</fullName>
+                <default>false</default>
+                <label>Rogério Schneider</label>
+            </value>
+            <value>
+                <fullName>Sandro Moreira</fullName>
+                <default>false</default>
+                <label>Sandro Moreira</label>
+            </value>
+            <value>
+                <fullName>Santiago Schiappacasse</fullName>
+                <default>false</default>
+                <label>Santiago Schiappacasse</label>
+            </value>
+            <value>
+                <fullName>Sergio Bertagnolli</fullName>
+                <default>false</default>
+                <label>Sergio Bertagnolli</label>
+            </value>
+            <value>
+                <fullName>Tiago Goulart</fullName>
+                <default>false</default>
+                <label>Tiago Goulart</label>
+            </value>
+            <value>
+                <fullName>Outro</fullName>
+                <default>false</default>
+                <label>Outro</label>
+            </value>
+            <value>
+                <fullName>Marcelo</fullName>
+                <default>false</default>
+                <label>Marcelo</label>
+            </value>
+            <value>
+                <fullName>César</fullName>
+                <default>false</default>
+                <label>César</label>
+            </value>
+            <value>
+                <fullName>Santiago</fullName>
+                <default>false</default>
+                <label>Santiago</label>
+            </value>
+            <value>
+                <fullName>Marcos S. Berlezi</fullName>
+                <default>false</default>
+                <label>Marcos S. Berlezi</label>
+            </value>
+            <value>
+                <fullName>Bernardo Zanardo</fullName>
+                <default>false</default>
+                <label>Bernardo Zanardo</label>
+            </value>
+            <value>
+                <fullName>Lucas Costa</fullName>
+                <default>false</default>
+                <label>Lucas Costa</label>
+            </value>
+            <value>
+                <fullName>Willian Von Scharten</fullName>
+                <default>false</default>
+                <label>Willian Von Scharten</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

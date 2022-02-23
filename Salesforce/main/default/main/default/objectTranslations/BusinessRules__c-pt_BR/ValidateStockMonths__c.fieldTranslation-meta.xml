@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Usar números separados por vírgula de um a doze - Exemplo: 1,2,3,12 --></help>
+    <label><!-- ValidateStockMonths --></label>
+    <name>ValidateStockMonths__c</name>
+</CustomFieldTranslation>

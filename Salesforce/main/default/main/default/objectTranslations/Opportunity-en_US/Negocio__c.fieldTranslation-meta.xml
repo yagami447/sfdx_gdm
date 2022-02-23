@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Negócio --></label>
+    <name>Negocio__c</name>
+    <picklistValues>
+        <masterLabel>Fechado</masterLabel>
+        <translation><!-- Fechado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Franqueados</masterLabel>
+        <translation><!-- Franqueados --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reserva</masterLabel>
+        <translation><!-- Reserva --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

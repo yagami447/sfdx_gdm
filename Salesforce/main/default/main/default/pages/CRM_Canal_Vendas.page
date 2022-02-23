@@ -1,0 +1,75 @@
+<apex:page Controller="CRM_Controller" title="Canal de Vendas (total das vendas)" action="{!initCanalVentas}" tabStyle="Account" sidebar="false">    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickCanalVendas="{!verCanalVendas}" clickAreaAct="{!verAreaAct}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1000px">
+<apex:sectionHeader title="Canal de Vendas ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>
+    <apex:pageBlock mode="edit">
+        <apex:Messages style="font-weight:bold;font-size:18px"/>
+        <!--<apex:pageMessages escape="false"/>
+        <apex:pageBlockSection >
+            <apex:outputText style="font-weight:bold;font-size:18px" value="Vendas Totais (Sacas de 40kg): {!crm_mult.Ventas_Totales__c}"></apex:outputText>
+        </apex:pageBlockSection>-->    
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!crm_mult}"  var="c" id="c">
+            <apex:column headerValue="% Agric.">
+                <!--<apex:facet name="footer">%{!crm_mult.CV_Agricultores__c / totalCanalVendas*100}</apex:facet>
+                <apex:outputField value="{!c.CV_Agricultores__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Agricultores__c}" rendered="{!editCanalDeVendas == true}"/>-->
+                <apex:facet name="footer">{!(round(crm_mult.CV_Agricultores_Porc__c * crm_mult.Ventas_Totales__c / 100,2))}</apex:facet>
+                <apex:outputField value="{!c.CV_Agricultores_Porc__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Agricultores_Porc__c}" rendered="{!editCanalDeVendas == true}" style="width: 80px"/>
+            </apex:column>
+            <apex:column headerValue="% Revendas">
+                <!--<apex:facet name="footer">%{!crm_mult.CV_Revendas__c / totalCanalVendas*100}</apex:facet>
+                <apex:outputField value="{!c.CV_Revendas__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Revendas__c}" rendered="{!editCanalDeVendas == true}"/>-->
+                <apex:facet name="footer">{!(round(crm_mult.CV_Revendas_Porc__c * crm_mult.Ventas_Totales__c / 100,2))}</apex:facet>
+                <apex:outputField value="{!c.CV_Revendas_Porc__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Revendas_Porc__c}" rendered="{!editCanalDeVendas == true}" style="width: 80px"/>
+            </apex:column>
+            <apex:column headerValue="% Coop.">
+                <!--<apex:facet name="footer">%{!crm_mult.CV_Cooperadores__c / totalCanalVendas*100}</apex:facet>
+                <apex:outputField value="{!c.CV_Cooperadores__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Cooperadores__c}" rendered="{!editCanalDeVendas == true}"/>-->
+                <apex:facet name="footer">{!(round(crm_mult.CV_Cooperadores_Porc__c * crm_mult.Ventas_Totales__c / 100,2))}</apex:facet>
+                <apex:outputField value="{!c.CV_Cooperadores_Porc__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Cooperadores_Porc__c}" rendered="{!editCanalDeVendas == true}" style="width: 80px"/>
+            </apex:column>
+            <apex:column headerValue="% Mult.">
+                <!--<apex:facet name="footer">%{!crm_mult.CV_Multiplicadores__c / totalCanalVendas*100}</apex:facet>
+                <apex:outputField value="{!c.CV_Multiplicadores__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Multiplicadores__c}" rendered="{!editCanalDeVendas == true}"/>-->
+                <apex:facet name="footer">{!(round(crm_mult.CV_Multiplicadores_Porc__c * crm_mult.Ventas_Totales__c / 100,2))}</apex:facet>
+                <apex:outputField value="{!c.CV_Multiplicadores_Porc__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Multiplicadores_Porc__c}" rendered="{!editCanalDeVendas == true}" style="width: 80px"/>
+            </apex:column>
+            <apex:column headerValue="% Corretoras">
+                <!--<apex:facet name="footer">%{!crm_mult.CV_Corretoras__c / totalCanalVendas*100}</apex:facet>
+                <apex:outputField value="{!c.CV_Corretoras__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Corretoras__c}" rendered="{!editCanalDeVendas == true}"/>-->
+                <apex:facet name="footer">{!(round(crm_mult.CV_Corretoras_Porc__c * crm_mult.Ventas_Totales__c / 100,2))}</apex:facet>
+                <apex:outputField value="{!c.CV_Corretoras_Porc__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Corretoras_Porc__c}" rendered="{!editCanalDeVendas == true}" style="width: 80px"/>
+            </apex:column>
+            <apex:column headerValue="% Pool de compras">
+                <!--<apex:facet name="footer">%{!crm_mult.CV_Pool_de_Compras__c / totalCanalVendas*100}</apex:facet>
+                <apex:outputField value="{!c.CV_Pool_de_Compras__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Pool_de_Compras__c}" rendered="{!editCanalDeVendas == true}"/>-->
+                <apex:facet name="footer">{!(round(crm_mult.CV_Pool_de_Compras_Porc__c * crm_mult.Ventas_Totales__c / 100,2))}</apex:facet>
+                <apex:outputField value="{!c.CV_Pool_de_Compras_Porc__c}" rendered="{!editCanalDeVendas == false}"/>
+                <apex:inputField value="{!c.CV_Pool_de_Compras_Porc__c}" rendered="{!editCanalDeVendas == true}" style="width: 80px"/>
+            </apex:column>
+            <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                <apex:commandLink action="{!editCanalVendas}" rerender="form" rendered="{!editCanalDeVendas == false}" value="Editar "></apex:commandLink>                                      
+                <apex:commandLink action="{!cancelEditCanalVendas}" rendered="{!editCanalDeVendas == true}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveCanalVendas}" rendered="{!editCanalDeVendas == true}">Salvar</apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>             
+    </apex:pageBlock>
+    <br/><br/><br/><br/><br/><br/><br/>
+</apex:form>  
+</apex:panelGrid> 
+</apex:page>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Empresa --></label>
+    <name>Empresa__c</name>
+    <picklistValues>
+        <masterLabel>BASF</masterLabel>
+        <translation><!-- BASF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAYER</masterLabel>
+        <translation><!-- BAYER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DU PONT</masterLabel>
+        <translation><!-- DU PONT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OUTROS</masterLabel>
+        <translation><!-- OUTROS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PROPRIA</masterLabel>
+        <translation><!-- PROPRIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SYNGENTA</masterLabel>
+        <translation><!-- SYNGENTA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

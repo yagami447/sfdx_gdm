@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Hábito de Crescimento --></label>
+    <name>H_bito_de_Crescimento__c</name>
+    <picklistValues>
+        <masterLabel>Determinada</masterLabel>
+        <translation><!-- Determinada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indeterminado</masterLabel>
+        <translation><!-- Indeterminado --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

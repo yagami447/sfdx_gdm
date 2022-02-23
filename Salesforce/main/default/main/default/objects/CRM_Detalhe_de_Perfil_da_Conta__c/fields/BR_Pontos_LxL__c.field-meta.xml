@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Pontos_LxL__c</fullName>
+    <description>Pontos (LxL) del excel Fórmulas Desconto de Royalty</description>
+    <externalId>false</externalId>
+    <formula>IF( BR_LXL_Realizado__c - BR_LXL_Meta__c &gt;=0, 3, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Pontos (LxL) del excel Fórmulas Desconto de Royalty</inlineHelpText>
+    <label>AAAA Pontos LxL</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

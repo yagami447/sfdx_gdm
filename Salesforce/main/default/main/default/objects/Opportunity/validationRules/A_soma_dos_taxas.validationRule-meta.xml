@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_soma_dos_taxas</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK(Taxa_de_primeiro_pagamento__c)),
+(IF(ISBLANK(Taxa_de_terceiro_pagamento__c), 0, Taxa_de_terceiro_pagamento__c) +
+IF(ISBLANK(Taxa_de_segundo_pagamento__c), 0, Taxa_de_segundo_pagamento__c) +
+IF(ISBLANK(Taxa_de_quarto_pagamento__c), 0, Taxa_de_quarto_pagamento__c) +
+IF(ISBLANK(Taxa_de_primeiro_pagamento__c), 0, Taxa_de_primeiro_pagamento__c) +
+IF(ISBLANK(Taxa_de_quinto_pagamento__c ), 0, Taxa_de_quinto_pagamento__c)) != 1)</errorConditionFormula>
+    <errorMessage>A soma dos taxas deve ser igual a 100%</errorMessage>
+</ValidationRule>

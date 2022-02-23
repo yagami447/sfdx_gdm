@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Termo_Aditivo</fullName>
+    <fields>Name</fields>
+    <fields>Estado__c</fields>
+    <fields>Multiplicador__c</fields>
+    <fields>Sociedad__c</fields>
+    <fields>Safra__c</fields>
+    <fields>Region_Comercial__c</fields>
+    <label>Termo Aditivo</label>
+</CompactLayout>

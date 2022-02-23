@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BLOCK_COMMUNITY_EDICION</fullName>
+    <active>true</active>
+    <description>Block community user to start opportunity outside of the first stagename</description>
+    <errorConditionFormula>AND(
+  ISNEW() 
+  , NOT(ISBLANK( $User.ContactId ))
+  , NOT(ISPICKVAL( StageName, &apos;Edición&apos;))
+)</errorConditionFormula>
+    <errorMessage>Oportunidades devem ser criadas na fase de edição.</errorMessage>
+</ValidationRule>

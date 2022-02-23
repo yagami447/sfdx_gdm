@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Fecha en que se fijó la cotización --></help>
+    <label><!-- Fecha de Cotizacion --></label>
+    <name>Fecha_de_Cotizaci_n__c</name>
+</CustomFieldTranslation>

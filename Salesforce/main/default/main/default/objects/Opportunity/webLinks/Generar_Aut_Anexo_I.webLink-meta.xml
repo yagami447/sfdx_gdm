@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generar_Aut_Anexo_I</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Gerar Autorização</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var name = &quot;{!Opportunity.Name}&quot;; 
+var etapa = &quot;{!Opportunity.StageName}&quot;; 
+
+if (etapa == &apos;Aprobada&apos;){
+    var result = sforce.apex.execute(&quot;PdfGeneratorController&quot;,&quot;savePdfAnexoI&quot;, {opId : id , nombreOp : name});
+}else{
+    alert(&quot;Fase para gerar a autorização deve ser aprovada.&quot;);
+}
+
+window.location.reload(true);</url>
+</WebLink>

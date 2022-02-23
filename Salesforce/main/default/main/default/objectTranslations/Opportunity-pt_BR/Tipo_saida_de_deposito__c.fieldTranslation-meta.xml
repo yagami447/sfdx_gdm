@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de depósito --></label>
+    <name>Tipo_saida_de_deposito__c</name>
+    <picklistValues>
+        <masterLabel>Z041 - BR Deposito GDM</masterLabel>
+        <translation><!-- Z041 - BR Deposito GDM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z042 - BR Deposito terceiro</masterLabel>
+        <translation><!-- Z042 - BR Deposito terceiro --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

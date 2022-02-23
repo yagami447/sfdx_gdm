@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- AnexoI --></label>
+        <name>AnexoI</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- AnexoII --></label>
+        <name>AnexoII</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- AnexoII Rebaixamento --></label>
+        <name>AnexoII_Rebaixamento</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- AnexoI Rebaixamento --></label>
+        <name>AnexoI_Rebaixamento</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anexo Descarte --></label>
+        <name>Anexo_Descarte</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anexo III --></label>
+        <name>Anexo_III</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anexo IV --></label>
+        <name>Anexo_IV</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anexo Rebajamiento Bolsas --></label>
+        <name>Anexo_Rebajamiento_Bolsas</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anexo V --></label>
+        <name>Anexo_V</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Anticipo --></label>
+        <name>Anticipo</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Aquisição Sementes Terceiros --></label>
+        <name>Aquisicion_Sementes_Terceiros</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Autorizada --></label>
+        <name>Autorizada</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- CVB Autorizada --></label>
+        <name>CVB_Autorizada</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- CVB Autorizada de VB Completa --></label>
+        <name>CVB_Autorizada_VB_Completa</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- CVB Pendiente --></label>
+        <name>CVB_Pendiente</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- CVB Pendiente de VB Completa --></label>
+        <name>CVB_Pendiente_VB_Completa</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Disponibilidade da Basica --></label>
+        <name>Disponibilidade_da_Basica</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Estimativa de Venda --></label>
+        <name>Estimativa</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Estoque Multiplicador --></label>
+        <name>Estoque_Multiplicador</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Exportacion --></label>
+        <name>Exportacion</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Nota de Credito --></label>
+        <name>Nota_de_Credito</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Objetivo Contrato Royalties --></label>
+        <name>Objetivo_Contrato_Royalties</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Objetivo Ventas Royalties --></label>
+        <name>Objetivo_Ventas_Royalties</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Objetivo Ventas Semilla --></label>
+        <name>Objetivo_Ventas_Semilla</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Pendiente --></label>
+        <name>Pendiente</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Previsao --></label>
+        <name>Previsao</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Produccion Basica --></label>
+        <name>Produccion_Basica</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Produccion Basica Desarrollo --></label>
+        <name>Produccion_Basica_Desarrollo</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Produccion Basica Oferta --></label>
+        <name>Produccion_Basica_Oferta</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Rechazada --></label>
+        <name>Rechazada</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Reembalaje --></label>
+        <name>Reembalaje</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Stock Multiplicadores --></label>
+        <name>Stock_Multiplicadores</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Stock Multiplicadores Milho --></label>
+        <name>Stock_Multiplicadores_Milho</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- VB Completa --></label>
+        <name>VB_Completa</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- VB - General --></label>
+        <name>VB_General</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- VB SAP --></label>
+        <name>VB_SAP</name>
+    </fieldSets>
+    <layouts>
+        <layout>Fc de Brasmax</layout>
+        <sections>
+            <label><!-- Anexo II --></label>
+            <section>Anexo II</section>
+        </sections>
+        <sections>
+            <label><!-- Anexo III e IV --></label>
+            <section>Anexo III e IV</section>
+        </sections>
+        <sections>
+            <label><!-- Stock Multiplicadores --></label>
+            <section>Stock Multiplicadores</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relatorio de Producao</layout>
+        <sections>
+            <label><!-- Relatório de Produção --></label>
+            <section>Relatório de Produção</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- No se puede modificar el valor si este relatorio ha sido facturado --></errorMessage>
+        <name>No_Mod_Sem_Com_Rel_Venda_Facturado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se puede modificar este valor si el relatorio ha sido facturado --></errorMessage>
+        <name>No_Mod_Sem_Uso_Rel_Venda_Facturado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- As quantidades tem que ser múltiplo de 50. --></errorMessage>
+        <name>PB_Comercial_Multiplo_de_50</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O preço unitário deve ser diferente de zero --></errorMessage>
+        <name>Precio_Diferente_de_Zero</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O volume de semente comercializada mais uso próprio não pode superar o de semente aprovada --></errorMessage>
+        <name>Sem_aprovada_mayor_o_igual_a_UP_mas_Com</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O volume de semente aprovada não pode superar o de semente beneficiada --></errorMessage>
+        <name>Sem_beneficiada_mayor_o_igual_a_Sem_Apro</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O volume de semente Beneficiada não pode superar o de semente bruta --></errorMessage>
+        <name>Sem_bruta_mayor_o_igual_Sem_beneficiada</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- La cantidad de semente uso propio en la categoria S2 debe ser 0. --></errorMessage>
+        <name>Semente_Uso_Propio_en_Categ_S2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O Tipo de necessidade não pode estar vazio --></errorMessage>
+        <name>TipoDeNecesidade_NaoVazio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Não existe combinação: produto e o tratamento de semente informado. Favor de excluir e selecionar novamento o produto segundo flag de tratamento. --></errorMessage>
+        <name>Tratamiento_de_Semilla</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Deve ingressar um valor inferior a 99.999.999,0. --></errorMessage>
+        <name>Validacion_para_BI</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A quantidade recusada não pode ser maior que a Quantidade menos Quant Confirmada. --></errorMessage>
+        <name>Validar_Oferta</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O tipo de documento selecionado não corresponde à Royalties fatura do ramo Londrina --></errorMessage>
+        <name>Validar_Tipo_Documento_contra_sucursal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Local de entrega en el item debe ser igual que local de entrega en la cabecera. --></errorMessage>
+        <name>Validar_local_de_entrega</name>
+    </validationRules>
+</CustomObjectTranslation>

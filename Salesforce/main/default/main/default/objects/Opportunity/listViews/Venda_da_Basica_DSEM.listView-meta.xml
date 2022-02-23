@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Venda_da_Basica_DSEM</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Safra__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Marca__c</field>
+        <operation>equals</operation>
+        <value>DSEM</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.VB_Autorizada,Opportunity.VB_Facturada,Opportunity.VB_Pendiente,Opportunity.VB_Rechazada</value>
+    </filters>
+    <label>Venda da Basica DSEM</label>
+    <sharedTo>
+        <role>Admin</role>
+        <role>Administracion_3</role>
+        <role>Comercial_R2_DSEM</role>
+        <role>Director</role>
+    </sharedTo>
+</ListView>

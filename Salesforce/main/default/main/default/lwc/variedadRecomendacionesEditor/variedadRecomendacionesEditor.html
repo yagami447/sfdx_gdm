@@ -1,0 +1,18 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-datatable
+        columns={columns}
+        data={data}
+        key-field="id"
+        enable-infinite-loading
+        onloadmore={loadMoreData}
+        onrowaction={handleRowAction}
+        sorted-by={sortedBy}
+        sorted-direction={sortDirection}
+        onsort={doSorting}
+        min-column-width="150"
+        hide-checkbox-column
+        show-row-number-column>
+    </lightning-datatable>
+</template>

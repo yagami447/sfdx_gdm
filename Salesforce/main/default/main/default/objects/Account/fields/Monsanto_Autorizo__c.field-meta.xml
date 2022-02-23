@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monsanto_Autorizo__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo que indica el estado de la cuenta con respecto a Monsanto.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Si Monsanto autoriza a esta cuenta, seleccionar esta casilla.</inlineHelpText>
+    <label>Monsanto Autorizou?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

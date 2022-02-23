@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Producto_Marca</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( AND( ISPICKVAL( Marca__c, &apos;BRMX&apos;) , ISPICKVAL( Cultivar__r.Sociedad__c , &apos;DSEM&apos;) ) , AND( ISPICKVAL(Marca__c, &apos;DSEM&apos;) , ISPICKVAL(Cultivar__r.Sociedad__c , &apos;BRMX&apos;) ) )</errorConditionFormula>
+    <errorMessage>A Marca do Produto selecionado não se corresponde com a Marca ingressada no Reclamo.</errorMessage>
+</ValidationRule>

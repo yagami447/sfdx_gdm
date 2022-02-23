@@ -1,0 +1,17 @@
+.picklist-container {
+    width : 90%;
+    margin: 0 auto;
+}
+
+.picklist-container .slds-dropdown {
+    position: static !important;
+    max-height: 120px;
+}
+
+[lightning-combobox_combobox-host] {
+    margin-bottom: 17px;
+}
+
+th.slds-has-focus, td.slds-has-focus {
+    box-shadow: none !important;
+}

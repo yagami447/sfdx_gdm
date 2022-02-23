@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VB_Chegou_na_Brasmax__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si llego el cto de multiplicacion a Brasmax por la venta de basica</description>
+    <externalId>false</externalId>
+    <label>Chegou na Brasmax?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

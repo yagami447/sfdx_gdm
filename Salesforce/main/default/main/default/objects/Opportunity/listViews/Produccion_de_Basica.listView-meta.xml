@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produccion_de_Basica</fullName>
+    <columns>Activa__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>Tipo_de_Operacion__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Notificado__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.PB_Comercial,Opportunity.PB_Desarrollo,Opportunity.PB_Produccion</value>
+    </filters>
+    <filters>
+        <field>Safra__c</field>
+        <operation>equals</operation>
+        <value>20/21,21/22</value>
+    </filters>
+    <label>Produção da Basica</label>
+    <language>es</language>
+    <sharedTo>
+        <group>Comerciales_Region_2</group>
+        <role>Gerencia_Produccion</role>
+    </sharedTo>
+</ListView>

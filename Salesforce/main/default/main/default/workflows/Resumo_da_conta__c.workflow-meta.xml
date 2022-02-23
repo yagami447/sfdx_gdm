@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Actualizar_Nombre_de_CRM</fullName>
+        <field>Name</field>
+        <formula>&apos;CRM &apos; + Multiplicador__r.Name + &apos; &apos; + TEXT(Marca__c) + &apos; &apos; + TEXT(Safra__c)</formula>
+        <name>Actualizar Nombre de CRM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CRM_Edicion_a_Pendiente</fullName>
+        <field>Fase__c</field>
+        <literalValue>Pendente</literalValue>
+        <name>CRM Edicion a Pendiente</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CRM_Pendiente_a_Aprobado</fullName>
+        <field>Fase__c</field>
+        <literalValue>Aprovado</literalValue>
+        <name>CRM Pendiente a Aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CRM_Pendiente_a_Rechazado</fullName>
+        <field>Fase__c</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>CRM Pendiente a Rechazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Generate Name</fullName>
+        <actions>
+            <name>Actualizar_Nombre_de_CRM</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Resumo_da_conta__c.Vendas_para_agricultores__c</field>
+            <operation>lessOrEqual</operation>
+            <value>100</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,5 @@
+Se le ha asignado bajo su responsabilidad el reclamo Nro.: {!Case.CaseNumber}. Se le recuerda que debe comunicarse con el agricultor dentro de las próximas 24 Hrs.
+Cuenta: {!Case.Account}
+Telefono: {!Case.CRM_Telefono_Productor__c}
+Contacto: {!Case.Contact}
+Telefono Contacto: {!Case.CRM_Telefono_Contacto__c}

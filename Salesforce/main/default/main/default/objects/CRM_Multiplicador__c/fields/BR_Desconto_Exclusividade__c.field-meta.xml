@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Desconto_Exclusividade__c</fullName>
+    <description>Desconto Exclusividade (kgs) del excel Fórmula Desconto de Royalty</description>
+    <externalId>false</externalId>
+    <formula>IF(BR_Exclusividade_GDM__c = true, 0.5, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Desconto Exclusividade (kgs) del excel Fórmula Desconto de Royalty</inlineHelpText>
+    <label>BDesconto Exclusividade</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

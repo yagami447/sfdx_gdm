@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Producto__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Selecciona el producto que se facturó(básica) para obtener la Variedad</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Selecione o produto que foi anunciado (básico) para a variedade</inlineHelpText>
+    <label>Producto</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Votaciones</relationshipLabel>
+    <relationshipName>Votaciones</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

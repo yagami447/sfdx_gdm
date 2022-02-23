@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_Direccion</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(LEN(MailingStreet) = 0, LEN(MailingCity) = 0, LEN(MailingPostalCode) = 0, LEN(MailingCountry) = 0, LEN(MailingState) = 0)</errorConditionFormula>
+    <errorMessage>Tem que preencher todos os campos na direção</errorMessage>
+</ValidationRule>

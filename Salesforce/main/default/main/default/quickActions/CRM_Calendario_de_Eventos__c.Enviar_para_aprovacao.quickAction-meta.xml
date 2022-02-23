@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Solicitar aprobación de un CRM Evento en la comunidad de NEOGEN</description>
+    <height>150</height>
+    <label>Enviar para aprovação</label>
+    <lightningComponent>approvalButtonCRMEvento</lightningComponent>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>LightningComponent</type>
+    <width>-100</width>
+</QuickAction>

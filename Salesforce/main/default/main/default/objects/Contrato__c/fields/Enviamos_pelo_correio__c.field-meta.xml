@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enviamos_pelo_correio__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Click para sim, se já foi enviado. Indicar data de envio. Click para não, se ainda não foi enviado.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Click para sim, se já foi enviado. Indicar data de envio. Click para não, se ainda não foi enviado.</inlineHelpText>
+    <label>Enviamos pelo correio</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,105 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="ProfilePage" showHeader="false" standardStylesheets="false" cache="false" title="{!$Label.Edit_Profile}" controller="aSiteProfileController" action="{!validate}" docType="html-5.0">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+    <br/>
+    <br/>
+    <apex:outputPanel layout="block"  style="margin-top:20px;">
+        <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" styleClass="panel-default"> 
+        <apex:form styleClass="form-horizontal form-label-left">  
+            <div class="row">
+                <div class="" style="min-width:800px">
+                    <div class="">
+                        <div class="page-title">
+                            <div class="title_left">
+                                <h3>{!$Label.Edit_Profile}</h3>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="clearfix"></div>    
+                    <div class="row"> <!-- Row tag -->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>{!$Label.Profile}</h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_context">        
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="email">{!$ObjectType.SiteUser__c.fields.Email__c.Label}:</label>
+                                        <div class="col-sm-6 has-feedback">
+                                           <apex:inputText disabled="true" value="{!User.Email__c}" styleClass="form-control has-feedback-left" id="email" html-placeholder="{!$ObjectType.SiteUser__c.fields.Email__c.Label}" />
+                                           <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="pwd">{!$Label.Name} *:</label>
+                                        <div class="col-sm-6">
+                                            <apex:inputField value="{!User.Name}" required="true" styleClass="form-control has-feedback-left" id="name" html-placeholder="{!$ObjectType.SiteUser__c.fields.Name.Label}" />
+                                            <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="pwd">{!$ObjectType.SiteUser__c.fields.Phone__c.Label}:</label>
+                                        <div class="col-sm-6">
+                                            <apex:inputField value="{!User.Phone__c}" styleClass="form-control has-feedback-left" id="pho" html-placeholder="{!$ObjectType.SiteUser__c.fields.Phone__c.Label}" />
+                                            <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="pwd">{!$ObjectType.SiteUser__c.fields.MobilePhone__c.Label}:</label>
+                                        <div class="col-sm-6">
+                                            <apex:inputField value="{!User.MobilePhone__c}" styleClass="form-control has-feedback-left" id="cel" html-placeholder="{!$ObjectType.SiteUser__c.fields.MobilePhone__c.Label}" />
+                                            <span class="fa fa-mobile-phone form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="pwd">{!$ObjectType.SiteUser__c.fields.Occupation__c.Label}:</label>
+                                        <div class="col-sm-6">
+                                            <apex:inputField value="{!User.Occupation__c}" styleClass="form-control has-feedback-left" id="occ" html-placeholder="{!$ObjectType.SiteUser__c.fields.Occupation__c.Label}" />
+                                            <span class="fa fa-info-circle form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="pwd">{!$ObjectType.SiteUser__c.fields.Address__c.Label}:</label>
+                                        <div class="col-sm-6">
+                                            <apex:inputField value="{!User.Address__c}" styleClass="form-control has-feedback-left" id="add" html-placeholder="{!$ObjectType.SiteUser__c.fields.Address__c.Label}" />
+                                            <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="pwd">{!$ObjectType.SiteUser__c.fields.Site__c.Label}:</label>
+                                        <div class="col-sm-6">
+                                            <apex:inputField type="url" value="{!User.Site__c}" styleClass="form-control has-feedback-left" id="site" html-placeholder="{!$ObjectType.SiteUser__c.fields.Site__c.Label}" />
+                                            <span class="fa fa-globe form-control-feedback left" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                            <apex:commandButton styleclass="btn btn-success" value="{!$Label.site.submit}" action="{!saveProfile}" />
+                                            <apex:commandButton styleclass="btn btn-primary" immediate="true" value="{!$Label.Cancel}" action="{!editCancel}" />
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Row tag -->
+                    </div>
+                </div>
+            </div>            
+        </apex:form>
+        </apex:panelGrid> 
+    </apex:outputPanel>
+    </apex:panelGrid> 
+    </center>
+    <br/>
+</body>
+</apex:define>
+</apex:composition>
+</apex:page>

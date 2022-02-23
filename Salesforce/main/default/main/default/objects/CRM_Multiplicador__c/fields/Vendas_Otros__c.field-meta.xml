@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendas_Otros__c</fullName>
+    <description>% Vendas otros</description>
+    <externalId>false</externalId>
+    <formula>if (Ventas_Otros_Obt__c=0, 0, Ventas_Otros_Obt__c / Ventas_Totales__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>% Vendas otros</inlineHelpText>
+    <label>% Vendas Otros</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

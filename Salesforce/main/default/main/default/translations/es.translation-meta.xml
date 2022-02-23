@@ -1,0 +1,3953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- GDM - Admin --></label>
+        <name>Administrar</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Anexos --></label>
+        <name>Anexos</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Brasmax --></label>
+        <name>Brasmax</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Brasmax Configuração --></label>
+        <name>Brasmax_Configura</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- GDM - SC --></label>
+        <name>Brasmax_Pedidos</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Reclamações --></label>
+        <name>Brasmax_Reclam</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Contratos --></label>
+        <name>Contratos</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Contratos --></label>
+        <name>Contratos_lightning</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Gestion de Auditorias --></label>
+        <name>Gestion_de_Auditorias</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Informações Técnicas de Cultivares --></label>
+        <name>Informaes_Tcnicas_de_Cultivares</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Venda de Básica --></label>
+        <name>Venda_de_Bsica</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Votación --></label>
+        <name>Votaci_n</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Add --></label>
+        <name>Add</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo Descarte Val New Anexo --></label>
+        <name>Anexo_Descarte_Val_New_Anexo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo Descarte Validacion A --></label>
+        <name>Anexo_Descarte_Validacion_A</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo Descarte Validacion B --></label>
+        <name>Anexo_Descarte_Validacion_B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo III Val Datos No Validos --></label>
+        <name>Anexo_III_Val_Datos_No_Validos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo III Val Existe Anexo II --></label>
+        <name>Anexo_III_Val_Existe_Anexo_II</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo III Val New Anexo --></label>
+        <name>Anexo_III_Val_New_Anexo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo III Validacion C --></label>
+        <name>Anexo_III_Validacion_C</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo_III_Validacion_D --></label>
+        <name>Anexo_III_Validacion_D</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo III Validacion E --></label>
+        <name>Anexo_III_Validacion_E</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo III Validacion F --></label>
+        <name>Anexo_III_Validacion_F</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Reb Val Cant Rebajada --></label>
+        <name>Anexo_II_Reb_Val_Cant_Rebajada</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Reb Val Categ Relacionadas --></label>
+        <name>Anexo_II_Reb_Val_Categ_Relacionadas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Reb Val Datos No Validos --></label>
+        <name>Anexo_II_Reb_Val_Datos_No_Validos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Reb Val Datos No Validos 2 --></label>
+        <name>Anexo_II_Reb_Val_Datos_No_Validos_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Reb Val Datos Oblig --></label>
+        <name>Anexo_II_Reb_Val_Datos_Oblig</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Reb Val Rebaja Correcta --></label>
+        <name>Anexo_II_Reb_Val_Rebaja_Correcta</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Val Datos No Validos --></label>
+        <name>Anexo_II_Val_Datos_No_Validos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Val Datos Oblig --></label>
+        <name>Anexo_II_Val_Datos_Oblig</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Val Existe Anexo I --></label>
+        <name>Anexo_II_Val_Existe_Anexo_I</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Val New Anexo --></label>
+        <name>Anexo_II_Val_New_Anexo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo II Validacion B --></label>
+        <name>Anexo_II_Validacion_B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo IV Val Datos No Validos --></label>
+        <name>Anexo_IV_Val_Datos_No_Validos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo IV Val Existe Anexo III --></label>
+        <name>Anexo_IV_Val_Existe_Anexo_III</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo IV Val New Anexo --></label>
+        <name>Anexo_IV_Val_New_Anexo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo IV Validacion B --></label>
+        <name>Anexo_IV_Validacion_B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val Cantidades --></label>
+        <name>Anexo_V_Val_Cantidades</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val Categ Relacionadas --></label>
+        <name>Anexo_V_Val_Categ_Relacionadas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val Datos No Validos --></label>
+        <name>Anexo_V_Val_Datos_No_Validos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val Datos No Validos 2 --></label>
+        <name>Anexo_V_Val_Datos_No_Validos_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val Datos Oblig --></label>
+        <name>Anexo_V_Val_Datos_Oblig</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val Existe Anexo IV --></label>
+        <name>Anexo_V_Val_Existe_Anexo_IV</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexo V Val New Anexo --></label>
+        <name>Anexo_V_Val_New_Anexo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anexos --></label>
+        <name>Anexos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Appendix Type --></label>
+        <name>Appendix_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AprovarRecusarVBPedidoAPI: Mensaje de error por defecto --></label>
+        <name>AprovarRecusarVBPedidoAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AprovarRecusarVBPedidoAPI: Mensaje de error por pedido rechazado --></label>
+        <name>AprovarRecusarVBPedidoAPI_Request_Rejected_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AprovarRecusarVBPedidoAPI: Mensaje de pedido aprobado --></label>
+        <name>AprovarRecusarVBPedidoAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Authorizations --></label>
+        <name>Authorizations</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CRMAPI: Mensaje de error por mala configuración --></label>
+        <name>CRMAPI_Bad_Setting_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CRMAPI: Mensaje de CRM Existente --></label>
+        <name>CRMAPI_CRM_Created_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CRMAPI: Mensaje de error por defecto --></label>
+        <name>CRMAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CRMAPI: Mensaje de éxito --></label>
+        <name>CRMAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CantidadIgualCero --></label>
+        <name>CantidadIgualCero</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CidadesAPI: Mensaje de error por defecto --></label>
+        <name>CidadesAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CidadesAPI: Mensaje de éxito --></label>
+        <name>CidadesAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CooperantesA1API: Mensaje de Error por Defecto --></label>
+        <name>CooperantesA1API_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CooperantesA1API: Mensaje de éxito --></label>
+        <name>CooperantesA1API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateEvent --></label>
+        <name>CreateEvent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateOpportunity --></label>
+        <name>CreateOpportunity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Date --></label>
+        <name>Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeleteAttachmentAPI: Mensaje de éxito --></label>
+        <name>DeleteAttachmentAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeleteAttachmentAPI: Mensaje de validación --></label>
+        <name>DeleteAttachmentAPI_Validation_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Descarte de Semente --></label>
+        <name>Descarte_de_Semente</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Descartes --></label>
+        <name>Descartes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_CANT_AFTER_III --></label>
+        <name>ERROR_CANT_AFTER_III</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_DESCARTE_INVALIDO --></label>
+        <name>ERROR_DESCARTE_INVALIDO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_DUPLICATE_A2 --></label>
+        <name>ERROR_DUPLICATE_A2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_INVALID_MONTH --></label>
+        <name>ERROR_INVALID_MONTH</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_MUST_LAUNCH --></label>
+        <name>ERROR_MUST_LAUNCH</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_NO_NEGATIVE --></label>
+        <name>ERROR_NO_NEGATIVE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_NO_PRODUCT --></label>
+        <name>ERROR_NO_PRODUCT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_PREENCHER_DADOS --></label>
+        <name>ERROR_PREENCHER_DADOS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_VALUE_MISMATCH --></label>
+        <name>ERROR_VALUE_MISMATCH</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR_WRONG_DAY --></label>
+        <name>ERROR_WRONG_DAY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit --></label>
+        <name>Edit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit Profile --></label>
+        <name>Edit_Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email is required --></label>
+        <name>Email_is_required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorAdicionNuevoItem --></label>
+        <name>ErrorAdicionNuevoItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorCantidad --></label>
+        <name>ErrorCantidad</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorCategoria --></label>
+        <name>ErrorCategoria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorLote --></label>
+        <name>ErrorLote</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorUnidade --></label>
+        <name>ErrorUnidade</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorVariedad --></label>
+        <name>ErrorVariedad</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstadoParaCRMAPI: Mensaje de error por defecto --></label>
+        <name>EstadoParaCRMAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstadoParaCRMAPI: Mensaje de éxito --></label>
+        <name>EstadoParaCRMAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimativaAPI: Mensaje de error por defecto --></label>
+        <name>EstimativaAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimativaAPI: Mensaje de éxito --></label>
+        <name>EstimativaAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimativaProductAPI: Mensaje de error por defecto --></label>
+        <name>EstimativaProductAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimativaProductAPI: Mensaje de éxito --></label>
+        <name>EstimativaProductAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estimativa_Gerente --></label>
+        <name>Estimativa_Gerente</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estimativa_Multiplicador --></label>
+        <name>Estimativa_Multiplicador</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estimativa_Supervisor --></label>
+        <name>Estimativa_Supervisor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estoque_Val_Datos_No_Validos --></label>
+        <name>Estoque_Val_Datos_No_Validos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estoque Val New Estoque --></label>
+        <name>Estoque_Val_New_Estoque</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estoque_Validacion_A --></label>
+        <name>Estoque_Validacion_A</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EventosAPI: Mensaje de evento invalido --></label>
+        <name>EventosAPI_Bad_Event_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EventosAPI: Mensaje de mala configuración --></label>
+        <name>EventosAPI_Bad_Settings_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EventosAPI: Mensaje de error por defecto --></label>
+        <name>EventosAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EventosAPI: Mensaje de error en fase lado a lado --></label>
+        <name>EventosAPI_Fase_LXL_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EventosAPI: Mensaje de éxito --></label>
+        <name>EventosAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label>No se puede usar S2 Cultivar para uso propio</label>
+        <name>ExceptionCannotUseS2</name>
+    </customLabels>
+    <customLabels>
+        <label>Este Cultivar ha excedido la cantidad permitida.</label>
+        <name>ExceptionExceeded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fechar --></label>
+        <name>Fechar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Forgot Password Enter Email --></label>
+        <name>Forgot_Password_Enter_Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GetDocumentAPI: Mensaje de error por defecto --></label>
+        <name>GetDocumentAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GetDocumentAPI: Mensaje de éxito --></label>
+        <name>GetDocumentAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Linea --></label>
+        <name>Linea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MidiaKitAPI: Mensaje de error por defecto --></label>
+        <name>MidiaKitAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MidiaKitAPI: Mensaje de error por no tener items relacionados --></label>
+        <name>MidiaKitAPI_No_Items_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MidiaKitAPI: Mensaje de éxito --></label>
+        <name>MidiaKitAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MidiaKitAPI: Mensaje de validación para campos obligatorios --></label>
+        <name>MidiaKitAPI_Validation_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Name --></label>
+        <name>Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NeedAnexoI --></label>
+        <name>NeedAnexoI</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NeedAnexoI --></label>
+        <name>NeedAnexoII</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NeedAnexoI --></label>
+        <name>NeedAnexoIII</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NeedAnexoI --></label>
+        <name>NeedAnexoIV</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New --></label>
+        <name>New</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Anexo III Mensaje de Error --></label>
+        <name>OpportunityAPI_Anexo_III_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Anexo II Mensaje de Error --></label>
+        <name>OpportunityAPI_Anexo_II_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Anexo I Mensaje de Error --></label>
+        <name>OpportunityAPI_Anexo_I_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: CVB Aprobada Mensaje de Error --></label>
+        <name>OpportunityAPI_CVB_Approved_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Anexo IV Existente Mensaje de Error --></label>
+        <name>OpportunityAPI_Existing_Anexo_IV_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Anexo I Existente Mensaje de Error --></label>
+        <name>OpportunityAPI_Existing_Anexo_I_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Mensaje de Error Genérico General --></label>
+        <name>OpportunityAPI_General_Generic_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Mensaje de Éxito Genérico General --></label>
+        <name>OpportunityAPI_General_Generic_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OpportunityAPI: Objeto Contrato__c sin registros Mensaje de Error --></label>
+        <name>OpportunityAPI_Object_Contract_Without_Records_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Sent --></label>
+        <name>Password_Sent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password is required --></label>
+        <name>Password_is_required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Print --></label>
+        <name>Print</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsA2API: Mensaje de éxito --></label>
+        <name>ProductsA2API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsA3API: Mensaje de éxito --></label>
+        <name>ProductsA3API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsA4API: Mensaje de exito --></label>
+        <name>ProductsA4API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsA5API: Mensaje de error por defecto --></label>
+        <name>ProductsA5API_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsA5API: Mensaje de éxito --></label>
+        <name>ProductsA5API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsCRMAPI: Mensaje de error por defecto --></label>
+        <name>ProductsCRMAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsCRMAPI: Mensaje de éxito --></label>
+        <name>ProductsCRMAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsDescarteAPI: Mensaje de error por defecto --></label>
+        <name>ProductsDescarteAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsDescarteAPI: Mensaje de éxito --></label>
+        <name>ProductsDescarteAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsEventAPI: Mensaje de error por defecto --></label>
+        <name>ProductsEventAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsEventAPI: Mensaje de éxito --></label>
+        <name>ProductsEventAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsRebaixamentoAPI: Mensaje de éxito --></label>
+        <name>ProductsRebaixamentoAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsReembalajeAPI: Mensaje de error por defecto --></label>
+        <name>ProductsReembalajeAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsReembalajeAPI: Mensaje de éxito --></label>
+        <name>ProductsReembalajeAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsVBAPI: Mensaje de error por defecto --></label>
+        <name>ProductsVBAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsVBAPI: Mensaje de error por producto no anexado --></label>
+        <name>ProductsVBAPI_Product_Not_Attached_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsVBAPI: Mensaje de éxito --></label>
+        <name>ProductsVBAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsVotacionAPI: Mensaje de error por defecto --></label>
+        <name>ProductsVotacionAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductsVotacionAPI: Mensaje de éxito --></label>
+        <name>ProductsVotacionAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Profile --></label>
+        <name>Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rebajamiento de Bolsas --></label>
+        <name>Rebajamiento_de_Bolsas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rebajamiento de Hectareas --></label>
+        <name>Rebajamiento_de_Hectareas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recover Password Error --></label>
+        <name>Recover_Password_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reductions --></label>
+        <name>Reductions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reembalagem --></label>
+        <name>Reembalagems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove --></label>
+        <name>Remove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ResetAPI: Mensaje de error por defecto --></label>
+        <name>ResetAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ResetAPI: Mensaje de éxito --></label>
+        <name>ResetAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA1API: Mensaje de Error de DML --></label>
+        <name>SalvarA1API_DML_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA1API: Mensaje de Error por Defecto --></label>
+        <name>SalvarA1API_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA1API: Validación de Campo Obligatorio &quot;Estado de Comercialización&quot; --></label>
+        <name>SalvarA1API_First_Empty_Field_Validation_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA1API: Validación de Campo Obligatorio &quot;Lista de Nuevos Productos en Opp&quot; --></label>
+        <name>SalvarA1API_Second_Empty_Field_Validation_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA1API: Mensaje de éxito --></label>
+        <name>SalvarA1API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA2API: Mensaje de error por defecto --></label>
+        <name>SalvarA2API_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA2API: Mensaje de error al editar una Oportunidad --></label>
+        <name>SalvarA2API_Opportunity_To_Edit_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA2API: Mensaje de éxito --></label>
+        <name>SalvarA2API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA2API: Mensaje de error en validación --></label>
+        <name>SalvarA2API_Validation_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA2RebaixamentoAPI: Mensaje de error por defecto --></label>
+        <name>SalvarA2RebaixamentoAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA2RebaixamentoAPI: Mensaje de éxito --></label>
+        <name>SalvarA2RebaixamentoAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA3API: Mensaje de error por defecto --></label>
+        <name>SalvarA3API_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA3API: Mensaje de error de valor duplicado --></label>
+        <name>SalvarA3API_Duplicate_Value_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA3API: Mensaje de éxito --></label>
+        <name>SalvarA3API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA4API: Mensaje de error por defecto --></label>
+        <name>SalvarA4API_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA4API: Mensaje de error de valor duplicado --></label>
+        <name>SalvarA4API_Duplicate_Value_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA4API: Mensaje de éxito --></label>
+        <name>SalvarA4API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA5API: Mensaje de éxito --></label>
+        <name>SalvarA5API_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarA5API: Mensaje de error de validación --></label>
+        <name>SalvarA5API_Validation_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarCRMAPI: Primer mensaje de error --></label>
+        <name>SalvarCRMAPI_First_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarCRMAPI: Segundo mensaje de error --></label>
+        <name>SalvarCRMAPI_Second_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarCRMAPI: Mensaje de éxito --></label>
+        <name>SalvarCRMAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarDescarteAPI: Mensaje de error por defecto --></label>
+        <name>SalvarDescarteAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarDescarteAP: Mensaje de validación de unidades incompletas --></label>
+        <name>SalvarDescarteAPI_Incomplete_Units_Validation_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarDescarteAPI: Mensaje de error respecto a errores en productos --></label>
+        <name>SalvarDescarteAPI_Product_Validation_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarDescarteAPI: Mensaje de éxito --></label>
+        <name>SalvarDescarteAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarEstimativaAPI: Mensaje de aclaración en error --></label>
+        <name>SalvarEstimativaAPI_Clarification_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarEstimativaAPI: Mensaje de error por defecto --></label>
+        <name>SalvarEstimativaAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarEstimativaAPI: Mensaje de error al intentar salvar una Estimativa sin prod --></label>
+        <name>SalvarEstimativaAPI_Products_Quantity_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarEstimativaAPI: Mensaje de éxito --></label>
+        <name>SalvarEstimativaAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarEventoAPI: Mensaje de error por defecto --></label>
+        <name>SalvarEventoAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarEventoAPI: Mensaje de éxito --></label>
+        <name>SalvarEventoAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarReembalajeAPI: Mensaje de error por defecto --></label>
+        <name>SalvarReembalajeAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarReembalajeAPI: Mensaje de error en producto --></label>
+        <name>SalvarReembalajeAPI_Product_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarReembalajeAPI: Mensaje de éxito --></label>
+        <name>SalvarReembalajeAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarReembalajeAPI: Mensaje de error en unidades --></label>
+        <name>SalvarReembalajeAPI_Unidade_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarStockAPI: Mensaje de error por defecto --></label>
+        <name>SalvarStockAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarStockAPI: Mensaje de éxito --></label>
+        <name>SalvarStockAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarVotoAPI: Mensaje de error por defecto --></label>
+        <name>SalvarVotoAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarVotoAPI: Mensaje de validación de campo región vacío --></label>
+        <name>SalvarVotoAPI_Null_Region_Validation_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalvarVotoAPI: Mensaje de éxito --></label>
+        <name>SalvarVotoAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save --></label>
+        <name>Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveDocumentAPI: Mensaje de error de parámetro attachmentContent vacío --></label>
+        <name>SaveDocumentAPI_Attachment_Content_Type_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveDocumentAPI: Mensaje de error por condición no cumplida --></label>
+        <name>SaveDocumentAPI_Conditional_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveDocumentAPI: Mensaje de error por defecto --></label>
+        <name>SaveDocumentAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveDocumentAPI: Mensaje de error de cuerpo vacío --></label>
+        <name>SaveDocumentAPI_Empty_Body_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveDocumentAPI: Mensaje de éxito --></label>
+        <name>SaveDocumentAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- StockProductsAPI: Mensaje de error por defecto --></label>
+        <name>StockProductsAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- StockProductsAPI: Mensaje de éxito --></label>
+        <name>StockProductsAPI_Success_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submit --></label>
+        <name>Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Task completed Ok --></label>
+        <name>Task_Completed_Ok</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unknown User --></label>
+        <name>Unknown_User</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Username incorrent --></label>
+        <name>Username_incorrent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Username is required --></label>
+        <name>Username_is_required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mensagem que avisa o usuário sobre a validação de quantidade. --></label>
+        <name>ValidaQuantidadePendente</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Você deve digitar um valor negativo --></label>
+        <name>ValorNegativo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Products --></label>
+        <name>View_Products</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Action --></label>
+        <name>action</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Active --></label>
+        <name>active</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Active List --></label>
+        <name>active_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- approval date --></label>
+        <name>approval_date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose --></label>
+        <name>choose</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Access Authentication --></label>
+        <name>dfsle__AccessAuthentication</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Access Code --></label>
+        <name>dfsle__AccessCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account --></label>
+        <name>dfsle__Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DocuSign Account Already Exists --></label>
+        <name>dfsle__AccountAlreadyExists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account In Session Signing Must Be Enabled --></label>
+        <name>dfsle__AccountInSessionSigningMustBeEnabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account not Configured --></label>
+        <name>dfsle__AccountNotConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account Provisioning Failed --></label>
+        <name>dfsle__AccountProvisioningFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DocuSign Account Activation Required --></label>
+        <name>dfsle__ActivationRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Active --></label>
+        <name>dfsle__Active</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add --></label>
+        <name>dfsle__Add</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add_DocuSign_Buttons --></label>
+        <name>dfsle__AddDocuSignButtons</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Recipient --></label>
+        <name>dfsle__AddRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Send with DocuSign --></label>
+        <name>dfsle__AddSendWithDocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Template --></label>
+        <name>dfsle__AddTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add to DocuSign --></label>
+        <name>dfsle__AddToDocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add to DocuSign details --></label>
+        <name>dfsle__AddToDocuSignDetails</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add user --></label>
+        <name>dfsle__AddUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Admin --></label>
+        <name>dfsle__Admin</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Advanced options --></label>
+        <name>dfsle__AdvancedOptions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Afghanistan --></label>
+        <name>dfsle__Afghanistan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Agent --></label>
+        <name>dfsle__Agent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AlandIslands --></label>
+        <name>dfsle__AlandIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Albania --></label>
+        <name>dfsle__Albania</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Algeria --></label>
+        <name>dfsle__Algeria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All_Set --></label>
+        <name>dfsle__AllSet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All value must not be blank --></label>
+        <name>dfsle__AllValuesMustNotBeBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Already Complete --></label>
+        <name>dfsle__AlreadyComplete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Already DocuSign user --></label>
+        <name>dfsle__AlreadyMember_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AmericanSamoa --></label>
+        <name>dfsle__AmericanSamoa</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Andorra --></label>
+        <name>dfsle__Andorra</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Angola --></label>
+        <name>dfsle__Angola</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anguilla --></label>
+        <name>dfsle__Anguilla</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Antarctica --></label>
+        <name>dfsle__Antarctica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AntiguaAndBarbuda --></label>
+        <name>dfsle__AntiguaAndBarbuda</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approve --></label>
+        <name>dfsle__Approve</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Argentina --></label>
+        <name>dfsle__Argentina</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Armenia --></label>
+        <name>dfsle__Armenia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Aruba --></label>
+        <name>dfsle__Aruba</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Assign admin permission set --></label>
+        <name>dfsle__AssignAdminPermissionSet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- At least one document is required --></label>
+        <name>dfsle__AtLeastOneDocumentIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- At least one envelope is required --></label>
+        <name>dfsle__AtLeastOneEnvelopeIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- At least one recipient is required --></label>
+        <name>dfsle__AtLeastOneRecipientIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Australia --></label>
+        <name>dfsle__Australia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Austria --></label>
+        <name>dfsle__Austria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Azerbaijan --></label>
+        <name>dfsle__Azerbaijan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Back --></label>
+        <name>dfsle__Back</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bahamas --></label>
+        <name>dfsle__Bahamas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bahrain --></label>
+        <name>dfsle__Bahrain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bangladesh --></label>
+        <name>dfsle__Bangladesh</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Barbados --></label>
+        <name>dfsle__Barbados</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Belarus --></label>
+        <name>dfsle__Belarus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Belgium --></label>
+        <name>dfsle__Belgium</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Belize --></label>
+        <name>dfsle__Belize</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Benin --></label>
+        <name>dfsle__Benin</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bermuda --></label>
+        <name>dfsle__Bermuda</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bhutan --></label>
+        <name>dfsle__Bhutan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bolivia --></label>
+        <name>dfsle__Bolivia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BosniaAndHerzegovina --></label>
+        <name>dfsle__BosniaAndHerzegovina</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Botswana --></label>
+        <name>dfsle__Botswana</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BouvetIsland --></label>
+        <name>dfsle__BouvetIsland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Brazil --></label>
+        <name>dfsle__Brazil</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BritishIndiaOceanTerritory --></label>
+        <name>dfsle__BritishIndiaOceanTerritory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VirginIslandsBritish --></label>
+        <name>dfsle__BritishVirginIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Brunei --></label>
+        <name>dfsle__Brunei</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bulgaria --></label>
+        <name>dfsle__Bulgaria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Bulk list not found --></label>
+        <name>dfsle__BulkListNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BurkinaFaso --></label>
+        <name>dfsle__BurkinaFaso</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Burundi --></label>
+        <name>dfsle__Burundi</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cambodia --></label>
+        <name>dfsle__Cambodia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cameroon --></label>
+        <name>dfsle__Cameroon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Can manage --></label>
+        <name>dfsle__CanManage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Canada --></label>
+        <name>dfsle__Canada</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>dfsle__Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Canceled --></label>
+        <name>dfsle__Canceled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot correct envelope --></label>
+        <name>dfsle__CannotCorrectEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized field create --></label>
+        <name>dfsle__CannotCreateFields_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized object create --></label>
+        <name>dfsle__CannotCreateObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot create status --></label>
+        <name>dfsle__CannotCreateStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized object delete --></label>
+        <name>dfsle__CannotDeleteObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fields not filterable --></label>
+        <name>dfsle__CannotFilterFields_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized field query --></label>
+        <name>dfsle__CannotQueryFields_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized object query --></label>
+        <name>dfsle__CannotQueryObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot Read Document Content --></label>
+        <name>dfsle__CannotReadDocumentContent_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot remove self --></label>
+        <name>dfsle__CannotRemoveSelf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot resent envelope --></label>
+        <name>dfsle__CannotResendEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot Resolve Document --></label>
+        <name>dfsle__CannotResolveDocumentType_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot resolve recipient source --></label>
+        <name>dfsle__CannotResolveRecipientSource_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized field update --></label>
+        <name>dfsle__CannotUpdateFields_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized object update --></label>
+        <name>dfsle__CannotUpdateObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cannot void envelope --></label>
+        <name>dfsle__CannotVoidEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CapeVerde --></label>
+        <name>dfsle__CapeVerde</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Carbon Copy --></label>
+        <name>dfsle__CarbonCopy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CaribbeanNetherlands --></label>
+        <name>dfsle__CaribbeanNetherlands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CaymanIslands --></label>
+        <name>dfsle__CaymanIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CentralAfricanRepublic --></label>
+        <name>dfsle__CentralAfricanRepublic</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Certified Delivery --></label>
+        <name>dfsle__CertifiedDelivery</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Chad --></label>
+        <name>dfsle__Chad</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Checkbox --></label>
+        <name>dfsle__Checkbox</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Chile --></label>
+        <name>dfsle__Chile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- China --></label>
+        <name>dfsle__China</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Chinese (Simplified) --></label>
+        <name>dfsle__ChineseSimplified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChristmasIsland --></label>
+        <name>dfsle__ChristmasIsland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Close --></label>
+        <name>dfsle__Close</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Closed --></label>
+        <name>dfsle__Closed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CocosKeelingIslands --></label>
+        <name>dfsle__CocosKeelingIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Colombia --></label>
+        <name>dfsle__Colombia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community --></label>
+        <name>dfsle__Community</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comoros --></label>
+        <name>dfsle__Comoros</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Company --></label>
+        <name>dfsle__Company</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Specify Company --></label>
+        <name>dfsle__CompanyRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete section below --></label>
+        <name>dfsle__CompleteConnection</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete section below --></label>
+        <name>dfsle__CompleteSetup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Completed --></label>
+        <name>dfsle__Completed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ConfigurationError --></label>
+        <name>dfsle__ConfigurationError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CongoBrazzaville --></label>
+        <name>dfsle__CongoBrazzaville</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CongoKinshasa --></label>
+        <name>dfsle__CongoKinshasa</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Connect DocuSign --></label>
+        <name>dfsle__ConnectDocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Connect DocuSign to Salesforce --></label>
+        <name>dfsle__ConnectDocuSignToSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Connect DocuSign user --></label>
+        <name>dfsle__ConnectDocuSignUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Connect to DocuSign --></label>
+        <name>dfsle__ConnectToDocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact support --></label>
+        <name>dfsle__ContactSupport</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Content Type Not Supported --></label>
+        <name>dfsle__ContentTypeNotSupported</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Continue and Tag --></label>
+        <name>dfsle__ContinueAndTag</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Continue --></label>
+        <name>dfsle__ContinueLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Continue setup --></label>
+        <name>dfsle__ContinueSetup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Continue to log in --></label>
+        <name>dfsle__ContinueToLogIn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Continue to Setup --></label>
+        <name>dfsle__ContinueToSetup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CookIslands --></label>
+        <name>dfsle__CookIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CostaRica --></label>
+        <name>dfsle__CostaRica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Country --></label>
+        <name>dfsle__Country</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Create default recipient roles --></label>
+        <name>dfsle__CreateDefaultRecipientRoles</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Created --></label>
+        <name>dfsle__Created</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Croatia --></label>
+        <name>dfsle__Croatia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cuba --></label>
+        <name>dfsle__Cuba</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Curacao --></label>
+        <name>dfsle__Curacao</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CurrentChatterLanguageSettings --></label>
+        <name>dfsle__CurrentChatterLanguageSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom Email Message --></label>
+        <name>dfsle__CustomEmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom Email Subject --></label>
+        <name>dfsle__CustomEmailSubject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cyprus --></label>
+        <name>dfsle__Cyprus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CzechRepublic --></label>
+        <name>dfsle__CzechRepublic</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Date Signed --></label>
+        <name>dfsle__DateSigned</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Days before expires --></label>
+        <name>dfsle__DaysBeforeExpires</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Days before expire warning --></label>
+        <name>dfsle__DaysBeforeExpiresWarn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Days before first reminder --></label>
+        <name>dfsle__DaysBeforeFirstReminder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Days between reminders --></label>
+        <name>dfsle__DaysBetweenReminders</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Decline --></label>
+        <name>dfsle__Decline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Declined --></label>
+        <name>dfsle__Declined</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivered --></label>
+        <name>dfsle__Delivered</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Demo --></label>
+        <name>dfsle__Demo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Denmark --></label>
+        <name>dfsle__Denmark</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Disabled --></label>
+        <name>dfsle__Disabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Djibouti --></label>
+        <name>dfsle__Djibouti</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DocuSign --></label>
+        <name>dfsle__DocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DocuSign Template --></label>
+        <name>dfsle__DocuSignTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dominica --></label>
+        <name>dfsle__Dominica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DominicanRepublic --></label>
+        <name>dfsle__DominicanRepublic</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Done --></label>
+        <name>dfsle__Done</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Drop Down --></label>
+        <name>dfsle__DropDown</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dutch --></label>
+        <name>dfsle__Dutch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ecuador --></label>
+        <name>dfsle__Ecuador</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit --></label>
+        <name>dfsle__Edit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Editor --></label>
+        <name>dfsle__Editor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Egypt --></label>
+        <name>dfsle__Egypt</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ElSalvador --></label>
+        <name>dfsle__ElSalvador</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Address --></label>
+        <name>dfsle__EmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email help text --></label>
+        <name>dfsle__EmailHelpText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Message --></label>
+        <name>dfsle__EmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email message too large --></label>
+        <name>dfsle__EmailMessageTooLarge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Specify Email --></label>
+        <name>dfsle__EmailRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email subject is required --></label>
+        <name>dfsle__EmailSubjectRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signing Group Has no Members --></label>
+        <name>dfsle__EmptySigningGroup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enable Salesforce users --></label>
+        <name>dfsle__EnableSalesforceUsers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enabled --></label>
+        <name>dfsle__Enabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enabled in DocuSign --></label>
+        <name>dfsle__EnabledInDocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fields are encrypted --></label>
+        <name>dfsle__EncryptedFields_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- English --></label>
+        <name>dfsle__English</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope expires --></label>
+        <name>dfsle__EnvelopeExpires</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope expires on --></label>
+        <name>dfsle__EnvelopeExpiresOn_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope ID --></label>
+        <name>dfsle__EnvelopeId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope Locked --></label>
+        <name>dfsle__EnvelopeLockedCorrectionInProgress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope Not Found --></label>
+        <name>dfsle__EnvelopeNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope not Found or Unauthorized --></label>
+        <name>dfsle__EnvelopeNotFoundOrUnauthorized</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelope status --></label>
+        <name>dfsle__EnvelopeStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Envelopes must be sent --></label>
+        <name>dfsle__EnvelopesMustBeSent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Environment --></label>
+        <name>dfsle__Environment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EquatorialGuinea --></label>
+        <name>dfsle__EquatorialGuinea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Eritrea --></label>
+        <name>dfsle__Eritrea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estonia --></label>
+        <name>dfsle__Estonia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ethiopia --></label>
+        <name>dfsle__Ethiopia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expand --></label>
+        <name>dfsle__Expand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expiration --></label>
+        <name>dfsle__Expiration</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expires --></label>
+        <name>dfsle__Expires</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signers Required to Meet 21 CFR Part 11 --></label>
+        <name>dfsle__Failed21CFRPart11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FalklandIslands --></label>
+        <name>dfsle__FalklandIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaroeIslands --></label>
+        <name>dfsle__FaroeIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Field error --></label>
+        <name>dfsle__FieldError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fiji --></label>
+        <name>dfsle__Fiji</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File size limit --></label>
+        <name>dfsle__FileSizeLimit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File size limit reached --></label>
+        <name>dfsle__FileSizeLimitReached</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File size limit reached --></label>
+        <name>dfsle__FileSizeLimitReached_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Files --></label>
+        <name>dfsle__Files</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Finish --></label>
+        <name>dfsle__Finish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Finland --></label>
+        <name>dfsle__Finland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- First Name --></label>
+        <name>dfsle__FirstName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- For --></label>
+        <name>dfsle__ForLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Formula --></label>
+        <name>dfsle__Formula</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- France --></label>
+        <name>dfsle__France</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- French --></label>
+        <name>dfsle__French</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FrenchGuiana --></label>
+        <name>dfsle__FrenchGuiana</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FrenchPolynesia --></label>
+        <name>dfsle__FrenchPolynesia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FrenchSouthernTerritories --></label>
+        <name>dfsle__FrenchSouthernTerritories</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Full Name --></label>
+        <name>dfsle__FullName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Gabon --></label>
+        <name>dfsle__Gabon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Gambia --></label>
+        <name>dfsle__Gambia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Georgia --></label>
+        <name>dfsle__Georgia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- German --></label>
+        <name>dfsle__German</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Germany --></label>
+        <name>dfsle__Germany</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Get started --></label>
+        <name>dfsle__GetStarted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ghana --></label>
+        <name>dfsle__Ghana</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Gibraltar --></label>
+        <name>dfsle__Gibraltar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Greece --></label>
+        <name>dfsle__Greece</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Greenland --></label>
+        <name>dfsle__Greenland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Grenada --></label>
+        <name>dfsle__Grenada</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Guadeloupe --></label>
+        <name>dfsle__Guadeloupe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Guam --></label>
+        <name>dfsle__Guam</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Guatemala --></label>
+        <name>dfsle__Guatemala</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Guernsey --></label>
+        <name>dfsle__Guernsey</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Guinea --></label>
+        <name>dfsle__Guinea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GuineaBissau --></label>
+        <name>dfsle__GuineaBissau</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Guyana --></label>
+        <name>dfsle__Guyana</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Haiti --></label>
+        <name>dfsle__Haiti</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Has completed --></label>
+        <name>dfsle__HasCompleted_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Has declined --></label>
+        <name>dfsle__HasDeclined_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Has signed --></label>
+        <name>dfsle__HasSigned_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No action --></label>
+        <name>dfsle__HasViewed_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Having trouble? --></label>
+        <name>dfsle__HavingTrouble</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- HeardandMcDonaldIslands --></label>
+        <name>dfsle__HeardandMcDonaldIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Help section 1 --></label>
+        <name>dfsle__HelpSection1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Help section 2 --></label>
+        <name>dfsle__HelpSection2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Helpful links --></label>
+        <name>dfsle__HelpfulLinks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Hide --></label>
+        <name>dfsle__Hide</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Honduras --></label>
+        <name>dfsle__Honduras</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- HongKong --></label>
+        <name>dfsle__HongKong</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Hungary --></label>
+        <name>dfsle__Hungary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Iceland --></label>
+        <name>dfsle__Iceland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- In Person Signer --></label>
+        <name>dfsle__InPersonSigner</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- India --></label>
+        <name>dfsle__India</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Indonesia --></label>
+        <name>dfsle__Indonesia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info --></label>
+        <name>dfsle__Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initial Here --></label>
+        <name>dfsle__InitialHere</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initial Here Optional --></label>
+        <name>dfsle__InitialHereOptional</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initialize account settings --></label>
+        <name>dfsle__InitializeAccountSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initialize Chatter settings --></label>
+        <name>dfsle__InitializeChatterSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initialize envelope settings --></label>
+        <name>dfsle__InitializeEnvelopeSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Intermediary --></label>
+        <name>dfsle__Intermediary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid User Settings --></label>
+        <name>dfsle__InvalidAccountSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Chatter text --></label>
+        <name>dfsle__InvalidChatterText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Correction State --></label>
+        <name>dfsle__InvalidCorrectionState</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Document Resolver --></label>
+        <name>dfsle__InvalidDocumentResolver_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Email Address --></label>
+        <name>dfsle__InvalidEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid email settings --></label>
+        <name>dfsle__InvalidEmailSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Entity Resolver --></label>
+        <name>dfsle__InvalidEntityResolver_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid envelope --></label>
+        <name>dfsle__InvalidEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Environment --></label>
+        <name>dfsle__InvalidEnvironment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid File Extension --></label>
+        <name>dfsle__InvalidFileExtension</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid file type --></label>
+        <name>dfsle__InvalidFileType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid notification settings --></label>
+        <name>dfsle__InvalidNotificationSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Recipient Resolver --></label>
+        <name>dfsle__InvalidRecipientResolver_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid recipient sequence --></label>
+        <name>dfsle__InvalidRecipientSequence</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Recipient Username --></label>
+        <name>dfsle__InvalidRecipientUsername</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid related contact --></label>
+        <name>dfsle__InvalidRelatedContact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid source --></label>
+        <name>dfsle__InvalidSource</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid DocuSign status --></label>
+        <name>dfsle__InvalidStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Trial Account --></label>
+        <name>dfsle__InvalidTrialAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Type --></label>
+        <name>dfsle__InvalidType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid UUID --></label>
+        <name>dfsle__InvalidUUID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid parameter in the page URL. --></label>
+        <name>dfsle__InvalidUrlParameter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Username or Password --></label>
+        <name>dfsle__InvalidUsernameOrPassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Iran --></label>
+        <name>dfsle__Iran</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Iraq --></label>
+        <name>dfsle__Iraq</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ireland --></label>
+        <name>dfsle__Ireland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Is queued --></label>
+        <name>dfsle__IsQueued_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- IsleOfMan --></label>
+        <name>dfsle__IsleOfMan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Israel --></label>
+        <name>dfsle__Israel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Italian --></label>
+        <name>dfsle__Italian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Italy --></label>
+        <name>dfsle__Italy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- IvoryCoast --></label>
+        <name>dfsle__IvoryCoast</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Jamaica --></label>
+        <name>dfsle__Jamaica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Japan --></label>
+        <name>dfsle__Japan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Japanese --></label>
+        <name>dfsle__Japanese</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Jersey --></label>
+        <name>dfsle__Jersey</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Jordan --></label>
+        <name>dfsle__Jordan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Kazakhstan --></label>
+        <name>dfsle__Kazakhstan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Kenya --></label>
+        <name>dfsle__Kenya</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Kiribati --></label>
+        <name>dfsle__Kiribati</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Korean --></label>
+        <name>dfsle__Korean</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Kuwait --></label>
+        <name>dfsle__Kuwait</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Kyrgyzstan --></label>
+        <name>dfsle__Kyrgyzstan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Landing Progress --></label>
+        <name>dfsle__LandingProgress_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Language --></label>
+        <name>dfsle__Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Laos --></label>
+        <name>dfsle__Laos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Last Name --></label>
+        <name>dfsle__LastName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Last status update --></label>
+        <name>dfsle__LastStatusUpdate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Latvia --></label>
+        <name>dfsle__Latvia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lebanon --></label>
+        <name>dfsle__Lebanon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lesotho --></label>
+        <name>dfsle__Lesotho</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Liberia --></label>
+        <name>dfsle__Liberia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Libya --></label>
+        <name>dfsle__Libya</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Liechtenstein --></label>
+        <name>dfsle__Liechtenstein</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lithuania --></label>
+        <name>dfsle__Lithuania</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Loading --></label>
+        <name>dfsle__Loading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Log in --></label>
+        <name>dfsle__LogIn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Log into existing --></label>
+        <name>dfsle__LogInToExisting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Log out --></label>
+        <name>dfsle__LogOut</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Logged in as --></label>
+        <name>dfsle__LoggedInAs_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Logout confirm --></label>
+        <name>dfsle__LogoutConfirm_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Luxembourg --></label>
+        <name>dfsle__Luxembourg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Macau --></label>
+        <name>dfsle__Macau</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Macedonia --></label>
+        <name>dfsle__Macedonia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Madagascar --></label>
+        <name>dfsle__Madagascar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Malawi --></label>
+        <name>dfsle__Malawi</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Malaysia --></label>
+        <name>dfsle__Malaysia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Maldives --></label>
+        <name>dfsle__Maldives</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mali --></label>
+        <name>dfsle__Mali</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Malta --></label>
+        <name>dfsle__Malta</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Manage users --></label>
+        <name>dfsle__ManageUsers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketing opt-in --></label>
+        <name>dfsle__MarketingOptIn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must select marketing preference --></label>
+        <name>dfsle__MarketingPreferenceRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MarshallIslands --></label>
+        <name>dfsle__MarshallIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Martinique --></label>
+        <name>dfsle__Martinique</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mauritania --></label>
+        <name>dfsle__Mauritania</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mauritius --></label>
+        <name>dfsle__Mauritius</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mayotte --></label>
+        <name>dfsle__Mayotte</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DocuSign member added --></label>
+        <name>dfsle__MemberAdded_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DocuSign member removed --></label>
+        <name>dfsle__MemberRemoved_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Message --></label>
+        <name>dfsle__Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mexico --></label>
+        <name>dfsle__Mexico</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Micronesia --></label>
+        <name>dfsle__Micronesia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Moldova --></label>
+        <name>dfsle__Moldova</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Monaco --></label>
+        <name>dfsle__Monaco</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mongolia --></label>
+        <name>dfsle__Mongolia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Montenegro --></label>
+        <name>dfsle__Montenegro</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Montserrat --></label>
+        <name>dfsle__Montserrat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Morocco --></label>
+        <name>dfsle__Morocco</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mozambique --></label>
+        <name>dfsle__Mozambique</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Multiple_Accounts_Message --></label>
+        <name>dfsle__MultipleAccountsMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Be Activated --></label>
+        <name>dfsle__MustBeActivated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Be Administrator --></label>
+        <name>dfsle__MustBeAdministrator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Be DocuSign Administrator --></label>
+        <name>dfsle__MustBeDocuSignAdministrator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Be DocuSign Sender --></label>
+        <name>dfsle__MustBeDocuSignSender</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Be DocuSign User --></label>
+        <name>dfsle__MustBeDocuSignUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Personal Content --></label>
+        <name>dfsle__MyPersonalContent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Myanmar --></label>
+        <name>dfsle__Myanmar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must Specify Name --></label>
+        <name>dfsle__NameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Namibia --></label>
+        <name>dfsle__Namibia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Nauru --></label>
+        <name>dfsle__Nauru</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Nepal --></label>
+        <name>dfsle__Nepal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Netherlands --></label>
+        <name>dfsle__Netherlands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewCaledonia --></label>
+        <name>dfsle__NewCaledonia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewZealand --></label>
+        <name>dfsle__NewZealand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next --></label>
+        <name>dfsle__Next</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next steps --></label>
+        <name>dfsle__NextSteps</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Nicaragua --></label>
+        <name>dfsle__Nicaragua</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Niger --></label>
+        <name>dfsle__Niger</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Nigeria --></label>
+        <name>dfsle__Nigeria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Niue --></label>
+        <name>dfsle__Niue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No --></label>
+        <name>dfsle__No</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No account --></label>
+        <name>dfsle__NoAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No envelopes sent --></label>
+        <name>dfsle__NoEnvelopesSent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No files attached --></label>
+        <name>dfsle__NoFilesAttached</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Roles --></label>
+        <name>dfsle__NoRoles</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No search results --></label>
+        <name>dfsle__NoSearchResults</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Valid Accounts --></label>
+        <name>dfsle__NoValidAccounts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Non-US consent messsage --></label>
+        <name>dfsle__NonUSConsentMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- None --></label>
+        <name>dfsle__None</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NorfolkIsland --></label>
+        <name>dfsle__NorfolkIsland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NorthKorea --></label>
+        <name>dfsle__NorthKorea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NorthernMarianaIslands --></label>
+        <name>dfsle__NorthernMarianaIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Norway --></label>
+        <name>dfsle__Norway</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Not the owner of the envelope --></label>
+        <name>dfsle__NotEnvelopeOwner</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Note --></label>
+        <name>dfsle__Note</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Nothing to remove --></label>
+        <name>dfsle__NothingToRemove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Null API Response --></label>
+        <name>dfsle__NullApiResponse</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Oman --></label>
+        <name>dfsle__Oman</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Other --></label>
+        <name>dfsle__Other</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Other URL --></label>
+        <name>dfsle__OtherUrl</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pakistan --></label>
+        <name>dfsle__Pakistan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Palau --></label>
+        <name>dfsle__Palau</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PalestinianTerritory --></label>
+        <name>dfsle__PalestinianTerritory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Panama --></label>
+        <name>dfsle__Panama</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PapuaNewGuinea --></label>
+        <name>dfsle__PapuaNewGuinea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Paraguay --></label>
+        <name>dfsle__Paraguay</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password --></label>
+        <name>dfsle__Password</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pending activation --></label>
+        <name>dfsle__PendingActivation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Peru --></label>
+        <name>dfsle__Peru</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Philippines --></label>
+        <name>dfsle__Philippines</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pitcairn --></label>
+        <name>dfsle__Pitcairn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Placeholder role required --></label>
+        <name>dfsle__PlaceholderRecipientMustHaveRole</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Please log in --></label>
+        <name>dfsle__PleaseLogIn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Poland --></label>
+        <name>dfsle__Poland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Portugal --></label>
+        <name>dfsle__Portugal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Portuguese (Brazilian) --></label>
+        <name>dfsle__PortugueseBrazilian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install criteria not met --></label>
+        <name>dfsle__PostInstallCriteriaNotMet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install email body --></label>
+        <name>dfsle__PostInstallEmailBody_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install email subject --></label>
+        <name>dfsle__PostInstallEmailSubject_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Note --></label>
+        <name>dfsle__PrivateMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Production --></label>
+        <name>dfsle__Production</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PuertoRico --></label>
+        <name>dfsle__PuertoRico</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Qatar --></label>
+        <name>dfsle__Qatar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Radio Button --></label>
+        <name>dfsle__RadioButton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reason --></label>
+        <name>dfsle__Reason</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recipient Must Be Active User --></label>
+        <name>dfsle__RecipientMustBeUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recipients --></label>
+        <name>dfsle__Recipients</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reminders --></label>
+        <name>dfsle__Reminders</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remote Site Missing --></label>
+        <name>dfsle__RemoteSiteMissing_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove --></label>
+        <name>dfsle__Remove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove user --></label>
+        <name>dfsle__RemoveUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove user confirmation --></label>
+        <name>dfsle__RemoveUserConfirm_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- A required custom field value is missing --></label>
+        <name>dfsle__RequiredCustomField_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Empty List --></label>
+        <name>dfsle__RequiredEmptyList_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reunion --></label>
+        <name>dfsle__Reunion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Romania --></label>
+        <name>dfsle__Romania</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Russian --></label>
+        <name>dfsle__Russian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RussianFederation --></label>
+        <name>dfsle__RussianFederation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rwanda --></label>
+        <name>dfsle__Rwanda</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintBarthelemy --></label>
+        <name>dfsle__SaintBarthelemy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintHelena --></label>
+        <name>dfsle__SaintHelena</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintKittsAndNevis --></label>
+        <name>dfsle__SaintKittsAndNevis</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintLucia --></label>
+        <name>dfsle__SaintLucia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintMartinFrance --></label>
+        <name>dfsle__SaintMartinFrance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintPierreAndMiquelon --></label>
+        <name>dfsle__SaintPierreAndMiquelon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaintVincentAndTheGrenadines --></label>
+        <name>dfsle__SaintVincentAndTheGrenadines</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce API Error --></label>
+        <name>dfsle__SalesforceApiErrorUnexpectedResponse</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce API Error --></label>
+        <name>dfsle__SalesforceApiError_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce Organization Storage Limit Exceeded --></label>
+        <name>dfsle__SalesforceOrgStorageLimitExceeded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce user --></label>
+        <name>dfsle__SalesforceUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Samoa --></label>
+        <name>dfsle__Samoa</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SanMarino --></label>
+        <name>dfsle__SanMarino</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaoTomeAndPrincipe --></label>
+        <name>dfsle__SaoTomeAndPrincipe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaudiArabia --></label>
+        <name>dfsle__SaudiArabia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save --></label>
+        <name>dfsle__Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search by name --></label>
+        <name>dfsle__SearchByName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Section modal title --></label>
+        <name>dfsle__SectionModalTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Section modal warning --></label>
+        <name>dfsle__SectionModalWarning</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select --></label>
+        <name>dfsle__Select</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select account --></label>
+        <name>dfsle__SelectAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select country --></label>
+        <name>dfsle__SelectCountry</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select --></label>
+        <name>dfsle__SelectLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Salesforce users --></label>
+        <name>dfsle__SelectSalesforceUsers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select user --></label>
+        <name>dfsle__SelectUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Send automatic reminders --></label>
+        <name>dfsle__SendAutomaticReminders</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Send envelope --></label>
+        <name>dfsle__SendEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Senegal --></label>
+        <name>dfsle__Senegal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sent --></label>
+        <name>dfsle__Sent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sent an envelope --></label>
+        <name>dfsle__SentAnEnvelope_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Serbia --></label>
+        <name>dfsle__Serbia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Settings saved --></label>
+        <name>dfsle__SettingsSaved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Seychelles --></label>
+        <name>dfsle__Seychelles</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Show --></label>
+        <name>dfsle__Show</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Show less --></label>
+        <name>dfsle__ShowLess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Show more --></label>
+        <name>dfsle__ShowMore</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SierraLeone --></label>
+        <name>dfsle__SierraLeone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sign Here --></label>
+        <name>dfsle__SignHere</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sign Here Optional --></label>
+        <name>dfsle__SignHereOptional</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sign in or start a trial --></label>
+        <name>dfsle__SignInOrStartTrial</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signed --></label>
+        <name>dfsle__Signed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signer --></label>
+        <name>dfsle__Signer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signer Attachment --></label>
+        <name>dfsle__SignerAttachment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signing Group not found --></label>
+        <name>dfsle__SigningGroupNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Signing Groups prohibited --></label>
+        <name>dfsle__SigningGroupsProhibited</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Singapore --></label>
+        <name>dfsle__Singapore</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SintMaarten --></label>
+        <name>dfsle__SintMaarten</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Slovakia --></label>
+        <name>dfsle__Slovakia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Slovenia --></label>
+        <name>dfsle__Slovenia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SolomonIslands --></label>
+        <name>dfsle__SolomonIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Somalia --></label>
+        <name>dfsle__Somalia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Something went wrong --></label>
+        <name>dfsle__SomethingWrong</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SouthAfrica --></label>
+        <name>dfsle__SouthAfrica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SouthGeorgiaAndTheSouthSandwichIslands --></label>
+        <name>dfsle__SouthGeorgiaAndTheSouthSandwichIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SouthKorea --></label>
+        <name>dfsle__SouthKorea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SouthSudan --></label>
+        <name>dfsle__SouthSudan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Spain --></label>
+        <name>dfsle__Spain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Spanish --></label>
+        <name>dfsle__Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SriLanka --></label>
+        <name>dfsle__SriLanka</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status --></label>
+        <name>dfsle__Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status not found --></label>
+        <name>dfsle__StatusNotFound_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install step failed --></label>
+        <name>dfsle__StepFailure</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install step skipped --></label>
+        <name>dfsle__StepSkipped</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install step successful --></label>
+        <name>dfsle__StepSuccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post-install step status unknown --></label>
+        <name>dfsle__StepUnknown</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subject --></label>
+        <name>dfsle__Subject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sudan --></label>
+        <name>dfsle__Sudan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Support Center --></label>
+        <name>dfsle__SupportCenter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Support info --></label>
+        <name>dfsle__SupportInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Support plans --></label>
+        <name>dfsle__SupportPlans</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Support preparation --></label>
+        <name>dfsle__SupportPrep</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Suriname --></label>
+        <name>dfsle__Suriname</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SvalbardAndJanMayen --></label>
+        <name>dfsle__SvalbardAndJanMayen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Swaziland --></label>
+        <name>dfsle__Swaziland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sweden --></label>
+        <name>dfsle__Sweden</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Switzerland --></label>
+        <name>dfsle__Switzerland</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Syria --></label>
+        <name>dfsle__Syria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Taiwan --></label>
+        <name>dfsle__Taiwan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tajikistan --></label>
+        <name>dfsle__Tajikistan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tanzania --></label>
+        <name>dfsle__Tanzania</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Template Roles --></label>
+        <name>dfsle__TemplateRoles</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Text Field --></label>
+        <name>dfsle__TextField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Thailand --></label>
+        <name>dfsle__Thailand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TimorLeste --></label>
+        <name>dfsle__TimorLeste</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Title --></label>
+        <name>dfsle__Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Togo --></label>
+        <name>dfsle__Togo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tokelau --></label>
+        <name>dfsle__Tokelau</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tonga --></label>
+        <name>dfsle__Tonga</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trial Account Expired --></label>
+        <name>dfsle__TrialAccountExpired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trial Account Expires in One Day --></label>
+        <name>dfsle__TrialAccountExpiresOneDay</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trial Account Expires Soon --></label>
+        <name>dfsle__TrialAccountExpiresSoon_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trial Account Expires Today --></label>
+        <name>dfsle__TrialAccountExpiresToday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trial expired --></label>
+        <name>dfsle__TrialExpired_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trial instructions --></label>
+        <name>dfsle__TrialInstructions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TrinidadAndTobago --></label>
+        <name>dfsle__TrinidadAndTobago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trust Center --></label>
+        <name>dfsle__TrustCenter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Try DocuSign --></label>
+        <name>dfsle__TryDocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tunisia --></label>
+        <name>dfsle__Tunisia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Turkey --></label>
+        <name>dfsle__Turkey</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Turkmenistan --></label>
+        <name>dfsle__Turkmenistan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TurksAndCaicoIslands --></label>
+        <name>dfsle__TurksAndCaicoIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tuvalu --></label>
+        <name>dfsle__Tuvalu</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Type --></label>
+        <name>dfsle__Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- US consent message --></label>
+        <name>dfsle__USConsentMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VirginIslandsUS --></label>
+        <name>dfsle__USVirginIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Uganda --></label>
+        <name>dfsle__Uganda</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ukraine --></label>
+        <name>dfsle__Ukraine</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized Page Access --></label>
+        <name>dfsle__UnauthorizedPageAccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unauthorized user --></label>
+        <name>dfsle__UnauthorizedUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined Argument --></label>
+        <name>dfsle__UndefinedArgument</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined bulk list --></label>
+        <name>dfsle__UndefinedBulkList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined Chatter Text --></label>
+        <name>dfsle__UndefinedChatterText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined DocuSign envelope ID --></label>
+        <name>dfsle__UndefinedDocuSignEnvelopeId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined document --></label>
+        <name>dfsle__UndefinedDocument</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined envelope --></label>
+        <name>dfsle__UndefinedEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined ID --></label>
+        <name>dfsle__UndefinedId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined recipient --></label>
+        <name>dfsle__UndefinedRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined Signing Group --></label>
+        <name>dfsle__UndefinedSigningGroup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined String --></label>
+        <name>dfsle__UndefinedString</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined Type --></label>
+        <name>dfsle__UndefinedType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Undefined user list --></label>
+        <name>dfsle__UndefinedUsers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UnitedArabEmirates --></label>
+        <name>dfsle__UnitedArabEmirates</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UnitedKingdom --></label>
+        <name>dfsle__UnitedKingdom</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UnitedStates --></label>
+        <name>dfsle__UnitedStates</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UnitedStatesMinorOutlyingIslands --></label>
+        <name>dfsle__UnitedStatesMinorOutlyingIslands</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unknown --></label>
+        <name>dfsle__Unknown</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unknown recipient --></label>
+        <name>dfsle__UnknownEnvelopeRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unrecognized Language Code --></label>
+        <name>dfsle__UnrecognizedLanguageCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upgrade --></label>
+        <name>dfsle__Upgrade</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upgrade now --></label>
+        <name>dfsle__UpgradeNow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload --></label>
+        <name>dfsle__Upload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload file --></label>
+        <name>dfsle__UploadFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload successful --></label>
+        <name>dfsle__UploadSuccessful</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Uruguay --></label>
+        <name>dfsle__Uruguay</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Use system sender --></label>
+        <name>dfsle__UseSystemSender</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Use system sender help --></label>
+        <name>dfsle__UseSystemSenderHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Must select country --></label>
+        <name>dfsle__UserCountryRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User Must Be Provided --></label>
+        <name>dfsle__UserMustBeProvided</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User not authorized for envelope --></label>
+        <name>dfsle__UserNotAuthorizedForEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User not found --></label>
+        <name>dfsle__UserNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Username not Allowed --></label>
+        <name>dfsle__UsernameNotAllowed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Uzbekistan --></label>
+        <name>dfsle__Uzbekistan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Value --></label>
+        <name>dfsle__Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Vanuatu --></label>
+        <name>dfsle__Vanuatu</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Vatican --></label>
+        <name>dfsle__Vatican</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Venezuela --></label>
+        <name>dfsle__Venezuela</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Vietnam --></label>
+        <name>dfsle__Vietnam</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View all --></label>
+        <name>dfsle__ViewAll</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Voided --></label>
+        <name>dfsle__Voided</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WallisAndFutuna --></label>
+        <name>dfsle__WallisAndFutuna</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WesternSahara --></label>
+        <name>dfsle__WesternSahara</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Will not receive --></label>
+        <name>dfsle__WillNotReceive_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Will receive --></label>
+        <name>dfsle__WillReceive_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Yemen --></label>
+        <name>dfsle__Yemen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Yes --></label>
+        <name>dfsle__Yes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Zambia --></label>
+        <name>dfsle__Zambia</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Zimbabwe --></label>
+        <name>dfsle__Zimbabwe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- An error in the query --></label>
+        <name>l_lookup__An_error_in_the_query</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete this field --></label>
+        <name>l_lookup__Complete_this_field</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Object on you does not have permissions --></label>
+        <name>l_lookup__Invalid_Object_on_you_does_not_have_permissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No results --></label>
+        <name>l_lookup__No_results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SObject type is not defined --></label>
+        <name>l_lookup__SObject_type_is_not_defined</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search placeholder formula --></label>
+        <name>l_lookup__Search_placeholder_formula</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The Id is invalid or does not match criteria --></label>
+        <name>l_lookup__The_Id_is_invalid_or_does_not_match_criteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The additional field is invalid --></label>
+        <name>l_lookup__The_additional_field_is_invalid</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User report --></label>
+        <name>user_report</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- votosRealizadosAPI: Mensaje de error por defecto --></label>
+        <name>votosRealizadosAPI_Default_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- votosRealizadosAPI: Mensaje de éxito --></label>
+        <name>votosRealizadosAPI_Success_Message</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label><!-- Calendario --></label>
+        <name>Calendario</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label><!-- Anexos --></label>
+        <name>Anexos</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Autorizar Antecipações --></label>
+        <name>Autorizar_Anticipos</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Datos para Nota de Venda --></label>
+        <name>Autorizar_NV</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Processar Anexos --></label>
+        <name>Autorizar_Relatorios</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Calendario de Visitas --></label>
+        <name>Calendario_de_Visitas</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Estimativa de Faturamento --></label>
+        <name>Estimativa_de_Faturamento</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Executar lotes --></label>
+        <name>Executar_lotes</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Informações --></label>
+        <name>Informacoes</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- NFe --></label>
+        <name>NFe</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Notas de Venda --></label>
+        <name>Notas_de_Venda</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- NovaOppTeste --></label>
+        <name>NovaOppTeste</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Oportunidade Supervisor --></label>
+        <name>Oportunidade_Supervisor</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Processar Antecipações --></label>
+        <name>Procesar_Anticipos</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Account_Coordenador_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Actualizar_Contratos_de_Multiplicacion_Relacionados</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Actualizar_Opps_Relacionadas</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Alterar_RecordType_de_Fechamento</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Asignar_Coordenadas_a_Evento</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Asignar_Nombre_a_CRM_Evento</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Asignar_Obtentor_a_CRM_Item</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Cambiar_nombre_a_Quote</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Clonar_Evento_Offline</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Compartir_Opps_Relacionadas</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Contrato_c_Insert_Update_Trigger</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Crear_Contrato_Principal</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Em_Andamento</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Enviar_Contrato_a_Impresi_n</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Evento_Royalty</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Gestion_de_Proyecto_Milho</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Modificar_Nombre_a_CRM_Evento</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Opportunity_Insert_Trigger</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Venda_de_Basica</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Venda_de_Basica_Campaign</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Attachment Contents --></description>
+        <label><!-- Attachment Contents --></label>
+        <name>Attachment_Contents</name>
+        <sections>
+            <label><!-- Attachments Contents --></label>
+            <name>Attachments Contents</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- CRM Calendário de eventos con Detalles y Cuenta --></description>
+        <label><!-- CRM Calendário de eventos con Detalles y Cuenta --></label>
+        <name>CRM_Calendario_de_eventos_con_Detalles_y_Cuenta</name>
+        <sections>
+            <label><!-- CRM Calendário de eventos --></label>
+            <name>CRM Calendário de eventos</name>
+        </sections>
+        <sections>
+            <label><!-- CRM Detalles Calendário de eventos --></label>
+            <name>CRM Detalles Calendário de eventos</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- CRM Detalles de Vendas --></description>
+        <label><!-- CRM Detalles de Vendas --></label>
+        <name>CRM_Detalles_de_Vendas</name>
+        <sections>
+            <label><!-- Detalhes de Vendas --></label>
+            <name>Detalhes de Vendas</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- CRM Evento Detalle y attachments --></description>
+        <label><!-- CRM Evento Detalle y attachments --></label>
+        <name>CRM_Evento_Detalle_y_attachments</name>
+        <sections>
+            <label><!-- Attachments Contents --></label>
+            <name>Attachments Contents</name>
+        </sections>
+        <sections>
+            <label><!-- Eventos --></label>
+            <name>Eventos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- CRM Evento Detalle y attachments 2 --></description>
+        <label><!-- CRM Evento Detalle y attachments 2 --></label>
+        <name>CRM_Evento_Detalle_y_attachments_2</name>
+        <sections>
+            <label><!-- Attachments Contents --></label>
+            <name>Attachments Contents</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Eventos (Cuenta) --></label>
+            <name>Eventos (Cuenta)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Reclamos con equipo --></description>
+        <label><!-- Reclamos con equipo --></label>
+        <name>Casos_con_equipo</name>
+        <sections>
+            <label><!-- Casos --></label>
+            <name>Casos</name>
+        </sections>
+        <sections>
+            <label><!-- Miembro de equipo de casos --></label>
+            <name>Miembro de equipo de casos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contatos com CRM Calendario Eventos --></description>
+        <label><!-- Contatos com CRM Calendario Eventos --></label>
+        <name>Contatos_com_CRM_Calendario_Eventos</name>
+        <sections>
+            <label><!-- CRM Calendário de eventos --></label>
+            <name>CRM Calendário de eventos</name>
+        </sections>
+        <sections>
+            <label><!-- Contactos --></label>
+            <name>Contactos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuentas con Contratos de Multiplicação --></description>
+        <label><!-- Cuentas con Contratos de Multiplicação --></label>
+        <name>Contratos_contratos</name>
+        <sections>
+            <label><!-- Contrato de Multiplicação --></label>
+            <name>Contrato de Multiplicação</name>
+        </sections>
+        <sections>
+            <label><!-- Contratos de Multiplicação --></label>
+            <name>Contratos de Multiplicação</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Controle de Estoque --></description>
+        <label><!-- Controle de Estoque --></label>
+        <name>Controle_de_Estoque</name>
+        <sections>
+            <columns>
+                <label><!-- Multiplicador --></label>
+                <name>Multiplicador</name>
+            </columns>
+            <columns>
+                <label><!-- Supervisor --></label>
+                <name>Supervisor</name>
+            </columns>
+            <label><!-- Oportunidades --></label>
+            <name>Oportunidades</name>
+        </sections>
+        <sections>
+            <label><!-- Producto de oportunidad --></label>
+            <name>Producto de oportunidad</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Abrev. de Variedad --></label>
+                <name>Abrev. de Variedad</name>
+            </columns>
+            <columns>
+                <label><!-- Categoria --></label>
+                <name>Categoria</name>
+            </columns>
+            <columns>
+                <label><!-- Producto --></label>
+                <name>Producto</name>
+            </columns>
+            <columns>
+                <label><!-- Variedad --></label>
+                <name>Variedad</name>
+            </columns>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuenta-Perfil de cuenta --></description>
+        <label><!-- Cuenta-Perfil de cuenta --></label>
+        <name>Cuenta_Perfil_de_cuenta</name>
+        <sections>
+            <label><!-- CRM Multiplicador --></label>
+            <name>CRM Multiplicador</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Perfil da Conta --></label>
+            <name>Perfil da Conta</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuentas --></description>
+        <label><!-- Cuentas --></label>
+        <name>Cuentas</name>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuentas-Opp-Producto --></description>
+        <label><!-- Cuentas-Opp-Producto --></label>
+        <name>Cuentas_Opp_Producto</name>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <name>Oportunidades</name>
+        </sections>
+        <sections>
+            <label><!-- Producto de oportunidad --></label>
+            <name>Producto de oportunidad</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Produto: Variedade: Tecnologia --></label>
+                <name>Produto: Variedade: Tecnologia</name>
+            </columns>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuentas con Oportunidades y Contratos --></description>
+        <label><!-- Cuentas con Oportunidades y Contratos --></label>
+        <name>Cuentas_con_Oportunidades_y_Contratos</name>
+        <sections>
+            <columns>
+                <label><!-- Contrato Chegou na BMX --></label>
+                <name>Contrato Chegou na BMX</name>
+            </columns>
+            <columns>
+                <label><!-- Contrato Data Envio --></label>
+                <name>Contrato Data Envio</name>
+            </columns>
+            <columns>
+                <label><!-- Contrato Enviamos pelo correio --></label>
+                <name>Contrato Enviamos pelo correio</name>
+            </columns>
+            <columns>
+                <label><!-- Cultivar do Contrato --></label>
+                <name>Cultivar do Contrato</name>
+            </columns>
+            <label><!-- Contratos de Multiplicacion --></label>
+            <name>Contratos de Multiplicacion</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <name>Oportunidades</name>
+        </sections>
+        <sections>
+            <label><!-- Producto de oportunidad --></label>
+            <name>Producto de oportunidad</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuentas y CRM Bonificaciones --></description>
+        <label><!-- Cuentas y CRM Bonificaciones --></label>
+        <name>Cuentas_y_CRM_Bonificaciones</name>
+        <sections>
+            <label><!-- CRM Bonificaciones --></label>
+            <name>CRM Bonificaciones</name>
+        </sections>
+        <sections>
+            <label><!-- CRM Multiplicador --></label>
+            <name>CRM Multiplicador</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cuentas y Oportunidades --></description>
+        <label><!-- Cuentas y Oportunidades --></label>
+        <name>Cuentas_y_Oportunidades</name>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <name>Oportunidades</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Notas fiscais com vendedores e contas --></description>
+        <label><!-- Notas fiscais com vendedores e contas --></label>
+        <name>Notas_fiscais_com_vendedores_e_contas</name>
+        <sections>
+            <label><!-- Contactos --></label>
+            <name>Contactos</name>
+        </sections>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Notas fiscais eletrônicas --></label>
+            <name>Notas fiscais eletrônicas</name>
+        </sections>
+        <sections>
+            <label><!-- Produtos da nota fiscal --></label>
+            <name>Produtos da nota fiscal</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oportunidades con Productos y Pagamentos --></description>
+        <label><!-- Oportunidades con Productos y Pagamentos --></label>
+        <name>Oportunidades_con_Productos_y_Pagamentos</name>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <name>Oportunidades</name>
+        </sections>
+        <sections>
+            <label><!-- Pagamentos --></label>
+            <name>Pagamentos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PB VAR CAT --></description>
+        <label><!-- PB VAR CAT --></label>
+        <name>PB_VAR_CAT</name>
+        <sections>
+            <label><!-- Produccion Basicas --></label>
+            <name>Produccion Basicas</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PROD PB --></description>
+        <label><!-- PROD PB --></label>
+        <name>PROD_PB</name>
+        <sections>
+            <label><!-- Produccion Basicas --></label>
+            <name>Produccion Basicas</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Paneles e Informes --></description>
+        <label><!-- Paneles e Informes --></label>
+        <name>Paneles_e_Informes</name>
+        <sections>
+            <label><!-- Componentes del panel --></label>
+            <name>Componentes del panel</name>
+        </sections>
+        <sections>
+            <label><!-- Paneles --></label>
+            <name>Paneles</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Prod con Asig y variedad --></description>
+        <label><!-- Prod con Asig y variedad --></label>
+        <name>Prod_con_Asig_y_variedad</name>
+        <sections>
+            <label><!-- Asignaciones de Oferta --></label>
+            <name>Asignaciones de Oferta</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+        <sections>
+            <label><!-- Variedades --></label>
+            <name>Variedades</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Prod con Asign --></description>
+        <label><!-- Prod con Asign --></label>
+        <name>Prod_con_Asign</name>
+        <sections>
+            <label><!-- Asignaciones de Oferta --></label>
+            <name>Asignaciones de Oferta</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Productos con  Items de Contratos de Mult y Cont --></description>
+        <label><!-- Productos con  Items de Contratos de Mult y Cont --></label>
+        <name>Productos_con_Items_de_Contratos_de_Mult_y_Cont</name>
+        <sections>
+            <label><!-- Items del Contrato --></label>
+            <name>Items del Contrato</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Productos y CECOS --></description>
+        <label><!-- Productos y CECOS --></label>
+        <name>Productos_y_CECOS</name>
+        <sections>
+            <label><!-- Centro de CO Items --></label>
+            <name>Centro de CO Items</name>
+        </sections>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Reclamaçöes com variedades --></description>
+        <label><!-- Reclamaçöes com variedades --></label>
+        <name>Reclamocoes</name>
+        <sections>
+            <label><!-- Productos --></label>
+            <name>Productos</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Região Comercial da Conta --></label>
+                <name>Região Comercial da Conta</name>
+            </columns>
+            <label><!-- Reclamos --></label>
+            <name>Reclamos</name>
+        </sections>
+        <sections>
+            <label><!-- Variedades --></label>
+            <name>Variedades</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Totales Quantidade KG --></description>
+        <label><!-- Totales Quantidade KG --></label>
+        <name>Totales_Quantidade_KG</name>
+        <sections>
+            <label><!-- Contactos --></label>
+            <name>Contactos</name>
+        </sections>
+        <sections>
+            <label><!-- Notas fiscais eletrônicas --></label>
+            <name>Notas fiscais eletrônicas</name>
+        </sections>
+        <sections>
+            <label><!-- Produtos da nota fiscal --></label>
+            <name>Produtos da nota fiscal</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Variedad Datos Complementares --></description>
+        <label><!-- Variedad Datos Complementares --></label>
+        <name>Variedad_Datos_Complementares</name>
+        <sections>
+            <label><!-- Variedades --></label>
+            <name>Variedades</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Variedad recomendacion --></description>
+        <label><!-- Variedad recomendacion --></label>
+        <name>Variedad_recomendacion</name>
+        <sections>
+            <label><!-- Recomendações de variedades --></label>
+            <name>Recomendações de variedades</name>
+        </sections>
+        <sections>
+            <label><!-- Variedades --></label>
+            <name>Variedades</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- c+opp --></description>
+        <label><!-- c+opp --></label>
+        <name>c_opp</name>
+        <sections>
+            <label><!-- Cuentas --></label>
+            <name>Cuentas</name>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <name>Oportunidades</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Fluxos de tela --></description>
+        <label><!-- Fluxos de tela --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Entradas do registro de entrevista de fluxo --></label>
+            <name>Entradas do registro de entrevista de fluxo</name>
+        </sections>
+        <sections>
+            <label><!-- Registros de entrevista de fluxo --></label>
+            <name>Registros de entrevista de fluxo</name>
+        </sections>
+    </reportTypes>
+    <scontrols>
+        <label><!-- Imprimir Oportunidad --></label>
+        <name>Imprimir_opp</name>
+    </scontrols>
+    <scontrols>
+        <label><!-- Listar Productos --></label>
+        <name>Listar_Productos</name>
+    </scontrols>
+</Translations>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Informação exclusiva para autorização por conta e ordem. --></help>
+    <label><!-- Cooperante --></label>
+    <name>Cooperante2__c</name>
+    <relationshipLabel><!-- Oportunidades (Nome do Cooperante) --></relationshipLabel>
+</CustomFieldTranslation>

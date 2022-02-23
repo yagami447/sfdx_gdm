@@ -1,0 +1,55 @@
+<aura:component >    
+    <aura:attribute name="det" type="object"  /> 
+    
+    <aura:attribute name="isOpen" type="boolean" default="false" /> 
+    
+    <div class="slds-accordion__list-item">
+        <section class="{!'slds-accordion__section '+ if(v.isOpen, 'slds-is-open', '')}" style ="padding:0px;">
+            <div class="slds-accordion__summary" style="width:1100px">
+                
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >                       <tbody>
+                    <tr class="slds-hint-parent">
+                        
+                        <td scope="row" width="3%">
+                            <button onclick="{!c.handleClick}" class="slds-button_reset">+</button>
+                        </td>
+                        
+                        <td data-label="Num." scope="row" width="10%" style="width:10%; word-wrap:break-word;">>
+                            <div class="slds-truncate" title="Num">
+                                <lightning:outputField value="{!v.det.nItem}"/>
+                            </div>
+                        </td>
+                        <td data-label="Descrição" width="40%">
+                            <div class="slds-truncate" title="Descrição">
+                                <lightning:outputField  value="{!v.det.prod.xProd}"/>
+                            </div>
+                        </td>
+                        
+                        <td data-label="Qtd.">
+                            <div class="slds-truncate" title="Qtd"  width="15%">
+                                <lightning:outputField  value="{!v.det.prod.xProd}"/>
+                            </div>
+                        </td>
+                        <td data-label="Unidade Comercial"  width="15%">
+                            <div class="slds-truncate" title="Unidade Comercial">
+                                <lightning:outputField value="{!v.det.prod.uComp}"/>
+                            </div>
+                        </td>
+                        
+                        <td data-label="Valor(R$)"  width="15%">
+                            <div class="slds-truncate" title="Valor(R$)">
+                                <lightning:outputField value="{!v.det.prod.vProd}"/>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                    
+            </div>
+            <div class="slds-accordion__content">
+                
+                <c:NotaFiscalElectronica_ProductItemDetails det="{!product}"/>
+            </div>
+        </section>
+    </div>
+</aura:component>

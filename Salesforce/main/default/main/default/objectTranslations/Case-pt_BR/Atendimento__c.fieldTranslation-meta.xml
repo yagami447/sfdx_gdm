@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Atendimento --></label>
+    <name>Atendimento__c</name>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email/Telefone</masterLabel>
+        <translation><!-- Email/Telefone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telefone</masterLabel>
+        <translation><!-- Telefone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visita</masterLabel>
+        <translation><!-- Visita --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visita/E-mail</masterLabel>
+        <translation><!-- Visita/E-mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visita/Telefone</masterLabel>
+        <translation><!-- Visita/Telefone --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

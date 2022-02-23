@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regi_o_da_planta__c</fullName>
+    <externalId>false</externalId>
+    <label>Região da planta</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Folha</fullName>
+                <default>false</default>
+                <label>Folha</label>
+            </value>
+            <value>
+                <fullName>Haste</fullName>
+                <default>false</default>
+                <label>Haste</label>
+            </value>
+            <value>
+                <fullName>Raiz</fullName>
+                <default>false</default>
+                <label>Raiz</label>
+            </value>
+            <value>
+                <fullName>Vagem</fullName>
+                <default>false</default>
+                <label>Vagem</label>
+            </value>
+            <value>
+                <fullName>Semente</fullName>
+                <default>false</default>
+                <label>Semente</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

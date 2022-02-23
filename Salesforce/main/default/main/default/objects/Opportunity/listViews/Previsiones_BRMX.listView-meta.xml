@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previsiones_BRMX</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Safra__c</columns>
+    <columns>Marca__c</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Previsao</value>
+    </filters>
+    <filters>
+        <field>Marca__c</field>
+        <operation>equals</operation>
+        <value>BRMX</value>
+    </filters>
+    <label>Previsões BRMX</label>
+    <sharedTo>
+        <role>Admin</role>
+        <role>Administracion_3</role>
+        <role>Comercial_R2_BRMX</role>
+        <role>Director</role>
+        <role>Gerente_Cerrados</role>
+        <role>Gerente_Regiao_2</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,6 @@
+<design:component label="Audits Management Component">
+    <design:attribute name="title" label="Title" />
+    <design:attribute name="subtitle" label="Subtitle" />
+    <design:attribute name="panelLeftTitle" label="Left Panel Title" />
+    <design:attribute name="panelRightTitle" label="Right Panel Title" />
+</design:component>

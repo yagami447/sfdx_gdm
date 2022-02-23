@@ -1,0 +1,69 @@
+<aura:component >
+    <aura:attribute name="data" type="Object[]" /> 
+    <aura:attribute name="productId" type="String" />
+    
+    
+    
+    <aura:if isTrue="{!not(empty(v.data))}">
+        <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >                       
+                <thead>
+                    <tr class="slds-hint-parent">
+                        <th scope="row" width="5%">
+                            
+                        </th>
+                        
+                        <th data-label="Num." scope="row" width="6%">
+                            <div class="slds-truncate" title="Num">
+                                Num.
+                            </div>
+                        </th>           
+                        <th data-label="Descrição" width="40%">
+                            <div class="slds-truncate" title="Descrição">
+                                Descrição
+                            </div>
+						</th>
+                        <th data-label="Produto SF" width="20%">
+                            <div class="slds-truncate" title="Produto">
+                                Produto
+                            </div>
+                        </th>                        
+                        <th data-label="Qtd kilograma."  width="15%">
+                            <div class="slds-truncate" title="Real qtd.">
+                                Qtd kilograma.
+                            </div>
+                        </th>
+                        
+                        <th data-label="Qtd."  width="15%">
+                            <div class="slds-truncate" title="Qtd">
+                                Qtd
+                            </div>
+                        </th>
+                        <th data-label="Unidade Comercial"  width="15%">
+                            <div class="slds-truncate" title="Unidade Comercial">
+                                Unidade Comercial
+                            </div>
+                        </th>
+                        
+                        <th data-label="Valor(R$)"  width="15%">
+                            <div class="slds-truncate" title="Valor(R$)">
+                                Valor(R$)
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.data}" var="d">
+                        	<c:NotaFiscalElectronica_ProductItemDetails det="{!d}" />
+                    </aura:iteration>
+                    
+                </tbody>
+            </table>
+            <aura:set attribute="else">
+                No hay productos
+            </aura:set>
+        </div>
+    </aura:if> 
+    
+    
+</aura:component>

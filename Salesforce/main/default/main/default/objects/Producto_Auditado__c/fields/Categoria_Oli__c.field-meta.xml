@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_Oli__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Categoria del producto de oportunidad</description>
+    <externalId>false</externalId>
+    <label>Categoria</label>
+    <referenceTo>Categoria__c</referenceTo>
+    <relationshipLabel>Productos Auditados</relationshipLabel>
+    <relationshipName>Productos_Auditados</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Click para informar se o multiplicador recebeu o contrato --></help>
+    <label><!-- Recebeu --></label>
+    <name>Recebeu__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Aviso_de_Cidade_pendiente_de_Validaci_n</fullName>
+        <description>Aviso de Cidade pendiente de Validación</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adminbr@donmario.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_Ciudad_Pendiente_de_Validaci_n</template>
+    </alerts>
+    <rules>
+        <fullName>Pendiente de validacion</fullName>
+        <actions>
+            <name>Aviso_de_Cidade_pendiente_de_Validaci_n</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Cidade__c.Pendiente_de_Validar__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <description>Aviso de Pendiente de Validar(para las ciudades dadas de alta a través del Portal</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

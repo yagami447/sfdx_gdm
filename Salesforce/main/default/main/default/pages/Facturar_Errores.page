@@ -1,0 +1,31 @@
+<apex:page controller="Facturar_Errores_Controller" sidebar="false">
+
+    <apex:sectionHeader title="Facturas Control de Errores" subtitle=""/>
+    <apex:pageMessages />
+    
+    <apex:form >       
+        
+        <apex:pageBlock >                        
+            <apex:pageBlockSection showHeader="false" columns="3" id="principal">
+                <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Fecha"/> 
+                    <apex:inputField value="{!Opp.Fecha_fijacion_T_de_cambio__c}"/>
+                </apex:pageBlockSectionItem> 
+                <apex:commandButton style="float:right;margin-right:400px;width:80px" value="Ver" status="status" action="{!getverDetalles}" onComplete="openWin('{!url}')"></apex:commandButton>
+                <apex:actionStatus startText="Consultando..." id="status"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+                                             
+        <script>
+            function openWin(url){
+               if (url != ''){                                               
+                  window.open(url,'','fullscreen,scrollbars');              
+                  }else{
+                     alert ('Ingrese una Fecha');
+               }      
+            }
+        </script>   
+                  
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 18 a 30 Prata
+31 a 38 Ouro --></help>
+    <label><!-- Total de Pontos BRMX --></label>
+    <name>BR_Total_de_pontos__c</name>
+</CustomFieldTranslation>

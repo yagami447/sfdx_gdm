@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Planejamento Difusão Marketing --></label>
+    <name>Planejamento_Difusao_Marketing__c</name>
+    <relationshipLabel><!-- Planejamento Difusão Marketing Itens --></relationshipLabel>
+</CustomFieldTranslation>

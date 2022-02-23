@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VB_Pendiente</fullName>
+    <active>true</active>
+    <businessProcess>Nota de Venta - Pendiente</businessProcess>
+    <compactLayoutAssignment>Previsao_de_basica</compactLayoutAssignment>
+    <description>Nota de Venta de Básica Pendiente</description>
+    <label>VB - Pendiente</label>
+    <picklistValues>
+        <picklist>Bloqueo__c</picklist>
+        <values>
+            <fullName>Z2 - Bloqueio Contrato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z3 - Bloqueio Pagamento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z4 - BR - Bloqueio Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z6 - BR - Bloqueio %E2%80%93 Contrato%2FFinanceiro</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Categoria_Cliente__c</picklist>
+        <values>
+            <fullName>OURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLATINUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRATA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Codigo_Modelo_Documento_Fiscal__c</picklist>
+        <values>
+            <fullName>55</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>65</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Condi_o_de_pagamento__c</picklist>
+        <values>
+            <fullName>2 quotas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 quotas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Condicion_de_Pago__c</picklist>
+        <values>
+            <fullName>ZC00 - A Vista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - 15 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - 30 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - 45 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - 60 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - 60 dias Data Ordem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - A Vista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - A vista - 15 de Dezembro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - A vista - 20 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - A vista Faturamento Royalties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - Antecipado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - Parcelado%3A 30 e 60 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - Parcelado%3A 30%2C60 e 90 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC01 - Parcelado%3A 30%2C60%2C90 e 120 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC02 - A vista - 15 de Dezembro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC02 - A vista Faturamento Royalties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC03 - 15 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC05 - 30 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC06 - 45 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC07 - Parcelado%3A 30%2C60 e 90 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cultura__c</picklist>
+        <values>
+            <fullName>Milho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soja</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Epoca_de_Plantio__c</picklist>
+        <values>
+            <fullName>Inverno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verão</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado_Facturacion__c</picklist>
+        <values>
+            <fullName>Anulada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contabilizada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Impresa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE Contabilizar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estados_Comercializacion__c</picklist>
+        <values>
+            <fullName>AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Cerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Máximo previsto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oportunidades en curso</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Forma_de_pagamento__c</picklist>
+        <values>
+            <fullName>01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>99</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Feria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Por comentarios de terceros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publicidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencia del empleado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencia externa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relaciones públicas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario - Interno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario - Socio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartFarm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Socio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marca__c</picklist>
+        <values>
+            <fullName>BRMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAGMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LICENÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEOG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mes__c</picklist>
+        <values>
+            <fullName>Abril</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agosto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dezembro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fevereiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Janeiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Março</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novembro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outubro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setembro</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Modalidade_do_frete__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo_de_Pedido__c</picklist>
+        <values>
+            <fullName>Z0 - BR - NC Cancelamento da fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z1 - BR - Erro no preço</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z12 - BR - Devoluções</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z19 - BR - Troca de produto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z20 - BR - Bonificação do preço</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z21 - BR - Juros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z5 - BR - Alteração para novo Faturamento</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Negocio__c</picklist>
+        <values>
+            <fullName>Fechado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franqueados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserva</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Objetivo__c</picklist>
+        <values>
+            <fullName>Agricultor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiplicação</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>REGION 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGION 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Respons_vel__c</picklist>
+        <values>
+            <fullName>Edison Carneiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Frehner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Gaspar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Pires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcelo Steffen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pablo R de Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sergio Bertagnolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thiago Schwonka</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsable__c</picklist>
+        <values>
+            <fullName>061 - Fernando Frenher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>066 - Marcelo Steffen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>067 - Sérgio Bertagnoli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>076 - Tiago Goulart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>077 - Antonio Paiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>083 - Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>095 - Brasmax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>096 - Charles C%2E Pintro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101 - Fausto Fanchim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104 - Otavio Gorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>105 - Rogério A%2E Schneider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>106 - Sandro Ferrari M%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>111 - Pablo R de Souza</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Safra__c</picklist>
+        <values>
+            <fullName>20%2F21</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>21%2F22</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Setor__c</picklist>
+        <values>
+            <fullName>Comercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desarrollo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sucursal__c</picklist>
+        <values>
+            <fullName>0094 Passo Fundo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0095 Londrina</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo__c</picklist>
+        <values>
+            <fullName>ZCO - Oferta da Básica</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Cota_o__c</picklist>
+        <values>
+            <fullName>DOLAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FATURAMENTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOJA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Cultivares__c</picklist>
+        <values>
+            <fullName>Comerciais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lançamentos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Necessidade__c</picklist>
+        <values>
+            <fullName>Difusão</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiplicação</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Operacao_NFe__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_saida_de_deposito__c</picklist>
+        <values>
+            <fullName>Z041 - BR Deposito GDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z042 - BR Deposito terceiro</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Regularização</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VB_Cot_Soja__c</picklist>
+        <values>
+            <fullName>COAMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COTRIJAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Diamantino %28MT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Pedro Afonso %28TO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Primavera %28MT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Rio Verde %28GO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%26M - Unaí %28MG%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VB_Quem_negocia__c</picklist>
+        <values>
+            <fullName>Brasmax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Butiá</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutuca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

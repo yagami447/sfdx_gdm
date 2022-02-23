@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reactivar</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Reactivar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var contObj = new sforce.SObject(&quot;Contact&quot;); 
+contObj.Id = &quot;{!Contact.Id}&quot;; 
+contObj.RecordTypeId = &quot;{!Contact.TipoReg_Anterior__c}&quot;; 
+contObj.TipoReg_Anterior__c = &apos;&apos;; 
+contObj.OwnerId = &quot;{!Contact.Propietario_Anterior__c}&quot;; 
+contObj.Propietario_Anterior__c = &apos;&apos;; 
+var resultado = sforce.connection.update([contObj]); 
+
+if (resultado[0].success==&apos;false&apos;) { 
+alert(resultado[0].errors.message); 
+} else { 
+window.location.reload(true); 
+}</url>
+</WebLink>

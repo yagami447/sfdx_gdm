@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validar_Cuenta</fullName>
+    <active>false</active>
+    <description>Valida que la cuenta del Anexo relacionado sea igual a la del anexo actual</description>
+    <errorConditionFormula>AND(OR(RecordType.Name = &apos;Anexo I Rebaixamento Ha&apos;,RecordType.Name = &apos;Anexo II Rebaixamento Sacas&apos;),AccountId &lt;&gt; Anexo_Relacionado__r.AccountId)</errorConditionFormula>
+    <errorMessage>O Anexo relacionado deve ser da mesma conta que a rebaixa.</errorMessage>
+</ValidationRule>

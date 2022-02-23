@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_Liquido__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Opportunity.CloseDate &lt; DATE(2015, 11, 25),
+(ROUND(
+IF(AND(ISBLANK(Base_de_Calculo__c),ISBLANK(Tasas__c)), UnitPrice ,IF( ISBLANK(Base_de_Calculo__c),UnitPrice * (1- IF( ISBLANK(Tasas__c), 0, Tasas__c/100)),(UnitPrice * (1- IF( ISBLANK(Tasas__c), 0, Tasas__c/100)) +(UnitPrice * IF( ISBLANK(Tasas__c), 0, Tasas__c/100) * (1 - Base_de_Calculo__c/100 ))))) * VALUE(PricebookEntry.Product2.CANTIDAD_SUB_UNIDAD__c)
+,2))
+,
+(
+IF(AND(ISBLANK(Base_de_Calculo__c),ISBLANK(Tasas__c)), UnitPrice ,IF( ISBLANK(Base_de_Calculo__c),UnitPrice * (1- IF( ISBLANK(Tasas__c), 0, Tasas__c/100)),(UnitPrice * (1- IF( ISBLANK(Tasas__c), 0, Tasas__c/100)) +(UnitPrice * IF( ISBLANK(Tasas__c), 0, Tasas__c/100) * (1 - Base_de_Calculo__c/100 ))))) * VALUE(PricebookEntry.Product2.CANTIDAD_SUB_UNIDAD__c)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Preço Liquido</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

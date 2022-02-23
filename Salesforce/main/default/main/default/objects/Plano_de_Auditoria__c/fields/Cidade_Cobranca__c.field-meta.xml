@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cidade_Cobranca__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Cuenta_Principal__r.BillingCity)), IF(ISBLANK(Cuenta_Principal__r.BillingState), Cuenta_Principal__r.BillingCity, Cuenta_Principal__r.BillingCity &amp; &quot;, &quot; &amp; Cuenta_Principal__r.BillingState), &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cidade Cobrança</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

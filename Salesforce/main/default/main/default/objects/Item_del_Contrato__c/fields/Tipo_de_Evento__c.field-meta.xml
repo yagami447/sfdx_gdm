@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Evento__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Evento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Palestra</fullName>
+                <default>false</default>
+                <label>Palestra</label>
+            </value>
+            <value>
+                <fullName>Lado a Lado</fullName>
+                <default>false</default>
+                <label>Lado a Lado</label>
+            </value>
+            <value>
+                <fullName>Emplacamento</fullName>
+                <default>false</default>
+                <label>Emplacamento</label>
+            </value>
+            <value>
+                <fullName>Treinamento</fullName>
+                <default>false</default>
+                <label>Treinamento</label>
+            </value>
+            <value>
+                <fullName>Resultados de Produtividade</fullName>
+                <default>false</default>
+                <label>Resultados de Produtividade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

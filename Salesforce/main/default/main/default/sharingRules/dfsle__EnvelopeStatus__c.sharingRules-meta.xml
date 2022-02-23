@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>DocuSign_Status_a_Portal_Mult</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>DocuSign Status a Portal Mult</label>
+        <sharedTo>
+            <guestUser>Portal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value>zzzzzzzzzzzz</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atualizar_Responsavel</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Actualizar Responsável</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)} 
+
+var id = &quot;{!Account.Id}&quot;;
+var result = sforce.apex.execute(&quot;Acc_BloqDatos&quot;,&quot;atualizar_Supervisor&quot;, {accId: id});
+
+alert(result[0]);</url>
+</WebLink>

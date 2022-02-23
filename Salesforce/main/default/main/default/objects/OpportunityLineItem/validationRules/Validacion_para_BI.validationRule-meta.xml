@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validacion_para_BI</fullName>
+    <active>true</active>
+    <errorConditionFormula>Previsao__c &gt; 99999999</errorConditionFormula>
+    <errorDisplayField>Previsao__c</errorDisplayField>
+    <errorMessage>Deve ingressar um valor inferior a 99.999.999,0.</errorMessage>
+</ValidationRule>

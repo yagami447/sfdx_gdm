@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pontos Palestras e Treinamentos Estim --></label>
+    <name>BR_Resultado_Palestra_e_Trein_Estim__c</name>
+</CustomFieldTranslation>

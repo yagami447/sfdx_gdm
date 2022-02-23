@@ -1,0 +1,4 @@
+<aura:component implements="lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" 
+    access="global">
+    <c:newEventLWC oncreateevent="{!c.createRecord}" />
+</aura:component>

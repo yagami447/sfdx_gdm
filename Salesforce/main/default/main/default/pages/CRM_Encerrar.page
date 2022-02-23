@@ -1,0 +1,21 @@
+<apex:page Controller="CRM_Controller" title="Vendas" action="{!initVendas}" tabStyle="Account" sidebar="false">    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickAreaAct="{!verAreaAct}" clickCanalVendas="{!verCanalVendas}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1000px">
+    <apex:sectionHeader title="Encerrar ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>        
+    <apex:pageBlock mode="edit">
+        <apex:pageMessages escape="false"/>
+        <apex:pageBlockSection columns="1"> 
+            <br/> 
+            <apex:commandButton style="float:center;margin-left:400px;width:80px" action="{!cerrarDatos}" value="Encerrar" onclick="return confirm('Tem certeza de que deseja encerrar os dados de CRM desta safra?')" disabled="{!crm_mult.Cerrado__c}"/>   
+            <br/>
+        </apex:pageBlockSection>    
+    </apex:pageBlock>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/>
+        
+</apex:form>  
+</apex:panelGrid> 
+</apex:page>

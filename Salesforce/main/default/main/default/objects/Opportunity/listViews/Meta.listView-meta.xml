@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meta</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Safra__c</columns>
+    <columns>Marca__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Objetivo_Ventas_Royalties</value>
+    </filters>
+    <filters>
+        <field>Safra__c</field>
+        <operation>equals</operation>
+        <value>17/18</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>ACME</value>
+    </filters>
+    <label>Meta</label>
+    <language>es</language>
+    <sharedTo>
+        <role>Administracion_3</role>
+    </sharedTo>
+</ListView>

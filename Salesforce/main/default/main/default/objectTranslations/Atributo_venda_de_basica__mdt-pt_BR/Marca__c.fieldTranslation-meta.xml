@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Marca --></label>
+    <name>Marca__c</name>
+    <picklistValues>
+        <masterLabel>BRMX</masterLabel>
+        <translation><!-- BRMX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DAGMA</masterLabel>
+        <translation><!-- DAGMA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DSEM</masterLabel>
+        <translation><!-- DSEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LICENÇAS</masterLabel>
+        <translation><!-- LICENÇAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEOG</masterLabel>
+        <translation><!-- NEOG --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

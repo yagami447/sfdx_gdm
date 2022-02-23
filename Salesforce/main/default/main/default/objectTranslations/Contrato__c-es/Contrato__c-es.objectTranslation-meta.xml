@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contrato de Multiplicação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contratos de Multiplicação</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Aditivo % Admin</layout>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Informações genéricas --></label>
+            <section>Informações genéricas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Aditivo % Administrativo</layout>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Informações genéricas --></label>
+            <section>Informações genéricas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Aditivo Admin</layout>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Informações genéricas --></label>
+            <section>Informações genéricas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Aditivo Administrativo</layout>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Informações genéricas --></label>
+            <section>Informações genéricas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contrato para Admin</layout>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Informações genéricas --></label>
+            <section>Informações genéricas</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>TA Supervisor Admin</layout>
+        <sections>
+            <label><!-- Gestão de contrato --></label>
+            <section>Gestão de contrato</section>
+        </sections>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Objetivos Donmario/Brasmax --></label>
+            <section>Objetivos Donmario/Brasmax</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Termo Aditivo Contrato LE</layout>
+        <sections>
+            <label><!-- Gestão de contrato --></label>
+            <section>Gestão de contrato</section>
+        </sections>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Objetivos Donmario/Brasmax --></label>
+            <section>Objetivos Donmario/Brasmax</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Numero de Contrato de Multiplicacion</nameFieldLabel>
+    <quickActions>
+        <label><!-- Adicionar Meta Dia de Campo/CropChain --></label>
+        <name>Adicionar_Meta_Dia_de_Campo_Ensaios</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Adicionar Meta LxL/Emplac/Produt --></label>
+        <name>Adicionar_Meta_LxL_Emplac</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Adicionar Meta Treinamentos --></label>
+        <name>Adicionar_Meta_Treinamentos</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Adicionar Meta Palestras --></label>
+        <name>Adicionar_meta_palestras</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Clonar --></label>
+        <name>Clonar</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Aditivo BRMX --></label>
+        <name>Aditivo_BRMX</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Aditivo DSEM --></label>
+        <name>Aditivo_DSEM</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Aditivo % BRMX --></label>
+        <name>Aditivo_Porcentaje_BRMX</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Aditivo % DSEM --></label>
+        <name>Aditivo_Porcentaje_DSEM</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Contratos de la sociedad BRASMAX --></description>
+        <label><!-- BRMX --></label>
+        <name>BRMX</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Contratos de la sociedad Don Mario --></description>
+        <label><!-- DSEM --></label>
+        <name>DSEM</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Termo Aditivos de Contrato de multiplicação - a partir de 2018 --></description>
+        <label><!-- Termo Aditivo Comerciais --></label>
+        <name>Termo_Aditivo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Termo Aditivo Novas Biotecnologias --></label>
+        <name>Termo_Aditivo_Lan_amentos</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- La Sociedad seleccionada, no corresponde para el tipo de registro del Contrato --></errorMessage>
+        <name>Tipo_de_Registro_igual_a_Sociedad</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O contrato guarda chuva deve estar no estado &quot;Chegou&quot; --></errorMessage>
+        <name>Validar_Contrato_Marco_Recibido</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- As Metas de Días de Campo e comodato de Área não devem ser completadas para Brasmax --></errorMessage>
+        <name>Validar_meta_por_marca</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Adicionar_Itens --></label>
+        <name>Adicionar_Itens</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Adicionar_cultivares --></label>
+        <name>Adicionar_cultivares</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bloquear --></label>
+        <name>Bloquear</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clonar --></label>
+        <name>Clonar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Imprimir --></label>
+        <name>Imprimir</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Liberar_para_edicion --></label>
+        <name>Liberar_para_edicion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Produtos --></label>
+        <name>Produtos</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateFixedPriceThirdRange</fullName>
+    <active>true</active>
+    <description>Valida el tercer rango de precios fijos para un producto. Creado para US #12786</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(Max_Kg_Second_Price__c)),
+ ISBLANK(Third_Price__c)
+)</errorConditionFormula>
+    <errorDisplayField>Third_Price__c</errorDisplayField>
+    <errorMessage>o preço é necessário para a terceira faixa de preço fixo</errorMessage>
+</ValidationRule>

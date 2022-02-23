@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RECLAMO_CONS_PESQUISA</fullName>
+    <active>true</active>
+    <businessProcess>Reclamo en Pesquisa</businessProcess>
+    <description>El Encargado del Reclamo de Desarrollo necesita una consulta técnica con Pesquisa</description>
+    <label>RECLAMO CONS PESQUISA</label>
+    <picklistValues>
+        <picklist>Assunto__c</picklist>
+        <values>
+            <fullName>Abertura de vagem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abortamento de vagem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chuva na colheita</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deficiência nutricional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desenvolvimento vegetativo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doença</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fitotoxicidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haste verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maturação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mistura varietal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morte de planta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nematoide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Praga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualidade de semente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retenção foliar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Atendimento__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email%2FTelefone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visita</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visita%2FE-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visita%2FTelefone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contacto_Responsable__c</picklist>
+        <values>
+            <fullName>NÃO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estagio_de_desenvolvimento__c</picklist>
+        <values>
+            <fullName>Germinação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marca__c</picklist>
+        <values>
+            <fullName>BRMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAGMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LICENÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEOG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>E-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visita</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baixa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>El usuario no asistió a la formación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funcionalidad compleja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instrucciones poco claras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuevo problema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problema existente</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regi_o_da_planta__c</picklist>
+        <values>
+            <fullName>Folha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vagem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsable__c</picklist>
+        <values>
+            <fullName>061 - Fernando Frehner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>066 - Marcelo Steffen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>067 - Sergio Bertagnolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>076 - Tiago Goulart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>083 - Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>096 - Charles C%2E Pintro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101 - Fausto Tadeu Fanchin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104 - Otavio Gorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>105 - Rogério A%2E Schneider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>106 - Sandro Ferrari M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>111 - Pablo R%2E de Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 - João Serrano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>151 - Anderson Clayton Weissheimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>152 - Fernando Calazans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>190 - Marcos Berlezi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>196 - Edson Chambo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>217 - Cristian Pirolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>224 - Fernando Frehner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>225 - Fagner Regis de Oliveira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>229 - Murilo Brazero Cacheffo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>231 - Willian Von Scharten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>238 - Luis Fernando Cecatto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>289 - Flávio Marçal dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>312 - Lucas Hilario Fantineli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>319 - Felipe Oliveira Costa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>345 - Eduardo L%2E da Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>346 - Marco A%2E Marchioro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E BMX 1 - Fausto Fanchin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E BMX 2 - Fernando Frenher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E BMX 3 - J%2E Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E BMX 4 - Sérgio Bertagnoli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E BMX 5 - Antonio Paiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E BMX 5 - Tiago Goulart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E DSEM 1 - Charles C%2E Pinto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E DSEM 2 - Otavio Ogorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E DSEM 3 - Sandro Ferrari M%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Com%2E DSEM 4 - Fernando Calazans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gerente Des%2E BRMX - Francisco Nogara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gerente Des%2E BRMX - Pablo Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gerente Des%2E DSEM - Carlos Pattis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_De_Indemnizacion__c</picklist>
+        <values>
+            <fullName>Dinheiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Royalties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sementes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_De_Reclamo__c</picklist>
+        <values>
+            <fullName>Performance-Sanidade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualidade do Sementes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_De_Suelo__c</picklist>
+        <values>
+            <fullName>Arenoso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Argiloso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misto</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_do_caso__c</picklist>
+        <values>
+            <fullName>Caso novo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caso recorrente</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Pregunta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reclamação</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

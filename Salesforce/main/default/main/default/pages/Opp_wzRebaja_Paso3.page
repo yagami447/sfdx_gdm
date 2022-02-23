@@ -1,0 +1,31 @@
+<apex:page controller="Opp_wzRebaja_Ctrl" tabStyle="OpportunityLineItem">
+    <apex:sectionHeader subtitle="Nova oportunidade" title="Edição de categoria a rebaixar">
+        <apex:form >
+            <apex:pageBlock title="Produtos">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!prev2}" value="Atrás" immediate="true"/>
+                    <apex:commandButton action="{!guardar}" value="Salvar" rerender="msgs"/>
+                </apex:pageBlockButtons>
+                <apex:pageMessages id="msgs"/>
+                <apex:panelGrid columns="1" id="theGrid" width="100%">
+                    <apex:dataTable value="{!selitems}" var="p1" styleClass="list">
+                        <apex:column Style="width:120px;"><apex:facet name="header">Produto</apex:facet>{!p1.item.pricebookentry.Name}</apex:column>
+                        <apex:column ><apex:facet name="header">Data</apex:facet><apex:inputField value="{!p1.item.Data__c}" required="true"/></apex:column>
+                        <apex:column ><apex:facet name="header">Sem. Beneficiada</apex:facet><apex:inputField Style="width:115px;" value="{!p1.item.Semente_beneficiada__c}"/></apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Diminuir</apex:facet>
+                            <apex:inputCheckbox value="{!p1.modBeneficiada}" />
+                        </apex:column>
+                        <apex:column ><apex:facet name="header">Sem. Aprovada</apex:facet><apex:inputField Style="width:115px;" value="{!p1.item.Semente_aprovada__c}"/></apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Diminuir</apex:facet>
+                            <apex:inputCheckbox value="{!p1.modAprovada}" />
+                        </apex:column>
+                        <apex:column Style="width:120px;"><apex:facet name="header">Categoria Original</apex:facet>{!p1.item.pricebookentry.Product2.Categoria__c}</apex:column>
+                        <apex:column ><apex:facet name="header">Categoria a ser rebaixada</apex:facet><apex:inputField value="{!p1.item.Rebaja__c}" required="true"/></apex:column>
+                    </apex:dataTable>
+                </apex:panelGrid>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:sectionHeader>
+</apex:page>

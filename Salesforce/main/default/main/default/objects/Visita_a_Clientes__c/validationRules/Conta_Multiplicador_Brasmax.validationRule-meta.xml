@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conta_Multiplicador_Brasmax</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(Conta_Multiplicador__c = &quot;&quot;, ISPICKVAL( Modalidade_de_Multiplicador__c, &quot;Multiplicador Brasmax&quot;))</errorConditionFormula>
+    <errorDisplayField>Conta_Multiplicador__c</errorDisplayField>
+    <errorMessage>La Conta no debe estar vacia si a modalidade es Multiplicador Brasmax</errorMessage>
+</ValidationRule>

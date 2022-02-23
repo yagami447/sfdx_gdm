@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Participante --></label>
+    <name>Participante__c</name>
+    <picklistValues>
+        <masterLabel>Adriano Pereira Mandarino</masterLabel>
+        <translation><!-- Adriano Pereira Mandarino --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alexandre Fameli Mammana</masterLabel>
+        <translation><!-- Alexandre Fameli Mammana --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ana Luíza Martins Baraldi</masterLabel>
+        <translation><!-- Ana Luíza Martins Baraldi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderson Clayton Weissheimer</masterLabel>
+        <translation><!-- Anderson Clayton Weissheimer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andre Aguilar</masterLabel>
+        <translation><!-- Andre Aguilar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>André Menegat</masterLabel>
+        <translation><!-- André Menegat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arquimedes Gonçalves De Moura</masterLabel>
+        <translation><!-- Arquimedes Gonçalves De Moura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Augusto Cesar Teodoro Rodrigues</masterLabel>
+        <translation><!-- Augusto Cesar Teodoro Rodrigues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Augusto Gelain Rebeschini</masterLabel>
+        <translation><!-- Augusto Gelain Rebeschini --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bruno De Moraes Ribeiro</masterLabel>
+        <translation><!-- Bruno De Moraes Ribeiro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bruno Fiorin Zaninetti</masterLabel>
+        <translation><!-- Bruno Fiorin Zaninetti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caio Munhoz Tormena</masterLabel>
+        <translation><!-- Caio Munhoz Tormena --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carlos Martinelli</masterLabel>
+        <translation><!-- Carlos Martinelli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cezar Marchesan</masterLabel>
+        <translation><!-- Cezar Marchesan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Christian Rodrigues</masterLabel>
+        <translation><!-- Christian Rodrigues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clevison Junior da Silva Moraes</masterLabel>
+        <translation><!-- Clevison Junior da Silva Moraes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cristian Pirolli</masterLabel>
+        <translation><!-- Cristian Pirolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daniel Vidal</masterLabel>
+        <translation><!-- Daniel Vidal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Davi Genes Teixeira Lima</masterLabel>
+        <translation><!-- Davi Genes Teixeira Lima --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diego Batista Rocha</masterLabel>
+        <translation><!-- Diego Batista Rocha --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diego Francisco Gonçalves</masterLabel>
+        <translation><!-- Diego Francisco Gonçalves --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Douglas Capi Bento</masterLabel>
+        <translation><!-- Douglas Capi Bento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edson Chambo Ruiz Junior</masterLabel>
+        <translation><!-- Edson Chambo Ruiz Junior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eduardo Lopes Da Silva</masterLabel>
+        <translation><!-- Eduardo Lopes Da Silva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eduardo Silvestrini Tonello</masterLabel>
+        <translation><!-- Eduardo Silvestrini Tonello --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emanuel Augusto Coutinho da Silva</masterLabel>
+        <translation><!-- Emanuel Augusto Coutinho da Silva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emerson Yassunori Ito</masterLabel>
+        <translation><!-- Emerson Yassunori Ito --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erinelson Digner</masterLabel>
+        <translation><!-- Erinelson Digner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fagner Regis de Oliveira</masterLabel>
+        <translation><!-- Fagner Regis de Oliveira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Bianchessi</masterLabel>
+        <translation><!-- Felipe Bianchessi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Biasi Biasi</masterLabel>
+        <translation><!-- Felipe Biasi Biasi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Dias Louzada</masterLabel>
+        <translation><!-- Felipe Dias Louzada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Manoel Alves</masterLabel>
+        <translation><!-- Felipe Manoel Alves --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Felipe Oliveira Da Costa</masterLabel>
+        <translation><!-- Felipe Oliveira Da Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Calazans</masterLabel>
+        <translation><!-- Fernando Calazans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Frenher</masterLabel>
+        <translation><!-- Fernando Frenher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fernando Ichikawa</masterLabel>
+        <translation><!-- Fernando Ichikawa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flavio Marcal Dos Santos</masterLabel>
+        <translation><!-- Flavio Marcal Dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gabriel Kudig</masterLabel>
+        <translation><!-- Gabriel Kudig --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gabriel Vinicius Finatto</masterLabel>
+        <translation><!-- Gabriel Vinicius Finatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gabriel Volpato</masterLabel>
+        <translation><!-- Gabriel Volpato --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geovani Otowicz</masterLabel>
+        <translation><!-- Geovani Otowicz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guilherme Barivieira</masterLabel>
+        <translation><!-- Guilherme Barivieira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guilherme Borges</masterLabel>
+        <translation><!-- Guilherme Borges --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gustavo Caselato Barbosa</masterLabel>
+        <translation><!-- Gustavo Caselato Barbosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gustavo Introvini Haab</masterLabel>
+        <translation><!-- Gustavo Introvini Haab --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gustavo Santos Suzano</masterLabel>
+        <translation><!-- Gustavo Santos Suzano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hugo Leonardo Lima Gomes</masterLabel>
+        <translation><!-- Hugo Leonardo Lima Gomes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joao Elias Sebba Roriz Muniz</masterLabel>
+        <translation><!-- Joao Elias Sebba Roriz Muniz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joao Garibaldi</masterLabel>
+        <translation><!-- Joao Garibaldi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jonathan Camilio Vogt</masterLabel>
+        <translation><!-- Jonathan Camilio Vogt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joner Dalcin</masterLabel>
+        <translation><!-- Joner Dalcin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jorge Cristiano Rosa</masterLabel>
+        <translation><!-- Jorge Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jose Apolinario Ferreira Junior</masterLabel>
+        <translation><!-- Jose Apolinario Ferreira Junior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jose Emilio Marini Faria</masterLabel>
+        <translation><!-- Jose Emilio Marini Faria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jose Francisco</masterLabel>
+        <translation><!-- Jose Francisco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jose Guilherme Carneiro Silva</masterLabel>
+        <translation><!-- Jose Guilherme Carneiro Silva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>João Paulo Schechtel</masterLabel>
+        <translation><!-- João Paulo Schechtel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>João Pedro Fossa Bernardy</masterLabel>
+        <translation><!-- João Pedro Fossa Bernardy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>João Victor Silva Trombim</masterLabel>
+        <translation><!-- João Victor Silva Trombim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Julio Cesar Pilonetto Minosso</masterLabel>
+        <translation><!-- Julio Cesar Pilonetto Minosso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Junior Sandri</masterLabel>
+        <translation><!-- Junior Sandri --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jânio Milhomens</masterLabel>
+        <translation><!-- Jânio Milhomens --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leonardo Andersson Migliorini</masterLabel>
+        <translation><!-- Leonardo Andersson Migliorini --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leucir Zanella</masterLabel>
+        <translation><!-- Leucir Zanella --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Augusto Schio</masterLabel>
+        <translation><!-- Lucas Augusto Schio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Bueno Da Veiga</masterLabel>
+        <translation><!-- Lucas Bueno Da Veiga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Furlan</masterLabel>
+        <translation><!-- Lucas Furlan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Gabriel Sanches Pereira</masterLabel>
+        <translation><!-- Lucas Gabriel Sanches Pereira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Hilário Fantineli</masterLabel>
+        <translation><!-- Lucas Hilário Fantineli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucas Mansano Zanella</masterLabel>
+        <translation><!-- Lucas Mansano Zanella --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luiz Fernando Ceccatto</masterLabel>
+        <translation><!-- Luiz Fernando Ceccatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lukas Dal Santos Reghin</masterLabel>
+        <translation><!-- Lukas Dal Santos Reghin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maicol De Mattos</masterLabel>
+        <translation><!-- Maicol De Mattos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maiquel Gustavo Maehler</masterLabel>
+        <translation><!-- Maiquel Gustavo Maehler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Cassol</masterLabel>
+        <translation><!-- Marcelo Cassol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Cruz Tomazi</masterLabel>
+        <translation><!-- Marcelo Cruz Tomazi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Farias Alves Moreira</masterLabel>
+        <translation><!-- Marcelo Farias Alves Moreira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcelo Moraes</masterLabel>
+        <translation><!-- Marcelo Moraes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcio Locatelli</masterLabel>
+        <translation><!-- Marcio Locatelli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marco Bianchini</masterLabel>
+        <translation><!-- Marco Bianchini --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marcos Marchioro</masterLabel>
+        <translation><!-- Marcos Marchioro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mateus Davi</masterLabel>
+        <translation><!-- Mateus Davi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mateus Henrique Favaro</masterLabel>
+        <translation><!-- Mateus Henrique Favaro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Matheus Araujo Oliveira</masterLabel>
+        <translation><!-- Matheus Araujo Oliveira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Matheus Georg de Abreu Marx</masterLabel>
+        <translation><!-- Matheus Georg de Abreu Marx --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maurício Diehl Guazzelli</masterLabel>
+        <translation><!-- Maurício Diehl Guazzelli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maurício Henrique Berton</masterLabel>
+        <translation><!-- Maurício Henrique Berton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michel Dotto</masterLabel>
+        <translation><!-- Michel Dotto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplicador</masterLabel>
+        <translation><!-- Multiplicador --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Murilo Brazero Cacheffo</masterLabel>
+        <translation><!-- Murilo Brazero Cacheffo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Natalie Mattos</masterLabel>
+        <translation><!-- Natalie Mattos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nathan Löbler dos Santos</masterLabel>
+        <translation><!-- Nathan Löbler dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nelson Bassetto Junior</masterLabel>
+        <translation><!-- Nelson Bassetto Junior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Osvaldo Manoel Ferreira</masterLabel>
+        <translation><!-- Osvaldo Manoel Ferreira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otavio Gorni</masterLabel>
+        <translation><!-- Otavio Gorni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pablo Souza</masterLabel>
+        <translation><!-- Pablo Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patrick Hayra Dos Santos</masterLabel>
+        <translation><!-- Patrick Hayra Dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paulo Novais</masterLabel>
+        <translation><!-- Paulo Novais --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rafael Neubauer</masterLabel>
+        <translation><!-- Rafael Neubauer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rafael Witt</masterLabel>
+        <translation><!-- Rafael Witt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Raul Rauber</masterLabel>
+        <translation><!-- Raul Rauber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rodrigo Roider Fogolari</masterLabel>
+        <translation><!-- Rodrigo Roider Fogolari --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Samuel Patrick Soares Daiprai</masterLabel>
+        <translation><!-- Samuel Patrick Soares Daiprai --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tharso Souza Silva Brito</masterLabel>
+        <translation><!-- Tharso Souza Silva Brito --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thiago Celestino Dos Santos</masterLabel>
+        <translation><!-- Thiago Celestino Dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thiago Rocha Sales</masterLabel>
+        <translation><!-- Thiago Rocha Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiago Da Silva Moreira</masterLabel>
+        <translation><!-- Tiago Da Silva Moreira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Túllio Moreira Aguiar</masterLabel>
+        <translation><!-- Túllio Moreira Aguiar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vagner de Carvalho Daniel</masterLabel>
+        <translation><!-- Vagner de Carvalho Daniel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valter Eduardo Balestrin</masterLabel>
+        <translation><!-- Valter Eduardo Balestrin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vinicius Bellé</masterLabel>
+        <translation><!-- Vinicius Bellé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vinicius Cesar Sambatti</masterLabel>
+        <translation><!-- Vinicius Cesar Sambatti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vinícius Caetano da Silva</masterLabel>
+        <translation><!-- Vinícius Caetano da Silva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vitor Henrique Rambaldo Benedetti</masterLabel>
+        <translation><!-- Vitor Henrique Rambaldo Benedetti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vitor Linn</masterLabel>
+        <translation><!-- Vitor Linn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vitor Pereira</masterLabel>
+        <translation><!-- Vitor Pereira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wasley Luan Campoy</masterLabel>
+        <translation><!-- Wasley Luan Campoy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wesley Silva</masterLabel>
+        <translation><!-- Wesley Silva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Willian Allann Loureiro Scabora</masterLabel>
+        <translation><!-- Willian Allann Loureiro Scabora --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Willian Scharten</masterLabel>
+        <translation><!-- Willian Scharten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Álex Theodoro Noll Drews</masterLabel>
+        <translation><!-- Álex Theodoro Noll Drews --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

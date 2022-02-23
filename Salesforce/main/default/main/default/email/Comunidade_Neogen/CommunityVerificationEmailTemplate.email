@@ -1,0 +1,12 @@
+Olá, sua conta tentou acionar a {!Community_Name}.
+Ação: {!Action}
+
+Navegador: {!Browser}
+Sistema operacional: {!Operating_System}
+Nome de usuário: {!Receiving_User.Username}
+
+Para garantir sua segurança precisamos verificar sua identidade. Por favor, use o código de verificação para validar seu acesso.
+
+Código de verificação: {!Verification_Code}
+
+Se não tentou acessar {!Community_Name} ou não reconhece essas informações, por favor contate seu administrador da {!Community_Name}.

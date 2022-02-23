@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRMX_Descuento__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(BR_Superou_Meta__c =true, BR_Pontos_LxL__c &gt; 0, BR_Pontos_dias_de_campo__c &gt; 0, BR_Resultado_Palestra_e_Treinamentos__c &gt; 0, BR_Total_de_pontos__c&gt;17), 
+IF(BR_Total_de_pontos__c&gt;=31 , 2, 1),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BRMX Descuento</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

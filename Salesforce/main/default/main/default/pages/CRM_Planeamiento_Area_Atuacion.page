@@ -1,0 +1,698 @@
+<apex:page Controller="CRM_Controller" title="Planejamiento de Area de Atuação" action="{!initAreaActuacionPlaneamiento}" tabStyle="Account" sidebar="false">    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickAreaAct="{!verAreaAct}" clickCanalVendas="{!verCanalVendas}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1000px">
+<apex:sectionHeader title="Planejamiento de Area de Atuação ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>
+<apex:pageBlock mode="edit">
+  <apex:Messages style="font-weight:bold;font-size:18px"/>
+  <!--<apex:pageMessages escape="false"/>-->
+  <apex:pageBlockSection columns="2">
+     <apex:pageBlockSection title="RS" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total RS" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalRS}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_RS}"  var="srs" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!srs.Regi_o__c}" rendered="{!srs.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!srs.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!srs.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoRS.Porcentaje_Vendas__c}"/>                        
+                    </apex:facet>                       
+                    <apex:outputField value="{!srs.Porcentaje_Vendas__c}" rendered="{!srs.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!srs.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoRS.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalRS}" />
+                        </apex:outputText> -->
+                    </apex:facet>   
+                    
+                    <apex:outputField value="{!srs.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!srs.Id == editareaa}"></apex:inputText>-->
+                </apex:column>  
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!srs.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!srs.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!srs.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!srs.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!srs.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!srs.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!srs.Id}"/>
+                    </apex:commandLink>
+                </apex:column>             
+            </apex:pageblocktable>
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>     
+    
+    
+    
+    <apex:pageBlockSection title="SC" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SC" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSC}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_SC}"  var="ssc" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!ssc.Regi_o__c}" rendered="{!ssc.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!ssc.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!ssc.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoSC.Porcentaje_Vendas__c}"/>
+                    </apex:facet> 
+                    <apex:outputField value="{!ssc.Porcentaje_Vendas__c}" rendered="{!ssc.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!ssc.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoSC.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalSC}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!ssc.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!ssc.Id == editareaa}"></apex:inputText>-->
+                </apex:column> 
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!ssc.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!ssc.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!ssc.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!ssc.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!ssc.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!ssc.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!ssc.Id}"/>
+                    </apex:commandLink>
+                </apex:column>              
+            </apex:pageblocktable>
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection> 
+    
+    
+    
+    <apex:pageBlockSection title="PR" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total PR" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalPR}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_PR}"  var="spr" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!spr.Regi_o__c}" rendered="{!spr.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!spr.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!spr.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoPR.Porcentaje_Vendas__c}"/>
+                    </apex:facet> 
+                    <apex:outputField value="{!spr.Porcentaje_Vendas__c}" rendered="{!spr.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!spr.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoPR.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalPR}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!spr.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!spr.Id == editareaa}"></apex:inputText>-->
+                </apex:column> 
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!spr.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!spr.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!spr.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!spr.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!spr.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!spr.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!spr.Id}"/>
+                    </apex:commandLink>
+                </apex:column>              
+            </apex:pageblocktable>
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    
+    
+    <apex:pageBlockSection title="MS" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total MS" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalMS}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_MS}"  var="sms" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!sms.Regi_o__c}" rendered="{!sms.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!sms.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!sms.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoMS.Porcentaje_Vendas__c}"/>
+                    </apex:facet> 
+                    <apex:outputField value="{!sms.Porcentaje_Vendas__c}" rendered="{!sms.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!sms.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoMS.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMS}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sms.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!sms.Id == editareaa}"></apex:inputText>-->
+                </apex:column>       
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!sms.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!sms.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!sms.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!sms.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!sms.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!sms.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!sms.Id}"/>
+                    </apex:commandLink>
+                </apex:column>        
+            </apex:pageblocktable>
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection> 
+    
+    
+    
+    <apex:pageBlockSection title="SP" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_SP}"  var="ssp" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!ssp.Regi_o__c}" rendered="{!ssp.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!ssp.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!ssp.Id == editareaa}"/></apex:selectList>
+                </apex:column>
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoSP.Porcentaje_Vendas__c}"/>
+                    </apex:facet> 
+                    <apex:outputField value="{!ssp.Porcentaje_Vendas__c}" rendered="{!ssp.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!ssp.Id == editareaa}"></apex:inputText>
+                </apex:column> 
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoSP.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalSP}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!ssp.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!ssp.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!ssp.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!ssp.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!ssp.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!ssp.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!ssp.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!ssp.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!ssp.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="GO" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_GO}"  var="sgo" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!sgo.Regi_o__c}" rendered="{!sgo.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!sgo.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!sgo.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoGO.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalGO}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sgo.Porcentaje_Vendas__c}" rendered="{!sgo.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!sgo.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoGO.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalGO}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sgo.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!sgo.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!sgo.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!sgo.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!sgo.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!sgo.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!sgo.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!sgo.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!sgo.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection title="MG" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_MG}"  var="smg" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!smg.Regi_o__c}" rendered="{!smg.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!smg.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!smg.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoMG.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMG}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!smg.Porcentaje_Vendas__c}" rendered="{!smg.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!smg.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoMG.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMG}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!smg.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!smg.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!smg.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!smg.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!smg.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!smg.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!smg.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!smg.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!smg.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="MA" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_MA}"  var="sma" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!sma.Regi_o__c}" rendered="{!sma.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!sma.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!sma.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoMA.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMA}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sma.Porcentaje_Vendas__c}" rendered="{!sma.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!sma.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoMA.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMA}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sma.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!sma.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!sma.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!sma.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!sma.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!sma.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!sma.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!sma.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!sma.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="BA" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_BA}"  var="sba" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!sba.Regi_o__c}" rendered="{!sba.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!sba.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!sba.Id == editareaa}"/></apex:selectList>
+                </apex:column>
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoBA.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalBA}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sba.Porcentaje_Vendas__c}" rendered="{!sba.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!sba.Id == editareaa}"></apex:inputText>
+                </apex:column> 
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoBA.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalBA}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sba.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!sba.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!sba.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!sba.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!sba.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!sba.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!sba.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!sba.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!sba.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="RO" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_RO}"  var="sro" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!sro.Regi_o__c}" rendered="{!sro.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!sro.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!sro.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoRO.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalRO}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sro.Porcentaje_Vendas__c}" rendered="{!sro.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!sro.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoRO.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalRO}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sro.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!sro.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!sro.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!sro.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!sro.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!sro.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!sro.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!sro.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!sro.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection title="TO" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_TO}"  var="sto" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!sto.Regi_o__c}" rendered="{!sto.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!sto.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!sto.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoTO.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalTO}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sto.Porcentaje_Vendas__c}" rendered="{!sto.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!sto.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                    <apex:outputField value="{!totalPlaneamientoTO.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalTO}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!sto.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!sto.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!sto.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!sto.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!sto.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!sto.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!sto.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!sto.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!sto.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+        <apex:pageBlockSection title="PI" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_PI}"  var="spi" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!spi.Regi_o__c}" rendered="{!spi.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!spi.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!spi.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoPI.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalPI}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!spi.Porcentaje_Vendas__c}" rendered="{!spi.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!spi.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoPI.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalPI}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!spi.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!spi.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!spi.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!spi.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!spi.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!spi.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!spi.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!spi.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!spi.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+        <apex:pageBlockSection title="MT" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_MT}"  var="smt" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!smt.Regi_o__c}" rendered="{!smt.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!smt.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!smt.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoMT.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMT}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!smt.Porcentaje_Vendas__c}" rendered="{!smt.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!smt.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoMT.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMT}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!smt.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!smt.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!smt.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!smt.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!smt.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!smt.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!smt.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!smt.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!smt.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="PA" columns="1">        
+        <!--<apex:pageblockSection >
+            <apex:outputText value="Total SP" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"/>
+            <apex:outputText value="{!totalSP}" style="font-weight:bold;font-size:14px;color:red;text-decoration:underline"></apex:outputText>                                                      
+        </apex:pageblockSection>-->           
+        <apex:pageBlockSection >                                                 
+            <apex:pageblocktable value="{!area_atuacion_planeamiento_PA}"  var="spa" style="width: 350px">
+                <apex:column headerValue="Region">
+                    <apex:outputField value="{!spa.Regi_o__c}" rendered="{!spa.Id != editareaa}"></apex:outputField>
+                    <apex:selectList value="{!editRegAreaA}" size="1" rendered="{!spa.Id == editareaa}"><apex:selectOptions value="{!RegionesConGrupo}" rendered="{!spa.Id == editareaa}"/></apex:selectList>
+                </apex:column> 
+                <apex:column headerValue="% Comercializado">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoPA.Porcentaje_Vendas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMT}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!spa.Porcentaje_Vendas__c}" rendered="{!spa.Id != editareaa}"></apex:outputField>
+                    <apex:inputText value="{!editPorcentajeAreaA}" rendered="{!spa.Id == editareaa}"></apex:inputText>
+                </apex:column>
+                <apex:column headerValue="Volume Comercializado em Sacos">
+                    <apex:facet name="footer">
+                        <apex:outputField value="{!totalPlaneamientoPA.Sacas__c}"/>
+                        <!-- <apex:outputText value="{0,number,integer}">
+                            <apex:param value="{!totalMT}" />
+                        </apex:outputText> -->
+                    </apex:facet> 
+                    <apex:outputField value="{!spa.Sacas__c}"></apex:outputField>
+                    <!--<apex:inputText value="{!editCantAreaA}" rendered="{!smt.Id == editareaa}"></apex:inputText>-->
+                </apex:column>     
+                <apex:column headerValue="" rendered="{!!crm_mult.Cerrado__c}">
+                    <apex:commandLink action="{!editAreaAtuacion}" rerender="form" rendered="{!spa.Id != editareaa}" value="Editar ">
+                        <apex:param name="edit_area_a" value="{!spa.Id}"/> 
+                    </apex:commandLink>&nbsp;  
+                    <apex:commandLink action="{!eliminarAreaAtuacion}" rendered="{!spa.Id != editareaa}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                        <apex:param name="eliminar_area_a" value="{!spa.Id}" assignTo="{!elim_areaa}"/>
+                    </apex:commandLink>
+                    <apex:commandLink action="{!cancelEditAreaAtuacion}" rendered="{!spa.Id == editareaa}">Cancelar</apex:commandLink>&nbsp;
+                    <apex:commandLink action="{!saveEditAreaAtuacion}" rendered="{!spa.Id == editareaa}">Salvar
+                        <apex:param name="save_area_a" value="{!spa.Id}"/>
+                    </apex:commandLink>
+                </apex:column>          
+            </apex:pageblocktable>            
+        </apex:pageBlockSection>        
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection columns="2">                   
+        <apex:outputText value="Total geral" style="font-weight:bold;font-size:18px;text-decoration:underline"></apex:outputText>
+        <!-- <apex:outputText value="{!totalGeneralEstados}" style="font-weight:bold;font-size:18px;text-decoration:underline"></apex:outputText> -->
+        <apex:outputField value="{!totalPlaneamientoGeneralEstados.Sacas__c}" style="font-weight:bold;font-size:18px;text-decoration:underline"></apex:outputField>
+        <apex:outputText value=" " style="font-weight:bold;font-size:18px;text-decoration:underline"></apex:outputText>
+        <apex:outputField value="{!totalPlaneamientoGeneralEstados.Porcentaje_Vendas__c}" style="font-weight:bold;font-size:18px;text-decoration:underline"></apex:outputField>
+    </apex:pageBlockSection>
+    
+ </apex:pageBlockSection>        
+</apex:pageBlock>   
+    
+    
+    
+    <apex:pageBlock mode="edit" rendered="{!!crm_mult.Cerrado__c}">
+    <apex:pageBlockSection columns="2">
+    <apex:pageBlockSection columns="1">
+        <apex:pageBlockSection title="Adicionar">                                                   
+            <apex:outputText value="Region"/>
+            <!--<apex:outputText value="Volume Comercializado em Sacos"/>-->
+            <apex:outputText value="% Comercializado"/>
+            <apex:selectList value="{!nuevoAreaAtuacion}" size="1"><apex:selectOptions value="{!RegionesConGrupo}"/></apex:selectList>
+            <!--<apex:inputText value="{!nuevoAreaAtuacionCantidad}"></apex:inputText>-->
+            <apex:inputText value="{!nuevoAreaAtuacionPorcentaje}"></apex:inputText>
+            <apex:commandLink style="width: 100px" value="Adicionar" action="{!addAreaAtuacionPlaneamiento}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlockSection> 
+    </apex:pageBlockSection>        
+    </apex:pageBlock>
+  
+  
+    
+      
+    </apex:form>  
+</apex:panelGrid> 
+</apex:page>

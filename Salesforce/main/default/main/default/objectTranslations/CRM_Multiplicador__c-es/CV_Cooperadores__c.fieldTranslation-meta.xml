@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Canal de Vendas(Cooperadores) --></help>
+    <label><!-- CV Cooperadores --></label>
+    <name>CV_Cooperadores__c</name>
+</CustomFieldTranslation>

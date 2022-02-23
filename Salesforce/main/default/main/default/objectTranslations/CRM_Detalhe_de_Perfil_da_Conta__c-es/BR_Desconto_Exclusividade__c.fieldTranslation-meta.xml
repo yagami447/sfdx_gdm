@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Desconto Exclusividade (kgs) del excel Fórmula  Desconto de Royalty --></help>
+    <label><!-- AAAA BDesconto Exclusividade --></label>
+    <name>BR_Desconto_Exclusividade__c</name>
+</CustomFieldTranslation>

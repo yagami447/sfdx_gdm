@@ -1,0 +1,11 @@
+{!Today}
+
+Estimado/a {!NullValue(Contact.FirstName, "Sir or Madam")},
+
+Gracias por su interés en {!Organization.Name}. Esperamos poder colaborar con {!NullValue(Account.Name, "su empresa.")} En breve, recibirá por correo un paquete de información. Mientras tanto, revise el resumen adjunto de la empresa.
+
+Atentamente,
+
+{!User.FullName
+!Organization.Name}
+{!User.Email}

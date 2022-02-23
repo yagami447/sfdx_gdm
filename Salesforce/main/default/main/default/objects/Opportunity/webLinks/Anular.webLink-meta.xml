@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anular</fullName>
+    <availability>online</availability>
+    <description>Cambia el Estado a AN - Anulada de una NV de Venta de Básica pasada a SAP y en Anexos.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Anular</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &apos;{!Opportunity.Id}&apos;; 
+
+var result = sforce.apex.execute(&quot;Opp_Utils&quot;,&quot;anularOpp&quot;, {idOpp : id}); 
+alert(result); 
+
+window.location.reload(true);</url>
+</WebLink>

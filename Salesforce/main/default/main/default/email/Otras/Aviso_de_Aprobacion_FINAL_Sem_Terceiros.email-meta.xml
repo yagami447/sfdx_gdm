@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Aviso de Aprobacion FINAL Sem Terceiros</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aviso de Aprobacion FINAL Sem Terceiros</name>
+    <style>none</style>
+    <subject>Atenção: Aquisição Sem. Terceiros Aprovada</subject>
+    <textOnly>{!Today}
+
+
+{!Opportunity.Account}
+
+As informações inseridas foram aprovadas.
+
+{!Opportunity.Name}
+
+Att.
+
+
+{!Opportunity.Marca_Completa__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

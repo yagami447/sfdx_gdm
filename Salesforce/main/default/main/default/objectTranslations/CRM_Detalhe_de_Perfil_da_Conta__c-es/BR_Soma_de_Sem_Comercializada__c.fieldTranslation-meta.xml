@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Suma del campo semilla comercializada para todas variedades (INTACTA) informadas en el anexo III y IV que está con el status aprobado --></help>
+    <label><!-- AAAA Vendas BRMX IPRO --></label>
+    <name>BR_Soma_de_Sem_Comercializada__c</name>
+</CustomFieldTranslation>

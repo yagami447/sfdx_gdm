@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Price__c</fullName>
+    <description>Muestra si el producto tiene un precio fijo para la Lista de Precios seleccionada</description>
+    <externalId>false</externalId>
+    <formula>PricebookEntry.Fixed_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Mostra se o produto tem um preço fixo para a lista de preços selecionada</inlineHelpText>
+    <label>Preço Fixo</label>
+    <type>Checkbox</type>
+</CustomField>

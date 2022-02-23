@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Imprimir</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Imprimir</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Contrato__c.Id}&quot;; 
+var estado = &quot;{!Contrato__c.Estado__c}&quot;; 
+
+//if (estado == &apos;Edição&apos;){ 
+var result = sforce.apex.execute(&quot;PdfGeneratorController&quot;,&quot;impresionContratoTA&quot;, {idContrato : id}); 
+//}else{ 
+//alert(&quot;Fase para gerar a impressão deve ser &apos;Pendente de Impressão&apos;.&quot;); 
+//} 
+
+window.location.reload(true);</url>
+</WebLink>

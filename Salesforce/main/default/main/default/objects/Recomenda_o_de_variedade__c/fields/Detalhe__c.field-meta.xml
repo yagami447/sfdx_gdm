@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detalhe__c</fullName>
+    <externalId>false</externalId>
+    <label>Detalhe</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sequeiro</fullName>
+                <default>false</default>
+                <label>Sequeiro</label>
+            </value>
+            <value>
+                <fullName>Várzea</fullName>
+                <default>false</default>
+                <label>Várzea</label>
+            </value>
+            <value>
+                <fullName>Irrigado</fullName>
+                <default>false</default>
+                <label>Irrigado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

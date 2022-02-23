@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Contrato__c</entityName>
+    <fieldName>Estado__c</fieldName>
+    <masterLabel>Proceso de Impresion</masterLabel>
+    <recordTypeName>Termo_Aditivo</recordTypeName>
+</PathAssistant>

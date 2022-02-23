@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cotacao_de_soja__c</fullName>
+    <description>No pagamento dos Royalties, usamos a cotação de soja de duas empresas, dependendo da região da conta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>No pagamento dos Royalties, usamos a cotação de soja de duas empresas, dependendo da região da conta</inlineHelpText>
+    <label>Cotação de soja</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo_de_Cota_o__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>COAMO</fullName>
+                <default>false</default>
+                <label>COAMO</label>
+            </value>
+            <value>
+                <fullName>COTRIJAL</fullName>
+                <default>false</default>
+                <label>COTRIJAL</label>
+            </value>
+            <value>
+                <fullName>SAFRAS &amp; MERCADO</fullName>
+                <default>false</default>
+                <label>SAFRAS &amp; MERCADO</label>
+            </value>
+            <value>
+                <fullName>CHICAGO</fullName>
+                <default>false</default>
+                <label>CHICAGO</label>
+            </value>
+            <value>
+                <fullName>C. VALE</fullName>
+                <default>false</default>
+                <label>C. VALE</label>
+            </value>
+            <value>
+                <fullName>ADM</fullName>
+                <default>false</default>
+                <label>ADM</label>
+            </value>
+            <value>
+                <fullName>ASUNCION</fullName>
+                <default>false</default>
+                <label>ASUNCION</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Campo Grande (MS)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Campo Grande (MS)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rio Verde (GO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rio Verde (GO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Sorriso (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Sorriso (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Passo Fundo (RS)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Passo Fundo (RS)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Londrina (PR)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Londrina (PR)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rondonópolis (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rondonópolis (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Barreiras (BA)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Barreiras (BA)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Uberlandia (MG)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Uberlandia (MG)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Diamantino (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Diamantino (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Pedro Afonso (TO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Pedro Afonso (TO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Brasília (DF)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Brasília (DF)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Primavera (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Primavera (MT)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>COAMO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>COTRIJAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>SAFRAS &amp; MERCADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>CHICAGO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>C. VALE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>ADM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>ASUNCION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Campo Grande (MS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Rio Verde (GO)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Sorriso (MT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Passo Fundo (RS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Londrina (PR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Rondonópolis (MT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Barreiras (BA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Uberlandia (MG)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Diamantino (MT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Pedro Afonso (TO)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Brasília (DF)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SOJA</controllingFieldValue>
+            <valueName>S&amp;M - Primavera (MT)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

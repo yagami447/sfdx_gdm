@@ -1,0 +1,603 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd"> 
+
+<html> 
+<head> 
+<title> </title> 
+<meta content="Evrsoft First Page" name="GENERATOR"> 
+<link media="handheld,print,projection,screen,tty,tv" href="00630000004i76o_files/common.css" type="text/css" rel="stylesheet"> 
+<link media="handheld,print,projection,screen,tty,tv" href="00630000004i76o_files/custom.css" type="text/css" rel="stylesheet"> 
+<link media="aural,braille,embossed" href="00630000004i76o_files/assistive.css" type="text/css" rel="stylesheet"> 
+<link href="https://na1.salesforce.com/favicon.ico" rel="shortcut icon"> 
+<link media="handheld,print,projection,screen,tty,tv" href="/dCSS/Theme2/default/common.css" type="text/css" rel="stylesheet"> 
+<link media="handheld,print,projection,screen,tty,tv" href="/dCSS/Theme2/default/custom.css" type="text/css" rel="stylesheet"> 
+<link media="aural,braille,embossed" href="/css/assistive.css" type="text/css" rel="stylesheet"> 
+<script src="https://www.salesforce.com/services/lib/ajax/beta3.3/sforceclient.js" type="text/javascript"> 
+</script> 
+<script src="/js/roletreenode.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+
+
+var tpl_row_productos = "<tr>"; 
+//tpl_row_productos += "<td style=\"text-align: right;padding-right: 3px;\">%Quantity%<\/td>"; 
+//tpl_row_productos += "<td style=\"text-align: left; border-left: solid 1 black; padding-left: 3px;\">%product_name%<\/td>"; 
+//tpl_row_productos += "<td style=\"text-align: right; border-left: solid 1 black; padding-right: 3px;\">%UnitPrice%<\/td>"; 
+//tpl_row_productos += "<td style=\"text-align: right; border-left: solid 1 black; padding-right: 3px;\">%subtotal%<\/td>"; 
+//tpl_row_productos += "<\/tr>"; 
+
+tpl_row_productos += "<td style=\"text-align: right;padding-right: 3px;\">%Quantity%<\/td>"; 
+tpl_row_productos += "<td style=\"text-align: left; padding-left: 3px;\">%product_name%<\/td>"; 
+tpl_row_productos += "<td style=\"text-align: right; padding-right: 3px;\">%UnitPrice%<\/td>"; 
+tpl_row_productos += "<td style=\"text-align: right; padding-right: 3px;\">%subtotal%<\/td>"; 
+tpl_row_productos += "<\/tr>"; 
+
+
+var tpl_cliente_row = "<tr>"; 
+tpl_cliente_row += "<td style=\"padding-left:5; width: 120px\">col1<\/td>"; 
+tpl_cliente_row += "<td style=\"width: 250px\">val1<\/td>"; 
+tpl_cliente_row += "<td style=\"text-align: right; padding-right: 5;\">col2<\/td>"; 
+tpl_cliente_row += "<td style=\"width: 110px;\">val2<\/td>"; 
+tpl_cliente_row += "<\/tr>"; 
+
+var tpl_cliente_row_l = "<tr>"; 
+tpl_cliente_row_l += "<td style=\"padding-left:5; width: 0px\">col1<\/td>"; 
+tpl_cliente_row_l += "<td style=\"width: 310px\">val1<\/td>"; 
+tpl_cliente_row_l += "<td style=\"text-align: right; padding-right: 5;\">col2<\/td>"; 
+tpl_cliente_row_l += "<td style=\"width: 170px;\">val2<\/td>"; 
+tpl_cliente_row_l += "<\/tr>"; 
+
+var tpl_cliente_total_row = "<tr>"; 
+tpl_cliente_total_row += "<td style=\"padding-left:5; width: 120px\">col<\/td>"; 
+tpl_cliente_total_row += "<td colspan = 3>val<\/td>"; 
+tpl_cliente_total_row += "<\/tr>"; 
+
+var tpl_cliente_total_row_l = "<tr>"; 
+tpl_cliente_total_row_l += "<td style=\"padding-left:5; width: 5px\">col<\/td>"; 
+tpl_cliente_total_row_l+= "<td colspan = 3>val<\/td>"; 
+tpl_cliente_total_row_l += "<\/tr>"; 
+
+
+var tpl_head_rowTotales = "<tr style=\"vertical-align: middle; HEIGHT: 40px; text-align: right;\">"; 
+//tpl_head_rowTotales += "<td style=\"width: 120px;\">col1<\/td>"; 
+//tpl_head_rowTotales += "<td style=\"width: 340px;\">col2<\/td>"; 
+//tpl_head_rowTotales += "<td style=\"width: 120px;\">col3<\/td>"; 
+//tpl_head_rowTotales += "<td style=\"width: 125px; border-right: solid 1 black; border-left: solid 1 black; border-bottom: solid 1 black; padding-right:3px;\">col4<\/td>"; 
+
+
+tpl_head_rowTotales += "<td style=\"width: 90px;\">col1<\/td>"; 
+tpl_head_rowTotales += "<td style=\"width: 300px;\">col2<\/td>"; 
+tpl_head_rowTotales += "<td style=\"width: 125px;\">col3<\/td>"; 
+//tpl_head_rowTotales += "<td style=\"width: 125px; border-right: solid 1 black; border-left: solid 1 black; border-bottom: solid 1 black; padding-right:3px;\">col4<\/td>"; 
+tpl_head_rowTotales += "<td style=\"width: 125px;\">col4<\/td>"; 
+
+// agrego una columna mas para que ocupe espacio 
+tpl_head_rowTotales += "<td style=\"width: 60px; \"><\/td>"; 
+
+tpl_head_rowTotales += "<\/tr>"; 
+
+var tpl_doc_head = ""; 
+tpl_doc_head += "<html>"; 
+tpl_doc_head += "<head>"; 
+tpl_doc_head += "<title>Imprimir Factura<\/title>"; 
+tpl_doc_head += "<\/head>"; 
+tpl_doc_head += "<body style=\"MARGIN: 0px;\">"; 
+
+tpl_doc_foot = "<\/body><\/html>"; 
+
+var _opp = null; 
+var _det = null; 
+var _prods = null; 
+var _pbe = null; 
+var _acc = null; 
+
+var _reportHTML = ""; 
+var _blanco = "&nbsp;"; 
+var _tpl_doc_ID = "01530000000EbuM"; 
+
+var oppId = "{!Opportunity.Id}"; 
+var oppName = "{!Opportunity.Name}"; 
+var accountId = "{!Opportunity.AccountId}"; 
+
+// 0 
+function initPage() { 
+//Initialize the connection to salesforce.com by setting the sessionid and the 
+//soap endpoint in the init call 
+sforceClient.setLoginUrl("https://www.salesforce.com/services/Soap/u/7.0"); 
+sforceClient.registerInitCallback(startUp); 
+sforceClient.init("{!API.Session_ID}", "{!API.Partner_Server_URL_70}", false); 
+} 
+
+// 1 
+function startUp() { 
+getOportunidad(); 
+getCliente(); 
+getDetalle(); 
+} 
+
+// 2 IN ****************************************************************************** 
+function getOportunidad(){ 
+setMsg("Obteniendo Información de la Oportunidad..."); 
+_opp = null; 
+var soql = "Select Id, Type, Safra__c, Name, StageName, AccountId, CloseDate, Tipo_de_cambio__c, Numero_del__c, Amount, Sucursal__c, Numero_Legal__c From Opportunity Where Id = '" + oppId + "'"; 
+sforceClient.Query(soql, getOppCallback); //Llamo al metodo asincronico que consulta la opp 
+} 
+
+// 2 FIN 
+function getOppCallback(queryResult) { 
+if(queryResult.size > 0){ 
+_opp = queryResult.records[0]; 
+setMsg("Obteniendo Información de la Oportunidad. OK"); 
+setMsg(" Factura Nro: " + _opp.get("Numero_Legal__c")); 
+
+if (listoTodo()) 
+doReport(); 
+} 
+else{ 
+setMsg("Error. No se pudo obtener la Oportunidad."); 
+} 
+} 
+
+// 3 IN ****************************************************************************** 
+function getCliente(){ 
+setMsg("Obteniendo Información de la Cuenta..."); 
+_acc = null; 
+var soql = "Select Id, Name, BillingCity, BillingCountry, BillingPostalCode, BillingState, BillingStreet, CEP__c, CNPJ_CPF__c, IE__c From Account Where Id = '" + accountId + "'"; 
+sforceClient.Query(soql, getAccCallback); 
+} 
+
+// 3 FIN 
+function getAccCallback(queryResult) { 
+if (queryResult.size > 0){ 
+_acc = queryResult.records[0]; 
+setMsg("Obteniendo Información de la Cuenta. OK"); 
+if (listoTodo()) 
+doReport(); 
+} 
+else{ 
+setMsg("Error. No se pudo obtener la Cuenta."); 
+} 
+} 
+
+// 4 IN ****************************************************************************** 
+function getDetalle(){ 
+setMsg("Obteniendo Detalle..."); 
+_det = null; 
+var soql = "Select Id, PricebookEntryId, ProductId, UnitPrice, TotalPrice, Quantity From OpportunityLineItem Where OpportunityId = '" + oppId + "'"; 
+sforceClient.Query(soql, getDetCallback); 
+} 
+
+// 4 FIN 
+function getDetCallback(queryResult) { 
+if (queryResult.size > 0){ 
+setMsg("Obteniendo Detalle.OK"); 
+_det = queryResult.records; 
+getProds(); 
+} 
+else{ 
+setMsg("No hay Productos en esta Nota de Venta."); 
+} 
+} 
+
+// 5 IN ****************************************************************************** 
+function getProds(){ 
+setMsg("Obteniendo Productos..."); 
+_pbe = null; 
+var pids = new Array(); 
+var pbids = new Array(); 
+for (var i=0; i< _det.length; i++){ 
+pbids.push(_det[i].get("PricebookEntryId")); 
+} 
+setMsg("Obteniendo PriceBook Entry..."); 
+
+_pbe = sforceClient.Retrieve("Id, Product2Id, UnitPrice", "PricebookEntry", pbids); 
+if (_pbe != null && _pbe.length > 0){ 
+setMsg("Obteniendo PriceBook Entry...OK"); 
+for (var i=0; i< _pbe.length; i++){ 
+pids.push(_pbe[i].get("Product2Id")); 
+} 
+} 
+_prods = null; 
+if (pids.length > 0){ 
+sforceClient.Retrieve("Id, Name,Description", "Product2", pids, getProdsCallback); 
+} 
+} 
+
+// 5 FIN 
+function getProdsCallback(sObjects){ 
+if (sObjects != null){ 
+_prods = sObjects; 
+setMsg("Obteniendo Productos. OK"); 
+if (listoTodo()) 
+doReport(); 
+} 
+else{ 
+setMsg("Error. No se pudo obtener Información de los Productos "); 
+} 
+} 
+
+// 6 
+function doReport(){ 
+if(_opp.get("Tipo_de_cambio__c") != '' && _opp.get("Tipo_de_cambio__c") != null && _opp.get("Tipo_de_cambio__c") != 0) 
+{ 
+
+setMsg("Creando Reporte de Impresion..."); 
+_reportHTML = getReportHTML();
+
+writeDiv("mainDiv", _reportHTML); 
+setTimeout('window.print()',1000); 
+window.opener.location.reload(); 
+ 
+//createAtt(); 
+} 
+else{ 
+setMsg("Error. No se puede imprimir la Oportunidad sin Tipo de Cambio."); 
+} 
+} 
+
+// 7 
+function getReportHTML(){ 
+//Cabecera Head y Body 
+var out = tpl_doc_head; 
+//Primer div que agrupa todo
+if (_opp.get("Sucursal__c") == '0095 Londrina') { 
+   out += "<div style=\"WIDTH: 700px; FONT-FAMILY: Verdana;\"><div style=\"WIDTH: 700px; HEIGHT: 135px; background-color:white;\" ><\/div>"; 
+}
+else{
+   out += "<div style=\"WIDTH: 700px; FONT-FAMILY: Verdana;\"><div style=\"WIDTH: 700px; HEIGHT: 25px; background-color:white;\" ><\/div>"; 
+}
+
+//Seccion del numero de factura y cliente - Header **************************************************** 
+out += "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr>"; 
+out += "<td>"; //Numero  
+if (_opp.get("Sucursal__c") == '0095 Londrina') { 
+out += "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"WIDTH: 40px; HEIGHT: 130px;\">"; 
+}
+else{
+out += "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"WIDTH: 80px; HEIGHT: 130px;\">"; 
+}
+out += "<tr><td> <\/td><\/tr><\/table>"; 
+out += "<\/td>"; 
+
+out += "<td>"; //Cliente 
+
+seccionCliente(_opp.get("Sucursal__c")) 
+
+function seccionCliente(sucursal) { 
+
+var ie = ""; 
+if(_acc.get("IE__c") != null) 
+ie = _acc.get("IE__c"); 
+
+var time= new Date(); 
+
+if (sucursal == '0095 Londrina') { 
+
+out += "<table border=\"0\" cellpadding=\"\" cellspacing=\"0\" style=\"font-size: 9pt; width:570px; height:100px; \">"; 
+out += newRowClienteCompleto("&nbsp;",_acc.get("Name"),sucursal); 
+out += newRowClienteCompleto("&nbsp;",_acc.get("BillingStreet"),sucursal); 
+out += newRowCliente("&nbsp;","&nbsp;","&nbsp;","&nbsp;",sucursal); 
+out += newRowCliente("&nbsp;",_acc.get("BillingCity"),"&nbsp",_acc.get("BillingState"),sucursal); 
+out += newRowCliente("&nbsp;",_acc.get("CNPJ_CPF__c"),"&nbsp;",formatDate(time,"dd/MM/yyyy"),sucursal); 
+out += newRowCliente("&nbsp;","&nbsp;","&nbsp;","&nbsp;",sucursal) 
+
+out += "<\/table><\/td>"; 
+//Seccion del numero y cliente - Footer 
+out += "<\/tr><\/table>"; 
+
+}else{ 
+
+out += "<table border=\"0\" cellpadding=\"\" cellspacing=\"0\" style=\"font-size: 9pt; width:570px; height:100px; \">"; 
+out += newRowClienteCompleto(" Data da emissão:", formatDate(time,"dd/MM/yyyy") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " Natureza de Operação: Serviços de Royaltie",sucursal); 
+out += newRowCliente(" Nome ou firma:",_acc.get("Name")," CEP:",_acc.get("CEP__c"),sucursal); 
+
+//out += newRowCliente(" Endereço:",_acc.get("BillingStreet"),"&nbsp;","&nbsp;"); 
+
+out += newRowCliente(" CNPJ/CPF:",_acc.get("CNPJ_CPF__c"),"Insc.Estadual:",ie,sucursal); 
+out += newRowClienteCompleto(" Endereço:",_acc.get("BillingStreet"),sucursal); 
+out += newRowCliente(" Cidade:",_acc.get("BillingCity"),"Estado:",_acc.get("BillingState"),sucursal); 
+out += newRowCliente("&nbsp;","&nbsp;","&nbsp;","&nbsp;",sucursal); 
+
+out += "<\/table><\/td>"; 
+//Seccion del numero y cliente - Footer 
+out += "<\/tr><\/table>"; 
+
+} 
+
+} 
+
+//Seccion de productos - Header ******************************************************************HEIGHT: 460px; 
+
+out += "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"WIDTH: 100%; FONT-SIZE: 8pt;\">"; 
+out += "<tbody style=\"vertical-align: bottom;\"><tr>"; 
+
+if (_opp.get("Sucursal__c") == '0095 Londrina') { 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 80px; \">&nbsp;<\/th>";
+  out += "<th scope=\"col\" style=\"text-align: center; width: 400px; \">&nbsp;<\/th>"; 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 90px; \">&nbsp;<\/th>"; 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 100px; \">&nbsp;<\/th>"; 
+  // agrego una columna mas para que ocupe espacio 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 60px; \"><\/th> <\/tr>"; 
+}
+else{
+  out += "<th scope=\"col\" style=\"text-align: center; width: 90px; \">QUANT.<\/th>"; 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 345px; \">DISCRIMINAÇÃO<\/th>"; 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 100px; \">VALOR UNIT.<\/th>"; 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 125px; \">TOTAL R$<\/th>"; 
+  // agrego una columna mas para que ocupe espacio 
+  out += "<th scope=\"col\" style=\"text-align: center; width: 70px; \"><\/th> <\/tr>"; 
+}
+
+
+var prods = getProdsHTML(); //productos - items 
+out += prods; 
+out += "<\/tbody><\/table><\/div>"; //Footer 
+//Seccion de productos - Fin ****************************************************************** 
+
+//Valor del numero de factura 
+var numero = ''; 
+if(_opp.get("Numero_del__c")!=null) 
+numero = _opp.get("Numero_del__c"); 
+
+//Seccion Totales - Header 
+
+//Seccion totales Valores 
+var strTot = formatNumber(_opp.get("Amount")*_opp.get("Tipo_de_cambio__c"),2); 
+strTot = strTot.replace(".",","); 
+
+
+
+if (_opp.get("Sucursal__c") == '0095 Londrina') { 
+   out += "<div style=\"HEIGHT: 40px\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"FONT-SIZE: 10pt; WIDTH: 100%;\"><tbody>"; 
+   out += newRowTot("&nbsp;","&nbsp;","&nbsp;", strTot); 
+}
+else{
+  out += "<div style=\"HEIGHT: 40px\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"FONT-SIZE: 8pt; WIDTH: 100%;\"><tbody>"; 
+   out += newRowTot("", "&nbsp;", "TOTAL R$", strTot); 
+}
+
+//Seccion Totales - Footer 
+out += "<\/tbody><\/table><\/div>"; 
+
+//Fin 
+out += "<\/div><\/BODY><\/HTML>"; 
+
+return out; 
+} 
+
+// 8 IN 
+function createAtt(){ 
+setMsg("Creando Adjunto..."); 
+var att = new Sforce.Dynabean("Attachment"); 
+var today = sforceClient.GetServerTimestamp().timeStamp; 
+att.set("Name","Impresion " + formatDate(today,"dd/MM/yyyy") + ".html") 
+att.set("ParentId",_opp.get("Id")); 
+
+var body = _reportHTML; 
+att.set("Body",body); 
+sforceClient.Create([att], attCallback); 
+} 
+
+// 8 FIN 
+function attCallback(saveResult){ 
+if (saveResult[0].success == false) { 
+setMsg("Error. No se pudo Crear el Adjunto: " + saveResult[0].errors[0].message); 
+} 
+else{ 
+setMsg("Creando Adjunto. OK"); 
+} 
+writeDiv("mainDiv", _reportHTML); 
+setTimeout('window.print()',1000); 
+window.opener.location.reload(); 
+} 
+
+
+// Funciones globales 
+
+function listoCabecera(){ 
+return _acc != null && _opp != null; 
+} 
+
+function listoTodo(){ 
+return _opp != null && _acc != null && _det != null && _pbe != null && _prods != null; 
+} 
+
+function getProd(pbeid){ 
+var pid =""; 
+if (_pbe != null && _pbe.length > 0){ 
+for (var i=0; i< _pbe.length; i++){ 
+if (_pbe[i].get("Id") == pbeid ){ 
+pid = _pbe[i].get("Product2Id"); 
+} 
+} 
+} 
+if (_prods != null && _prods.length > 0){ 
+for (var i=0; i< _prods.length; i++){ 
+if (_prods[i].get("Id") == pid){ 
+return _prods[i]; 
+} 
+} 
+} 
+return null; 
+} 
+
+function getProdsHTML(){ 
+if (_det != null && _det.length > 0){ 
+var prods_html = ""; 
+var indice = _det.length; 
+var final = 32;
+var row = ""; 
+
+if (_opp.get("Sucursal__c") == '0095 Londrina') { 
+final = 25;
+}
+
+//----------------------------------------------- 
+//primer item 
+row = tpl_row_productos.replace("%product_name%", "Royalties referente a comercialização de:"); 
+row = row.replace("%Quantity%","&nbsp;"); 
+row = row.replace("%UnitPrice%","&nbsp;"); 
+row = row.replace("%subtotal%","&nbsp;"); 
+
+prods_html += row; 
+//----------------------------------------------- 
+
+//----------------------------------------------- 
+//items reales 
+for (var i=0; i<indice ;i++){ 
+var prod = getProd(_det[i].get("PricebookEntryId")); 
+row = tpl_row_productos.replace("%product_name%", "Sc de semente de Soja da Cultivar " + prod.get("Description")); 
+row = row.replace("%Quantity%",formatNumber(_det[i].get("Quantity"),2)); 
+
+var strPrecio = formatNumber(_det[i].get("UnitPrice")*_opp.get("Tipo_de_cambio__c"),4); 
+strPrecio = strPrecio.replace(".",","); 
+row = row.replace("%UnitPrice%",strPrecio); 
+
+var strTotalPrecio = formatNumber(_det[i].get("TotalPrice")*_opp.get("Tipo_de_cambio__c"),2); 
+strTotalPrecio = strTotalPrecio.replace(".",","); 
+row = row.replace("%subtotal%",strTotalPrecio); 
+
+prods_html += row; 
+} 
+//----------------------------------------------- 
+
+
+
+//----------------------------------------------- 
+// ultimo item 
+var s = "Na safra ("; 
+var s2 = _opp.get("Safra__c") + ")"; 
+
+row = tpl_row_productos.replace("%product_name%", s+s2); 
+row = row.replace("%Quantity%","&nbsp;"); 
+row = row.replace("%UnitPrice%","&nbsp;"); 
+row = row.replace("%subtotal%","&nbsp;"); 
+prods_html += row; 
+//----------------------------------------------- 
+
+
+//----------------------------------------------- 
+//completa hasta el final 
+for (var j=indice; j<final; j++){ 
+row = tpl_row_productos.replace("%product_name%", "&nbsp;"); 
+row = row.replace("%Quantity%","&nbsp;"); 
+row = row.replace("%UnitPrice%","&nbsp;"); 
+row = row.replace("%subtotal%","&nbsp;"); 
+prods_html += row; 
+} 
+
+//if (_opp.get("Sucursal__c") == '0095 Londrina') { 
+row = tpl_row_productos.replace("%product_name%", "Nota Fiscal nº " + _opp.get("Numero_Legal__c")); 
+row = row.replace("%Quantity%","&nbsp;"); 
+row = row.replace("%UnitPrice%","&nbsp;"); 
+row = row.replace("%subtotal%","&nbsp;"); 
+prods_html += row; 
+//}
+
+//----------------------------------------------- 
+
+} 
+return prods_html; 
+} 
+
+function newRowClienteCompleto(col, val, suc){ 
+   var out = tpl_cliente_total_row;
+   if (suc == '0095 Londrina')
+      out = tpl_cliente_total_row_l; 
+   out = out.replace("col",col); 
+   out = out.replace("val",val); 
+   return out; 
+} 
+
+function newRowCliente(col1, val1, col2, val2, suc){ 
+var out = tpl_cliente_row; 
+   if (suc == '0095 Londrina')
+      out = tpl_cliente_row_l; 
+out = out.replace("col1",col1); 
+out = out.replace("val1",val1); 
+out = out.replace("col2",col2); 
+out = out.replace("val2",val2); 
+return out; 
+} 
+
+function newRowTot(col1, col2, col3, col4){ 
+var out = tpl_head_rowTotales; 
+out = out.replace("col1",col1); 
+out = out.replace("col2",col2); 
+out = out.replace("col3",col3); 
+out = out.replace("col4",col4); 
+return out; 
+} 
+
+function isNull(val, def){ 
+if (val == null){ 
+return def; 
+} 
+return val; 
+} 
+
+function addZero(vNumber){ 
+return ((vNumber < 10) ? "0" : "") + vNumber 
+} 
+
+function formatDate(vDate, vFormat){ 
+if (vDate == null){ 
+return "&nbsp;"; 
+} 
+var vDay = addZero(vDate.getDate()); 
+var vMonth = addZero(vDate.getMonth()+1); 
+var vYearLong = addZero(vDate.getFullYear()); 
+var vYearShort = addZero(vDate.getFullYear().toString().substring(3,4)); 
+var vYear = (vFormat.indexOf("yyyy")>-1?vYearLong:vYearShort) 
+var vHour = addZero(vDate.getHours()); 
+var vMinute = addZero(vDate.getMinutes()); 
+var vSecond = addZero(vDate.getSeconds()); 
+var vDateString = vFormat.replace(/dd/g, vDay).replace(/MM/g, vMonth).replace(/y{1,4}/g, vYear) 
+vDateString = vDateString.replace(/hh/g, vHour).replace(/mm/g, vMinute).replace(/ss/g, vSecond) 
+return vDateString 
+} 
+
+function setMsg( msg){ 
+document.getElementById("div_msg").innerHTML += "<br>" + msg; 
+} 
+
+function writeDiv(divname, msg){ 
+document.getElementById(divname).innerHTML = msg; 
+} 
+
+function formatNumber(num, dec){ 
+if (num == null){ 
+num = 0.00; 
+} 
+try{ 
+return num.toFixed(dec); 
+} 
+catch(ee){ 
+num = 0.00; 
+} 
+} 
+</script> 
+</head> 
+
+<body onload="initPage()"> 
+<div id="mainDiv"> 
+<table width="100%"> 
+<tbody> 
+<tr> 
+<td align="middle"><b>Procesando la impresi&oacute;n de la Nota de Venta, por favor espere...</b></td> 
+</tr> 
+
+<tr> 
+<td align="middle"><img height="15" src="/img/waiting_dots.gif" width="156" border="0"></td> 
+</tr> 
+
+<tr> 
+<td align="middle"> 
+<div id="div_msg"></div> 
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+</body> 
+</html>

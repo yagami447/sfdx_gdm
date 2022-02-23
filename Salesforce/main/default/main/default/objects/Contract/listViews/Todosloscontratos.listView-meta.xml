@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Todosloscontratos</fullName>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>CONTRACT.STATUS</columns>
+    <columns>Comercializa_paraguai__c</columns>
+    <columns>Safras__c</columns>
+    <columns>Sociedad__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos los contratos</label>
+</ListView>

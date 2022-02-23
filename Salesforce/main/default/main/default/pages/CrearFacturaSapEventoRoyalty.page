@@ -1,0 +1,35 @@
+<apex:page standardController="Evento_Royalty__c" 
+           extensions="CrearFacturaSapEventoRoyaltyCntroller" 
+           lightningStyleSheets="true">
+    <apex:sectionHeader title="Crear Factura" subtitle="Envío de datos a SAP" />
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection title="Esta seguro de mandar los datos a SAP?">
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                
+                <apex:commandButton action="{!enviarASap}" value="Crear Factura"/>
+                <apex:commandButton action="{!dummy}"
+                                    value="Cancelar"
+                                    onclick="{!IF(OR($User.UITheme == 'Theme2',$User.UITheme == 'Theme3'),'closeWindow()','')}">
+                </apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+    function closeWindow() {
+        window.close();
+    }
+    /*
+    function redirectWindow() {
+        let idCurrentRecord = '{!idCurrentRecord}';
+        alert('redirectWindow: '+idCurrentRecord);
+        redirigirAlRegistroFunction();
+        return true;
+    }
+    */
+    
+    </script>
+</apex:page>

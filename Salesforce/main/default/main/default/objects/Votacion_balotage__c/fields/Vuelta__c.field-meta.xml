@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vuelta__c</fullName>
+    <description>indica si está disponible para votar(que vuelta)  o está cerrado.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>indica si está disponible para votar(que vuelta)  o está cerrado.</inlineHelpText>
+    <label>Vuelta</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>cerrado</fullName>
+                <default>false</default>
+                <label>cerrado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

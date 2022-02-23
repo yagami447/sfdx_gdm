@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DMValoriza_Cadastro_Site__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Finalizou o cadastro no site DMValoriza</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Finalizou o cadastro no site DMValoriza</inlineHelpText>
+    <label>Cadastro Site DMValoriza</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

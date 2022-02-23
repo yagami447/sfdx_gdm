@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Items --></label>
+    <name>Items__c</name>
+    <picklistValues>
+        <masterLabel>Camiseta</masterLabel>
+        <translation><!-- Camiseta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outdoor</masterLabel>
+        <translation><!-- Outdoor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outros</masterLabel>
+        <translation><!-- Outros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palestrante</masterLabel>
+        <translation><!-- Palestrante --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placas</masterLabel>
+        <translation><!-- Placas --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

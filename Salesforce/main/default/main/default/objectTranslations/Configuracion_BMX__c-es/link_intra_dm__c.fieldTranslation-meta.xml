@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Direccion para el link de SF a SAP
+ (TELEFONICA: 200.41.230.166:8000; IPNEXT: 190.7.230.68:8000) --></help>
+    <label><!-- Link Sap Des --></label>
+    <name>link_intra_dm__c</name>
+</CustomFieldTranslation>

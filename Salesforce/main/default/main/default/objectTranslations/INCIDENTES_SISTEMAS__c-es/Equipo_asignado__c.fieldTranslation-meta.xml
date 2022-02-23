@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Equipo asignado --></label>
+    <name>Equipo_asignado__c</name>
+    <picklistValues>
+        <masterLabel>Crystalis</masterLabel>
+        <translation><!-- Crystalis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DM</masterLabel>
+        <translation><!-- DM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VCS</masterLabel>
+        <translation><!-- VCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Xioma</masterLabel>
+        <translation><!-- Xioma --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

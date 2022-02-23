@@ -1,0 +1,164 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" showHeader="false" standardStylesheets="false" cache="false" title="Votaçao" controller="aSiteVotacionController" action="{!validate}" docType="html-5.0">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+.selected {
+    background: rgba(38,185,154,.16);
+    border-color: rgba(221,221,221,0.780392);
+}
+
+[hidden], template
+    {
+        display:block !important;
+    }
+
+</style>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                <apex:panelGroup >
+                <apex:form id="profileForm">                           
+                <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                    <apex:facet name="start" >
+                        <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                            &nbsp;
+                        </div>
+                        <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                            <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                        </div>
+                    </apex:facet>
+                </apex:actionStatus>                         
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <div class="">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>Votaçao</h3>
+                                </div>                                                                                                    
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>{!if(habilitadoVotar,'Votar no preço', 'Resultados')}</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    
+                                    <div class="row" id="row-form-input">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 form-group">                    
+                                            <apex:outputText value="Selecionar Cultivar:"/>
+                                            <apex:selectList value="{!variedad}" styleClass="form-control" size="1">
+                                                <apex:selectOptions value="{!optionVariedad}"/>             
+                                                <apex:actionSupport action="{!changeVariedad}" status="displayImg" event="onchange" reRender="profileForm"></apex:actionSupport>                   
+                                            </apex:selectList>           
+                                        </div>
+                                        <apex:pageBlock rendered="{!habilitadoVotar}">
+                                            <div class="col-md-2 col-sm-2 col-xs-2 form-group">                    
+                                                <apex:outputText value="Preço por quilo:"/>
+                                                <apex:inputText value="{!valor}" styleClass="form-control" rendered="{!vuelta == 1}"/>
+                                                <apex:selectList value="{!valor}" styleClass="form-control" size="1" rendered="{!vuelta == 2}">
+                                                    <apex:selectOptions value="{!optionsPrecio}"/>             
+                                                </apex:selectList>
+                                            </div>
+                                        </apex:pageBlock>    
+                                        <div class="col-md-2 col-sm-2 col-xs-2 form-group">                                            
+                                            <br/>                    
+                                            <apex:commandButton action="{!generarVotacion}" rendered="{!habilitadoVotar}" styleclass="btn btn-success" value="Votar" rerender="profileForm" status="displayImg" onComplete="checkGeneraVoto();"/>
+                                        </div>    
+                                    </div>
+                                    <br/><br/><br/><br/>
+                                    <apex:outputPanel rendered="{!PieData.size>0}">
+                                    <center>
+                                        <apex:chart height="200" width="500" data="{!PieData}">
+                                            <apex:axis minimum="0" maximum="100" type="Numeric" position="left" fields="data" title="Porcentagem" dashSize="2" grid="true"/>
+                                            <apex:axis type="Category" position="bottom" fields="name" title="Preço" />                                                
+                                            <apex:barSeries tips="true" stacked="true" orientation="vertical" axis="left" xField="name" yField="data" colorsProgressWithinSeries="true">                                                                                                                                 
+                                                <apex:chartTips height="20" width="120"/>
+                                                <apex:chartLabel field="data" display="outside" orientation="horizontal"/>
+                                            </apex:barSeries>
+                                            <!--<apex:pieSeries dataField="data" labelField="name" tips="true" >
+                                                <apex:chartTips valueField="data" labelField="name" height="20" width="120"/>
+                                            </apex:pieSeries>
+                                            <apex:legend position="right"/>                                            -->
+                                        </apex:chart>                                          
+                                    </center>
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    
+                    
+                    
+                    
+                    <div id="lookupModal" data-backdrop="static" class="modal fade mobile-lookup-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" >
+                        <div class="modal-dialog modal-lg" >
+                            <div class="modal-content" style="padding: 20px;background-color: #FFFFFF;">
+                                <div class="col-md-12 col-sm-12 col-xs-12 " style="text-align:left;">
+                                    <apex:outputText value="{!mensaje}"/> 
+                                </div>
+                                <table id="espacio" style="width:100%;">
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                                <div class="row">
+                                    <div class="col-md-12 text-center form-group">
+                                        <apex:commandButton value="Confirmar" styleclass="btn btn-success" action="{!saveVotacion}" onclick="ocultarConfirm();" reRender="profileForm" oncomplete="mostrarMsj();"/>                                             
+                                        <apex:commandButton value="Cancelar" styleclass="btn btn-danger" status="displayImg" onclick="ocultarConfirm();" reRender="profileForm"/>                                                                                    
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                   </div> 
+                    
+                    
+                    
+                    
+                    
+                </div>    
+                <script type="text/javascript">
+                    function mostrarMsj(){
+                        if ('{!mensaje}' != null && '{!mensaje}' != ''){
+                            alert('{!SUBSTITUTE(mensaje, "|", "\n")}');                                                        
+                        }
+                    }
+                                        
+                    function checkGeneraVoto() {
+                        if ({!generaVoto} == true){
+                            mostrarConfirm();
+                        }else{
+                            mostrarMsj();
+                        }                       
+                    }                    
+                </script>            
+                </apex:form> 
+                </apex:panelGroup>
+            </apex:panelGrid> 
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    </body>
+</apex:define>
+</apex:composition>
+<script>    
+    function mostrarConfirm() {
+        $('#lookupModal').modal('show');
+        $('#lookupModal').modal('focus');
+    }
+    function ocultarConfirm() {
+        $('#lookupModal').modal('hide');        
+    }    
+</script>
+</apex:page>

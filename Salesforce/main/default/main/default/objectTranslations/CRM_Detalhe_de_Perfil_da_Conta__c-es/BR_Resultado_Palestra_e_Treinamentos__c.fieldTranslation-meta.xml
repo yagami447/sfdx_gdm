@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Si cumplió con las Palestras y con los Treinamento, suma 3 ptos sino 0 --></help>
+    <label><!-- AAAA Pontos Palestras e Treinamentos --></label>
+    <name>BR_Resultado_Palestra_e_Treinamentos__c</name>
+</CustomFieldTranslation>

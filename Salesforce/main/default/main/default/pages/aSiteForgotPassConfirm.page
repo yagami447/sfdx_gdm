@@ -1,0 +1,42 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" controller="aSiteForgotPassController" showHeader="false" title="{!$Label.site.forgot_password_confirmation}" standardStylesheets="false">
+  <apex:composition template="{!$Site.Template}">
+    <apex:define name="body">
+    <body class="nav-md footer_fixed">
+      <center>
+      <apex:form >
+      <apex:panelGrid bgcolor="white" columns="1"> 
+          <br/>
+          <br/>
+          <apex:panelGrid width="100%" cellpadding="0" cellspacing="0" bgcolor="white" columns="1" styleClass="topPanelContainer"> 
+          <br/>
+          <apex:outputPanel layout="block" styleClass="topPanel" style="width:480px;">
+              <div class="container">    
+                  <div id="forgotPassbox" style="margin-top:50px;" class="mainbox">                    
+                      <div class="panel panel-info" >
+                          <div class="panel-heading">
+                              <div class="panel-title">
+                                  <apex:outputText styleClass="title" value="{!$Label.Password_Sent}"/>
+                              </div>
+                          </div>
+                          <div style="padding-top:30px" class="panel-body" >                                        
+                              <div style="margin-top:10px" >
+                                <!-- Button -->
+                                  <div class="col-md-12">
+                                      <!--<apex:outputLink value="{!$Page.aSiteLogin}">{!$Label.site.go_to_login_page}</apex:outputLink>-->
+                                      <apex:commandLink action="{!forwardToLogin}">{!$Label.site.go_to_login_page}</apex:commandLink>
+                                  </div>
+                              </div>
+                          </div>                     
+                      </div>  
+                  </div>
+              </div>  
+          </apex:outputPanel>
+          </apex:panelGrid> 
+      </apex:panelGrid>
+      </apex:form>
+      </center>
+      </body>
+      <br/>
+    </apex:define>
+  </apex:composition>
+</apex:page>

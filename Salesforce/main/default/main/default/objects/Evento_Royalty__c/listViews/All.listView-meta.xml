@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Cuenta__c</columns>
+    <columns>Safra__c</columns>
+    <columns>Enviado_para_SAP__c</columns>
+    <columns>Numero_de_Referencia_SAP__c</columns>
+    <columns>Resposta_SAP__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Fecha__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos</label>
+    <language>es</language>
+</ListView>

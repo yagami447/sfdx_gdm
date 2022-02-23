@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cultura antecessora --></label>
+    <name>Cultura_antecessora__c</name>
+    <picklistValues>
+        <masterLabel>Algodão</masterLabel>
+        <translation><!-- Algodão --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amendoim</masterLabel>
+        <translation><!-- Amendoim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arroz</masterLabel>
+        <translation><!-- Arroz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aveia</masterLabel>
+        <translation><!-- Aveia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Azevem</masterLabel>
+        <translation><!-- Azevem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Batata</masterLabel>
+        <translation><!-- Batata --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brachiaria</masterLabel>
+        <translation><!-- Brachiaria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canola</masterLabel>
+        <translation><!-- Canola --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Centeio</masterLabel>
+        <translation><!-- Centeio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cevada</masterLabel>
+        <translation><!-- Cevada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ervilhaca</masterLabel>
+        <translation><!-- Ervilhaca --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feijão</masterLabel>
+        <translation><!-- Feijão --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Girassol</masterLabel>
+        <translation><!-- Girassol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MIL. + BRA</masterLabel>
+        <translation><!-- MIL. + BRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Milheto</masterLabel>
+        <translation><!-- Milheto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Milho</masterLabel>
+        <translation><!-- Milho --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outro</masterLabel>
+        <translation><!-- Outro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pasto</masterLabel>
+        <translation><!-- Pasto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pousio</masterLabel>
+        <translation><!-- Pousio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Soja</masterLabel>
+        <translation><!-- Soja --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sorgo</masterLabel>
+        <translation><!-- Sorgo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trigo</masterLabel>
+        <translation><!-- Trigo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Triticale</masterLabel>
+        <translation><!-- Triticale --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,141 @@
+<apex:page Controller="CRM_Controller" title="Calendario" action="{!initCalendario}" tabStyle="Account" sidebar="false" >    
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0">
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickCanalVendas="{!verCanalVendas}" clickAreaAct="{!verAreaAct}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:form id="form" style="width: 1550px">
+<apex:sectionHeader title="Calendário de Eventos ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>
+    <apex:pageBlock mode="edit">
+        <apex:Messages style="font-weight:bold;font-size:18px"/>        
+        <apex:pageBlockSection >
+        <apex:pageblocktable value="{!calendario}"  var="cal" id="cal" style="width: 800px">
+            <apex:column headerValue="Evento">
+                <apex:outputField value="{!cal.Evento__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField id="ev" value="{!cal.Evento__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Marca">
+                <apex:outputField value="{!cal.Marca__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Marca__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Realizado por">
+                <apex:outputField value="{!cal.Realizado_por__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Realizado_por__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Participante">
+                <apex:outputField value="{!cal.Participante__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Participante__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <!--COMENTADO POR ERROR DE VIEWSTATE<apex:column headerValue="Revenda">
+                <apex:outputField value="{!cal.Revenda__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Revenda__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>-->
+            <apex:column headerValue="Nome do agricultor">
+                <apex:outputField value="{!cal.Nome_do_agricultor__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Nome_do_agricultor__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Data">
+                <apex:outputField value="{!cal.Data__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Data__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Data e horario inicio">
+                <apex:outputField value="{!cal.Data_e_horario_inicio__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Data_e_horario_inicio__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Data e horario termino">
+                <apex:outputField value="{!cal.Data_e_horario_termino__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Data_e_horario_termino__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>                      
+            <apex:column headerValue="Cidade">
+                <apex:outputField value="{!cal.Municipio__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Municipio__c}" rendered="{!cal.Id == editCalendario}"><apex:actionSupport action="{!setearEstadoEditCalendario}" event="onchange" reRender="estadoEdit"><apex:param name="idCal" value="{!cal.Id}" /></apex:actionSupport></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Estado" id="estadoEdit">
+                <apex:outputField value="{!cal.Estado__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputText disabled="true" value="{!estadoEditCal}" rendered="{!cal.Id == editCalendario}" />
+            </apex:column>
+            <apex:column headerValue="Custo">
+                <apex:outputField value="{!cal.Custo__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Custo__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <!--<apex:column headerValue="Georeferencia">
+                <apex:outputField value="{!cal.Georeferencia_Text__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Georeferencia_Text__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>-->
+            <!--COMENTADO POR ERROR DE VIEWSTATE<apex:column headerValue="Latitud">
+                <apex:outputField value="{!cal.Latitud__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Latitud__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Longitud">
+                <apex:outputField value="{!cal.Longitud__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Longitud__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Endereço">
+                <apex:outputField value="{!cal.Direccion__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Direccion__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="N Participantes">
+                <apex:outputField value="{!cal.Numero_de_participantess__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Numero_de_participantess__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Avaliação">
+                <apex:outputField value="{!cal.Evaluacion__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Evaluacion__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <apex:column headerValue="Irrigado">
+                <apex:outputField value="{!cal.Irrigado__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Irrigado__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>-->
+            <apex:column headerValue="Finalizado">
+                <apex:outputField value="{!cal.Finalizado__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Finalizado__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>
+            <!--COMENTADO POR ERROR DE VIEWSTATE<apex:column headerValue="Comentários">
+                <apex:outputField value="{!cal.Comentarios__c}" rendered="{!cal.Id != editCalendario}"/>
+                <apex:inputField value="{!cal.Comentarios__c}" rendered="{!cal.Id == editCalendario}"/>
+            </apex:column>-->
+            <apex:column headerValue="" >
+                <apex:commandLink action="{!editCalendario}" rendered="{!cal.Id != editCalendario}" value="Editar ">
+                    <apex:param name="editCal" value="{!cal.Id}"/>
+                </apex:commandLink>&nbsp;  
+                <apex:commandLink action="{!eliminarCalendario}" rendered="{!cal.Id != editCalendario}" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" value="Excluir">  
+                    <apex:param name="eliminarCal" value="{!cal.Id}" assignTo="{!eliminarCalendario}"/>
+                </apex:commandLink>
+                <apex:commandLink action="{!cancelEditCalendario}" rendered="{!cal.Id == editCalendario}">Cancelar</apex:commandLink>&nbsp;
+                <apex:commandLink action="{!saveEditCalendario}" rerender="form" rendered="{!cal.Id == editCalendario}">Salvar</apex:commandLink>
+            </apex:column>
+        </apex:pageblocktable>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Novo Evento" action="{!nuevoCalendario}"/>        
+        </apex:pageBlockButtons>
+        <!--
+        <apex:pageBlockSection title="Adicionar" >
+        <apex:pageblocktable value="{!nuevo_calendario}" var="nuevo_cal" id="nuevo_cal">
+            <apex:column headerValue="Evento">
+                <apex:inputField value="{!nuevo_cal.Evento__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Data">            
+                <apex:inputField value="{!nuevo_cal.Data__c}"></apex:inputField>
+            </apex:column>                
+            <apex:column headerValue="Municipio">                        
+                <apex:inputField value="{!nuevo_cal.Municipio__c}"><apex:actionSupport action="{!setearEstadoNewCalendario}" event="onchange" reRender="estadoNew"></apex:actionSupport></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="Estado">                        
+                <apex:inputText disabled="true" value="{!estadoNewCal}" id="estadoNew"></apex:inputText>
+            </apex:column>   
+            <apex:column headerValue="N de Participantes">                        
+                <apex:inputField value="{!nuevo_cal.Numero_de_participantess__c}"></apex:inputField>
+            </apex:column>
+            <apex:column headerValue="">                                             
+                <apex:commandLink style="width: 100px" value="Adicionar" action="{!addCalendario}" />
+            </apex:column>    
+        </apex:pageblocktable>
+        </apex:pageBlockSection> 
+        -->     
+    </apex:pageBlock>
+    
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+</apex:form>  
+</apex:panelGrid> 
+</apex:page>

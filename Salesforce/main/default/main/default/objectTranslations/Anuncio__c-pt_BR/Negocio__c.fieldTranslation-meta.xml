@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Negócio --></label>
+    <name>Negocio__c</name>
+    <picklistValues>
+        <masterLabel>Compra</masterLabel>
+        <translation><!-- Compra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Troca</masterLabel>
+        <translation><!-- Troca --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Venda</masterLabel>
+        <translation><!-- Venda --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

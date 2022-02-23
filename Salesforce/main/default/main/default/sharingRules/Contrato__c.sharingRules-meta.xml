@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Comerciales_BRMX_R1</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Comerciales BRMX R1</label>
+        <sharedTo>
+            <role>Comercial_R1_BRMX</role>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR (3 AND 4))</booleanFilter>
+        <criteriaItems>
+            <field>Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>REGION 1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BRMX,Aditivo BRMX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Termo Aditivo Comerciais</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sociedad__c</field>
+            <operation>equals</operation>
+            <value>BRMX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Comerciales_BRMX_R2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Comerciales BRMX R2</label>
+        <sharedTo>
+            <role>Comercial_R2_BRMX</role>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR (3 AND 4))</booleanFilter>
+        <criteriaItems>
+            <field>Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>REGION 2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BRMX,Aditivo BRMX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Termo Aditivo Comerciais</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sociedad__c</field>
+            <operation>equals</operation>
+            <value>BRMX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Comerciales_DSEM_R1</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Comerciales DSEM R1</label>
+        <sharedTo>
+            <role>Comercial_R1_DSEM</role>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR (3 AND 4))</booleanFilter>
+        <criteriaItems>
+            <field>Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>REGION 1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Aditivo DSEM,DSEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Termo Aditivo Comerciais</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sociedad__c</field>
+            <operation>equals</operation>
+            <value>DSEM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Comerciales_DSEM_R2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Comerciales DSEM R2</label>
+        <sharedTo>
+            <role>Comercial_R2_DSEM</role>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR (3 AND 4))</booleanFilter>
+        <criteriaItems>
+            <field>Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>REGION 2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Aditivo DSEM,DSEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Termo Aditivo Comerciais</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sociedad__c</field>
+            <operation>equals</operation>
+            <value>DSEM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Region_Cerrado_a_Comercial_Cerrado</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Region Cerrado a Comercial Cerrado</label>
+        <sharedTo>
+            <role>Comercial_Cerrados</role>
+        </sharedTo>
+        <booleanFilter>(1 OR (2 AND 3)) AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Aditivo DSEM,BRMX,Aditivo BRMX,DSEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Termo Aditivo Comerciais</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sociedad__c</field>
+            <operation>equals</operation>
+            <value>BRMX,DSEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>CERRADO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Licencias</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Licencias</label>
+        <sharedTo>
+            <group>Gerencia_Administrativa</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>Licencias</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

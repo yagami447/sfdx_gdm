@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reclamos_Asignados_Brasmax</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.ACCOUNT</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Cultivar__c</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Marca__c</field>
+        <operation>equals</operation>
+        <value>BRMX</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.RECLAMO_COMERCIAL,Case.RECLAMO_COMERCIAL_ACEPTADO,Case.RECLAMO_CONS_DESARROLLO</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.RECLAMO_CONS_PRODUCCION,Case.RECLAMO_DESARROLLO_ACEPTADO,Case.RECLAMO_INDEMNIZACION</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.RECLAMO_CONS_PESQUISA,Case.RECLAMO_PROPUESTA_CIERRE,Case.RECLAMO_RECHAZADO</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.RECLAMO_VISITA_CAMPO,Case.RECLAMO_VISITA_CAMPO_CONF</value>
+    </filters>
+    <label>Reclamos Asignados Brasmax</label>
+    <sharedTo/>
+</ListView>

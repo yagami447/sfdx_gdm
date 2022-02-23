@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado_Anexos_Portal_Miltiplicadores__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(StageName, &quot;Edición&quot;, &quot;Edição&quot;, &quot;Edición post Vencimiento&quot;, &quot;Edición&quot;, &quot;Edición Vencida&quot;, &quot;Edición&quot;, &quot;Pendiente de Análisis&quot;, &quot;Bloqueado&quot;, &quot;Pendiente de Aprobación&quot;, &quot;Bloqueado&quot;, &quot;Desaprobado x Gerente&quot;, &quot;Rechazado&quot;, &quot;Rechazada Supervisor&quot;, &quot;Rechazado&quot;, &quot;Aprobada&quot;, &quot;Aprovado&quot;, &quot;AN - Anulada&quot;, &quot;Anulado&quot;, &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Fase</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Época de Plantio --></label>
+    <name>Epoca_de_Plantio__c</name>
+    <picklistValues>
+        <masterLabel>Inverno</masterLabel>
+        <translation><!-- Inverno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verão</masterLabel>
+        <translation><!-- Verão --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

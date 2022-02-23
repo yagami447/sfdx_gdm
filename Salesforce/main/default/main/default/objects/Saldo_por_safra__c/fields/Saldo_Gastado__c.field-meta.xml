@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Saldo_Gastado__c</fullName>
+    <externalId>false</externalId>
+    <label>Saldo Utilizado</label>
+    <summarizedField>Evento_Royalty__c.Valor__c</summarizedField>
+    <summaryFilterItems>
+        <field>Evento_Royalty__c.Estado__c</field>
+        <operation>equals</operation>
+        <value>Aprobado</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Evento_Royalty__c.Saldo_por_safra__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

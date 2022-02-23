@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Superou_Meta__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Evaluación de : Suma de Semente Comercializada, versus suma de metas, teniendo en cuenta Cultivares de Tecnología Intacta</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Evaluación de : Suma de Semente Comercializada, versus suma de metas, teniendo en cuenta Cultivares de Tecnología Intacta</inlineHelpText>
+    <label>Superou 85% BRMX</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

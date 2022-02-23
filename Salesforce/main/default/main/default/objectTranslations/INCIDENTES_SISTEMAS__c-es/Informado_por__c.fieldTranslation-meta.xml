@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Es quien detecta, releva, documenta e informa el incidente. --></help>
+    <label><!-- Informado por --></label>
+    <name>Informado_por__c</name>
+</CustomFieldTranslation>

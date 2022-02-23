@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Santiago__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Click para informar que  assinou. Isso porque, antes do envio do contrato precisa da assinatura</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Click para informar que assinou. Isso porque, antes do envio do contrato precisa da assinatura</inlineHelpText>
+    <label>OK para assinar</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

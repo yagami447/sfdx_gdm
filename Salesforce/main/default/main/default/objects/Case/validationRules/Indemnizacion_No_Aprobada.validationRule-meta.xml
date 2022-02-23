@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Indemnizacion_No_Aprobada</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name = &apos;RECLAMO CERRADO&apos; ,  NOT( ISNULL( Indemnizacion__c ) )  || NOT(  ISPICKVAL(Tipo_De_Indemnizacion__c, &apos;&apos;)   ) ,  NOT( Indemnizacion_Aceptada__c ) )</errorConditionFormula>
+    <errorMessage>Indenização não aprovada</errorMessage>
+</ValidationRule>

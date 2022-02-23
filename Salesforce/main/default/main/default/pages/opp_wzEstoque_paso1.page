@@ -1,0 +1,25 @@
+<apex:page controller="Opp_wzEstoque_Ctrl" tabStyle="Opportunity">
+    <apex:sectionHeader subtitle="Nova oportunidade" title="Edição de oportunidade">
+    <apex:form >
+        <apex:pageBlock mode="edit" title="Editar Oportunidade de Previção e Estoque">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!next}" value="Avançar"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!opp.name}" required="true"/>
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel value="Multiplicador"></apex:outputLabel>
+                    <apex:inputField value="{!opp.Accountid}" required="true"/>
+                </apex:pageblockSectionItem>                
+                <apex:inputField value="{!opp.Safra__c}" required="true"/>
+                <apex:inputField value="{!opp.Mes__c}" required="true"/>
+                <apex:inputField value="{!opp.Regiao__c}"/>                
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel value="Responsável"></apex:outputLabel>
+                    <apex:inputField value="{!opp.Respons_vel__c}" required="true"/>
+                </apex:pageblockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    </apex:sectionHeader>
+</apex:page>

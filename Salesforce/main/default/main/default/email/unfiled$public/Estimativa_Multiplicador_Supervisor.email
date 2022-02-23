@@ -1,0 +1,5 @@
+Está disponível para aprovação:
+
+A Empresa {!Requisicao_de_compra__c.Marca__c} inseriu informações da Estimativa, identificação {!Requisicao_de_compra__c.Name} para sua Análise.
+
+Clique no link abaixo para acesso ao salesforce: {!ApprovalRequest.Internal_URL}

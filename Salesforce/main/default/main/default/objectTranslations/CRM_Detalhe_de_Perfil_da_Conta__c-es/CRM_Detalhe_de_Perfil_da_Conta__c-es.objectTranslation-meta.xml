@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Detalhe Perfil da Conta</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Perfil da Conta</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>BR_CRM Detalhe Perfil da Conta</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CRM Detalhe Perfil da Conta Final</layout>
+        <sections>
+            <label><!-- BRMX --></label>
+            <section>BRMX</section>
+        </sections>
+        <sections>
+            <label><!-- DSEM --></label>
+            <section>DSEM</section>
+        </sections>
+        <sections>
+            <label><!-- Detalhe Perfil da Conta --></label>
+            <section>Detalhe Perfil da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DS_CRM Detalhe Perfil da Conta</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Variables utilizadas por Brasmax para la Categorizacion de los Multiplicadores --></description>
+        <label><!-- BRMX --></label>
+        <name>BRMX</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Variables utilizadas por DESM para la Categorizacion de los Multiplicadores --></description>
+        <label><!-- DSEM --></label>
+        <name>DSEM</name>
+    </recordTypes>
+</CustomObjectTranslation>

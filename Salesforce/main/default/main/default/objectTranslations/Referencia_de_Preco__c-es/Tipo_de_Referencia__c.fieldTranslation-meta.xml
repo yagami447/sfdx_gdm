@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo clave: Variedad+Tipo de Referencia.
+Determinan: Preço y Tipo de Cotação --></help>
+    <label><!-- Tipo de Referencia --></label>
+    <name>Tipo_de_Referencia__c</name>
+    <picklistValues>
+        <masterLabel>CERRADO</masterLabel>
+        <translation><!-- CERRADO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DIFERENCIADA</masterLabel>
+        <translation><!-- DIFERENCIADA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXTERIOR</masterLabel>
+        <translation><!-- EXTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUL</masterLabel>
+        <translation><!-- SUL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

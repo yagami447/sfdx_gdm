@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica si la Ciudad ya está validada o Pendiente de Validar(para las ciudades dadas de alta a través del Portal --></help>
+    <label><!-- Pendentes de validação --></label>
+    <name>Pendiente_de_Validar__c</name>
+</CustomFieldTranslation>

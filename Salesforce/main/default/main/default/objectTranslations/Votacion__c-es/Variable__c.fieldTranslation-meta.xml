@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Variable --></label>
+    <name>Variable__c</name>
+    <picklistValues>
+        <masterLabel>Precio</masterLabel>
+        <translation><!-- Precio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volume</masterLabel>
+        <translation><!-- Volume --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

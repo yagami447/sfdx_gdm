@@ -1,0 +1,112 @@
+<apex:page standardController="Opportunity" extensions="BRAXUtils" title="Nueva Oportunidad" tabStyle="Opportunity">    
+    <apex:form >
+        <apex:sectionHeader title="Selecione um tipo de registro"></apex:sectionHeader>  
+        <apex:pageBlock mode="edit">     
+        <apex:pageBlockSection title="Anexos" columns="3" rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}">        
+            <apex:commandLink value="Anexo I" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo I" assignTo="{!tipo}"/>
+            </apex:commandLink>
+            <apex:commandLink value="Anexo II" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo II" assignTo="{!tipo}"/>
+            </apex:commandLink>
+            <apex:commandLink value="Anexo III" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo III" assignTo="{!tipo}"/>
+            </apex:commandLink>
+            <apex:outputText value=" "/>            
+            <apex:outputText value=" "/>
+            <apex:outputText value=" "/>            
+            <apex:commandLink value="Anexo IV" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo IV" assignTo="{!tipo}"/>
+            </apex:commandLink>
+            <apex:commandLink value="Anexo V" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo V" assignTo="{!tipo}"/>
+            </apex:commandLink>
+        </apex:pageBlockSection>                
+        <apex:pageBlockSection title="Anexos - Rebaixamentos" columns="2" rendered="{!Full == 0}">        
+            <apex:commandLink value="Rebaixamento Ha" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo I Rebaixamento Ha" assignTo="{!tipo}"/>
+            </apex:commandLink>
+            <!-- <apex:commandLink value="Anexo II Rebaixamento Potencia" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo II Rebaixamento Potencia" assignTo="{!tipo}"/>
+            </apex:commandLink> -->
+            <apex:commandLink value="Rebaixamento Sacas" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+                <apex:param name="tipo_opp" value="Anexo II Rebaixamento Sacas" assignTo="{!tipo}"/>
+            </apex:commandLink>
+            <apex:outputText value=" "/>            
+            <apex:outputText value=" "/>
+            <apex:outputText value=" "/>                        
+        </apex:pageBlockSection>                
+        <apex:pageBlockSection title="Outros" columns="2">
+        <apex:commandLink value="Negociação Venda da Basica" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Previsao"/>
+        </apex:commandLink>       
+        <apex:commandLink value="Pendiente" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Pendiente"/>
+        </apex:commandLink>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>         
+        <apex:commandLink value="Nota de Credito" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="NC - Pendiente"/>
+        </apex:commandLink>        
+        <apex:commandLink value="Estoque de Multiplicadores" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Stock Multiplicadores"/>
+        </apex:commandLink>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>         
+        <apex:commandLink value="Disponibilidade da Basica" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 1 || Full == 3}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Disponibilidade da Basica"/>
+        </apex:commandLink>      
+        <!-- Agregado por Jhonny Peroza -->
+        <apex:commandLink value="Estoque de Multiplicadores Milho" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 1 || Full == 3 || Full == 5}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Stock Multiplicadores Milho"/>
+        </apex:commandLink>  
+        <apex:commandLink value="Prod. Basica - Comercial" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="PB-Comercial"/>
+        </apex:commandLink>
+        <apex:outputText value=" "/> 
+        <apex:outputText value=" "/> 
+        
+        <apex:commandLink value="Prod. Basica - Produção" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 2}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="PB-Produccion"/>
+        </apex:commandLink>
+        
+        <apex:commandLink value="Prod. Basica - Desenvolvimento" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 6}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="PB-Desarrollo"/>
+        </apex:commandLink>
+        
+        <apex:outputText value=" "/> 
+        <apex:outputText value=" "/>
+
+        <apex:commandLink value="Exportação" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Exportacion"/>
+        </apex:commandLink>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>         
+        <apex:commandLink value="Reembalagem" action="{!nuevaOpp}" rendered="{!Full == 0 || Full == 1 || Full == 3}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Reembalaje"/>
+        </apex:commandLink> 
+        <apex:commandLink value="Objetivo Vendas Semente" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Objetivo Ventas Semilla"/>
+        </apex:commandLink>  
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:commandLink value="Objetivo Vendas Royalties" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Objetivo Ventas Royalties"/>
+        </apex:commandLink>
+        <apex:commandLink value="Estimativa de Venda" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Estimativa de venda"/>
+        </apex:commandLink>        
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:outputText value=" " rendered="{!Full == 0}"/>
+        <apex:commandLink value="Objetivo Contrato Royalties" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Objetivo Contrato Royalties"/>
+        </apex:commandLink>  
+        <apex:outputText value=" "/>
+        <apex:outputText value=" "/>
+        <apex:commandLink value="Aquisição Sementes Terceiros" action="{!nuevaOpp}" rendered="{!Full == 0}" style="font-size:16px;text-decoration:none" styleClass="btn">  
+            <apex:param name="tipo_opp" value="Aquisição Sementes Terceiros"/>
+        </apex:commandLink> 
+        </apex:pageBlockSection>        
+        </apex:pageBlock>        
+    </apex:form>
+</apex:page>

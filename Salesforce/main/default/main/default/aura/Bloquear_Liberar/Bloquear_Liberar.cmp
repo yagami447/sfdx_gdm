@@ -1,0 +1,7 @@
+<aura:component controller="Bloquear_LiberarController" implements="force:lightningQuickAction,force:hasRecordId">
+    
+    <aura:attribute name="recordId" type="String" />   
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AutoFillStock__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Insere automaticamente os dados do estoque baseado no mês e a época do ano.</description>
+    <externalId>false</externalId>
+    <label>AutoFillStock</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rechazar</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Rechazar y Clonar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var nro = &quot;{!Opportunity.Name}&quot;; 
+var nro_legal = &quot;{!Opportunity.Numero_Legal__c}&quot;; 
+var StageName = &quot;{!Opportunity.StageName}&quot;; 
+var NewStage = &apos;&apos;;
+
+if (StageName == &apos;PE - Pendiente&apos;) {
+   NewStage = &apos;RR&apos;;
+   }else if (StageName == &apos;AU - Autorizada&apos;) {
+      NewStage = &apos;RE&apos;;
+}
+
+var result = sforce.apex.execute(&quot;Opp_SAP_Mod&quot;,&quot;statusSAP&quot;, {oppId : id, etapa : NewStage, target : 200, rechazar_y_liberar : false, dev : false}); 
+alert(result[0]);
+window.location.reload(true);
+
+//alert(&quot;Momentaneamente inhabilitado.&quot;);</url>
+</WebLink>

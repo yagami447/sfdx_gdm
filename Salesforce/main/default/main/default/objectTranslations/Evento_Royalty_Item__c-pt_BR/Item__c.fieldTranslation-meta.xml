@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Item --></label>
+    <name>Item__c</name>
+    <picklistValues>
+        <masterLabel>Comunicação em rádio</masterLabel>
+        <translation><!-- Comunicação em rádio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outdoor</masterLabel>
+        <translation><!-- Outdoor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outros</masterLabel>
+        <translation><!-- Outros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palestrante</masterLabel>
+        <translation><!-- Palestrante --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palestras e Treinamentos</masterLabel>
+        <translation><!-- Palestras e Treinamentos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placas</masterLabel>
+        <translation><!-- Placas --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

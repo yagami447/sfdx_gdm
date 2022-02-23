@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Aviso_Indemnizacion_Aprobada</fullName>
+        <description>Aviso Indemnización Aprobada</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Con_Indemnizacion_Aprobada</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_Indemnizacion_Rechazada</fullName>
+        <description>Aviso Indemnización Rechazada</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>santiago@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Con_Indemnizacion_Aprobada</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Propuesta_de_Cierre_de_Reclamo</fullName>
+        <description>Aviso de Propuesta de Cierre de Reclamo</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Propuesta_Cierre</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_Asignado</fullName>
+        <description>Aviso de Reclamo Asignado</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Asignado</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_Rechazado</fullName>
+        <description>Aviso de Reclamo Rechazado</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Rechazado</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_Visita_Campo</fullName>
+        <description>Aviso de Reclamo Visita Campo</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Asistencia Tecnica</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto General</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Pesquisa</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Producción</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Visita_Campo</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_a_Pesquisa</fullName>
+        <description>Aviso de Reclamo a Pesquisa</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Asistencia Tecnica</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto General</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Pesquisa</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_a_Pesquisa</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_a_Produccion</fullName>
+        <description>Aviso de Reclamo a Producción</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Asistencia Tecnica</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto General</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Producción</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_a_Produccion</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_con_Indemnizaci_n</fullName>
+        <description>Aviso de Reclamo con Indemnización</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>santiago@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Con_Indemnizacion</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Reclamo_sin_Cerrar</fullName>
+        <description>Aviso de Reclamo sin Cerrar</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Sin_Cerrar</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Visita_a_Campo_Aprobada</fullName>
+        <description>Aviso de Visita a Campo Aprobada</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Contacto Asistencia Tecnica</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Desenvolvimento</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto General</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Pesquisa</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Contacto Producción</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Reclamo_Visita_Campo_Aprobada</template>
+    </alerts>
+    <alerts>
+        <fullName>Caso_fiscalizacion_creado</fullName>
+        <description>Caso fiscalizacion creado</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Marca</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderAddress>admvendas@gdmseeds.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Circuito_de_Anexos/Caso_fiscalizacion_generado</template>
+    </alerts>
+    <alerts>
+        <fullName>Reclamo_Alta_BRMX_G1</fullName>
+        <description>Aviso Nuevo Reclamo Region Comercial 1</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>sbertagnolli@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Alerta_Reclamo_Nuevo</template>
+    </alerts>
+    <alerts>
+        <fullName>Reclamo_Alta_BRMX_G2</fullName>
+        <description>Aviso Nuevo Reclamo Region Comercial 2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>msteffen@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Alerta_Reclamo_Nuevo</template>
+    </alerts>
+    <alerts>
+        <fullName>Reclamo_Alta_Cerrado</fullName>
+        <description>Aviso Nuevo Reclamo Region Comercial Cerrado</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>psouza@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Alerta_Reclamo_Nuevo</template>
+    </alerts>
+    <alerts>
+        <fullName>Reclamo_Sin_Contactar</fullName>
+        <description>Aviso de Reclamo Sin Contactar</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Función Gerente Comercial</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Función Responsable Reclamo</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Reclamos/Alerta_Contacto</template>
+    </alerts>
+    <rules>
+        <fullName>Caso fiscalizacion creado</fullName>
+        <actions>
+            <name>Caso_fiscalizacion_creado</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Fiscalização</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contacto Reclamo</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO COMERCIAL,RECLAMO DESARROLLO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Fecha_de_Contacto__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Contacto_Responsable__c</field>
+            <operation>equals</operation>
+            <value>NÃO</value>
+        </criteriaItems>
+        <description>Esta regla valida que no pasen 24 Hrs si que se contacte al Agricultor que realizó el reclamo</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Reclamo_Sin_Contactar</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.Fecha_de_Asignaci_n__c</offsetFromField>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Reclamo Alta BRMX_G1</fullName>
+        <actions>
+            <name>Reclamo_Alta_BRMX_G1</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO NUEVO,RECLAMO EN ANDAMENTO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>REGION 1</value>
+        </criteriaItems>
+        <description>Mensaje que avisa al administrador de reclamos que ha sido registrado un reclamo nuevo.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Alta BRMX_G2</fullName>
+        <actions>
+            <name>Reclamo_Alta_BRMX_G2</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO NUEVO,RECLAMO EN ANDAMENTO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>REGION 2</value>
+        </criteriaItems>
+        <description>Mensaje que avisa al administrador de reclamos que ha sido registrado un reclamo nuevo.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Alta RG Cerrado</fullName>
+        <actions>
+            <name>Reclamo_Alta_Cerrado</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO NUEVO,RECLAMO EN ANDAMENTO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Region_Comercial__c</field>
+            <operation>equals</operation>
+            <value>CERRADO</value>
+        </criteriaItems>
+        <description>Mensaje que avisa al administrador de reclamos que ha sido registrado un reclamo nuevo.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Asignado</fullName>
+        <actions>
+            <name>Aviso_de_Reclamo_Asignado</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO COMERCIAL,RECLAMO DESARROLLO</value>
+        </criteriaItems>
+        <description>Aviso de Reclamo Asignado</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Indemnización Aprobado</fullName>
+        <actions>
+            <name>Aviso_Indemnizacion_Aprobada</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO PROPUESTA CIERRE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Indemnizacion_Aceptada__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Propuesta Cierre</fullName>
+        <actions>
+            <name>Aviso_de_Propuesta_de_Cierre_de_Reclamo</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO PROPUESTA CIERRE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Indemnizar__c</field>
+            <operation>equals</operation>
+            <value>Falso</value>
+        </criteriaItems>
+        <description>Alerta que se dispara cuando se propone cerrar un reclamo.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Propuesta Cierre Indemnizado</fullName>
+        <actions>
+            <name>Aviso_de_Reclamo_con_Indemnizaci_n</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO INDEMNIZACION</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Indemnizar__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Rechazado</fullName>
+        <actions>
+            <name>Aviso_de_Reclamo_Rechazado</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO RECHAZADO</value>
+        </criteriaItems>
+        <description>Regla que se dispara cuando un Reclamo es Rechazado.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Sin Cerrar</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO COMERCIAL ACEPTADO,RECLAMO CONS PESQUISA,RECLAMO CONS PRODUCCION,RECLAMO DESARROLLO ACEPTADO,RECLAMO PROPUESTA CIERRE,RECLAMO VISITA CAMPO,RECLAMO VISITA CAMPO CONF</value>
+        </criteriaItems>
+        <description>Esta regla controla avisa si hace 7 días que un Reclamo se acepto y el mismo se encuentra sin cerrar.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Aviso_de_Reclamo_sin_Cerrar</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.Fecha_de_Aceptacion__c</offsetFromField>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Reclamo Visita Campo</fullName>
+        <actions>
+            <name>Aviso_de_Reclamo_Visita_Campo</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO VISITA CAMPO</value>
+        </criteriaItems>
+        <description>Regla que se dispara cuando se solicita una visita a Campo</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Visita Campo Aprobada</fullName>
+        <actions>
+            <name>Aviso_de_Visita_a_Campo_Aprobada</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO VISITA CAMPO CONF</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo a Pesquisa</fullName>
+        <actions>
+            <name>Aviso_de_Reclamo_a_Pesquisa</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO CONS PESQUISA</value>
+        </criteriaItems>
+        <description>Regla que se dispara cuando un Reclamo es enviado a Pesquisa</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo a Producción</fullName>
+        <actions>
+            <name>Aviso_de_Reclamo_a_Produccion</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RECLAMO CONS PRODUCCION</value>
+        </criteriaItems>
+        <description>Regla que se dispara cuando un Reclamo es pasado a Producción</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

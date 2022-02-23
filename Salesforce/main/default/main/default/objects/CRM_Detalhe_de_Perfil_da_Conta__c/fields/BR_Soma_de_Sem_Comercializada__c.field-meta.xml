@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Soma_de_Sem_Comercializada__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Suma del campo semilla comercializada para todas variedades (INTACTA) informadas en el anexo III y IV que está con el status aprobado</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Suma del campo semilla comercializada para todas variedades (INTACTA) informadas en el anexo III y IV que está con el status aprobado</inlineHelpText>
+    <label>AAAA Vendas BRMX IPRO</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

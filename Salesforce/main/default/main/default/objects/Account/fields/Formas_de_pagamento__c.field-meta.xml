@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formas_de_pagamento__c</fullName>
+    <externalId>false</externalId>
+    <label>Formas de pagamento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A - Duplicata - Boleto Clientes</fullName>
+                <default>false</default>
+                <label>A - Duplicata - Boleto Clientes</label>
+            </value>
+            <value>
+                <fullName>B - Cartão de Crédito</fullName>
+                <default>false</default>
+                <label>B - Cartão de Crédito</label>
+            </value>
+            <value>
+                <fullName>D - Boleto/Duplicata - Cobrança</fullName>
+                <default>false</default>
+                <label>D - Boleto/Duplicata - Cobrança</label>
+            </value>
+            <value>
+                <fullName>G - Boleto Fornec / DDA</fullName>
+                <default>false</default>
+                <label>G - Boleto Fornec / DDA</label>
+            </value>
+            <value>
+                <fullName>H - Depósito</fullName>
+                <default>false</default>
+                <label>H - Depósito</label>
+            </value>
+            <value>
+                <fullName>U - Transfêrencia</fullName>
+                <default>false</default>
+                <label>U - Transfêrencia</label>
+            </value>
+            <value>
+                <fullName>K - Débito em Conta</fullName>
+                <default>false</default>
+                <label>K - Débito em Conta</label>
+            </value>
+            <value>
+                <fullName>P - PIX</fullName>
+                <default>false</default>
+                <label>P - PIX</label>
+            </value>
+            <value>
+                <fullName>T - TED</fullName>
+                <default>false</default>
+                <label>T - TED</label>
+            </value>
+            <value>
+                <fullName>C - Cheque</fullName>
+                <default>false</default>
+                <label>C - Cheque</label>
+            </value>
+            <value>
+                <fullName>E - Pagamento a vista</fullName>
+                <default>false</default>
+                <label>E - Pagamento a vista</label>
+            </value>
+            <value>
+                <fullName>R - Trib. e Concession. Cod Barras</fullName>
+                <default>false</default>
+                <label>R - Trib. e Concession. Cod Barras</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

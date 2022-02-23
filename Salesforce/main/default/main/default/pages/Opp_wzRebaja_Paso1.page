@@ -1,0 +1,27 @@
+<apex:page controller="Opp_wzRebaja_Ctrl" tabStyle="Opportunity">
+    <apex:sectionHeader subtitle="Nova oportunidade" title="Edição de oportunidade">
+    <apex:form >
+        <apex:pageBlock mode="edit" title="Editar Oportunidade">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!Salir}" value="Salir" immediate="true"/>
+                <apex:commandButton action="{!next}" value="Avançar"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!opp.name}" required="true"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Fase" />
+                    <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        <apex:selectList required="true" value="{!opp.Stagename}" size="1" id="fase" >
+                            <apex:selectOptions value="{!itemsFase}"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!opp.accountid}" required="true"/>
+                <apex:inputField value="{!opp.Safra__c}" required="true"/>
+                <apex:inputField value="{!opp.closedate}" required="true"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    </apex:sectionHeader>
+</apex:page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Etapa_CVB_Autorizada_No_Editable</fullName>
+    <active>true</active>
+    <description>Los perfiles Administrativo y Supervisor Administrativo no deberian poder modificar la etapa de las oportunidades CVB Autorizada.</description>
+    <errorConditionFormula>AND(
+ OR(
+  $Profile.Name = &apos;Administrativo&apos;,
+  $Profile.Name = &apos;Supervisor Administrativo&apos;
+ ),
+ NOT(ISCHANGED(RecordTypeId)),
+ RecordType.DeveloperName = &apos;CVB_Autorizada&apos;,
+ ISCHANGED(StageName)
+)</errorConditionFormula>
+    <errorMessage>Você não tem permissões suficientes para modificar o estágio desta oportunidade.</errorMessage>
+</ValidationRule>

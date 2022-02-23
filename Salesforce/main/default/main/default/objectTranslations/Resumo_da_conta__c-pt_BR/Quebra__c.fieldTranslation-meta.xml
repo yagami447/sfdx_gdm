@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Qual é a % de Quebra Técnica MÉDIA (da empresa) referente ao volume BRUTO de semente de soja que entra na UBS para o volume que é Beneficiado ? --></help>
+    <label><!-- Quebra --></label>
+    <name>Quebra__c</name>
+</CustomFieldTranslation>

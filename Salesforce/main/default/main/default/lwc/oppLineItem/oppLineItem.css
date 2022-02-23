@@ -1,0 +1,22 @@
+.deleted {
+    color: #f00;
+    /* background-color: #f5c6cb; */
+    text-decoration: line-through;
+}
+.deleted td {
+    color: #000;
+}
+
+.form-element__icon {
+    display: none !important;
+}
+
+.deleted td {
+    background-color: #f5c2c7;
+}
+.edited td {
+    background-color: #ffecb5;
+}
+.new td {
+    background-color: #badbcc;
+}

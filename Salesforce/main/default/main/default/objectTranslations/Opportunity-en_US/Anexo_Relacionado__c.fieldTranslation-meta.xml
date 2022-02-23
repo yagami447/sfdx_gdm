@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Anexo Relacionado --></label>
+    <name>Anexo_Relacionado__c</name>
+    <relationshipLabel><!-- Oportunidades (Anexo Relacionado) --></relationshipLabel>
+</CustomFieldTranslation>

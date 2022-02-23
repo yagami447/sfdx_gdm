@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notificacion_de_rechazo_a_Supervisor</fullName>
+        <description>Notificacion de rechazo a Supervisor</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aviso_de_rechazo_Contrato_multipliacion</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificacion_de_rechazo_a_Supervisor2</fullName>
+        <description>Notificacion de rechazo a Supervisor2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aviso_de_rechazo_Contrato_multipliacion</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Data_de_envio</fullName>
+        <field>Data_de_envio__c</field>
+        <formula>TODAY()</formula>
+        <name>Data de envio</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Data_de_impress_o</fullName>
+        <field>Data_de_Impressao__c</field>
+        <formula>TODAY()</formula>
+        <name>Data de impressão</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Data_de_recebemento</fullName>
+        <field>Data_de_Recebemento__c</field>
+        <formula>TODAY()</formula>
+        <name>Data de recebemento</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Aguarda_Retorno</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aguarda Retorno</literalValue>
+        <name>Envio a Aguarda Retorno</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Aguardando_Assinatura</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aguardando Assinatura</literalValue>
+        <name>Envio a Aguardando Assinatura</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Chegou</fullName>
+        <field>Estado__c</field>
+        <literalValue>Chegou</literalValue>
+        <name>Envio a Chegou</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Edi_o</fullName>
+        <field>Estado__c</field>
+        <literalValue>Edição</literalValue>
+        <name>Envio a Edição</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Pe_de_AP</fullName>
+        <field>Estado__c</field>
+        <literalValue>Pendente de Aprovação</literalValue>
+        <name>Envio a Pe de Aprovacion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Pe_de_Post</fullName>
+        <field>Estado__c</field>
+        <literalValue>Pendente de Postagem</literalValue>
+        <name>Envio a Pe de Postagem</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Pe_de_imp</fullName>
+        <field>Estado__c</field>
+        <literalValue>Pendente de Impressão</literalValue>
+        <name>Envio a Pe de Impresion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Envio_a_Pendente_de_Envio</fullName>
+        <field>Estado__c</field>
+        <literalValue>Pendente de Envio</literalValue>
+        <name>Envio a Pendente de Envio</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

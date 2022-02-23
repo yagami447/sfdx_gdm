@@ -1,0 +1,17 @@
+<apex:component id="footerComponent" controller="aSiteHeaderController">
+  <footer>
+    <apex:pageMessages escape="false" id="mensajes" />
+    <div class="">
+      <apex:panelGrid cellpadding="0" cellspacing="0" width="99%" border="0" style="text-align: right;" columns="2" id="thePoweredByTop">
+        <apex:panelGroup id="copyBy" style="text-align: left;">
+          <p>&copy; GDM IT 2019 {!activeSession.Marca__c}</p>
+        </apex:panelGroup>
+        <apex:panelGroup id="poweredBy">
+          <apex:outputText style="font-size: smaller" value="{!$Label.site.powered_by}" />
+          <apex:outputLink value="http://www.force.com">
+            <apex:image url="{!URLFOR($Resource.SiteSamples, 'img/poweredby.png')}" styleClass="poweredByImage" /></apex:outputLink>
+        </apex:panelGroup>
+      </apex:panelGrid>
+    </div>
+  </footer>
+</apex:component>

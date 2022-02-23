@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tratamiento_de_Semilla</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(Opportunity.RecordTypeId = &apos;01240000000M9lw&apos;, Opportunity.RecordTypeId = &apos;01240000000M9lx&apos;),OR(AND( PricebookEntry.Product2.Semilla_Tratada__c = TRUE , ISPICKVAL(Tratamiento_de_Semilla__c, &apos;T00 - Sem&apos;)), AND( PricebookEntry.Product2.Semilla_Tratada__c = FALSE , NOT(ISPICKVAL(Tratamiento_de_Semilla__c, &apos;T00 - Sem&apos;)))))</errorConditionFormula>
+    <errorDisplayField>Tratamiento_de_Semilla__c</errorDisplayField>
+    <errorMessage>Não existe combinação: produto e o tratamento de semente informado. Favor de excluir e selecionar novamento o produto segundo flag de tratamento.</errorMessage>
+</ValidationRule>

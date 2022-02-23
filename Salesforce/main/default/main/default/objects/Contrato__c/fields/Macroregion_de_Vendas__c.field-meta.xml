@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Macroregion_de_Vendas__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Selecionar a MACROREGIÃO DE VENDAS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Selecionar a MACROREGIÃO DE VENDAS</inlineHelpText>
+    <label>Macroregião de Vendas</label>
+    <referenceTo>Macrorregi_o_de_Vendas__c</referenceTo>
+    <relationshipName>Contrato_de_Multiplica_o</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

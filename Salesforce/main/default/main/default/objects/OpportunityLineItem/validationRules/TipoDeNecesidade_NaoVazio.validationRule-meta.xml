@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoDeNecesidade_NaoVazio</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Opportunity.RecordType.DeveloperName = &quot;Venda_da_Basica_full&quot;, ISBLANK(TEXT(Tipo_de_Necessidade__c)))</errorConditionFormula>
+    <errorDisplayField>Tipo_de_Necessidade__c</errorDisplayField>
+    <errorMessage>O Tipo de necessidade não pode estar vazio</errorMessage>
+</ValidationRule>

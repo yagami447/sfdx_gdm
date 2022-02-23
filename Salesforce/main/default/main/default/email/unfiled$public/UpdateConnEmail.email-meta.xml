@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación de conexión actualizada</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Salesforce to Salesforce: Actualizar conexión (MUESTRA)</name>
+    <style>none</style>
+    <subject>Acción obligatoria. Actualice el perfil de conexión</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

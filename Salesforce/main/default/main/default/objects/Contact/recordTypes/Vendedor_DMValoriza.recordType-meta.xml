@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendedor_DMValoriza</fullName>
+    <active>true</active>
+    <description>Vendedor DMValoriza</description>
+    <label>Vendedor DMValoriza</label>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Feria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Por comentarios de terceros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publicidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencia del empleado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencia externa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relaciones públicas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario - Interno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario - Socio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartFarm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Socio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sra%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Srta%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origem_Docto__c</picklist>
+        <values>
+            <fullName>Estatuto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procuração</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Assinatura__c</picklist>
+        <values>
+            <fullName>Em conjunto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

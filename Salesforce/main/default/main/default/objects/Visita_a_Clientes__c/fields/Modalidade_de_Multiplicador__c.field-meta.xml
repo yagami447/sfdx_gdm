@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modalidade_de_Multiplicador__c</fullName>
+    <externalId>false</externalId>
+    <label>Modalidade de Multiplicador</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Multiplicador Brasmax</fullName>
+                <default>true</default>
+                <label>Multiplicador Brasmax</label>
+            </value>
+            <value>
+                <fullName>Revenda Brasmax</fullName>
+                <default>false</default>
+                <label>Revenda Brasmax</label>
+            </value>
+            <value>
+                <fullName>Concorrente</fullName>
+                <default>false</default>
+                <label>Concorrente</label>
+            </value>
+            <value>
+                <fullName>Outro</fullName>
+                <default>false</default>
+                <label>Outro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

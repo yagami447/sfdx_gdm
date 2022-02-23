@@ -1,0 +1,8 @@
+Se ha aprobado el cierre del Reclamo Nro.: {!Case.CaseNumber} con Indemnización.
+Cuenta: {!Case.Account} 
+Telefono: {!Case.CRM_Telefono_Productor__c} 
+Contacto: {!Case.Contact} 
+Telefono Contacto: {!Case.CRM_Telefono_Contacto__c}
+Tipo de Indemnización: {!Case.Tipo_De_Indemnizacion__c}
+Indemnización: {!Case.Indemnizacion__c}
+Detalle de Indemnización: {!Case.Detalle_Indemnizacion__c}

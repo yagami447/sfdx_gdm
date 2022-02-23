@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Rebajado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si corresponde al ítem generado para restarle la cantidad a la categoría rebajada. Para la sumarizacion en reportes.</description>
+    <externalId>false</externalId>
+    <label>Item Rebajado</label>
+    <type>Checkbox</type>
+</CustomField>

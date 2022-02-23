@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oficina_Ventas__c</fullName>
+    <externalId>false</externalId>
+    <label>Oficina Ventas</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BR01</fullName>
+                <default>false</default>
+                <label>BR01</label>
+            </value>
+            <value>
+                <fullName>BR02</fullName>
+                <default>false</default>
+                <label>BR02</label>
+            </value>
+            <value>
+                <fullName>BR03</fullName>
+                <default>false</default>
+                <label>BR03</label>
+            </value>
+            <value>
+                <fullName>BR04</fullName>
+                <default>false</default>
+                <label>BR04</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

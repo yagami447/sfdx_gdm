@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contrato_ant__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Este campo guarda una referencia al contrato original, en el caso de que el contrato sea resultado de una clonación</description>
+    <externalId>false</externalId>
+    <label>Contrato Original</label>
+    <referenceTo>Contrato__c</referenceTo>
+    <relationshipLabel>Contratos de Multiplicação</relationshipLabel>
+    <relationshipName>Contratos_de_Multiplica_o</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

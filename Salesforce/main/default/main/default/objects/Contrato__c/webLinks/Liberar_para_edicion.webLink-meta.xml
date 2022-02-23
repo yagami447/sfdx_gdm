@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liberar_para_edicion</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Liberar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Contrato__c.Id}&quot;; 
+
+var result = sforce.apex.execute(&quot;Opp_Utils&quot;,&quot;liberarParaEdicionTA&quot;, {idTA : id}); 
+alert(result); 
+
+window.location.reload(true);</url>
+</WebLink>

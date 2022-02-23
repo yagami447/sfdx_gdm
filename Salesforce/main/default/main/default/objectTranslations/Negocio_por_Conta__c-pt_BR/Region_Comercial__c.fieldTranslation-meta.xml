@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Região Comercial --></label>
+    <name>Region_Comercial__c</name>
+    <picklistValues>
+        <masterLabel>BRASIL</masterLabel>
+        <translation><!-- BRASIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CERRADO</masterLabel>
+        <translation><!-- CERRADO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REGION 1</masterLabel>
+        <translation><!-- REGION 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REGION 2</masterLabel>
+        <translation><!-- REGION 2 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

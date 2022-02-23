@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Objeto relacionado a um Contato (fora de uso) --></help>
+    <label><!-- Nome do agricultor --></label>
+    <name>Nome_do_agricultor__c</name>
+    <relationshipLabel><!-- Eventos --></relationshipLabel>
+</CustomFieldTranslation>

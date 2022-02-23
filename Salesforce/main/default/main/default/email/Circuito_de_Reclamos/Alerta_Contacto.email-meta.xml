@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para informar que pasaron 24 Hrs desde que se asignó un Reclamo y el mismo no fue contactado</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Alerta Contacto</name>
+    <style>none</style>
+    <subject>Reclamo No Contactado - Contacto con Responsable: {!Case.Contacto_Responsable__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

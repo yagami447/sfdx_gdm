@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NC_Cliente_igual_Cliente_pedido_original</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND($RecordType.Name == &apos;NC - Pendiente&apos;, NOT(ISBLANK( Pedido_Relacionado__c))), AccountId &lt;&gt; Pedido_Relacionado__r.AccountId, FALSE)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>A conta tem de ser o mesmo que na ordem original</errorMessage>
+</ValidationRule>

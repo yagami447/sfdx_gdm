@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Resistência ao acamamento --></label>
+    <name>Resist_ncia_ao_acamamento__c</name>
+    <picklistValues>
+        <masterLabel>Moderadamente resistente</masterLabel>
+        <translation><!-- Moderadamente resistente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resistente</masterLabel>
+        <translation><!-- Resistente --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relatorio_Relacionado__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo utilizado para indicar cual es el relatorio que generó este evento.</description>
+    <externalId>false</externalId>
+    <label>Relatório Relacionado</label>
+    <referenceTo>Visita_a_Clientes__c</referenceTo>
+    <relationshipLabel>Actividades</relationshipLabel>
+    <relationshipName>Actividades</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

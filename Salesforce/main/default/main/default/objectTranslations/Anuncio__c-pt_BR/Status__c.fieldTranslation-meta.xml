@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Ag. Propostas</masterLabel>
+        <translation><!-- Ag. Propostas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancelado</masterLabel>
+        <translation><!-- Cancelado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Concluído</masterLabel>
+        <translation><!-- Concluído --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Em Análise</masterLabel>
+        <translation><!-- Em Análise --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

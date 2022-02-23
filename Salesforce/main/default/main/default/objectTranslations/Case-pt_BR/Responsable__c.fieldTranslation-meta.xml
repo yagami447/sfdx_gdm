@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Responsável --></label>
+    <name>Responsable__c</name>
+    <picklistValues>
+        <masterLabel>061 - Fernando Frehner</masterLabel>
+        <translation><!-- 061 - Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>066 - Marcelo Steffen</masterLabel>
+        <translation><!-- 066 - Marcelo Steffen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>067 - Sergio Bertagnolli</masterLabel>
+        <translation><!-- 067 - Sergio Bertagnolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>076 - Tiago Goulart</masterLabel>
+        <translation><!-- 076 - Tiago Goulart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>083 - Jorge Cristiano Rosa</masterLabel>
+        <translation><!-- 083 - Jorge Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>096 - Charles C. Pintro</masterLabel>
+        <translation><!-- 096 - Charles C. Pintro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>101 - Fausto Tadeu Fanchin</masterLabel>
+        <translation><!-- 101 - Fausto Tadeu Fanchin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>104 - Otavio Gorni</masterLabel>
+        <translation><!-- 104 - Otavio Gorni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>105 - Rogério A. Schneider</masterLabel>
+        <translation><!-- 105 - Rogério A. Schneider --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>106 - Sandro Ferrari M</masterLabel>
+        <translation><!-- 106 - Sandro Ferrari M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>111 - Pablo R. de Souza</masterLabel>
+        <translation><!-- 111 - Pablo R. de Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>150 - João Serrano</masterLabel>
+        <translation><!-- 150 - João Serrano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>151 - Anderson Clayton Weissheimer</masterLabel>
+        <translation><!-- 151 - Anderson Clayton Weissheimer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>152 - Fernando Calazans</masterLabel>
+        <translation><!-- 152 - Fernando Calazans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>190 - Marcos Berlezi</masterLabel>
+        <translation><!-- 190 - Marcos Berlezi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>196 - Edson Chambo</masterLabel>
+        <translation><!-- 196 - Edson Chambo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>217 - Cristian Pirolli</masterLabel>
+        <translation><!-- 217 - Cristian Pirolli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>224 - Fernando Frehner</masterLabel>
+        <translation><!-- 224 - Fernando Frehner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>225 - Fagner Regis de Oliveira</masterLabel>
+        <translation><!-- 225 - Fagner Regis de Oliveira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>229 - Murilo Brazero Cacheffo</masterLabel>
+        <translation><!-- 229 - Murilo Brazero Cacheffo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>231 - Willian Von Scharten</masterLabel>
+        <translation><!-- 231 - Willian Von Scharten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>238 - Luis Fernando Cecatto</masterLabel>
+        <translation><!-- 238 - Luis Fernando Cecatto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>289 - Flávio Marçal dos Santos</masterLabel>
+        <translation><!-- 289 - Flávio Marçal dos Santos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>312 - Lucas Hilario Fantineli</masterLabel>
+        <translation><!-- 312 - Lucas Hilario Fantineli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>319 - Felipe Oliveira Costa</masterLabel>
+        <translation><!-- 319 - Felipe Oliveira Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>345 - Eduardo L. da Silva</masterLabel>
+        <translation><!-- 345 - Eduardo L. da Silva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>346 - Marco A. Marchioro</masterLabel>
+        <translation><!-- 346 - Marco A. Marchioro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. BMX 1 - Fausto Fanchin</masterLabel>
+        <translation><!-- Com. BMX 1 - Fausto Fanchin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. BMX 2 - Fernando Frenher</masterLabel>
+        <translation><!-- Com. BMX 2 - Fernando Frenher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. BMX 3 - J. Cristiano Rosa</masterLabel>
+        <translation><!-- Com. BMX 3 - J. Cristiano Rosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. BMX 4 - Sérgio Bertagnoli</masterLabel>
+        <translation><!-- Com. BMX 4 - Sérgio Bertagnoli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. BMX 5 - Antonio Paiva</masterLabel>
+        <translation><!-- Com. BMX 5 - Antonio Paiva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. BMX 5 - Tiago Goulart</masterLabel>
+        <translation><!-- Com. BMX 5 - Tiago Goulart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. DSEM 1 - Charles C. Pinto</masterLabel>
+        <translation><!-- Com. DSEM 1 - Charles C. Pinto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. DSEM 2 - Otavio Ogorni</masterLabel>
+        <translation><!-- Com. DSEM 2 - Otavio Ogorni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. DSEM 3 - Sandro Ferrari M.</masterLabel>
+        <translation><!-- Com. DSEM 3 - Sandro Ferrari M. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Com. DSEM 4 - Fernando Calazans</masterLabel>
+        <translation><!-- Com. DSEM 4 - Fernando Calazans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gerente Des. BRMX - Francisco Nogara</masterLabel>
+        <translation><!-- Gerente Des. BRMX - Francisco Nogara --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gerente Des. BRMX - Pablo Souza</masterLabel>
+        <translation><!-- Gerente Des. BRMX - Pablo Souza --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gerente Des. DSEM - Carlos Pattis</masterLabel>
+        <translation><!-- Gerente Des. DSEM - Carlos Pattis --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anular_y_Clonar</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Anular y Clonar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var accId = &quot;{!Opportunity.AccountId}&quot;; 
+var pasa = true; 
+var etapa = &quot;{!Opportunity.StageName}&quot;; 
+var tieneOpli = &quot;{!Opportunity.HasOpportunityLineItem}&quot;; 
+
+
+if (etapa == &apos;AN - Anulada&apos;){ 
+alert(&quot;Fase para gerar a autorização não deve ser AN - Anulada.&quot;); 
+pasa = false; 
+}
+if(tieneOpli == false){ 
+alert(&quot;Opp sem Produtos.&quot;); 
+pasa = false; 
+} 
+if(pasa == true){ 
+var result = sforce.apex.execute(&quot;previsionesController&quot;,&quot;generarVenta&quot;, {opId : id, acId : accId, rechazo : true }); 
+//window.location.href = result; 
+alert(result[0]); 
+if (result[1] == &apos;ok&apos;){ 
+var mywin = window.location.href=&apos;/&apos; + result[2]; 
+} 
+}</url>
+</WebLink>

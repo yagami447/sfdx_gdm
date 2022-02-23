@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PM_Safra_Actual_VB_Estimativa_de_Compra__c</fullName>
+    <externalId>false</externalId>
+    <label>PM Safra Actual VB-Estimativa de Compra</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Safra</valueSetName>
+    </valueSet>
+</CustomField>

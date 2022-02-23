@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ZB00 - BR Oferta</fullName>
+                <default>false</default>
+                <label>ZB00 - BR Oferta</label>
+            </value>
+            <value>
+                <fullName>ZCO - Oferta da Básica</fullName>
+                <default>false</default>
+                <label>ZCO - Oferta da Básica</label>
+            </value>
+            <value>
+                <fullName>ZO00 - BR Cuenta y Orden</fullName>
+                <default>false</default>
+                <label>ZO00 - BR Cuenta y Orden</label>
+            </value>
+            <value>
+                <fullName>ZO01 - BR Entrega Futura</fullName>
+                <default>false</default>
+                <label>ZO01 - BR Entrega Futura</label>
+            </value>
+            <value>
+                <fullName>ZO02 - BR Venta Exportación</fullName>
+                <default>false</default>
+                <label>ZO02 - BR Venta Exportación</label>
+            </value>
+            <value>
+                <fullName>ZO03 - BR Venta Futura</fullName>
+                <default>false</default>
+                <label>ZO03 - BR Venta Futura</label>
+            </value>
+            <value>
+                <fullName>ZO04 - BR Vta. s/entrega</fullName>
+                <default>false</default>
+                <label>ZO04 - BR Vta. s/entrega</label>
+            </value>
+            <value>
+                <fullName>ZO05 - BR Vta. Almacenam.</fullName>
+                <default>false</default>
+                <label>ZO05 - BR Vta. Almacenam.</label>
+            </value>
+            <value>
+                <fullName>ZO07 - BR Entrega Muestra</fullName>
+                <default>false</default>
+                <label>ZO07 - BR Entrega Muestra</label>
+            </value>
+            <value>
+                <fullName>ZO08 - BR Regalías s/NF</fullName>
+                <default>false</default>
+                <label>ZO08 - BR Regalías s/NF</label>
+            </value>
+            <value>
+                <fullName>ZO09 - BR Regalías</fullName>
+                <default>false</default>
+                <label>ZO09 - BR Regalías</label>
+            </value>
+            <value>
+                <fullName>ZO10 - BR Material s/nombre</fullName>
+                <default>false</default>
+                <label>ZO10 - BR Material s/nombre</label>
+            </value>
+            <value>
+                <fullName>ZO11 - BR Fidelización</fullName>
+                <default>false</default>
+                <label>ZO11 - BR Fidelización</label>
+            </value>
+            <value>
+                <fullName>ZO12 - BR Venta Normal</fullName>
+                <default>false</default>
+                <label>ZO12 - BR Venta Normal</label>
+            </value>
+            <value>
+                <fullName>ZO13 - Ped. Exterior</fullName>
+                <default>false</default>
+                <label>ZO13 - Ped. Exterior</label>
+            </value>
+            <value>
+                <fullName>ZO14 - Ped.Local - Fc ref/Entr</fullName>
+                <default>false</default>
+                <label>ZO14 - Ped.Local - Fc ref/Entr</label>
+            </value>
+            <value>
+                <fullName>ZO15 - Ped.Local - Fc ref/Ped</fullName>
+                <default>false</default>
+                <label>ZO15 - Ped.Local - Fc ref/Ped</label>
+            </value>
+            <value>
+                <fullName>ZC01 - Solicit. Nota de Cred.</fullName>
+                <default>false</default>
+                <label>ZC01 - Solicit. Nota de Cred.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

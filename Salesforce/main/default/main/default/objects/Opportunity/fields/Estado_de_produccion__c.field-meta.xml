@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado_de_produccion__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Estado de produccion, para incluir en el contrato de multiplicacion</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Estado de produccion, para incluir en el contrato de multiplicacion</inlineHelpText>
+    <label>Estado de produccion</label>
+    <referenceTo>Estado__c</referenceTo>
+    <relationshipLabel>Oportunidades</relationshipLabel>
+    <relationshipName>Oportunidades</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

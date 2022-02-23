@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Record Event for Audit Management">
+    <aura:attribute name="recordByEvent" type="Object" />
+    <aura:attribute name="origin" type="String" />
+</aura:event>

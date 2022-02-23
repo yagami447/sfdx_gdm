@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Micro__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Micro</label>
+    <referenceTo>Micro_UF__c</referenceTo>
+    <relationshipLabel>Planejamento Difusão Marketing Itens</relationshipLabel>
+    <relationshipName>Planejamento_Difusao_Marketing_Itens</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

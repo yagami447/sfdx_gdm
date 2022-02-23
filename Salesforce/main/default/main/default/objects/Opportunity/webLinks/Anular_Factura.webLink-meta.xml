@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anular_Factura</fullName>
+    <availability>online</availability>
+    <description>En desuso</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Anular Factura</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var nro = &quot;{!Opportunity.Name}&quot;; 
+//var nro_legal = &quot;{!Opportunity.Numero_Legal__c}&quot;; 
+
+var result = sforce.apex.execute(&quot;BMX_Opp_fc_Anulacion&quot;,&quot;anulacionFC&quot;, {oppId : id, target : &quot;300&quot;}); 
+
+alert(result); 
+
+window.location.reload(true);</url>
+</WebLink>

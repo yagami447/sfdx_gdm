@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valor_total_dos_juros__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Valor_primeiro_juro__c * Primeiro_pagamento__c)
++ (Valor_segundo_juro__c* Segundo_pagamento__c)
++ (Valor_terceiro_juro__c* Terceiro_pagamento__c)
++ (Valor_quarto_juro__c* Quinto_pagamento__c)
++ (Valor_quinto_juro__c* Quarto_pagamento__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Valor total dos juros</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

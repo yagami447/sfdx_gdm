@@ -1,0 +1,92 @@
+<apex:page id="CuentaCorriente" showheader="false" standardstylesheets="false" cache="false" controller="aSiteCuentaCorrienteController" action="{!validate}" doctype="html-5.0">
+
+    <!-- Include Twitter Bootstrap and jQuery: -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Include the plugin's CSS and JS: -->
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="body">
+            <body class="nav-md footer_fixed">
+                <center>
+                    <apex:form id="CuantaCorrienteForm">
+                        <div class="right_col" role="main" style="width: 80%;">
+                            <div class="x_panel">
+                                <br/>
+                                <br/>
+                                <center style="margin: 30px"><b><apex:outputText value="Conta Corrente" style="font-size:25px;"/></b></center>
+                                <div class="x_content" style="background: rgba(250, 250, 250, 90); border: 1px solid gray; border-radius:3px">
+                                    <div role="tabpanel" class="tab-pane" id="tab_items_new" aria-labelledby="profile-tab" align="center">
+                                        <apex:pageBlock >
+                                             <apex:dataTable value="{!2}" var="" width="100%">
+                                                 <apex:column headerValue="Nome:" headerClass="TitleNome"/>
+                                                 <apex:column headerValue="{!nombre}" headerClass="ValueNome" />
+                                            </apex:dataTable>                                     
+                                        </apex:pageBlock>
+                                    </div>
+                                </div>                                                  
+                                <br/>          
+                                <br/>                  
+                                <apex:pageBlock rendered="{!cuentas.size > 0}">    
+                                    <br/>          
+                                    <br/>                                 
+                                    <apex:dataTable styleclass="data table table-bordered table-striped no-margin" value="{!cuentas}" var="cuenta" width="70%" style="" id="dataTableCuenta" footerClass="footerTable">
+                                        <apex:column headerValue="Data doc" headerClass="Left" width="10%" style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px; ">
+                                            <apex:outputText value="{0,date, dd'.'MM'.'yyyy}">                                        
+                                                <apex:param value="{!cuenta.dataDoc}"/>
+                                            </apex:outputText>
+                                        </apex:column> 
+                                        <apex:column headerValue="Venc.Liquid" headerClass="Left" width="10%" style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px; ">
+                                            <apex:outputText value="{0,date, dd'.'MM'.'yyyy}">
+                                                <apex:param value="{!cuenta.vencLiquid}"/>
+                                            </apex:outputText>
+                                        </apex:column>     
+                                        <apex:column headerValue="Atribuição" headerClass="Left" value="{!cuenta.atribucion}" width="15" style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px; "/>                                                                          
+                                        <apex:column headerValue="Referência" headerClass="Left" value="{!cuenta.referencia}" width="50%" style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px; "/>                                                                                                                      
+                                        <apex:column headerValue="Mont.moeda doc." headerClass="Right" width="10%" style="text-align: right; border-bottom: 1px solid #ddd; padding: 5px; " footerValue="{!valorTotalString}" footerClass="Right">
+                                            <apex:outputText value="{!cuenta.montMonedaDocString}"/>              
+                                        </apex:column>
+                                        <apex:column headerValue="Moeda"  headerClass="Left" value="{!cuenta.moneda}" width="5%" style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px; " footerValue="{!moneda}" footerClass="Left"/>                                                        
+                                    </apex:dataTable>
+                                </apex:pageBlock>
+                            </div>
+                        </div>
+                    </apex:form>
+                </center>
+            </body>
+        </apex:define>
+    </apex:composition>
+
+    <style>
+        .center{
+            text-align: center !important;
+        }
+
+        .footerTable{
+            font-weight: bold;
+        }
+
+        .Left {
+            text-align: left
+          }
+        .Right {
+            text-align: right
+        }
+
+        .TitleNome {
+            Width: 5%;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .ValueNome {
+            font-weight: normal;
+            font-size: 15px;
+        }
+    </style>
+    
+    </apex:page>

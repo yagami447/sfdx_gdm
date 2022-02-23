@@ -1,0 +1,104 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+
+  <style>
+       pdfHead {
+            text-align: center;
+        }
+  </style>
+  
+  <apex:pageBlock rendered="{!Opportunity.Marca__c == 'DSEM'}" >
+     <div style="align-content:left; align-self:left; align-items:left; text-align:left;">
+      <img src="{!$Resource.LogoImpDSEM}" style="width: 32%; height: 40%;"/>     
+     </div>     
+  </apex:pageBlock>    
+  <apex:pageBlock rendered="{!Opportunity.Marca__c == 'BRMX'}" >
+     <div style="align-content:left; align-self:left; align-items:left; text-align:left;">
+      <img src="{!$Resource.LogoImpBRMX2}" style="width: 32%; height: 40%;"/>     
+     </div>     
+  </apex:pageBlock>    
+  <apex:pageBlock rendered="{!Opportunity.Marca__c == 'NEOG'}" >
+     <div style="align-content:left; align-self:left; align-items:left; text-align:left;">
+      <img src="{!$Resource.LogoImpNEOG}" style="width: 32%; height: 40%;"/>   
+     </div>     
+  </apex:pageBlock>
+  
+  <div style="align-content:center; align-self:center; align-items:center; text-align:center;">
+     <p style="font-size:25px"><b>AUTORIZAÇÃO PARA MULTIPLICAÇÃO</b></p>
+  </div>
+  <br/>
+
+  <table Align="center">
+   <tr>
+     <td >
+ 
+  <p style="font-size:20px"><b>AUT MULT Nº {!nombre}/{!anioCierre}</b></p>
+   
+  <apex:pageBlock rendered="{!Opportunity.Cooperante__c == null}" >  
+     <!--
+  <p align="justify"> A <b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ/CPF sob nº
+  07.007.165/0001-34, detentora dos direitos de exploração da marca <b>{!MarcaImp}</b>, com sede em Cambe-PR, dedicada à criação de cultivares
+  de Soja, vem através deste documento <b>AUTORIZAR</b> a empresa {!Opportunity.Account.Name}
+  inscrita(o) no CNPJ/CPF sob nº {!cnpj}, a produzir e comercializar sementes na 
+  <b>SAFRA {!safra}</b> das cultivares de soja, cujas categorias de sementes,  áreas dos campos de produção 
+  e estado, estão relacionados abaixo:</p><br/> -->
+  <p align="justify">A <b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ sob nº 
+   07.007.165/0001-34, detentora dos direitos de exploração de determinadas cultivares e da marca <b>{!MarcaImp}</b>, com sede em Cambé-PR, 
+   vem através deste documento AUTORIZAR {!Opportunity.Account.Name} inscrita(o) no CNPJ/CPF sob nº {!cnpj} a produzir e comercializar sementes na 
+   <b>SAFRA {!safra}</b> das cultivares de soja, cujas categorias de sementes, áreas dos campos de produção 
+   e estado, estão relacionados abaixo</p><br/>
+  </apex:pageBlock>  
+  
+  <apex:pageBlock rendered="{!Opportunity.Cooperante__c != null}" > 
+     <!-- 
+  <p align="justify"> A <b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ/CPF sob nº
+  07.007.165/0001-34, detentora dos direitos de exploração da marca <b>{!MarcaImp}</b>, com sede em Cambe-PR, dedicada à criação de cultivares
+  de Soja, vem através deste documento <b>AUTORIZAR</b> a {!Opportunity.Cooperante__r.Name}, inscrita no CNPJ/CPF sob nº {!cnpj}
+  e RENASEM nº {!Opportunity.Renasem_Produtor__c}, a produzir sementes na <b>SAFRA {!safra}</b> das cultivares de soja,
+  cujas categorias de sementes e áreas dos campos de produção estão relacionados abaixo, estritamente dentro das normas que regulam 
+  a produção de sementes de soja no estado do {!MID(Opportunity.Renasem_Produtor__c,0,2)}, por conta, ordem e comercialização exclusiva da(o)
+  {!Opportunity.Account.Name}
+  </p><br/> -->
+  <p align="justify">
+   A <b>GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ sob nº 07.007.165/0001-34, detentora dos direitos de exploração de 
+   determinadas cultivares e da marca <b>{!MarcaImp}</b>, com sede em Cambé-PR, vem através deste documento <b>AUTORIZAR</b> a {!Opportunity.Cooperante__r.Name}, inscrita 
+   no CNPJ/CPF sob nº {!cnpj} e RENASEM nº {!Opportunity.Renasem_Produtor__c}, a produzir sementes na <b>SAFRA {!safra}</b> das cultivares de soja, cujas categorias 
+   de sementes e áreas dos campos de produção estão relacionados abaixo, estritamente dentro das normas que regulam a produção de sementes de soja no estado 
+   do {!MID(Opportunity.Renasem_Produtor__c,0,2)}, por conta, ordem e comercialização exclusiva da(o) {!Opportunity.Account.Name}
+  </p><br/>
+  </apex:pageBlock>
+
+
+   <apex:pageBlock >
+  <apex:pageblockSection columns="6">
+     <!-- <apex:pageBlockTable value="{!Opportunity.OpportunityLineItems}" var="item" border="1"> -->
+     <apex:pageBlockTable value="{!ItemAnexo}" var="item" border="1">
+        <apex:column style="text-align:center" headerClass="pdfHead" width="15%"> <apex:facet name="header"><div Style="text-align:center">Cultivar</div></apex:facet>{!item.PriceBookEntry.Product2.Variedade__r.Nombre_de_Registro__c}</apex:column>
+        <apex:column style="text-align:center" headerClass="pdfHead" width="15%"> <apex:facet name="header"><div Style="text-align:center">Área de Campo (ha)</div></apex:facet>{!item.Area__c}</apex:column>
+        <apex:column style="text-align:center" headerClass="pdfHead" width="15%"><apex:facet name="header"><div Style="text-align:center">Estado de Produção</div></apex:facet>{!item.Estado_de_Produccion__r.Name}</apex:column>
+        <apex:column style="text-align:center" headerClass="pdfHead"  width="15%"> <apex:facet name="header"><div Style="text-align:center">Categoria a Plantar</div></apex:facet>{!IF(item.Categoria_a_Rebaixar__r.Name == 'PREBA', 'GENÉTICA', item.Categoria_a_Rebaixar__r.Name)}</apex:column>
+
+         <apex:column style="text-align:center" width="15%"><apex:facet name="header"><div Style="text-align:center">Categoria a Produzir</div></apex:facet>{!item.Categoria__r.Name}</apex:column>
+        <!-- <apex:column width="80px"><apex:facet name="header">Volume Autorizado de Comercialização(Sacos)</apex:facet>{!item.Volume__c}</apex:column> -->
+        <!--<apex:column width="80px"><apex:facet name="header">Vol. Aut. de Com.(Sacos)</apex:facet>{!item.Volume__c}</apex:column>-->
+        <apex:column style="text-align:center" width="15%"><apex:facet name="header"><div Style="text-align:center">Expec. Prod.Bruta (Sacos 40kg)</div></apex:facet>{!item.Expec_Prod_Bruta__c}</apex:column>
+        <!--<apex:column width="80px"><apex:facet name="header">Estado de comercialização</apex:facet>{!estCom}</apex:column>-->
+        <apex:column style="text-align:center" width="15%"><apex:facet name="header"><div Style="text-align:center">Estado de comercialização</div></apex:facet>{!item.Observaciones_Tasas__c}</apex:column>
+        </apex:pageBlockTable> 
+  </apex:pageBlockSection>
+  </apex:pageBlock>     
+ 
+  <br/>
+  
+  <p>Cambe, <a style="color: white;"> \signedDate\</a>.</p>  
+  <br/>  
+  <p style="color: white;">\s1\</p>
+  <br/>
+     
+     GDM Genética do Brasil S.A.
+     
+ </td> 
+</tr>
+</table>
+
+  
+</apex:page>

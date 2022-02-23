@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quant_Confirmada__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Cantidad de este producto que fue bajada a SAP en la confirmación de de venta de básica</description>
+    <externalId>false</externalId>
+    <label>Quant. Confirmada</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

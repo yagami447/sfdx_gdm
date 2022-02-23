@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brinde</fullName>
+                <default>false</default>
+                <label>Brinde</label>
+            </value>
+            <value>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+                <label>Outdoor</label>
+            </value>
+            <value>
+                <fullName>Placa</fullName>
+                <default>false</default>
+                <label>Placa</label>
+            </value>
+            <value>
+                <fullName>Semente</fullName>
+                <default>false</default>
+                <label>Semente</label>
+            </value>
+            <value>
+                <fullName>Assistente Técnico</fullName>
+                <default>false</default>
+                <label>Assistente Técnico</label>
+            </value>
+            <value>
+                <fullName>Big Bag</fullName>
+                <default>false</default>
+                <label>Big Bag</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arte de Resultado de Produtividade</fullName>
+                <default>false</default>
+                <label>Arte de Resultado de Produtividade</label>
+            </value>
+            <value>
+                <fullName>Big Bag</fullName>
+                <default>false</default>
+                <label>Big Bag</label>
+            </value>
+            <value>
+                <fullName>Logos</fullName>
+                <default>false</default>
+                <label>Logos</label>
+            </value>
+            <value>
+                <fullName>Cultivares</fullName>
+                <default>false</default>
+                <label>Cultivares</label>
+            </value>
+            <value>
+                <fullName>Manual de Identidade Visual</fullName>
+                <default>false</default>
+                <label>Manual de Identidade Visual</label>
+            </value>
+            <value>
+                <fullName>Placas de campo</fullName>
+                <default>false</default>
+                <label>Placas de campo</label>
+            </value>
+            <value>
+                <fullName>Sacaria</fullName>
+                <default>false</default>
+                <label>Sacaria</label>
+            </value>
+            <value>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+                <label>Outdoor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

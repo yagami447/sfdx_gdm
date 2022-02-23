@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resist_ncia_ao_acamamento__c</fullName>
+    <externalId>false</externalId>
+    <label>Resistência ao acamamento</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resistente</fullName>
+                <default>false</default>
+                <label>Resistente</label>
+            </value>
+            <value>
+                <fullName>Moderadamente resistente</fullName>
+                <default>false</default>
+                <label>Moderadamente resistente</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

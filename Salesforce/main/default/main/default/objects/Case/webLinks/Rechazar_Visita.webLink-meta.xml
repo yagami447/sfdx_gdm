@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rechazar_Visita</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Recusar Visita</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var rt = sforce.connection.query(&quot;SELECT Id FROM RecordType WHERE Name = &apos;RECLAMO COMERCIAL ACEPTADO&apos; limit 1&quot;); 
+var status = &apos;Reclamo Comercial Aceptado&apos; 
+
+records = rt.getArray(&quot;records&quot;); 
+rt_caso = records[0].Id.toString(); 
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.Id = &apos;{!Case.Id}&apos;; 
+caseObj.RecordTypeId = rt_caso; //Poner id del recordtype en cuestion 
+caseObj.Status = status;
+caseObj.Visita_Campo_Rechazada__c = &apos;true&apos;; 
+var result = sforce.connection.update([caseObj]); 
+if (result[0].success==&apos;false&apos;) { 
+alert(result[0].errors.message); 
+} else { 
+window.location.href=window.location.href; 
+}</url>
+</WebLink>

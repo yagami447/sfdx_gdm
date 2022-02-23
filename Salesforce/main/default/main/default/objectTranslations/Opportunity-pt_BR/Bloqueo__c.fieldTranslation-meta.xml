@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bloqueo --></label>
+    <name>Bloqueo__c</name>
+    <picklistValues>
+        <masterLabel>Z0 - BR - Recusado</masterLabel>
+        <translation><!-- Z0 - BR - Recusado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z2 - Bloqueio Contrato</masterLabel>
+        <translation><!-- Z2 - Bloqueio Contrato --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z3 - Bloqueio Pagamento</masterLabel>
+        <translation><!-- Z3 - Bloqueio Pagamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z4 - BR - Bloqueio Salesforce</masterLabel>
+        <translation><!-- Z4 - BR - Bloqueio Salesforce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z6 - BR - Bloqueio – Contrato/Financeiro</masterLabel>
+        <translation><!-- Z6 - BR - Bloqueio – Contrato/Financeiro --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

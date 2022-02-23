@@ -1,0 +1,8 @@
+{!Today}
+
+
+As informações carregadas não foram aprovadas.
+
+Código de identificação {!Opportunity.Name}.
+Conta {!Opportunity.Account}
+Tipo de declaração {!Opportunity.RecordType}

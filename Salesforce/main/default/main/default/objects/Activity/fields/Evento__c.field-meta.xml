@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evento__c</fullName>
+    <externalId>false</externalId>
+    <label>Evento</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Día de Campo</fullName>
+                <default>false</default>
+                <label>Día de Campo</label>
+            </value>
+            <value>
+                <fullName>Treinamento</fullName>
+                <default>false</default>
+                <label>Treinamento</label>
+            </value>
+            <value>
+                <fullName>Palestra</fullName>
+                <default>false</default>
+                <label>Palestra</label>
+            </value>
+            <value>
+                <fullName>Apresentação de dados, novos produtos e novos projetos</fullName>
+                <default>false</default>
+                <label>Apresentação de dados, novos produtos e novos projetos</label>
+            </value>
+            <value>
+                <fullName>Contrato de multiplicação</fullName>
+                <default>false</default>
+                <label>Contrato de multiplicação</label>
+            </value>
+            <value>
+                <fullName>Ensaio de manejo</fullName>
+                <default>false</default>
+                <label>Ensaio de manejo</label>
+            </value>
+            <value>
+                <fullName>Combate à Pirataria</fullName>
+                <default>false</default>
+                <label>Combate à Pirataria</label>
+            </value>
+            <value>
+                <fullName>Relatório Semanal</fullName>
+                <default>false</default>
+                <label>Relatório Semanal</label>
+            </value>
+            <value>
+                <fullName>Reunião</fullName>
+                <default>false</default>
+                <label>Reunião</label>
+            </value>
+            <value>
+                <fullName>Contato Telefônico</fullName>
+                <default>false</default>
+                <label>Contato Telefônico</label>
+            </value>
+            <value>
+                <fullName>Observações Gerais</fullName>
+                <default>false</default>
+                <label>Observações Gerais</label>
+            </value>
+            <value>
+                <fullName>Visita aos Produtores</fullName>
+                <default>false</default>
+                <label>Visita aos Produtores</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

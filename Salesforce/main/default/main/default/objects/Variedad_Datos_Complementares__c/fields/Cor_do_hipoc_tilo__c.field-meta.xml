@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cor_do_hipoc_tilo__c</fullName>
+    <externalId>false</externalId>
+    <label>Cor do hipocótilo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Presente</fullName>
+                <default>false</default>
+                <label>Presente</label>
+            </value>
+            <value>
+                <fullName>Ausente</fullName>
+                <default>false</default>
+                <label>Ausente</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

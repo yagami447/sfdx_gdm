@@ -1,0 +1,11 @@
+La Oportunidad {!Opportunity.Name} foi Aprovada.
+
+Safra: {!Opportunity.Safra__c} 
+Marca: {!Opportunity.Marca__c} 
+
+Tipo Op.:{!Opportunity.Tipo_de_Operacion__c} 
+Região: {!Opportunity.Region__c} 
+
+Comentarios: {!Opportunity.Comentarios__c}
+
+Acessar: {!Opportunity.Link}

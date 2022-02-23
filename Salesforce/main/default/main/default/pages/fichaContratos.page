@@ -1,0 +1,46 @@
+<apex:page standardController="Account" extensions="opportunityFichaExtension" >      
+    <apex:form >    
+    <apex:pageBlock >
+        <apex:pageBlockButtons location="top">
+            <apex:commandLink styleClass="btn" style="text-decoration:none;" value="Novo contrato de multiplicação" action="{!URLFOR($Action.Contrato__c.New, null, ['CF00N40000001mpiP_lkid'=id, 'CF00N40000001mpiP'=cuenta.Name, 'retURL'=id])}" target="_parent" rendered="{!sbx}"/>            
+            <apex:commandLink styleClass="btn" style="text-decoration:none;" value="Novo contrato de multiplicação" action="{!URLFOR($Action.Contrato__c.New, null, ['CF00N40000001mpiP_lkid'=id, 'CF00N40000001mpiP'=cuenta.Name, 'retURL'=id])}" target="_parent" rendered="{!!sbx}"/>
+        </apex:pageBlockButtons>        
+        <apex:outputPanel layout="block" style="overflow:auto; height:200px;margin: 0 2px">                                                   
+        <apex:pageBlockTable value="{!Contratos}" var="o" id="resultPanel">
+            <apex:column headerValue="{!$ObjectType.Contrato__c.Fields.Name.Label}">            
+                <apex:commandLink action="/{!o.Id}" target="_blank" value="{!o.Name}"/>
+            </apex:column> 
+            <apex:column headerValue="{!$ObjectType.Contrato__c.Fields.Sociedad__c.Label}">            
+                <apex:outputField value="{!o.Sociedad__c}"/>
+            </apex:column>           
+            <apex:column rendered="{!!showShortTable}" headerValue="{!$ObjectType.Contrato__c.Fields.Observacao__c.Label}">            
+                <apex:outputField value="{!o.Observacao__c}"/>
+            </apex:column>
+            <apex:column headerValue="Tipo de Registro">            
+                <apex:outputField value="{!o.RecordType.Name}"/>
+            </apex:column>
+            <apex:column headerValue="{!$ObjectType.Contrato__c.Fields.Safra__c.Label}">            
+                <apex:outputField value="{!o.Safra__c}"/>
+            </apex:column>
+            <apex:column rendered="{!!showShortTable}" headerValue="{!$ObjectType.Contrato__c.Fields.Tipo_de_Cota_o__c.Label}">            
+                <apex:outputField value="{!o.Tipo_de_Cota_o__c}"/>
+            </apex:column>
+            <apex:column rendered="{!!showShortTable}" headerValue="{!$ObjectType.Contrato__c.Fields.Cotacao_de_soja__c.Label}">            
+                <apex:outputField value="{!o.Cotacao_de_soja__c}"/>
+            </apex:column>
+            <apex:column rendered="{!!showShortTable}" headerValue="{!$ObjectType.Contrato__c.Fields.Tipo_de_cambio__c.Label}">            
+                <apex:outputField value="{!o.Tipo_de_cambio__c}"/>
+            </apex:column>
+            <apex:column rendered="{!!showShortTable}" headerValue="{!$ObjectType.Contrato__c.Fields.Aditivo_Facturado__c.Label}">            
+                <apex:outputField value="{!o.Aditivo_Facturado__c}"/>
+            </apex:column>
+            <apex:column rendered="{!showShortTable}" headerValue="{!$ObjectType.Contrato__c.Fields.Estado__c.Label}">            
+                <apex:outputField value="{!o.Estado__c}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:outputPanel>
+        <!--<br/>
+        <apex:commandLink action="/002?parent_id={!id}&id={!id}" target="_parent" value="Ir a lista >>"/>        -->
+    </apex:pageBlock>
+    </apex:form>   
+</apex:page>

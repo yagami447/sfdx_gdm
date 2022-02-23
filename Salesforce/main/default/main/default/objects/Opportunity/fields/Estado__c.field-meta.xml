@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISNULL(Inicio_Cargamento__c)),
+			IF(NOT(ISNULL(Inicio_Transporte__c)),
+						IF(NOT(ISNULL(Fin_Transporte__c)),
+									IF(AND(Confirmado__c,NOT(Solicitacao_de_reembolso__c)),
+											&apos;Confirmado&apos;,
+											IF(AND(Solicitacao_de_reembolso__c,NOT(Confirmado__c)),
+													&apos;Em Troca&apos;,
+													&apos;Entregue&apos;)
+											),
+									&apos;Pedido em trânsito&apos;),
+						&apos;Em carregamento&apos;),
+			&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status de transporte</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

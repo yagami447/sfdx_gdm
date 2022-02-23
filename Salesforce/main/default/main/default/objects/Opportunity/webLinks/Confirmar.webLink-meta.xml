@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirmar</fullName>
+    <availability>online</availability>
+    <description>Genera la Confirmación de VB a partir de la Oferta</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Confirmar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Opportunity.Id}&quot;;
+var accId = &quot;{!Opportunity.AccountId}&quot;;
+var ofPendiente = &quot;{!Opportunity.PE_bajar_SAP__c}&quot;;
+var stage = &quot;{!Opportunity.StageName}&quot;;
+var pasa = true;
+
+if(ofPendiente == true){
+alert(&apos;Não pode criar Confirmações. A Oferta tem mudanças pendentes de baixar a SAP.&apos;);
+pasa = false;
+}
+
+if(stage == &quot;AN - Anulada&quot;){
+alert(&apos;Não pode criar Confirmações. Oferta Anulada.&apos;);
+pasa = false;
+}
+
+if(pasa == true){
+var result = sforce.apex.execute(&quot;previsionesController&quot;,&quot;generarConfirmacion&quot;, {opId : id, acId : accId});
+//window.location.href = result;
+alert(result[0]);
+if (result[1] == &apos;ok&apos;){
+var mywin = window.location.href=&apos;/&apos; + result[2];
+}
+}</url>
+</WebLink>

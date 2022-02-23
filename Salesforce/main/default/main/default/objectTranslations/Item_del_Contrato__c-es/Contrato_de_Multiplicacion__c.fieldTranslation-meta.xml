@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Relación entre la cabecera del Contrato con los items(información de la variedad, precio, etc) --></help>
+    <label><!-- Contrato de Multiplicação --></label>
+    <name>Contrato_de_Multiplicacion__c</name>
+    <relationshipLabel><!-- Items del Contrato --></relationshipLabel>
+</CustomFieldTranslation>

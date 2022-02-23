@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Algunas veces la cantidad de hectares qué autorizamos para nuestros clientes, ellos sembra menos. Por ejemplo, la Brasmax autoriza 100 hectares para sembrar, pero lo cliente sembra solamente 50 ha. Entonces, ese campo es “Ha Plantado”. --></help>
+    <label><!-- Ha. Plantados --></label>
+    <name>Area_Plantada__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Negocio por Conta</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Negocios por Contas</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Negocio por Conta</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Este perfil não está de acordo com o perfil Comercial LE --></errorMessage>
+        <name>profile_filter</name>
+    </validationRules>
+</CustomObjectTranslation>

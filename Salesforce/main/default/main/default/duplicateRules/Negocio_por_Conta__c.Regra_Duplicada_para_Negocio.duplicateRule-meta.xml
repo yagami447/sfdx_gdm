@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>Este conjunto de campos já foi cadastrado anteriormente, verifique os dados</alertText>
+    <description>Se o registro contiver os campos Região Comercial, Marca, Cultura e Supervisor iguais a um registro existente, será exibida uma mensagem</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Negocio_por_Conta__c</matchRuleSObjectType>
+        <matchingRule>Regra_para_duplicados_em_Negocios</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Regra Duplicada para Negocio</masterLabel>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>1</sortOrder>
+</DuplicateRule>

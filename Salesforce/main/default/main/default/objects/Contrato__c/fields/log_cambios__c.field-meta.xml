@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>log_cambios__c</fullName>
+    <description>Campo para especificar los cambios que se hicieron en un contrato clonado a partir de la comparacion con el contrato original</description>
+    <externalId>false</externalId>
+    <label>Log de alterações</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

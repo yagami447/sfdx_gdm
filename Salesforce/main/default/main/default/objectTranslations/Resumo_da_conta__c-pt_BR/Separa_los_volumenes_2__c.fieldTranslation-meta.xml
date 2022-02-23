@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- O Sistema da empresa consegue separar os volumes de Produção Própria dos volumes adquiridos e vendidos de Terceiros ? --></help>
+    <label><!-- Separa los volumenes 2 --></label>
+    <name>Separa_los_volumenes_2__c</name>
+</CustomFieldTranslation>

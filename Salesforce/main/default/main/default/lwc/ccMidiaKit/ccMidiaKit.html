@@ -1,0 +1,45 @@
+<template >
+
+    <!--Component Header-->
+    <h2 slot="title" class="neogen-title">
+        Midia Kit
+    </h2>
+
+    <div class="neogen-body" style="background: white">
+        
+        <template for:each={finalList} for:item="category">
+            <div key={category.cat_api} class="category">
+                <lightning-accordion allow-multiple-sections-open active-section-name={category.cat_api}>
+                    <lightning-accordion-section name={category.cat_api} label={category.cat_label}>
+
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr>
+                                    <th>Nome do Arquivo</th>
+                                    <th style="text-align:center" width="20%">Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={category.items} for:item="item">
+                                    <tr key={item.Id}>
+                                        <td>
+                                            {item.Name}
+                                        </td>
+                                        <td style="text-align:center">
+                                            <a href={item.URL__c}>Baixar</a>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                        
+                    </lightning-accordion-section>
+                </lightning-accordion>
+            </div>
+        </template>
+        
+                
+            
+    </div>
+
+</template>

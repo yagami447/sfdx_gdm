@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_CFOP__c</fullName>
+    <externalId>false</externalId>
+    <label>Categoria CFOP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>00 - Industria (cooperativa)</fullName>
+                <default>false</default>
+                <label>00 - Industria (cooperativa)</label>
+            </value>
+            <value>
+                <fullName>01 - Electricidad</fullName>
+                <default>false</default>
+                <label>01 - Electricidad</label>
+            </value>
+            <value>
+                <fullName>02 - Comunicacion</fullName>
+                <default>false</default>
+                <label>02 - Comunicacion</label>
+            </value>
+            <value>
+                <fullName>03 - Transporte</fullName>
+                <default>false</default>
+                <label>03 - Transporte</label>
+            </value>
+            <value>
+                <fullName>04 - Servicios</fullName>
+                <default>false</default>
+                <label>04 - Servicios</label>
+            </value>
+            <value>
+                <fullName>05 - Bienes de consumo</fullName>
+                <default>false</default>
+                <label>05 - Bienes de consumo</label>
+            </value>
+            <value>
+                <fullName>06 - Cliente, no contribuyente</fullName>
+                <default>false</default>
+                <label>06 - Cliente, no contribuyente</label>
+            </value>
+            <value>
+                <fullName>07 - Cliente agricola</fullName>
+                <default>false</default>
+                <label>07 - Cliente agricola</label>
+            </value>
+            <value>
+                <fullName>08 - Empresa de distribucion</fullName>
+                <default>false</default>
+                <label>08 - Empresa de distribucion</label>
+            </value>
+            <value>
+                <fullName>09 - Sucursal del fabricante</fullName>
+                <default>false</default>
+                <label>09 - Sucursal del fabricante</label>
+            </value>
+            <value>
+                <fullName>0 - Industria (cooperativa)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>0 - Industria (cooperativa)</label>
+            </value>
+            <value>
+                <fullName>1 - Electricidad</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1 - Electricidad</label>
+            </value>
+            <value>
+                <fullName>2 - Comunicacion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2 - Comunicacion</label>
+            </value>
+            <value>
+                <fullName>3 - Transporte</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3 - Transporte</label>
+            </value>
+            <value>
+                <fullName>4 - Servicios</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4 - Servicios</label>
+            </value>
+            <value>
+                <fullName>5 - Bienes de consumo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5 - Bienes de consumo</label>
+            </value>
+            <value>
+                <fullName>6 - Cliente, no contribuyente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6 - Cliente, no contribuyente</label>
+            </value>
+            <value>
+                <fullName>7 - Cliente agricola</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>7 - Cliente agricola</label>
+            </value>
+            <value>
+                <fullName>8 - Empresa de distribucion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>8 - Empresa de distribucion</label>
+            </value>
+            <value>
+                <fullName>9 - Sucursal del fabricante</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>9 - Sucursal del fabricante</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

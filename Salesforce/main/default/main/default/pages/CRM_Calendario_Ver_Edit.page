@@ -1,0 +1,194 @@
+<apex:page Controller="CRM_Controller" title="Calendario" sidebar="false" tabStyle="Account" action="{!initEditCalendario}">
+<apex:panelGrid columns="2" cellspacing="0" cellpadding="0" border="0" >
+<apex:outputPanel layout="block" style="width:160px">
+    <c:CRM_Menu clickInfraestructura="{!verInfraestructura}" clickVolver="{!volverAConta}" clickCalendario="{!verCalendario}" clickVendas="{!verVendas}" clickCanalVendas="{!verCanalVendas}" clickAreaAct="{!verAreaAct}" clickPlaneamiento="{!verPlaneamiento}" clickPlaneamientoAreaA="{!verPlaneamientoAreaA}" clickPlaneamientoInfr="{!verPlaneamientoInfr}" clickEncerrar="{!verEncerrar}" clickDatosBonificacion="{!verDatosBonificacion}"/>
+</apex:outputPanel>
+<apex:outputPanel layout="block" style="width:960px">        
+    <apex:form style="width: 1000px" id="form1"> 
+        <apex:Messages style="font-weight:bold;font-size:18px"/>
+        <apex:sectionHeader title="Ver Calendário de Eventos ({!nombre_cuenta} Safra {!campania})"></apex:sectionHeader>       
+        <apex:pageBlock id="selEvento" >
+            <apex:actionRegion >
+            <apex:pageBlockSection columns="2" id="selCuenta2">                
+                <apex:outputField value="{!ver_calendario.Evento__c}"/>
+                <apex:outputField value="{!ver_calendario.Marca__c}"/>                
+                <apex:inputField value="{!ver_calendario.Realizado_por__c}" rendered="{!editVerCalendario}"/>
+                <apex:outputField value="{!ver_calendario.Realizado_por__c}" rendered="{!!editVerCalendario}"/>
+                <apex:inputField value="{!ver_calendario.Participante__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:outputField value="{!ver_calendario.Participante__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                                
+                <!--<apex:inputField value="{!ver_calendario.Data__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra')}"/>
+                <apex:outputField value="{!ver_calendario.Data__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra')}"/>-->                
+                <apex:inputField value="{!ver_calendario.Data_e_horario_inicio__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:outputField value="{!ver_calendario.Data_e_horario_inicio__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                               
+                <apex:inputField value="{!ver_calendario.Data_e_horario_termino__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:outputField value="{!ver_calendario.Data_e_horario_termino__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                
+                <apex:inputField value="{!ver_calendario.Revenda__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:outputField value="{!ver_calendario.Revenda__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                
+                <apex:inputField value="{!ver_calendario.Nome_do_agricultor__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>
+                <apex:outputField value="{!ver_calendario.Nome_do_agricultor__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>
+                <apex:inputField value="{!ver_calendario.Municipio__c}" rendered="{!editVerCalendario}"><apex:actionSupport event="onchange" action="{!setearEstadoEditCalendario2}" reRender="selCuenta2"></apex:actionSupport></apex:inputField>
+                <apex:outputField value="{!ver_calendario.Municipio__c}" rendered="{!!editVerCalendario}"/>                
+                <!--<apex:outputField value="{!ver_calendario.Estado__c}" rendered="{!ver_calendario.Evento__c = 'Día de Campo'}"/>-->                
+                <apex:outputText label="Estado" value="{!estadoEditCal2}" rendered="{!ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras'}"/>
+                <apex:inputField value="{!ver_calendario.Custo__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                
+                <apex:outputField value="{!ver_calendario.Custo__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                
+                <apex:inputField value="{!ver_calendario.Latitud__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>                
+                <apex:outputField value="{!ver_calendario.Latitud__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>                
+                <apex:inputField value="{!ver_calendario.Longitud__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>                
+                <apex:outputField value="{!ver_calendario.Longitud__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>                
+                <apex:inputField value="{!ver_calendario.Direccion__c}" rendered="{!editVerCalendario && ver_calendario.Evento__c = 'Emplacamento'}"/>
+                <apex:outputField value="{!ver_calendario.Direccion__c}" rendered="{!!editVerCalendario && ver_calendario.Evento__c = 'Emplacamento'}"/>               
+                <apex:inputField value="{!ver_calendario.Numero_de_participantess__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:outputField value="{!ver_calendario.Numero_de_participantess__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                                
+                <apex:inputField value="{!ver_calendario.Evaluacion__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras')}"/>
+                <apex:outputField value="{!ver_calendario.Evaluacion__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras')}"/>                                   
+                <apex:inputField value="{!ver_calendario.Irrigado__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>                
+                <apex:outputField value="{!ver_calendario.Irrigado__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial')}"/>
+                <apex:inputField value="{!ver_calendario.Finalizado__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>                
+                <apex:outputField value="{!ver_calendario.Finalizado__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:inputField value="{!ver_calendario.Comentarios__c}" rendered="{!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Area comercial' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>
+                <apex:outputField value="{!ver_calendario.Comentarios__c}" rendered="{!!editVerCalendario && (ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Area comercial' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica')}"/>            
+            </apex:pageBlockSection>
+            </apex:actionRegion>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!editarVerCalendario}" value="Editar" rendered="{!!editVerCalendario}"></apex:commandButton>
+                <apex:commandButton action="{!updateCalendarioCab}" value="Grabar" rendered="{!editVerCalendario}"></apex:commandButton>
+                <apex:commandButton action="{!cancelarEditarVerCalendario}" value="Cancelar" rendered="{!editVerCalendario}"></apex:commandButton>
+                <apex:commandButton action="{!volverCalendario}" value="Voltar" rendered="{!ver_calendario.Evento__c != 'Lado a Lado' && ver_calendario.Evento__c != 'Strip Test' && ver_calendario.Evento__c != 'Emplacamento' && ver_calendario.Evento__c != 'Día de Campo' && ver_calendario.Evento__c != 'Estação DONMARIO MAS' && ver_calendario.Evento__c != 'Tour dos Máximos Rendimentos' && ver_calendario.Evento__c != 'Feiras' && ver_calendario.Evento__c != 'Treinamento' && ver_calendario.Evento__c != 'Palestra' && ver_calendario.Evento__c != 'Area comercial' && ver_calendario.Evento__c != 'Encontro Técnico' && ver_calendario.Evento__c != 'Jornada Técnica'}"></apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock> 
+        
+        <apex:pageBlock title="Items" id="items" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Area comercial' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica'}">
+        <apex:pageBlock id="selItems">            
+            <apex:pageBlockSection columns="2" id="selCuenta3">    
+                <apex:actionRegion >            
+                <apex:pageBlockTable value="{!ver_calendario_detalles}" var="item" id="vSel">
+                    <apex:column headerValue="Obtentor">
+                        <apex:outputField value="{!item.Obtentor__c}" rendered="{!item.Indice__c != editNewItemEvento}"></apex:outputField>                    
+                        <apex:inputField value="{!editNuevoItemEvento.Obtentor__c}" rendered="{!item.Indice__c == editNewItemEvento}"><apex:actionSupport action="{!getVariedadesObt_Edit_NewEvento}" event="onchange" reRender="vSel"></apex:actionSupport></apex:inputField>            
+                    </apex:column>
+                    <apex:column headerValue="Cultivar">
+                        <apex:outputField value="{!item.Cultivar__c}" rendered="{!item.Indice__c != editNewItemEvento}"></apex:outputField>
+                        <apex:selectList value="{!item.Cultivar__c}" rendered="{!item.Indice__c == editNewItemEvento}" size="1"><apex:selectOptions value="{!optionsEditNuevoEvento}"/></apex:selectList>
+                    </apex:column>
+                    <apex:column headerValue="Area Plantada" rendered="{!ver_calendario.Evento__c != 'Día de Campo' && ver_calendario.Evento__c != 'Estação DONMARIO MAS' && ver_calendario.Evento__c != 'Tour dos Máximos Rendimentos' && ver_calendario.Evento__c != 'Feiras' && ver_calendario.Evento__c != 'Treinamento' && ver_calendario.Evento__c != 'Palestra' && ver_calendario.Evento__c != 'Emplacamento' && ver_calendario.Evento__c != 'Encontro Técnico' && ver_calendario.Evento__c != 'Jornada Técnica'}">
+                        <apex:outputField value="{!item.Area_plantada__c}" rendered="{!item.Indice__c != editNewItemEvento}"/>
+                        <apex:inputField value="{!item.Area_plantada__c}" rendered="{!item.Indice__c == editNewItemEvento}"/>                
+                    </apex:column>
+                    <apex:column headerValue="Area Colhida" rendered="{!ver_calendario.Evento__c != 'Día de Campo' && ver_calendario.Evento__c != 'Estação DONMARIO MAS' && ver_calendario.Evento__c != 'Tour dos Máximos Rendimentos' && ver_calendario.Evento__c != 'Feiras' && ver_calendario.Evento__c != 'Treinamento' && ver_calendario.Evento__c != 'Palestra' && ver_calendario.Evento__c != 'Encontro Técnico' && ver_calendario.Evento__c != 'Jornada Técnica'}">
+                        <apex:outputField value="{!item.Area_Colhida__c}" rendered="{!item.Indice__c != editNewItemEvento}"/>
+                        <apex:inputField value="{!item.Area_Colhida__c}" rendered="{!item.Indice__c == editNewItemEvento}"/>                
+                    </apex:column>
+                    <apex:column headerValue="Produtividade" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial'}">
+                        <apex:outputField value="{!item.Produtividade__c}" rendered="{!item.Indice__c != editNewItemEvento}"/>
+                        <apex:inputField value="{!item.Produtividade__c}" rendered="{!item.Indice__c == editNewItemEvento}"/>                                        
+                    </apex:column> 
+                    
+                    <apex:column headerValue="Data de plantio" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Area comercial'}">
+                        <apex:outputField value="{!item.Data_de_plantio__c}" rendered="{!item.Indice__c != editNewItemEvento}"/>
+                        <apex:inputField value="{!item.Data_de_plantio__c}" rendered="{!item.Indice__c == editNewItemEvento}"/>                
+                    </apex:column>
+                    <apex:column headerValue="Data de colheita" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Area comercial'}">
+                        <apex:outputField value="{!item.Data_de_colheita__c}" rendered="{!item.Indice__c != editNewItemEvento}"/>
+                        <apex:inputField value="{!item.Data_de_colheita__c}" rendered="{!item.Indice__c == editNewItemEvento}"/>                
+                    </apex:column>                     
+                    <apex:column headerValue=""> 
+                        <apex:commandLink action="{!editItemC}" value="Editar" rerender="vSel" rendered="{!item.Indice__c != editNewItemEvento}">                               
+                            <apex:param name="edit_new_item_c" value="{!item.Indice__c}" assignTo="{!editNewItemEvento}"/>
+                        </apex:commandLink>&nbsp;                                            
+                        <apex:commandLink style="width: 100px" rendered="{!item.Indice__c != editNewItemEvento}" value="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este registro?')" action="{!delEditItemCalendario}">
+                            <apex:param name="elimEditItemCal" value="{!item.Indice__c}"/>
+                        </apex:commandLink>
+                        <apex:commandLink action="{!confirmEditItemCal}" rerender="vSel" rendered="{!item.Indice__c == editNewItemEvento}" value="Listo">                            
+                            <apex:param name="confir_edit_new_item_cal" value="{!item.Indice__c}" />
+                        </apex:commandLink>
+                    </apex:column>                  
+                </apex:pageBlockTable>
+                </apex:actionRegion>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!updateCalendarioDetalle}" value="Grabar" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Area comercial' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica'}"></apex:commandButton>
+                <apex:commandButton action="{!volverCalendario}" value="Voltar" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Día de Campo' || ver_calendario.Evento__c = 'Estação DONMARIO MAS' || ver_calendario.Evento__c = 'Tour dos Máximos Rendimentos' || ver_calendario.Evento__c = 'Feiras' || ver_calendario.Evento__c = 'Treinamento' || ver_calendario.Evento__c = 'Palestra' || ver_calendario.Evento__c = 'Area comercial' || ver_calendario.Evento__c = 'Encontro Técnico' || ver_calendario.Evento__c = 'Jornada Técnica'}"></apex:commandButton>
+            </apex:pageBlockButtons>
+                                    
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+            <apex:actionRegion >
+            <apex:pageBlockSection title="Adicionar" >
+            <apex:pageBlockTable value="{!ver_calendario_detalle}" var="item" id="vSel2">            
+                <apex:column headerValue="Obtentor">                    
+                    <apex:inputField value="{!addNuevoItemEvento.Obtentor__c}"><apex:actionSupport action="{!getVariedadesObt_Add_NewEvento}" event="onchange" reRender="vSel2"></apex:actionSupport></apex:inputField>                                
+                </apex:column>
+                <apex:column headerValue="Cultivar">
+                    <apex:selectList value="{!item.Cultivar__c}" size="1"><apex:selectOptions value="{!optionsAddNuevoEvento}"/></apex:selectList>
+                </apex:column>
+                <apex:column headerValue="Area Plantada" rendered="{!ver_calendario.Evento__c != 'Día de Campo' && ver_calendario.Evento__c != 'Estação DONMARIO MAS' && ver_calendario.Evento__c != 'Tour dos Máximos Rendimentos' && ver_calendario.Evento__c != 'Feiras' && ver_calendario.Evento__c != 'Treinamento' && ver_calendario.Evento__c != 'Palestra' && ver_calendario.Evento__c != 'Emplacamento' && ver_calendario.Evento__c != 'Encontro Técnico' && ver_calendario.Evento__c != 'Jornada Técnica'}">
+                    <apex:inputField value="{!item.Area_plantada__c}"/>                
+                </apex:column>
+                <apex:column headerValue="Area Colhida" rendered="{!ver_calendario.Evento__c != 'Día de Campo' && ver_calendario.Evento__c != 'Estação DONMARIO MAS' && ver_calendario.Evento__c != 'Tour dos Máximos Rendimentos' && ver_calendario.Evento__c != 'Feiras' && ver_calendario.Evento__c != 'Treinamento' && ver_calendario.Evento__c != 'Palestra' && ver_calendario.Evento__c != 'Encontro Técnico' && ver_calendario.Evento__c != 'Jornada Técnica'}">
+                    <apex:inputField value="{!item.Area_Colhida__c}"/>                
+                </apex:column>
+                <apex:column headerValue="Produtividade" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento' || ver_calendario.Evento__c = 'Area comercial'}">
+                    <apex:inputField value="{!item.Produtividade__c}"/>                                        
+                </apex:column> 
+                <apex:column headerValue="Data de plantio" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Area comercial'}">
+                    <apex:inputField value="{!item.Data_de_plantio__c}"/>                
+                </apex:column>
+                <apex:column headerValue="Data de colheita" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Area comercial'}">
+                    <apex:inputField value="{!item.Data_de_colheita__c}"/>                
+                </apex:column>   
+                <apex:column headerValue="">                                             
+                    <apex:commandLink style="width: 100px" value="Adicionar" action="{!addEditItemCalendario}"/>
+                </apex:column> 
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            </apex:actionRegion>
+        </apex:pageBlock>
+        
+        </apex:pageBlock>
+        
+                        
+        <!--<apex:pageBlock title="Arquivos" id="archivos" rendered="{!ver_calendario.Evento__c = 'Lado a Lado' || ver_calendario.Evento__c = 'Strip Test' || ver_calendario.Evento__c = 'Emplacamento'}">-->
+        <apex:pageBlock title="Arquivos" id="archivos">
+        <apex:pageBlock id="selArch">                        
+            <apex:pageBlockSection columns="2" id="selArch3">                
+                <apex:pageBlockTable value="{!ver_calendario_attachs}" var="item" id="vSel3"> 
+                    <apex:column headerValue="Nombre">
+                        <apex:outputLink value="/{!item.Id}" id="elLink22" rendered="{!item.Id != null}" target="_blank">
+                            <apex:outputText value="{!item.Name}"/>
+                        </apex:outputLink>
+                        <apex:outputText value="{!item.Name}" rendered="{!item.Id = null}"></apex:outputText>                                                 
+                    </apex:column>                   
+                    <apex:column headerValue="">      
+                        <apex:commandLink action="{!delEditArchCalendario}" style="width: 100px" value="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este arquivo?')" >                            
+                            <apex:param name="elimEditArchCal" value="{!item.Description}"/>                            
+                        </apex:commandLink>                                                
+                    </apex:column>                                      
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>            
+                                    
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Anexar" >            
+            <apex:pageBlockTable value="{!ver_calendario_attach}" var="item" id="vSel4">                                                           
+                <apex:column headerValue="Arquivo">
+                    <apex:inputFile value="{!item.Body}" filename="{!item.name}"/>                
+                </apex:column>                
+                <apex:column headerValue="">   
+                    <apex:commandLink style="width: 100px" value="Adicionar" action="{!addEditArchCalendario}"/>                    
+                </apex:column>                 
+            </apex:pageBlockTable>            
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        </apex:pageBlock>
+                                                                
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>              
+    </apex:form>     
+    
+</apex:outputPanel>
+       
+</apex:panelGrid>
+</apex:page>

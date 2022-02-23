@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Administracion_y_Fiscalizador</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Aprobada</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>El gerente evalua y autoriza o no</description>
+        <label>Evaluación de Gerente</label>
+        <name>Evaluacion_de_Gerente</name>
+        <rejectionActions>
+            <action>
+                <name>Aviso_de_Desaprobaci_n_x_Gerente</name>
+                <type>Alert</type>
+            </action>
+            <action>
+                <name>Limpiar_Next_Step</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Rechazada_x_Supervisor</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Este proceso de Aprobación se utiliza para todos los Anexos.
+Para Anexos I, II,III,IV y V. Y para los anexos de Rebaixamento de Ha y de Categoría.
+Todos avisarán al Focal Point de la disponibilidad del Documento para imprimir una vez Autorizado x el Gerente. Con aclaración del Anexo.</description>
+    <emailTemplate>Circuito_de_Anexos/CA_Anexo_I</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Opportunity.RecordType</field>
+            <operation>equals</operation>
+            <value>Anexo I,Anexo I Rebaixamento Ha,Anexo II,Anexo III,Anexo IV,Anexo V,Anexo II Rebaixamento Sacas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Owner</field>
+            <operation>equals</operation>
+            <value>Sérgio Bertagnoli</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Aprobada,AN - Anulada</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Aviso_de_Aprobacion_FINAL</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Contrato_de_Multiplicaci_n_disponible</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Fecha_Cierre</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Limpiar_Next_Step</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Limpiar_Motivo_de_Rechazo</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Pendiente_de_An_lisis</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Anexos Sergio</label>
+    <processOrder>22</processOrder>
+    <recallActions>
+        <action>
+            <name>Limpiar_Next_Step</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

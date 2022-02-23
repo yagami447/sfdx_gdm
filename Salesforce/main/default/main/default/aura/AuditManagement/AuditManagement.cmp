@@ -1,0 +1,92 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="AuditManagementController">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="calEvent" event="c:calendarEvent" action="{!c.handleCalendarEvent}" />
+    <aura:handler name="filtersEvent" event="c:calendarFiltersEvent" action="{!c.handleCalendarFiltersEvent}" />
+
+    <aura:attribute name="title" type="String" default="Calendário do Plano de Auditoria" />
+    <aura:attribute name="subtitle" type="String" default="Gerenciar suas visitas" />
+    <aura:attribute name="panelLeftTitle" type="String" default="Atualizar evento" />
+    <aura:attribute name="panelRightTitle" type="String" default="Filtrar eventos" />
+    <aura:attribute name="auditors" type="List" default="[]" />
+    <aura:attribute name="auditorSelected" type="String" default="" />
+
+    <div class="slds-box slds-theme_default">
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <lightning:icon iconName="standard:key_dates" alternativeText="Key dates"
+                                title="Key dates" />
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__name">
+                                <div class="slds-page-header__name-title">
+                                    <h1 class="slds-page-header__title slds-truncate" title="{!v.title}">{!v.title}</h1>
+                                </div>
+                            </div>
+                            <h2 class="slds-page-header__name-meta">{!v.subtitle}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-var-m-vertical_small">
+            <div class="slds-col">
+                <lightning:buttonIcon aura:id="formButton" iconName="utility:toggle_panel_left" variant="brand"
+                    onclick="{!c.togglePanelForm}" alternativeText="Alternar panel de visitas"
+                    title="Alternar panel de visitas" />
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning:combobox name="auditor" label="Pesquisar Auditor" placeholder="Pesquisar Auditor"
+                    options="{!v.auditors}" value="{!v.auditorSelected}" />
+            </div>
+            <div class="slds-col">
+                <lightning:buttonIcon aura:id="filtersButton" iconName="utility:filterList" variant="border"
+                    onclick="{!c.togglePanelFilters}" alternativeText="Alternar panel de filtros"
+                    title="Alternar panel de filtros" />
+            </div>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col">
+                <div aura:id="panelForm"
+                    class="slds-panel slds-size_large slds-panel_docked slds-panel_docked-left slds-is-open slds-var-m-right_small">
+                    <div class="slds-panel__header">
+                        <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate"
+                            title="{!v.panelLeftTitle}">{!v.panelLeftTitle}</h2>
+                        <div class="slds-panel__header-actions">
+                            <lightning:buttonIcon class="slds-panel__close" iconName="utility:close" variant="bare"
+                                onclick="{!c.closePanel}" alternativeText="Cerrar panel" title="Cerrar panel"
+                                name="closeFormButton" />
+                        </div>
+                    </div>
+                    <div class="slds-panel__body">
+                        <c:VisitsForm aura:id="form" />
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-box">
+                <c:FullCalendarJs aura:id="calendar" auditorSelected="{!v.auditorSelected}" />
+            </div>
+            <div class="slds-col">
+                <div aura:id="panelFilters"
+                    class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-var-m-left_small">
+                    <div class="slds-panel__header">
+                        <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate"
+                            title="{!v.panelRightTitle}">
+                            {!v.panelRightTitle}</h2>
+                        <div class="slds-panel__header-actions">
+                            <lightning:buttonIcon class="slds-panel__close" iconName="utility:close" variant="bare"
+                                onclick="{!c.closePanel}" alternativeText="Cerrar panel" title="Cerrar panel"
+                                name="closeFiltersButton" />
+                        </div>
+                    </div>
+                    <div class="slds-panel__body">
+                        <c:FiltersForm />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

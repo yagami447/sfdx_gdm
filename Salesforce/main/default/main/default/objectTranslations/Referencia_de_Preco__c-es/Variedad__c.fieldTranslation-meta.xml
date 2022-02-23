@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo clave: Variedad+Tipo de Referencia.
+Determinan: Preço y Tipo de Cotação --></help>
+    <label><!-- Variedad --></label>
+    <name>Variedad__c</name>
+    <relationshipLabel><!-- Referencias de Preço --></relationshipLabel>
+</CustomFieldTranslation>

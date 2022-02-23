@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reclamo_Contactado</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name = &apos;RECLAMO DESARROLLO ACEPTADO&apos; || $RecordType.Name = &apos;RECLAMO COMERCIAL ACEPTADO&apos; || $RecordType.Name = &apos;RECLAMO RECHAZADO&apos;, ISNULL( Fecha_de_Contacto__c ))</errorConditionFormula>
+    <errorMessage>Não Passar a reclamação para a seguinte etapa , sem entrar em contato com o Produtor.</errorMessage>
+</ValidationRule>

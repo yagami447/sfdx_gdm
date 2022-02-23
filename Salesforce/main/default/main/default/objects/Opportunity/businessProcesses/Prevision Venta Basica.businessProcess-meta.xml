@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevision Venta Basica</fullName>
+    <description>Prevision Venta Basica</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>AN - Anulada</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>AU - Autorizada</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Aberta</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>PE - Pendiente</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>RE - Rechazada por Facturacion</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>RR - Rechazada para Revision</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

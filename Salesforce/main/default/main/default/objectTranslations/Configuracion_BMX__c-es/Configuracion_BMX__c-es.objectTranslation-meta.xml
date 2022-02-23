@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configuracion_BMX</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configuraciones_BMX</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato de Configuracion_BMX</layout>
+        <sections>
+            <label><!-- Interfaz SAP --></label>
+            <section>Interfaz SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Portal Anexos --></label>
+            <section>Portal Anexos</section>
+        </sections>
+        <sections>
+            <label><!-- Portal Eventos --></label>
+            <section>Portal Eventos</section>
+        </sections>
+        <sections>
+            <label><!-- Portal Votacion --></label>
+            <section>Portal Votacion</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Os dados não estão de acordo com o formato: dd/mm --></errorMessage>
+        <name>Formato_Data_Final_CRM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Os dados não estão de acordo com o formato: dd/mm --></errorMessage>
+        <name>Formato_Data_Inicial_CRM</name>
+    </validationRules>
+</CustomObjectTranslation>

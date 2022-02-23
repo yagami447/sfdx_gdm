@@ -1,0 +1,3 @@
+Una Oportunidad del tipo {!Opportunity.RecordTypeId} está pendiente de su aprobación.
+El propietario se {!Opportunity.OwnerId}
+Y la Oportunidad es {!Opportunity.Id}

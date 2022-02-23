@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preco_unitario_base__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Kg_de_produto__c &gt;= Campaign.Kg_para_quarto_preco__c, Campaign.Quarto_Preco_Multiplicacao__c,
+    IF(Kg_de_produto__c &gt;= Campaign.Kg_para_terceiro_prec__c, Campaign.Terceiro_Preco_Multiplicacao__c,
+        IF(Kg_de_produto__c &gt;= Campaign.Kg_para_segundo_preco__c, Campaign.Segundo_Preco_Multiplicacao__c, Campaign.Primeiro_Preco_Multiplicacao__c
+          )
+    )
+)</formula>
+    <label>Preço unitário base</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

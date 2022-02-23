@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Igual_Sociedad_que_la_cabecera</fullName>
+    <active>false</active>
+    <description>Sociedad del producto igual al de la cabecera del Contrato</description>
+    <errorConditionFormula>text(Cultivar__r.Sociedad__c ) &lt;&gt;  text(Contrato_de_Multiplicacion__r.Sociedad__c )</errorConditionFormula>
+    <errorDisplayField>Cultivar__c</errorDisplayField>
+    <errorMessage>O produto selecionado é outra empresa.El producto seleccionado corresponde a otra Sociedad.</errorMessage>
+</ValidationRule>

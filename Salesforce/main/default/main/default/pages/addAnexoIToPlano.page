@@ -1,0 +1,246 @@
+<apex:page lightningStyleSheets="true" standardController="Plano_de_Auditoria__c" extensions="addAnexoIToPlanoController"
+    action="{!retrieveAnexosFromPlanoDeAuditoria}" sidebar="false" showHeader="false" standardStylesheets="false" applyHtmlTag="false"
+    applyBodyTag="false" docType="html-5.0">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.min.css')}" />
+    </head>
+    <div class="SLDS">
+
+        <body>
+            <apex:form >
+                <div class="slds-page-header slds-page-header_object-home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <div class="slds-grid">
+                        <div class="slds-col">
+                            <div class="slds-media slds-no-space slds-grow">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-goals">
+                                        <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#goal')}"></use>
+                                    </svg>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p class="slds-text-title--caps slds-line-height--reset">Adiciona AnexosI a:</p>
+                                    <p class="slds-page-header__title slds-truncate" title="ALL">{!Plano_de_Auditoria__c.Name}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                            <apex:outputPanel >
+                                <apex:commandLink styleClass="slds-button slds-button--neutral slds-not-selected" value="Salvar" action="{!Save}" target="_parent"
+                                />
+                                <apex:commandButton styleClass="slds-button slds-button--brand slds-not-selected" action="{!Cancel}" value="Cancelar" immediate="true"
+                                    html-formnovalidate="formnovalidate" />
+                            </apex:outputPanel>
+                        </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-align-bottom">
+                            <p class="slds-text-body_large">Anexos I Selecionados </p>
+                        </div>
+                    </div>
+                    <apex:outputPanel styleClass="fyi" id="mess">
+                        <!--<apex:pageMessage severity="Error" strength="1"/> -->
+                        <apex:pageMessages id="msgId"></apex:pageMessages>
+                    </apex:outputpanel>
+                </div>
+                <apex:outputPanel id="Selected">
+                    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                        <thead>
+                            <tr class="slds-text-title--caps">
+                                <th scope="col">
+                                    <div class="slds-truncate">Acción</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Nombre de la Conta</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Nombre</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Tipo de Registro</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Marca</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Safra</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!anexosSelected}" var="anexo">
+                                <tr>
+                                    <td>
+                                        <div class="slds-truncate" title="Action">
+                                            <apex:commandButton styleClass="slds-button" value="Excluir" action="{!removeAnexo}" reRender="Selected, searchResults, msgId">
+                                                <apex:param value="{!anexosSelected[anexo].Id}" assignTo="{!toRemove}" name="toRemove" />
+                                            </apex:commandButton>
+                                        </div>
+                                    </td>
+                                    <td data-label="Nombre de la Conta">
+                                        <div class="slds-truncate" title="Nombre de la Conta">
+                                            <apex:outputText value="{!anexosSelected[anexo].Account.Name}" />
+                                        </div>
+                                    </td>
+                                    <td data-label="Nombre">
+                                        <div class="slds-truncate" title="Nombre">
+                                            <apex:outputText value="{!anexosSelected[anexo].Name}" />
+                                        </div>
+                                    </td>
+                                    <td data-label="Nombre">
+                                        <div class="slds-truncate" title="Tipo de Registro">
+                                            <apex:outputText value="{!anexosSelected[anexo].RecordType.Name}" />
+                                        </div>
+                                    </td>
+                                    <td data-label="Nombre">
+                                        <div class="slds-truncate" title="Marca">
+                                            <apex:outputText value="{!anexosSelected[anexo].Marca__c}" />
+                                        </div>
+                                    </td>
+                                    <td data-label="Nombre">
+                                        <div class="slds-truncate" title="Safra">
+                                            <apex:outputText value="{!anexosSelected[anexo].Safra__c}" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </apex:outputPanel>
+                <apex:outputpanel id="search">
+                    <div class="slds-page-header slds-page-header_object-home" style="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <div class="slds-grid slds-grid_vertical">
+                            <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+                                <div class="slds-form-element">
+                                    <div class="slds-combobox_container">
+                                        <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox"
+                                            role="combobox">
+                                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                                                <apex:selectList id="AccountSearch" value="{!accountsSelected}" styleClass="form-control col-md-2 col-xs-12" style="width:auto"
+                                                    size="1">
+                                                    <apex:selectOptions value="{!accounts}"></apex:selectOptions>
+                                                </apex:selectList>
+                                                <apex:selectList id="OppSearch" value="{!oppSelected}" styleClass="form-control col-md-2 col-xs-12" style="width:auto" size="1">
+                                                    <apex:selectOptions value="{!oppFiltrer}"></apex:selectOptions>
+                                                </apex:selectList>
+                                                <apex:selectList id="MarcaSearch" value="{!marcaSelected}" styleClass="form-control col-md-2 col-xs-12" style="width:auto"
+                                                    size="1">
+                                                    <apex:selectOptions value="{!marcaFiltrer}"></apex:selectOptions>
+                                                </apex:selectList>
+                                                <apex:selectList id="SafraSearch" value="{!safraSelected}" styleClass="form-control col-md-2 col-xs-12" style="width:auto"
+                                                    size="1">
+                                                    <apex:selectOptions value="{!safraFiltrer}"></apex:selectOptions>
+                                                </apex:selectList>
+                                                <apex:commandButton styleClass="slds-button" value="Filtrar" action="{!getAnexosI}" reRender="Selected, searchResults" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputpanel>
+                <apex:outputpanel styleclass="slds-grid" id="searchResults">
+                    <div style="width: 100%">
+                        <apex:pageBlock >
+                            <table class="slds-table slds-table--bordered slds-table--cell-buffer" style="width: 100%">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col">
+                                            <div class="slds-truncate">Acción
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate">Nombre de la Conta</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate">Nombre</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate">Tipo de Registro</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate">Marca</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate">Safra</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!anexosInDataBase}" var="anexo">
+                                        <tr>
+                                            <td>
+                                                <div class="slds-truncate" title="Action">
+                                                    <apex:commandButton styleClass="slds-button slds-button--neutral" value="Adicionar" action="{!addAnexos}" reRender="Selected, searchResults">
+                                                        <apex:param value="{!anexosInDataBase[anexo].Id}" assignTo="{!toAdd}" name="toAdd" />
+                                                    </apex:commandButton>
+                                                </div>
+                                            </td>
+                                            <td data-label="Nombre de la Conta">
+                                                <div class="slds-truncate" title="Nombre de la Conta">
+                                                    <apex:outputText value="{!anexosInDataBase[anexo].Account.Name}" />
+                                                </div>
+                                            </td>
+                                            <td data-label="Nombre">
+                                                <div class="slds-truncate" title="Nombre">
+                                                    <apex:outputText value="{!anexosInDataBase[anexo].Name}" />
+                                                </div>
+                                            </td>
+                                            <td data-label="Nombre">
+                                                <div class="slds-truncate" title="Tipo de Registro">
+                                                    <apex:outputText value="{!anexosInDataBase[anexo].RecordType.Name}" />
+                                                </div>
+                                            </td>
+                                            <td data-label="Nombre">
+                                                <div class="slds-truncate" title="Marca">
+                                                    <apex:outputText value="{!anexosInDataBase[anexo].Marca__c}" />
+                                                </div>
+                                            </td>
+                                            <td data-label="Nombre">
+                                                <div class="slds-truncate" title="Safra">
+                                                    <apex:outputText value="{!anexosInDataBase[anexo].Safra__c}" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                    <apex:pageBlockButtons >
+                                        <apex:commandButton value="Anterior" action="{!previous}" rerender="searchResults" status="status" disabled="{!DisablePrevious}"
+                                        />
+                                        <apex:commandButton value="Segue" action="{!next}" reRender="searchResults" status="status" disabled="{!DisableNext}" />
+                                        <apex:actionStatus id="status" startText="Loading..." />
+                                    </apex:pageBlockButtons>
+                                </tbody>
+                            </table>
+                        </apex:pageBlock>
+                    </div>
+                </apex:outputpanel>
+            </apex:form>
+        </body>
+    </div>
+    <script type='text/javascript'>
+        // Esta variable indica el tiempo (segs) que se toma en ejecutar la busqueda, para cambiarla, cambiar este valor            
+        var waitTime = 1;
+
+        var countDown = waitTime + 1;
+        var started = false;
+
+        function resetTimer() {
+            countDown = waitTime + 1;
+            if (started == false) {
+                started = true;
+                runCountDown();
+            }
+        }
+        function runCountDown() {
+            countDown--;
+            if (countDown <= 0) {
+                fetchResults();
+                started = false;
+            }
+            else {
+                window.setTimeout(runCountDown, 500);
+            }
+        }
+    </script>
+</apex:page>

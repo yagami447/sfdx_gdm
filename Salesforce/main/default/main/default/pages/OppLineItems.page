@@ -1,0 +1,13 @@
+<apex:page standardController="Opportunity" extensions="opportunityExtension" sidebar="false">    
+    <apex:form >
+        <apex:pageBlock >
+        <apex:outputPanel layout="block" style="overflow:auto; height:190px;margin: 0 2px" >
+            <apex:pageBlockTable value="{!Items}" var="i">
+                <apex:repeat value="{!Fields}" var="f">                    
+                    <apex:column headerValue="{!IF(IsRebaixamento && f.FieldPath = 'Categoria_a_Rebaixar__c','Categoria Rebaixada',f.label)}"> <apex:outputField value="{!i[f]}" /></apex:column>
+                </apex:repeat>
+            </apex:pageBlockTable>
+        </apex:outputPanel> 
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>

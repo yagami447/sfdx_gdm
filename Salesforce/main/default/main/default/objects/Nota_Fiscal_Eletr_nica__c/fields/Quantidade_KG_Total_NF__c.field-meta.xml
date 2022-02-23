@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantidade_KG_Total_NF__c</fullName>
+    <description>Marca en tiempo real la cantidad total de Quantidade KG de productos asociados a la Nota Fiscal</description>
+    <externalId>false</externalId>
+    <label>Quantidade KG Total NF</label>
+    <summarizedField>Produto_da_nota_fiscal__c.Quantidade_KG__c</summarizedField>
+    <summaryForeignKey>Produto_da_nota_fiscal__c.Nota_Fiscal_Eletr_nica__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

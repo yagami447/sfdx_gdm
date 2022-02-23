@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Macrorregi_o_de_Vendas__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Macrorregião de Vendas</label>
+    <referenceTo>Macrorregi_o_de_Vendas__c</referenceTo>
+    <relationshipLabel>Microrregião de Vendas</relationshipLabel>
+    <relationshipName>Microrregi_o_de_Vendas</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_Pedido__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo de Pedido</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Z0 - BR - NC Cancelamento da fatura</fullName>
+                <default>false</default>
+                <label>Z0 - BR - NC Cancelamento da fatura</label>
+            </value>
+            <value>
+                <fullName>Z1 - BR - Erro no preço</fullName>
+                <default>false</default>
+                <label>Z1 - BR - Erro no preço</label>
+            </value>
+            <value>
+                <fullName>Z5 - BR - Alteração para novo Faturamento</fullName>
+                <default>false</default>
+                <label>Z5 - BR - Alteração para novo Faturamento</label>
+            </value>
+            <value>
+                <fullName>Z12 - BR - Devoluções</fullName>
+                <default>false</default>
+                <label>Z12 - BR - Devoluções</label>
+            </value>
+            <value>
+                <fullName>Z19 - BR - Troca de produto</fullName>
+                <default>false</default>
+                <label>Z19 - BR - Troca de produto</label>
+            </value>
+            <value>
+                <fullName>Z20 - BR - Bonificação do preço</fullName>
+                <default>false</default>
+                <label>Z20 - BR - Bonificação do preço</label>
+            </value>
+            <value>
+                <fullName>Z21 - BR - Juros</fullName>
+                <default>false</default>
+                <label>Z21 - BR - Juros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,786 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="Apenddix2EditPage" showHeader="false" standardStylesheets="false"
+    cache="false" title="{!titulo}" controller="aSiteEventosController" action="{!validate}" docType="html-5.0">
+<!--<apex:actionStatus startText=" Processing the stuff " stopText=" Done " id="counterStatus" />-->
+<apex:remoteObjects jsNamespace="MyCorpModels">
+    <apex:remoteObjectModel name="Cidade__c" fields="Name,Id,Nombre_Estado__c"/>
+</apex:remoteObjects>
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+    .selected {
+        background: rgba(38, 185, 154, .16);
+        border-color: rgba(221, 221, 221, 0.780392);
+    }
+</style>
+<script>
+    function disableOnSubmit(input) {
+        setTimeout('disableAfterTimeout(\'' + input.id + '\');', 5);
+    }
+    function disableAfterTimeout(id) {
+        var toDisable = document.getElementById(id);
+        toDisable.disabled = 'disabled';
+    }
+</script>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1">
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                <apex:panelGroup >
+                <apex:form id="profileForm">
+                <apex:actionFunction action="{!setearEstadoNewEvento}" status="displayImg" name="setearEstado" reRender="profileForm"/>       
+                <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                    <apex:facet name="start" >
+                        <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                            &nbsp;
+                        </div>
+                        <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                            <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                        </div>
+                    </apex:facet>
+                </apex:actionStatus>            
+                <div>
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <div class="">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>{!titulo} - {!$Label.New}</h3>
+                                </div>                                                                    
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                                        
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <!--
+                                    <div class="x_title">
+                                        <h2>{!$ObjectType.Product2.LabelPlural}<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    -->
+                                    <apex:pageBlock rendered="{!!verItems && !verArchivos}" id="blockForm">
+                                    <form class="form-horizontal form-label-left input_mask">
+                                        <div class="row form-group">
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Treinamento Tecnico'}">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Data_e_horario_inicio__c.Label}" />
+                                                    <apex:input value="{!evento2.fechaInicio}" type="datetime-local" styleClass="form-control" id="fecha" />
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Treinamento Tecnico'}">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Data_e_horario_termino__c.Label}" />
+                                                    <apex:input value="{!evento2.fechaFin}" type="datetime-local" styleClass="form-control" id="fecha2" />
+                                                </div>
+                                            </apex:pageBlock>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+                                                <apex:inputHidden value="{!evento2.ciudad}" id="municipioId" />
+                                                <div class="form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Municipio__c.Label}" />
+                                                    <div class="input-group">
+                                                        <input id="contactValue" type="text" disabled="true" class="form-control" aria-describedby="basic-addon2" onkeypress="if(event.keyCode == 13){$('#cntct').click();}"
+                                                            value="{!evento2.ciudad_nombre}" />
+                                                        <!--<span class="input-group-addon" id="cntct" data-toggle="modal" data-target=".mobile-lookup-modal" -->
+                                                        <span class="input-group-addon" id="cntct" data-target=".mobile-lookup-modal" onclick="setTargetLookupFieldId('{!$Component.municipioId}','contactValue');getLookupValues($('#contactValue').val());">Buscar</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento' || tipoEvento == 'Treinamento Tecnico'}" id="estado">
+                                                <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Estado__c.Label}" />
+                                                    <apex:outputText value="{!evento2.estado}" styleClass="col-md-2 col-sm-2 col-xs-2 form-control" />
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Test a campo'}" id="block4">
+                                                <div class="col-md-3 col-sm-3 col-xs-3 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Divulgar_em_nome_de__c.Label}" />
+                                                    <apex:selectList value="{!evento2.divulgarEmNomeDe}" styleClass="form-control col-md-2 col-xs-12" id="divulgarEmNomeDe" size="1">
+                                                        <apex:selectOptions value="{!OptionDivulgarEmNomeDe}" />
+                                                    </apex:selectList>
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Día de Campo' || tipoEvento == 'Treinamento Tecnico'}">
+                                                <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                    <apex:outputLabel value="Participantes" />
+                                                    <apex:inputText value="{!evento2.participantes}" styleClass="col-md-2 col-sm-2 col-xs-2 form-control" />
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Emplacamento'}">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Direccion__c.Label}" />
+                                                    <apex:inputText value="{!evento2.direccion}" styleClass="col-md-4 col-sm-4 col-xs-4 form-control" />
+                                                </div>
+                                            </apex:pageBlock>
+                                        </div>
+                                        <div class="row form-group">                                                                                                                                
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}">
+                                                <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Nome_do_agricultor_2__c.Label}" />
+                                                    <apex:inputText value="{!evento2.agricultor}" styleClass="col-md-6 col-sm-6 col-xs-6 form-control" />
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}">
+                                                <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                    <apex:outputLabel value="Tipo" />
+                                                    <apex:selectList value="{!evento2.tipoAgricultor}" styleClass="form-control col-md-2 col-xs-12" size="1">
+                                                        <apex:selectOptions value="{!OptionTipoCuenta}" />
+                                                        <apex:actionSupport action="{!changeTipoCuentaAgricultor}" event="onchange" status="displayImg" reRender="profileForm"></apex:actionSupport>
+                                                    </apex:selectList>
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}">
+                                                <div class="col-md-3 col-sm-3 col-xs-3 form-group">
+                                                    <apex:outputLabel value="Número" for="cpf_cnpj_agricultor" />
+                                                    <apex:inputText value="{!evento2.cpf_cnpj_agricultor}" styleClass="col-md-3 col-sm-3 col-xs-3 form-control" id="cpf_cnpj_agricultor"
+                                                        onkeypress="validateDigits(event, this);" maxlength="{!IF(evento2.tipoAgricultor == 'CPF', '11', '14')}" disabled="{!evento2.tipoAgricultor == ''}" />
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Día de Campo' || tipoEvento == 'Treinamento Tecnico'}">
+                                                <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Revenda_2__c.Label}" />
+                                                    <apex:inputText value="{!evento2.revenda}" styleClass="col-md-6 col-sm-6 col-xs-6 form-control" />
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Día de Campo' || tipoEvento == 'Treinamento Tecnico'}">
+                                                <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                    <apex:outputLabel value="Tipo" />
+                                                    <apex:selectList value="{!evento2.tipoRevenda}" styleClass="form-control col-md-2 col-xs-12" size="1">
+                                                        <apex:selectOptions value="{!OptionTipoCuenta}" />
+                                                        <apex:actionSupport action="{!changeTipoCuentaRevenda}" event="onchange" status="displayImg" reRender="profileForm"></apex:actionSupport>
+                                                    </apex:selectList>
+                                                </div>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!(tipoEvento == 'Día de Campo' || tipoEvento == 'Treinamento Tecnico') && evento2.tipoRevenda != ''}">
+                                                <div class="col-md-3 col-sm-3 col-xs-3 form-group">
+                                                    <apex:outputLabel value="CPF" rendered="{!evento2.tipoRevenda == 'CPF'}"/>
+                                                    <apex:outputLabel value="CNPJ" rendered="{!evento2.tipoRevenda == 'CNPJ'}"/>
+                                                    <apex:inputText value="{!evento2.cpf_cnpj_revenda}" styleClass="col-md-3 col-sm-3 col-xs-3 form-control"/>
+                                                </div>    
+                                            </apex:pageBlock>
+                                        </div>
+                                        <div class="row form-group">
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Día de Campo' || tipoEvento == 'Treinamento Tecnico'}">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Custo__c.Label}"/>
+                                                    <apex:inputText value="{!evento2.costo}" styleClass="form-control"/>                                                                                                                                             
+                                                </div>
+                                                <apex:outputPanel rendered="{!tipoEvento == 'Día de Campo'}">
+                                                    <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                        <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Evaluacion__c.Label}"/>
+                                                        <apex:inputText value="{!evento2.evaluacion}" styleClass="form-control"/>                                                                                                                                             
+                                                    </div>
+                                                </apex:outputPanel>
+                                            </apex:pageBlock>
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}" id="block14">
+                                                <div class="col-md-3 col-sm-3 col-xs-3 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Latitud__c.Label}" for="latitud" />
+                                                    <apex:inputText value="{!evento2.latitud}" styleClass="form-control" id="latitud" onkeypress="validateDigits(event, this);" maxlength="20" />
+                                                </div>
+                                                <div class="col-md-3 col-sm-3 col-xs-3 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Longitud__c.Label}" for="longitud" />
+                                                    <apex:inputText value="{!evento2.longitud}" styleClass="form-control" id="longitud" onkeypress="validateDigits(event, this);" maxlength="20" />
+                                                </div>
+                                                <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Irrigado__c.Label}" for="irrigado" />
+                                                    <apex:inputCheckBox value="{!evento2.irrigado}" styleClass="form-control" style="width:20px;height:20px" id="irrigado" />
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Autorizado__c.Label}" rendered="{!tipoEvento == 'Test a campo'}"
+                                                        for="autorizado" />
+                                                    <apex:inputCheckBox value="{!evento2.autorizado}" styleClass="form-control" style="width:20px;height:20px" rendered="{!tipoEvento == 'Test a campo'}"
+                                                        id="autorizado" />
+                                                </div>
+                                            </apex:pageBlock>
+                                        </div>
+                                        <div class="row form-group">
+                                            <apex:pageBlock rendered="{!tipoEvento == 'Día de Campo' || tipoEvento == 'Treinamento Tecnico' || tipoEvento == 'Test a campo'}">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                    <apex:outputLabel value="{!$ObjectType.CRM_Calendario_de_Eventos__c.Fields.Comentarios__c.Label}" />
+                                                    <apex:inputText value="{!evento2.comentarios}" styleClass="form-control" />
+                                                </div>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </form>
+                                    </apex:pageBlock>
+
+                                    <apex:pageBlock rendered="{!verItems}">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="x_panel">
+                                                <div class="x_title">
+                                                    <h2>{!IF(tipoEvento == 'Treinamento Tecnico', 'Obtentores', $ObjectType.Product2.LabelPlural)}</h2>
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li>
+                                                            <a class="collapse-link">
+                                                                <i class="fa fa-chevron-up"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="it">
+                                                <apex:pageBlockTable value="{!EventoItems}" var="s" styleClass="data table table-striped no-margin">
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Produto_Principal__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:inputCheckBox value="{!s.produto_principal}" styleClass="checkbox" id="produto_principal" >
+                                                            <apex:actionSupport event="onclick" action="{!changePrincipalProduct}" reRender="profileForm" status="displayImg">
+                                                                <apex:param name="indice" assignTo="{!principalSelected}" value="{!s.indice}" />
+                                                            </apex:actionsupport>
+                                                        </apex:inputCheckBox>
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Obtentor__c.Label}">
+                                                        <apex:outputText value="{!s.obtentor}" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultivar__c.Label}" rendered="{!tipoEvento != 'Treinamento Tecnico'}">
+                                                        <apex:outputText value="{!s.desc_producto}" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Populacao_de_plantas__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:inputText value="{!s.populacao_de_plantas}" styleClass="form-control" id="populacao_de_plantas" onkeypress="validateDigits(event, this);"
+                                                            onblur="formatCurrency($(this), 'blur')" maxlength="9" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Espacamento__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:inputText value="{!s.espacamento}" styleClass="form-control" id="espacamento" onkeypress="validateDigits(event, this);"
+                                                            onblur="formatCurrency($(this), 'blur')" maxlength="9" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Area_plantada__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:inputText value="{!s.area_plantada}" styleClass="form-control" id="area_plantada" onkeypress="validateDigits(event, this);"
+                                                            onblur="validateArea(event, this)" maxlength="9" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Area_Colhida__c.Label}" rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}">
+                                                        <apex:inputText value="{!s.area_colhida}" styleClass="form-control" id="area_colhida" onkeypress="validateDigits(event, this);"
+                                                            onblur="validateArea(event, this)" maxlength="9" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Produtividade__c.Label}" rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}">
+                                                        <apex:inputText value="{!s.produtividade}" styleClass="form-control" id="produtividade" onkeypress="validateDigits(event, this);"
+                                                            onblur="validateProdutividade(event, this)" maxlength="10" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Data_de_plantio__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:input value="{!s.data_plantio}" type="date" styleClass="form-control" id="data_plantio" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Data_de_colheita__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:input value="{!s.data_colheita}" type="date" styleClass="form-control" id="data_colheita" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Volume_Doado__c.Label}" rendered="{!tipoEvento == 'Test a campo' || tipoEvento == 'Emplacamento'}">
+                                                        <apex:inputText value="{!s.volume_doado}" styleClass="form-control" id="volume_doado" onkeypress="validateDigits(event, this);"
+                                                            onblur="validateVolumeDoado(event, this)" maxlength="9" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultura_antecessora__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:selectList value="{!s.cultura_antecessora}" styleClass="form-control" size="1">
+                                                            <apex:selectOptions value="{!OptionCulturaAntecessora}" />
+                                                        </apex:selectList>
+                                                    </apex:column>
+                                                    <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                        <apex:commandLink value="{!$Label.Remove}" action="{!removerItem}" reRender="profileForm" rendered="{!linea != s.indice}"
+                                                            status="displayImg">
+                                                            <apex:param value="{!s.indice}" assignTo="{!linea}" name="toRemove" />
+                                                        </apex:commandLink>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                        <br/><br/><br/>
+                                    </div>
+                                    
+                                    <div class="x_title">
+                                        <h2>{!IF(tipoEvento == 'Treinamento Tecnico', 'Adicionar Obtentores', 'Adicionar Produtos')}</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    
+                                    <div>
+                                        <apex:actionRegion renderRegionOnly="false" immediate="true">                
+                                            <apex:actionFunction action="{!updateAvailableList}" name="fetchResults"  reRender="nuevosItems" status="searchStatus"/>                    
+                                                <!-- aqui se llama al metodo para que no haya necesidad de un boton de "buscar" -->
+                                                <apex:inputText value="{!filtro}" styleClass="form-control" onkeydown="if(event.keyCode==13){this.blur();}else{resetTimer();}" html-placeholder="Pesquisar"/>
+                                                &nbsp;&nbsp;
+                                                <i>
+                                                    <!-- actionStatus es para indicar al usuario que se esta haciendo la busqueda -->
+                                                    <apex:actionStatus id="searchStatus" startText="Pesquisando..." stopText=" "/>
+                                                </i>
+                                        </apex:actionRegion>
+                                    </div>
+                                    
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items_new" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="nuevosItems">
+                                                <apex:pageBlockTable id="it_new" value="{!EventoItemsNew}" var="s" styleClass="data table table-striped no-margin">
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Obtentor__c.Label}" >                                                        
+                                                        <apex:outputText value="{!s.obtentor}" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.CRM_Detalle_Calendario_de_eventos__c.Fields.Cultivar__c.Label}" rendered="{!tipoEvento != 'Treinamento Tecnico'}">                                                        
+                                                        <apex:outputText value="{!s.desc_producto}" />
+                                                    </apex:column>
+                                                    <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                        <apex:commandLink value="{!$Label.Add}" action="{!agregarItem}" reRender="profileForm" status="displayImg" oncomplete="mostrarMsj()">
+                                                            <apex:param value="{!s.indice}" assignTo="{!linea}" name="toAdd"/>
+                                                        </apex:commandLink>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                                <apex:outputPanel styleClass="fyi" id="mess" >
+                                                    <apex:outputPanel styleClass="fyi" rendered="{!overLimit}" id="count">
+                                                        <br/>
+                                                        A pesquisa retornada tem mais de 20 itens, por favor inserir um novo criterio de filtro.
+                                                        <br/>
+                                                    </apex:outputPanel>
+                                                </apex:outputpanel> 
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                    
+                                    </apex:pageBlock>
+                                    
+                                    <apex:pageBlock rendered="{!verArchivos}">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="x_panel">
+                                                <div class="x_title">
+                                                    <h2>{!IF(tipoEvento == 'Emplacamento', 'Fotos emplacamento', 'Arquivos')}</h2>
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                    
+                                                <div class="x_content">
+                                                    <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                                        <apex:pageBlock id="it2">
+                                                            <apex:pageBlockTable value="{!EventoArchivos}" var="s" styleClass="data table table-striped no-margin">
+                                                                <apex:column headerValue="{!$ObjectType.Attachment.Fields.Name.Label}">
+                                                                    <apex:outputText value="{!s.att.Name}"/>
+                                                                </apex:column>
+                                                                <apex:column headerValue="{!$ObjectType.Attachment_Content__c.Fields.Attachment_Type__c.Label}">
+                                                                    <apex:outputText value="{!s.tipo}"/>
+                                                                </apex:column>
+                                                                <apex:column headerValue="">
+                                                                    <apex:commandLink styleClass="btn btn-danger" value="{!$Label.Remove}" action="{!removeAttachment}">
+                                                                        <apex:param value="{!s.id}" assignTo="{!attToRemove}" name="attToRemove" />
+                                                                    </apex:commandLink>
+                                                                </apex:column>
+                                                            </apex:pageBlockTable>
+                                                        </apex:pageBlock>
+                                                    </div>
+                                                    <br/><br/><br/>
+                                                </div>
+                                            
+                                                <div class="x_title">
+                                                    <h2>Adicionar Arquivos</h2>
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            
+                                                <apex:pageBlock >
+                                                <apex:pageBlockTable value="{!ArchivoNew}" var="item" id="vSel4">
+                                                    <apex:column headerValue="Arquivo">
+                                                        <apex:inputFile value="{!item.att.Body}" filename="{!item.att.Name}" accept="image/*,application/pdf" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.Attachment_Content__c.Fields.Attachment_Type__c.Label}" rendered="{!tipoEvento == 'Test a campo'}">
+                                                        <apex:selectList value="{!item.tipo}" styleClass="form-control" size="1">
+                                                            <apex:selectOptions value="{!OptionAttachmentType}" />
+                                                        </apex:selectList>
+                                                    </apex:column>
+                                                    <apex:column headerValue="">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </apex:column>
+                                                    <apex:column headerValue="">
+                                                        <apex:commandButton styleClass="btn btn-default" value="{!$Label.Add}" action="{!addAttachment}"/>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                                </apex:pageBlock>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </apex:pageBlock>
+                                    
+                                    <div class="form-group">
+                                        <center>
+                                        <div class="row">
+                                            <apex:commandButton styleClass="btn btn-success" value="{!IF(tipoEvento == 'Treinamento Tecnico', 'Obtentores', 'Produtos')} ({!EventoItems.size})"
+                                                action="{!goVerItems}" rendered="{!!verItems && !verArchivos}" reRender="profileForm" status="displayImg" />
+                                
+                                            <apex:commandButton styleClass="btn btn-success" value="{!IF(tipoEvento == 'Emplacamento', 'Fotos emplacamento', 'Arquivos')} ({!EventoArchivos.size})"
+                                                action="{!goVerArchivos}" rendered="{!!verArchivos && !verItems}" reRender="profileForm" status="displayImg" disabled="{!evento2.Id == null}" />
+                                
+                                            <apex:commandButton styleClass="btn btn-success" value="Concluído" action="{!verItemsListo}" rendered="{!verItems}" reRender="profileForm"
+                                                status="displayImg" oncomplete="mostrarMsj()" />
+                                
+                                            <apex:commandButton styleClass="btn btn-success" value="Concluído" action="{!verArchivosListo}" rendered="{!verArchivos}"
+                                                status="displayImg" />
+                                
+                                            <apex:commandButton id="save2" styleClass="btn btn-success" value="{!$Label.Save}" action="{!saveEvento}" rendered="{!!verItems && !verArchivos}"
+                                                reRender="profileForm" status="displayImg" oncomplete="mostrarMsj()">
+                                                <apex:param value="0" assignTo="{!enviarAprobacion}" name="toApproval" />
+                                            </apex:commandButton>
+                                
+                                            <apex:commandButton id="save3" styleClass="btn btn-success" value="{!$Label.Submit}" action="{!saveEvento}" rendered="{!!verItems && !verArchivos}"
+                                                reRender="profileForm" status="displayImg" disabled="{!evento2.fase == 'Aguardando validação dados de plantio' || evento2.fase == 'Aguardando validação dados de colheita'}"
+                                                oncomplete="checkAgregarArchivos()">
+                                                <apex:param value="1" assignTo="{!enviarAprobacion}" name="toApproval" />
+                                            </apex:commandButton>
+                                
+                                            <apex:commandButton styleClass="btn btn-primary" immediate="true" value="{!$Label.Fechar}" action="{!editCancel}" rendered="{!!verItems && !verArchivos}"
+                                                reRender="profileForm" status="displayImg" />
+                                        </div>
+                                        <apex:pageBlock rendered="{!!verItems && !verArchivos}">
+                                            <div class="row">
+                                                <div class="alert alert-info" role="alert">
+                                                    <p><strong>Salvar:</strong> armazena os dados para que, posteriormente, o multiplicador possa alterar os dados.</p>
+                                                    <p><strong>Salvar e enviar para aprovação:</strong> armazena os dados definitivamente e encaminha para evaliação da GDM.</p>
+                                                </div>
+                                            </div>
+                                        </apex:pageBlock>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    function mostrarMsj() {
+                        if ("{!mensaje}") {
+                            alert("{!SUBSTITUTE(mensaje, '|', '\n')}");
+                        }
+                    }
+                    
+                    function checkAgregarArchivos() {
+                        mostrarMsj();
+                        if ({!agregarArchivos}) {
+                            mostrarConfirmArchivos();
+                        }
+                    }
+                    
+                    function mostrarConfirmArchivos() {
+                        $("#lookupModalConfirmArchivos").modal("show");
+                        $("#lookupModalConfirmArchivos").modal("focus");
+                    }
+                    
+                    function ocultarConfirmArchivos() {
+                        $("#lookupModalConfirmArchivos").modal("hide");
+                    }
+                    
+                    function validateDigits(evt, ele) {
+                        var myRegEx = new RegExp("[0-9]+");
+                        if (evt.key != myRegEx.exec(evt.key) && evt.key != "." && evt.key != "," && evt.key != "-") {
+                            evt.preventDefault();
+                        }
+                    }
+                    
+                    const lat = document.getElementById("{!$Component.SiteTemplate.profileForm.blockForm.block14.latitud}");
+                    const lon = document.getElementById("{!$Component.SiteTemplate.profileForm.blockForm.block14.longitud}");
+                    
+                    lat.addEventListener("paste", (event) => {
+                        let paste = (event.clipboardData || window.clipboardData).getData("text");
+                        let myRegEx = /\-?\d+(\.\d+)?/;
+                        
+                        if (!myRegEx.test(paste) || (myRegEx.test(paste) && myRegEx.exec(paste)[0] != paste)) {
+                            alert("O formato da coordenada não está correto, exemplo: 41.40338");
+                            event.preventDefault();
+                        } else {
+                            const int = Math.trunc(paste); // se valida la parte entera
+                            
+                            if (int <= -90 || int >= 90) {
+                                alert("Verifique se o primeiro número na coordenada de latitude está entre -90 e 90");
+                            }
+                        }
+                    });
+                    
+                    lon.addEventListener("paste", (event) => {
+                        let paste = (event.clipboardData || window.clipboardData).getData("text");
+                        let myRegEx = /\-?\d+(\.\d+)?/;
+                        
+                        if (!myRegEx.test(paste) || (myRegEx.test(paste) && myRegEx.exec(paste)[0] != paste)) {
+                            alert("O formato da coordenada não está correto, exemplo: 2.17403");
+                            event.preventDefault();
+                        } else {
+                            const int = Math.trunc(paste);
+                            
+                            if (int <= -180 || int >= 180) {
+                                alert("Verifique se o primeiro número na coordenada de longitude está entre -180 e 180");
+                            }
+                        }
+                    });
+                    
+                    function validateArea(evt, ele) {
+                        const value = evt.target.value;
+                        
+                        if (value) {
+                            const decimal = parseFloat(value.replace(".", "").replace(",", "."));
+                            
+                            if (decimal < 0) {
+                                alert("Área plantada e Área colhida: Não pode ser inferior a 0 há");
+                                evt.preventDefault();
+                            } else {
+                                formatCurrency($(ele), "blur");
+                            }
+                        }
+                    }
+                    
+                    function validateProdutividade(evt, ele) {
+                        const value = evt.target.value;
+                        
+                        if (value) {
+                            const decimal = parseFloat(value.replace(".", "").replace(",", "."));
+                            
+                            if ((decimal < 300 || decimal > 9999) && {!tipoEvento == 'Test a campo'}) {
+                                alert("Produtividade: Mínimo 300 kg e Máximo 9.999 kg");
+                                evt.preventDefault();
+                            } else {
+                                formatCurrency($(ele), "blur");
+                            }
+                        }
+                    }
+                    
+                    function validateVolumeDoado(evt, ele) {
+                        const value = evt.target.value;
+                        
+                        if (value) {
+                            const decimal = parseFloat(value.replace(".", "").replace(",", "."));
+                            
+                            if (decimal < 0.5 && {!tipoEvento == 'Test a campo'}) {
+                                alert("Volume doado: Mínimo 0,5 sacas");
+                                evt.preventDefault();
+                            } else {
+                                formatCurrency($(ele), "blur");
+                            }
+                        }
+                    }
+                    
+                    function formatNumber(n) {
+                        // format number 1000000 to 1,234,567
+                        return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                    }
+                    
+                    function formatCurrency(input, blur) {
+                        // appends $ to value, validates decimal side
+                        // and puts cursor back in right position.
+                        
+                        // get input value
+                        var input_val = input.val();
+                        
+                        // don't validate empty input
+                        if (input_val === "") { return; }
+                        
+                        // original length
+                        var original_len = input_val.length;
+                        
+                        // initial caret position
+                        var caret_pos = input.prop("selectionStart");
+                        
+                        // check for decimal
+                        if (input_val.indexOf(",") >= 0) {
+                            // get position of first decimal
+                            // this prevents multiple decimals from
+                            // being entered
+                            var decimal_pos = input_val.indexOf(",");
+                            
+                            // split number by decimal point
+                            var left_side = input_val.substring(0, decimal_pos);
+                            var right_side = input_val.substring(decimal_pos);
+                            
+                            // add commas to left side of number
+                            left_side = formatNumber(left_side);
+                            
+                            // validate right side
+                            right_side = formatNumber(right_side);
+                            
+                            // On blur make sure 2 numbers after decimal
+                            if (blur === "blur") {
+                                right_side += "00";
+                            }
+                            
+                            // Limit decimal to only 2 digits
+                            right_side = right_side.substring(0, 2);
+                            
+                            // join number by .
+                            input_val = left_side + "," + right_side;    
+                        } else {
+                            // no decimal entered
+                            // add commas to number
+                            // remove all non-digits
+                            input_val = formatNumber(input_val);
+                            input_val = input_val;
+                            
+                            // final formatting
+                            if (blur === "blur") {
+                                input_val += ",00";
+                            }
+                        }
+                        
+                        // send updated string to input
+                        input.val(input_val);
+                        // put caret back in the right position
+                        var updated_len = input_val.length;
+                        caret_pos = updated_len - original_len + caret_pos;
+                        input[0].setSelectionRange(caret_pos, caret_pos);
+                    }
+                </script>
+                
+                <div id="lookupModalConfirmArchivos" data-backdrop="static" class="modal fade mobile-lookup-modal" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" >
+                    <div class="modal-dialog modal-lg" >
+                    <div class="modal-content" style="padding: 20px;background-color: #FFFFFF;">
+                    <div class="row text-center" style="margin-bottom: 20px;">
+                        <apex:outputText value="O lançamento de lado a lado não possui termo de autorização, não será considerado para fins de meta de contrato. Deseja enviar assim mesmo?"
+                            rendered="{!tipoEvento == 'Test a campo'}" />
+                        <apex:outputText value="O lançamento de emplacamento não possui fotos, não será considerado para fins de meta de contrato. Deseja enviar assim mesmo?"
+                            rendered="{!tipoEvento == 'Emplacamento'}" />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <apex:commandButton styleClass="btn btn-success" value="Sim" action="{!saveEvento}" onclick="ocultarConfirmArchivos();" reRender="profileForm" status="displayImg">
+                                <apex:param value="2" assignTo="{!enviarAprobacion}" name="toApproval" />
+                            </apex:commandButton>
+                            <button class="btn btn-primary" type="button" onclick="ocultarConfirmArchivos();">Não</button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                
+                </apex:form>
+                
+                <div id="lookupModal" data-backdrop="static" class="modal fade mobile-lookup-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" >
+                    <div class="modal-dialog modal-lg" >
+                    <div class="modal-content" style="padding: 20px;background-color: #FFFFFF;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Ingrese el nombre de la Ciudad. Utilice * para mejorar la búsqueda" aria-describedby="basic-addon2" id="lookupSearchVal"/>
+                        <span class="input-group-addon" id="go" onclick='getLookupValues($("#lookupSearchVal").val());'>Consultar</span>
+                    </div>
+                    <br/>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <hr/>
+                        <h4>Resultados</h4><p class="text-warning" id="lookupMessage"></p><div id="lookUpResult"></div>
+                    </div>
+                    </div>
+                </div>
+                
+                </apex:panelGroup>
+            </apex:panelGrid>
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    </body>
+
+<script type='text/javascript'>
+    // Esta variable indica el tiempo (segs) que se toma en ejecutar la busqueda, para cambiarla, cambiar este valor            
+    var waitTime = 1;
+
+    var countDown = waitTime + 1;
+    var started = false;
+
+    function resetTimer() {
+        countDown = waitTime + 1;
+        if (started == false) {
+            started = true;
+            runCountDown();
+        }
+    }
+
+    function runCountDown() {
+        countDown--;
+        if (countDown <= 0) {
+            fetchResults();
+            started = false;
+        }
+        else {
+            window.setTimeout(runCountDown, 1000);
+        }
+    }
+
+    function setFecha(fieldId, field2Id) {
+        document.getElementById(field2Id).value = document.getElementById(fieldId).value;
+    }
+</script>
+<script>
+    function getLookupValues(qryString) {
+        try {
+            tmpQryString = qryString;
+            qryString = qryString.replace(/\*/g, "%");
+            $("#lookupSearchVal").val(tmpQryString);
+            if (qryString.length < 4) { $("#lookupMessage").html("Ingrese mas de 4 caracteres"); $("#lookUpResult").html(""); return; }
+            else { $("#lookupMessage").html(""); }
+            $("#lookUpResult").html("<img src='/resource/waiting' />");
+            $("#lookupSearchVal").focus();
+            var c = new MyCorpModels.Cidade__c();
+            c.retrieve({ limit: 25, where: { Name: { like: qryString + '%' } } }, function (err, records) {
+                if (err) { $("#lookUpResult").html(err); } else { displayLookupQueryResult(records); }
+            });
+        } catch (err) {
+            alert(err);
+        }
+    }
+    function displayLookupQueryResult(records) {
+        try {
+            var resultOutPut = " ";
+            if (records.length > 0) {
+                resultOutPut += "<table class='table table-striped table-condensed'>";
+                resultOutPut += "<thead>";
+                resultOutPut += "<tr>";
+                resultOutPut += "<th>Nombre</th>";
+                resultOutPut += "<th>Estado</th>";
+                resultOutPut += "</tr>";
+                resultOutPut += "</thead>";
+                resultOutPut += "<tbody>";
+                $.each(records, function () {
+                    resultOutPut += "<tr>";
+                    var name = "'" + this.get('Name') + "'";
+                    var id = "'" + this.get('Id') + "'";
+                    resultOutPut += "<td><a href='#' onclick=\"assignVal(" + name + "," + id + ");\" >" + this.get('Name') + "</a></td>";
+                    resultOutPut += "<td>" + this.get('Nombre_Estado__c') + "</td>"
+                    resultOutPut += "</tr>";
+                });
+                resultOutPut += "</tbody>";
+                resultOutPut += "</table>";
+                resultOutPut += "<hr/>";
+            }
+            $("#lookUpResult").html(resultOutPut);
+        } catch (err) {
+            alert(err);
+        }
+    }
+    $("#lookupSearchVal").keyup(function (event) { if (event.keyCode == 13) { $("#go").click(); } });
+    var targetLookupFieldId = "";
+    var targetLookupSearchFieldId = "";
+    function setTargetLookupFieldId(lkFldId, searchLKFieldId) {
+        targetLookupFieldId = lkFldId;
+        targetLookupSearchFieldId = searchLKFieldId;
+        $('#lookupModal').modal('show');
+    }
+    function assignVal(recordName, recordId) {
+        try {
+            document.getElementById(targetLookupFieldId).value = recordId;
+            //document.getElementById(targetLookupFieldId+"_lkid").value=recordId;
+            document.getElementById(targetLookupSearchFieldId).value = recordName;
+            setTimeout('setearEstado();', 3);
+            $('#lookupModal').modal('hide');
+        } catch (err) {
+            alert(err);
+        }
+    }
+    function getFieldValue(fieldId) {
+        return document.getElementById(fieldId).value;
+    }
+    function setFieldValue(fieldId, fieldVal) {
+        document.getElementById(fieldId).value = fieldVal;
+    }
+</script>
+</apex:define>
+</apex:composition>
+</apex:page>

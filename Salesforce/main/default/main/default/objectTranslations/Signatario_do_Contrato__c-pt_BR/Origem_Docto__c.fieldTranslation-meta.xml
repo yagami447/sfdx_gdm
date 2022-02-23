@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Origem Docto --></label>
+    <name>Origem_Docto__c</name>
+    <picklistValues>
+        <masterLabel>Estatuto</masterLabel>
+        <translation><!-- Estatuto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Procuração</masterLabel>
+        <translation><!-- Procuração --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

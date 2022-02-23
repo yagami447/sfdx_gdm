@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Oferta Interna</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ofertas Internas</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato de pedidos</layout>
+        <sections>
+            <label><!-- Información adicional --></label>
+            <section>Información adicional</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clonar --></label>
+        <name>Clonar</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear Oportunidad CVB --></label>
+        <name>Crear_Oportunidad_CVB</name>
+    </quickActions>
+</CustomObjectTranslation>

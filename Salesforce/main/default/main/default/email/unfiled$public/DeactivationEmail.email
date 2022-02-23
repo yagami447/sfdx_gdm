@@ -1,0 +1,12 @@
+Estimado/a {!Connection.ExternalContactFirstName}:
+
+Después de una profunda reflexión, hemos decidido poner fin a nuestra conexión con {!Connection.ExternalCompanyName}. Permítame confesarle que no ha sido fácil tomar esta decisión.
+
+Le transmitimos nuestros mejores deseos para el futuro de su empresa. Esperamos volver a retomar nuestra conexión en una fecha futura.
+
+Atentamente,
+
+
+{!User.FirstName} {!User.LastName}
+
+{!Organization.Name}

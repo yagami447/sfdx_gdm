@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Mod_Sem_Com_Rel_Venda_Facturado</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND((PRIORVALUE( Semente_comercializada__c) &lt;&gt; Semente_comercializada__c),  ISPICKVAL(Estado_Facturacion__c,&quot;Facturado&quot;))</errorConditionFormula>
+    <errorDisplayField>Semente_comercializada__c</errorDisplayField>
+    <errorMessage>No se puede modificar el valor si este relatorio ha sido facturado</errorMessage>
+</ValidationRule>

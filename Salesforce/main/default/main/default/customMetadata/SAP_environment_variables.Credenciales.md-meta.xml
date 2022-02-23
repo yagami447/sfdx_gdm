@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Credenciales</label>
+    <protected>false</protected>
+    <values>
+        <field>DocHeader_BusAct__c</field>
+        <value xsi:type="xsd:string">RFBU</value>
+    </values>
+    <values>
+        <field>DocHeader_CompCode__c</field>
+        <value xsi:type="xsd:string">01BR</value>
+    </values>
+    <values>
+        <field>DocHeader_Currency_x_item0_Currency_x__c</field>
+        <value xsi:type="xsd:string">BRL</value>
+    </values>
+    <values>
+        <field>DocHeader_Currency_x_item0_ItemnoAcc__c</field>
+        <value xsi:type="xsd:string">001</value>
+    </values>
+    <values>
+        <field>DocHeader_Currency_x_item1_Currency_x__c</field>
+        <value xsi:type="xsd:string">BRL</value>
+    </values>
+    <values>
+        <field>DocHeader_Currency_x_item1_ItemnoAcc__c</field>
+        <value xsi:type="xsd:string">002</value>
+    </values>
+    <values>
+        <field>DocHeader_DocType__c</field>
+        <value xsi:type="xsd:string">DG</value>
+    </values>
+    <values>
+        <field>DocHeader_Item_Item0_OrderId__c</field>
+        <value xsi:type="xsd:string">ROY19PRBRMX</value>
+    </values>
+    <values>
+        <field>DocHeader_Item_item0_GlAccount__c</field>
+        <value xsi:type="xsd:string">0040010021</value>
+    </values>
+    <values>
+        <field>DocHeader_Item_item0_ItemText__c</field>
+        <value xsi:type="xsd:string">DESCONTO PARA EVENTOS REF. CULTIVARES DE CLASSE 3</value>
+    </values>
+    <values>
+        <field>DocHeader_Item_item0_ItemnoAcc__c</field>
+        <value xsi:type="xsd:string">001</value>
+    </values>
+    <values>
+        <field>DocHeader_Item_item0_Quantity__c</field>
+        <value xsi:type="xsd:string">0</value>
+    </values>
+    <values>
+        <field>DocHeader_Receivable_item0_AllocNmbr__c</field>
+        <value xsi:type="xsd:string">ROYALTIES</value>
+    </values>
+    <values>
+        <field>DocHeader_Receivable_item0_ItemText__c</field>
+        <value xsi:type="xsd:string">DESCONTO PARA EVENTOS REF. CULTIVARES DE CLASSE 3</value>
+    </values>
+    <values>
+        <field>DocHeader_Receivable_item0_ItemnoAcc__c</field>
+        <value xsi:type="xsd:string">002</value>
+    </values>
+    <values>
+        <field>DocHeader_Receivable_item0_Pmnttrms__c</field>
+        <value xsi:type="xsd:string">ZC01</value>
+    </values>
+    <values>
+        <field>DocHeader_Username__c</field>
+        <value xsi:type="xsd:string">DONMARIOBR</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">2o21gdms33dS</value>
+    </values>
+    <values>
+        <field>Target__c</field>
+        <value xsi:type="xsd:string">Qa</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">SALESFORCEBR</value>
+    </values>
+</CustomMetadata>

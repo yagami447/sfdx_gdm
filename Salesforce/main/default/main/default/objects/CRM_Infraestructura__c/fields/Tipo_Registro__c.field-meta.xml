@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_Registro__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(RecordType.Name, &quot;A&quot;, &quot;Capacidade de produção&quot;, &quot;B&quot;, &quot;Capacidade de TSI&quot;, &quot;F&quot;, &quot;Numero de unidades&quot;, &quot;G&quot;, &quot;Expectativa de expansão&quot;, &quot;P_A&quot;, &quot;Planejamento capacidade de produção&quot;, &quot;P_B&quot;, &quot;Planejamento capacidade de TSI&quot;, &quot;P_F&quot;, &quot;Planejamento numero de unidades&quot;, &quot;P_G&quot;, &quot;Planejamento expectativa de expansão&quot;, &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tipo Registro</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

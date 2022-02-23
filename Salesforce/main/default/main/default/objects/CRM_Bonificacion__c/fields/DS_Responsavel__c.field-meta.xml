@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DS_Responsavel__c</fullName>
+    <description>Supervisor Comercial informante por DSem</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Supervisor Comercial informante por DSem</inlineHelpText>
+    <label>DResponsável</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>096 - Charles C. Pintro</fullName>
+                <default>false</default>
+                <label>096 - Charles C. Pintro</label>
+            </value>
+            <value>
+                <fullName>105 - Rogério A. Schneider</fullName>
+                <default>false</default>
+                <label>105 - Rogério A. Schneider</label>
+            </value>
+            <value>
+                <fullName>106 - Sandro Ferrari M</fullName>
+                <default>false</default>
+                <label>106 - Sandro Ferrari M</label>
+            </value>
+            <value>
+                <fullName>104 - Otavio Gorni</fullName>
+                <default>false</default>
+                <label>104 - Otavio Gorni</label>
+            </value>
+            <value>
+                <fullName>152 - Fernando Calazans</fullName>
+                <default>false</default>
+                <label>152 - Fernando Calazans</label>
+            </value>
+            <value>
+                <fullName>190 - Marcos Berlezi</fullName>
+                <default>false</default>
+                <label>190 - Marcos Berlezi</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

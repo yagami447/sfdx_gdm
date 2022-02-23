@@ -1,0 +1,9 @@
+.lgc-bg {
+    background-color: rgb(242, 242, 242);
+    margin-top: 15px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.neogen-tile-background{
+    cursor: pointer !important;
+}

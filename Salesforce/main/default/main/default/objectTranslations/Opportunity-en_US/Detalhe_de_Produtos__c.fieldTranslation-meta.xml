@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- HYPERLINK(&quot;https://na57.salesforce.com/00O0b000003zd32?pv0=&quot;+Id, &quot;Link a Produtos&quot;) --></help>
+    <label><!-- Detalhe de Produtos --></label>
+    <name>Detalhe_de_Produtos__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ventas_BMX__c</fullName>
+    <externalId>false</externalId>
+    <label>Vendas BMX</label>
+    <summarizedField>CRM_Vendas__c.Volume__c</summarizedField>
+    <summaryFilterItems>
+        <field>CRM_Vendas__c.Obtentor__c</field>
+        <operation>equals</operation>
+        <value>BRMX</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>CRM_Vendas__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>B</value>
+    </summaryFilterItems>
+    <summaryForeignKey>CRM_Vendas__c.CRM_Multiplicador__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

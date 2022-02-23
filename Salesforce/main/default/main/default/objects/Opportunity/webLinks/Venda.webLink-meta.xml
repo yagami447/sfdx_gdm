@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Venda</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Venda</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;;
+var accId = &quot;{!Opportunity.AccountId}&quot;;
+var pasa = true;
+var etapa = &quot;{!Opportunity.StageName}&quot;;
+//var OppLi = sforce.connection.query(&quot;SELECT Id,OpportunityId FROM OpportunityLineItem WHERE OpportunityId =&apos;&quot;+ id+&quot;&apos;&quot;);
+var tieneOpli = &quot;{!Opportunity.HasOpportunityLineItem}&quot;;
+//records = OppLi.getArray(&quot;records&quot;); 
+var vencida = &quot;{!Opportunity.Vencida__c}&quot;; 
+
+if (vencida == &apos;1&apos;){ 
+alert(&quot;Negociação vencida.&quot;); 
+pasa = false; 
+}
+if (etapa == &apos;Cerrada&apos;){
+alert(&quot;Fase para gerar a autorização deve ser aberta.&quot;);
+pasa = false;
+}
+//if(records.length == 0){
+if(tieneOpli == false){
+alert(&quot;Negociação sem Produtos.&quot;);
+pasa = false;
+}
+if(pasa == true){
+var result = sforce.apex.execute(&quot;previsionesController&quot;,&quot;generarVenta&quot;, {opId : id, acId : accId, rechazo : false }); 
+//window.location.href = result;
+alert(result[0]); 
+if (result[1] == &apos;ok&apos;){ 
+var mywin = window.location.href=&apos;/&apos; + result[2]; 
+} 
+}</url>
+</WebLink>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_SAP__c</fullName>
+    <description>Precio para pedidos de royaltys tipo ZPRE. Este es el precio descontandole las tasas y es el precio que pasa a SAP.</description>
+    <externalId>false</externalId>
+    <label>Precio SAP</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

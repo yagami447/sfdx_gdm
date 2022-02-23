@@ -1,0 +1,55 @@
+<aura:component controller="AuditManagementController">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="calEvent" type="c:calendarEvent" />
+
+    <aura:method name="setCalendarEvent" action="{!c.setCalendarEvent}">
+        <aura:attribute name="recordByEvent" type="Object" />
+        <aura:attribute name="origin" type="String" />
+    </aura:method>
+
+    <aura:attribute name="auditPlans" type="Map" />
+    <aura:attribute name="safras" type="List" default="[]" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="start" type="String" />
+    <aura:attribute name="end" type="String" />
+    <aura:attribute name="auditor" type="String" />
+    <aura:attribute name="isInsert" type="Boolean" default="true" />
+    <aura:attribute name="isLoading" type="Boolean" default="false" />
+
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner alternativeText="Loading" size="small" variant="brand" />
+    </aura:if>
+    <lightning:recordEditForm onsubmit="{!c.handleSubmit}" onsuccess="{!c.handleSuccess}" onerror="{!c.handleError}"
+        recordId="{!v.recordId}" objectApiName="Calendar_Event__c">
+        <lightning:inputField fieldName="Plano_de_Auditoria__c" onchange="{!c.onChangeAuditPlan}" />
+        <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="Start_Time__c" value="{!v.start}" />
+        <lightning:inputField fieldName="End_Time__c" value="{!v.end}" />
+        <lightning:inputField fieldName="Cidade__c" />
+        <lightning:inputField fieldName="UF__c" />
+        <lightning:inputField fieldName="Etapa__c" />
+        <lightning:inputField fieldName="Auditor__c" value="{!v.auditor}" />
+        <lightning:inputField fieldName="Responsavel__c" />
+        <aura:if isTrue="{!v.isInsert}">
+            <lightning:inputField fieldName="Safra__c" value="{!v.safras}" />
+            <div class="slds-align_absolute-center">
+                <lightning:button variant="brand" type="submit" name="insert" label="Agendar evento"
+                    title="Agendar evento" />
+            </div>
+            <aura:set attribute="else">
+                <lightning:inputField fieldName="Safra__c" />
+                <div class="slds-grid slds-grid_align-space">
+                    <div class="slds-col">
+                        <lightning:button variant="brand" type="submit" name="update" label="Atualizar evento"
+                            title="Atualizar evento" />
+                    </div>
+                    <div class="slds-col">
+                        <lightning:button variant="brand" name="redirect" label="Auditar" title="Auditar"
+                            onclick="{!c.goToEvent}" />
+                    </div>
+                </div>
+            </aura:set>
+        </aura:if>
+    </lightning:recordEditForm>
+</aura:component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Definir la fecha que tiene que estar en funcionamiento para no ocacionar problemas en la operacion --></help>
+    <label><!-- Fecha Limite Solucion --></label>
+    <name>Fecha_Limite_Solucion__c</name>
+</CustomFieldTranslation>

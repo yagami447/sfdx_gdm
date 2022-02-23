@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Abas relacionadas a contratos guarda chuva e termo aditivos.</description>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Contratos</label>
+    <logo>SharedDocuments/Log_GDM_Seeds_2.png</logo>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contract</tabs>
+    <tabs>Referencia_de_Praca__c</tabs>
+    <tabs>Referencia_de_Preco__c</tabs>
+    <tabs>Variedad__c</tabs>
+    <tabs>Cooperante__c</tabs>
+    <tabs>Centro_de_CO__c</tabs>
+    <tabs>Evento_Royalty__c</tabs>
+    <tabs>Anuncio__c</tabs>
+    <tabs>Proposta__c</tabs>
+    <tabs>Aquisicao_de_sementes__c</tabs>
+    <tabs>Planejamento_Difusao_Marketing__c</tabs>
+    <tabs>Planejamento_Difusao_Supervisor__c</tabs>
+</CustomApplication>

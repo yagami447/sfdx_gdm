@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Porcentagem (%) das Vendas Totais RR  ( _______ ) e INTACTA ( _______ ) na safra  ( _______________ ). --></help>
+    <label><!-- Ventas Totales INTACTA --></label>
+    <name>Ventas_Totales_INTACTA__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>API Restrita</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <section>Oportunidades</section>
+        </sections>
+        <sections>
+            <label><!-- Proprietario --></label>
+            <section>Proprietario</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Responsáveis e Coordenadores --></label>
+            <section>Responsáveis e Coordenadores</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Cuenta SC/GER LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Cuenta para Comercial</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Responsaveis e Coordenadores --></label>
+            <section>Responsaveis e Coordenadores</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Grupo Administracion</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cuenta Administracion</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Contratos de Multiplicação --></label>
+            <section>Contratos de Multiplicação</section>
+        </sections>
+        <sections>
+            <label><!-- DONMARIO Valoriza --></label>
+            <section>DONMARIO Valoriza</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Notas e anexos --></label>
+            <section>Notas e anexos</section>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <section>Oportunidades</section>
+        </sections>
+        <sections>
+            <label><!-- Proprietario --></label>
+            <section>Proprietario</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Responsaveis e Coordenadores --></label>
+            <section>Responsaveis e Coordenadores</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cuenta Administracion Bloqueada</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Contratos de Multiplicação --></label>
+            <section>Contratos de Multiplicação</section>
+        </sections>
+        <sections>
+            <label><!-- DONMARIO Valoriza --></label>
+            <section>DONMARIO Valoriza</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Endereço para SAP --></label>
+            <section>Informação de Endereço para SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de impostos --></label>
+            <section>Informação de impostos</section>
+        </sections>
+        <sections>
+            <label><!-- Notas e anexos --></label>
+            <section>Notas e anexos</section>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <section>Oportunidades</section>
+        </sections>
+        <sections>
+            <label><!-- Proprietario --></label>
+            <section>Proprietario</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Responsáveis e Coordenadores --></label>
+            <section>Responsáveis e Coordenadores</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cuenta Administracion Desbloqueada</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Contratos de Multiplicação --></label>
+            <section>Contratos de Multiplicação</section>
+        </sections>
+        <sections>
+            <label><!-- DONMARIO Valoriza --></label>
+            <section>DONMARIO Valoriza</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de Endereço para SAP --></label>
+            <section>Informação de Endereço para SAP</section>
+        </sections>
+        <sections>
+            <label><!-- Informação de impostos --></label>
+            <section>Informação de impostos</section>
+        </sections>
+        <sections>
+            <label><!-- Notas e anexos --></label>
+            <section>Notas e anexos</section>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <section>Oportunidades</section>
+        </sections>
+        <sections>
+            <label><!-- Proprietario --></label>
+            <section>Proprietario</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Responsáveis e Coordenadores --></label>
+            <section>Responsáveis e Coordenadores</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cuenta Administrador</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <section>Oportunidades</section>
+        </sections>
+        <sections>
+            <label><!-- Proprietario --></label>
+            <section>Proprietario</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Responsáveis e Coordenadores --></label>
+            <section>Responsáveis e Coordenadores</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Cuenta Brasmax</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Classificação do cliente --></label>
+            <section>Classificação do cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Oportunidades --></label>
+            <section>Oportunidades</section>
+        </sections>
+        <sections>
+            <label><!-- Proprietario --></label>
+            <section>Proprietario</section>
+        </sections>
+        <sections>
+            <label><!-- Regiões --></label>
+            <section>Regiões</section>
+        </sections>
+        <sections>
+            <label><!-- Status da Conta --></label>
+            <section>Status da Conta</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Grupo Supervisor LE</layout>
+        <sections>
+            <label><!-- Campos --></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label><!-- Endereço --></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Actualizar Responsável --></label>
+        <name>Actualizar_Respons_vel</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Novo Contrato Guarda Chuva --></label>
+        <name>Novo_Contrato</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Este recordtype bloquea la edición de los Datos Fiscales --></description>
+        <label><!-- Conta Bloqueada --></label>
+        <name>Conta_Bloqueada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Brinda acceso a todos los datos de la cuenta, sin restricciones --></description>
+        <label><!-- Conta Desbloqueada --></label>
+        <name>Conta_Desbloqueada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cuenta --></label>
+        <name>Cuenta</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Grupo --></label>
+        <name>Grupo</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Atualizar_Responsavel --></label>
+        <name>Atualizar_Responsavel</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bloquear_Conta --></label>
+        <name>Bloquear_Conta</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CRM --></label>
+        <name>CRM</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CRM_LE --></label>
+        <name>CRM_LE</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Desbloquear_Conta --></label>
+        <name>Desbloquear_Conta</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Enviar_a_Sap --></label>
+        <name>Enviar_a_Sap</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Facturar --></label>
+        <name>Facturar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Lista_de_Oportunidades --></label>
+        <name>Lista_de_Oportunidades</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Nova_Oportunidade --></label>
+        <name>Nova_Oportunidade</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendWithDocuSign --></label>
+        <name>dfsle__SendWithDocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

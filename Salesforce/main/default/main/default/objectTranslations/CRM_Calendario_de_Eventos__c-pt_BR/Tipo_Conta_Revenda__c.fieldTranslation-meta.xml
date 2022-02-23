@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo Conta Revenda --></label>
+    <name>Tipo_Conta_Revenda__c</name>
+    <picklistValues>
+        <masterLabel>CNPJ</masterLabel>
+        <translation><!-- CNPJ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPF</masterLabel>
+        <translation><!-- CPF --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

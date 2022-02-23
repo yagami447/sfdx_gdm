@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Importe en R$ de la cantidad de Kg del Importe x la Cotización en R$ del Kg de Soja --></help>
+    <label><!-- Importe en R$ --></label>
+    <name>Importe_en_R__c</name>
+</CustomFieldTranslation>

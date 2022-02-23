@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tipo de cambio al que sale impresa la factura --></help>
+    <label><!-- Tipo de câmbio --></label>
+    <name>Tipo_de_cambio__c</name>
+</CustomFieldTranslation>

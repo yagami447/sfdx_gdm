@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desvio_Venda_de_Basica__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((Total__c / Preco_Total_Sugerido_Com_Juros__c) - 1 &gt; 0, 0, (Total__c / Preco_Total_Sugerido_Com_Juros__c) - 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Desvio Venda de Basica</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Percent</type>
+</CustomField>

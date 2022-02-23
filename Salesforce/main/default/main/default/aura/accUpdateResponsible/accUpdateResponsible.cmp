@@ -1,0 +1,37 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="accUpdateResponsibleController">
+
+    <aura:attribute name="isReady" type="Boolean" default="true"/>
+    <aura:attribute name="controlButtons" type="Boolean" default="false"/>
+
+    <aura:html tag="style">
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }
+        .slds-modal__content {
+            height:unset !important;
+            max-height:unset !important;
+        }
+    </aura:html>
+
+    <aura:if isTrue="{!v.isReady}">
+        <header class="slds-modal__header">
+            <h2 class="slds-modal__title slds-hyphenate">Atualização de Responsável</h2>
+        </header>
+        <div class="slds-var-p-around_large">
+            <div class="slds-is-relative slds-hide" aura:id="spinner">
+                <lightning:spinner alternativeText="Loading" size="medium">Espere por favor</lightning:spinner>
+                <span class="slds-align_absolute-center slds-hidden"><b>...</b></span>
+            </div>
+            <p class="slds-align_absolute-center" aura:id="message">
+                Este procedimento irá atualizar os responsáveis de todas as oportunidades, eventos e aditivos da conta. Confirma atualização?
+            </p>
+        </div>
+        <footer class="slds-modal__footer">
+            <lightning:button aura:id="btnCancel" label="Não" onclick="{!c.cancel}" disabled="{!v.controlButtons}"/>
+            <lightning:button aura:id="btnAccept" label="Sim" variant="brand" onclick="{!c.accept}" disabled ="{!v.controlButtons}"/>
+        </footer>
+    </aura:if>
+</aura:component>

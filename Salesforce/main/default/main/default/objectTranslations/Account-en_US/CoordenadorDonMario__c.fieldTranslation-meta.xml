@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Coordenador DonMario --></label>
+    <lookupFilter>
+        <errorMessage><!-- El Coordenador DonMario debe ser un Usuario con Perfil Coordenador --></errorMessage>
+    </lookupFilter>
+    <name>CoordenadorDonMario__c</name>
+    <relationshipLabel><!-- Cuentas (Coordenador DonMario) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_Kg_Second_Price__c</fullName>
+    <description>Cantidad máxima de Kg de producto para el segundo precio (Segundo preço)</description>
+    <externalId>false</externalId>
+    <label>Quant max de Kg ao segundo preço</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

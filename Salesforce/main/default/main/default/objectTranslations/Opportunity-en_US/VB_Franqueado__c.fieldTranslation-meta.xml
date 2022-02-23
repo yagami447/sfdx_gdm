@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Franqueado en la operacion donde el Franqueado le vende semilla basica al Multiplicador --></help>
+    <label><!-- Franqueado --></label>
+    <name>VB_Franqueado__c</name>
+    <relationshipLabel><!-- Oportunidades de Exportação --></relationshipLabel>
+</CustomFieldTranslation>

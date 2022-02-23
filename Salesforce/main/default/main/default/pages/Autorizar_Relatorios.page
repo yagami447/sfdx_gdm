@@ -1,0 +1,129 @@
+<apex:page controller="Autorizar_Relatorios_Controller" sidebar="false">
+
+
+
+    <apex:sectionHeader title="Processar Anexos" subtitle=""/>
+    <apex:pageMessages />    
+    <apex:form >
+        <apex:pageBlock >                        
+            <apex:pageBlockSection showHeader="false" columns="2" id="principal">
+                <apex:selectList value="{!TipoAnexo.RecordTypeId}" size="1" required="true" onkeyup="refreshTotals()"><apex:selectOptions value="{!OptionRecType}"/></apex:selectList>
+                <apex:inputField value="{!opp.AccountId}" id="cuenta" required="true"/>
+                <apex:inputField value="{!opp.Safra__c}" id="safra" required="true"/>
+                <apex:inputField value="{!opp.Marca__c}" id="marca" required="true"/>
+                <!--<apex:inputField value="{!contrato.Tipo_de_Cota_o__c}" id="tipocot" required="true"/>
+                <apex:inputField value="{!contrato.Cotacao_de_soja__c}" id="contrato"/>
+                <apex:inputField value="{!opp.Filtro_Contrato_Mult__c}" id="aditivo" label="Aditivo" required="false" />
+                <apex:inputField value="{!ItemCont.Contrato_de_Multiplicacion__c}" id="aditivo" label="Aditivo" required="false" />
+                <apex:inputField value="{!Item.Contrato_relacionado__c}" id="aditivo" label="Aditivo" required="false"/>-->
+                <apex:outputText value=" " />
+                <apex:commandButton action="{!Buscar}" style="float:center;margin-left:100px;width:80px" value="Pesquisar" rerender="seccion_resultado,seccion_facturar" status="status" oncomplete="MostrarMsj('{!Mensaje}')"></apex:commandButton>
+                <apex:actionStatus startText="Consultando..." id="status"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+                                    
+        <apex:pageBlock >                               
+            <apex:pageBlockSection columns="1" title="Resultado" id="seccion_resultado">
+            <apex:Messages />
+            <apex:pageBlock >
+               <apex:commandButton action="{!selectAll}" style="width:110px" value="Completar Todos" rerender="resultado" disabled="{!opp.Filtro_Contrato_Mult__c != null}"></apex:commandButton> 
+               <apex:commandButton action="{!quitarSeleccion}" style="width:120px" value="Remover Todos" rerender="resultado" disabled="{!opp.Filtro_Contrato_Mult__c != null}"></apex:commandButton> 
+               <apex:commandButton style="float:right;margin-right:16px;width:130px;background:black;color:white" value="Processar Anexos" action="{!CrearPedidos}" oncomplete="openWin('{!Mensaje}', '{!url}')" rerender="seccion_resultado,seccion_facturar,principal"></apex:commandButton>               
+           <script>               
+               function openWin(msj, url){
+                   if (msj != 'OK' && msj != '') alert (msj);
+                   if (url != '') window.open('/'+ url, '_blank');                                 
+                   
+               }               
+               function MostrarMsj(msj){
+                   if (msj != 'OK' && msj != '') alert (msj);
+               }
+            </script>        
+            </apex:pageBlock>                               
+            <apex:pageblocktable value="{!listaOpp}"  var="oppl" id="resultado">
+            <!-- <apex:column >     if (url != '') window.open('/'+ url, '_blank');
+                   <apex:facet name="header">                                        
+                         Items                                                                               
+                    </apex:facet>
+                    <apex:outputpanel id="plusimage">
+                          <apex:image url="{!$Resource.Plus_Image}" onclick="switchMenu('{!$Component.inlinetablesec}','{!$Component.minusimage}','{!$Component.plusimage}')" title="Expand - Team Member's"/> 
+                    </apex:outputpanel>
+                    <apex:outputpanel id="minusimage" style="display:none;">
+                          <apex:image url="{!$Resource.Minus_Image}" onclick="switchMenu('{!$Component.inlinetablesec}','{!$Component.plusimage}','{!$Component.minusimage}')" title="Collapse - Team Member's"/>
+                    </apex:outputpanel>
+                    <apex:outputpanel id="inlinetablesec" style="display:none;">
+                                                <apex:variable value="{!0}" var="rowNum"/>
+                                                <apex:repeat var="count" value="{!oppl.oport.Account.Name}">
+                                                    <apex:variable var="rowNum" value="{!rowNum+1}"/>
+                                                </apex:repeat>
+                            <apex:outputText rendered="{!rowNum=0}">  No Team Members  </apex:outputText>
+                        <apex:pageblocktable value="{!oppl.Oport.OpportunityLineItems}" var="tm" rendered="{!rowNum>0}">
+                            <apex:column headerValue="Produto">
+                                   <!-- <apex:outputfield value="{!tm.PriceBookEntry.Product2.Name}"/>
+                                   <apex:outputfield value="{!tm.PriceBookEntry.Product2.Variedade__c}"/>
+                             </apex:column>
+                            <apex:column headerValue="Categoria">
+                                   <!-- <apex:outputfield value="{!tm.PriceBookEntry.Product2.Name}"/>
+                                   <apex:outputfield value="{!tm.Categoria__c}"/>
+                             </apex:column>
+                             <apex:column headerValue="Semente Uso Propio">
+                                   <apex:outputfield value="{!tm.Semente_uso_propio__c}"/>
+                             </apex:column>
+                             <apex:column headerValue="Semente Comercializada">
+                                   <apex:outputfield value="{!tm.Semente_comercializada__c}"/>
+                             </apex:column>                                                                                 
+                        </apex:pageblocktable>
+                   </apex:outputpanel>     
+            </apex:column>  -->
+            <apex:column headerValue="Produto">
+                   <apex:outputfield value="{!oppl.opli.PriceBookEntry.Product2.Variedade__c}"/>
+            </apex:column>
+            <apex:column headerValue="Categoria">
+                   <apex:outputfield value="{!oppl.opli.Categoria__c}"/>
+             </apex:column>
+             <apex:column headerValue="Semente Uso Propio">
+                   <apex:outputfield value="{!oppl.opli.Semente_uso_propio__c}"/>
+             </apex:column>
+             <apex:column headerValue="Semente Comercializada">
+                   <apex:outputfield value="{!oppl.opli.Semente_comercializada__c}"/>
+             </apex:column>
+             <apex:column headerValue="Tipo de Cotação">
+                   <apex:outputfield value="{!oppl.opli.Tipo_de_Cotizacion__c}"/>
+             </apex:column>
+             <apex:column headerValue="Praça">
+                   <apex:outputfield value="{!oppl.opli.Cot_Soja__c}"/>
+             </apex:column>
+             <apex:column headerValue="Preço">
+                   <apex:outputfield value="{!oppl.opli.UnitPrice}"/>
+             </apex:column>             
+              <apex:column headerValue="Quantidade">
+                   <!--<apex:inputText value="{!oppl.Quantidade}" rendered="{!opp.Filtro_Contrato_Mult__c == null}"/>
+                   <apex:outputText value="{!oppl.Quantidade}" rendered="{!opp.Filtro_Contrato_Mult__c != null}"/>-->
+                   <apex:outputText value="{!oppl.Quantidade}"/>
+             </apex:column>
+             <!-- <apex:column headerValue="Quant_Disp">
+                   <apex:outputText value="{!oppl.Quant_disp}"/>
+             </apex:column>
+             <apex:column headervalue="Sel.">
+                    <apex:inputCheckbox value="{!oppl.Selected}"/>
+            </apex:column> -->
+            <apex:column headervalue="Nome da conta">            
+                    <apex:OutputLink value="../{!oppl.oport.Account.Id}"> <apex:outputField value="{!oppl.oport.Account.Name}"/></apex:outputLink>
+            </apex:column>
+            <apex:column headervalue="Nome da oportunidade">
+                    <apex:OutputLink value="../{!oppl.oport.Id}"> <apex:outputField value="{!oppl.oport.Name}"/></apex:outputLink>
+            </apex:column>
+            <apex:column headervalue="Safra">
+                    <apex:OutputField value="{!oppl.oport.Safra__c}"/>
+            </apex:column>
+            <apex:column headervalue="Data">
+                    <apex:OutputField value="{!oppl.oport.CloseDate}"/> 
+            </apex:column>
+        </apex:pageblocktable>
+  
+        </apex:pageBlockSection>                        
+        </apex:pageBlock>
+                
+    </apex:form>
+
+</apex:page>

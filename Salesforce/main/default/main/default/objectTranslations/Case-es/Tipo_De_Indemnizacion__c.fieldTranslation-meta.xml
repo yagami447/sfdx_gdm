@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo De Indenização --></label>
+    <name>Tipo_De_Indemnizacion__c</name>
+    <picklistValues>
+        <masterLabel>Dinheiro</masterLabel>
+        <translation><!-- Dinheiro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Royalties</masterLabel>
+        <translation><!-- Royalties --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sementes</masterLabel>
+        <translation><!-- Sementes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

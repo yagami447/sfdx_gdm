@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pasar_a_Reclamo_Comercial</fullName>
+    <availability>online</availability>
+    <description>Pasa el reclamo para que lo gestione un supervisor comercial</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Pasar a Reclamo Comercial</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var now = new Date();
+
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.Id = &apos;{!Case.Id}&apos;; 
+caseObj.RecordTypeId = &apos;012S00000004bO7IAI&apos;; //Poner id del recordtype en cuestion 
+caseObj.Status = &apos;Reclamo Comercial&apos;; 
+caseObj.Fecha_de_Asignaci_n__c = getCurrentSalesForceTime();
+var result = sforce.connection.update([caseObj]); 
+if (result[0].success==&apos;false&apos;) { 
+alert(result[0].errors.message); 
+} else { 
+window.location.href=window.location.href; 
+}
+
+function getCurrentSalesForceTime(){
+    var currentDateTime = sforce.connection.getServerTimestamp();
+    currentDateTime = setStringToDateTime(currentDateTime.timestamp);
+ 
+    return currentDateTime;
+}
+
+function setStringToDateTime(dateTimeObj){
+    var dateTimeObj;
+ 
+    if (dateTimeObj != null) {
+        dateTimeObj = sforce.internal.stringToDateTime(dateTimeObj);
+    }
+ 
+    return dateTimeObj;
+}</url>
+</WebLink>

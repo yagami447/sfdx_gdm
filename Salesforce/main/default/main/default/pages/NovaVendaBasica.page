@@ -1,0 +1,38 @@
+<apex:page standardController="Opportunity">
+<apex:includeScript value="../../soap/ajax/20.0/connection.js"/>
+<apex:includeScript value="../../soap/ajax/10.0/apex.js"/> 
+<script>
+    sforce.connection.sessionId='{!GETSESSIONID()}';
+    
+    var id = "{!Opportunity.Id}"; 
+    var accId = "{!Opportunity.AccountId}"; 
+    var pasa = true; 
+    var etapa = "{!Opportunity.StageName}"; 
+    var tieneOpli = "{!Opportunity.HasOpportunityLineItem}";        
+    var vencida = "{!Opportunity.Vencida__c}"; 
+
+    if (vencida == '1'){ 
+        alert("Negociação vencida."); 
+        pasa = false; 
+    } 
+    if (etapa == 'Cerrada'){ 
+        alert("Fase para gerar a autorização deve ser aberta."); 
+        pasa = false; 
+    } 
+
+    if(tieneOpli == false){ 
+        alert("Negociação sem Produtos."); 
+        pasa = false; 
+    } 
+    
+    if(pasa == true){ 
+        var result = sforce.apex.execute("previsionesController","generarVenta", {opId : id, acId : accId, rechazo : false }); 
+    
+        alert(result[0]); 
+        if (result[1] == 'ok'){ 
+            var mywin = window.location.href='/' + result[2]; 
+        } 
+    }
+
+</script>
+</apex:page>

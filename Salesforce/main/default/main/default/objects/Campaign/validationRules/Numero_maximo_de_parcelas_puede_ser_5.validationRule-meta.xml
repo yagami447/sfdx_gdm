@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numero_maximo_de_parcelas_puede_ser_5</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(Numero_maximo_de_parcelas__c &gt; 5 , Numero_maximo_de_parcelas__c &lt; 1)</errorConditionFormula>
+    <errorDisplayField>Numero_maximo_de_parcelas__c</errorDisplayField>
+    <errorMessage>Não pode ser maior que 5</errorMessage>
+</ValidationRule>

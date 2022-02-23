@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tipo de registros para completar la Sociedad con este valor --></help>
+    <label><!-- Tipo de registro --></label>
+    <name>Tipo_de_registro__c</name>
+</CustomFieldTranslation>

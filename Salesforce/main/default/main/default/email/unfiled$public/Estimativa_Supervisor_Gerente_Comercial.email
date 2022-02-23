@@ -1,0 +1,5 @@
+Está disponível para aprovação:
+
+O supervisor comercial {!ApprovalRequest.Process_Approver} inseriu informações da Estimativa, identificação {!Requisicao_de_compra__c.Name} para sua Análise.
+
+Clique no link abaixo para acesso ao salesforce: {!Requisicao_de_compra__c.Link}

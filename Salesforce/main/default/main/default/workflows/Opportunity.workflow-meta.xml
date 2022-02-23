@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alerta_a_Gerente_de_marca</fullName>
+        <ccEmails>carlos.autalan@xappia.com</ccEmails>
+        <description>Alerta a Gerente de marca</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ksantos@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Venta_de_Basica/AP_VBasica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aprobacion_descartes_ContactoPortal</fullName>
+        <description>Aprobacion descartes ContactoPortal</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Aprobacion_FINAL</template>
+    </alerts>
+    <alerts>
+        <fullName>Aprobacion_descartes_SiteUser</fullName>
+        <description>Aprobacion descartes SiteUser</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CorreoElectronicoSiteUser__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Aprobacion_FINAL</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_Pendiente_de_Aprobaci_n</fullName>
+        <description>Aviso - Pendiente de Aprobación</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>blemes@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_Pendiente_de_Aprobaci_n</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_Solicitud_de_Aprobacion_de_NV_de_Venta</fullName>
+        <description>Aviso Solicitud de Aprobación de NV de Venta</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Venta_de_Basica/SA_VBasica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobaci_n_de_Producci_n_B_sica</fullName>
+        <description>Aviso de Aprobación de Producción Básica</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>Gerencia_Produccion</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Produccion_de_Basica/Alerta_Final_Produccion_de_Basica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobaci_n_x_Supervisor_Reemb</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Aprobación x Supervisor Reemb</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_Reembalaje/Aviso_de_Aprobacion_x_Supervisor_Reemb</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_FINAL</fullName>
+        <description>Aviso de Aprobacion FINAL</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>CorreoElectronicoSiteUser__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Aprobacion_FINAL</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_FINAL_Descartes</fullName>
+        <description>Aviso de Aprobacion FINAL Descartes</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Aprobacion_FINAL</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_FINAL_Licencias</fullName>
+        <ccEmails>voliveira@donmario.com</ccEmails>
+        <description>Aviso de Aprobacion FINAL-Licencias</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Aprobacion_FINAL</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_FINAL_Sem_Terceiros</fullName>
+        <description>Aviso de Aprobacion FINAL Sem Terceiros</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aviso_de_Aprobacion_FINAL_Sem_Terceiros</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_FINAL_Stock_Mult</fullName>
+        <description>Aviso de Aprobacion FINAL Stock Mult</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Usuario_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>admvendas@gdmseeds.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Aprobacion_FINAL_Stock_Mult</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_de_Nota_de_Venta_de_Basica</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Aprobación de Nota de Venta de Básica</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Venta_de_Basica/AP_VBasica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Aprobacion_x_Gerente_Reemb</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Aprobacion x Gerente Reemb</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_Reembalaje/Aviso_de_Aprobacion_x_Gerente_Reemb</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Creaci_n_de_Oportunidad_de_Anexos_con_etapa_incorrecta</fullName>
+        <ccEmails>cnieto@donmario.com</ccEmails>
+        <description>Aviso de Creación de Oportunidad de Anexos con etapa incorrecta</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Creaci_n_de_Op_de_Anexos_con_etapa_incorrecta</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Coordenador</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Coordenador</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>CoordenadorDaConta__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desaprobacion_x_Coordenador</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Coordenador_SiteUser</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Coordenador SiteUser</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>CorreoElectronicoSiteUser__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desaprobacion_x_Coordenador</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Gerente</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Gerente</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desprobacion_x_Gerente</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Gerente_Licencias</fullName>
+        <ccEmails>voliveira@donmario.com</ccEmails>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Gerente-Licencias</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desprobacion_x_Gerente</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Gerente_Reemb</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Gerente Reemb</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_Reembalaje/Aviso_de_Desprobacion_x_Gerente_Reemb</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Supervisor</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Supervisor</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contacto_Portal__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desprobacion_x_Supervisor</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Supervisor_Reemb</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Supervisor Reemb</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_Reembalaje/Aviso_de_Desprobacion_x_Supervisor_Reemb</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobaci_n_x_Supervisor_SiteUser</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Aviso de Desaprobación x Supervisor SiteUser</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>CorreoElectronicoSiteUser__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desprobacion_x_Supervisor</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desaprobacion_Semente_Terceiros</fullName>
+        <description>Aviso de Desaprobacion Semente Terceiros</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>admvendas@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aviso_de_Desaprobacion_Semente_Terceiros</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Desprobacion_x_Supervisor_Stock_Mult</fullName>
+        <description>Aviso de Desprobacion x Supervisor Stock Mult</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Usuario_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>admvendas@gdmseeds.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Circuito_de_Anexos/Aviso_de_Desprobacion_x_Supervisor_Stock_Mult</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_PB_Com_pendiente_luego_de_48_Hrs_de_ser_asignada_Direcc</fullName>
+        <description>Aviso de PB Com pendiente luego de 48 Hrs de ser asignada Direcc</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>rfranconere@gdmseeds.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Produccion_de_Basica/PB_Com_Pendiente_de_Aprobacion</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Rechazo_Produccion_de_B_sica</fullName>
+        <description>Aviso de Rechazo Producción de Básica</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>Gerencia_Produccion</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Produccion_de_Basica/Alerta_Rechazo_Produccion_de_Basica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Rechazo_de_Nota_de_Venta_de_Basica</fullName>
+        <description>Aviso de Rechazo de Nota de Venta de Básica</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Venta_de_Basica/RE_VBasica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_Solicitud_de_Aprobaci_n_de_Producci_n_B_sica</fullName>
+        <description>Aviso de Solicitud de Aprobación de Producción Básica</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Director</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Produccion_de_Basica/Alerta_1_Produccion_de_Basica</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_alta_de_Registro_de_AnexoI</fullName>
+        <description>Aviso de alta de Registro de AnexoI</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adminbr@donmario.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_Anexo_I</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrato_de_Multiplicaci_n_disponible</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Contrato de Multiplicación disponible</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Impresi_n_de_Contrato_de_multiplicaci_n</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrato_de_Multiplicaci_n_disponible_Licenc</fullName>
+        <ccEmails>voliveira@donmario.com</ccEmails>
+        <description>Contrato de Multiplicación disponible Licencias</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Impresi_n_de_Contrato_de_multiplicaci_n</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrato_de_Multiplicaci_n_disponible_Licencias</fullName>
+        <ccEmails>voliveira@donmario.com</ccEmails>
+        <description>Contrato de Multiplicación disponible-Licencias</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Impresi_n_de_Contrato_de_multiplicaci_n</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrato_de_Multiplicaci_n_disponible_comunidad</fullName>
+        <ccEmails>admvendas@gdmseeds.com</ccEmails>
+        <description>Contrato de Multiplicación disponible - Comunidad</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Impresi_n_de_Contrato_de_multiplicaci_n</template>
+    </alerts>
+    <alerts>
+        <fullName>Documento_para_imprimir</fullName>
+        <description>Aviso de Documento disponible para impresión según Anexo</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adminbr@donmario.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Impresi_n_de_Contrato_de_multiplicaci_n</template>
+    </alerts>
+    <alerts>
+        <fullName>Msj_de_alerta_x_correo_electr_nico</fullName>
+        <description>Msj de alerta x correo electrónico</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adminbr@donmario.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SOPORTENotificacindecomentarionuevodeautoservicioMUESTRA</template>
+    </alerts>
+    <alerts>
+        <fullName>Msj_x_correo_electr_nico</fullName>
+        <description>Msj de alerta x correo electrónico</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adminbr@donmario.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Circuito_de_Anexos/Aviso_Anexo_I</template>
+    </alerts>
+    <alerts>
+        <fullName>notificar_a_Gerente_de_marca_BRMX_2_5_5</fullName>
+        <description>notificar a Gerente de marca BRMX 2.5-5</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ksantos@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notificacion_a_Gerente_de_marca_2_5_5</template>
+    </alerts>
+    <alerts>
+        <fullName>notificar_a_Gerente_de_marca_BRMX_5</fullName>
+        <description>notificar a Gerente de marca BRMX 5</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ksantos@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notificacion_a_Gerente_de_marca_5</template>
+    </alerts>
+    <alerts>
+        <fullName>notificar_a_Gerente_de_marca_DSEM_2_5_5</fullName>
+        <description>notificar a Gerente de marca DSEM 2.5-5</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nmanzatto@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notificacion_a_Gerente_de_marca_2_5_5</template>
+    </alerts>
+    <alerts>
+        <fullName>notificar_a_Gerente_de_marca_DSEM_5</fullName>
+        <description>notificar a Gerente de marca DSEM 5</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nmanzatto@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notificacion_a_Gerente_de_marca_5</template>
+    </alerts>
+    <alerts>
+        <fullName>notificar_a_Gerente_de_marca_NEOG_2_5_5</fullName>
+        <description>notificar a Gerente de marca NEOG 2.5-5</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adminbr@donmario.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notificacion_a_Gerente_de_marca_2_5_5</template>
+    </alerts>
+    <alerts>
+        <fullName>notificar_a_Gerente_de_marca_NEOG_5</fullName>
+        <description>notificar a Gerente de marca NEOG 5</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dsahao@gdmseedsqasaps4.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notificacion_a_Gerente_de_marca_5</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>A_Edicion</fullName>
+        <field>StageName</field>
+        <literalValue>Edición</literalValue>
+        <name>A Edición</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>A_admin_de_ventas</fullName>
+        <field>StageName</field>
+        <literalValue>Revisão do administrador de vendas</literalValue>
+        <name>A admin de ventas</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>A_mutliplicador</fullName>
+        <field>StageName</field>
+        <literalValue>Na aprovação do multiplicador</literalValue>
+        <name>A multiplicador</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Activar_Tiene_Descarte</fullName>
+        <field>tienePdf__c</field>
+        <literalValue>1</literalValue>
+        <name>Activar Tiene PDF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualiza_Etapa_1</fullName>
+        <description>Se actualiza la estapa a Aprobado Parcial</description>
+        <field>StageName</field>
+        <literalValue>PB-Aprobada Parcial</literalValue>
+        <name>Actualiza Etapa 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualiza_Etapa_2</fullName>
+        <description>Actualiza la etapa y le da la aprobación Final</description>
+        <field>StageName</field>
+        <literalValue>PB-Aprobada</literalValue>
+        <name>Actualiza Etapa 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualiza_precio_sugerido_Difusion</fullName>
+        <field>Preco_Unitario_Sugerido_Difusao__c</field>
+        <formula>IF(ISPICKVAL(Tipo_de_Cultivares__c, &apos;Lançamentos&apos;),
+			IF(Kg_de_produto__c &gt;= Campaign.Kg_para_quarto_preco__c, Campaign.Quarto_Preco_Difusao__c,
+    IF(Kg_de_produto__c &gt;= Campaign.Kg_para_terceiro_prec__c, Campaign.Terceiro_Preco_Difusao__c,
+        IF(Kg_de_produto__c &gt;= Campaign.Kg_para_segundo_preco__c, Campaign.Segundo_Preco_Difusao__c, Campaign.Primeiro_Preco_Difusao__c
+          )
+    )
+),
+			0)</formula>
+        <name>Actualiza precio sugerido - Difusion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ActualizarRecordTypeaCVBAutorizada</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CVB_Autorizada</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Actualizar RecordType a CVB Autorizada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Control_Anexos</fullName>
+        <field>Control_Anexos__c</field>
+        <formula>RecordTypeId + AccountId + TEXT(Safra__c) + TEXT(Marca__c)</formula>
+        <name>Actualizar Control Anexos</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Etapa</fullName>
+        <field>StageName</field>
+        <literalValue>Bloqueada</literalValue>
+        <name>Actualizar Etapa</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Etapa_Rech</fullName>
+        <field>StageName</field>
+        <literalValue>Edición</literalValue>
+        <name>Actualizar Etapa Rech</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Etapa_Rechazada</fullName>
+        <field>StageName</field>
+        <literalValue>PB-Rechazada</literalValue>
+        <name>Actualizar Etapa Rechazada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Fecha_PB</fullName>
+        <field>Vencimiento_Anexo__c</field>
+        <formula>Today()</formula>
+        <name>Actualizar Fecha PB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_Nombre_Oportunidad</fullName>
+        <field>Name</field>
+        <formula>Nro_Autom_NV__c</formula>
+        <name>Actualizar Nombre Oportunidad</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_RT_Autorizado</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>VB_Autorizada</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Actualizar RT Autorizado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_RT_REchazado</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>VB_Rechazada</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Actualizar RT REchazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_activa</fullName>
+        <field>Activa__c</field>
+        <literalValue>1</literalValue>
+        <name>Actualizar activa</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Anexo_I_actualizar_etapa</fullName>
+        <description>Actualiza la etapa según la etapa de la aprobación</description>
+        <field>StageName</field>
+        <name>Anexo I actualizar etapa</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>NextValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Aprobada</fullName>
+        <description>Oportunidad aprobada por el Gerente</description>
+        <field>StageName</field>
+        <literalValue>Aprobada</literalValue>
+        <name>Aprobada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AprobadoPorCoordenador</fullName>
+        <field>StageName</field>
+        <literalValue>Pendente de 2da aprovação</literalValue>
+        <name>Aprobado x Coordenador</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Aprobado_x_Director</fullName>
+        <field>StageName</field>
+        <literalValue>Complementar informações</literalValue>
+        <name>Aprobado x Director</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Aprobado_x_Gerente</fullName>
+        <field>StageName</field>
+        <literalValue>Pendente de 2da aprovação</literalValue>
+        <name>Aprobado x Gerente</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Aprobado_x_Supervisor</fullName>
+        <description>Define la etapa a seguir una vez aprobada x el supervisor</description>
+        <field>StageName</field>
+        <literalValue>Pendiente de Aprobación</literalValue>
+        <name>Aprobado x Supervisor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Borrar_Fecha_PB</fullName>
+        <field>Vencimiento_Anexo__c</field>
+        <name>Borrar Fecha PB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Cantidad_aprobada</fullName>
+        <field>Prazos_aprobados__c</field>
+        <literalValue>1</literalValue>
+        <name>Cantidad aprobada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Desaprobado_x_Director</fullName>
+        <field>StageName</field>
+        <literalValue>Desaprobado x Director</literalValue>
+        <name>Desaprobado x Director</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Desaprobado_x_Gerente</fullName>
+        <description>Desaprobado x Gerente</description>
+        <field>StageName</field>
+        <literalValue>Desaprobado x Gerente</literalValue>
+        <name>Desaprobado x Gerente</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Docusign_Aprovado_pelo_Supervisor</fullName>
+        <description>Avança para etapa de assinatura do Gerente pelo Docusign</description>
+        <field>StageName</field>
+        <literalValue>Aguardando Assinatura</literalValue>
+        <name>Docusign - Aprovado pelo Supervisor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Etapa_Anulada</fullName>
+        <field>StageName</field>
+        <literalValue>AN - Anulada</literalValue>
+        <name>Etapa Anulada</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fecha_Cierre</fullName>
+        <field>CloseDate</field>
+        <formula>TODAY()</formula>
+        <name>Fecha Cierre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Ingreso_al_Proceso</fullName>
+        <field>En_Proc_Aprobacion__c</field>
+        <literalValue>1</literalValue>
+        <name>Ingreso al Proceso</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Juros_Desconto</fullName>
+        <field>Juros_Desconto__c</field>
+        <formula>IF(Prazo_Medio_Dif__c &gt; 0,
+1/30 * Prazo_Medio_Dif__c * Campaign.Juros__c,
+1/30 * Prazo_Medio_Dif__c * Campaign.Desconto__c)</formula>
+        <name>Juros/Desconto</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Limpiar_Motivo_de_Rechazo</fullName>
+        <description>Al ingresar a un Proceso de aprobación de Anexos se limpia el Motivo de Rechazo</description>
+        <field>Motivo_de_Rechazo__c</field>
+        <name>Limpiar Motivo de Rechazo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Limpiar_Next_Step</fullName>
+        <description>Al rechazar un Anexo se limpia este campo para poder enviarlo nuevamente para aprobación desde el portal.</description>
+        <field>Next_Step__c</field>
+        <name>Limpiar Next Step</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Negocia_o_Vencimiento</fullName>
+        <field>Vencida__c</field>
+        <literalValue>1</literalValue>
+        <name>Negociação Vencimiento</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nome_venda_de_basica</fullName>
+        <field>Name</field>
+        <formula>&apos;VB - &apos;+ Account.Name + &apos; - &apos;+  TEXT(Safra__c)+ &apos;-&apos; + Nro_Autom_NV__c</formula>
+        <name>Nome venda de basica</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Para_cobran_a</fullName>
+        <field>StageName</field>
+        <literalValue>Aguardando dados de cobrança</literalValue>
+        <name>Para cobrança</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pendiente_de_An_lisis</fullName>
+        <description>Pendiente de Análisis</description>
+        <field>StageName</field>
+        <literalValue>Pendiente de Análisis</literalValue>
+        <name>Pendiente de Análisis</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pone_en_EDICION</fullName>
+        <description>Pone en Edición la Oportunidad del Circuito de Anexos</description>
+        <field>StageName</field>
+        <literalValue>Edición</literalValue>
+        <name>Pone en EDICION</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Precio_unitario_sugerido</fullName>
+        <field>Preco_unitario_sugerido__c</field>
+        <formula>IF(Kg_de_produto__c &gt;= Campaign.Kg_para_quarto_preco__c, Campaign.Quarto_Preco_Multiplicacao__c,
+        IF(Kg_de_produto__c &gt;= Campaign.Kg_para_terceiro_prec__c, Campaign.Terceiro_Preco_Multiplicacao__c,
+            IF(Kg_de_produto__c &gt;= Campaign.Kg_para_segundo_preco__c, Campaign.Segundo_Preco_Multiplicacao__c, 
+			            Campaign.Primeiro_Preco_Multiplicacao__c
+            )
+				    )
+				)</formula>
+        <name>Precio unitario sugerido</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rech_o_Recupero_Proceso</fullName>
+        <field>En_Proc_Aprobacion__c</field>
+        <literalValue>0</literalValue>
+        <name>Rech o Recupero Proceso</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RechazadaCoordenador</fullName>
+        <field>StageName</field>
+        <literalValue>Rechazada Coordenador</literalValue>
+        <name>Rechazada x Coordenador</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rechazada_x_Supervisor</fullName>
+        <description>Rechazada x Supervisor</description>
+        <field>StageName</field>
+        <literalValue>Rechazada Supervisor</literalValue>
+        <name>Rechazada x Supervisor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TienePDF</fullName>
+        <description>Se coloca en true cuando el Descarte fue aprobado. Se usa para generar el PDF</description>
+        <field>tienePdf__c</field>
+        <literalValue>1</literalValue>
+        <name>TienePDF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Tiene_PDF</fullName>
+        <field>tienePdf__c</field>
+        <literalValue>1</literalValue>
+        <name>Tiene PDF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>a_Gerencia</fullName>
+        <field>StageName</field>
+        <literalValue>Na aprovação da gerência</literalValue>
+        <name>a Gerencia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_rejeitado</fullName>
+        <field>StageName</field>
+        <literalValue>PB-Rechazada</literalValue>
+        <name>alterar o status para rejeitado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_status</fullName>
+        <field>StageName</field>
+        <literalValue>PB-Pendiente</literalValue>
+        <name>alterar status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_status_dois</fullName>
+        <field>StageName</field>
+        <literalValue>PB-Aprobada</literalValue>
+        <name>alterar status dois</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_status_para_aprovado</fullName>
+        <field>StageName</field>
+        <literalValue>PB-Aprobada Parcial</literalValue>
+        <name>alterar status para aprovado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_status_rejeitado_dois</fullName>
+        <field>StageName</field>
+        <literalValue>PB-Rechazada</literalValue>
+        <name>alterar status rejeitado dois</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Anexo_I</fullName>
+        <apiVersion>25.0</apiVersion>
+        <description>AnexoI prueba de mensaje saliente</description>
+        <endpointUrl>https://na2.salesforce.com/0064000000I3FU6AAN?id=id</endpointUrl>
+        <fields>AccountId</fields>
+        <fields>Id</fields>
+        <fields>RecordTypeId</fields>
+        <fields>Vencimiento_Anexo__c</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>adminbr@donmario.com</integrationUser>
+        <name>Anexo I</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Actualiza lista de precios - Venda de Basica</fullName>
+        <active>false</active>
+        <formula>AND(RecordType.Name = &apos;Venda_da_Basica_full&apos;, NOT(ISNULL(CampaignId)))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualiza precio sugerido</fullName>
+        <actions>
+            <name>Actualiza_precio_sugerido_Difusion</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Juros_Desconto</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Precio_unitario_sugerido</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica,Venda da Basica Completo</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Control Anexos</fullName>
+        <actions>
+            <name>Actualizar_Control_Anexos</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Anexo IV</value>
+        </criteriaItems>
+        <description>Dispara una actualización de campo para actualizar el campo Control Anexos</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualizar Nombre Oportunidad</fullName>
+        <actions>
+            <name>Actualizar_Nombre_Oportunidad</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Objetivo Ventas Semilla,Objetivo Ventas Royalties,Objetivo Contrato Royalties,Venda da Basica Completo,Venda da Hibrido</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Anexo I</fullName>
+        <actions>
+            <name>Msj_de_alerta_x_correo_electr_nico</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Anexo_I</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Vencimiento_Anexo__c</field>
+            <operation>greaterThan</operation>
+            <value>HOY</value>
+        </criteriaItems>
+        <description>Anexo I Prueba</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Aprobacion descarte Contact</fullName>
+        <actions>
+            <name>Aprobacion_descartes_ContactoPortal</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Contact NEOG</description>
+        <formula>CloseDate = TODAY() &amp;&amp; ISPICKVAL(Marca__c, &quot;NEOG&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Aprobacion descarte SiteUser</fullName>
+        <actions>
+            <name>Aprobacion_descartes_SiteUser</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>To send mail to siteUser when a opportunity of type descarte is aproved</description>
+        <formula>CloseDate =  TODAY()  &amp;&amp;  OR(ISPICKVAL(Marca__c, &quot;BRMX&quot;),ISPICKVAL(Marca__c, &quot;DSEM&quot;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Crear Anexo en Edición</fullName>
+        <actions>
+            <name>Aviso_de_Creaci_n_de_Oportunidad_de_Anexos_con_etapa_incorrecta</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Pone_en_EDICION</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Anexo I,Anexo I Rebaixamento Ha,Anexo II,Anexo II Rebaixamento Potencia,Anexo III,Anexo III Rebaixamento de Categoria,Anexo IV,Anexo V</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Edición vencida,Edición</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Impresión de Anexo</fullName>
+        <actions>
+            <name>Documento_para_imprimir</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Anexo I</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Aprobada</value>
+        </criteriaItems>
+        <description>Aviso para la impresión del anexo</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Negociação Vencimiento</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Previsao</value>
+        </criteriaItems>
+        <description>Setea Vencida__c = true a los 10 dias de creada una Opp de Negociação Venda da Basica.</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Negocia_o_Vencimiento</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>10</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Nome venda de basica</fullName>
+        <actions>
+            <name>Nome_venda_de_basica</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notificacion Rechazada Supervisor</fullName>
+        <actions>
+            <name>Aviso_de_Desaprobaci_n_x_Supervisor</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Rechazada Supervisor</value>
+        </criteriaItems>
+        <description>Se envia un mail al correo electronico del site user especificado en la oportunidad , siempre que se rechaze la opp.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PB Com Pendiente de Aprobacion Direccion</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PB-Comercial</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>PB-Aprobada Parcial</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Vencimiento_Anexo__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Esta regla controla que no pasen mas de 48 desde que se asignó para aprobar una opp de Producción de Básica.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Aviso_de_PB_Com_pendiente_luego_de_48_Hrs_de_ser_asignada_Direcc</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.Vencimiento_Anexo__c</offsetFromField>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Tiene PDF</fullName>
+        <actions>
+            <name>Tiene_PDF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Aprobada</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>notificar a Gerente de marca BRMX 2%2E5-5</fullName>
+        <actions>
+            <name>notificar_a_Gerente_de_marca_BRMX_2_5_5</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(NOT 1) AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>-2,5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>-5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Marca__c</field>
+            <operation>equals</operation>
+            <value>BRMX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Na aprovação da gerência</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>notificar a Gerente de marca BRMX 5</fullName>
+        <actions>
+            <name>notificar_a_Gerente_de_marca_BRMX_5</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>lessThan</operation>
+            <value>-5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Marca__c</field>
+            <operation>equals</operation>
+            <value>BRMX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Na aprovação da gerência</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>notificar a Gerente de marca DSEM 2%2E5-5</fullName>
+        <actions>
+            <name>notificar_a_Gerente_de_marca_DSEM_2_5_5</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(NOT 1) AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>-2,5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>-5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Marca__c</field>
+            <operation>equals</operation>
+            <value>DSEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Na aprovação da gerência</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>notificar a Gerente de marca DSEM 5</fullName>
+        <actions>
+            <name>notificar_a_Gerente_de_marca_DSEM_5</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>lessThan</operation>
+            <value>-5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Marca__c</field>
+            <operation>equals</operation>
+            <value>DSEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Na aprovação da gerência</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>notificar a Gerente de marca NEOG 2%2E5-5</fullName>
+        <actions>
+            <name>notificar_a_Gerente_de_marca_NEOG_2_5_5</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(NOT 1) AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>-2,5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>-5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Marca__c</field>
+            <operation>equals</operation>
+            <value>NEOG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Na aprovação da gerência</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>notificar a Gerente de marca NEOG 5</fullName>
+        <actions>
+            <name>notificar_a_Gerente_de_marca_NEOG_5</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Desvio_Venda_de_Basica__c</field>
+            <operation>lessThan</operation>
+            <value>-5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Marca__c</field>
+            <operation>equals</operation>
+            <value>NEOG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Venda da Basica Completo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Na aprovação da gerência</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

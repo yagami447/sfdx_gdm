@@ -1,0 +1,16 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="approvalButtonCRMEventoController">
+
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="CRM_Calendario_de_Eventos__c" />
+    <aura:attribute name="recordError" type="String" />
+
+    <force:recordData aura:id="load"
+        fields="Fase__c,Safra__c,Nome_do_agricultor_2__c,Latitud__c,Longitud__c,Divulgar_em_nome_de__c,Autorizado__c,OwnerId"
+        recordId="{!v.recordId}"
+        targetFields="{!v.simpleRecord}"
+        targetError="{!v.recordError}"
+        recordUpdated="{!c.loadRecord}" />
+
+    <lightning:spinner class="slds-is-static" alternativeText="Loading" size="medium" variant="brand">Espere por favor</lightning:spinner>
+
+</aura:component>

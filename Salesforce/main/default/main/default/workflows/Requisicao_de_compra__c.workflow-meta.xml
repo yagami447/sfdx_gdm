@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Disponible_para_aprobacion_GerenteComercial_Gerente_de_Marca</fullName>
+        <description>Disponible para aprobacion GerenteComercial-Gerente de Marca</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Aprovador__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Estimativa_Gerente_Comercial_Gerente_de_Marca</template>
+    </alerts>
+    <alerts>
+        <fullName>Disponible_para_aprobacion_Multiplicador_Supervisor</fullName>
+        <description>Disponible para aprobacion Multiplicador-Supervisor</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Aprovador__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Estimativa_Multiplicador_Supervisor</template>
+    </alerts>
+    <alerts>
+        <fullName>Disponible_para_aprobacion_Supervisor_GerenteComercial</fullName>
+        <description>Disponible para aprobacion Supervisor-GerenteComercial</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Aprovador__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Estimativa_Supervisor_Gerente_Comercial</template>
+    </alerts>
+    <alerts>
+        <fullName>Notificaci_n_de_Rechazo_Requisicion_compra</fullName>
+        <description>Notificación de Rechazo Requisicion compra</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_Site_User__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Otras/Aviso_de_rechazo_Requisicion_de_Compra</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Aprobar</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprovada</literalValue>
+        <name>Aprobar</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Cambiar_estado</fullName>
+        <field>Estado__c</field>
+        <literalValue>Pendente</literalValue>
+        <name>Cambiar estado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rechazar</fullName>
+        <field>Estado__c</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>Rechazar</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_aprovado</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprovada</literalValue>
+        <name>alterar o status para aprovado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_aprovado_dois</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprovada</literalValue>
+        <name>alterar o status para aprovado dois</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_aprovado_tres</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprovada</literalValue>
+        <name>alterar o status para aprovado tres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_rejeitado</fullName>
+        <field>Estado__c</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>alterar o status para rejeitado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_rejeitado_dois</fullName>
+        <field>Estado__c</field>
+        <literalValue>Rejeitado</literalValue>
+        <name>alterar o status para rejeitado dois</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_o_status_para_rejeitado_tres</fullName>
+        <field>Estado__c</field>
+        <literalValue>Edição</literalValue>
+        <name>alterar o status para rejeitado tres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>alterar_status</fullName>
+        <field>Estado__c</field>
+        <literalValue>Pendente</literalValue>
+        <name>alterar status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

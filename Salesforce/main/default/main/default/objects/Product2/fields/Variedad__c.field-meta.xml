@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Variedad__c</fullName>
+    <externalId>false</externalId>
+    <label>Variedad</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Licenciada__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BMX APOLO RR</fullName>
+                <default>false</default>
+                <label>BMX APOLO RR</label>
+            </value>
+            <value>
+                <fullName>BMX IMPACTO RR</fullName>
+                <default>false</default>
+                <label>BMX IMPACTO RR</label>
+            </value>
+            <value>
+                <fullName>BMX MAGNA RR</fullName>
+                <default>false</default>
+                <label>BMX MAGNA RR</label>
+            </value>
+            <value>
+                <fullName>BMX POTÊNCIA RR</fullName>
+                <default>false</default>
+                <label>BMX POTÊNCIA RR</label>
+            </value>
+            <value>
+                <fullName>BMX TITAN RR</fullName>
+                <default>false</default>
+                <label>BMX TITAN RR</label>
+            </value>
+            <value>
+                <fullName>BMX FORÇA RR</fullName>
+                <default>false</default>
+                <label>BMX FORÇA RR</label>
+            </value>
+            <value>
+                <fullName>BMX ENERGIA RR</fullName>
+                <default>false</default>
+                <label>BMX ENERGIA RR</label>
+            </value>
+            <value>
+                <fullName>BMX ATIVA RR</fullName>
+                <default>false</default>
+                <label>BMX ATIVA RR</label>
+            </value>
+            <value>
+                <fullName>BMX TURBO RR</fullName>
+                <default>false</default>
+                <label>BMX TURBO RR</label>
+            </value>
+            <value>
+                <fullName>BMX VELOZ RR</fullName>
+                <default>false</default>
+                <label>BMX VELOZ RR</label>
+            </value>
+            <value>
+                <fullName>BMX ALVO RR</fullName>
+                <default>false</default>
+                <label>BMX ALVO RR</label>
+            </value>
+            <value>
+                <fullName>BMX TORNADO RR</fullName>
+                <default>false</default>
+                <label>BMX TORNADO RR</label>
+            </value>
+            <value>
+                <fullName>BMX CLASSE RR</fullName>
+                <default>false</default>
+                <label>BMX CLASSE RR</label>
+            </value>
+            <value>
+                <fullName>BMX DESAFIO RR</fullName>
+                <default>false</default>
+                <label>BMX DESAFIO RR</label>
+            </value>
+            <value>
+                <fullName>BMX RAÇA RR</fullName>
+                <default>false</default>
+                <label>BMX RAÇA RR</label>
+            </value>
+            <value>
+                <fullName>BMX PROGRESSO RR</fullName>
+                <default>false</default>
+                <label>BMX PROGRESSO RR</label>
+            </value>
+            <value>
+                <fullName>BRASMAX ELITE IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX ELITE IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX FLECHA IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX FLECHA IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX BONUS IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX BONUS IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX BRAVA</fullName>
+                <default>false</default>
+                <label>BRASMAX BRAVA</label>
+            </value>
+            <value>
+                <fullName>BRASMAX CLASSE</fullName>
+                <default>false</default>
+                <label>BRASMAX CLASSE</label>
+            </value>
+            <value>
+                <fullName>BRASMAX PRISMA</fullName>
+                <default>false</default>
+                <label>BRASMAX PRISMA</label>
+            </value>
+            <value>
+                <fullName>BRASMAX OPUS IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX OPUS IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX LANÇA IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX LANÇA IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX GARRA IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX GARRA IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX ÍCONE IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX ÍCONE IPRO</label>
+            </value>
+            <value>
+                <fullName>BRASMAX POWER IPRO</fullName>
+                <default>false</default>
+                <label>BRASMAX POWER IPRO</label>
+            </value>
+            <value>
+                <fullName>68I69RSF IPRO</fullName>
+                <default>false</default>
+                <label>68I69RSF IPRO</label>
+            </value>
+            <value>
+                <fullName>75I76RSF IPRO</fullName>
+                <default>false</default>
+                <label>75I76RSF IPRO</label>
+            </value>
+            <value>
+                <fullName>81I84RSF IPRO</fullName>
+                <default>false</default>
+                <label>81I84RSF IPRO</label>
+            </value>
+            <value>
+                <fullName>53I54RSF IPRO</fullName>
+                <default>false</default>
+                <label>53I54RSF IPRO</label>
+            </value>
+            <value>
+                <fullName>66I68RSF IPRO</fullName>
+                <default>false</default>
+                <label>66I68RSF IPRO</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX APOLO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX IMPACTO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX MAGNA RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX POTÊNCIA RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX TITAN RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX FORÇA RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX ENERGIA RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX ATIVA RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX TURBO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX VELOZ RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX ALVO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX TORNADO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX CLASSE RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX DESAFIO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX RAÇA RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BMX PROGRESSO RR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BRASMAX ELITE IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BRASMAX FLECHA IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BRASMAX BONUS IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BRASMAX BRAVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BRASMAX CLASSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>BRASMAX PRISMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>68I69RSF IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>75I76RSF IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>81I84RSF IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>53I54RSF IPRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>66I68RSF IPRO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación de desactivación</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Salesforce to Salesforce: Desactivación (MUESTRA)</name>
+    <style>none</style>
+    <subject>Aviso de desconexión de {!Organization.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supervisor_Respons_vel_DMValoriza__c</fullName>
+    <description>Supervisor responsável DONMARIO Valoriza</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Supervisor responsável DONMARIO Valoriza</inlineHelpText>
+    <label>Supervisor Responsável DMValoriza</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adriano Mandarino</fullName>
+                <default>false</default>
+                <label>Adriano Mandarino</label>
+            </value>
+            <value>
+                <fullName>Ana Luiza Martins</fullName>
+                <default>false</default>
+                <label>Ana Luiza Martins</label>
+            </value>
+            <value>
+                <fullName>Cristian Pirolli</fullName>
+                <default>false</default>
+                <label>Cristian Pirolli</label>
+            </value>
+            <value>
+                <fullName>Diego Gonçalves</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Diego Gonçalves</label>
+            </value>
+            <value>
+                <fullName>Erinelson Digner</fullName>
+                <default>false</default>
+                <label>Erinelson Digner</label>
+            </value>
+            <value>
+                <fullName>Felipe Bianchessi</fullName>
+                <default>false</default>
+                <label>Felipe Bianchessi</label>
+            </value>
+            <value>
+                <fullName>Felipe Louzada</fullName>
+                <default>false</default>
+                <label>Felipe Louzada</label>
+            </value>
+            <value>
+                <fullName>Geovani Otowicz</fullName>
+                <default>false</default>
+                <label>Geovani Otowicz</label>
+            </value>
+            <value>
+                <fullName>Gustavo Suzano</fullName>
+                <default>false</default>
+                <label>Gustavo Suzano</label>
+            </value>
+            <value>
+                <fullName>João Pedro Fossa Bernardy</fullName>
+                <default>false</default>
+                <label>João Pedro Fossa Bernardy</label>
+            </value>
+            <value>
+                <fullName>João Victor Silva Trombim</fullName>
+                <default>false</default>
+                <label>João Victor Silva Trombim</label>
+            </value>
+            <value>
+                <fullName>Karine Govea</fullName>
+                <default>false</default>
+                <label>Karine Govea</label>
+            </value>
+            <value>
+                <fullName>Lucas Furlan</fullName>
+                <default>false</default>
+                <label>Lucas Furlan</label>
+            </value>
+            <value>
+                <fullName>Lukas Reghin</fullName>
+                <default>false</default>
+                <label>Lukas Reghin</label>
+            </value>
+            <value>
+                <fullName>Matheus Marx</fullName>
+                <default>false</default>
+                <label>Matheus Marx</label>
+            </value>
+            <value>
+                <fullName>Rafael Neubauer</fullName>
+                <default>false</default>
+                <label>Rafael Neubauer</label>
+            </value>
+            <value>
+                <fullName>Vinícius Bellé</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vinícius Bellé</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

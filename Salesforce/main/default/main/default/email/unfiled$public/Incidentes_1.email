@@ -1,0 +1,8 @@
+Prioridad: {!INCIDENTES_SISTEMAS__c.Prioridad__c}  - Orden: {!INCIDENTES_SISTEMAS__c.Prioridad_Numero__c}
+<BR>
+Descripción:
+{!INCIDENTES_SISTEMAS__c.Descripcion__c}
+<BR>
+<BR>
+Informado por:
+{!INCIDENTES_SISTEMAS__c.Informado_por__c}

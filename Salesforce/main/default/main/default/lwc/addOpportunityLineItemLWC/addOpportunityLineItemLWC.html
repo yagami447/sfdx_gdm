@@ -1,0 +1,627 @@
+<template>
+    <div class="slds-page-header slds-page-header_object-home">
+        <!--HEADER-->
+        <div class="slds-grid">
+            <div class="slds-col">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="action:goal" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-text-title--caps slds-line-height--reset">Adiciona Produtos a </p>
+                        <p class="slds-page-header__title slds-truncate" title="ALL">{theOpp.Name} - <template
+                                if:true={theOpp.RecordType}>{theOpp.RecordType.Name}</template></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                <button class="slds-button slds-button--neutral slds-not-selected" onclick={handleSave}
+                    disabled={disablebuttons}>Salvar</button>
+                <button class="slds-button slds-button--neutral slds-not-selected" onclick={handleCancel}
+                    disabled={disablebuttons}>Cancelar</button>
+            </div>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col slds-align-bottom">
+                <p class="slds-text-body_large">Produtos Selecionados</p>
+            </div>
+        </div>
+        <!--END HEADER-->
+        <!--TABLE OLI-->
+        <template if:true={detalles.data}>
+            <template if:true={products.data}>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Action"></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">Cultivar</div>
+                            </th>
+                            <th if:true={renderRegistroCultivar} scope="col">
+                                <div class="slds-truncate">Registro Cultivar</div>
+                            </th>
+                            <th if:true={renderedCategoriaOli} scope="col">
+                                Categoria
+                            </th>
+                            <th if:true={renderedCategoriaPlantadaOliInput} scope="col">
+                                Ctg Plantada
+                            </th>
+                            <th if:true={renderedCategoriaOliInput} scope="col">
+                                Categoria
+                            </th>
+                            <th if:true={renderedCategoriaOliInputRebSacas} scope="col">
+                                Categoria Origem
+                            </th>
+                            <th if:true={renderedUnidadeOli} scope="col">
+                                Unidade
+                            </th>
+                            <th if:true={renderedGrupoMateriales2} scope="col">
+                                {detalles.data.fields.Grupo_de_materiales_2__c.label}
+                            </th>
+                            <th if:true={renderedGrupoMateriales2Input} scope="col">
+                                {detalles.data.fields.Grupo_de_materiales_2__c.label}
+                            </th>
+                            <th if:true={renderedSemillaOli} scope="col">
+                                {detalles.data.fields.Tratamiento_de_Semilla__c.label}
+                            </th>
+                            <th if:true={renderedSemillaOliInput} scope="col">
+                                {detalles.data.fields.Tratamiento_de_Semilla__c.label}
+                            </th>
+                            <td if:true={renderedQuantity}>
+                                Quantidade
+                            </td>
+                            <th if:true={renderedAreaPlantadaOliInput} scope="col">
+                                {detalles.data.fields.Area_Plantada__c.label}
+                            </th>
+                            <th if:true={renderedSementeBrutaOliInput} scope="col">
+                                SEM. BRUTA
+                            </th>
+                            <th if:true={renderedSementeBeneficiadaOliInput} scope="col">
+                                SEM. BENEFICIADA
+                            </th>
+                            <th if:true={renderedSementeAprovadaOliInput} scope="col">
+                                SEM. APROVADA
+                            </th>
+                            <th if:true={renderedSementeProprioOliInput} scope="col">
+                                SEM. USO PROP.
+                            </th>
+                            <th if:true={renderedSementeComercializadaOliInput} scope="col">
+                                SEM. COMERCIALIZADA
+                            </th>
+                            <th if:true={renderedDescarteOliInput} scope="col">
+                                {detalles.data.fields.Descarte__c.label}
+                            </th>
+                            <th if:true={renderedCategoriaRebaixarOliInput} scope="col">
+                                Categoria Rebaixada
+                            </th>
+                            <th if:true={renderedAreaOliInput} scope="col">
+                                {detalles.data.fields.Area__c.label}
+                            </th>
+                            <th if:true={renderedSemRebaixadaOliInput} scope="col">
+                                {detalles.data.fields.Sem_Rebajada__c.label}
+                            </th>
+                            <th if:true={renderedqtdsacas40Input} scope="col">
+                                Qtde Scs (40kg)
+                            </th>
+                            <th if:true={renderedloterebajado} scope="col">
+                                {detalles.data.fields.Lote_Rebajado__c.label}
+                            </th>
+                            <th if:true={renderedvolumeoli} scope="col">
+                                {detalles.data.fields.Volume__c.label}
+                            </th>
+                            <th if:true={renderedprodbrutaoli} scope="col">
+                                {detalles.data.fields.Expec_Prod_Bruta__c.label}
+                            </th>
+                            <th if:true={renderedestadocomercializacaooli} scope="col">
+                                {detalles.data.fields.Estado_de_Comercializacion__c.label}
+                            </th>
+                            <th if:true={renderedlocalentregaoli} scope="col">
+                                {detalles.data.fields.Local_de_Entrega__c.label}
+                            </th>
+                            <th if:true={renderedfechanecessidadoli} scope="col">
+                                Fecha de necesidad
+                            </th>
+                            <th if:true={renderedtiponecessidade} scope="col">
+                                Tipo de Necessidade
+                            </th>
+                            <th if:true={renderedDataEvento} scope="col">
+                                Data do Evento
+                            </th>
+                            <th if:true={renderedFechaEntrega} scope="col">
+                                Fecha de Entrega
+                            </th>
+                            <th if:true={renderedestadoproducion} scope="col">
+                                {detalles.data.fields.Estado_de_Produccion__c.label}
+                            </th>
+                            <th if:true={renderedquantityoli} scope="col">
+                                {detalles.data.fields.Quantity.label}
+                            </th>
+                            <th if:true={renderunidadeinput} scope="col">
+                                UNIDADE
+                            </th>
+                            <th if:true={renderedquantidadec} scope="col">
+                                Quantidade
+                            </th>
+                            <th if:true={renderedmetaoli} scope="col">
+                                {detalles.data.fields.Meta__c.label}
+                            </th>
+                            <th if:true={renderedestimativa} scope="col">
+                                {detalles.data.fields.Estimativa__c.label}
+                            </th>
+                            <th if:true={renderedquantidaderechazada} scope="col">
+                                Quant. Rechazada
+                            </th>
+                            <th if:true={renderedquantidadependente} scope="col">
+                                Quant. Pendiente
+                            </th>
+                            <th if:true={renderedunitpriceoli} scope="col">
+                                {detalles.data.fields.UnitPrice.label}
+                            </th>
+                            <th if:true={renderedunitpriceoliinput} scope="col">
+                                {detalles.data.fields.UnitPrice.label}
+                            </th>
+                            <th if:true={renderedposicionsaprelacionada} scope="col">
+                                {detalles.data.fields.Posicion_SAP_Relacionada__c.label}
+                            </th>
+                            <th if:true={renderedprevisaooli} scope="col">
+                                {detalles.data.fields.Previsao__c.label}
+                            </th>
+                            <th if:true={renderedMotivoDeRechazo} scope="col">
+                                {detalles.data.fields.Motivo_de_Rechazo__c.label}
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="tableBody">
+                        <template for:each={shoppingcart} for:item="sc" for:index="index">
+                            <tr key={sc.Seq}>
+                                <td>
+                                    <template if:true={showProducts}>
+                                        <div class="slds-truncate" title="Action">
+                                            <button class="slds-button" onclick={handleExcluirItem}
+                                                data-index={index}>Excluir</button>
+                                        </div>
+                                    </template>
+                                    <template if:true={showBaseOli}>
+                                        <div class="slds-truncate" title="Action">
+                                            <button class="slds-button" onclick={handleExcluirItem}
+                                                data-index={index}>Excluir</button>
+                                        </div>
+                                    </template>
+                                </td>
+                                <td>
+                                    <div class="slds-truncate">
+                                        
+                                        <!-- Cultivar --> 
+                                        <template if:true={sc.PricebookEntry.Product2.Variedade__r}>
+                                            {sc.PricebookEntry.Product2.Variedade__r.Name}
+                                        </template>
+                                    </div>
+                                </td>
+                                <td if:true={renderedCategoriaOli}>
+                                    {sc.PricebookEntry.Product2.Categ__r.Name}
+                                </td>
+                                <td if:true={renderedCategoriaPlantadaOliInput}>
+                                  
+                                    <lightning-combobox name="categoriaInput" value={sc.Categoria_a_Rebaixar__c}
+                                        options={categoriasSemS2} onchange={handleCategoriaPlantadaOli}
+                                        data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedCategoriaOliInput}>  
+                                    <!-- Categoria a rebaixar -->                                  
+                                    <lightning-combobox name="categoriaInput" value={sc.Categoria__c}
+                                        options={categoriasSemBasica} onchange={handleCategoriaOli}
+                                        disabled={isCategoriaLocked} data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedUnidadeOli}>
+                                    {sc.PricebookEntry.Product2.UNIDADE__c}
+                                </td>
+                                <td if:true={renderedGrupoMateriales2}>
+                                    {sc.Grupo_de_materiales_2__c}
+                                </td>
+                                <td if:true={renderedGrupoMateriales2Input}>
+                                    <lightning-input value={sc.Grupo_de_materiales_2__c}
+                                        onkeyup={handlechangegurpomateriales2} data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSemillaOli}>
+                                    {sc.Tratamiento_de_Semilla__c}
+                                </td>
+                                <td if:true={renderedQuantity}>
+                                    <lightning-input value={sc.Quantity} onkeyup={handlechangequantity}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSemillaOliInput}>
+                                    <lightning-input value={sc.Tratamiento_de_Semilla__c} onkeyup={handlechangesemilla}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedAreaPlantadaOliInput}>
+                                    <lightning-input value={sc.Area_Plantada__c} onkeyup={handlechangeareaplantada}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSementeBrutaOliInput}>
+                                    <lightning-input value={sc.Semente_bruta__c} onkeyup={handlechangebruta}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSementeBeneficiadaOliInput}>
+                                    <lightning-input value={sc.Semente_beneficiada__c} onkeyup={handlechangebeneficiada}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSementeAprovadaOliInput}>
+                                    <lightning-input value={sc.Semente_aprovada__c} onkeyup={handlechangeaprovada}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSementeProprioOliInput}>
+                                    <lightning-input value={sc.Semente_uso_propio__c} onkeyup={handlechangepropria}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedSementeComercializadaOliInput}>
+                                    <lightning-input value={sc.Semente_comercializada__c}
+                                        onkeyup={handlechangecomercializada} data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedDescarteOliInput}>
+                                    <lightning-input value={sc.Descarte__c} onkeyup={handlechangedescarte}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedCategoriaRebaixarOliInput}>
+                                    <!-- Categoria Rebaixada --> 
+                                    <lightning-combobox name="categoriaInput" value={sc.Categoria_a_Rebaixar__c}
+                                        options={categoriasSemBasica} onchange={handleCategoriaReb} data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedAreaOliInput}>
+                                    <lightning-input value={sc.Area__c} onkeyup={handlechangearea} data-index={index}>
+                                    </lightning-input>
+                                </td>
+                                <td if:true={renderedSemRebaixadaOliInput}>
+                                   <!--- Sem rebajada -->
+                                    <lightning-input value={sc.Sem_Rebajada__c} onkeyup={handlechangesemrebaijada}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedqtdsacas40Input}>
+                                    <lightning-input value={sc.Qtde_Scs_40kg__c} onkeyup={handlechangeqtdscs40}
+                                        data-index={index}></lightning-input>
+                                </td>
+
+                                <td if:true={renderedloterebajado}>
+                                    <lightning-input value={sc.Lote_Rebajado__c} onkeyup={handlechangeloterebaixado}
+                                        data-index={index}></lightning-input>
+                                </td>
+
+                                <td if:true={renderedvolumeoli}>
+                                    <lightning-input value={sc.Volume__c} onkeyup={hadnlechangevolume}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedprodbrutaoli}>
+                                    <lightning-input value={sc.Expec_Prod_Bruta__c} onkeyup={hadnlechangeexpecprodbruta}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedestadocomercializacaooli}>
+                                    <lightning-combobox name="necessidadeInput" value={sc.Estado_de_Comercializacion__c}
+                                        options={states} onchange={handlechangeestadocomercia} data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedlocalentregaoli}>
+                                    <lightning-input value={sc.Local_de_Entrega__c} onkeyup={hadnlechangeendereco}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedfechanecessidadoli}>
+                                    <lightning-input type="date" value={sc.Data__c} onkeyup={handlechangedatanecessidad}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedtiponecessidade}>
+                                    <lightning-combobox name="necessidadeInput" value={sc.Tipo_de_Necesidad__c}
+                                        options={needs} onchange={hadnleChangeneedOli} data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedDataEvento}>
+                                    <lightning-input type="date" value={sc.Data__c} onkeyup={handlechangedatanecessidad}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedFechaEntrega}>
+                                    <lightning-input type="date" value={sc.Fecha_de_entrega__c}
+                                        onkeyup={handlechangefechaentrega} data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedestadoproducion}>
+                                    <lightning-combobox name="necessidadeInput" value={sc.Estado_de_Produccion__c}
+                                        options={states} onchange={handlechangeestadoprod} data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedquantityoli}>
+                                    <lightning-input value={sc.Quantity} onkeyup={hadnlechangequantity}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderunidadeinput}>
+                                    <lightning-combobox name="unidadeDescarteInput" value={sc.Unidade_descarte__c}
+                                        options={unidades} onchange={hadnlechangeunidadedescarte} data-index={index}>
+                                    </lightning-combobox>
+                                </td>
+                                <td if:true={renderedquantidadec}>
+                                    <lightning-input value={sc.Quantidade__c} onkeyup={hadnlechangequantidadec}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedmetaoli}>
+                                    <lightning-input value={sc.Meta__c} onkeyup={handlechangemeta} data-index={index}>
+                                    </lightning-input>
+                                </td>
+                                <td if:true={renderedestimativa}>
+                                    <lightning-input value={sc.Estimativa__c} onkeyup={handlechangeestimativa}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedquantidadeestimada}>
+                                    <lightning-input value={sc.Quant_Confirmada__c}
+                                        onkeyup={handlechangequantconfirmada} data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedquantidaderechazada}>
+                                    <lightning-input value={sc.Quant_Rechazada__c} onkeyup={handlechangeqtdrechazada}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedquantidadependente}>
+                                    <lightning-input value={sc.Quant_Pendiente__c} onkeyup={handlechangeqtdpendente}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedunitpriceoli}>
+                                    {sc.UnitPrice}
+                                </td>
+                                <td if:true={renderedunitpriceoliinput}>
+                                    <lightning-input value={sc.UnitPrice} onkeyup={handlechangeunitprice}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedposicionsaprelacionada}>
+                                    <lightning-input value={sc.Posicion_SAP_Relacionada__c}
+                                        onkeyup={handlechangepossaprec} data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedprevisaooli}>
+                                    <lightning-input value={sc.Previsao__c} onkeyup={handlechangeprevisao}
+                                        data-index={index}></lightning-input>
+                                </td>
+                                <td if:true={renderedMotivoDeRechazo}>
+                                    <template if:true={sc.Rechazado__c}>
+                                        {sc.Motivo_de_Rechazo__c}
+                                    </template>
+                                </td>
+                                <td if:true={renderedMotivoDeRechazo}>
+                                    <template if:false={sc.Rechazado__c}>
+                                        <lightning-input value={sc.Motivo_de_Rechazo__c}
+                                            onkeyup={handlechangemotivorechazo} data-index={index}></lightning-input>
+                                    </template>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </template>
+        <!-- END TABLE OLI -->
+        <!-- PRODUTOS ADICIONAR -->
+        <template if:true={showProducts}>
+            <div class="slds-page-header slds-page-header_object-home">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Produto</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                                <lightning-icon
+                                    class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+                                    icon-name="utility:search" size="x-small" alternative-text="Search address">
+                                </lightning-icon>
+                                <input type="text" placeholder={produtoplaceholder}
+                                    class="slds-input slds-combobox_input" value={searchstring}
+                                    onkeyup={handleChangeSearch}></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={showBaseOli}>
+            <div class="slds-page-header slds-page-header_object-home">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Produto</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                                <lightning-icon
+                                    class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+                                    icon-name="utility:search" size="x-small" alternative-text="Search address">
+                                </lightning-icon>
+                                <input type="text" placeholder={produtoplaceholder}
+                                    class="slds-input slds-combobox_input" value={searchstring}
+                                    onkeyup={handleChangeSearchBaseOli}></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={products.data}>
+
+            <template if:true={showProducts}>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Action">
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                    {products.data.fields.Name.label}
+                                </div>
+                            </th>
+                            <th if:true={renderCategoria} scope="col">
+                                <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                    Categoria
+                                </div>
+                            </th>
+                            <th if:true={renderUnidade} scope="col">
+                                <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                    {products.data.fields.UNIDADE__c.label}
+                                </div>
+                            </th>
+                            <th if:true={renderSemilhaTratada} scope="col">
+                                <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                    {products.data.fields.Semilla_Tratada__c.label}
+                                </div>
+                            </th>
+                            <th if:true={renderRegistroCultivar} scope="col">
+                                <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                    Registro Cultivar
+                                </div>
+                            </th>
+                            <th if:true={renderCodigoMaterial} scope="col">
+                                <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                    {products.data.fields.Codigo_Material_SAP__c.label}
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={filteredProducts} for:item="a" for:index="index">
+                            <tr key={a.Id}>
+                                <td>
+                                    <div class="slds-truncate" title="Action">
+                                        <button class="slds-button slds-button--neutral" onclick={addToShoppingCart}
+                                            data-index={index}>
+                                            Adicionar
+                                        </button>
+                                    </div>
+                                </td>
+                                <td role="gridcell" data-label={a.Name}>
+                                    <div class="slds-truncate" title={a.Name}>
+                                        {a.Name}
+                                    </div>
+                                </td>
+                                <td role="gridcell" if:true={renderCategoria} data-label={a.Name}>
+                                    <div class="slds-truncate" title={a.Product2.Categ__r.Name}>
+                                        {a.Product2.Categ__r.Name}
+                                    </div>
+                                </td>
+                                <td role="gridcell" if:true={renderUnidade} data-label={a.Name}>
+                                    <div class="slds-truncate" title={a.Name}>
+                                        {a.Product2.UNIDADE__c}
+                                    </div>
+                                </td>
+                                <td role="gridcell" if:true={renderSemilhaTratada} data-label={a.Name}>
+                                    <div class="slds-truncate" title={a.Name}>
+                                        {a.Product2.Semilla_Tratada__c}
+                                    </div>
+                                </td>
+                                <td role="gridcell" if:true={renderRegistroCultivar} data-label={a.Name}>
+                                    <div class="slds-truncate" title={a.Name}>
+                                        {a.Product2.Variedade__r.Nombre_de_Registro__c}
+                                    </div>
+                                </td>
+                                <td role="gridcell" if:true={renderCodigoMaterial} data-label={a.Name}>
+                                    <div class="slds-truncate" title={a.Name}>
+                                        {a.Product2.Codigo_Material_SAP__c}
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </template>
+
+        <template if:true={showBaseOli}>
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table_fixed-layout">
+                <thead>
+                    <template if:true={products}>
+                        <template if:true={products.data}>
+                            <tr class="slds-text-title--caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Action">
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                        {products.data.fields.Name.label}
+                                    </div>
+                                </th>
+                                <th if:true={renderCategoria} scope="col">
+                                    <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                        Categoria
+                                    </div>
+                                </th>
+                                <th if:true={renderUnidade} scope="col">
+                                    <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                        {products.data.fields.UNIDADE__c.label}
+                                    </div>
+                                </th>
+                                <th if:true={renderSemilhaTratada} scope="col">
+                                    <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                        {products.data.fields.Semilla_Tratada__c.label}
+                                    </div>
+                                </th>
+                                <th if:true={renderRegistroCultivar} scope="col">
+                                    <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                        Registro Cultivar
+                                    </div>
+                                </th>
+                                <th if:true={renderCodigoMaterial} scope="col">
+                                    <div class="slds-truncate" title={products.data.fields.Name.label}>
+                                        {products.data.fields.Codigo_Material_SAP__c.label}
+                                    </div>
+                                </th>
+                            </tr>
+                        </template>
+                    </template>
+                </thead>
+                <tbody>
+                    <template for:each={filteredBaseOli} for:item="a" for:index="index">
+                        <tr key={a.Id}>
+                            <td>
+                                <div class="slds-truncate" title="Action">
+                                    <button class="slds-button slds-button--neutral" onclick={duplicateShoppingCart}
+                                        data-index={index}>
+                                        Adicionar
+                                    </button>
+                                </div>
+                            </td>
+                            <td role="gridcell" data-label={a.Name}>
+                                <div class="slds-truncate" title={a.PricebookEntry.Product2.Variedade__r.Name}>
+                                    {a.PricebookEntry.Product2.Variedade__r.Name}
+                                </div>
+                            </td>
+                            <td role="gridcell" if:true={renderCategoria} data-label={a.Name}>
+                                <div class="slds-truncate" title={a.Categoria__r.Name}>
+                                    {a.Categoria__r.Name}
+                                </div>
+                            </td>
+                            <td role="gridcell" if:true={renderUnidade} data-label={a.Name}>
+                                <div class="slds-truncate" title={a.Name}>
+                                    {a.PricebookEntry.Product2.UNIDADE__c}
+                                </div>
+                            </td>
+                            <td role="gridcell" if:true={renderSemilhaTratada} data-label={a.Name}>
+                                <div class="slds-truncate" title={a.Name}>
+                                    {a.PricebookEntry.Product2.Semilla_Tratada__c}
+                                </div>
+                            </td>
+                            <td role="gridcell" if:true={renderRegistroCultivar} data-label={a.Name}>
+                                <div class="slds-truncate" title={a.Name}>
+                                    {a.PricebookEntry.Product2.Variedade__r.Nombre_de_Registro__c}
+                                </div>
+                            </td>
+                            <td role="gridcell" if:true={renderCodigoMaterial} data-label={a.Name}>
+                                <div class="slds-truncate" title={a.Name}>
+                                    {a.PricebookEntry.Product2.Codigo_Material_SAP__c}
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <!-- END PRODUTOS ADICIONAR -->
+
+
+
+
+
+    </div>
+</template>

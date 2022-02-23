@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo --></label>
+    <name>Tipo__c</name>
+    <picklistValues>
+        <masterLabel>Assistente Técnico</masterLabel>
+        <translation><!-- Assistente Técnico --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Big Bag</masterLabel>
+        <translation><!-- Big Bag --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brinde</masterLabel>
+        <translation><!-- Brinde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outdoor</masterLabel>
+        <translation><!-- Outdoor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placa</masterLabel>
+        <translation><!-- Placa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Semente</masterLabel>
+        <translation><!-- Semente --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

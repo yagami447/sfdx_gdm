@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo do caso --></label>
+    <name>Tipo_do_caso__c</name>
+    <picklistValues>
+        <masterLabel>Caso novo</masterLabel>
+        <translation><!-- Caso novo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caso recorrente</masterLabel>
+        <translation><!-- Caso recorrente --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

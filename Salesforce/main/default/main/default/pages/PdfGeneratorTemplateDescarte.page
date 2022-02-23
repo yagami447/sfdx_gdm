@@ -1,0 +1,69 @@
+<apex:page standardController="Opportunity" extensions="ControladorDescarte"  renderAs="pdf" >
+    <!-- <table width="100%" Align="center" columns="1">
+<tr>
+<td >
+<IMG SRC="{!RutaLogo}" style="width: 50%; height: 50%"></img>              
+</td> 
+
+</tr>
+</table> -->
+               <diV style="align-content:center; align-self:center; align-items:center; text-align:center;">
+                    <IMG SRC="{!RutaLogo}" style="width: 40%; height: 50%; padding-left:100px;"/>     
+               </diV>
+    <br/><br/><br/><br/><br/><br/>
+
+    <table width="83%" Align="center">
+        <tr>
+            <td >
+                <p style="font-size:20px" align="center"><b>AUTORIZAÇÃO DE DESCARTE</b></p>
+                <p style="font-size:20px"><b>AUT DESC Nº {!nombre}/{!Anio}</b></p>
+                <!--  Old text , changed 05/03/21
+                <p align="justify"><b>A GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ/CPF sob nº 07.007.165/0001-34, detentora dos direitos de exploração da marca<b>{!MarcaImp}</b>,
+                    com sede em Cambé-PR, dedicada à criação de cultivares de Soja, vem através deste documento <b>AUTORIZAR</b> a empresa {!Opportunity.Account.Name}
+                    inscrita(o) no CNPJ/CPF sob nº {!cnpj}, a eliminar, destinando à indústria, as cultivares de soja conforme as categorias e os lotes de sementes relacionados abaixo:</p>
+                <br/> -->
+
+                <p align="justify"><b>A GDM GENÉTICA DO BRASIL S.A.</b>, pessoa jurídica de direito privado, inscrita no CNPJ sob nº 07.007.165/0001-34, detentora dos direitos de exploração de determinadas cultivares e da marca <b>{!MarcaImp}</b>, 
+                    com sede em Cambé-PR, vem através deste documento <b>AUTORIZAR</b> a empresa {!Opportunity.Account.Name} 
+                    inscrita(o) no CNPJ/CPF sob nº {!cnpj}, a eliminar, destinando à indústria, as cultivares de soja conforme as categorias e os lotes de sementes relacionados abaixo:</p>
+                <br/>
+                <div Style="text-align: center;">
+                    <br />
+                    <table Border="1" style="border-collapse:collapse; border:solid black; width: 500px" Align="center">
+                    <thead >
+                    <tr>
+                    <th Width="100px" Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>Cultivar</center></th>
+                    <th Width="100px" Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>Categoria</center></th>
+                    <th Width="100px" Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>Lote Nº</center></th>
+                    <th Width="100px" Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>Quantidade</center></th>
+                    <th Width="100px" Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>Unidade medida</center></th>
+
+                    </tr>
+                    </thead> 
+                    <tbody>
+                    <apex:repeat value="{!ItemAnexo}" var="item">
+                    <tr>
+                    <td Style="font-size: 15px; text-align: left; border-collapse: collapse; border: solid black; ">{!item.PriceBookEntry.Product2.Variedade__r.Nombre_de_Registro__c}</td>
+                    <td Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>{!item.Categoria__r.Name}</center></td>
+                    <td Style="font-size: 15px; border-collapse: collapse; border: solid black; "><center>{!item.Lote_Rebajado__c}</center></td>
+                    <td Style="font-size: 15px; border-collapse: collapse; border: solid black; " Align="right"> {!item.Quantity}</td>
+                    <td Style="font-size: 15px; border-collapse: collapse; border: solid black; " Align="right"> {!item.Unidade_descarte__c}</td>
+                    </tr>
+                    </apex:repeat>
+                    </tbody>
+                    </table>
+                    <br />
+                </div>
+
+                <p>Cambé, {!FechaCierre}</p>
+                
+                <br/>
+                <br/><br/><br/><br/><br/>
+                
+                ___________________________________ <br/><br/>
+                
+                GDM Genética do Brasil S.A.<br/>
+            </td> 
+        </tr>
+    </table>
+</apex:page>

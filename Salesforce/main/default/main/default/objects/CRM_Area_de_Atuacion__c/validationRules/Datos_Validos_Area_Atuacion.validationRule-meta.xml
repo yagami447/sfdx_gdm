@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_Validos_Area_Atuacion</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISNULL(Cuenta__c), ISNULL(Regi_o__c), Porcentaje_Vendas__c == 0, TEXT(Safra__c)  == &apos;&apos;)</errorConditionFormula>
+    <errorMessage>Deve entrar todos os dados para area de atuação.</errorMessage>
+</ValidationRule>

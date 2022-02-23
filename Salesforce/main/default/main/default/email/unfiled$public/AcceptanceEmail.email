@@ -1,0 +1,12 @@
+Estimado/a {!Connection.ExternalContactFirstName}:
+
+Gracias por su invitación de conexión con {!Connection.ExternalCompanyName} en la reconocida plataforma On-Demand Apex de salesforce.com.
+
+Le informamos que hemos aceptado su invitación. En {!Organization.Name}, esperamos mantener una larga y provechosa relación con nuestra comunidad de socios.
+
+Atentamente,
+
+
+{!User.FirstName} {!User.LastName}
+
+{!Organization.Name}

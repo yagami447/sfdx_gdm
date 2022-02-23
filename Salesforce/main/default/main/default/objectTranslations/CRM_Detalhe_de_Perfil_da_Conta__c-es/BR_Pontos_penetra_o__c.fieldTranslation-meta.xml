@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pontos (penetração) excel Fórmulas Desconto de Royalty --></help>
+    <label><!-- AAAA Pontos Penetração Tencologia IPRO B --></label>
+    <name>BR_Pontos_penetra_o__c</name>
+</CustomFieldTranslation>

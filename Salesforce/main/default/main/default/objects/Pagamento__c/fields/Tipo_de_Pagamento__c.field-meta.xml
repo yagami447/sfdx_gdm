@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Pagamento__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Pagamento</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pagamento em dia</fullName>
+                <default>false</default>
+                <label>Pagamento em dia</label>
+            </value>
+            <value>
+                <fullName>Pagamento atrasado até 31/12</fullName>
+                <default>false</default>
+                <label>Pagamento atrasado até 31/12</label>
+            </value>
+            <value>
+                <fullName>Pagamento atrasado após 31/12</fullName>
+                <default>false</default>
+                <label>Pagamento atrasado após 31/12</label>
+            </value>
+            <value>
+                <fullName>Atualização de Comercialização</fullName>
+                <default>false</default>
+                <label>Atualização de Comercialização</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

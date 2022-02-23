@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Taxa_de_primeiro_pagamento</fullName>
+    <active>true</active>
+    <description>Se debe limitar la cantidad de decimales luego del punto decimal a 2, para evitar el desvío de en el precio Total de la Oportunidad</description>
+    <errorConditionFormula>AND(ISCHANGED(Taxa_de_primeiro_pagamento__c),
+NOT(ISBLANK(Taxa_de_primeiro_pagamento__c)),
+LEN(TEXT(Taxa_de_primeiro_pagamento__c)) &gt; 6)</errorConditionFormula>
+    <errorDisplayField>Taxa_de_primeiro_pagamento__c</errorDisplayField>
+    <errorMessage>Por favor utilizar somente 2 casas decimais.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,382 @@
+<apex:page language="{!IF(ISNULL(language),'pt',language)}" id="Apenddix1Page" showHeader="false" standardStylesheets="false" cache="false" title="{!titulo}" controller="aSiteAppendix1Controller" action="{!validate}" docType="html-5.0">
+    
+    <apex:composition template="{!$Site.Template}">
+
+        <apex:define name="body">
+            <style>
+                .selected {
+                background: rgba(38,185,154,.16);
+                border-color: rgba(221,221,221,0.780392);
+                }
+            </style>
+            <style>
+                .multiselect-selected-text {
+                line-height: 0px;
+                }
+                
+                .selected {
+                background: rgba(38,185,154,.16);
+                border-color: rgba(221,221,221,0.780392);
+                }
+                
+                .bubble{
+                    background-color: steelblue;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 4px;
+                }
+
+                button.form-control {
+                    height: auto;
+                }
+            </style>
+            <script>
+
+
+            function disableOnSubmit(input) {
+                setTimeout('disableAfterTimeout(\'' + input.id + '\');', 5);
+            }
+            function disableAfterTimeout(id) {
+                var toDisable = document.getElementById( id );
+                toDisable.disabled = 'disabled';
+            }
+            </script>
+            <body class="nav-md footer_fixed">
+                <center>
+                    <apex:panelGrid bgcolor="white" columns="1"> 
+                        <br/>
+                        <br/>
+                        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+                            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                                <apex:panelGroup >
+                                    <apex:form id="profileForm">                
+                                        <apex:actionFunction action="{!ListaDeEstadosActual}" name="ObtenerEstadosSeleccionados" reRender=""/>        
+
+                                        <div class="row">
+                                            <div class="right_col" role="main" style="min-width:800px">
+                                                <div class="">
+                                                    <div class="page-title">
+                                                        <div class="title_left">
+                                                            <h3>{!titulo} - {!$Label.New}</h3>
+                                                        </div>                                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>                                                                        
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        
+                                                        <!---     CABECERA     </--->
+                                                        <div class="x_panel">
+                                                            <div class="x_title">
+                                                                <h2>Cabeçalho &nbsp;
+                                                                </h2>
+                                                                <h2 style="color:red"> {!mensajeErrorNohayProductos} </h2>
+                                                                <ul class="nav navbar-right panel_toolbox">
+                                                                    <li>
+                                                                        <a class="collapse-link">
+                                                                            <i class="fa fa-chevron-up"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <!--<apex:actionFunction name="estadosSeleccionados" action="{!setEstadosSeleccionados}">
+<apex:param name="estados" assignTo="{!arrayEstados}" value="">
+</apex:param>
+</apex:actionFunction>-->
+                                                            <div class="x_content">
+                                                                <div role="tabpanel" class="tab-panel" id="cabecera_opciones" aria-labelledby="profile-tab">
+                                                                    <apex:pageBlock id="cabecera">                                            
+                                                                        <apex:pageBlockTable value="{!NuevaOportunidad}" var="s" styleclass="data table table-striped no-margin"  style=" width: 70%;">
+                                                                            <apex:column headerValue="Estado de Comercialização" style="width: 33%;">
+                                                                                <apex:selectList id="mySelect"
+                                                                                                 multiselect="true" value="{!estados}" styleClass="form-control col-md-2 col-xs-12"  size="1">
+                                                                                    <apex:selectOptions value="{!EstadoComercializacion}"></apex:selectOptions>
+                                                                                    <apex:actionSupport event="onchange" reRender="Details" />
+                                                                                </apex:selectList>                                          
+                                                                            </apex:column>
+                                                                           <apex:column headerValue="Época de plantio" style="width: 34%;">
+                                                                                <apex:selectList id="EpocaPlatio" value="{!s.epocaPlantacion}" styleClass="form-control col-md-2 col-xs-12" style="width:auto" size="1">
+                                                                                    <apex:selectOptions value="{!EpocaPlantaciones}"></apex:selectOptions>
+                                                                                </apex:selectList>   
+                                                                            </apex:column>                                                                          
+                                                                                                                                                         
+                                                                           <apex:column headerValue="CNPJ/CPF Filial/Coop" style="width: 33%;" >
+                                                                                <apex:outputPanel id="cnpj">
+                                                                                    <apex:outputText value="{!s.cnpj}"
+                                                                                                styleClass=" col-md-2 col-xs-12"
+                                                                                                style="width:auto">
+                                                                                    </apex:outputText>
+                                                                                    <apex:outputPanel rendered="{!s.idCooperador == null}">
+                                                                                        <apex:input type="text" 
+                                                                                                    id="sufixCnpj" value="{!s.sufixCNPJ}"
+                                                                                                    styleClass="form-control "
+                                                                                                    style="width: 6em">
+                                                                                        </apex:input>
+                                                                                    </apex:outputPanel>      
+                                                                               
+                                                                            </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            
+                                                                        </apex:pageBlockTable>
+                                                              
+                                                                        <apex:pageBlock >
+                                                                         <apex:pageBlockTable value="{!NuevaOportunidad}" var="s">
+                                                                          <apex:column >
+                                                                            <apex:inputCheckbox id="MyCheckbox" value="{!mostrarCooperante}" >
+                                                                            <apex:actionSupport event="onclick" reRender="cooperante_panel, cnpj" action="{!habilitarCooperante}"  />
+                                                                            </apex:inputCheckbox>&nbsp;
+                                                                            <apex:outputLabel value="Cooperante" for="MyCheckbox"/>
+                                                                            
+                                                                          </apex:column>
+                                                                        </apex:pageBlockTable>
+                                                                        </apex:pageblock>
+                                                                        <apex:pageblock id="cooperante_panel" >
+                                                                         <apex:pageBlockTable value="{!NuevaOportunidad}" var="s" styleclass="data table table-striped no-margin"  style=" width: 50%;" >
+                                                                            <apex:column headerValue="Nome" >
+                                                                                <apex:selectList id="asd" value="{!s.idCooperador}" styleClass="form-control col-md-2 col-xs-12" style=" width: auto;" size="1" disabled="{!!mostrarCooperante}">
+                                                                                    <apex:selectOption itemvalue="" itemLabel="Selecionar" html-selected="true"></apex:selectOption>
+                                                                                    <apex:selectOptions value="{!CuentasCooperantes}"></apex:selectOptions>
+                                                                                    <apex:actionSupport event="onchange" reRender="renasem_panel, cnpj" action="{!actualizarRenasem}"  />
+                                                                                </apex:selectList>                                                    
+                                                                            </apex:column>
+                                                                           
+                                                                                     <apex:column headerValue="Renasem" width="auto">
+                                                                                <apex:outputPanel id="renasem_panel">
+                                                                                    <apex:outputText id="renasem" value="{!s.renasem}" style="width:100px;" >
+                                                                                    </apex:outputText>
+                                                                                </apex:outputPanel>
+
+                                                                            </apex:column>
+                                                                           
+                                                                        </apex:pageBlockTable>
+                                                               
+                                                                       </apex:pageBlock>
+                                                                    </apex:pageBlock>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            
+                                                            
+                                                            <!---     PRODUCTOS  EXISTENTES    </--->
+                                                            <div class="x_title">
+                                                                <h2>{!$ObjectType.Product2.LabelPlural}<small>{!$Label.active_list}</small></h2>
+                                                                <ul class="nav navbar-right panel_toolbox">
+                                                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div class="x_content">
+                                                                <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                                                    <apex:pageBlock id="it">                                            
+                                                                        <apex:pageBlockTable value="{!App1Items}" var="s" styleclass="data table table-striped no-margin">
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}">
+                                                                                <apex:outputLabel value="{!s.variedad_nombre}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Nome Comercial" >
+                                                                                <apex:outputLabel value="{!s.registro}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                            </apex:column>
+                                                                             <apex:column headerValue="Categoria Plantada" >
+                                                                                <apex:outputLabel value="{!s.categoria_a_rebajar}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label}" >
+                                                                                <apex:outputLabel value="{!s.categoria_nombre}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Area__c.Label}" >
+                                                                                <apex:input value="{!s.haAutorizados}" styleClass="form-control col-md-2 col-xs-12" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Expec. Prod. Bruta(Sacos 40kg)" >
+                                                                                <apex:input type="text" value="{!s.amount}" required="required" styleClass="form-control col-md-2 col-xs-12" />
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Estado de produção" >
+                                                                                <apex:selectList disabled="true" id="estadoProduccion" value="{!s.estadoProduccion_id}" styleClass="form-control col-md-2 col-xs-12" size="1">
+                                                                                    <apex:selectOption itemvalue="{!s.estadoProduccion_nombre}" itemlabel="{!s.estadoProduccion_nombre}" html-selected="true"></apex:selectOption>
+                                                                                    <apex:selectOptions value="{!EstadoDeLaProduccion}"></apex:selectOptions>
+                                                                                </apex:selectList>                                                    </apex:column> 
+                                                                            <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                                                <apex:commandLink value="{!$Label.Remove}" action="{!removeProduct}" reRender="it">
+                                                                                    <apex:param value="{!s.id}" assignTo="{!idItemRemover}" name="toRemove" />
+                                                                                </apex:commandLink>
+                                                                            </apex:column>                                                
+                                                                        </apex:pageBlockTable>
+                                                                    </apex:pageBlock>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            
+                                                            <!---     FORMULARIO DE CARGA DE PRODUCTOS      </--->
+                                                            
+                                                            <div class="x_title">
+                                                                <h2>Adicionar Produtos
+                                                                    <small>{!$Label.active_list}</small>
+                                                                </h2>
+                                                                <ul class="nav navbar-right panel_toolbox">
+                                                                    <li>
+                                                                        <a class="collapse-link">
+                                                                            <i class="fa fa-chevron-up"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            
+                                                            <div class="x-content">
+                                                                <div role="tabpanel" class="tab-panel" id="tab_items_new" aria-labelledby="profile-tab" >
+                                                                    <apex:pageBlock id="it_new">
+                                                                        <apex:pageBlockTable value="{!nuevoOppLineItem}" var="newOli" styleclass="data table table-striped no-margin">
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}">
+                                                                                <apex:selectList id="variedades" value="{!newOli.variedad}" styleClass="form-control col-md-2 col-xs-12" size="1">
+                                                                                    <apex:selectOption itemvalue="" itemLabel="Selecionar" html-selected="true"></apex:selectOption>
+                                                                                    <apex:selectOptions value="{!Variedades}"></apex:selectOptions>
+                                                                                    <apex:actionSupport action="{!setSelectedVariedad}" event="onchange" reRender="plantCategory"></apex:actionSupport>
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="idErrorVariedad">
+                                                                                    <div>{!mensajeErrorVariedad}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Categoria Plantada">
+                                                                                <apex:selectList id="plantCategory" value="{!newOli.categoria_a_rebajar}" styleClass="form-control col-md-2 col-xs-12" size="1" >
+                                                                                    <apex:selectOption itemvalue="" itemlabel="Selecionar" html-selected="true"></apex:selectOption>
+                                                                                    <apex:selectOptions value="{!CategoriaPlantar}"></apex:selectOptions>
+                                                                                    <apex:actionSupport action="{!setCategoriaRebaja}" event="onchange" reRender="newCategoria"></apex:actionSupport>
+
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="idErrorPlantar">
+                                                                                    <div>{!mensajeErrorCategoriaPlantar}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Categoria__c.Label}">
+                                                                                <apex:selectList id="newCategoria" value="{!newOli.categoria}" styleClass="form-control col-md-2 col-xs-12" size="1" >
+                                                                                    <apex:selectOption itemvalue="" itemlabel="Selecionar" html-selected="true"></apex:selectOption>
+                                                                                    <apex:selectOptions value="{!CategoriasAnexo}"></apex:selectOptions>
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="idErrorCategoria">
+                                                                                    <div>{!mensajeErrorCategoria}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Ha. Autorizados">
+                                                                                <apex:input type="number" id="haAturorizados" value="{!newOli.haAutorizados}" styleClass="form-control col-md-2 col-xs-12">
+                                                                                </apex:input>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="idErrorHa">
+                                                                                    <div>{!mensajeErrorHaAutorizados}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Expec. Prod. Bruta(Sacos 40kg)">
+                                                                                <apex:input type="number" value="{!newOli.amount}" styleClass="form-control col-md-2 col-xs-12" ></apex:input>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="errorCantidaderror">
+                                                                                    <div>{!mensajeErrorCantidad}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerValue="Estado de produção">
+                                                                                <apex:selectList id="estadoProduccion" value="{!newOli.estadoProduccion_id}" styleClass="form-control col-md-2 col-xs-12" size="1">
+                                                                                    <apex:selectOption itemvalue="" itemlabel="Selecionar" html-selected="true"></apex:selectOption>
+                                                                                    <apex:selectOptions value="{!EstadoDeLaProduccion}"></apex:selectOptions>
+                                                                                </apex:selectList>
+                                                                                <apex:outputPanel style="color:red; text-align:right;" id="idErrorEstado">
+                                                                                    <div>{!mensajeErrorEstadoProduccion}</div>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                            <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                                                <apex:commandLink value="{!$Label.Add}" action="{!addProduct}" reRender="it, idErrorVariedad, idErrorPlantar,idErrorCategoria, idErrorHa, idErrorEstado,errorCantidaderror">
+                                                                                </apex:commandLink>
+                                                                            </apex:column>
+                                                                        </apex:pageBlockTable>
+                                                                    </apex:pageBlock>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            
+                                                            <!--***************************************************************************-->
+                                                            <div class="form-group">
+                                                                <div class="col-md-12 col-sm-9 col-xs-3" >
+                                                                    <p style="color:red">
+                                                                        <!--Em todos os campos digitáveis, caso o cliente não tenha plantado, colhido e / ou descartado, deverá obrigatoriamente inserir o valor 0.<br/>
+                                                                        Semente Bruta é a quantidade de sementes colhida no campo a qual ingressou na UBS, considerando sacas de 40 Kg.<br/>                        
+                                                                        Descarte é a quantidade que foi colhida no campo, mas que não será usada para beneficiamento, considerando sacas de 40 Kg.<br/>-->
+                                                                        Salvar: Armazena os dados para que, posteriormente, o multiplicador possa alterar os dados.<br/>                     
+                                                                        Salvar e Enviar para aprovação: Armazena os dados definitivamente e encaminha para avaliação da GDM.<br/>                      
+                                                                    </p>
+                                                                    <br/>  
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            
+                                                            <!--***************************************************************************-->
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            <div class="form-group">
+                                                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3 ">
+                                                                    <!--<apex:commandButton styleclass="btn btn-success" value="{!$Label.Submit}" action="{!saveAppend2}" status="counterStatus" rerender="counterStatus">-->
+                                                                    <apex:commandButton onclick="disableOnSubmit(this);" id="save" styleclass="btn btn-success" value="{!$Label.Submit}" action="{!saveAppend1}" rerender="mensajes,profileForm">
+                                                                        <apex:param value="1" assignTo="{!paraAprobacion}" name="toApproval"/>
+                                                                    </apex:commandButton>    
+                                                                    <!--<apex:commandButton styleclass="btn btn-success" value="{!$Label.Save}" action="{!saveAppend2}" status="counterStatus" rerender="counterStatus"/>-->
+                                                                    <apex:commandButton onclick="disableOnSubmit(this);" id="save2" styleclass="btn btn-success" value="{!$Label.Save}" action="{!saveAppend1}" />
+                                                                    <!--<apex:commandLink styleclass="btn btn-success" value="Imprimir" action="{!imprimirAnexo}" target="_blank"  />-->
+                                                                    <apex:commandButton styleclass="btn btn-primary" immediate="true" value="{!$Label.Cancel}" action="{!editCancel}" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </apex:form> 
+                                </apex:panelGroup>
+                            </apex:panelGrid> 
+                        </apex:outputPanel>
+                    </apex:panelGrid>
+                </center>
+                <br/>
+                <script>
+
+
+                $(document).ready(function () {
+
+                     $('select[id$=mySelect]').multiselect({
+                        includeSelectAllOption: true,
+                        maxHeight: 200,
+                        numberDisplayed: 18,
+                        nonSelectedText: 'Nenhum',
+                        allSelectedText: 'tudo',
+                        selectAllText: 'Selecionar tudo',
+                    });
+
+                    var stringEstados = {!estadoComercioPreSeleccionados};
+
+                    if(stringEstados != null){
+                        var array = stringEstados.split(';');
+                        $('select[id$=mySelect]').multiselect('select', array, true);
+                    }
+
+
+
+
+                });
+
+                   //  var dd = document.getElementById("estadosss").innerText;
+                   // console.log(dd);
+
+
+
+
+                function removeItem(element) {
+                    var strElement = element[0].innerText;
+                    strElement = strElement.replace('×', '');
+                    strElement = strElement.trim();
+
+                    $('select[id$=mySelect]').multiselect('deselect', strElement, true);
+                    $('select[id$=mySelect]').multiselect('refresh');
+
+                    element.remove();
+                }
+                </script>
+            </body>
+        </apex:define>
+    </apex:composition>
+</apex:page>

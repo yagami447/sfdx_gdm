@@ -1,0 +1,14 @@
+<p>DATA DA REJEIÇÃO {!ApprovalRequest.Response_Date}</p>
+
+<p>Caro Multiplicador, {!Requisicao_de_compra__c.Nombre_del_multiplicador__c}</p>
+
+<p>As informações que vossa empresa inseriu através do Portal não foram aprovadas.
+Para que possa realizar as alterações necessárias, é permitida a edição das informações já contidas no Portal.</p>
+
+<p>Código de identificação {!Requisicao_de_compra__c.Name}</p>
+<p>Tipo de declaração {!Requisicao_de_compra__c.Tipo__c}</p>
+<p>Motivo de Rejeição   {!ApprovalRequest.Comments}</p>
+
+<p>Atenciosamente,</p>
+
+<p>{!ApprovalRequest.Process_Approver}</p>

@@ -1,0 +1,33 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-var-m-around_small">
+        <template if:true={eventType.ladoALado}>
+            <template if:true={options}>
+                <c-custom-data-table
+                    key-field="Id"
+                    data={data}
+                    columns={columns}
+                    errors={errors}
+                    onrowaction={handleRowAction}
+                    onpicklistchanged={handlePicklistChange}
+                    hide-checkbox-column
+                    min-column-width="140"
+                    max-column-width="220"
+                    suppress-bottom-bar>
+                </c-custom-data-table>
+            </template>
+        </template>
+        <template if:false={eventType.ladoALado}>
+            <lightning-datatable
+                key-field="Id"
+                data={data}
+                columns={columns}
+                onrowaction={handleRowAction}
+                hide-checkbox-column
+                resize-column-disabled
+                suppress-bottom-bar>
+            </lightning-datatable>
+        </template>
+    </div>
+</template>

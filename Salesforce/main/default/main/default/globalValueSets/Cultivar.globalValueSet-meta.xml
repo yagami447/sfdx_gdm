@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1264</fullName>
+        <default>false</default>
+        <label>1264</label>
+    </customValue>
+    <customValue>
+        <fullName>4160 IPRO</fullName>
+        <default>false</default>
+        <label>4160 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>53I54RSF IPRO</fullName>
+        <default>false</default>
+        <label>53I54RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>54I52RSF IPRO</fullName>
+        <default>false</default>
+        <label>54I52RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>5944</fullName>
+        <default>false</default>
+        <label>5944</label>
+    </customValue>
+    <customValue>
+        <fullName>5958RSF IPRO</fullName>
+        <default>false</default>
+        <label>5958RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>5D6215 IPRO</fullName>
+        <default>false</default>
+        <label>5D6215 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>5D634</fullName>
+        <default>false</default>
+        <label>5D634</label>
+    </customValue>
+    <customValue>
+        <fullName>5G8015 IPRO</fullName>
+        <default>false</default>
+        <label>5G8015 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>61I59RSF IPRO</fullName>
+        <default>false</default>
+        <label>61I59RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>6260RSF IPRO</fullName>
+        <default>false</default>
+        <label>6260RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>6458RSF IPRO</fullName>
+        <default>false</default>
+        <label>6458RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>6563RSF IPRO</fullName>
+        <default>false</default>
+        <label>6563RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>66I68RSF IPRO</fullName>
+        <default>false</default>
+        <label>66I68RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>68i69RSF IPRO</fullName>
+        <default>false</default>
+        <label>68i69RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>75i76RSF IPRO</fullName>
+        <default>false</default>
+        <label>75i76RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>76MS00 IPRO</fullName>
+        <default>false</default>
+        <label>76MS00 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>79MS00 IPRO</fullName>
+        <default>false</default>
+        <label>79MS00 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>81i84RSF IPRO</fullName>
+        <default>false</default>
+        <label>81i84RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>95R51</fullName>
+        <default>false</default>
+        <label>95R51</label>
+    </customValue>
+    <customValue>
+        <fullName>95Y21</fullName>
+        <default>false</default>
+        <label>95Y21</label>
+    </customValue>
+    <customValue>
+        <fullName>95Y52</fullName>
+        <default>false</default>
+        <label>95Y52</label>
+    </customValue>
+    <customValue>
+        <fullName>95Y72</fullName>
+        <default>false</default>
+        <label>95Y72</label>
+    </customValue>
+    <customValue>
+        <fullName>98Y12</fullName>
+        <default>false</default>
+        <label>98Y12</label>
+    </customValue>
+    <customValue>
+        <fullName>98Y30</fullName>
+        <default>false</default>
+        <label>98Y30</label>
+    </customValue>
+    <customValue>
+        <fullName>A 3901 RG</fullName>
+        <default>false</default>
+        <label>A 3901 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>A 4505 RG</fullName>
+        <default>false</default>
+        <label>A 4505 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>A 4725 RG</fullName>
+        <default>false</default>
+        <label>A 4725 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>A 4910 RG</fullName>
+        <default>false</default>
+        <label>A 4910 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>A 5409 RG</fullName>
+        <default>false</default>
+        <label>A 5409 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>A 6001 RR</fullName>
+        <default>false</default>
+        <label>A 6001 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>A 6401 RG</fullName>
+        <default>false</default>
+        <label>A 6401 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>A 7002</fullName>
+        <default>false</default>
+        <label>A 7002</label>
+    </customValue>
+    <customValue>
+        <fullName>A 7300 RG</fullName>
+        <default>false</default>
+        <label>A 7300 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>ADV 4317 IPRO</fullName>
+        <default>false</default>
+        <label>ADV 4317 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>ADV 4672 IPRO</fullName>
+        <default>false</default>
+        <label>ADV 4672 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>ADV 4681 IPRO</fullName>
+        <default>false</default>
+        <label>ADV 4681 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>ADV 4766 IPRO</fullName>
+        <default>false</default>
+        <label>ADV 4766 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>ADV 4779 IPRO</fullName>
+        <default>false</default>
+        <label>ADV 4779 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AF 8103 IPRO</fullName>
+        <default>false</default>
+        <label>AF 8103 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AFS 110 RR</fullName>
+        <default>false</default>
+        <label>AFS 110 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>AMS Tibagi RR</fullName>
+        <default>false</default>
+        <label>AMS Tibagi RR</label>
+    </customValue>
+    <customValue>
+        <fullName>ANrr73 017</fullName>
+        <default>false</default>
+        <label>ANrr73 017</label>
+    </customValue>
+    <customValue>
+        <fullName>ANrr84 204</fullName>
+        <default>false</default>
+        <label>ANrr84 204</label>
+    </customValue>
+    <customValue>
+        <fullName>ANrr85 509</fullName>
+        <default>false</default>
+        <label>ANrr85 509</label>
+    </customValue>
+    <customValue>
+        <fullName>ANsc 136</fullName>
+        <default>false</default>
+        <label>ANsc 136</label>
+    </customValue>
+    <customValue>
+        <fullName>ANsc79 020</fullName>
+        <default>false</default>
+        <label>ANsc79 020</label>
+    </customValue>
+    <customValue>
+        <fullName>ANsc83 022</fullName>
+        <default>false</default>
+        <label>ANsc83 022</label>
+    </customValue>
+    <customValue>
+        <fullName>ANsc89 109</fullName>
+        <default>false</default>
+        <label>ANsc89 109</label>
+    </customValue>
+    <customValue>
+        <fullName>Anta 82</fullName>
+        <default>false</default>
+        <label>Anta 82</label>
+    </customValue>
+    <customValue>
+        <fullName>APORÉ IPRO</fullName>
+        <default>false</default>
+        <label>APORÉ IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3570 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3570 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3590 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3590 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3610 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3610 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3680 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3680 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3730IPRO</fullName>
+        <default>false</default>
+        <label>AS 3730IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3730 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3730 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3797 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3797 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3810IPRO</fullName>
+        <default>false</default>
+        <label>AS 3810IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3810 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3810 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3820 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3820 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>AS 3850 IPRO</fullName>
+        <default>false</default>
+        <label>AS 3850 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BG 4377 RR</fullName>
+        <default>false</default>
+        <label>BG 4377 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BG 4668 RR</fullName>
+        <default>false</default>
+        <label>BG 4668 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BG 4786 RR</fullName>
+        <default>false</default>
+        <label>BG 4786 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BMX CLASSE RR</fullName>
+        <default>false</default>
+        <label>BMX CLASSE RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRAMAX APOLO RR</fullName>
+        <default>false</default>
+        <label>BRAMAX APOLO RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRAMAX POTENCIA RR</fullName>
+        <default>false</default>
+        <label>BRAMAX POTENCIA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ALVO RR</fullName>
+        <default>false</default>
+        <label>BRASMAX ALVO RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ATIVA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX ATIVA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX BONUS IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX BONUS IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX BRAVA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX BRAVA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX CERTA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX CERTA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX COMPACTA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX COMPACTA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX DELTA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX DELTA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX DESAFIO RR</fullName>
+        <default>false</default>
+        <label>BRASMAX DESAFIO RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ELITE IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX ELITE IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ENERGIA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX ENERGIA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX EXTRA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX EXTRA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX EXTREMA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX EXTREMA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX FIBRA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX FIBRA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX FLECHA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX FLECHA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX FOCO IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX FOCO IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX FORÇA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX FORÇA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX FURIA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX FURIA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX GARRA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX GARRA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ICONE IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX ICONE IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX LANÇA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX LANÇA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX MAGNA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX MAGNA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX OPUS IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX OPUS IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX PONTA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX PONTA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX POWER IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX POWER IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX RAÇA RR</fullName>
+        <default>false</default>
+        <label>BRASMAX RAÇA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX RAIO IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX RAIO IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX TORNADO RR</fullName>
+        <default>false</default>
+        <label>BRASMAX TORNADO RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX TURBO RR</fullName>
+        <default>false</default>
+        <label>BRASMAX TURBO RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ULTRA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX ULTRA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ÚNICA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX ÚNICA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX VALENTE RR</fullName>
+        <default>false</default>
+        <label>BRASMAX VALENTE RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX VANGUARDA IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX VANGUARDA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX VELOZ RR</fullName>
+        <default>false</default>
+        <label>BRASMAX VELOZ RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRASMAX ZEUS IPRO</fullName>
+        <default>false</default>
+        <label>BRASMAX ZEUS IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 1001IPRO</fullName>
+        <default>false</default>
+        <label>BRS 1001IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 1003IPRO</fullName>
+        <default>false</default>
+        <label>BRS 1003IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 1007IPRO</fullName>
+        <default>false</default>
+        <label>BRS 1007IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 1010IPRO</fullName>
+        <default>false</default>
+        <label>BRS 1010IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 284</fullName>
+        <default>false</default>
+        <label>BRS 284</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 378 RR</fullName>
+        <default>false</default>
+        <label>BRS 378 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 388RR</fullName>
+        <default>false</default>
+        <label>BRS 388RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 399 RR</fullName>
+        <default>false</default>
+        <label>BRS 399 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 413RR</fullName>
+        <default>false</default>
+        <label>BRS 413RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 5601RR</fullName>
+        <default>false</default>
+        <label>BRS 5601RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 6203RR</fullName>
+        <default>false</default>
+        <label>BRS 6203RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 7270IPRO</fullName>
+        <default>false</default>
+        <label>BRS 7270IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 7380 RR</fullName>
+        <default>false</default>
+        <label>BRS 7380 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 7460 RR</fullName>
+        <default>false</default>
+        <label>BRS 7460 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 7470IPRO</fullName>
+        <default>false</default>
+        <label>BRS 7470IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 7980</fullName>
+        <default>false</default>
+        <label>BRS 7980</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 8170 IPRO</fullName>
+        <default>false</default>
+        <label>BRS 8170 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 8560RR</fullName>
+        <default>false</default>
+        <label>BRS 8560RR</label>
+    </customValue>
+    <customValue>
+        <fullName>BRS 9180IPRO</fullName>
+        <default>false</default>
+        <label>BRS 9180IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRSGO 8360</fullName>
+        <default>false</default>
+        <label>BRSGO 8360</label>
+    </customValue>
+    <customValue>
+        <fullName>BS 1511 IPRO</fullName>
+        <default>false</default>
+        <label>BS 1511 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BS 1519 LL</fullName>
+        <default>false</default>
+        <label>BS 1519 LL</label>
+    </customValue>
+    <customValue>
+        <fullName>BS 2606 IPRO</fullName>
+        <default>false</default>
+        <label>BS 2606 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>BS IRGA 1642 IPRO</fullName>
+        <default>false</default>
+        <label>BS IRGA 1642 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 202IPRO</fullName>
+        <default>false</default>
+        <label>CD 202IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 215</fullName>
+        <default>false</default>
+        <label>CD 215</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 251 RR</fullName>
+        <default>false</default>
+        <label>CD 251 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2585 RR</fullName>
+        <default>false</default>
+        <label>CD 2585 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2590 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2590 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2591 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2591 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2620 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2620 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2630 RR</fullName>
+        <default>false</default>
+        <label>CD 2630 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2686 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2686 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD2700 IPRO</fullName>
+        <default>false</default>
+        <label>CD2700 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2728 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2728 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2730 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2730 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2737 RR</fullName>
+        <default>false</default>
+        <label>CD 2737 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2747 RR</fullName>
+        <default>false</default>
+        <label>CD 2747 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2781 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2781 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2820 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2820 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2851 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2851 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 2857 IPRO</fullName>
+        <default>false</default>
+        <label>CD 2857 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 8341 IPRO</fullName>
+        <default>false</default>
+        <label>CD 8341 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CD 8743 IPRO</fullName>
+        <default>false</default>
+        <label>CD 8743 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CG 7665 RR</fullName>
+        <default>false</default>
+        <label>CG 7665 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>CG 8166 RR</fullName>
+        <default>false</default>
+        <label>CG 8166 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>Coodetec variety RR</fullName>
+        <default>false</default>
+        <label>Coodetec variety RR</label>
+    </customValue>
+    <customValue>
+        <fullName>Corumbá</fullName>
+        <default>false</default>
+        <label>Corumbá</label>
+    </customValue>
+    <customValue>
+        <fullName>CZ 26B42 IPRO</fullName>
+        <default>false</default>
+        <label>CZ 26B42 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CZ 36B31 IPRO</fullName>
+        <default>false</default>
+        <label>CZ 36B31 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CZ 48841 IPRO</fullName>
+        <default>false</default>
+        <label>CZ 48841 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>CZ 48B32 IPRO</fullName>
+        <default>false</default>
+        <label>CZ 48B32 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>DM57i52 RSF IPRO</fullName>
+        <default>false</default>
+        <label>DM57i52 RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>DM80i79 RSF IPRO</fullName>
+        <default>false</default>
+        <label>DM80i79 RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>DM82i78 RSF IPRO</fullName>
+        <default>false</default>
+        <label>DM82i78 RSF IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>DS 7816 IPRO</fullName>
+        <default>false</default>
+        <label>DS 7816 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>DS 8318 IPRO</fullName>
+        <default>false</default>
+        <label>DS 8318 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>FPS Antares RR</fullName>
+        <default>false</default>
+        <label>FPS Antares RR</label>
+    </customValue>
+    <customValue>
+        <fullName>FPS Atalanta IPRO</fullName>
+        <default>false</default>
+        <label>FPS Atalanta IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>FPS Júpter RR</fullName>
+        <default>false</default>
+        <label>FPS Júpter RR</label>
+    </customValue>
+    <customValue>
+        <fullName>FPS Solar IPRO</fullName>
+        <default>false</default>
+        <label>FPS Solar IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>FT 2557 RR</fullName>
+        <default>false</default>
+        <label>FT 2557 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>FT 4153 RR</fullName>
+        <default>false</default>
+        <label>FT 4153 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>FTR 2182 IPRO</fullName>
+        <default>false</default>
+        <label>FTR 2182 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>FTS 1186 RR</fullName>
+        <default>false</default>
+        <label>FTS 1186 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>FTS GRACIOSA RR</fullName>
+        <default>false</default>
+        <label>FTS GRACIOSA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>GDM16i027</fullName>
+        <default>false</default>
+        <label>GDM16i027</label>
+    </customValue>
+    <customValue>
+        <fullName>HO Cristalino IPRO</fullName>
+        <default>false</default>
+        <label>HO Cristalino IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>HO Javaés IPRO</fullName>
+        <default>false</default>
+        <label>HO Javaés IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>HO Juruena IPRO</fullName>
+        <default>false</default>
+        <label>HO Juruena IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>HO MARACAI IPRO</fullName>
+        <default>false</default>
+        <label>HO MARACAI IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>HO Paranaíba IPRO</fullName>
+        <default>false</default>
+        <label>HO Paranaíba IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>HO piriqui IPRO</fullName>
+        <default>false</default>
+        <label>HO piriqui IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>IMA 80118 RR</fullName>
+        <default>false</default>
+        <label>IMA 80118 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>IMA 84116 RR</fullName>
+        <default>false</default>
+        <label>IMA 84116 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>INT 6300 RR</fullName>
+        <default>false</default>
+        <label>INT 6300 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>INT - SoyOuro IPRO</fullName>
+        <default>false</default>
+        <label>INT - SoyOuro IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>LG 60163 IPRO</fullName>
+        <default>false</default>
+        <label>LG 60163 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>LG 60174 IPRO</fullName>
+        <default>false</default>
+        <label>LG 60174 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>LG 60177 IPRO</fullName>
+        <default>false</default>
+        <label>LG 60177 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>LG 60184 IPRO</fullName>
+        <default>false</default>
+        <label>LG 60184 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5705IPRO</fullName>
+        <default>false</default>
+        <label>M5705IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5730IPRO</fullName>
+        <default>false</default>
+        <label>M5730IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5838 IPRO</fullName>
+        <default>false</default>
+        <label>M5838 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5892 IPRO</fullName>
+        <default>false</default>
+        <label>M5892 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5917IPRO</fullName>
+        <default>false</default>
+        <label>M5917IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5947IPRO</fullName>
+        <default>false</default>
+        <label>M5947IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M5970IPRO</fullName>
+        <default>false</default>
+        <label>M5970IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M6210 IPRO</fullName>
+        <default>false</default>
+        <label>M6210 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M6410 IPRO</fullName>
+        <default>false</default>
+        <label>M6410 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M6972IPRO</fullName>
+        <default>false</default>
+        <label>M6972IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M7110IPRO</fullName>
+        <default>false</default>
+        <label>M7110IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M7198IPRO</fullName>
+        <default>false</default>
+        <label>M7198IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M7739IPRO</fullName>
+        <default>false</default>
+        <label>M7739IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8133IPRO</fullName>
+        <default>false</default>
+        <label>M8133IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8210IPRO</fullName>
+        <default>false</default>
+        <label>M8210IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8349IPRO</fullName>
+        <default>false</default>
+        <label>M8349IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8372IPRO</fullName>
+        <default>false</default>
+        <label>M8372IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8473 IPRO</fullName>
+        <default>false</default>
+        <label>M8473 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8644IPRO</fullName>
+        <default>false</default>
+        <label>M8644IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M8766RR</fullName>
+        <default>false</default>
+        <label>M8766RR</label>
+    </customValue>
+    <customValue>
+        <fullName>M8808IPRO</fullName>
+        <default>false</default>
+        <label>M8808IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>M9144RR</fullName>
+        <default>false</default>
+        <label>M9144RR</label>
+    </customValue>
+    <customValue>
+        <fullName>M-SOY 6101</fullName>
+        <default>false</default>
+        <label>M-SOY 6101</label>
+    </customValue>
+    <customValue>
+        <fullName>M-SOY 8008RR</fullName>
+        <default>false</default>
+        <label>M-SOY 8008RR</label>
+    </customValue>
+    <customValue>
+        <fullName>M-SOY 9056RR</fullName>
+        <default>false</default>
+        <label>M-SOY 9056RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NA 5909 RG</fullName>
+        <default>false</default>
+        <label>NA 5909 RG</label>
+    </customValue>
+    <customValue>
+        <fullName>NK 7059 RR</fullName>
+        <default>false</default>
+        <label>NK 7059 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 4823</fullName>
+        <default>false</default>
+        <label>NS 4823</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 4823 RR</fullName>
+        <default>false</default>
+        <label>NS 4823 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 4901</fullName>
+        <default>false</default>
+        <label>NS 4901</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5000 IPRO</fullName>
+        <default>false</default>
+        <label>NS 5000 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5106 IPRO</fullName>
+        <default>false</default>
+        <label>NS 5106 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5160 IPRO</fullName>
+        <default>false</default>
+        <label>NS 5160 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5445 IPRO</fullName>
+        <default>false</default>
+        <label>NS 5445 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5727 IPRO</fullName>
+        <default>false</default>
+        <label>NS 5727 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5858</fullName>
+        <default>false</default>
+        <label>NS 5858</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 5959 IPRO</fullName>
+        <default>false</default>
+        <label>NS 5959 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6006 IPRO</fullName>
+        <default>false</default>
+        <label>NS 6006 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS6060IPRO</fullName>
+        <default>false</default>
+        <label>NS6060IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6209 RR</fullName>
+        <default>false</default>
+        <label>NS 6209 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6390 IPRO</fullName>
+        <default>false</default>
+        <label>NS 6390 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6535 IPRO</fullName>
+        <default>false</default>
+        <label>NS 6535 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6700 IPRO</fullName>
+        <default>false</default>
+        <label>NS 6700 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6823 RR</fullName>
+        <default>false</default>
+        <label>NS 6823 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6828 IPRO</fullName>
+        <default>false</default>
+        <label>NS 6828 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS6906IPRO</fullName>
+        <default>false</default>
+        <label>NS6906IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 6909 IPRO</fullName>
+        <default>false</default>
+        <label>NS 6909 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS7000 IPRO</fullName>
+        <default>false</default>
+        <label>NS7000 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7007 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7007 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7200 RR</fullName>
+        <default>false</default>
+        <label>NS 7200 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7209 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7209 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7227 RR</fullName>
+        <default>false</default>
+        <label>NS 7227 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7300 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7300 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7338 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7338 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7447 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7447 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7497 RR</fullName>
+        <default>false</default>
+        <label>NS 7497 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS7505IPRO</fullName>
+        <default>false</default>
+        <label>NS7505IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7667 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7667 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7670 RR</fullName>
+        <default>false</default>
+        <label>NS 7670 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7709 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7709 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7780 IPRO</fullName>
+        <default>false</default>
+        <label>NS 7780 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 7901 RR</fullName>
+        <default>false</default>
+        <label>NS 7901 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 8270</fullName>
+        <default>false</default>
+        <label>NS 8270</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 8338 IPRO</fullName>
+        <default>false</default>
+        <label>NS 8338 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 8383 RR</fullName>
+        <default>false</default>
+        <label>NS 8383 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 8490 RR</fullName>
+        <default>false</default>
+        <label>NS 8490 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>NS 8693 RR</fullName>
+        <default>false</default>
+        <label>NS 8693 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>Outro</fullName>
+        <default>false</default>
+        <label>Outro</label>
+    </customValue>
+    <customValue>
+        <fullName>OUTROS</fullName>
+        <default>false</default>
+        <label>OUTROS</label>
+    </customValue>
+    <customValue>
+        <fullName>P96Y70 IPRO</fullName>
+        <default>false</default>
+        <label>P96Y70 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>P96Y90</fullName>
+        <default>false</default>
+        <label>P96Y90</label>
+    </customValue>
+    <customValue>
+        <fullName>P97R22 IPRO</fullName>
+        <default>false</default>
+        <label>P97R22 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>P98Y20</fullName>
+        <default>false</default>
+        <label>P98Y20</label>
+    </customValue>
+    <customValue>
+        <fullName>PP7500IPRO</fullName>
+        <default>false</default>
+        <label>PP7500IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>PRODUZA IPRO</fullName>
+        <default>false</default>
+        <label>PRODUZA IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RB8307 RR</fullName>
+        <default>false</default>
+        <label>RB8307 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>RK5813 RR</fullName>
+        <default>false</default>
+        <label>RK5813 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>RK6316 IPRO</fullName>
+        <default>false</default>
+        <label>RK6316 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RK6813 RR</fullName>
+        <default>false</default>
+        <label>RK6813 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>RK7214 IPRO</fullName>
+        <default>false</default>
+        <label>RK7214 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RK7814 IPRO</fullName>
+        <default>false</default>
+        <label>RK7814 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RK8115 IPRO</fullName>
+        <default>false</default>
+        <label>RK8115 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RK8317 IPRO</fullName>
+        <default>false</default>
+        <label>RK8317 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RK 8318 IPRO</fullName>
+        <default>false</default>
+        <label>RK 8318 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>Rota54 IPRO</fullName>
+        <default>false</default>
+        <label>Rota54 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SEMPRE 7310 IPRO</fullName>
+        <default>false</default>
+        <label>SEMPRE 7310 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SEMPRE 8230 IPRO</fullName>
+        <default>false</default>
+        <label>SEMPRE 8230 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SEMPRE 8330 IPRO</fullName>
+        <default>false</default>
+        <label>SEMPRE 8330 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SG10I61IPRO</fullName>
+        <default>false</default>
+        <label>SG10I61IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SG VITÓRIA 1059 IPRO</fullName>
+        <default>false</default>
+        <label>SG VITÓRIA 1059 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>Soy Ouro</fullName>
+        <default>false</default>
+        <label>Soy Ouro</label>
+    </customValue>
+    <customValue>
+        <fullName>Spring RR</fullName>
+        <default>false</default>
+        <label>Spring RR</label>
+    </customValue>
+    <customValue>
+        <fullName>ST 693 IPRO</fullName>
+        <default>false</default>
+        <label>ST 693 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>ST 797 IPRO</fullName>
+        <default>false</default>
+        <label>ST 797 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>STS 820 RR</fullName>
+        <default>false</default>
+        <label>STS 820 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SW BRIZA RR</fullName>
+        <default>false</default>
+        <label>SW BRIZA RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1059 RR</fullName>
+        <default>false</default>
+        <label>SYN 1059 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1157 RR</fullName>
+        <default>false</default>
+        <label>SYN 1157 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN1158 RR</fullName>
+        <default>false</default>
+        <label>SYN1158 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1163 RR</fullName>
+        <default>false</default>
+        <label>SYN 1163 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1258 RR</fullName>
+        <default>false</default>
+        <label>SYN 1258 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 13561 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 13561 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1359S IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1359S IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 13610 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 13610 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1366C IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1366C IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN13671 IPRO</fullName>
+        <default>false</default>
+        <label>SYN13671 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1561 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1561 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1562 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1562 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>Syn15640 IPRO</fullName>
+        <default>false</default>
+        <label>Syn15640 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 15640 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 15640 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1585 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1585 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1657 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1657 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1683 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1683 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1686 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1686 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SYN 1687 IPRO</fullName>
+        <default>false</default>
+        <label>SYN 1687 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TEC 5936IPRO</fullName>
+        <default>false</default>
+        <label>TEC 5936IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TEC 6702 IPRO</fullName>
+        <default>false</default>
+        <label>TEC 6702 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TEC 7022 IPRO</fullName>
+        <default>false</default>
+        <label>TEC 7022 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TEC 7548 IPRO</fullName>
+        <default>false</default>
+        <label>TEC 7548 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TEC 7849IPRO</fullName>
+        <default>false</default>
+        <label>TEC 7849IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 1180 RR</fullName>
+        <default>false</default>
+        <label>TMG 1180 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG1188 RR</fullName>
+        <default>false</default>
+        <label>TMG1188 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 1288RR</fullName>
+        <default>false</default>
+        <label>TMG 1288RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 1288 RR</fullName>
+        <default>false</default>
+        <label>TMG 1288 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG132 RR</fullName>
+        <default>false</default>
+        <label>TMG132 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 132 RR</fullName>
+        <default>false</default>
+        <label>TMG 132 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2158 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2158 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2173 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2173 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2179 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2179 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2181 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2181 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2182 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2182 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2183 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2183 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2185 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2185 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 2187 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 2187 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 4182</fullName>
+        <default>false</default>
+        <label>TMG 4182</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 4185</fullName>
+        <default>false</default>
+        <label>TMG 4185</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7060 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 7060 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7062 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 7062 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7063 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 7063 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7067 IPRO</fullName>
+        <default>false</default>
+        <label>TMG 7067 IPRO</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7161 RR</fullName>
+        <default>false</default>
+        <label>TMG 7161 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7262RR</fullName>
+        <default>false</default>
+        <label>TMG 7262RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7262 RR</fullName>
+        <default>false</default>
+        <label>TMG 7262 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>TMG 7363 RR</fullName>
+        <default>false</default>
+        <label>TMG 7363 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>VTOP RR</fullName>
+        <default>false</default>
+        <label>VTOP RR</label>
+    </customValue>
+    <customValue>
+        <fullName>W 787 RR</fullName>
+        <default>false</default>
+        <label>W 787 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>W 791 RR</fullName>
+        <default>false</default>
+        <label>W 791 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>W 799 RR</fullName>
+        <default>false</default>
+        <label>W 799 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>W 842 RR</fullName>
+        <default>false</default>
+        <label>W 842 RR</label>
+    </customValue>
+    <customValue>
+        <fullName>XL 781513B IPRO</fullName>
+        <default>false</default>
+        <label>XL 781513B IPRO</label>
+    </customValue>
+    <masterLabel>Cultivar</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

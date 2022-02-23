@@ -1,0 +1,4 @@
+A cidade {!Cidade__c.Name},  foi descarregada. E está pendente de aprovação.
+
+Acesso:
+{!Cidade__c.Link}

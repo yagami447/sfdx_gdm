@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desconto_Total_Unidade__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISNULL(Descuento__c), Descuento__c = 0), 0, Descuento__c * IF(OR(ISNULL(Tipo_de_cambio__c),Tipo_de_cambio__c = 0), 1, Tipo_de_cambio__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Desconto Total Unidade</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

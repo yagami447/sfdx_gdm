@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>crear_sig_mes_stock</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Atualizar mês seguinte</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+var id = &quot;{!Opportunity.Id}&quot;; 
+var mes = &quot;{!Opportunity.Mes__c}&quot;; 
+var etapa = &quot;{!Opportunity.StageName}&quot;; 
+var pasa = true;
+
+if (mes == &apos;Dezembro&apos;){
+   alert(&apos;Mês errado&apos;);
+   pasa = false;
+}
+
+if (etapa != &apos;Aprobada&apos;){
+   alert(&apos;Etapa errada&apos;);
+   pasa = false;
+}
+
+if (pasa) {
+   var result = sforce.apex.execute(&quot;Opp_Utils&quot;,&quot;proximaOpp&quot;, {oppId : id}); 
+   alert(result[0]);
+   if (result[1] == &apos;ok&apos;){
+       var mywin = window.location.href=&apos;/&apos; + result[2]; 
+   } 
+}</url>
+</WebLink>

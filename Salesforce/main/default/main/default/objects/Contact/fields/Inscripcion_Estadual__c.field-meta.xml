@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inscripcion_Estadual__c</fullName>
+    <description>Si se trata de una Persona Jurídica se debe informar en este campo la Inscripción Estadual.</description>
+    <externalId>false</externalId>
+    <label>Inscrição Estadual</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

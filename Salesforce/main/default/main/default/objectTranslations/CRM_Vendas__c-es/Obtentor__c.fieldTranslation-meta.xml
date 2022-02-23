@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Obtentores del grupo DM y restantes obtentores, según el tipo de registro --></help>
+    <label><!-- Obtentor --></label>
+    <name>Obtentor__c</name>
+</CustomFieldTranslation>

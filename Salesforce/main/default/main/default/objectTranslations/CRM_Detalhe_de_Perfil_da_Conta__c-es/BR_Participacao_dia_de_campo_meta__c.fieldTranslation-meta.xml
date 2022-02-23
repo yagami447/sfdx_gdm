@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- AAAA Meta Dias de Campo --></label>
+    <name>BR_Participacao_dia_de_campo_meta__c</name>
+</CustomFieldTranslation>

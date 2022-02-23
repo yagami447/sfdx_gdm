@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Praca__c</fullName>
+    <externalId>false</externalId>
+    <label>Praça</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo_de_Cotacao__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ADM</fullName>
+                <default>false</default>
+                <label>ADM</label>
+            </value>
+            <value>
+                <fullName>C. VALE - Palotina (PR)</fullName>
+                <default>false</default>
+                <label>C. VALE - Palotina (PR)</label>
+            </value>
+            <value>
+                <fullName>COAMO - Campo Mourão (PR)</fullName>
+                <default>false</default>
+                <label>COAMO - Campo Mourão (PR)</label>
+            </value>
+            <value>
+                <fullName>COTRIJAL - Não me Toque (RS)</fullName>
+                <default>false</default>
+                <label>COTRIJAL - Não me Toque (RS)</label>
+            </value>
+            <value>
+                <fullName>DOLAR</fullName>
+                <default>false</default>
+                <label>DOLAR</label>
+            </value>
+            <value>
+                <fullName>FATURAMENTO</fullName>
+                <default>false</default>
+                <label>FATURAMENTO</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Barreiras (BA)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Barreiras (BA)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Brasília (DF)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Brasília (DF)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Diamantino (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Diamantino (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Londrina (PR)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Londrina (PR)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Paragominas (PA)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Paragominas (PA)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Passo Fundo (RS)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Passo Fundo (RS)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Pedro Afonso (TO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Pedro Afonso (TO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Primavera (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Primavera (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rio Verde (GO)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rio Verde (GO)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Rondonópolis (MT)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Rondonópolis (MT)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Uberlandia (MG)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Uberlandia (MG)</label>
+            </value>
+            <value>
+                <fullName>S&amp;M - Uruçui (PI)</fullName>
+                <default>false</default>
+                <label>S&amp;M - Uruçui (PI)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Barreiras (BA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Brasília (DF)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Diamantino (MT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Londrina (PR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Paragominas (PA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Passo Fundo (RS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Pedro Afonso (TO)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Primavera (MT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Rio Verde (GO)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Rondonópolis (MT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Uberlandia (MG)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFRAS &amp; MERCADO</controllingFieldValue>
+            <valueName>S&amp;M - Uruçui (PI)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOPERATIVA</controllingFieldValue>
+            <valueName>C. VALE - Palotina (PR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOPERATIVA</controllingFieldValue>
+            <valueName>COAMO - Campo Mourão (PR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOPERATIVA</controllingFieldValue>
+            <valueName>COTRIJAL - Não me Toque (RS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR</controllingFieldValue>
+            <valueName>ADM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FATURAMENTO</controllingFieldValue>
+            <valueName>FATURAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOLAR</controllingFieldValue>
+            <valueName>DOLAR</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

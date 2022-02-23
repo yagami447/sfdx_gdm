@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Evento --></label>
+    <name>Tipo_de_Evento__c</name>
+    <picklistValues>
+        <masterLabel>Día de Campo</masterLabel>
+        <translation><!-- Día de Campo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lado a Lado</masterLabel>
+        <translation><!-- Lado a Lado --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

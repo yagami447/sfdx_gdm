@@ -1,0 +1,8 @@
+Olá {!Receiving_User.FirstName},
+
+           Lhe damos as boas vindas {!Community_Name}! Para começar, acesse: {!Community_Url}
+
+            Nome de usuário: {!Receiving_User.Username}
+
+            Obrigado,
+            NEOGEN

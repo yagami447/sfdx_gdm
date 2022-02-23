@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validacion_Monto_Cobrado</fullName>
+    <active>true</active>
+    <errorConditionFormula>Cobrado__c  &gt;   Total_en_Reales__c</errorConditionFormula>
+    <errorDisplayField>Cobrado__c</errorDisplayField>
+    <errorMessage>Cobrado R$ no puede superar el Total en Reales (R$)</errorMessage>
+</ValidationRule>

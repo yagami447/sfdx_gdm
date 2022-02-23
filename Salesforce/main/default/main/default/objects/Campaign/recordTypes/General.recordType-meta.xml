@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General</fullName>
+    <active>true</active>
+    <label>General</label>
+    <picklistValues>
+        <picklist>Condiciones_de_Pago__c</picklist>
+        <values>
+            <fullName>ZC01 - A Vista na data do Pedido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC02 - 60 dias Data Ordem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC39 - A Vista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC41 - 15 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC42 - 30 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC43 - 45 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC44 - 60 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - 15 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - 30 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - 45 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - 60 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - 60 dias Data Ordem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - A Vista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - A Vista na data do Pedido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - A vista - 15 de Dezembro</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>ZC67 - A vista - 20 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - A vista Faturamento Royalties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - Antecipado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - Parcelado%3A 30 e 60 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - Parcelado%3A 30%2C60 e 90 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC67 - Parcelado%3A 30%2C60%2C90 e 120 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC68 - A vista - 15 de Dezembro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC68 - A vista Faturamento Royalties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC69 - A vista - 20 dias Data Fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC71 - Parcelado%3A 30%2C60 e 90 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC72 - Parcelado%3A 30%2C60%2C90 e 120 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZC78 - Parcelado%3A 30 e 60 dias data fatura</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cultura__c</picklist>
+        <values>
+            <fullName>Milho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soja</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Epoca_de_Producao__c</picklist>
+        <values>
+            <fullName>Inverno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verão</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marca__c</picklist>
+        <values>
+            <fullName>BRMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAGMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LICENÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEOG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region_VB__c</picklist>
+        <values>
+            <fullName>CERRADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGION 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGION 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Safra__c</picklist>
+        <values>
+            <fullName>14%2F15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2F16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2F17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%2F18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2F19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2F20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%2F21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21%2F22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22%2F23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23%2F24</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Abortada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>En curso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planificada</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Correo electrónico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programa de referencias</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publicidad</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Publicidad en forma de anuncios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relaciones públicas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario %2F Congreso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Socios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

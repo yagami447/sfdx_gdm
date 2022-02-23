@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipos_de_Assinatura__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipos de Assinatura</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <label>Individual</label>
+            </value>
+            <value>
+                <fullName>Em conjunto</fullName>
+                <default>false</default>
+                <label>Em conjunto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" description="US 14347">
+
+    <aura:html tag="style">
+        .datatable-container {
+            min-height: 200px;
+            overflow: auto;
+        }
+        div.slds-dropdown {
+            max-height: 120px;
+            position: static;
+        }
+    </aura:html>
+
+    <c:addCRMEventItemsLWC />
+</aura:component>

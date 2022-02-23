@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Safra</label>
+    <name>Safra__c</name>
+    <picklistValues>
+        <masterLabel>06/07</masterLabel>
+        <translation><!-- 06/07 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>07/08</masterLabel>
+        <translation><!-- 07/08 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08/09</masterLabel>
+        <translation><!-- 08/09 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>09/09</masterLabel>
+        <translation><!-- 09/09 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>09/10</masterLabel>
+        <translation><!-- 09/10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10/10</masterLabel>
+        <translation><!-- 10/10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10/11</masterLabel>
+        <translation><!-- 10/11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>11/11</masterLabel>
+        <translation><!-- 11/11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>11/12</masterLabel>
+        <translation><!-- 11/12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12/12</masterLabel>
+        <translation><!-- 12/12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12/13</masterLabel>
+        <translation><!-- 12/13 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>13/14</masterLabel>
+        <translation><!-- 13/14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>14/15</masterLabel>
+        <translation><!-- 14/15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>15/16</masterLabel>
+        <translation><!-- 15/16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>16/17</masterLabel>
+        <translation><!-- 16/17 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>17/18</masterLabel>
+        <translation><!-- 17/18 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>18/19</masterLabel>
+        <translation><!-- 18/19 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>19/20</masterLabel>
+        <translation><!-- 19/20 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20/21</masterLabel>
+        <translation><!-- 20/21 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>21/22</masterLabel>
+        <translation><!-- 21/22 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

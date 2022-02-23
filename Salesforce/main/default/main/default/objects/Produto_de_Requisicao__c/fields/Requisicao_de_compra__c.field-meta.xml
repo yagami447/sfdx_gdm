@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requisicao_de_compra__c</fullName>
+    <externalId>false</externalId>
+    <label>Requisição de compra</label>
+    <referenceTo>Requisicao_de_compra__c</referenceTo>
+    <relationshipLabel>Produtos de Requisição</relationshipLabel>
+    <relationshipName>Produtos_de_Requisicao</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

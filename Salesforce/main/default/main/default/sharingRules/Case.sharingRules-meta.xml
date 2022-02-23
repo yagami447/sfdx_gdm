@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Casos_Edson_R2_BRMX_a_Murilo_R2_BRMX</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Casos Edson R2 BRMX a Murilo R2 BRMX</label>
+        <sharedTo>
+            <group>Murilo_Brazero_BRMX_R2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>00533000003TPQY</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Casos_Joao_S_a_Otavio_G</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Casos Joao S. a Otavio G.</label>
+        <sharedTo>
+            <group>Otavio_Gorni_BRMX</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>00540000002HRuP</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Desarrollador_de_Mercado_a_Fernando_Frenher_DSEM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Desarrollador de Mercado a Fernando Frenher DSEM</label>
+        <sharedTo>
+            <group>Fernando_Frenher_DSEM</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Desarrollador_de_Mercado</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing</label>
+        <sharedTo>
+            <role>Administracion_3</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Comercial_R2_DSEM</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

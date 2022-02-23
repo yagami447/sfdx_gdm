@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de Evento --></label>
+    <name>Tipo_de_Evento__c</name>
+    <picklistValues>
+        <masterLabel>Emplacamento</masterLabel>
+        <translation><!-- Emplacamento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lado a Lado</masterLabel>
+        <translation><!-- Lado a Lado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palestra</masterLabel>
+        <translation><!-- Palestra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resultados de Produtividade</masterLabel>
+        <translation><!-- Resultados de Produtividade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Treinamento</masterLabel>
+        <translation><!-- Treinamento --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

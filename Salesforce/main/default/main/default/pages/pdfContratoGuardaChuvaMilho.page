@@ -1,0 +1,922 @@
+<apex:page standardController="Contract" extensions="PdfGeneratorController" renderAs="pdf" action="{!initImpresionContratoGuardaChuva}" docType="html-5.0">
+<head>
+<style>    
+table.gridtable {
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;    
+    border-collapse: collapse;
+}
+table.gridtable th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;    
+}
+table.gridtable td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+@page {
+    @bottom-right {
+          content: "Página " counter(page) " de " counter(pages);
+          font-weight: lighter;
+          font-size:8pt;
+    }    
+    @top-right {
+          content: "Contrato N° {!Contract.ContractNumber}";
+          font-weight: lighter;
+          font-size:8pt;
+    }
+}
+</style> 
+</head>
+
+<table width="100%" Align="center" columns="2">
+   
+<table width="80%" border="0" Align="center" columns="3">
+    <tr>
+        <td align="left" width="10%"><font face="verdana">&nbsp;</font>                 
+        </td>
+        <td align="left" width="80%"><font face="verdana"><p><b><u>CONTRATO DE LICENÇA DE USO DE CULTIVAR</u></b></p></font>                 
+        </td>
+        <td align="left" width="10%"><font face="verdana">&nbsp;</font>                 
+        </td>
+    </tr>
+</table>
+
+
+<table width="100%" Align="center" columns="1">
+    <tr>
+        <TD>&nbsp;</TD>
+    </tr>
+</table>
+
+<table width="80%" Align="center" columns="1" style="font-size:14px;font-family:BookmanOldStyle;">
+    <tr>
+        <TD>  
+        <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+            <tr>
+                <td width="30%">
+                    <b>Contrato nº.</b>
+                </td>
+                <td width="70%" colspan="3">
+                    <b>{!nroContrato}</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Fornecedora:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    <b>GDM GENÉTICA DO BRASIL S. A. (GDM)</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>CNPJ:</b>
+                </td>
+                <td width="25%">
+                    07.007.165/0001-34
+                </td>
+                <td width="25%">
+                    <b>Inscrição Estadual</b>
+                </td>
+                <td width="20%">
+                    90519331-73
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Unidade:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    Rua Antônio Rasteiro Filho, 2.700, Parque Industrial José Garcia Gimenes, Cambé, Paraná, CEP 86183-751
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Correspondência:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    O mesmo
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>E-mail:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    admvendas@gdmseeds.com
+                </td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+            <td>          
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+        <TD>  
+        <table width="100%" class="gridtable" Align="left" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">            
+            <tr>
+                <td width="30%">
+                    <b>Distribuidor:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    <b>{!nombre}</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>CNPJ/CPF:</b>
+                </td>
+                <td width="25%">
+                    {!cnpj}
+                </td>
+                <td width="25%">
+                    <b>Inscrição Estadual</b>
+                </td>
+                <td width="20%">
+                    {!inscEst}
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Unidade:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    {!dirUnidade}
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>Endereço Correspondência:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    {!dirCorrespondencia}
+                </td>
+            </tr>
+            <tr>
+                <td width="30%">
+                    <b>E-mail:</b>
+                </td>
+                <td width="70%" colspan="3">
+                    {!email}
+                </td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+        
+        <tr>
+            <td>          
+                &nbsp;
+            </td>
+        </tr>
+                        
+        <TR>
+        <TD style="text-align:justify;">           
+        <em>Considerando que a <b>GDM</b> desenvolveu e é titular ou licenciada de certas linhagens parentais e certos híbridos de milho convencionais, bem como de certas linhagens parentais e híbridos de milho que contêm genes que proporcionam resistência a insetos e tolerância a herbicidas em plantas, sendo que a <b>GDM</b> detém certos direitos relativos a essas linhagens e híbridos.</em>
+        </TD>
+        </TR>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <TR>
+        <TD style="text-align:justify;">
+        <em>
+            Considerando que tais direitos incluem a posse de informações técnicas, fórmulas e “know-how” relativos a tais linhagens e híbridos de milho e a sua utilização, além de direitos de propriedade intelectual, tal como proteção de cultivar, que sejam ou venham a ser concedidos à <b>GDM</b> sobre tais linhagens e híbridos de milho, os quais para todos os fins e efeitos de direito constituem informação confidencial ou segredo de indústria nos termos da legislação brasileira.
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <tr>
+        <td style="text-align:justify;">
+        <em>
+            Com o objetivo de complementar o portfólio de produtos que oferta no mercado, o <b>Distribuidor</b> tem interesse em adquirir determinados híbridos de milho da <b>GDM</b> para fins de comercialização a seus clientes, e a <b>GDM</b> tem interesse de fornecê-los ao <b>Distribuidor</b> mediante os termos e condições previstos neste Contrato
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <tr>
+        <td style="text-align:justify;">
+        <em>
+            As Partes têm entre si justo e acertado firmar o presente Contrato de Fornecimento de Híbridos, de acordo com as condições abaixo mutuamente pactuadas.
+        </em>
+        </td>
+        </tr>
+        
+        <tr>
+            <TD>&nbsp;</TD>
+        </tr>
+        
+        <TR>
+        <TD style="text-align:justify;">
+        
+        <ol style="text-align:justify;">
+        <li><span style="text-align:left;">
+        <b>DAS DEFINIÇÕES</b></span><br/><br/>
+        <ol>
+            <li>
+                Para os fins deste Contrato e do Termo Aditivo de Definições Comerciais, os termos abaixo terão os seguintes significados:
+                <ol>
+                    <li>                        
+                        <b>Clientes </b> – significa os clientes finais dos Híbridos de Milho GDM.
+                    </li>                    
+                    <li>
+                        <b>Contrato </b> – significa o presente Contrato de Fornecimento de Híbridos de Milho celebrado entre a <b>GDM</b> e o <b>Distribuidor</b>.
+                    </li>                    
+                    <li>
+                        <b>Evento</b> – Eventos de propriedade intelectual descritos no Termo Aditivo, compreendendo inclusive tecnologia patenteada e não patenteada, marcas, segredos de negócio, dados e aprovações regulatórias, bem como aperfeiçoamentos contínuos vinculados para cada Híbrido de Milho GDM, através do qual estas empresas concedem ao <b>Distribuidor</b> as autorizações necessárias para vender os Híbrido de Milho GDM com os respectivos direitos.
+                    </li>
+                    <li>
+                        <b>Híbridos de Milho GDM</b> significa um ou mais híbridos de milho, de propriedade da <b>GDM</b> e registrados perante o Ministério da Agricultura, Pecuária e Abastecimento – MAPA, contendo ou não eventos biotecnológicos de propriedade de terceiros, os quais serão produzidos pela <b>GDM</b> e fornecidos ao <b>Distribuidor</b> de acordo com os termos e condições deste Contrato. Os Híbridos de Milho GDM estão listados em <b>Termo Aditivo</b>; demais Híbridos de Milho GDM que porventura vierem a fazer parte do escopo deste Contrato deverão ser incluídos ao <b>Termo Aditivo</b>.
+                    </li>
+                    <li>
+                        <b>Marcas</b> – Significam as Marcas especificadas neste Contrato, de titularidade da <b>GDM</b>, as quais a <b>GDM</b> está devidamente autorizada a utilizar, licenciar e sublicenciar, bem como quaisquer outras Marcas ou símbolos de identificação que venham a ser utilizados ou registrados por <b>GDM</b> no futuro para a identificação dos Híbridos de Milho GDM.
+                    </li>
+                    <li>
+                        <b>Portal</b> – É a página [definir] – através da qual ao <b>Distribuidor</b> deverá, mediante cadrastramento de usuário e acesso com login e senha, enviar os relatórios e demais informações previstas neste Contrato. O <b>Distribuidor</b> será o único responsável pelo uso do Portal feito através de seu cadastro e de suas informações de login e senha, e isentará a <b>GDM</b> de qualquer responsabilidade na hipótese de acesso ao cadastro de usuário do <b>Distribuidor</b> no Portal por terceiros que não sejam o <b>Distribuidor</b>.
+                    </li>
+                    <li>
+                        <b>Preço de Venda Sugerido ao Produtor Final</b> – Valor meramente sugerido pela GDM para a venda de saca de híbridos de milho da GDM ao produtor final, sendo que por se tratar de mera sugestão, o Distribuidor tem a faculdade de leva-lo em conta ou não, e poderá sempre definir seu preço livremente, sem que isso implique em violação do Contrato.
+                    </li>
+                    <li>
+                        <b>Quantidade</b> – é a soma total de sementes de Híbridos de Milho GDM, onde a cada “Saco” corresponde a uma embalagem com 60.000 sementes ou “BigBag” corresponde a uma embalagem com 3.000.000 sementes.
+                    </li>
+                    <li>
+                        <b>Relatório de Definição de Compra</b> – Relatório que deverá ser enviado pelo <b>Distribuidor</b>, através do Portal, até o dia [definir], indicando o Relatório de Volume de Fornecimento a ser adquirido pelo <b>Distribuidor</b>.
+                    </li>    
+                    <li>
+                        <b>Relatório de Previsão de Compra</b> – Relatório que deverá ser enviado pelo <b>Distribuidor</b>, através do Portal, até o dia [definir], indicando a quantidade de Híbridos de Milho <b>GDM</b> que as Partes estimam que será fornecida sob o presente instrumento após a Definição de Compra da Safra/Safrinha. Tal quantidade será vinculante entre as Partes conforme disposições neste Contrato, necessária para que a <b>GDM</b> inicie qualquer atividade de produção de híbridos de milho.
+                    </li>
+                    <li>
+                        <b>Relatório de Volume Comercializado</b> – Relatório que deverá ser enviado pelo <b>Distribuidor</b>, através do Portal, até o dia [definir], indicando o volume total comercializado e o preço aplicado de venda ao produtor final nos termos deste Contrato e do Termo Aditivo de Denifições Comerciais aplicável à Safra/Safrinha em questão.
+                    </li>
+                    <li>
+                        <b>Relatório de Revisão de Compra</b> – Relatório que deverá ser enviado pelo <b>Distribuidor</b>, através do Portal, até o dia [definir], indicando a definição conjunta das Partes acerca de eventuais alterações dos volumes acordados na Definição de Compra, respeitados os critérios do Termo Aditivo.    
+                    </li>
+                    <li>
+                        <b>Safra</b> – significa o período de plantio de milho compreendido entre maio e novembro.
+                    </li>
+                    <li>
+                        <b>Safrinha</b> – significa o período de plantio de milho compreendido entre dezembro e abril.
+                    </li>
+                    <li>
+                        <b>Termo Aditivo de Definições Comerciais ou simplesmente Termo Aditivo</b> – Documento que deverá ser firmado anualmente entre as Partes, onde serão determinadas fornecimento pela <b>GDM</b> ao <b>Distribuidor</b> de Híbridos de Milho GDM a cada Safra/Safrinha, as condições de comercialização e a política de bonificação, dentre outras avenças. O <b>Distribuidor</b> deverá retornar o Termo Aditivo à <b>GDM</b> devidamente assinado até o dia [definir] 30 de novembro de cada ano de vigência do Contrato.
+                    </li>
+                    <li>
+                        <b>Território</b> São os Estados da República Federativa do Brasil, indicados em Termo Aditivo de Definições Comerciais, onde o <b>Distribuidor</b> poderá comercializar as Sementes Comerciais produzidas sob este Contrato.
+                    </li>
+                    <li>
+                        <b>Volume de Fornecimento</b> – significa o volume de Híbridos de Milho <b>GDM</b> que o <b>Distribuidor</b> deverá comprar da <b>GDM</b> na safra e/ou safrinha em questão.
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DO OBJETO</b></span><br/><br/>
+            <ol>
+                <li>
+                    O objeto deste contrato é o fornecimento pela <b>GDM</b> ao <b>Distribuidor</b> de Híbridos de Milho GDM, os quais complementarão o portfólio de produtos do <b>Distribuidor</b> e serão por ele comercializados aos seus Clientes no Território. A <b>GDM</b> e o <b>Distribuidor</b> são e seguirão empresas independentes, sendo cada uma das Partes a única responsável pelas suas próprias atividades, de forma que o Distribuidor atua por sua conta e risco no desempenho das suas próprias atividades relacionadas a este Contrato. Nada no presente Contrato estabelece nem poderá ser interpretado para estabelece qualquer tipo de compartilhamento de atividades, de receitas, de riscos ou de custos entre as Partes, e assim, cada Parte segue independente e a única responsável pelas suas próprias atividades, e deverá indenizar e manter a outra Parte indene de qualquer dano porventura causado por suas atividades
+                </li>
+                <li>
+                    Os Híbridos de Milho serão produzidos e ensacados, conforme definição no Termo Aditivo, em embalagens (sacarias e/ou big bags) com a layout e marcas definidos a critério da <b>GDM</b>. Não obstante, o <b>Distribuidor</b> concorda que a Marca <b>GDM</b> e/ou de empresas que detenham direitos de propriedade intelectual vinculados aos Híbridos de Milho GDM, será inserida pela <b>GDM</b> nas embalagens, de acordo com os padrões definidos no Manual de Marcas.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> concorda que nos preços a serem negociados entre as Partes poderão contar com custos com o tratamento industrial que será realizado pela <b>GDM</b> conforme condição em Termo Aditivo.
+                </li>
+                <li>
+                    A oferta e/ou a venda de Híbridos de Milho GDM pelo <b>Distribuidor</b> fora do Território será considerada violação a este Contrato e, sem prejuízo das demais consequências previstas nele, poderá implicar na rescisão do Contrato por parte da <b>GDM</b> sem qualquer ressarcimento de eventuais perdas e danos incorridos pelo <b>Distribuidor</b>.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> terá permissão para comercializar e/ou distribuir os Híbridos de Milho GDM no Território, de forma que nenhum outro direito ou licença são concedidos ao <b>Distribuidor</b>, implicitamente ou de outra forma, com relação aos Híbridos de Milho GDM.
+                </li>
+                <li>
+                    A <b>GDM</b> recomenda que os Híbridos de Milho GDM sejam comercializados apenas para as regiões constantes no Sistema de Zoneamento Agrícola de Risco Climático (“SISZARC”) do Ministério da Agricultura, Pecuária e Abastecimento (“MAPA”), não responsabilizando por qualquer utilização inadequada do SISZARC.
+                </li>
+                <li>
+                    Este Contrato é celebrado em caráter irrevogável e irretratável, reputada perfeita e acabada a partir da assinatura, não podendo o <b>Distribuidor</b> deixar de adquirir do volume Híbridos de Milho GDM contratado conforme termos e condições do presente Contrato e Termo Aditivo.
+                    <ol>
+                        <li>A <b>Distribuidor</b> concorda que a <b>GDM</b> não realizará a recompra de Híbridos de Milho GDM</li>
+                    </ol>
+                </li>
+                <li>
+                    O <b>Distribuidor</b> concorda desde já que o volume de Híbridos de Milho GDM entregue pela <b>GDM</b> poderá sofrer variações para mais ou para menos do volume acordado entre as Partes na Termo Aditivo, ficando a mesma responsável pela aquisição do volume numa variação [definir] positiva de até 20% (vinte por cento).
+                </li>
+                <li>
+                    A <b>GDM</b> não se responsabiliza por quaisquer compromissos que o <b>Distribuidor</b> possa ter assumido perante terceiros ou parceiros. Assim, o <b>Distribuidor</b> entende, aceita e concorda que a <b>GDM</b> jamais poderá ser responsabilizada, direta ou indiretamente, por quaisquer perdas ou danos sofridos por parte do <b>Distribuidor</b> decorrente da variação do volume de Híbridos de Milho GDM.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece e concorda desde já que todo volume fornecimento contratado no <b>Termo Aditivo</b> é oriundo do Contrato de Produção de Semente de Milho celebrado entre a <b>GDM</b> e empresas terceiras (<b>Produtor</b>), através do qual a <b>GDM</b> se obrigou financeiramente por força deste instrumento. Nesse sentido, <b>Distribuidor</b> reconhece e concorda que o Contrato de Produção de Semente de Milho somente foi celebrado pela <b>GDM</b> com o <b>Produtor</b> para atendimento da demanda do <b>Distribuidor</b> e a produção, pelo <b>Produtor</b>, em área correspondente ao volume de sacas e sementes de milho ora contratado, e que qualquer inadimplência do pagamento do valor definido em <b>Termo Aditivo</b> poderá causar impactos negativos não apenas no caixa, fluxo financeiro e demais operações da <b>GDM</b>, como também do <b>Produtor</b>, que se comprometeu a realizar tal produção e entrega em razão da sua relação de confiança com a <b>GDM</b>.
+                    <ol>
+                        <li>Assim, <b>Distribuidor</b> também reconhece e concorda que parte dos pagamentos sob o presente instrumento poderão efetuados diretamente ao referido <b>Produtor</b>, de acordo com os prazos, instruções e condições estabelecidos aditivo especifico a este Contrato.</li>
+                    </ol>
+                </li>
+                <li>
+                    É condição para a execução deste Contrato a apresentação, por parte do  <b>Distribuidor</b>, do instrumento contratual de empresa(s) que detenha(m) direitos de propriedade intelectual, compreendendo inclusive tecnologia patenteada e não patenteada, marcas, segredos de negócio, dados e aprovações regulatórias, bem como aperfeiçoamentos contínuos vinculados para cada Híbrido de Milho GDM, através do qual estas empresas concedem ao <b>Distribuidor</b> as autorizações necessárias para vender os Híbrido de Milho GDM com os respectivos direitos, com prazo idêntico ou superior ao Contrato/Termo Aditivo e contemplando área idêntica ou mais abrangente que o <b>Território</b>, sendo que, se em qualquer momento tais empresas decidirem por cancelar seus contratos com o <b>Distribuidor</b>, este instrumento fica automaticamente rescindido, não tendo o <b>Distribuidor</b> direito a qualquer tipo de ressarcimento.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DO FORNECIMENTO</b></span><br/><br/>
+            <ol>
+                <li>
+                    Os Relatóros de “Previsão de Compra”, “Definição de Compra”, “Volume Comercializado” e “Revisão de Compra”, assim como a entrega dos Híbridos de Milho GDM para Safra/Safrinha deverão acontecer, em cada Safra/Safrinha em questão, impreterivelmente até cada uma das datas indicadas no cronograma indicado no <b>Termo Aditivo</b>.        
+                </li>
+                <li>
+                    Uma vez devidamente estabelecidos o Definição de Compra, as Partes deverão assinar, dentro do mesmo prazo para sua definição, o <b>Termo Aditivo</b> ao presente Contrato no qual estarão contemplados os volumes de Híbridos de Milho GDM a serem fornecidos.
+                </li>
+                <li>
+                    A <b>GDM</b> fornecerá ao <b>Distribuidor</b> os Híbridos de Milho GDM conforme negociado entre as Partes em cada <b>Termo Aditivo</b>, observados os padrões de qualidade para comercialização praticados pela <b>GDM</b>, disponibilizados atráves do <b>Portal</b>. 
+                    <ol>
+                        <li>Os padrões previstos no <b>Termo Aditivo</b> poderão ser modificados a qualquer momento pela <b>GDM</b>, que deverá comunicá-los ao <b>Distribuidor</b> por escrito.</li>
+                    </ol>
+                </li>
+                <li>
+                    A <b>GDM</b> se reserva o direito de, a qualquer tempo durante a vigência do presente contrato, solicitar relatórios contendo os documentos contábeis relacionados aos volumes comercializados, não sendo excluídos relatórios emitidos por sistemas utilizados por parte do <b>Distribuidor</b>.
+                </li>
+            </ol>        
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA ENTREGA DOS HÍBRIDOS DE MILHO GDM</b></span><br/><br/>
+            <ol>
+                <li>
+                    As responsabilidades pelo carregamento e transporte e descarregamento até o local a ser indicado pelo <b>Distribuidor</b>, será da Parte indicada no <b>Termo Aditivo</b>, sendo que o descarregamento é obrigação exclusiva do <b>Distribuidor</b>. Dessa maneira, o <b>GDM</b> se exime de qualquer responsabilidade a partir da entrega do material objeto deste contrato.    
+                </li>
+                <li>
+                    O <b>Distribuidor</b>, por si ou seu representante, se compromete em certificar a integridade do produto no ato de descarregamento. Assim, assinará o canhoto da Nota Fiscal e, em havendo alguma irregularidade, o representante deverá se manifestar de imediato, através do Portal.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> tem o prazo de 5 (cinco) horas para efetuar o descarregamento a partir do momento que o caminhão chega até o local indicado por esta. No caso do prazo ser ultrapassado, incorrerá ao <b>Distribuidor</b> em (a) multa não-compensatória a ser calculada de acordo com as horas paradas, (b) perdas e danos, sem prejuízo ao disposto no §2º, do artigo 492 do Código Civil e (c) diária estabelecida conforme § 5º da cláusula 11, da Lei 11.442 de 2007.
+                </li>
+                <li>
+                    A <b>GDM</b> declara que as sementes expedidas serão acompanhadas de Nota Fiscal, Certificado Oficial de Semente Certificada e demais documentos que se fizerem necessários, obedecendo às normas e padrões vigentes de pureza e germinação pelo Ministério da Agricultura Pecuária e Abastecimento - MAPA, sendo que o <b>Distribuidor</b> deve obedecer às recomendações técnicas da <b>GDM</b> para cada Híbrido de Milho GDM.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece e aceita que a relação entre as Partes não se trata de relação de consumo, não sendo submetida, portanto, às regras estabelecidas no Código de Defesa do Consumidor. O prazo para quaisquer tipos de reinvindicação a respeito do material entregue é de 15 (quinze) dias corridos, contados da data de recebimento dos produtos.
+                </li>
+                <li>
+                    Os Híbridos de Milho GDM, por serem organismos vivos, carecem de cuidados especiais, quer no transporte, no seu armazenamento, no seu manuseio e no seu uso. A influência de condições climáticas e de solo, a inobservância das recomendações técnicas, bem como de outros fatores imponderáveis, poderá afetar a qualidade fisiológica das sementes, sendo estas causas alheias a responsabilidade da <b>GDM</b>.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> deverá seguir rigorosamente os preceitos técnicos indicados, para o tipo de semente adquirida, bem como prezar pelo descarregamento imediato das sementes, sendo que o uso inadequado dos Híbridos de Milho GDM pelo <b>Distribuidor</b>, será de exclusiva responsabilidade do <b>Distribuidor</b>, ficando a <b>GDM</b> neste ato integralmente eximida de qualquer responsabilidade quanto a este aspecto. Neste sentido, a <a>GDM</a> garante que os Híbridos de Milho GDM, quando da entrega para ao <b>Distribuidor</b> estarão de acordo com todos os aspectos de qualidade previstos no <b>Portal</b> e em conformidade com todas as especificações constantes dos registros nos órgãos governamentais competentes.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DO PREÇO E PAGAMENTO</b></span><br/><br/>
+            <ol>
+                <li>
+                    Para cada Híbridos de Milho GDM, o <b>Distribuidor</b> deverá pagar a <b>GDM</b>, o valor, em Reais, equivalente a <b>85% (oitenta e cinco por cento)</b> do Preço de Venda Sugerido ao Produtor Final
+                </li>
+                <li>
+                    [definir]Adicionalmente ao item acima, a <b>GDM</b> poderá cobrar, conforme condição estabelecida no Termo Aditivo, por qualquer tipo de quantia a ser repassada para a empresa(s) que detenha(m) direitos de propriedade intelectual, compreendendo inclusive tecnologia patenteada e não patenteada, marcas, segredos de negócio, dados e aprovações regulatórias, bem como aperfeiçoamentos contínuos vinculados para cada Híbridos de Milho GDM aplicável à Safra e/ou Safrinha em referência. 
+                </li>
+                <li>
+                    Fica acordado que o valores apurados nos termos acima deverão ser pagos através de depósito em conta bancária a ser informada pela <b>GDM</b> ou através de boleto bancário enviado ao <b>Distribuidor</b> ou ainda mediante o pagamento a terceiros conforme aditivo específico a este Contrato. Ainda, fica acordado que os valores estipulados se trata de valores líquidos, sem qualquer desconto ou abatimento de qualquer natureza.
+                </li>
+                <li>
+                    As partes decidem e concordam que todos os tributos que fazem parte da composição do preço de venda do objeto do presente contrato, já estão inclusos nos valores descritos nesta cláusula, exceto o que diz respeito ao IPI e ICMS, quando aplicável. Caso seja alterada a alíquota dos tributos PIS e COFINS incluídos no preço ou se for criado um novo tributo ou depósito compulsório incidente na venda, o preço será automaticamente ajustado de forma a contemplar o ônus decorrente destas alterações
+                </li>
+                <li>
+                    Na hipótese de tratamento industrial ser realizado pela <b>GDM</b> conforme <b>Termo Aditivo</b>, o <b>Distribuidor</b> concorda que, caso ocorram alterações superiores a 20% (vinte por cento) do valor, em dólares americanos, nos custos da <b>GDM</b>, as Partes deverão renegociar os preços de tratamento industrial que tenham sido acordados. [definir] Os Preços ajustados serão aplicáveis ao Pedido de Compra do período subsequente ao ajuste. Entretanto, caso ocorra aumento substancial de preço e isso deixar o <b>Distribuidor</b> fora de competitividade no mercado, as partes poderão rediscutir as condições comerciais ou reduzir a disponibilidade de volumes a serem fornecidos.
+                </li>
+                <li>
+                    Em caso de atraso no pagamento de quaisquer valores devidos à <b>GDM</b> sob este Contrato, o <b>Distribuidor</b> pagará uma multa moratória de 10% (dez por cento) sobre o montante devido, devidamente corrigido pelo IGPM/FGV (ou por outro índice que o substitua), mais juros de 1,00 % (um por cento) ao mês, bem como deverá o <b>Distribuidor</b> ressarcir eventuais gastos judiciais ou extrajudiciais incorridos pela <b>GDM</b> para receber seu crédito.
+                </li>
+                <li>
+                    Se, nos prazos estabelecidos neste instrumento, o <b>Distribuidor</b> não enviar os relatórios com informações reais, ou ainda, havendo diferenças entre as quantidades de sementes declaradas pelo <b>Distribuidor</b> através de dados enviados a <b>GDM</b> e os valores efetivamente existentes, poderá ocorrer a rescisão automática do presente contrato, independentemente de qualquer aviso ou interpelação.
+                    <ol>
+                        <li>Ocorrendo o acima previsto, o <b>Distribuidor</b> deverá pagar em favor da <b>GDM</b> o valor integral correspondente ao volume de Híbridos de Milho GDM não declarados, devidamente corrigido IGPM/FGV (ou por outro índice que o substitua), acrescidos de juros de 1,00% (um por cento) ao mês e de eventuais gastos judiciais ou extrajudiciais que a <b>GDM</b> tenha para receber seu crédito, inclusive honorários advocatícios equivalentes a 20% (vinte por cento) sobre o valor do débito, podendo ainda a <b>GDM</b> cobrar, a título de cláusula penal (artigos 408 e seguintes do Código Civil), [definir] a multa convencional não compensatória de 100% (cem por cento) sobre os volumes devidos, bem como prejuízos.</li>
+                    </ol>
+                </li>
+                <li>
+                    O <b>Distribuidor</b> autoriza a emissão de título de crédito, inclusive duplicatas, para cobrança dos volumes, correção monetária, juros e possíveis multas. Além disso, fica autorizada pelo <b>Distribuidor</b>, em caso de inadimplemento, a realização de protestos dos títulos a serem emitidos.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA CONFORMIDADE DOS HÍBRIDOS DE MILHO GDM</b></span><br/><br/>
+            <ol>
+                <li>
+                    Os Híbridos de Milho GDM a serem entregues ao <b>Distribuidor</b>, deverão estar de acordo com os padrões de qualidade praticados pela <b>GDM</b>, presentes no <b>Portal</b>.
+                </li>  
+                <li>
+                    Após realização dos testes necessários, e considerando o volume de Híbridos de Milho GDM definido entre as Partes no <b>Termo Aditivo</b>, a <b>GDM</b> deverá informar ao <b>Distribuidor</b>, dentro dos prazos previstos, a quantidade de Híbridos de Milho GDM que atingiu os padrões de qualidade.
+                </li>  
+                <li>
+                    A <b>GDM</b> deverá disponibilizar ao <b>Distribuidor</b> através do Portal, juntamente com os Híbridos de Milho, cópia dos boletins oficiais de análise dos Híbridos de Milho emitidos pela <b>GDM</b>, os quais comprovam os padrões de qualidade. Caso o <b>Distribuidor</b> não conteste, justificadamente, tais boletins no prazo máximo de até [definir] 30 (trinta) dias contados de seu envio pela <b>GDM</b>, os boletins serão considerados aceitos pelo <b>Distribuidor</b>, ficando a <b>GDM</b> isenta de qualquer responsabilidade quanto à qualidade, seja fisiológica, biológica, produtiva, dos Híbridos de Milho GDM.
+                </li>  
+                <li>
+                    Na hipótese de não haver consenso entre as Partes sobre a conformidade ou não dos Híbridos de Milho GDM, amostras supostamente em desconformidade serão submetidas à análise de um laboratório independente (“Laboratório”) selecionado em conjunto pelas Partes, no prazo de [definir]5 (cinco) dias a contar da constatação de irregularidade.
+                </li>  
+                <li>
+                    Se a <b>GDM</b> constatar que os Híbridos de Milho GDM correspondentes não estão de acordo com os padrões previstos no Portal, ou se o Laboratório confirmar este fato, a <b>GDM</b> recolherá a parte dos Híbridos de Milho GDM que estiver em desconformidade, sem qualquer custo adicional para ao <b>Distribuidor</b> e buscará melhores esforços para substitui-los dentro da dispobilidade de produção da <b>GDM</b>, e deverá arcar com os custos da análise realizada pelo Laboratório. Na hipótese de o Laboratório identificar que os Híbridos de Milho estão de acordo com os padrões de qualidade praticados pela <b>GDM</b>, todas as despesas relativas à análise laboratorial aqui referida serão custeadas pelo <b>Distribuidor</b>, que deverá pagar normalmente o preço dos Híbridos de Milho que foi entregue como amostra.
+                </li>  
+                <li>
+                    A <b>GDM</b> efetuará ou (i) a substituição do volume referente aos lotes com problema na Safra e/ou Safrinha seguinte à confirmação da desconformidade ou [definir](ii) a geração de crédito futuro para o <b>Distribuidor</b>, ficando a critério da <b>GDM</b> decidir.
+                </li>  
+                <li>
+                    Exceto nas hipóteses previstas nesta cláusula, o <b>Distribuidor</b> concorda que a GDM não revalidará, substituirá e/ou gerará crédito referente a Híbridos de Milho GDM entregues ao <b>Distribuidor</b> e que estejam de acordo com os termos e condições previstos neste Contrato e/ou <b>Termo Aditivo</b>.
+                </li>             
+            </ol>        
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DAS OBRIGAÇÕES DA GDM</b></span><br/><br/>
+            <ol>
+                <li>
+                    Constituem obrigações da <b>GDM</b>, sem prejuízo das demais obrigações previstas neste Contrato:
+                    <ol>
+                        <li>
+                            cumprir com as obrigações assumidas neste Contrato de forma diligente e responsável, em cumprimento com as normas, leis e regulamentações aplicáveis
+                        </li>
+                        <li>
+                            entregar os Híbridos de Milho GDM na data e local indicados pelo <b>Distribuidor</b> no Termo Aditivo, exceto se de outra forma negociado entre as Partes.
+                        </li>
+                        <li>
+                            atender os parâmetros de qualidade para as Híbridos de Milho GDM, conforme lei do Território, mediante comprovação através de Certificado de Sementes.
+                        </li>
+                    </ol>
+                </li>        
+            </ol>        
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DAS OBRIGAÇÕES DO DISTRIBUIDOR</b></span><br/><br/>
+            <ol>
+                <li>
+                    <b>Distribuidor</b> se obriga a:
+                    <ol>
+                        <li>
+                            cumprir as obrigações assumidas neste Contrato.
+                        </li>
+                        <li>
+                            possuir todas as licenças e condições exigidas para o exercício de sua atividade pelos órgãos públicos competentes, sendo a única responsável perante estas e terceiros pelo cumprimento de todas as normas legais vigentes em decorrência da execução do objeto deste Contrato.
+                        </li>
+                        <li>
+                            efetuar pontualmente o pagamento na forma acordada neste Contrato e aditivos;
+                        </li>
+                        <li>
+                            com o objetivo de proteger e preservar a longo prazo o valor da tecnologia conferida pelos Eventos Biotecnológicos, cumprir integralmente as orientações de Stewardship quando aplicáveis, devendo orientar e garantir seu cumprimento também pelos Clientes.
+                        </li>
+                        <li>
+                            enviar à <b>GDM</b> através do Portal, as informações sobre as práticas adotadas para cumprimento das orientações de Stewardship quando aplicáveis, inclusive sobre comercialização de sementes para plantio de área de refúgio.
+                        </li>
+                        <li>
+                            não utilizar os Híbridos de Milho GDM em quaisquer programas de melhoramento genético, seus ou de terceiros, qualquer que seja a técnica empregada, que visem obter novos híbridos de milho que contenham Eventos Biotecnológicos, não sendo permitido, inclusive, a combinação dos Eventos Biotecnológicos com outros eventos biotecnológicos seus ou de terceiros.
+                        </li>
+                        <li>
+                            não reivindicar, em nome próprio ou de terceiros, qualquer forma de propriedade intelectual sobre o todo ou parte dos Híbridos de Milho GDM.
+                        </li>
+                        <li>
+                            responsabilizar-se por todos os custos e esforços relativos à promoção e comercialização dos Híbridos de Milho GDM, tais como materiais promocionais e também custos relativos a geração de demanda para os Híbridos de Milho GDM.
+                        </li>
+                        <li>
+                            responsabilizar-se integralmente pelas obrigações que vier a contrair perante terceiros durante e em virtude da execução do Contrato, isentando a <b>GDM</b> de quaisquer responsabilidades decorrentes disso.
+                        </li>
+                        <li>
+                            [definir]reportar através do Portal, sempre que solicitado pela <b>GDM</b>, a previsão de volumes líquidos de vendas para as Safra e/ou Safrinhas requeridas, no modelo a ser encaminhado pela <b>GDM</b>.
+                        </li>
+                        <li>
+                            responsabilizar diretamente (a) pela permanente supervisão, controle, direção técnica e fiscalização de seus colaboradores utilizados na execução deste Contrato (b) pelas consequências que derivem do não cumprimento de obrigações legais e contratuais, tanto no que se refere aos seus empregados como às subcontratadas, terceirizadas ou colaboradores que venha a contratar durante a execução do Contrato; (c) por eventuais reclamações trabalhistas movidas por seus empregados, terceirizados, colaboradores ou subcontratadas contra a <b>GDM</b>, assumindo-as e arcando com todos os ônus delas decorrentes, inclusive eventuais condenações, pleiteando <b>Distribuidor</b> a exclusão da <b>GDM</b> do processo; e (d) por todos os acidentes do trabalho e doenças ocupacionais relacionadas a seus empregados, terceirizados, colaboradores e subcontratados ocorridos na execução deste Contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Cumprir os prazos previstos no conograma do Termo Aditivo, inclusive de envio dos Relatórios através do Portal.
+                </li>
+                <li>
+                    Mediante autorização prévia e por escrito da <b>GDM</b> através do Portal, o <b>Distribuidor</b> poderá utilizar e divulgar os resultados referentes aos Híbridos de Milho GDM obtidos nos Campos Demonstrativos.
+                </li>
+                <li>
+                    <b>Distribuidor</b> se compromete a comprar os Híbridos de Milho GDM exclusivamente da <b>GDM</b> ou desta obter autorização prévia e por escrito para a compra dos Híbridos de Milho GDM através de terceiros.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DO ATENDIMENTO A RECLAMAÇÕES</b></span><br/><br/>
+            <ol>
+                <li>
+                    Na hipótese de haver reclamações por parte dos Clientes quanto aos Híbridos de Milho GDM, caberá ao <b>Distribuidor</b> o atendimento a tais reclamações.
+                </li>
+            </ol>                
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA LIMITAÇÃO DE RESPONSABILIDADE</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Distribuidor</b> é a única responsável por quaisquer danos relativos aos Híbridos de Milho GDM, desde que estes estejam de acordo com a cláusula “Da Conformidade dos Híbridos de Milho GDM”, devendo responder inclusive por perdas e danos a terceiros e/ou à <b>GDM</b>, correspondentes e/ou decorrentes dos Híbridos de Milho e seu uso. Ainda, o <b>Distribuidor</b> deverá responsabilizar-se por todos os riscos, inclusive respondendo pelas perdas e danos decorrentes, ou caso aceite adquirir Híbridos de Milho GDM que não tenham atingido os padrões de qualidade descritos no Portal.
+                </li>
+            </ol>                
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA VIGÊNCIA E DA RESCISÃO DO CONTRATO</b></span><br/><br/>
+            <ol>
+                <li>
+                    O presente Contrato entrará em vigor na data de sua assinatura pelas Partes e terá a vigência pelo mesmo prazo ajustado do(s) Termo(s) Aditivo(s) de Definições Comerciais vinculado(s) a este instrumento.
+                </li>
+                <li>
+                    Fica desde já acordado entre as Partes que a <b>GDM</b> poderá, a seu critério, em cada Safra e/ou Safrinha, realizar análises e solicitar garantias de crédito ao <b>Distribuidor</b>, em conformidade com as políticas internas de crédito e cobrança da <b>GDM</b>, a fim de assegurar que o pagamento do Preço será honrado pelo <b>Distribuidor</b>.
+                </li>
+                <li>
+                    O término ou rescisão do presente Contrato implicará a rescisão imediata do(s) Termo(s) Aditivo(s) de Definições Comerciais vigente(s) vinculado(s) a este instrumento.
+                </li>
+                <li>
+                    O término ou rescisão do(s) Termo(s) Aditivo(s) de Definições Comerciais vigente(s) e a não celebração de Termo Aditivo para a Safra e/ou Safrinha subsequente implicará a rescisão imediata do presente Contrato.
+                </li>
+                <li>
+                    Sem prejuízos das outras disposições presentes neste instrumento, este Contrato poderá ser rescindido de pleno direito a qualquer tempo, independentemente de qualquer aviso, interpelação ou notificação judicial ou extrajudicial, nas seguintes hipóteses:
+                    <ol>
+                        <li>
+                            Em caso de descumprimento de qualquer das cláusulas estabelecidas neste instrumento, caso não seja sanado dentro de 15 (quinze) dias contados a partir do recebimento da notificação, requerendo a cessação da violação pela outra Parte;
+                        </li>
+                        <li>
+                            Na hipótese de ser requerida a falência, processo de recuperação judicial ou insolvência de qualquer das Partes;
+                        </li>
+                        <li>
+                            Cessão ou transferência deste Contrato, bem como de qualquer de suas obrigações, seja total ou parcial, sem prévia anuência da GDM;
+                        </li>
+                        <li>
+                            Caso seja constatada a prática de qualquer ato fraudulento na execução de qualquer atividade ou obrigação do <b>Distribuidor</b>; ou
+                        </li>
+                        <li>
+                            Quando uma situação de Força Maior ou seus efeitos subsistam por um período superior a 60 (sessenta) dias, sem que sejam devidos quaisquer valores a título de multa ou indenização, a não ser o pagamento pelo fornecimento que já tiver sido efetivamente realizado, em proveito da <b>GDM</b>.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Uma vez rescindido ou terminado o presente Contrato, por qualquer motivo, cessará automaticamente o objeto deste Contrato o <b>Distribuidor</b>, independentemente de qualquer notificação nesse sentido. Neste caso, o <b>Distribuidor</b> deverá destruir toda e qualquer volume de Híbridos de Milho GDM disponivel.
+                    <ol>
+                        <li>Caso haja recusa de cumprimento do estabelecido acima, a <b>GDM</b> poderá, a qualquer momento e sem necessidade de autorização prévia ou caução, buscar e apreender junto ao <b>Distribuidor</b> e/ou seus cooperantes todos os materiais relativos ao presente Contrato, em qualquer lugar onde tais materiais se encontrarem.</li>
+                    </ol>
+                </li>
+            </ol>                
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA FORÇA MAIOR</b></span><br/><br/>
+            <ol>
+                <li>
+                    Com a exceção das obrigações de pagamento aqui contidas, nenhuma das partes será responsabilizada perante a outra parte por não cumprimento ou atraso no cumprimento de qualquer obrigação aqui prevista, desde que e contanto que o não cumprimento seja causado por qualquer evento de Caso Fortuito e/ou Força Maior nos termos do Código Civil brasileiro. A parte afetada pelo evento de Força Maior fornecerá à outra parte informações completas, assim que tome conhecimento (incluindo sua melhor estimativa de cobertura e possível duração do comprometimento das suas atividades), bem como envidará seus melhores esforços para superar as dificuldades criadas pelo evento e retomar o cumprimento das suas obrigações assim que possível. Na medida em que o evento de Força Maior tiver relação com uma lei, determinação ou regulamento governamental que proíba as atividades aqui dispostas, o presente Contrato será rescindido sem qualquer obrigação adicional ou penalidade para qualquer parte (a não ser que as obrigações permaneçam após a rescisão ou vencimento)
+                </li>
+                <li>
+                    O não cumprimento causado por eventos não relacionados às partes, incluindo, porém sem limitação, atos governamentais ou de agências governamentais, embargos comerciais, incêndios, enchentes, explosões, casos fortuitos, greves, vandalismo, desordens e comoção civil, será considerado omissão e não cumprimento das obrigações aqui previstas.
+                </li>
+            </ol>
+        </li>
+        
+        <li><span style="text-align:left;">
+            <b>DA PROPRIEDADE INTELECTUAL E PUBLICIDADE DOS HÍBRIDOS DE MILHO GDM</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Distribuidor</b> reconhece e concorda que a <b>GDM</b> é detentora exclusiva dos direitos de comercialização/exploração comercial sobre as linhagens parentais utilizadas para fins de produção dos Híbridos de Milho GDM, bem como sobre os próprios Híbridos de Milho GDM.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece e concorda que a presente outorga não lhe concede qualquer titularidade ou direito sobre as linhagens parentais ou sobre qualquer das Marcas senão os direitos de uso especificados no presente instrumento.
+                </li>
+                <li>
+                    As Partes reconhecem e concordam que o disposto neste Contrato não exaure os direitos da <b>GDM</b> com relação às autorizações futuras ao <b>Distribuidor</b> e/ou a qualquer terceiro, no que se refere aos Híbridos de Milho, nem a qualquer outro direito de propriedade intelectual da <b>GDM</b> e/ou de qualquer empresa a ela relacionada, não sendo admitida qualquer interpretação no sentido de exaustão de direitos em virtude deste Contrato.
+                </li>
+                <li>
+                    O presente Contrato não constitui cessão ao <b>Distribuidor</b> dos direitos de propriedade intelectual da <b>GDM</b> relativos a tais linhagens e/ou Híbridos de Milho <b>GDM</b> e/ou Marcas <b>GDM</b>, que são de propriedade exclusiva da <b>GDM</b>.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece que não é proprietária de nenhuma Marca citada neste instrumento, sendo que a(s) proprietária(s) mantém o direito sobre a mesma para especificar todos os aspectos de uso, incluindo, mas não limitado à: forma, lugar, tipo, layout, desenho, canais comerciais, canais de distribuição e mídia, ou para estes usos, ou em conexão com todas as formas de exposição, marketing, etiquetas, descrição de produtos, sites de internet, materiais promocionais de vendas, e todas as outras formas de uso da Marca. Todo uso das Marcas reverterá em benefício da(s) respectiva(s) proprietária(s). É obrigação do <b>Distribuidor</b> acatar todas as orientações de uso das Marcas, sejam verbais ou escritas, que poderão ser modificadas ou revisadas pela(s) proprietária(s) conforme entender(em) necessário, sem necessidade de expresso aviso prévio.
+                </li>
+                <li>
+                    O uso das Marcas pelo <b>Distribuidor</b> deverá ser restrito à execução do objeto deste Contrato e em estrita observância às orientações contidas no Manual da Marca a ser entregue pela <b>GDM</b>.
+                </li>
+                <li>
+                    O <b>Distribuidor</b>  deverá zelar pelo bom nome e elevado conceito das Marcas, abstendo-se da prática de qualquer ato que as possa desabonar e corrigindo qualquer falha apontada no mesmo dia da solicitação da(s) proprietária(s) da Marca, ou em um prazo compatível conforme o caso, sendo que em nenhuma hipótese este prazo poderá exceder 10 (dez) dias da solicitação.
+                </li>
+                <li>
+                    A autorização do uso das Marcas não concede o <b>Distribuidor</b>  qualquer direito sobre as mesmas e/ou quaisquer símbolos ou sinais distintivos delas integrantes, independentemente do tempo de utilização, sendo vedada qualquer alteração nas Marcas pelo <b>Distribuidor</b>. A utilização das Marcas pelo <b>Distribuidor</b> será realizada em observação às instruções da <b>GDM</b>, especialmente quanto a sua forma de apresentação.
+                </li>
+                <li>
+                    Os direitos da(s) proprietária(s) com relação às Marcas não permitem ao <b>Distribuidor</b>, durante a vigência deste Contrato ou inclusive depois de seu término ou rescisão, alegar que havia sido criado em seu benefício, qualquer direito de titularidade ou propriedade com relação às Marcas, bem como qualquer fundo de comércio, uma vez que o presente instrumento somente lhe assegura autorização para utilizar as Marcas a título precário e sempre de acordo com as normas e limites fixados neste instrumento.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> está terminantemente proibido de (a) registrar nomes de domínios contendo qualquer das Marcas e outros símbolos distintivos da(s) proprietária(s) ou semelhantes; (b) de financiar, operar ou contribuir para a formação de “sítios na internet” que venham a incorporar ou utilizar as Marcas ou outros símbolos de identificação sem a prévia e expressa anuência da <b>GDM</b> ou do respectivo titular; ou (c) utilizar-se de outros nomes ou símbolos semelhantes que possam fazer confusão com a denominação dos Híbridos de Milho GDM e/ou da <b>GDM</b>, bem como das Marcas.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> se obriga, desde logo, a não praticar, nem permitir que se pratique qualquer ato ou omissão que prejudique, ou possa vir a prejudicar, a imagem da(s) proprietária(s) de qualquer uma das Marcas.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece que é vedado depositar, a qualquer tempo, qualquer pedido de registro para as Marcas, bem como quaisquer outras marcas semelhantes ou suscetíveis a confusão com as Marcas, frente a qualquer órgão governamental competente, no Brasil e no exterior, durante a vigência do presente Contrato e também após o seu término ou rescisão.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece que é vedada a utilização de qualquer das Marcas ou da denominação social da <b>GDM</b> ou de suas coligadas, em todo ou em parte (a) para compor ou integrar a denominação social de qualquer empresa, empreendimento, ou estabelecimento comercial; (b) em recibos, faturas e quaisquer outros documentos de natureza contábil, cambial ou fiscal.
+                </li>
+                <li>
+                    Em caso de qualquer infração no uso das Marcas ou direito autoral da <b>GDM</b> por terceiros, o <b>Distribuidor</b> deverá informar imediatamente a <b>GDM</b> e, se possível, fornecer à <b>GDM</b> exemplares da violação. A <b>GDM</b>, e somente ela, tomará qualquer medida que julgar conveniente para a reparação de seus direitos.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece que toda comercialização das Sementes Comerciais deve ser exclusivamente feita através das embalagens conforme orientações técnicas, que conterão todas as normas tocantes às Marcas.
+                    <ol>
+                        <li>
+                            O <b>Distribuidor</b> reconhece que a <b>GDM</b> é legítima titular das marcas indicadas no Manual da Marca a ser entregue ao <b>Distribuidor</b>.
+                        </li>
+                    </ol>
+                </li>
+            </ol>                
+        </li>    
+        
+        <li><span style="text-align:left;">
+            <b>DA BONIFICAÇÃO</b></span><br/><br/>
+            <ol>
+                <li>
+                    A <b>GDM</b> poderá conceder uma bonificação ao <b>Distribuidor</b>, a exclusivo critério da <b>GDM</b> e desde que ao <b>Distribuidor</b> esteja em pleno e integral cumprimento de todos os termos deste Contrato.
+                </li>
+                <li>
+                    O valor da bonificação será variável em função dos critérios estabelecidos no Termo Aditivo de Definições Comerciais.
+                    <ol>
+                        <li>
+                            O não reconhecimento da <b>GDM</b> de qualquer tipo de bonificação não ensejará direito a qualquer tipo de reclamação por parte do <b>Distribuidor</b>.
+                        </li>
+                    </ol>
+                </li>
+            </ol>                
+        </li> 
+        
+        <li><span style="text-align:left;">
+            <b>DA UTILIZAÇÃO DO PORTAL</b></span><br/><br/>
+            <ol>
+                <li>
+                    A utilização do Portal pelo <b>Distribuidor</b> para o envio dos relatórios e informações previstas neste Contrato se dará mediante acesso através de login e senha, sendo responsabilidade exclusiva do <b>Distribuidor</b> a utilização do Portal, em qualquer momento, devendo o <b>Distribuidor</b> não informar a terceiros esses dados de login e senha, responsabilizando-se integralmente pelo uso que deles seja feito.
+                    <ol>
+                        <li>
+                            A senha será enviada ao endereço eletrônico (e-mail) indicado pelo <b>Distribuidor</b> no preâmbulo deste Contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    O <b>Distribuidor</b> compromete-se a informar a <b>GDM</b> imediatamente, e através de meio seguro, a respeito de qualquer uso não autorizado de sua conta, bem como de qualquer acesso não autorizado ao Portal por terceiros.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> é o único responsável pelas operações efetuadas por meio de seu login e senha no Portal, sendo que assume como vinculantes e legalmente válidas todas as informações enviadas.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> reconhece que é responsável por quaisquer informações falsas ou incorretas que possam ser inseridas para a utilização e acesso ao Portal. O <b>Distribuidor</b> isenta a <b>GDM</b> de qualquer responsabilidade quanto à veracidade dos dados fornecidos.
+                </li>
+                <li>
+                    A <b>GDM</b> poderá alterar, a qualquer tempo e sem aviso prévio, as condições de acesso ao seu Portal.
+                </li>
+                <li>
+                    Não é permitida a utilização de nenhum dispositivo, software, aplicativo ou outro recurso que venha a interferir nas atividades e operações do Portal, bem como nas contas ou bancos de dados, sem a prévia análise e aprovação da <b>GDM</b>.
+                </li>
+                <li>
+                    A <b>GDM</b> não se responsabiliza por qualquer dano, prejuízo ou perda no equipamento do <b>Distribuidor</b> decorrentes do uso do Portal, inclusive de qualquer acesso realizado por terceiros. A <b>GDM</b> também não será responsável por qualquer vírus que possa atacar o equipamento do <b>Distribuidor</b> em decorrência do acesso, utilização ou navegação no Portal ou como consequência da transferência de dados, arquivos, imagens, textos ou áudio contidos no mesmo. O <b>Distribuidor</b> não poderá atribuir à <b>GDM</b> nenhuma responsabilidade nem exigir o pagamento de quaisquer indenizações, inclusive por lucro cessante, em virtude de prejuízos resultantes de dificuldades técnicas ou falhas nos sistemas operacionais e anti-virus utilizados pelo <b>Distribuidor</b> ou falhas gerais decorrentes da navegação do <b>Distribuidor</b> na internet. Eventualmente, o Portal poderá não estar disponível por motivos técnicos ou falhas na internet, ou por qualquer outro evento fortuito ou de força maior alheio ao controle da <b>GDM</b>, sendo certo que nenhuma responsabilidade poderá ser atribuída à <b>GDM</b> em razão de eventual indisponibilidade temporária do Portal.
+                </li>
+            </ol>
+        </li>    
+        
+        <li><span style="text-align:left;">
+            <b>DAS INSPEÇÕES E AUDITORIAS</b></span><br/><br/>
+            <ol>
+                <li>
+                    Com o objetivo de viabilizar a inspeção e/ou auditorias pertinentes ao objeto deste Contrato, que serão sempre limitadas os Híbridos de Milho GDM, o <b>Distribuidor</b> desde já permite à <b>GDM</b> e aos auditores independentes contratados pela <b>GDM</b> o livre acesso de seus representantes as unidades do <b>Distribuidor</b>, incluindo armazéns e depósitos, permitindo ainda livre acesso aos mapas de comercialização de sementes Híbridos de Milho GDM, a qualquer evento de controle e movimentação de mercadorias referentes aos Híbridos de Milho GDM, incluindo estoques dos os Híbridos de Milho GDM, à política de preços praticados pelo <b>Distribuidor</b> no Território quanto aos Híbridos de Milho GDM, à documentação em papel ou digital relativa à compra e venda de Híbridos de Milho GDM, assim como todo e qualquer outro documento, dado, elemento ou informação relativa a comercialização de Híbridos de Milho GDM, em qualquer formato, inclusive digital, a fim de que sejam realizadas todas as verificações e inspeções que se fizerem necessárias para averiguar o cumprimento fiel deste Contrato, incluindo aqueles previstos nas orientações de Stewardship previsto neste Contrato e/ou Termo Aditivo e/ou Portal, bem como da legislação em vigor.
+                </li>
+                <li>
+                    Mediante solicitação escrita da <b>GDM</b>, o <b>Distribuidor</b> permitirá análise confidencial de todos os documentos pertinentes e/ou outras informações escritas pertinentes, em qualquer formato, a fim de confirmar que o <b>Distribuidor</b> cumpriu suas obrigações previstas neste Contrato.
+                </li>
+                <li>
+                    A <b>GDM</b> se obriga a manter sigilo das informações obtidas do <b>Distribuidor</b> ou advindas com a fiscalização exercida sobre as atividades em questão, em relação ao objeto principal deste Contrato, exceto quando o uso de tais informações seja necessário para defender seus direitos estabelecidos neste instrumento.
+                </li>
+                <li>
+                    No caso de alteração do sistema (software) utilizado pelo <b>Distribuidor</b>, este se compromete a manter os registros/dados relativos aos Híbridos de Milho GDM  disponíveis e acessíveis a possíveis auditorias que possam ser realizadas em até 5 (cinco) anos após o término ou rescisão do presente Contrato.
+                    <ol>
+                        <li>
+                            Na ocorrência específica de (a) migração/alteração de sistema ou (b) eliminação/alteração de códigos internos vinculados aos determinados Híbridos de Milho GDM, o <b>Distribuidor</b> se compromete a dar rastreabilidade para o processo, a fim de que não haja perda de informação na transição disposta.
+                        </li>
+                    </ol>
+                </li>
+            </ol>                
+        </li>    
+        
+        <li><span style="text-align:left;">
+            <b>DAS INFORMAÇÕES CONFIDENCIAIS</b></span><br/><br/>
+            <ol>
+                <li>
+                    O <b>Distribuidor</b> se obriga, por si, seus sócios/acionistas, empregados, dirigentes, conselheiros, funcionários, colaboradores, cooperantes e eventuais terceiros contratados, a manter em absoluto sigilo e confidencialidade e, portanto, a não divulgar, sem a prévia e expressa autorização da <b>GDM</b>, todas e quaisquer informações, dados, desenhos, manuais, etc., que tenham chegado ao seu conhecimento por qualquer meio e a qualquer título, contendo a indicação de sigilo e/ou confidencialidade, mesmo mediante o término ou rescisão do Contrato, por qualquer motivo que este ocorra, (“Informação Confidencial”), sob pena de responsabilização pelas respectivas perdas e danos, civis e criminais, diretos e indiretos.
+                </li>
+                <li>
+                    Para os efeitos aqui previstos, incluem-se no conceito de Informação Confidencial, sem limitações, todas as informações, resultados de testes, relatórios, sementes e quaisquer outros documentos obtidos pelo <b>Distribuidor</b>, por si, seus sócios/acionistas, empregados, dirigentes, conselheiros, funcionários, colaboradores, cooperantes e eventuais terceiros contratados, em razão do Contrato, os quais são ora reconhecidos como de exclusiva titularidade da <b>GDM</b>.
+                </li>
+                <li>
+                    Somente será admitido como legítimo motivo de exceção à obrigatoriedade de sigilo e confidencialidade aqui previsto, a divulgação de Informação Confidencial nas seguintes hipóteses:
+                    <ol>
+                        <li>
+                            Informações que já eram comprovadamente conhecidas pelo <b>Distribuidor</b> anteriormente à celebração deste Contrato;
+                        </li>
+                        <li>
+                            Existência de prévia e expressa anuência da <b>GDM</b>, por representante legal desta, desde que a divulgação seja feita nos limites e restrições indicados por esta;
+                        </li>
+                        <li>
+                            A Informação Confidencial foi comprovadamente conhecida através de outra fonte, de forma legal e legítima, independentemente do Contrato; e
+                        </li>
+                        <li>
+                            Existência de determinação judicial e/ou administrativa para o conhecimento da Informação Confidencial, observados os termos deste Contrato.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    A obrigação de sigilo e confidencialidade aqui prevista subsistirá ao término ou rescisão do Contrato, por qualquer motivo que este ocorra.
+                </li>
+                <li>
+                    O <b>Distribuidor</b> compromete-se a entregar a <b>GDM</b> toda a documentação e respectivas cópias por ela obtidas e/ou geradas em razão do Contrato, imediatamente após o seu término ou rescisão, por qualquer motivo que este ocorra, ou dar-lhes o destino eventualmente indicado pela <b>GDM</b>.
+                </li>
+                <li>
+                    Caso o <b>Distribuidor</b> seja compelida, durante a vigência deste Contrato ou mesmo após o seu término ou rescisão, por qualquer motivo, a divulgar qualquer Informação Confidencial, no todo ou em parte, por ordem judicial, administrativa ou outra determinação oficial ou do Poder Público, o <b>Distribuidor</b> deverá notificar imediatamente a <b>GDM</b>, de modo que a <b>GDM</b> possa requerer uma liminar ou qualquer outra medida preventiva capaz de evitar a divulgação da Informação Confidencial. Caso tal liminar ou outra medida não seja obtida, o <b>Distribuidor</b>  deverá fornecer apenas e tão somente a Informação Confidencial requerida e utilizar seus melhores esforços para que seja dado tratamento confidencial a tal informação.
+                </li>
+            </ol>                
+        </li>    
+        
+        <li><span style="text-align:left;">
+            <b>DAS INSPEÇÕES E AUDITORIAS</b></span><br/><br/>
+            <ol>
+                <li>
+                    As Partes declaram que conhecem os termos das leis anticorrupção e antissuborno brasileiras, incluindo, mas não se limitando à Lei n. 12.846/2013 e que adotam todas as medidas necessárias, de acordo com as boas práticas comerciais de forma ética e em conformidade com os preceitos legais aplicáveis, para impedir qualquer atividade fraudulenta por si (inclusive por seus acionistas, conselheiros, diretores e funcionários) e/ou por quaisquer fornecedores, agentes, contratadas, subcontratadas e/ou os seus empregados com relação ao recebimento de quaisquer recursos de seus fornecedores e prestadores de serviços, sendo certo que caso identifique qualquer situação que venha a afetar sua relação com a outra Parte, dará ciência imediata a esta e tomará todas as medidas necessárias.
+                </li>
+                <li>
+                    Os direitos e obrigações aqui previstos não serão cedidos nem transferidos, no todo ou em parte, a qualquer terceiro sem o prévio consentimento escrito da outra Parte, ficando estipulado que a <b>GDM</b> poderá ceder este Contrato a outra empresa com relação à reorganização, consolidação, cisão, incorporação referente ao objeto deste contrato, seja isoladamente, seja em conjunto com outros negócios da <b>GDM</b> como parte de reorganização total da mesma e/ou ceder parcialmente a obrigação de recebimento prevista neste Contrato a terceiros confome disposição acima.
+                </li>
+                <li>
+                    O não exercício dos direitos e faculdades asseguradas às Partes no presente instrumento, em sua totalidade ou em parte, deverão ser sempre considerados, em qualquer hipótese, como mera liberdade, não constituindo, de forma alguma, novação das condições ora pactuadas, nem tampouco renúncia a qualquer direito ou faculdade. A concessão de qualquer tolerância, por parte da <b>GDM</b>, no caso de descumprimento de qualquer das cláusulas previstas no presente instrumento não implica renúncia aos direitos que têm a <b>GDM</b>, podendo-os exercer, dentro ou fora de juízo a qualquer tempo.
+                </li>
+                <li>
+                    O presente Contrato prevalece e substitui todos os entendimentos anteriores, verbais ou escritos, inclusive contratos e acordos eventualmente já celebrados entre as Partes cujo objeto e vigência sejam os mesmos aqui constantes. O <b>Distribuidor</b> reconhece e confirma não haver qualquer reclamação ou pedido de qualquer ordem em relação à <b>GDM</b>, seja por força das obrigações assumidas em contratos anteriores, seja a que título for, não havendo qualquer indenização ou perdas e danos a serem postuladas perante <b>GDM</b> até a data de assinatura deste Contrato.
+                </li>
+                <li>
+                    Este Contrato, bem como demais anexos, relatórios e aditivos, representa o acordo integral entre as Partes contratantes no que se refere aos direitos e obrigações. Não existem declarações, acordos ou condições colaterais especificamente estipuladas no presente instrumento.
+                </li>
+                <li>
+                    Qualquer notificação cuja apresentação seja exigida ou permitida nos termos do presente instrumento deverá ser apresentada por escrito, e terá sido eficazmente apresentada se enviada por e-mail ou por carta registrada, nas direções estabelecidas no preâmbulo deste Contrato, acompanhados de confirmação de recebimento.
+                </li>
+                <li>
+                    Caso qualquer uma das cláusulas ou termos do presente Contrato seja considerada inválida ou ineficaz, todas as demais cláusulas e termos permanecerão em pleno vigor e efeito.
+                </li>
+                <li>
+                    Toda e qualquer comunicação entre as Partes, relativas ao presente Contrato e ao seu objeto, somente será considerada válida se realizada mediante o Portal ou enviada para os endereços físicos ou de mensagem eletrônica (e-mail) apontados na identificação das Partes no preâmbulo deste Contrato, sempre mediante confirmação de recebimento.
+                    <ol>
+                        <li>
+                            As comunicações realizadas por mensagem eletrônica (e-mail) serão válidas e consideradas entregues na correspondente data da transmissão, consoante o respectivo comprovante de transmissão.
+                        </li>
+                        <li>
+                            Todas e quaisquer notificações, instruções e comunicações nos termos deste Contrato serão válidas e consideradas entregues na data do seu respectivo recebimento, conforme comprovado por meio de recibo assinado pelo destinatário, da entrega da notificação judicial ou extrajudicial.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    O presente Contrato é celebrado em caráter irrevogável e irretratável, obrigando as Partes e seus sucessores.
+                </li>
+                <li>
+                    A <b>GDM</b> e ao <b>Distribuidor</b> são empresas distintas e seguem independentes, sendo cada uma das Partes a única responsável pelas suas próprias atividades. A relação entre elas não importa nem pode induzir a existência de sociedade, de fato ou de direito, de integração econômica, de consórcio, de contrato associativo, de joint venture ou de solidariedade nas obrigações de qualquer natureza. Nada no presente Contrato estabelece nem pode ser interpretado para estabelecer compartilhamento de atividades, de receitas, de riscos ou de custos entre as Partes.
+                </li>
+                <li>
+                    As cláusulas deste Contrato que por sua natureza tenham caráter eterno assim permanecerão inclusive depois do término ou rescisão do presente Contrato por qualquer motivo.
+                </li>
+                <li>
+                    As Partes reconhecem que nenhuma das disposições contida neste Contrato se destina a tacitamente criar ou será interpretada como se criasse entre a <b>GDM</b> e ao <b>Distribuidor</b> relacionamento de franqueador/franqueado, considerando que, entre outras razões (i) não há qualquer tipo de subordinação jurídica, (ii) não há proibição do uso de marca própria do <b>Distribuidor</b> ou de outros, (iii) o <b>Distribuidor</b>  tem a liberdade de contratação com terceiros. Nenhuma Parte contratante terá direito ou poder expresso ou tácito para assumir ou criar obrigações por conta ou em nome de qualquer outra Parte, para representar a outra Parte perante qualquer entidade governamental, vincular a outra Parte a qualquer contrato, acordo ou compromisso com qualquer terceiro, ou para por outra forma atuar como agente da outra Parte.
+                </li>
+                <li>
+                    A <b>GDM</b> e o <b>Distribuidor</b> tiveram a oportunidade de consultar os advogados de sua escolha sobre o presente Contrato, e cada um deles reconhece e concorda que o presente Contrato não será considerado como tendo sido redigido por uma parte ou pela outra e será interpretado de forma compatível.
+                </li>
+                <li>
+                    Exceto conforme expressamente disposto no presente Contrato ou conforme separadamente acordado por escrito entre o <b>Distribuidor</b> e a <b>GDM</b>, cada parte arcará com suas próprias custas incorridas com relação à implementação das obrigações aqui previstas.
+                </li>
+                <li>
+                    As Partes outorgam a este instrumento a força de título executivo, líquido e exigível, nos termos do artigo 784, III do Código de Processo Civil Brasileiro, aplicando-se, para tanto, as disposições dos artigos 134, 497, 498, 499, 500 e 501, bem como o Livro II, artigo 771 e seguintes do Código de Processo Civil, reconhecendo as Partes que a imposição de perdas e danos não constituirá reparação adequada pelo descumprimento de qualquer disposição ora pactuada.
+                </li>
+                <li>
+                    Este Contrato será regido pelas leis brasileiras, sendo que as Partes contratantes se obrigam por si, seus herdeiros e sucessores e elegem o Foro da cidade de Londrina, Paraná, Brasil, com renúncia expressa a qualquer outro, por mais privilegiado que seja.
+                </li>
+            </ol>                
+        </li>           
+        
+        </ol>
+        </TD>
+        </TR>
+        
+        
+        <TR>
+        <TD>                                             
+            E, estando justas e contratadas, as Partes firmam este Contrato em 02 (duas) vias de igual teor e forma, frente às testemunhas abaixo.                        
+        </TD>
+    </tr>
+</table>
+
+<table width="80%">
+    <tr>
+        <TD>&nbsp;</TD>
+    </tr>
+</table>
+
+<table width="90%" columns="1" style="font-size:14px;font-family:BookmanOldStyle;text-align:right;">
+    <tr>
+        <TD>Cambé, {!fecha}</TD>
+    </tr>
+</table>
+
+<table width="80%">
+    <tr>
+        <TD>&nbsp;<br/><br/><br/><br/><br/></TD>
+    </tr>
+</table>
+
+<table width="80%" border="0" Align="center" columns="2" style="font-size:14px;font-family:BookmanOldStyle;">
+    <tr>
+        <td align="left" width="50%"><b>GDM GENÉTICA DO BRASIL S. A.</b><br/><br/><br/><br/><br/>                 
+        </td>
+        <td align="left" width="50%"><b>{!nombre}</b><br/><br/><br/><br/><br/>                 
+        </td>
+    </tr>
+    
+    <apex:repeat value="{!firmantes}" var="firmante" id="theRepeat">
+        <tr>
+            <td colspan="2">
+            _______________________________<br/>
+            <apex:outputText value="{!firmante.Contacto__r.Name}" /><br/>
+            <apex:outputText value="{!firmante.Contacto__r.Title}" /><br/>
+            <apex:outputText value="{!firmante.Contacto__r.CNPJ_CPF_c__c}" /><br/>
+            </td>
+        </tr>
+    </apex:repeat>
+
+    <tr>
+        <td align="left" colspan="2"><b>TESTEMUNHAS:</b>
+            <br/><br/><br/><br/><br/>      
+        </td>
+    </tr>
+    <tr>
+        <td align="left" width="50%"> 
+        &nbsp;&nbsp;1. _______________________________<br/>
+        &nbsp;&nbsp;Nome:<br/>
+        &nbsp;&nbsp;CPF:                 
+        </td>
+        <td align="left" width="50%">&nbsp;<br/>
+        &nbsp;&nbsp;2. _______________________________<br/>
+        &nbsp;&nbsp;Nome:<br/>
+        &nbsp;&nbsp;CPF:                 
+        </td>
+    </tr>
+
+</table>
+
+</table>
+
+
+</apex:page>

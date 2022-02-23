@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Estágio de desenvolvimento --></label>
+    <name>Estagio_de_desenvolvimento__c</name>
+    <picklistValues>
+        <masterLabel>Germinação</masterLabel>
+        <translation><!-- Germinação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R1</masterLabel>
+        <translation><!-- R1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R2</masterLabel>
+        <translation><!-- R2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R3</masterLabel>
+        <translation><!-- R3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R4</masterLabel>
+        <translation><!-- R4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R5</masterLabel>
+        <translation><!-- R5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R6</masterLabel>
+        <translation><!-- R6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R7</masterLabel>
+        <translation><!-- R7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R8</masterLabel>
+        <translation><!-- R8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R9</masterLabel>
+        <translation><!-- R9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V1</masterLabel>
+        <translation><!-- V1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V2</masterLabel>
+        <translation><!-- V2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V3</masterLabel>
+        <translation><!-- V3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V4</masterLabel>
+        <translation><!-- V4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V5</masterLabel>
+        <translation><!-- V5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V6</masterLabel>
+        <translation><!-- V6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V7</masterLabel>
+        <translation><!-- V7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V8</masterLabel>
+        <translation><!-- V8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VC</masterLabel>
+        <translation><!-- VC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VE</masterLabel>
+        <translation><!-- VE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

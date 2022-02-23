@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sem_aprovada_mayor_o_igual_a_UP_mas_Com</fullName>
+    <active>false</active>
+    <description>Semente_aprovada__c&lt; Semente_uso_propio__c + Semente_comercializada__c</description>
+    <errorConditionFormula>Semente_aprovada__c&lt; Semente_uso_propio__c + Semente_comercializada__c</errorConditionFormula>
+    <errorDisplayField>Semente_aprovada__c</errorDisplayField>
+    <errorMessage>O volume de semente comercializada mais uso próprio não pode superar o de semente aprovada</errorMessage>
+</ValidationRule>

@@ -1,0 +1,5 @@
+Cuenta: {!Opportunity.Account}
+Supervisor: {!Opportunity.OwnerFirstName}
+Oportunidad: {!Opportunity.Name}
+Status:  (Aprovada)
+Acessar: {!Opportunity.Link}

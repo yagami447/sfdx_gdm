@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Empresa__c</fullName>
+    <description>Deben estar en la lista las distintas sociedades que estén en los productos</description>
+    <externalId>false</externalId>
+    <label>Empresa</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BAYER</fullName>
+                <default>false</default>
+                <label>BAYER</label>
+            </value>
+            <value>
+                <fullName>BASF</fullName>
+                <default>false</default>
+                <label>BASF</label>
+            </value>
+            <value>
+                <fullName>SYNGENTA</fullName>
+                <default>false</default>
+                <label>SYNGENTA</label>
+            </value>
+            <value>
+                <fullName>DU PONT</fullName>
+                <default>false</default>
+                <label>DU PONT</label>
+            </value>
+            <value>
+                <fullName>PROPRIA</fullName>
+                <default>false</default>
+                <label>PROPRIA</label>
+            </value>
+            <value>
+                <fullName>OUTROS</fullName>
+                <default>false</default>
+                <label>OUTROS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

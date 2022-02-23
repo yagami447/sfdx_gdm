@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Conforme Cláusula 5.1, parágrafo &quot;i&quot; e &quot;j&quot; do Contrato de Licença de Uso de Cultivar ao efetuar o descarte, obrigatoriamente deve especificar na Nota Fiscal de Venda a indústria os seguintes dados: Nome da Cultivar, Categoria, Lotes e Quantidades. Realiza --></help>
+    <label><!-- Clausula 5.1 --></label>
+    <name>Clausula_5_1__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,191 @@
+<apex:page language="{!IF(ISNULL(language),'en_US',language)}" id="Apenddix2EditPage" showHeader="false" standardStylesheets="false" cache="false" title="{!titulo}" controller="aSiteEstoqueController" action="{!validate}" docType="html-5.0">
+<apex:composition template="{!$Site.Template}">
+<apex:define name="body">
+<style>
+.selected {
+    background: rgba(38,185,154,.16);
+    border-color: rgba(221,221,221,0.780392);
+}
+</style>
+<script>
+    function disableOnSubmit(input) {
+        setTimeout('disableAfterTimeout(\'' + input.id + '\');', 5);
+    }
+    function disableAfterTimeout(id) {
+        var toDisable = document.getElementById( id );
+        toDisable.disabled = 'disabled';        
+    }
+</script>
+<body class="nav-md footer_fixed">
+    <center>
+    <apex:panelGrid bgcolor="white" columns="1"> 
+        <br/>
+        <br/>
+        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1"> 
+                <apex:panelGroup >
+                <apex:form id="profileForm">     
+                <apex:actionStatus styleClass="modal" id="displayImg" startText="loading..." stopText="">
+                    <apex:facet name="start" >
+                        <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000; background-color: black;">
+                            &nbsp;
+                        </div>
+                        <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%">
+                            <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                        </div>
+                    </apex:facet>
+                </apex:actionStatus>               
+                <div class="row">
+                    <div class="right_col" role="main" style="min-width:800px">
+                        <div class="">
+                            <div class="page-title">
+                                <div class="title_left">
+                                    <h3>{!titulo} - {!$Label.New}</h3>
+                                </div>                                                                    
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>                                                                        
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">                                
+                                    <apex:outputPanel rendered="{!motivoRechazo!= null && motivoRechazo != ''}">
+                                        <div class="x_title">
+                                            <div class="col-md-12 col-sm-12 col-xs-12 form-group alert alert-danger errors" style="list-style-type: none;">
+                                                <apex:outputLabel value="{!$ObjectType.Opportunity.Fields.Motivo_de_Rechazo__c.Label}"/><br/>
+                                                <apex:outputText value="{!motivoRechazo}"></apex:outputText>
+                                            </div>
+                                        <div class="clearfix"></div>
+                                        <br/><br/>
+                                        </div>
+                                    </apex:outputPanel>                                    
+                                    <div class="x_title">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 form-group">
+                                            <apex:outputLabel value="{!$ObjectType.Opportunity.Fields.Mes__c.Label}"/>
+                                            <apex:selectList disabled="true" value="{!mes}" styleClass="form-control col-md-2 col-xs-12" size="1" >
+                                                <apex:selectOptions value="{!OptionMes}"/>
+                                            </apex:selectList>                                               
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <br/><br/>
+                                    </div>                                
+                                    <div class="x_title">
+                                        <h2>{!$ObjectType.Product2.LabelPlural}<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="it">                                            
+                                                <apex:pageBlockTable value="{!EstoqueItems}" var="s" styleclass="data table table-striped no-margin">
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}">
+                                                        <apex:outputLabel value="{!s.variedad_nombre}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedad_de_Produto__c.Label}">
+                                                        <apex:outputLabel value="{!s.variedad_registro}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_aprovada__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_aprobada}" required="required" styleClass="form-control col-md-12 col-xs-12" rendered="{!s.cnpj == 'x'}"/>
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_comercializada__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_comer}" required="required" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>  
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Estado_de_Comercializacion__c.Label}">
+                                                        <apex:outputLabel value="{!s.estado_comer}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>      
+                                                    <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                        <apex:commandLink value="{!$Label.Remove}" action="{!removerProd}" status="displayImg" rerender="profileForm" oncomplete="mostrarMsj()">
+                                                            <apex:param value="{!s.indice}" assignTo="{!linea}" name="toRemove"/>
+                                                        </apex:commandLink>                                                        
+                                                    </apex:column>                                                                                              
+                                                </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    <div class="x_title">
+                                        <h2>Adicionar Produtos<small>{!$Label.active_list}</small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="x_content">
+                                        <div role="tabpanel" class="tab-pane" id="tab_items_new" aria-labelledby="profile-tab">
+                                            <apex:pageBlock id="it_new" >                                            
+                                                <apex:pageBlockTable value="{!EstoqueItemsNew}" var="s" styleclass="data table table-striped no-margin">
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedade_Prod__c.Label}">
+                                                        <apex:selectList value="{!s.variedad}" styleClass="form-control col-md-2 col-xs-12" size="1" required="true" >
+                                                            <apex:selectOptions value="{!OptionVariedadesEstoque}"/>
+                                                            <apex:actionSupport action="{!completarNomRegNewItem}" event="onchange" status="displayImg" reRender="profileForm"></apex:actionSupport>
+                                                        </apex:selectList>
+                                                    </apex:column>    
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Variedad_de_Produto__c.Label}" >
+                                                        <apex:outputLabel value="{!s.variedad_registro}" styleClass="form-control col-md-2 col-xs-12" />
+                                                    </apex:column>                                                                                                                                                        
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_aprovada__c.Label}" rendered="{!mostrarSemAPItemsNew}">
+                                                        <apex:input type="text" value="{!s.sem_aprobada}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Semente_comercializada__c.Label}" >
+                                                        <apex:input type="text" value="{!s.sem_comer}" styleClass="form-control col-md-12 col-xs-12" />
+                                                    </apex:column>   
+                                                    <apex:column headerValue="{!$ObjectType.OpportunityLineItem.Fields.Estado_de_Comercializacion__c.Label}" >                                                        
+                                                        <apex:selectList value="{!s.estado_comer_id}" styleClass="form-control col-md-2 col-xs-12" size="1" required="true" >
+                                                            <apex:selectOptions value="{!OptionEstado}"/>
+                                                        </apex:selectList>
+                                                    </apex:column>
+                                                    <apex:column headerClass="column-title" headerValue="{!$Label.action}">
+                                                        <apex:commandLink value="{!$Label.Add}" action="{!agregarProd}" status="displayImg" rerender="profileForm" oncomplete="mostrarMsj()">                                                            
+                                                        </apex:commandLink>                                                        
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </apex:pageBlock>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                                                        
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3 ">
+                                            <apex:commandButton onclick="disableOnSubmit(this);" id="save" status="displayImg" styleclass="btn btn-success" value="{!$Label.Submit}" action="{!saveEstoque}" rerender="mensajes,profileForm" oncomplete="mostrarMsj()">
+                                                <apex:param value="1" assignTo="{!enviarAprobacion}" name="toApproval"/>
+                                            </apex:commandButton>    
+                                            <apex:commandButton onclick="disableOnSubmit(this);" id="save2" status="displayImg" styleclass="btn btn-success" value="{!$Label.Save}" action="{!saveEstoque}" rerender="mensajes,profileForm" oncomplete="mostrarMsj()"/>
+                                            <apex:commandButton styleclass="btn btn-primary" immediate="true" status="displayImg" value="{!$Label.Cancel}" action="{!editCancel}" rerender="mensajes,profileForm"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script type="text/javascript">
+                    function mostrarMsj(){
+                        if ('{!mensaje}' != null && '{!mensaje}' != ''){
+                            alert('{!SUBSTITUTE(mensaje, "|", "\n")}');                                                        
+                        }
+                    }
+                </script>
+                
+                </apex:form> 
+                </apex:panelGroup>
+            </apex:panelGrid> 
+        </apex:outputPanel>
+    </apex:panelGrid>
+    </center>
+    <br/>
+    </body>
+</apex:define>
+</apex:composition>
+</apex:page>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Condiciones de Pago --></label>
+    <name>Condicion_de_Pago__c</name>
+    <picklistValues>
+        <masterLabel>ZC00 - A Vista</masterLabel>
+        <translation><!-- ZC00 - A Vista --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - 15 dias Data Fatura</masterLabel>
+        <translation><!-- ZC01 - 15 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - 30 dias Data Fatura</masterLabel>
+        <translation><!-- ZC01 - 30 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - 45 dias Data Fatura</masterLabel>
+        <translation><!-- ZC01 - 45 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - 60 dias Data Fatura</masterLabel>
+        <translation><!-- ZC01 - 60 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - 60 dias Data Ordem</masterLabel>
+        <translation><!-- ZC01 - 60 dias Data Ordem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - A Vista</masterLabel>
+        <translation><!-- ZC01 - A Vista --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - A Vista na data do Pedido</masterLabel>
+        <translation><!-- ZC01 - A Vista na data do Pedido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - A vista - 15 de Dezembro</masterLabel>
+        <translation><!-- ZC01 - A vista - 15 de Dezembro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - A vista - 20 dias Data Fatura</masterLabel>
+        <translation><!-- ZC01 - A vista - 20 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - A vista Faturamento Royalties</masterLabel>
+        <translation><!-- ZC01 - A vista Faturamento Royalties --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - Antecipado</masterLabel>
+        <translation><!-- ZC01 - Antecipado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - Parcelado: 30 e 60 dias data fatura</masterLabel>
+        <translation><!-- ZC01 - Parcelado: 30 e 60 dias data fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - Parcelado: 30,60 e 90 dias data fatura</masterLabel>
+        <translation><!-- ZC01 - Parcelado: 30,60 e 90 dias data fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC01 - Parcelado: 30,60,90 e 120 dias data fatura</masterLabel>
+        <translation><!-- ZC01 - Parcelado: 30,60,90 e 120 dias data fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC02 - A vista - 15 de Dezembro</masterLabel>
+        <translation><!-- ZC02 - A vista - 15 de Dezembro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC02 - A vista Faturamento Royalties</masterLabel>
+        <translation><!-- ZC02 - A vista Faturamento Royalties --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC03 - 15 dias Data Fatura</masterLabel>
+        <translation><!-- ZC03 - 15 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC05 - 30 dias Data Fatura</masterLabel>
+        <translation><!-- ZC05 - 30 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC06 - 45 dias Data Fatura</masterLabel>
+        <translation><!-- ZC06 - 45 dias Data Fatura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC07 - Parcelado: 30,60 e 90 dias data fatura</masterLabel>
+        <translation><!-- ZC07 - Parcelado: 30,60 e 90 dias data fatura --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

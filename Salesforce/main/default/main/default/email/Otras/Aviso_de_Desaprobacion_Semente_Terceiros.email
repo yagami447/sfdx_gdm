@@ -1,0 +1,14 @@
+{!Today} 
+
+{!Opportunity.Account} 
+As informações inseridas não foram aprovadas. 
+Para que possa realizar as alterações necessárias, é permitida a edição das informações. 
+
+Código de identificação {!Opportunity.Name}. 
+Motivo de Rejeição {!Opportunity.Motivo_de_Rechazo__c} 
+
+Atenciosamente, 
+
+{!User.FullName} 
+{!Opportunity.Marca_Completa__c} 
+{!User.Email}

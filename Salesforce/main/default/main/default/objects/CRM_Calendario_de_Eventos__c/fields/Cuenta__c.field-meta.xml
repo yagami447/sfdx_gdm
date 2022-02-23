@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuenta__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Conta multiplicador, que realizou ou eventos agendados</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Conta multiplicador, que realizou ou eventos agendados</inlineHelpText>
+    <label>Nome da conta</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.Agricultor__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Eventos (Cuenta)</relationshipLabel>
+    <relationshipName>CRM_Calend_rio_de_eventos</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

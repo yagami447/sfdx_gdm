@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Comercial_2__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (OR(TEXT(Region_Comercial__c) == &apos;REGION 1&apos;, TEXT(Region_Comercial__c) == &apos;REGION 2&apos;), &apos;SUL&apos;, IF(TEXT(Region_Comercial__c) == &apos;CERRADO&apos;, &apos;CERRADO&apos;, &apos;&apos;))</formula>
+    <label>Region Comercial 2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

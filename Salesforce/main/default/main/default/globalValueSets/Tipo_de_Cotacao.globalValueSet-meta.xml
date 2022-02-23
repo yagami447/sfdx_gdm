@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SAFRAS &amp; MERCADO</fullName>
+        <default>false</default>
+        <label>SAFRAS &amp; MERCADO</label>
+    </customValue>
+    <customValue>
+        <fullName>COOPERATIVA</fullName>
+        <default>false</default>
+        <label>COOPERATIVA</label>
+    </customValue>
+    <customValue>
+        <fullName>EXTERIOR</fullName>
+        <default>false</default>
+        <label>EXTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>FATURAMENTO</fullName>
+        <default>false</default>
+        <label>FATURAMENTO</label>
+    </customValue>
+    <customValue>
+        <fullName>DOLAR</fullName>
+        <default>false</default>
+        <label>DOLAR</label>
+    </customValue>
+    <customValue>
+        <fullName>COTRIJAL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>COTRIJAL</label>
+    </customValue>
+    <customValue>
+        <fullName>COAMO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>COAMO</label>
+    </customValue>
+    <customValue>
+        <fullName>OTRO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>OTRO</label>
+    </customValue>
+    <masterLabel>Tipo de Cotação</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

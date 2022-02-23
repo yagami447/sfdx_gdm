@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Venda de Basica</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Aguardando dados de cobrança</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Aguardando dados de transporte</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Anulada</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Aprobada</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Edición</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Na aprovação da gerência</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Na aprovação do multiplicador</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Revisão do administrador de vendas</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

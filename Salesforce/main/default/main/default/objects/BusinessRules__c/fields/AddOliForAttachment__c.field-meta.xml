@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AddOliForAttachment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Adiciona automaticamente opportunity line itens para os anexos II, III, IV e V</description>
+    <externalId>false</externalId>
+    <label>AddOliForAttachment</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

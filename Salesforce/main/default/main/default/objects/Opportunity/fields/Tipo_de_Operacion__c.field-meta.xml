@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Operacion__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Operação</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-Pedido</fullName>
+                <default>false</default>
+                <label>1-Pedido</label>
+            </value>
+            <value>
+                <fullName>2-Plantio</fullName>
+                <default>false</default>
+                <label>2-Plantio</label>
+            </value>
+            <value>
+                <fullName>2-Pedido Complementar</fullName>
+                <default>false</default>
+                <label>2-Pedido Complementar</label>
+            </value>
+            <value>
+                <fullName>3-Estimativa</fullName>
+                <default>false</default>
+                <label>3-Estimativa</label>
+            </value>
+            <value>
+                <fullName>3-Ajuste</fullName>
+                <default>false</default>
+                <label>3-Ajuste</label>
+            </value>
+            <value>
+                <fullName>4-Colheita</fullName>
+                <default>false</default>
+                <label>4-Colheita</label>
+            </value>
+            <value>
+                <fullName>4-Cancelamento</fullName>
+                <default>false</default>
+                <label>4-Cancelamento</label>
+            </value>
+            <value>
+                <fullName>5-Beneficiamento</fullName>
+                <default>false</default>
+                <label>5-Beneficiamento</label>
+            </value>
+            <value>
+                <fullName>5-Realocação</fullName>
+                <default>false</default>
+                <label>5-Realocação</label>
+            </value>
+            <value>
+                <fullName>6-Administração Excedente</fullName>
+                <default>false</default>
+                <label>6-Administração Excedente</label>
+            </value>
+            <value>
+                <fullName>6-Armazenagem</fullName>
+                <default>false</default>
+                <label>6-Armazenagem</label>
+            </value>
+            <value>
+                <fullName>7-Descarte</fullName>
+                <default>false</default>
+                <label>7-Descarte</label>
+            </value>
+            <value>
+                <fullName>8-Cessão</fullName>
+                <default>false</default>
+                <label>8-Cessão</label>
+            </value>
+            <value>
+                <fullName>9-Certificação</fullName>
+                <default>false</default>
+                <label>9-Certificação</label>
+            </value>
+            <value>
+                <fullName>10-Rateio de volume</fullName>
+                <default>false</default>
+                <label>10-Rateio de volume</label>
+            </value>
+            <value>
+                <fullName>Rebaixamento</fullName>
+                <default>false</default>
+                <label>Rebaixamento</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

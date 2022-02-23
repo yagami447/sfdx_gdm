@@ -1,0 +1,54 @@
+<template>
+    <lightning-card variant="Narrow" title={component} icon-name="custom:custom91">
+        <lightning-button-menu alternative-text="Show menu" menu-alignment="right" variant="border-filled" slot="actions">
+            <template for:each={items} for:item="action">
+                <lightning-menu-item value={action.value} label={action.label} onclick={handleClickMenuItem} key={action.id}></lightning-menu-item>
+            </template>
+        </lightning-button-menu>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box slds-var-m-bottom_small">
+                <div class="slds-grid slds-gutters">
+                    <template if:true={variedad.data}>
+                        <template if:true={brand.data}>
+                            <lightning-combobox class="slds-col slds-size_1-of-6" name="brand" label={variedad.data.fields.Marca__c.label}
+                                placeholder="Seleccione una marca" value={filters.brand} options={brand.data.values} onchange={handleSelect}>
+                            </lightning-combobox>
+                        </template>
+                        <template if:true={technology.data}>
+                            <lightning-combobox class="slds-col slds-size_1-of-6" name="technology" label={variedad.data.fields.Tecnologia__c.label}
+                                placeholder="Seleccione una tecnología" value={filters.technology} options={technology.data.values} onchange={handleSelect}>
+                            </lightning-combobox>
+                        </template>
+                        <template if:true={itemTwoVisible}>
+                            <lightning-combobox class="slds-col slds-size_1-of-6" name="region" label={recomendacion.data.fields.Regi_o__c.label}
+                                placeholder="Seleccione una região" value={filters.region} options={region.data.values} onchange={handleSelect}>
+                            </lightning-combobox>
+                        </template>
+                        <lightning-button-group class="slds-align-bottom">
+                            <lightning-button name="applyFilters" label="Aplicar Filtros" title="Aplicar Filtros"
+                                onclick={handleApplyFilters}></lightning-button>
+                            <lightning-button name="removeFilters" label="Remover Filtros" title="Remover Filtros"
+                                onclick={handleRemoveFilters}></lightning-button>
+                        </lightning-button-group>
+                    </template>
+                    <div class="slds-align-middle slds-var-m-left_small">
+                        <lightning-helptext content="Você deve aplicar filtros antes de fazer sua consulta"></lightning-helptext>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-border_top slds-border_right slds-border_bottom slds-border_left"
+                style="min-height: calc(5 * var(--lwc-heightHeader));">
+                <template if:true={itemOneVisible}>
+                    <c-variedad-datos-complementares-editor brand={filters.brand} technology={filters.technology}
+                        oneditrecord={handleEditRecord}>
+                    </c-variedad-datos-complementares-editor>
+                </template>
+                <template if:true={itemTwoVisible}>
+                    <c-variedad-recomendaciones-editor brand={filters.brand} technology={filters.technology} region={filters.region}
+                        oneditrecord={handleEditRecord}>
+                    </c-variedad-recomendaciones-editor>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

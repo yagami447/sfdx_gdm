@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_R1_a_Comerciales_R2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult R1 a Comerciales R2</label>
+        <sharedTo>
+            <group>Comerciales_Region_2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>REGION 1</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_R2_a_Comerciales_R1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult R2 a Comerciales R1</label>
+        <sharedTo>
+            <group>Comerciales_Region_1</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>REGION 2</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Comerciales_Cerrado</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult a Comerciales Cerrado</label>
+        <sharedTo>
+            <role>Gerente_Cerrados</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>CERRADO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Comerciales_Cerrado_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM_Mult_a_Comerciales_Cerrado_2</label>
+        <sharedTo>
+            <role>Comercial_Cerrados</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>CERRADO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Comerciales_Cerrado_NEOG</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM_Mult_a_Comerciales_Cerrado_NEOG</label>
+        <sharedTo>
+            <role>Comercial_Cerrados_NEOG</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>CERRADO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Comerciales_R1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult a Comerciales R1</label>
+        <sharedTo>
+            <group>Comerciales_Region_1</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>REGION 1</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Comerciales_R2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult a Comerciales R2</label>
+        <sharedTo>
+            <group>Comerciales_Region_2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>REGION 2</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Desarrollador_Cerrado</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM_Mult_a_Desarrollador_Cerrado</label>
+        <sharedTo>
+            <group>Desarrollador_de_Mercado_Cerrado</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>CERRADO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CRM_Mult_a_Desarrollador_de_Mercado</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult a Desarrollador de Mercado</label>
+        <sharedTo>
+            <group>Desarrollador_de_Mercado</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Region_Comercial_Copia__c</field>
+            <operation>equals</operation>
+            <value>REGION 1,REGION 2</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CRM_Mult_a_Administradores</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM Mult a Administradores</label>
+        <sharedTo>
+            <group>Supervision_CRM</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>Admin</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

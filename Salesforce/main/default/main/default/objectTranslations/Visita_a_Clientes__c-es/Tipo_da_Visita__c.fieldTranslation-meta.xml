@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo --></label>
+    <name>Tipo_da_Visita__c</name>
+    <picklistValues>
+        <masterLabel>Apresentação de dados, novos produtos e novos projetos</masterLabel>
+        <translation><!-- Apresentação de dados, novos produtos e novos projetos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Combate à Pirataria</masterLabel>
+        <translation><!-- Combate à Pirataria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contato Telefônico</masterLabel>
+        <translation><!-- Contato Telefônico --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contrato de multiplicação</masterLabel>
+        <translation><!-- Contrato de multiplicação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dia de campo</masterLabel>
+        <translation><!-- Dia de campo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ensaio de manejo</masterLabel>
+        <translation><!-- Ensaio de manejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Observações Gerais</masterLabel>
+        <translation><!-- Observações Gerais --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relatório Semanal</masterLabel>
+        <translation><!-- Relatório Semanal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reunião</masterLabel>
+        <translation><!-- Reunião --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Treinamento/Palestra</masterLabel>
+        <translation><!-- Treinamento/Palestra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visita aos Produtores</masterLabel>
+        <translation><!-- Visita aos Produtores --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

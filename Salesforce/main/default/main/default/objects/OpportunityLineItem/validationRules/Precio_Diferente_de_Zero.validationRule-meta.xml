@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_Diferente_de_Zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>(UnitPrice = 0)&amp;&amp;( Opportunity.RecordType.DeveloperName = &apos;Venda_da_Basica_full&apos;)</errorConditionFormula>
+    <errorDisplayField>UnitPrice</errorDisplayField>
+    <errorMessage>O preço unitário deve ser diferente de zero</errorMessage>
+</ValidationRule>

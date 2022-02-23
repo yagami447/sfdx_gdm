@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SUL</fullName>
+        <default>false</default>
+        <label>SUL</label>
+    </customValue>
+    <customValue>
+        <fullName>CERRADO</fullName>
+        <default>false</default>
+        <label>CERRADO</label>
+    </customValue>
+    <customValue>
+        <fullName>DIFERENCIADA</fullName>
+        <default>false</default>
+        <label>DIFERENCIADA</label>
+    </customValue>
+    <customValue>
+        <fullName>EXTERIOR</fullName>
+        <default>false</default>
+        <label>EXTERIOR</label>
+    </customValue>
+    <masterLabel>Tipo de Referencia</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

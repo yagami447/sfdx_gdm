@@ -1,0 +1,32 @@
+<aura:component >
+    <aura:attribute name="data" type="object"  default=""/> 
+    <aura:attribute name="activeSections" type="List" default="['A','B']" />
+
+    <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+        <lightning:accordion activeSectionName="{!v.activeSections}" allowMultipleSectionsOpen="true">
+            <lightning:accordionSection name="A" label="Duplicatas" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Número" value="{!v.data.cobr.dup.nDup}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Vencimento" value="{!v.data.cobr.dup.dVenc}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Valor" value="{!v.data.cobr.dup.vDup}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="B" label="Formas de Pagamento" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Forma de Pagamento" value="{!v.data.pag.detPag[0].tPag}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Valor do Pagamento" value="{!v.data.pag.detPag[0].vPag}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

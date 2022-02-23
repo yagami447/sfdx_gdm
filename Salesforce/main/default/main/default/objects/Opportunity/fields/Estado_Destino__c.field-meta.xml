@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado_Destino__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Indica el Estado hacia el cual va la mercadería para calcular la tasa impositiva</description>
+    <externalId>false</externalId>
+    <label>Estado Destino</label>
+    <referenceTo>Estado__c</referenceTo>
+    <relationshipLabel>Oportunidades (Estado Destino)</relationshipLabel>
+    <relationshipName>Oportunidades3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

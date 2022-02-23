@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Contrato_de_Multiplicacao__c</field>
+        <formula>Contrato__c.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Contrato_de_Multiplicacion__c</field>
+        <formula>Contrato__c.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Marca__c</field>
+        <formula>CASE(Contrato__c.Sociedad__c,&quot;BRMX&quot;,&quot;BRMX&quot;, &quot;DSEM&quot;, &quot;DSEM&quot;, &quot;&quot;)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Name</field>
+        <formula>&quot;META LxL/EMPLAC.&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Tipo_de_Evento__c</field>
+        <literalValue>Lado a Lado</literalValue>
+    </fieldOverrides>
+    <label>Adicionar Meta LxL/Emplac/Produt</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Name</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Contrato_de_Multiplicacion__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Marca__c</field>
+                <uiBehavior>Readonly</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Tipo_de_Evento__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Variedad__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Estado__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Quantidade__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Item_del_Contrato__c</targetObject>
+    <targetParentField>Contrato_de_Multiplicacion__c</targetParentField>
+    <targetRecordType>Item_del_Contrato__c.Metas_cultivar</targetRecordType>
+    <type>Create</type>
+</QuickAction>

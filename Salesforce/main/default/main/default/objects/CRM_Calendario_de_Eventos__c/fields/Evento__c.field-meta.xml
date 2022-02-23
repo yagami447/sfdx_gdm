@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evento__c</fullName>
+    <description>Tipo de evento</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tipo de evento</inlineHelpText>
+    <label>Evento</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Día de Campo</fullName>
+                <default>false</default>
+                <label>Día de Campo</label>
+            </value>
+            <value>
+                <fullName>Area comercial</fullName>
+                <default>false</default>
+                <label>Area comercial</label>
+            </value>
+            <value>
+                <fullName>Emplacamento</fullName>
+                <default>false</default>
+                <label>Emplacamento</label>
+            </value>
+            <value>
+                <fullName>Encontro Técnico</fullName>
+                <default>false</default>
+                <label>Encontro Técnico</label>
+            </value>
+            <value>
+                <fullName>Estação DONMARIO MAS</fullName>
+                <default>false</default>
+                <label>Estação DONMARIO MAS</label>
+            </value>
+            <value>
+                <fullName>Feiras</fullName>
+                <default>false</default>
+                <label>Feiras</label>
+            </value>
+            <value>
+                <fullName>Jornada Técnica</fullName>
+                <default>false</default>
+                <label>Jornada Técnica</label>
+            </value>
+            <value>
+                <fullName>Lado a Lado</fullName>
+                <default>false</default>
+                <label>Lado a Lado</label>
+            </value>
+            <value>
+                <fullName>Painel Técnico</fullName>
+                <default>false</default>
+                <label>Painel Técnico</label>
+            </value>
+            <value>
+                <fullName>Palestra</fullName>
+                <default>false</default>
+                <label>Palestra</label>
+            </value>
+            <value>
+                <fullName>Strip Test</fullName>
+                <default>false</default>
+                <label>Strip Test</label>
+            </value>
+            <value>
+                <fullName>Tour dos Máximos Rendimentos</fullName>
+                <default>false</default>
+                <label>Tour dos Máximos Rendimentos</label>
+            </value>
+            <value>
+                <fullName>Treinamento</fullName>
+                <default>false</default>
+                <label>Treinamento</label>
+            </value>
+            <value>
+                <fullName>CESB</fullName>
+                <default>false</default>
+                <label>CESB</label>
+            </value>
+            <value>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+                <label>Outdoor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

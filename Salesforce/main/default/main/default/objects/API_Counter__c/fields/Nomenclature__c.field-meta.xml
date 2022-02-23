@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nomenclature__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Este nombre servirá para diferenciar rápidamente el rango de fechas y API a contabilizar. Se generara automáticamente</description>
+    <externalId>true</externalId>
+    <label>Nomenclature</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

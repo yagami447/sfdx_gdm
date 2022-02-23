@@ -1,0 +1,118 @@
+<template>
+    <div class="oppLineItem__styles" lwc:dom="manual"></div>
+    <lightning-card  title={label.title} class="oppLineItem__container">
+        <template if:true={isEditionMode}>
+            <lightning-button label="New" slot="actions" onclick={handleClickNew}></lightning-button>
+        </template>
+        <lightning-layout horizontal-align="spread">
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-record-edit-form object-api-name="OpportunityLineItem" >
+                    <table class="slds-table slds-table_bordered slds-table_striped slds-no-row-hover">
+                        <thead>
+                            <tr>
+                                <template for:each={recordTypeFields} for:item="field">
+                                    <th key={field.apiName}>{field.label}</th>
+                                </template>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={modifyItems} for:item="item">
+                                <tr key={item.id} class={item.status}>
+                                    <template for:each={item.recordData} for:item="data">
+                                        <td key={data.apiName}>
+                                            <template if:true={isEditionMode}>
+                                                <!-- PROFILE can EDIT  cambiar a READ-ONLY y cambiar a disabled="true o false"   -->
+                                                <lightning-input-field disabled={data.isReadOnly} field-name={data.apiName} value={data.value} data-apiname={data.apiName} data-id={item.id} onchange={handleChange} variant="label-hidden"></lightning-input-field>
+                                                
+                                            </template>
+                                            
+                                            <template if:false={isEditionMode}>
+                                                <!-- PROFILE can NOT EDIT -->
+                                                <span if:true={data.showLabel}>{data.label}</span>
+                                                <span if:false={data.showLabel}>{data.value}</span>
+                                            </template>
+                                        </td>
+                                    </template>
+
+                                    <td style="width: 40px;text-align: center;">
+                                        <template if:true={isEditionMode}>
+                                            <lightning-button-icon if:true={item.isOriginal} data-id={item.id} onclick={handleClickDelete} icon-name="utility:delete" variant="bare" alternative-text="Delete" class="slds-m-left_xx-small" title="Delete"></lightning-button-icon>
+                                            
+                                            <!-- <lightning-icon if:true={item.isNew} icon-name="utility:new" alternative-text="new" variant="success" size="xx-small"></lightning-icon>
+                                            <lightning-icon if:true={item.isEdited} icon-name="utility:ban" alternative-text="edited" variant="warning" size="xx-small"></lightning-icon>
+                                            <lightning-icon if:true={item.isDeleted} icon-name="utility:clear" alternative-text="deleted" variant="error" size="xx-small"></lightning-icon> -->
+                                        </template>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </lightning-record-edit-form>
+            </lightning-layout-item>
+        </lightning-layout>
+        <p slot="footer">
+            <template if:true={isEditionMode}>
+                <lightning-button 
+                    variant="brand" 
+                    label='Aplicar cambios' 
+                    title='Aplicar cambios' 
+                    onclick={handleClickSave} 
+                    disabled={isButtonDisabled}>
+                </lightning-button>
+                <lightning-button 
+                    variant="neutral" 
+                    label='Cancelar cambios' 
+                    title='Cancelar cambios' 
+                    onclick={handleClickCancel} 
+                    disabled={isButtonDisabled}>
+                </lightning-button>
+            </template>
+        </p>
+    </lightning-card>
+
+    <template if:true={isModalOpen}>
+        <!-- Modal/Popup Box LWC starts here -->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCloseModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"></h2>
+                </header>
+                
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <!-- <lightning-record-form
+                        object-api-name="OpportunityLineItem"
+                        fields={listOfFields}
+                        columns="1"
+                        mode="edit"
+                        onsubmit={handleSubmitNew}
+                        oncancel={handleCloseModal}>
+                    </lightning-record-form> 
+                    <br/>=======================<br/>-->
+                    <lightning-record-edit-form
+                        object-api-name="OpportunityLineItem"
+                        onsubmit={handleSubmitNew}>
+                        <lightning-messages></lightning-messages>
+                        <template for:each={recordTypeFields} for:item="field">
+                            <template key={field.apiName} if:true={field.isReference}>
+                                <lightning-input-field key={field.apiName} field-name={field.apiName} data-apiname={field.apiName}></lightning-input-field>
+                            </template>
+                            <lightning-input-field key={field.apiName} if:false={field.isReference} field-name={field.apiName}></lightning-input-field>
+                        </template>
+                        <lightning-button variant="brand" type="submit" name="save" label="Apply">
+                        </lightning-button>
+                    </lightning-record-edit-form>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

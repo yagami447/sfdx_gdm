@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Divulgar em nome de --></label>
+    <name>Divulgar_em_nome_de__c</name>
+    <picklistValues>
+        <masterLabel>Agricultor</masterLabel>
+        <translation><!-- Agricultor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplicador</masterLabel>
+        <translation><!-- Multiplicador --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parceiro</masterLabel>
+        <translation><!-- Parceiro --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

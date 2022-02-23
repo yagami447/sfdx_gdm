@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campos clave: Safra+Variedade+Região
+Campo dependiente:Preço --></help>
+    <label><!-- Variedade --></label>
+    <name>Variedade__c</name>
+    <relationshipLabel><!-- Referencias de Preço Sugerido --></relationshipLabel>
+</CustomFieldTranslation>

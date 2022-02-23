@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_Validos_Calendario</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISNULL(Cuenta__c), TEXT(Evento__c) == &apos;&apos;, TEXT(Safra__c) == &apos;&apos;)</errorConditionFormula>
+    <errorMessage>Dados obrigatórios: Evento - Data.</errorMessage>
+</ValidationRule>

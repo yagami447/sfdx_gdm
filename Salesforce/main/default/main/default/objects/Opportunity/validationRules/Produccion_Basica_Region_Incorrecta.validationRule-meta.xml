@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produccion_Basica_Region_Incorrecta</fullName>
+    <active>false</active>
+    <description>Valida que el Gerente Comercial indique la región correcta</description>
+    <errorConditionFormula>AND( RecordType.Name == &apos;PB-Comercial&apos;,OR(AND($UserRole.Name = &apos;Gerente BMX 1&apos;, ISPICKVAL(Region__c , &apos;SUR&apos;)),AND($UserRole.Name &lt;&gt; &apos;Gerente BMX 1&apos;, ISPICKVAL(Region__c, &apos;CERRADO&apos;))) )</errorConditionFormula>
+    <errorDisplayField>Region__c</errorDisplayField>
+    <errorMessage>Região incorreta.</errorMessage>
+</ValidationRule>

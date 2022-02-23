@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contrato_relacionado__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Contrato de Multiplicação de la cuenta de la oportunidad para esta variedad. Se registra en las oportunidades del tipo relatorio de venda (comercial.)</description>
+    <externalId>false</externalId>
+    <label>Contrato de Multiplicação</label>
+    <referenceTo>Contrato__c</referenceTo>
+    <relationshipLabel>Producto de oportunidad</relationshipLabel>
+    <relationshipName>Producto_de_oportunidad</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

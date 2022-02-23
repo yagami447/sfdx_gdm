@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motivo --></label>
+    <name>Motivo__c</name>
+    <picklistValues>
+        <masterLabel>Adaptação</masterLabel>
+        <translation><!-- Adaptação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mercado</masterLabel>
+        <translation><!-- Mercado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outros</masterLabel>
+        <translation><!-- Outros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rendimento</masterLabel>
+        <translation><!-- Rendimento --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sanidade</masterLabel>
+        <translation><!-- Sanidade --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

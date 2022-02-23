@@ -1,0 +1,4 @@
+O supervisor {!Opportunity.OwnerFullName} enviou para aprovação a oportunidade {!Opportunity.Name}.  do Multiplicador {!Account.Name}. 
+O pedido está com 5% de desvio abaixo de tabela.
+
+Link para opp: https://gdmbrasil.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view

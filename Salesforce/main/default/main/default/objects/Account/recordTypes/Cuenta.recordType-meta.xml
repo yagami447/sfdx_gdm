@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuenta</fullName>
+    <active>true</active>
+    <label>Cuenta</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Feria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Por comentarios de terceros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publicidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencia del empleado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencia externa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relaciones públicas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario - Interno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminario - Socio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartFarm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Socio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Asociaciones__c</picklist>
+        <values>
+            <fullName>ABCSEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABRASEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABRASS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABRATES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGROSEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APASEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APASSUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APROSESC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APROSSUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APSEMG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Categoria_CFOP__c</picklist>
+        <values>
+            <fullName>00 - Industria %28cooperativa%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>01 - Electricidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>02 - Comunicacion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>03 - Transporte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04 - Servicios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>05 - Bienes de consumo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06 - Cliente%2C no contribuyente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>07 - Cliente agricola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08 - Empresa de distribucion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>09 - Sucursal del fabricante</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cliente_de__c</picklist>
+        <values>
+            <fullName>BRASMAX</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>FPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROOS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cod_Juros__c</picklist>
+        <values>
+            <fullName>01 - CálcJuros parts%2Epdr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>02 - Cálc%2Ejuros saldos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>03 - CálcJurosSald cond%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04 - CálcJuros part%2Econd2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>05 - CálcJurosSald cond%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 - Cálc%2Ejuros projeto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 - Cálc%2Ejrs%2E sld%2Ecta%2ERz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D1 - Cálc%2Ejuros p%2Fadvert%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS - N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VK - CálcJurosParts%2EAd CP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contribuinte_ICMS__c</picklist>
+        <values>
+            <fullName>1 - Contribuinte de ICMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Contribuinte de ICMS - Isento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 - Não Contribuinte de ICMS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado_Comercializacion__c</picklist>
+        <values>
+            <fullName>Alto Paraná</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Formas_de_pagamento__c</picklist>
+        <values>
+            <fullName>A - Duplicata - Boleto Clientes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B - Cartão de Crédito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C - Cheque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D - Boleto%2FDuplicata - Cobrança</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E - Pagamento a vista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G - Boleto Fornec %2F DDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H - Depósito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K - Débito em Conta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P - PIX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R - Trib%2E e Concession%2E Cod Barras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T - TED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U - Transfêrencia</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grupo_de_Cuentas__c</picklist>
+        <values>
+            <fullName>CMEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPJU</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agricultura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alimentos y bebidas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotecnología</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comunicaciones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construcción</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultoría</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Educación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrónica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energía</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entretenimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Envíos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fabricación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finanzas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gobierno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indumentaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ingeniería</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maquinaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medio ambiente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medios de comunicación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minorista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Química</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recepciones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seguros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicios públicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sin fines de lucro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tecnología</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecomunicaciones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marca__c</picklist>
+        <values>
+            <fullName>BRMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAGMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LICENÇAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEOG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Obtentores__c</picklist>
+        <values>
+            <fullName>AGROESTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COODETEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMBRAPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUNDACEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IGRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONSOY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIDERA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIONEER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYNGENTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Filial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Privado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pública</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Caliente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frío</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tibio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reponsavel_DSEM__c</picklist>
+        <values>
+            <fullName>011 - Pablo R%2E de Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>014 - Cristian Pirolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>015 - Fagner Regis de Oliveira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>016 - Murilo Brazero Cacheffo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsavel_DAGMA__c</picklist>
+        <values>
+            <fullName>033 - Gustavo Suzano</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsavel_LICENCAS__c</picklist>
+        <values>
+            <fullName>124 - Thiago Schwonka</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsavel_NEOGEN__c</picklist>
+        <values>
+            <fullName>020 - Eduardo L%2E da Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>022 - Josiane Dotto Dalla Corte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>346 - Marco A%2E Marchioro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>485 - Felipe Biasi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>486 - Vagner Carvalho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>487 - Clevison Moraes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsavel__c</picklist>
+        <values>
+            <fullName>012 - Anderson Weissheimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>017 - Luis Fernando Cecatto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>018 - Flávio Marçal dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>023 - Gabriel V%2E Finatto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>031 - Guilherme Sousa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>037 - Felipe Dias Louzada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>083 - Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104 - Otavio Gorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>231 - Willian Von Scharten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>312 - Lucas Hilario Fantineli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>379 - Diego F%2E Gonçalves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>380 - Lucas de Souza Furlan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>403 - Felipe Bianchessi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>464 - Ana Laura Fernandes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>467 - Natalie de Mattos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>474 - Guilherme Menezes Salau</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Safras__c</picklist>
+        <values>
+            <fullName>15%2F16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2F17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%2F18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2F19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2F20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%2F21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21%2F22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22%2F23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23%2F24</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Base_DSEM__c</picklist>
+        <values>
+            <fullName>Amarelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verde</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Vermelho</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Base__c</picklist>
+        <values>
+            <fullName>Amarelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verde</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Vermelho</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supervisor_Respons_vel_DMValoriza__c</picklist>
+        <values>
+            <fullName>Ana Luiza Martins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cristian Pirolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erinelson Digner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Bianchessi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Louzada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gustavo Suzano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karine Govea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Furlan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lukas Reghin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matheus Marx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rafael Neubauer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Referencia__c</picklist>
+        <values>
+            <fullName>CERRADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIFERENCIADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXTERIOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Agricultor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cliente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cliente potencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competidor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distribuidor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franqueado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inversor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiplicador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prensa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Socio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,59 @@
+<apex:page controller="Facturas_Pendientes_Contab_Controller">
+
+    <apex:sectionHeader title="Facturas Pendientes de Contabilizacion" subtitle=""/>
+    <apex:pageMessages />
+    
+    <apex:form >       
+        
+        <apex:pageBlock >                        
+            <apex:pageBlockSection showHeader="false" columns="4" id="principal">
+                <apex:inputField value="{!opp.Sucursal__c}" id="sucursal" required="true"/>
+                <apex:commandButton action="{!Buscar}" style="float:center;margin-left:10px;width:80px" value="Pesquisar" rerender="seccion_resultado,seccion_facturar,seccion_contabilizar" status="status"></apex:commandButton>
+                <apex:pageblockSectionItem >
+                    <apex:inputCheckbox value="{!Pasar}"  title="Omitir validacion" id="pasar"/>
+                    <apex:outputText value="Omitir validacion"/>
+                </apex:pageblockSectionItem> 
+                <apex:actionStatus startText="Consultando..." id="status"/>
+            </apex:pageBlockSection>                                                            
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="seccion_contabilizar">
+           <apex:pageBlockSection columns="2" title="Datos Para Contabilizar">
+               <apex:pageBlockSectionItem labelStyle="width:150px">
+                    <apex:outputLabel value="Número Legal Inicial"/>
+                    <apex:inputField value="{!Fact_Param.Numero_Legal__c}"/>
+                </apex:pageBlockSectionItem>
+               <apex:commandButton style="float:right;margin-right:200px;width:130px;background:black;color:white" value="Contabilizar Seleccion" oncomplete="MostrarMsj('{!Mensaje}')" rerender="seccion_resultado,seccion_contabilizar,principal" action="{!CrearFacturas}"></apex:commandButton>             
+            </apex:pageBlockSection>                                           
+        </apex:pageBlock>
+                                             
+        <apex:pageBlock >                               
+            <apex:pageBlockSection columns="1" title="Resultado" id="seccion_resultado">
+            <apex:pageMessages />
+            <apex:pageBlock >
+               <apex:commandButton action="{!selectAll}" style="width:110px" value="Selecionar Tudo" rerender="resultado"></apex:commandButton> 
+               <apex:commandButton action="{!quitarSeleccion}" style="width:110px" value="Quitar Selecion" rerender="resultado"></apex:commandButton> 
+              <!-- <apex:commandButton onclick="openWin('{!verDetalles}')" disabled="{!VerDetallesDisabled}" style="float:center;margin-left:385px;width:110px" value="Ver Detalles"></apex:commandButton>  -->                            
+            <script>
+               function openWin(url){                                  
+                   window.open(url,'','fullscreen,scrollbars');
+               }
+               
+               function MostrarMsj(msj){
+                   if (msj != '') alert (msj);                   
+               }
+            </script>            
+            </apex:pageBlock>                               
+            <apex:pageBlockTable value="{!listaOpp}" var="oppl" id="resultado">
+                <apex:column headerValue=""><apex:inputCheckbox value="{!oppl.Selected}"/></apex:column> 
+                <apex:column headerValue="Conta"><apex:OutputLink value="../{!oppl.oport.Account.Id}"> <apex:outputField value="{!oppl.oport.Account.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Fatura"><apex:OutputLink value="../{!oppl.oport.Id}"> <apex:outputField value="{!oppl.oport.Name}"/></apex:outputLink></apex:column>    
+                <apex:column headerValue="Safra"><apex:OutputField value="{!oppl.oport.Safra__c}"/></apex:column>                  
+                <apex:column headerValue="Data"><apex:OutputField value="{!oppl.oport.CloseDate}"/></apex:column>                  
+            </apex:pageBlockTable>    
+            </apex:pageBlockSection>                        
+        </apex:pageBlock>
+                
+    </apex:form>
+
+</apex:page>

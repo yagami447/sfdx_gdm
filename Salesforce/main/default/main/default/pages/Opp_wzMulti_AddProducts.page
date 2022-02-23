@@ -1,0 +1,31 @@
+<apex:page standardController="Opportunity" extensions="Opp_Multi_View_Ctrl" action="{!init}">
+    <apex:sectionHeader title="Editar oportunidade" subtitle="Seleção de produtos">
+    <apex:form >
+        <apex:pageBlock title="Produtos">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!prev}" value="Cancelar"/>
+            <apex:commandButton action="{!seleccionar}" value="Adicionar e Avançar"/>
+        </apex:pageBlockButtons>
+        <apex:inputText value="{!filtro}"/>
+        <apex:commandButton value="Localizar produtos"/>
+        <apex:outputText value="  (vacio lista todos)"></apex:outputText>
+        <!--<br/><apex:outputField value="{!opp.Pricebook2Id}"/><br/>-->
+        <br/><br/>
+        <apex:pageBlockSection title="Lista de produtos" columns="1">
+            <apex:panelGrid columns="1" id="theGrid" width="100%">
+                <apex:dataTable value="{!products}" var="p1" styleClass="list">
+                     <apex:column >
+                        <apex:facet name="header">Selecionar</apex:facet>
+                        <apex:inputCheckbox value="{!p1.selected}" />
+                     </apex:column>
+                     <apex:column >
+                        <apex:facet name="header">Produto</apex:facet>
+                        {!p1.item.pricebookentry.Name}
+                     </apex:column>
+                </apex:dataTable>
+            </apex:panelGrid>
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:sectionHeader>
+</apex:page>

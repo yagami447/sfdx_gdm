@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grupo_de_Cuentas__c</fullName>
+    <externalId>false</externalId>
+    <label>Grupo de Cuentas</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CMEX</fullName>
+                <default>false</default>
+                <label>CMEX</label>
+            </value>
+            <value>
+                <fullName>CPFI</fullName>
+                <default>false</default>
+                <label>CPFI</label>
+            </value>
+            <value>
+                <fullName>CPJU</fullName>
+                <default>false</default>
+                <label>CPJU</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

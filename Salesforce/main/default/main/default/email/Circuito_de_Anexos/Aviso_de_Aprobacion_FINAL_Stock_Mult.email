@@ -1,0 +1,14 @@
+{!Today}
+Estimado/a ,
+{!Opportunity.Account}
+
+As informações que vossa empresa inseriu através do Portal foram aprovadas.
+
+{!Opportunity.Name}
+
+Muito Obrigado pela atenção.
+
+Att.
+
+
+{!Opportunity.Marca_Completa__c}

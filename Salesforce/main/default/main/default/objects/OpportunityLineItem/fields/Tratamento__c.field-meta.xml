@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tratamento__c</fullName>
+    <externalId>false</externalId>
+    <label>Tratamento</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Embalagem__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Tratamentos</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Saca 60 Mil Sementes</controllingFieldValue>
+            <controllingFieldValue>Bag 5 Milhões Sementes</controllingFieldValue>
+            <valueName>Tratamento A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bag 5 Milhões Sementes</controllingFieldValue>
+            <valueName>Tratamento B</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

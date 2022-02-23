@@ -1,0 +1,3563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dia_de_Campo</fullName>
+    <active>true</active>
+    <label>Día de Campo</label>
+    <picklistValues>
+        <picklist>Cultivar_1__c</picklist>
+        <values>
+            <fullName>1264</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4160 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>53I54RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>54I52RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5944</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5958RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5D6215 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5D634</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5G8015 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>61I59RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6260RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6458RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6563RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>66I68RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>68i69RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75i76RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>76MS00 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>79MS00 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>81i84RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95R51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95Y21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95Y52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95Y72</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>98Y12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>98Y30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 3901 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 4505 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 4725 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 4910 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 5409 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 6001 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 6401 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 7002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 7300 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4317 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4672 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4681 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4766 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4779 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AF 8103 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AFS 110 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMS Tibagi RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANrr73 017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANrr84 204</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANrr85 509</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc 136</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc79 020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc83 022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc89 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APORÉ IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3570 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3590 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3610 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3680 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3730 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3730IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3797 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3810 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3810IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3820 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3850 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anta 82</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG 4377 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG 4668 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG 4786 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BMX CLASSE RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAMAX APOLO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAMAX POTENCIA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ALVO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ATIVA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX BONUS IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX BRAVA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX CERTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX COMPACTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX DELTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX DESAFIO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ELITE IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ENERGIA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX EXTRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX EXTREMA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FIBRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FLECHA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FOCO IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FORÇA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FURIA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX GARRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ICONE IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX LANÇA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX MAGNA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX OPUS IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX PONTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX POWER IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX RAIO IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX RAÇA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX TORNADO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX TURBO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ULTRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX VALENTE RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX VANGUARDA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX VELOZ RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ZEUS IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ÚNICA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1001IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1003IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1007IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1010IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 284</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 378 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 388RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 399 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 413RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 5601RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 6203RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7270IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7380 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7460 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7470IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7980</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 8170 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 8560RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 9180IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRSGO 8360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS 1511 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS 1519 LL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS 2606 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS IRGA 1642 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 202IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 215</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 251 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2585 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2590 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2591 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2620 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2630 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2686 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2728 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2730 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2737 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2747 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2781 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2820 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2851 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2857 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 8341 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 8743 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD2700 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG 7665 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG 8166 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 26B42 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 36B31 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 48841 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 48B32 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coodetec variety RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corumbá</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM57i52 RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM80i79 RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM82i78 RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS 7816 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS 8318 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Antares RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Atalanta IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Júpter RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Solar IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT 2557 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT 4153 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTR 2182 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS 1186 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS GRACIOSA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDM16i027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Cristalino IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Javaés IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Juruena IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO MARACAI IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Paranaíba IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO piriqui IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMA 80118 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMA 84116 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT - SoyOuro IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT 6300 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60163 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60174 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60177 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60184 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY 6101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY 8008RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY 9056RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5705IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5730IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5838 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5892 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5917IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5947IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5970IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6210 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6410 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6972IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M7110IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M7198IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M7739IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8133IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8210IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8349IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8372IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8473 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8644IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8766RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8808IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M9144RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA 5909 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NK 7059 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 4823</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 4823 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 4901</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5000 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5106 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5160 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5445 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5727 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5858</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5959 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6006 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6209 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6390 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6535 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6700 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6823 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6828 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6909 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7007 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7200 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7209 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7227 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7300 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7338 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7447 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7497 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7667 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7670 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7709 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7780 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7901 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8270</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8338 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8383 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8490 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8693 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS6060IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS6906IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS7000 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS7505IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P96Y70 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P96Y90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P97R22 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P98Y20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PP7500IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUZA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RB8307 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK 8318 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK5813 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK6316 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK6813 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK7214 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK7814 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK8115 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK8317 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rota54 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE 7310 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE 8230 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE 8330 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG VITÓRIA 1059 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG10I61IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST 693 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST 797 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STS 820 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SW BRIZA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1059 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1157 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1163 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1258 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 13561 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1359S IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 13610 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1366C IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1561 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1562 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 15640 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1585 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1657 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1683 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1686 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1687 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN1158 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN13671 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soy Ouro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spring RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syn15640 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 5936IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 6702 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 7022 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 7548 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 7849IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 1180 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 1288 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 1288RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 132 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2158 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2173 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2179 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2181 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2182 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2183 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2185 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2187 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 4182</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 4185</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7060 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7062 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7063 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7067 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7161 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7262 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7262RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7363 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG1188 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG132 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VTOP RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 787 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 791 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 799 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 842 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XL 781513B IPRO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cultivar_2__c</picklist>
+        <values>
+            <fullName>1264</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4160 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>53I54RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>54I52RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5944</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5958RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5D6215 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5D634</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5G8015 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>61I59RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6260RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6458RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6563RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>66I68RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>68i69RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75i76RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>76MS00 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>79MS00 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>81i84RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95R51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95Y21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95Y52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95Y72</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>98Y12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>98Y30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 3901 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 4505 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 4725 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 4910 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 5409 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 6001 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 6401 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 7002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A 7300 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4317 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4672 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4681 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4766 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADV 4779 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AF 8103 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AFS 110 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMS Tibagi RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANrr73 017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANrr84 204</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANrr85 509</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc 136</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc79 020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc83 022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANsc89 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APORÉ IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3570 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3590 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3610 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3680 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3730 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3730IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3797 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3810 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3810IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3820 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS 3850 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anta 82</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG 4377 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG 4668 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BG 4786 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BMX CLASSE RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAMAX APOLO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAMAX POTENCIA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ALVO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ATIVA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX BONUS IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX BRAVA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX CERTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX COMPACTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX DELTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX DESAFIO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ELITE IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ENERGIA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX EXTRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX EXTREMA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FIBRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FLECHA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FOCO IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FORÇA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX FURIA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX GARRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ICONE IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX LANÇA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX MAGNA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX OPUS IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX PONTA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX POWER IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX RAIO IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX RAÇA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX TORNADO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX TURBO RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ULTRA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX VALENTE RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX VANGUARDA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX VELOZ RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ZEUS IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASMAX ÚNICA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1001IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1003IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1007IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 1010IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 284</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 378 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 388RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 399 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 413RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 5601RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 6203RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7270IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7380 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7460 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7470IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 7980</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 8170 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 8560RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRS 9180IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRSGO 8360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS 1511 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS 1519 LL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS 2606 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BS IRGA 1642 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 202IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 215</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 251 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2585 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2590 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2591 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2620 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2630 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2686 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2728 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2730 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2737 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2747 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2781 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2820 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2851 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 2857 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 8341 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD 8743 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CD2700 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG 7665 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG 8166 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 26B42 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 36B31 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 48841 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ 48B32 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coodetec variety RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corumbá</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM57i52 RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM80i79 RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM82i78 RSF IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS 7816 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS 8318 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Antares RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Atalanta IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Júpter RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS Solar IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT 2557 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT 4153 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTR 2182 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS 1186 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS GRACIOSA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDM16i027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Cristalino IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Javaés IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Juruena IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO MARACAI IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO Paranaíba IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO piriqui IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMA 80118 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMA 84116 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT - SoyOuro IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT 6300 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60163 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60174 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60177 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LG 60184 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY 6101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY 8008RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY 9056RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5705IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5730IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5838 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5892 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5917IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5947IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5970IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6210 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6410 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6972IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M7110IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M7198IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M7739IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8133IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8210IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8349IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8372IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8473 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8644IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8766RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M8808IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M9144RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA 5909 RG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NK 7059 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 4823</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 4823 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 4901</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5000 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5106 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5160 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5445 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5727 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5858</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 5959 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6006 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6209 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6390 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6535 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6700 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6823 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6828 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 6909 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7007 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7200 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7209 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7227 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7300 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7338 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7447 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7497 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7667 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7670 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7709 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7780 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 7901 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8270</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8338 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8383 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8490 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS 8693 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS6060IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS6906IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS7000 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NS7505IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTROS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P96Y70 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P96Y90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P97R22 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P98Y20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PP7500IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUZA IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RB8307 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK 8318 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK5813 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK6316 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK6813 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK7214 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK7814 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK8115 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RK8317 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rota54 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE 7310 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE 8230 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE 8330 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG VITÓRIA 1059 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG10I61IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST 693 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST 797 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STS 820 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SW BRIZA RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1059 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1157 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1163 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1258 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 13561 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1359S IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 13610 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1366C IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1561 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1562 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 15640 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1585 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1657 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1683 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1686 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN 1687 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN1158 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYN13671 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soy Ouro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spring RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syn15640 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 5936IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 6702 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 7022 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 7548 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEC 7849IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 1180 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 1288 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 1288RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 132 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2158 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2173 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2179 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2181 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2182 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2183 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2185 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 2187 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 4182</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 4185</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7060 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7062 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7063 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7067 IPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7161 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7262 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7262RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG 7363 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG1188 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG132 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VTOP RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 787 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 791 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 799 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W 842 RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XL 781513B IPRO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>NUEVO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SINC CAB OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SINC ITEMS OK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Evaluacion__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marca__c</picklist>
+        <values>
+            <fullName>BRMX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSEM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Obtentor_1__c</picklist>
+        <values>
+            <fullName>ADVANTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agro Norte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agroeste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bayer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brasmax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARAIBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coodetec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Licenças</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Mario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Embrapa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDML</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geneze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IGRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KWS RIBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limagrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macroseed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monsoy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nidera</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pioneer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sementes Guerra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soy Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syngenta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wehrmann</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Obtentor_2__c</picklist>
+        <values>
+            <fullName>ADVANTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agro Norte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agroeste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bayer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brasmax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARAIBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coodetec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Licenças</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Mario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Embrapa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDML</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geneze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IGRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KWS RIBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limagrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-SOY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macroseed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monsoy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nidera</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pioneer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMPRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sementes Guerra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soy Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syngenta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wehrmann</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Participante__c</picklist>
+        <values>
+            <fullName>Anderson Clayton Weissheimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andre Aguilar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arquimedes Gonçalves De Moura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Augusto Cesar Teodoro Rodrigues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Augusto Gelain Rebeschini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bruno De Moraes Ribeiro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bruno Fiorin Zaninetti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carlos Martinelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cesar De Matos Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cezar Marchesan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christian Rodrigues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cristian Pirolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daniel Vidal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Davi Genes Teixeira Lima</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diego Batista Rocha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diego Francisco Gonçalves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edson Chambo Ruiz Junior</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eduardo Silvestrini Tonello</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emanuel Augusto Coutinho da Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerson Yassunori Ito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fagner Regis de Oliveira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Dalsasso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Manoel Alves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Oliveira Da Costa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Calazans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Frenher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Ichikawa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flavio Marcal Dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geovani Otowicz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guilherme Barivieira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gustavo Introvini Haab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hugo Leonardo Lima Gomes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joao Elias Sebba Roriz Muniz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joao Garibaldi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joner Dalcin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jose Emilio Marini Faria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jose Francisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jose Guilherme Carneiro Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junior Sandri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leucir Zanella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Augusto Schio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Furlan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Hilário Fantineli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Mansano Zanella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luiz Fernando Ceccatto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maicol De Mattos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maiquel Gustavo Maehler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcelo Cassol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcelo Moraes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcio Locatelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marco Bianchini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcos Marchioro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mateus Henrique Favaro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matheus Araujo Oliveira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maurício Diehl Guazzelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michel Dotto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Murilo Brazero Cacheffo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nelson Bassetto Junior</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osvaldo Manoel Ferreira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otavio Gorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pablo Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patrick Hayra Dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paulo Novais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rafael Neubauer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rafael Witt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raul Rauber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rodrigo Roider Fogolari</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tharso Souza Silva Brito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thiago Celestino Dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thiago Rocha Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiago Da Silva Moreira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vinicius Bellé</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vinicius Cesar Sambatti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vitor Linn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vitor Pereira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wasley Luan Campoy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wesley Batista Pfeffer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wesley Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Willian Allann Loureiro Scabora</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Willian Scharten</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Realizado_por__c</picklist>
+        <values>
+            <fullName>Anderson Clayton Weissheimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andre Aguilar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carlos Martinelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cristian Pirolli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diego Francisco Gonçalves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edson Chambo Ruiz Junior</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fagner Regis de Oliveira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Dalsasso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Felipe Oliveira da Costa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Calazans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Frenher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fernando Ichikawa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flavio Marçal dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geovani Otowicz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joao Garibaldi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joner Dalcin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jorge Cristiano Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jose Francisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jose Guilherme Carneiro Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junior Sandri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leucir Zanella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas Hilário Fantineli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luiz Fernando Ceccatto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maiquel Gustavo Maehler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcelo Moraes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcio Locatelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marco Bianchini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcos Marchioro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matheus Araujo Oliveira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michel Dotto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Murilo Brazero Cacheffo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otavio Gorni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pablo Souza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patrick Hayra Dos Santos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paulo Novais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rafael Neubauer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rafael Witt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raul Rauber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vinicius Bellé</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vitor Pereira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wesley Silva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Willian Scharten</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Safra__c</picklist>
+        <values>
+            <fullName>14%2F15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2F16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2F17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%2F18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2F19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2F20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%2F21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21%2F22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22%2F23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23%2F24</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Evento__c</picklist>
+        <values>
+            <fullName>Día de Campo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lado a Lado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

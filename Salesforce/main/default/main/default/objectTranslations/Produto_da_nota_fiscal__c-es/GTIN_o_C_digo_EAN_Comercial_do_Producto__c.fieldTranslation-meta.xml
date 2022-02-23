@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- GTIN o Código EAN Comercial do Producto --></label>
+    <name>GTIN_o_C_digo_EAN_Comercial_do_Producto__c</name>
+</CustomFieldTranslation>

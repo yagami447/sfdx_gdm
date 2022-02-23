@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateFixedPriceFourthRange</fullName>
+    <active>true</active>
+    <description>Valida el cuarto rango de precios fijos para un producto. Creado para US #12786</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(Max_Kg_Third_Price__c)),
+ ISBLANK(Fourth_Price__c)
+)</errorConditionFormula>
+    <errorDisplayField>Fourth_Price__c</errorDisplayField>
+    <errorMessage>o preço é necessário para a quarta faixa de preço fixo</errorMessage>
+</ValidationRule>

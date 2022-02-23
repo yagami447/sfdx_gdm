@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_Validos_B</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.Name == &apos;B&apos; , OR(ISNULL(Capacidade__c), TEXT(Empresa__c) ==  &apos;&apos;, TEXT(Exclusividade__c)==&apos;&apos;))</errorConditionFormula>
+    <errorMessage>Deve entrar todos os dados para tratamento de sementes por empresa.</errorMessage>
+</ValidationRule>

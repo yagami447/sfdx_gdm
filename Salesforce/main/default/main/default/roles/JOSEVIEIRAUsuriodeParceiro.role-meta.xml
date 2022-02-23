@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>JOSE VIEIRA Usuário de Parceiro</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>JOSE VIEIRA Usuário de Parceiro</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Administracion_y_Fiscalizador</parentRole>
+</Role>

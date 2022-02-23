@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sucursal --></label>
+    <name>Sucursal__c</name>
+    <picklistValues>
+        <masterLabel>0094 Passo Fundo</masterLabel>
+        <translation><!-- 0094 Passo Fundo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0095 Londrina</masterLabel>
+        <translation><!-- 0095 Londrina --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Infraestructura_C</fullName>
+    <description>PL Infraestructura</description>
+    <displayedFields>
+        <field>Vendas_de_Sem_sem_tratar__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Ventas_de_Sem_Tratada__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Infraestructura_C</label>
+</FieldSet>

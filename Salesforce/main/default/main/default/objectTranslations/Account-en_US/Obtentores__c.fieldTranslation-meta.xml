@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Obtentores --></label>
+    <name>Obtentores__c</name>
+    <picklistValues>
+        <masterLabel>AGROESTE</masterLabel>
+        <translation><!-- AGROESTE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COODETEC</masterLabel>
+        <translation><!-- COODETEC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMBRAPA</masterLabel>
+        <translation><!-- EMBRAPA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUNDACEP</masterLabel>
+        <translation><!-- FUNDACEP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IGRA</masterLabel>
+        <translation><!-- IGRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MONSOY</masterLabel>
+        <translation><!-- MONSOY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NIDERA</masterLabel>
+        <translation><!-- NIDERA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OUTROS</masterLabel>
+        <translation><!-- OUTROS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIONEER</masterLabel>
+        <translation><!-- PIONEER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SYNGENTA</masterLabel>
+        <translation><!-- SYNGENTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TMG</masterLabel>
+        <translation><!-- TMG --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

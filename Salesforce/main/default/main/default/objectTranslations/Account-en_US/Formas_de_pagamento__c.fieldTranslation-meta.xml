@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Formas de pagamento --></label>
+    <name>Formas_de_pagamento__c</name>
+    <picklistValues>
+        <masterLabel>A - Duplicata - Boleto Clientes</masterLabel>
+        <translation><!-- A - Duplicata - Boleto Clientes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B - Cartão de Crédito</masterLabel>
+        <translation><!-- B - Cartão de Crédito --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C - Cheque</masterLabel>
+        <translation><!-- C - Cheque --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>D - Boleto/Duplicata - Cobrança</masterLabel>
+        <translation><!-- D - Boleto/Duplicata - Cobrança --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E - Pagamento a vista</masterLabel>
+        <translation><!-- E - Pagamento a vista --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>G - Boleto Fornec / DDA</masterLabel>
+        <translation><!-- G - Boleto Fornec / DDA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>H - Depósito</masterLabel>
+        <translation><!-- H - Depósito --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>K - Débito em Conta</masterLabel>
+        <translation><!-- K - Débito em Conta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P - PIX</masterLabel>
+        <translation><!-- P - PIX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R - Trib. e Concession. Cod Barras</masterLabel>
+        <translation><!-- R - Trib. e Concession. Cod Barras --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T - TED</masterLabel>
+        <translation><!-- T - TED --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>U - Transfêrencia</masterLabel>
+        <translation><!-- U - Transfêrencia --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

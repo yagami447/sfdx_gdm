@@ -1,0 +1,52 @@
+<aura:component >
+    <aura:attribute name="data" type="object"  default=""/> 
+    <aura:attribute name="activeSections" type="List" default="['A','B']" />
+    
+    <aura:handler name="onchange" 
+              event="l_lookup:OnChange" 
+              action="{!c.handleChange}"/>
+    
+    <aura:registerEvent name="changeAccount" type="c:NotaFiscalElectronica_FieldChange"/>
+    
+    <div class="slds-box" style="margin-left:25px;margin-right:25px;">
+        <lightning:accordion activeSectionName="{!v.activeSections}" allowMultipleSectionsOpen="true">
+            <lightning:accordionSection name="A" label="Destinatario" >
+                <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large slds-p-left_xx-large slds-p-right_xx-large">
+                    <lightning:layoutItem flexibility="auto" size="6" padding="around-small" class="custom-box">
+                    	<l_lookup:Lookup objectType="Account" selectedRecordId="{!v.data.accountId}"></l_lookup:Lookup>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="12" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Nome / Razão Social" value="{!v.data.xNome}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="CNPJ" value="{!v.data.CNPJ}"></lightning:input>
+                    </lightning:layoutItem>
+                     <lightning:layoutItem flexibility="auto" size="6" padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Endereço" value="{!v.data.xLgr}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Bairro / Distrito" value="{!v.data.enderDest.xBairro}"></lightning:input>
+                    </lightning:layoutItem>
+                     <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="CEP" value="{!v.data.enderDest.CEP}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Município" value="{!v.data.enderDest.xMun}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Telefone" value="{!v.data.enderDest.fone}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="UF" value="{!v.data.enderDest.UF}"></lightning:input>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="País" value="{!v.data.enderDest.xPais}"></lightning:input>
+                    </lightning:layoutItem>		
+                    <lightning:layoutItem flexibility="auto" size="6"  padding="around-small" class="custom-box">
+                        <lightning:input class="customDisabled" label="Email" value="{!v.data.enderDest.email}"></lightning:input>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:accordionSection> 
+        </lightning:accordion>
+    </div>
+</aura:component>

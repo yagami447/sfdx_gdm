@@ -1,0 +1,48 @@
+<apex:page standardController="Opportunity" extensions="Opp_Multi_View_Ctrl" action="{!init}">
+    <apex:sectionHeader subtitle="Editar oportunidade" title="Edição de items de oportunidade">    
+        <apex:form >
+        <apex:pageblock title="Produtos" mode="edit">
+        	<apex:pageMessages />        
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!addProduct}" value="Cancelar" immediate="true"/>
+                <apex:commandButton action="{!save}" value="Salvar"/>
+            </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!selitems}" var="p1" id="prod">
+            <apex:column ><apex:facet name="header">Produto</apex:facet>{!p1.item.PricebookEntry.Product2.Name}</apex:column>
+            <apex:column rendered="{!AND(NOT(Basica),Produccion)}">
+                <apex:facet name="header">Autorização</apex:facet><apex:inputField style="width:80px" value="{!p1.item.Autori__c}"/>
+            </apex:column>            
+            <apex:column rendered="{!Rebaja}" headerValue="Produto Original">
+                <apex:outputText value="{!p1.item.Produto_Rebaixado_Nombre__c}"/>
+            </apex:column>
+            <apex:column rendered="{!NOT(Basica)}">
+                <apex:facet name="header">Data</apex:facet><apex:inputField value="{!p1.item.Data__c}"/>
+            </apex:column>
+            <apex:column rendered="{!AND(NOT(Basica),Produccion)}">
+                <apex:facet name="header">Cidade</apex:facet><apex:inputField value="{!p1.item.Cidade__c}"/>
+            </apex:column>
+            <apex:column rendered="{!AND(NOT(Basica),Produccion)}">
+                <apex:facet name="header">Ha. Autorizados</apex:facet><apex:inputField value="{!p1.item.Area__c}" style="width:90px"/>
+            </apex:column>
+            <apex:column rendered="{!AND(NOT(Basica),Produccion)}">
+                <apex:facet name="header">Ha. Plantados</apex:facet><apex:inputField value="{!p1.item.Area_Plantada__c}" style="width:90px"/>
+            </apex:column>
+            <apex:column rendered="{!Basica}"><apex:facet name="header">Qtde Scs (40 Kg)</apex:facet><apex:inputField style="width:100px" value="{!p1.item.Qtde_Scs_40kg__c}" required="true"/></apex:column>
+            <apex:column rendered="{!AND(NOT(Basica),Produccion)}">
+                <apex:facet name="header">Sem. Bruta</apex:facet><apex:inputField value="{!p1.item.Semente_bruta__c}" style="width:90px"/>
+            </apex:column>
+            <apex:column rendered="{!OR(Rebaja,Produccion)}">
+                <apex:facet name="header">Sem. Beneficiada</apex:facet><apex:inputField value="{!p1.item.Semente_beneficiada__c}" style="width:90px"/>
+            </apex:column>            
+            <apex:column rendered="{!OR(Rebaja,Produccion)}">
+                <apex:facet name="header">Sem. Aprovada</apex:facet><apex:inputField value="{!p1.item.Semente_aprovada__c}" style="width:90px"/>
+            </apex:column>
+            <apex:column rendered="{!Comercial}"><apex:facet name="header">Sem. Uso Próprio</apex:facet><apex:inputField style="width:90px" value="{!p1.item.Semente_uso_propio__c}"/></apex:column>
+            <apex:column rendered="{!Comercial}"><apex:facet name="header">Sem. Com.</apex:facet><apex:inputField style="width:90px" value="{!p1.item.Semente_comercializada__c}"/></apex:column>
+            <apex:column rendered="{!Comercial}"><apex:facet name="header">Autorização Ind.</apex:facet><apex:inputField style="width:90px" value="{!p1.item.Autorizacion_V_Industria__c}"/></apex:column>
+            <apex:column rendered="{!Comercial}"><apex:facet name="header">Sem. Aut. Ind. (Sacas)</apex:facet><apex:inputField style="width:90px" value="{!p1.item.Cantidad_autorizada_vi__c}"/></apex:column>
+        </apex:pageBlockTable>
+        </apex:pageblock>
+        </apex:form>
+    </apex:sectionHeader>
+</apex:page>

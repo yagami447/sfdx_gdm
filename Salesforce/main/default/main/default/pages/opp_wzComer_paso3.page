@@ -1,0 +1,23 @@
+<apex:page controller="Opp_wzComer_Ctrl" tabStyle="OpportunityLineItem">
+    <apex:sectionHeader subtitle="Nova oportunidade" title="Edição de items de oportunidade">    
+        <apex:form >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlock title="Produtos">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!prev2}" value="Cancelar" immediate="true"/>
+                    <apex:commandButton action="{!guardar}" value="Salvar"/>
+                </apex:pageBlockButtons>               
+                <apex:panelGrid columns="1" id="theGrid" width="100%">
+                    <apex:dataTable value="{!selitems}" var="p1" styleClass="list">
+                    <apex:column Style="width:100px;"><apex:facet name="header">Produto</apex:facet>{!p1.item.pricebookentry.Name}</apex:column>
+                        <apex:column ><apex:facet name="header">Data</apex:facet><apex:inputField value="{!p1.item.Data__c}"/></apex:column>
+<!--                        <apex:column ><apex:facet name="header">Cidade</apex:facet><apex:inputField value="{!p1.item.Cidade__c}"/></apex:column>-->
+                        <apex:column ><apex:facet name="header">Sem. Uso Próprio (Sacas)</apex:facet><apex:inputField Style="width:85px;" value="{!p1.item.Semente_uso_propio__c}"/></apex:column>
+                        <apex:column ><apex:facet name="header">Sem. Com. (Sacas)</apex:facet><apex:inputField Style="width:85px;" value="{!p1.item.Semente_comercializada__c}"/></apex:column>
+                        <apex:column ><apex:facet name="header">Descarte Sem. Aprovada</apex:facet><apex:inputField Style="width:85px; "value="{!p1.item.Autorizacion_V_Industria__c}"/></apex:column>
+                        <apex:column ><apex:facet name="header">Qtde. Aut. Sem. Aprovada (sacas)</apex:facet><apex:inputField Style="width:85px;" value="{!p1.item.Cantidad_autorizada_Aprov__c}"/></apex:column></apex:dataTable>
+                </apex:panelGrid>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:sectionHeader>
+</apex:page>

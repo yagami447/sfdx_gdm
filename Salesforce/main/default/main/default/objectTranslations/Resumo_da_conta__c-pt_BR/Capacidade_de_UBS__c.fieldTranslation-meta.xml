@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sacos de 40 Kgs --></help>
+    <label><!-- Capacidade de UBS --></label>
+    <name>Capacidade_de_UBS__c</name>
+</CustomFieldTranslation>

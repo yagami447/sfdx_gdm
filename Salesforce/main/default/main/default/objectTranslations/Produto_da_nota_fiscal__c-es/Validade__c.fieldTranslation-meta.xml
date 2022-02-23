@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Validade --></label>
+    <name>Validade__c</name>
+    <picklistValues>
+        <masterLabel>Desconhecido</masterLabel>
+        <translation><!-- Desconhecido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invalida</masterLabel>
+        <translation><!-- Invalida --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valida</masterLabel>
+        <translation><!-- Valida --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

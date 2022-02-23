@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C</fullName>
+    <active>true</active>
+    <description>Outros Obtentores que Multiplica</description>
+    <label>C</label>
+    <picklistValues>
+        <picklist>Safra__c</picklist>
+        <values>
+            <fullName>12%2F13</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>17%2F18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2F19</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

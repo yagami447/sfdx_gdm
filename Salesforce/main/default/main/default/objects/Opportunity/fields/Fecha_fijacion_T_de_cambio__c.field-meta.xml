@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_fijacion_T_de_cambio__c</fullName>
+    <description>Fecha en la que se fijó el tipo de cambio</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Fecha en la que se fijó el tipo de cambio</inlineHelpText>
+    <label>Fecha fijacion de cambio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

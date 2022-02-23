@@ -1,0 +1,5 @@
+Enviamos uma senha provisória para entrar no portal. Uma vez que você entre, deve modificar. 
+
+Nova senha: {!SiteUser__c.Password__c} 
+
+GDM Genética

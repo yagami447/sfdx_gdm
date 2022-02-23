@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.CNPJ_CPF__c</field>
+    </columns>
+    <columns>
+        <field>Account.IE__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.ADDRESS1_LINE1</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.ADDRESS1_CITY</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.ADDRESS1_STATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.ADDRESS1_ZIP</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Responsavel__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>066 - Marcelo Steffen,067 - Sergio Bertagnolli,083 - Jorge Cristiano Rosa,104 - Otavio Gorni,111 - Pablo R. de Souza,151 - Anderson Clayton Weissheimer,196 - Edson Chambo,197 - Wagner Rank,199 - Lucas Costa,225 - Fagner Regis de Oliveira,229 - Murilo Brazero Cacheffo,230 - Edmar Gonçalves Arantes,231 - Willian Von Scharten</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Reponsavel_DSEM__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>061 - Fernando Frehner,066 - Marcelo Steffen,067 - Sergio Bertagnoli,152 - Fernando Calazans</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Tabular</format>
+    <name>DADOS DA CONTA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

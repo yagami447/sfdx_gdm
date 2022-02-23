@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>/* Agregado por Jhonny Peroza US-7853 Precificação fixa por item */
+
+/* Si está marcado el campo check -Precio Fijo- en el PriceBookEntry y la cantidad del item es mayor a 0 ó menor o igual a los kilogramos para primer precio en la campaña, 
+   asigna el primer precio fijo en el PriceBookEntry * Quantity - Bls_devolucion */
+			
+/* Si está marcado el campo check -Precio Fijo- en el PriceBookEntry y la cantidad del item es mayor a los kilogramos para primer precio en la campaña ó menor o igual a los kilogramos para segundo precio en la campaña, 
+   asigna el segundo precio fijo en el PriceBookEntry * Quantity - Bls_devolucion */
+			
+/* Si está marcado el campo check -Precio Fijo- en el PriceBookEntry y la cantidad del item es mayor a los kilogramos para segundo precio en la campaña ó menor o igual a los kilogramos para tercer precio en la campaña, 
+   asigna el tercer precio fijo en el PriceBookEntry * Quantity - Bls_devolucion */
+			
+/* Si está marcado el campo check -Precio Fijo- en el PriceBookEntry y la cantidad del item es mayor a los kilogramos para tercer precio en la campaña ó menor o igual a los kilogramos para cuarto precio en la campaña, 
+   asigna el cuarto precio fijo en el PriceBookEntry * Quantity - Bls_devolucion */
+			
+/* Si no se cumplen los primeros 4 casos, se considera que el producto no tiene un precio fijo y se calcula el total como antes */
+			
+IF(PricebookEntry.Fixed_Price__c = true &amp;&amp; (Quantity &gt; 0 &amp;&amp; Quantity &lt;= Opportunity.Campaign.Kg_para_primeiro_preco__c), PricebookEntry.First_Price__c * (Quantity - Bls_devolucion__c),
+			IF(PricebookEntry.Fixed_Price__c = true &amp;&amp; (Quantity &gt; Opportunity.Campaign.Kg_para_primeiro_preco__c &amp;&amp; Quantity &lt;= Opportunity.Campaign.Kg_para_segundo_preco__c), PricebookEntry.Second_Price__c * (Quantity - Bls_devolucion__c), 
+						IF(PricebookEntry.Fixed_Price__c = true &amp;&amp; (Quantity &gt; Opportunity.Campaign.Kg_para_segundo_preco__c &amp;&amp; Quantity &lt;= Opportunity.Campaign.Kg_para_terceiro_prec__c), PricebookEntry.Third_Price__c * (Quantity - Bls_devolucion__c),
+									IF(PricebookEntry.Fixed_Price__c = true &amp;&amp; (Quantity &gt; Opportunity.Campaign.Kg_para_terceiro_prec__c &amp;&amp; Quantity &lt;= Opportunity.Campaign.Kg_para_quarto_preco__c), PricebookEntry.Fourth_Price__c *(Quantity - Bls_devolucion__c),
+												(UnitPrice * VALUE(PricebookEntry.Product2.CANTIDAD_SUB_UNIDAD__c) ) * (Quantity - Bls_devolucion__c)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Preço Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

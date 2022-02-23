@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebaixamento_Sacas_Todos</fullName>
+    <columns>Safra__c</columns>
+    <columns>Marca__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Epoca_de_Plantio__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Anexo_II_Rebaixamento_Sacas</value>
+    </filters>
+    <label>Rebaixamento Sacas</label>
+    <sharedTo>
+        <role>Supervisor_Admin_y_Fiscalizacion</role>
+    </sharedTo>
+</ListView>

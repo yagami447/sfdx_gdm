@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM Detalhe de Vendas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Detalhes de Vendas</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Vendas_B --></label>
+        <name>Vendas_B</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Vendas_C --></label>
+        <name>Vendas_C</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Vendas_D --></label>
+        <name>Vendas_D</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Vendas_E --></label>
+        <name>Vendas_E</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Detalle de Vendas</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Vendas por Variedade Grupo DONMARIO --></description>
+        <label><!-- B --></label>
+        <name>B</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Outros Obtentores que Multiplica --></description>
+        <label><!-- C --></label>
+        <name>C</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sacas que verticaliza --></description>
+        <label><!-- D --></label>
+        <name>D</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sacas que Compra Fora --></description>
+        <label><!-- E --></label>
+        <name>E</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Quantidade BX y DM que pretende produzir --></description>
+        <label><!-- F --></label>
+        <name>F</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Quantidade que Pretende Produzir de Outro Multiplicador --></description>
+        <label><!-- G --></label>
+        <name>G</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Quantidade que Pretende Verticalizar de Outro Multiplicador --></description>
+        <label><!-- H --></label>
+        <name>H</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Quantidade que Pretende Comprar fora de Outro Multiplicador --></description>
+        <label><!-- I --></label>
+        <name>I</name>
+    </recordTypes>
+</CustomObjectTranslation>

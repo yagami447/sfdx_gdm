@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Observação - Sem. Bruta&gt; 113 sacas</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Sem. Bruta&gt; 113 sacas</name>
+    <style>none</style>
+    <subject>Observação - Sem. Bruta&gt; 113 sacas</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

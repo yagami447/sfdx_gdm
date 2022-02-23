@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se refere ao produto (cultivar) que será feito o contrato (um contrato para cada produto). É por este fato que todos possuem o número 1 nas cultivares que a conta vai multiplicar --></help>
+    <label><!-- Cultivar --></label>
+    <name>Cultivar__c</name>
+    <relationshipLabel><!-- Contratos de Multiplicação --></relationshipLabel>
+</CustomFieldTranslation>

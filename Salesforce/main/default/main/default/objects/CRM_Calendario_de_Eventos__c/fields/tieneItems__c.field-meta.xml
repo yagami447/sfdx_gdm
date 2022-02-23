@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tieneItems__c</fullName>
+    <externalId>false</externalId>
+    <label>Cantidad de items</label>
+    <summaryForeignKey>CRM_Detalle_Calendario_de_eventos__c.CRM_Calendario_de_eventos__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

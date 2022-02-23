@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Código SAP, que se utiliza para determinar el responsable de la cuenta a que usuario se refiere(para hacer la relación) --></help>
+    <label><!-- Código SAP --></label>
+    <name>Codigo_SAP__c</name>
+</CustomFieldTranslation>

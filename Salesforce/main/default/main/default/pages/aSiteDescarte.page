@@ -1,0 +1,170 @@
+<apex:page language="{!IF(ISNULL(lenguajeUsuario),'en_US',lenguajeUsuario)}" id="DescarteSementePages" showHeader="false"
+    standardStylesheets="false" cache="false" title="{!tituloDePagina}" controller="aSiteDescarteController" action="{!validate}">
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="body">
+            <style>
+                .selected {
+                    background: rgba(38, 185, 154, .16);
+                    border-color: rgba(221, 221, 221, 0.780392);
+                }
+            </style>
+
+            <body class="nav-md footer_fixed">
+                <center>
+                    <br/>
+                    <br/>
+                    <apex:panelGrid bgcolor="white" columns="1">
+                        <apex:outputPanel layout="block" styleClass="topPanel" style="margin-top:20px;">
+                            <apex:panelGrid cellpadding="0" cellspacing="0" bgcolor="white" columns="1">
+                                <apex:panelGroup >
+                                    <apex:form id="profileForm">
+                                        <div class="row">
+                                            <div class="right_col" role="main" style="min-width:800px">
+                                                <div>
+                                                    <div class="page-title">
+                                                        <div class="title_left">
+                                                            <h3>{!$Label.Descarte_de_Semente}</h3>
+                                                        </div>
+                                                        <div class="title_right">
+                                                            <div class="form-group pull-right top_search">
+                                                                <apex:outputPanel >
+                                                                    <div class="btn-group" data-toggle="buttons">
+                                                                        <button href="javascript:;" onclick="goNew()" type="button" class="btn btn-round btn-success">{!$Label.New}</button>
+                                                                    </div>
+                                                                </apex:outputPanel>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="x_panel">
+                                                            <div class="x_title">
+                                                                <h2>{!$Label.Descartes}
+                                                                    <small>{!$Label.active_list}</small>
+                                                                </h2>
+                                            
+                                                                <ul class="nav navbar-right panel_toolbox">
+                                                                    <li>
+                                                                        <a class="collapse-link">
+                                                                            <i class="fa fa-chevron-up"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div class="x_content">
+                                                                <div role="tabpanel" class="tab-pane" id="tab_conte" aria-labelledby="profile-tab">
+                                                                    <apex:pageBlock id="cont" rendered="{!DescarteOpportunities.size > 0}">
+                                                                        <apex:pageblockTable value="{!DescarteOpportunities}" var="s" styleclass="data table table-striped no-margin">
+                                                                            <apex:column value="{!s.Name}" styleclass="{!IF(s.Id==idDeDescarteSeleccionado,'selected','')}" />
+                                                                            <apex:column value="{!s.Safra__c}" styleclass="{!IF(s.Id==idDeDescarteSeleccionado,'selected','')}" />
+                                                                            <apex:column value="{!s.CloseDate}" styleclass="{!IF(s.Id==idDeDescarteSeleccionado,'selected','')}" />
+                                                                            <apex:column value="{!s.StageName}" styleclass="{!IF(s.Id==idDeDescarteSeleccionado,'selected','')}"
+                                                                            />
+                                                                            <apex:column headerClass="column-title" headerValue="{!$Label.action}" styleclass="{!IF(s.Id==idDeDescarteSeleccionado,'selected','')}"
+                                                                                style="vertical-align: middle;">
+                                                                                <apex:commandLink value="{!$Label.View_Products}" action="{!getProductsForSelectedDescarteOpportunity}" reRender="cont, it">
+                                                                                    <apex:param value="{!s.Id}" assignTo="{!idDeDescarteSeleccionado}" name="toSelect" />
+                                                                                </apex:commandLink>
+                                                                                <apex:commandLink value=" | {!$Label.Edit}" action="{!gotoEdit}" rendered="{!s.Estado_Anexos_Portal_Miltiplicadores__c=='Edição' || s.Estado_Anexos_Portal_Miltiplicadores__c=='Rechazado'}">
+                                                                                    <apex:param value="{!s.Id}" assignTo="{!idDeDescarteEditar}" name="toEdit" />
+                                                                                </apex:commandLink>
+                                                                                <apex:outputPanel rendered="{!s.VB_Recebeu__c}">
+                                                                                    <a id='dwnldLnk' style="display:none;" />
+                                                                                    <apex:commandlink action="{!getPdfUrl}" value="| Documento" rerender="script" oncomplete="descargarPDF();">
+                                                                                        <apex:param name="q" value="{!s.Id}" assignto="{!idOportunidadImprimir}" />
+                                                                                    </apex:commandlink>
+                                                                                </apex:outputPanel>
+                                                                            </apex:column>
+                                                                        </apex:pageblockTable>
+                                                                    </apex:pageBlock>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="clearfix"></div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <apex:pageBlock id="panel-t" rendered="{!DescarteOpportunities.size>0}">
+                                                            <div class="x_panel">
+                                                                <div class="x_title">
+                                                                    <h2>{!$ObjectType.Product2.LabelPlural}
+                                                                        <small>{!$Label.active_list}</small>
+                                                                    </h2>
+                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                        <li>
+                                                                            <a class="collapse-link">
+                                                                                <i class="fa fa-chevron-up"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                                <div class="x_content">
+                                                                    <div role="tabpanel" class="tab-pane" id="tab_items" aria-labelledby="profile-tab">
+                                                                        <apex:pageBlock id="it" rendered="{!DescarteOpportunities.size>0}">
+                                                                            <apex:pageBlockTable value="{!productosDeOportunidadSeleccionada}" var="i" styleclass="data table table-striped no-margin">
+                                                                                <apex:repeat value="{!Fields}" var="f">
+                                                                                    <apex:column headerValue="{!f.label}">
+                                                                                        <apex:outputField value="{!i[f]}" />
+                                                                                    </apex:column>
+                                                                                </apex:repeat>
+                                                                            </apex:pageBlockTable>
+                                                                        </apex:pageBlock>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </apex:pageBlock>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <apex:actionFunction action="{!gotoNew}" name="goNew" />
+                                    </apex:form>
+                                </apex:panelGroup>
+                            </apex:panelGrid>
+                        </apex:outputPanel>
+                    </apex:panelGrid>
+                </center>
+                <apex:outputPanel id="script">
+                    <script>
+                    function generarBlob(b64Data, contentType, sliceSize) {
+                      contentType = contentType || '';
+                      sliceSize = sliceSize || 512;
+                      var byteCharacters = atob(b64Data);
+                      var byteArrays = [];
+                      for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                        var slice = byteCharacters.slice(offset, offset + sliceSize);
+                        var byteNumbers = new Array(slice.length);
+                        for (var i = 0; i < slice.length; i++) {
+                          byteNumbers[i] = slice.charCodeAt(i);
+                        }
+                        var byteArray = new Uint8Array(byteNumbers);
+                        byteArrays.push(byteArray);
+                      }
+
+                      var blob = new Blob(byteArrays, {type: contentType});
+                      return blob;
+                    }
+
+                    function descargarPDF(){
+                      var blob = generarBlob("{!pdfBlob}", "application/pdf");
+                      var blobUrl = URL.createObjectURL(blob);
+                      var link = document.createElement('a');
+                      link.href = blobUrl;
+                      link.download = '{!nombrePDF}';
+                      link.dispatchEvent(new MouseEvent('click'));
+                    }
+
+                    </script>
+                </apex:outputPanel>
+            </body>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Macrorregião de Vendas --></label>
+    <name>Macrorregion_de_Ventas__c</name>
+    <relationshipLabel><!-- Oportunidades --></relationshipLabel>
+</CustomFieldTranslation>

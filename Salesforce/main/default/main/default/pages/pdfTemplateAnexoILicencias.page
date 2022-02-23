@@ -1,0 +1,56 @@
+<apex:page standardController="Opportunity" extensions="PdfGeneratorController" renderAs="pdf">
+
+ <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+<table width="83%" Align="center">
+   <tr>
+     <td >
+ 
+  <p style="font-size:20px"><b>AUT MULT Nº {!nombre}/{!Anio}</b></p>
+   
+  <p align="justify"> A <b>GDM LICENCIAMENTO DO BRASIL LTDA.</b>, pessoa jurídica de direito privado,
+  com sede e foro na Cidade de Londrina, Estado do Paraná, inscrita no CNPJ/MF sob nº. 13.960.803/0001-30
+  e RENASEM sob nº. PR-14084/2013, dedicada à criação de cultivares de Soja, vem através deste 
+  documento <b>AUTORIZAR</b> a empresa {!Opportunity.Account.Name}
+  inscrita(o) no CNPJ sob nº {!cnpj}, a produzir e comercializar sementes na 
+  <b>SAFRA {!safra}</b> das cultivares de soja, cujas categorias de sementes,  áreas dos campos de produção 
+  e estado, estão relacionados abaixo:</p><br/>
+
+
+  
+  <apex:pageBlock >
+  <apex:pageblockSection columns="6">
+     <!-- <apex:pageBlockTable value="{!Opportunity.OpportunityLineItems}" var="item" border="1"> -->
+     <apex:pageBlockTable value="{!ItemAnexo}" var="item" border="1">
+        <apex:column width="150px" ><apex:facet name="header">Cultivar</apex:facet>{!item.PriceBookEntry.Product2.Variedade__r.Nombre_de_Registro__c}</apex:column>
+        <apex:column ><apex:facet name="header">Área de Campo (ha)</apex:facet>{!item.Area__c}</apex:column>
+        <apex:column ><apex:facet name="header">Estado de Produção</apex:facet>{!item.Estado_de_Produccion__r.Name}</apex:column>
+        <apex:column width="80px"><apex:facet name="header">Categoria a Produzir</apex:facet>{!item.Categoria__r.Name}</apex:column>
+        <!-- <apex:column width="80px"><apex:facet name="header">Variedade controlada (ton)</apex:facet>{!item.Volume__c}</apex:column> 
+        <apex:column width="80px"><apex:facet name="header">Estado de comercialização</apex:facet>{!estCom}</apex:column>   -->
+        </apex:pageBlockTable> 
+  </apex:pageBlockSection>
+  </apex:pageBlock>     
+
+
+
+  <br/>
+  
+  <p>Londrina, <a style="color: white;"> \signedDate\</a>.</p>
+  
+  
+  <br/><br/><br/><br/><br/>
+  
+     <p style="color: white;">\s1\</p>
+	<br/>
+     
+     GDM Licenciamento do Brasil LTDA<br/>
+ </td> 
+</tr>
+</table>
+
+  
+    
+  
+  
+</apex:page>

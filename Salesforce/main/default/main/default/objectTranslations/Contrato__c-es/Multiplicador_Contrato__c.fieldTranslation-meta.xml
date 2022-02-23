@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Multiplicador Contrato --></label>
+    <name>Multiplicador_Contrato__c</name>
+    <relationshipLabel><!-- Contrato de Multiplicação Ativo --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Comercial__c</fullName>
+    <externalId>false</externalId>
+    <label>Region Comercial</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>REGION 1</fullName>
+                <default>false</default>
+                <label>REGION 1</label>
+            </value>
+            <value>
+                <fullName>REGION 2</fullName>
+                <default>false</default>
+                <label>REGION 2</label>
+            </value>
+            <value>
+                <fullName>CERRADO</fullName>
+                <default>false</default>
+                <label>CERRADO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

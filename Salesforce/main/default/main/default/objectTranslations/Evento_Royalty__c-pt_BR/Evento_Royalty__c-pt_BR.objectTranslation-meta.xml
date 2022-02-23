@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Evento Royalty</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Eventos Royalty</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Evento Royalty</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Crear_Factura_SAP --></label>
+        <name>Crear_Factura_SAP</name>
+    </webLinks>
+</CustomObjectTranslation>

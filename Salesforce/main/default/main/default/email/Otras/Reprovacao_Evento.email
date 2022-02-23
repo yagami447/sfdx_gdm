@@ -1,0 +1,12 @@
+Olá {!Contact.Name}{!User.Name},<br>
+<br>
+Seu evento: {!CRM_Calendario_de_Eventos__c.Name} foi recusado pelo seguinte motivo: {!ApprovalRequest.Comments}<br>
+<br>
+Detalhes do Evento:<br>
+Evento: {!CRM_Calendario_de_Eventos__c.Evento__c}<br>
+Fase: {!CRM_Calendario_de_Eventos__c.Fase__c}<br>
+Agricultor: {!CRM_Calendario_de_Eventos__c.Nome_do_agricultor_2__c}<br>
+Revenda: {!CRM_Calendario_de_Eventos__c.Revenda_2__c}<br>
+Cidade: {!CRM_Calendario_de_Eventos__c.Municipio__c}<br>
+Estado: {!CRM_Calendario_de_Eventos__c.Estado__c}<br>
+Safra: {!CRM_Calendario_de_Eventos__c.Safra__c}<br>

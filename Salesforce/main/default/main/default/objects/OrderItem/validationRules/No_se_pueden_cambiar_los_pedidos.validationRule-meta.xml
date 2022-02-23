@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_se_pueden_cambiar_los_pedidos</fullName>
+    <active>true</active>
+    <description>Os produtos não podem ser alterados se já estiverem ativos</description>
+    <errorConditionFormula>Order.ActivatedById != null</errorConditionFormula>
+    <errorMessage>Os produtos não podem ser alterados se já estiverem ativos</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>CRM</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var id = &quot;{!Account.Id}&quot;; 
+
+var conf = sforce.connection.query(&quot;Select CRM_Safra_Actual__c From Configuracion_BMX__c limit 1&quot;);
+records = conf.getArray(&quot;records&quot;); 
+var safra = records[0].CRM_Safra_Actual__c.toString();
+
+var qry = &quot;Select Id From CRM_Multiplicador__c Where Cuenta__c = &apos;&quot; + id + &quot;&apos; And Safra__c = &apos;&quot; + safra + &quot;&apos; limit 1&quot;;
+
+var crm = sforce.connection.query(qry);
+
+records2 = crm.getArray(&quot;records&quot;);
+
+if (records2 == &apos;&apos;){
+    alert(&apos;No existe CRM&apos;);
+}else{
+    window.open(&apos;/apex/CRM_Infraestructura?id=&apos; + &quot;{!Account.Id}&quot; + &apos;&amp;nombre=&apos; + &quot;{!Account.Name}&quot;, &quot;_self&quot;);
+}</url>
+</WebLink>

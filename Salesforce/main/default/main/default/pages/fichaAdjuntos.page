@@ -1,0 +1,30 @@
+<apex:page standardController="Account" extensions="opportunityFichaExtension" >      
+    <apex:form >
+    <apex:variable var="classic" value="{!$User.UIThemeDisplayed == 'Theme2' || $User.UIThemeDisplayed == 'Theme3'}"/>
+    <apex:pageBlock >        
+        <apex:pageBlockButtons location="top">
+            <apex:commandLink styleClass="btn" style="text-decoration:none;" value="Nova Nota" action="/002/e?parent_id={!id}&retURL={!id}" target="_parent"/>
+            <apex:commandLink styleClass="btn" style="text-decoration:none;" value="Anexar arquivo" action="/p/attach/NoteAttach?pid={!id}&parentname={!cuenta.Name}&retURL=%2F{!id}" target="_parent"/>               
+        </apex:pageBlockButtons>
+        <apex:outputPanel layout="block" style="overflow:auto; height:200px;margin: 0 2px">                                                           
+        <apex:pageBlockTable value="{!ArchivosYNotas}" var="o" id="resultPanel">
+            <apex:column headerValue="Tipo">            
+                <apex:outputText value="{!o.tipo}"/>
+            </apex:column>
+            <apex:column headerValue="{!$ObjectType.Note.Fields.Title.Label}">            
+                <apex:commandLink action="/{!o.Id}" target="_blank" value="{!o.titulo}"/>
+            </apex:column>            
+            <apex:column headerValue="{!$ObjectType.Note.Fields.LastModifiedDate.Label}">            
+                <apex:outputText value="{!o.ultimaModif}"/>
+            </apex:column>
+            <apex:column headerValue="Criado por">            
+                <apex:commandLink action="/{!o.CreadoPorId}" target="_parent" value="{!o.creadoPor}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:outputPanel>
+        <br/>
+        <apex:commandLink action="/002?parent_id={!id}&id={!id}" target="_parent" value="Ir a lista >>" rendered="{!classic}"/>        
+        <apex:commandLink action="/lightning/r/{!id}/related/CombinedAttachments/view" target="_parent" value="Ir a lista >>" rendered="{!!classic}"/>
+    </apex:pageBlock>
+    </apex:form>   
+</apex:page>
