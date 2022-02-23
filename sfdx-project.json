@@ -1,0 +1,9 @@
+{
+    "packageDirectories":  [
+      { "path": "./Salesforce", "default": true},
+      { "path" : "./Salesforce" }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "50.0"
+  }
